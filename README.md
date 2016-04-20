@@ -39,12 +39,12 @@ The build script for this project uses [Cake](http://cakebuild.net).  To run the
 
 **Mac**:
 ```
-sh build.sh -target libs
+sh build.sh --target libs
 ```
 
 **Windows (experimental support only)**:
 
-***NOTE:*** Windows build support is still experimental.  You may need to first build the `externals` target, then open the `GooglePlayServices.sln` in Visual Studio, rebuild it, build the `clean` target, and then continue on normally building whichever targets you like.  This will ensure the appropriate files are downloaded and cached in your user's AppData folder.
+***NOTE:*** Windows build support is still experimental.  You may need to first build the `externals` target, then open the `AndroidSupport.sln` in Visual Studio, rebuild it, build the `clean` target, and then continue on normally building whichever targets you like.  This will ensure the appropriate files are downloaded and cached in your user's AppData folder.
 
 ```
 powershell .\build.ps1 -Target libs
@@ -63,7 +63,7 @@ The following targets can be specified:
 
 ***NOTE***: The `externals` build task may take awhile to run as it downloads several large dependencies.
 
-You may want to consider passing `-verbosity diagnostic` to the bootstrapper to enable more verbose output, including downloading progress.
+You may want to consider passing `--verbosity diagnostic` (or `-Verbosity diagnostic` on Windows) to the bootstrapper to enable more verbose output, including downloading progress.
 
 
 ### Working in Visual Studio / Xamarin Studio
