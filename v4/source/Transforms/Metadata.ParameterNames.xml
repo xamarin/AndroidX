@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<metadata>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='AppLaunchChecker']/method[@name='hasStartedFromLauncher']/parameter[1]" name="managedName">context</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='AppLaunchChecker']/method[@name='onActivityCreate']/parameter[1]" name="managedName">activity</attr>
+</metadata>

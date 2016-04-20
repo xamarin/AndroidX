@@ -1,0 +1,31 @@
+version: $version$
+name: Android Support Percent Library
+id: xamandroidsupportpercent
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+src-url: https://github.com/xamarin/AndroidSupportComponents
+license: ../../component/License.md
+summary: Provide backward-compatible versions of Android framework APIs.
+icons:
+  - icons/xamandroidsupportpercent_128x128.png
+  - icons/xamandroidsupportpercent_512x512.png
+libraries:
+  android: ../../output/Xamarin.Android.Support.Percent.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.Android.Support.Percent, Version=$nuget-version$
+samples:
+  - name: "Percent Sample"
+    path:  ../samples/AndroidSupportSample.sln
+    removeProjects: 
+      - V4
+      - Percent
+    installNuGets:
+      - project: AndroidSupportSample
+        packages: 
+          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.Percent
+local-nuget-repo: ../../output
+no_build: true
+

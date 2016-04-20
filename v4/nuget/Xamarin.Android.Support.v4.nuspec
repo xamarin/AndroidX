@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Android.Support.v4</id>
+    <title>Xamarin Android Support Library - v4</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>v4 Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>http://components.xamarin.com/view/xamandroidsupportv4-18</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/xamandroidsupportv4-18</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.v4.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Android.Support.v4.dll" target="lib\MonoAndroid403" />
+  </files>
+</package>

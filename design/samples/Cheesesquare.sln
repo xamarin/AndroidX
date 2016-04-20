@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V4", "..\..\v4\source\V4.csproj", "{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-CardView", "..\..\v7-cardview\source\V7-CardView.csproj", "{E9848EF1-14E6-4144-95A0-926A52F301B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-RecyclerView", "..\..\v7-recyclerview\source\V7-RecyclerView.csproj", "{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\v7-appcompat\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design", "..\source\Design.csproj", "{8022A1F5-C228-4B21-8194-BC9E76F9174A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cheesesquare", "Cheesesquare\Cheesesquare.csproj", "{580F5B91-D14A-449B-BFDE-C21A0F9A7D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cheesesquare.UITests", "Cheesesquare.UITests\Cheesesquare.UITests.csproj", "{9690A5F4-6D51-47C4-BB78-ACDF05B859C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580F5B91-D14A-449B-BFDE-C21A0F9A7D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580F5B91-D14A-449B-BFDE-C21A0F9A7D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580F5B91-D14A-449B-BFDE-C21A0F9A7D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580F5B91-D14A-449B-BFDE-C21A0F9A7D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8022A1F5-C228-4B21-8194-BC9E76F9174A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8022A1F5-C228-4B21-8194-BC9E76F9174A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8022A1F5-C228-4B21-8194-BC9E76F9174A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8022A1F5-C228-4B21-8194-BC9E76F9174A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9690A5F4-6D51-47C4-BB78-ACDF05B859C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9690A5F4-6D51-47C4-BB78-ACDF05B859C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9690A5F4-6D51-47C4-BB78-ACDF05B859C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9690A5F4-6D51-47C4-BB78-ACDF05B859C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9848EF1-14E6-4144-95A0-926A52F301B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9848EF1-14E6-4144-95A0-926A52F301B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9848EF1-14E6-4144-95A0-926A52F301B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9848EF1-14E6-4144-95A0-926A52F301B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

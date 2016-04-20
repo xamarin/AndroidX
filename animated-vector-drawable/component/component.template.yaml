@@ -1,0 +1,39 @@
+version: $version$
+name: Android Support Library Animated Vector Drawable
+id: xamandroidsupportanimatedvector
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+src-url: https://github.com/xamarin/AndroidSupportComponents
+summary: Provide backward-compatible versions of Android framework APIs.
+license: ../../component/License.md
+icons:
+  - icons/xamandroidsupportanimatedvector_128x128.png
+  - icons/xamandroidsupportanimatedvector_512x512.png
+libraries:
+  android: 
+    - ../../output/Xamarin.Android.Support.Animated.Vector.Drawable.dll
+    - ../../output/Xamarin.Android.Support.Vector.Drawable.dll
+    - ../../output/Xamarin.Android.Support.v4.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.Android.Support.Animated.Vector.Drawable, Version=$nuget-version$
+samples:
+  - name: "Vector Drawable Sample"
+    path:  ../samples/VectorDrawableSample.sln
+    removeProjects: 
+      - V4
+      - V7-AppCompat
+      - Vector-Drawable
+      - Animated-Vector-Drawable
+    installNuGets:
+      - project: VectorDrawableSample
+        packages:
+          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.v7.AppCompat
+          - Xamarin.Android.Support.Vector.Drawable
+          - Xamarin.Android.Support.Animated.Vector.Drawable
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Vector.Drawable.targets')]"
+local-nuget-repo: ../../output
+no_build: true

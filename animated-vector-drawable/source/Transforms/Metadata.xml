@@ -1,0 +1,7 @@
+<metadata>
+
+	<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='AnimatedVectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.graphics.PorterDuff.Mode']]" />
+
+	<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='AnimatedVectorDrawableCompat']/method[@name='setChangingConfigurations' and count(parameter)=1 and parameter[1][@type='int']]" />
+
+</metadata>

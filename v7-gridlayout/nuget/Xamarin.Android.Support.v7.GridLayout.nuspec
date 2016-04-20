@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.Android.Support.v7.GridLayout</id>
+    <title>Xamarin Android Support Library - v7 GridLayout</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>v7 GridLayout Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>http://components.xamarin.com/view/xamandroidsupportv7gridlayout</projectUrl>
+    <licenseUrl>http://components.xamarin.com/license/xamandroidsupportv7gridlayout</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.v7.GridLayout.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.Android.Support.v4" version="[$version$]"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Android.Support.v7.GridLayout.dll" target="lib\MonoAndroid403" />
+  </files>
+</package>

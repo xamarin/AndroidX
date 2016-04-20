@@ -1,0 +1,37 @@
+version: $version$
+name: Android Support Design Library
+id: xamandroidsupportdesign
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+src-url: https://github.com/xamarin/AndroidSupportComponents
+license: ../../component/License.md
+summary: Provide backward-compatible versions of Android framework APIs.
+icons:
+  - icons/xamandroidsupportdesign_128x128.png
+  - icons/xamandroidsupportdesign_512x512.png
+libraries:
+  android: ../../output/Xamarin.Android.Support.Design.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.Android.Support.Design, Version=$nuget-version$
+samples:
+  - name: "Cheesesquare"
+    path:  ../samples/Cheesesquare.sln
+    removeProjects: 
+      - V4
+      - Design
+      - V7-AppCompat
+      - V7-CardView
+      - V7-RecyclerView
+    installNuGets:
+      - project: Cheesesquare
+        packages: 
+          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.Design
+          - Xamarin.Android.Support.v7.AppCompat
+          - Xamarin.Android.Support.v7.CardView
+          - Xamarin.Android.Support.v7.RecyclerView
+local-nuget-repo: ../../output
+no_build: true
+

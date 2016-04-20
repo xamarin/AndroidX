@@ -1,0 +1,13 @@
+﻿<metadata>
+
+	<attr path="/api/package[@name='android.support.v7.preference']" name="managedName">Android.Support.V7.Preferences</attr>
+
+	<remove-node path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeInternalListener']" />
+
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='Preference']/method[@name='compareTo']/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+	<!-- Fix generics -->
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+
+</metadata>

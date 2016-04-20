@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.Android.Support.Recommendation</id>
+    <title>Xamarin Android Support Library - Recommendation</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Recommendation Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://components.xamarin.com/view/xamandroidsupportrecommendation</projectUrl>
+    <licenseUrl>https://components.xamarin.com/license/xamandroidsupportrecommendation</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.Recommendation.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.Android.Support.v4" version="[$version$]"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Android.Support.Recommendation.dll" target="lib\MonoAndroid50" />
+  </files>
+</package>

@@ -1,0 +1,9 @@
+﻿<metadata>
+	<attr path="/api/package[@name='android.support.v17.preference']" name="managedName">Android.Support.V17.Preferences.Leanback</attr>
+
+  	<attr path="/api/package[@name='android.support.v17.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+
+	<attr path="/api/package[@name='android.support.v17.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+</metadata>

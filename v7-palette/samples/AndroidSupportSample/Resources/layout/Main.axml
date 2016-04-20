@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/linearLayout">
+    <Button
+        android:text="Get palette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFetchImage" />
+    <ImageView
+        android:src="@drawable/viva"
+        android:layout_width="match_parent"
+        android:layout_height="113.3dp"
+        android:id="@+id/imgPicture"
+        android:scaleType="centerInside" />
+    <Button
+        android:text="Vibrant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVibrant" />
+    <Button
+        android:text="Vibrant dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVibrantDark" />
+    <Button
+        android:text="Vibrant light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVibrantLight" />
+    <Button
+        android:text="Muted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMuted" />
+    <Button
+        android:text="Muted dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMutedDark" />
+    <Button
+        android:text="Muted light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMutedLight" />
+</LinearLayout>

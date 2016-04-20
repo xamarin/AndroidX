@@ -1,0 +1,28 @@
+version: $version$
+name: Android Support Library v7 CardView
+id: xamandroidsupportv7cardview
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+src-url: https://github.com/xamarin/AndroidSupportComponents
+license: ../../component/License.md
+summary: Provide backward-compatible versions of Android framework APIs.
+icons:
+  - icons/xamandroidsupportv7cardview_128x128.png
+  - icons/xamandroidsupportv7cardview_512x512.png
+libraries:
+  android: 
+    - ../../output/Xamarin.Android.Support.v7.CardView.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.Android.Support.v7.CardView, Version=$nuget-version$
+samples:
+  - name: "Android Support Sample"
+    path:  ../samples/AndroidSupportSample.sln
+    removeProjects: 
+      - V7-CardView
+    installNuGets:
+      - project: AndroidSupportSample
+        packages: Xamarin.Android.Support.v7.CardView
+local-nuget-repo: ../../output
+no_build: true

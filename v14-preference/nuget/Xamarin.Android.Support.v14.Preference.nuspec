@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.Android.Support.v14.Preference</id>
+    <title>Xamarin Android Support Library - v14 Preference</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>v14 Preference Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://components.xamarin.com/view/xamandroidsupportpreferences</projectUrl>
+    <licenseUrl>https://components.xamarin.com/license/xamandroidsupportpreferences</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.v14.Preference.png</iconUrl>
+    <dependencies>
+      <dependency id="Xamarin.Android.Support.v4" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.v7.AppCompat" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.v7.Preference" version="[$version$]"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Android.Support.v14.Preference.dll" target="lib\MonoAndroid41" />
+  </files>
+</package>

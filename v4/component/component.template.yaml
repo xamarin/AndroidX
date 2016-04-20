@@ -1,0 +1,28 @@
+version: $version$
+name: Android Support Library v4 
+id: xamandroidsupportv4-18
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+src-url: https://github.com/xamarin/AndroidSupportComponents
+license: ../../component/License.md
+summary: Provide backward-compatible versions of Android framework APIs.
+icons:
+  - icons/xamandroidsupportv4-18_128x128.png
+  - icons/xamandroidsupportv4-18_512x512.png
+libraries:
+  android: ../../output/Xamarin.Android.Support.v4.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.Android.Support.v4, Version=$nuget-version$
+samples:
+  - name: "Android Support Sample"
+    path:  ../samples/AndroidSupportSample.sln
+    removeProjects: 
+      - V4
+    installNuGets:
+      - project: AndroidSupportSample
+        packages: Xamarin.Android.Support.v4
+local-nuget-repo: ../../output
+no_build: true
+

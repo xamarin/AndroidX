@@ -1,0 +1,35 @@
+version: $version$
+name: Android Support Library V17 Leanback
+id: xamandroidsupportv17leanback
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+src-url: https://github.com/xamarin/AndroidSupportComponents
+license: ../../component/License.md
+summary: Provide backward-compatible versions of Android framework APIs.
+icons:
+  - icons/xamandroidsupportv17leanback_128x128.png
+  - icons/xamandroidsupportv17leanback_512x512.png
+libraries:
+  android: 
+    - ../../output/Xamarin.Android.Support.v17.Leanback.dll
+    - ../../output/Xamarin.Android.Support.v4.dll
+    - ../../output/Xamarin.Android.Support.v7.RecyclerView.dll
+is_shell: true
+packages:
+  android:
+    - Xamarin.Android.Support.v17.Leanback, Version=$nuget-version$
+samples:
+  - name: "Android Support Sample"
+    path:  ../samples/AndroidSupportSample.sln
+    removeProjects: 
+      - V4
+      - V7-RecyclerView
+      - V17-Leanback
+    installNuGets:
+      - project: AndroidSupportSample
+        packages:
+          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.v7.RecyclerView
+          - Xamarin.Android.Support.v17.Leanback
+local-nuget-repo: ../../output
+no_build: true

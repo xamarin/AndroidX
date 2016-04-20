@@ -1,0 +1,41 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDrawableSample", "VectorDrawableSample\VectorDrawableSample.csproj", "{05B87270-652B-438E-BCFF-AC65BC4C892F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\v7-appcompat\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V4", "..\..\v4\source\V4.csproj", "{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animated-Vector-Drawable", "..\source\Animated-Vector-Drawable.csproj", "{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector-Drawable", "..\..\vector-drawable\source\Vector-Drawable.csproj", "{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

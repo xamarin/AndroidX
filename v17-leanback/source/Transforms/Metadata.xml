@@ -1,0 +1,64 @@
+<metadata>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BaseFragment']" name="visibility">public</attr>
+<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BaseSupportFragment']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BaseRowFragment']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BaseRowSupportFragment']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='HeadersFragment.OnHeaderClickedListener']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='HeadersSupportFragment.OnHeaderClickedListener']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='RowContainerView']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseGridView']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='GridLayoutManager']" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='AbstractDetailsDescriptionPresenter']/method[@name='onCreateViewHolder']" name="managedReturn">Android.Support.V17.Leanback.Widget.Presenter.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='RowPresenter']/method[@name='onCreateViewHolder']" name="managedReturn">Android.Support.V17.Leanback.Widget.Presenter.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='VerticalGridPresenter']/method[@name='onCreateViewHolder']" name="managedReturn">Android.Support.V17.Leanback.Widget.Presenter.ViewHolder</attr>
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='AbstractDetailsDescriptionPresenter']/method[@name='onCreateViewHolder']" name="managedReturn">Android.Support.V17.Leanback.Widget.Presenter.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='AbstractDetailsDescriptionPresenter']/method[@name='onCreateViewHolder']" name="final">false</attr>
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BackgroundManager.BitmapDrawable.ConstantState']/method[@name='getChangingConfigurations']" />
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='HeadersFragment.OnHeaderClickedListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='HeadersSupportFragment.OnHeaderClickedListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='HorizontalGridView']/method[@name='setHasOverlappingRendering' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='VerticalGridView']/method[@name='setHasOverlappingRendering' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='FocusHighlightHelper.BrowseItemFocusHighlight']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='FocusHighlightHelper.HeaderItemFocusHighlight']" />
+
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='PlaybackControlsRow.OnPlaybackStateChangedListener']" />
+
+<!--	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='StreamingTextView']" />-->
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='StreamingTextView']" name="visibility">public</attr>
+<!--	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']" name="extends">java.lang.Object</attr>-->
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.List']]" />
+
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='BaseGridView.OnKeyInterceptListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='BaseGridView.OnMotionInterceptListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='BaseGridView.OnTouchInterceptListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='BaseGridView.OnUnhandledKeyListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='HeadersFragment.OnHeaderViewSelectedListener']" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='HeadersSupportFragment.OnHeaderViewSelectedListener']" />
+
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrandedFragment']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrandedSupportFragment']" name="visibility">public</attr>
+
+	<!-- We need the setter implemented as well so let's just kill the whole thing and manually do it -->
+	<remove-node  path="/api/package[@name='android.support.v17.leanback.animation']/class[@name='UntargetableAnimatorSet']/method[@name='getStartDelay' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.animation']/class[@name='UntargetableAnimatorSet']/method[@name='setStartDelay' and count(parameter)=1 and parameter[1][@type='long']]" />
+
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[1]" name="managedName">itemViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[2]" name="managedName">item</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[3]" name="managedName">rowViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[4]" name="managedName">row</attr>
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[1]" name="managedName">itemViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[2]" name="managedName">item</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[3]" name="managedName">rowViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/method[@name='onItemClicked' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[4]" name="managedName">row</attr>
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewSelectedListener']/method[@name='onItemSelected' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[4]" name="managedName">row</attr>
+
+</metadata>

@@ -1,0 +1,1 @@
+See the sample from Android Support 17 Preference.

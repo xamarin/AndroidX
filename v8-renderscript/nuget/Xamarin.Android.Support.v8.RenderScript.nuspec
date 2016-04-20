@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.Android.Support.v8.RenderScript</id>
+    <title>Xamarin Android Support Library - v8 RenderScript</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>v8 RenderScript Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://components.xamarin.com/view/xamandroidsupportv8</projectUrl>
+    <licenseUrl>https://components.xamarin.com/license/xamandroidsupportv8</licenseUrl>
+    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.v8.RenderScript.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Android.Support.v8.RenderScript.dll" target="lib\MonoAndroid403" />
+  </files>
+</package>
