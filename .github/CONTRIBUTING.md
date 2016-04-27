@@ -13,7 +13,7 @@
 
 # Contributing
 
-1. You will need to sign a contributor license agreement (CLA) before your contributions can be accepted.  If you haven't already done so, the CLA Bot will comment on the pull request you just created and guide you on how to sign the CLA.
+1. You will need to complete a Contribution License Agreement before your pull request can be accepted. You can complete the CLA by going through the steps at [https://cla2.dotnetfoundation.org/](https://cla2.dotnetfoundation.org/).
 
 2. You should fork/branch from the `dev` branch.
 

@@ -77,3 +77,11 @@ The license for this repository is specified in
 [LICENSE.md](LICENSE.md)
 
 The `externals` build task downloads some external dependencies from Google which are licensed under and subject to the terms of [Android Software Development Kit License Agreement](http://developer.android.com/sdk/terms.html)
+
+## Contribution Guidelines
+The Contribution Guidelines for this repository are listed in [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+
+## .NET Foundation
+This project is part of the [.NET Foundation](http://www.dotnetfoundation.org/projects)
+
+
