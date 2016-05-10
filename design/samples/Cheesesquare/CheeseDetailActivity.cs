@@ -50,6 +50,8 @@ namespace Cheesesquare
 
             var r = Cheeses.GetRandomCheeseBackground ();
             imageView.SetImageResource (r);
+
+            GC.Collect ();
         }
             
         public override bool OnCreateOptionsMenu(IMenu menu) 
