@@ -61,6 +61,8 @@
   <remove-node path="/api/package/class[contains(@name, 'Kitkat')]" />
   <remove-node path="/api/package/class[contains(@name, 'KitKat')]" />
   <remove-node path="/api/package/class[contains(@name, '21Impl')]" />
+  <remove-node path="/api/package/class[contains(@name, 'Impl21')]" />
+  <remove-node path="/api/package/class[contains(@name, 'ImplJB')]" />
   <remove-node path="/api/package/class[contains(@name, 'Api14')]" />
   <remove-node path="/api/package/class[contains(@name, 'Api18')]" />
   <remove-node path="/api/package/class[contains(@name, 'Api19')]" />
