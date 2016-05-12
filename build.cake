@@ -8,12 +8,12 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "23.3.0-beta1";
-var COMPONENT_VERSION = "23.3.0";
-var AAR_VERSION = "23.3.0";
+var NUGET_VERSION = "23.4.0-beta1";
+var COMPONENT_VERSION = "23.4.0";
+var AAR_VERSION = "23.4.0";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r29.zip";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r31.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 
