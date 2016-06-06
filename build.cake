@@ -13,7 +13,7 @@ var COMPONENT_VERSION = "23.4.0";
 var AAR_VERSION = "23.4.0";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r31.zip";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 
