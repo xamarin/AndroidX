@@ -52,8 +52,8 @@ fi
 # Download NuGet if it does not exist.
 if [ ! -f "$NUGET_EXE" ]; then
     echo "Downloading NuGet..."
-    # For now grab explicit 2.8.6 version instead of: https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
-    curl -Lsfo "$NUGET_EXE" https://dist.nuget.org/win-x86-commandline/v2.8.6/nuget.exe
+    # For now grab explicit 3.4.4 version instead of: https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+    curl -Lsfo "$NUGET_EXE" https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe
     if [ $? -ne 0 ]; then
         echo "An error occured while downloading nuget.exe."
         exit 1
