@@ -1,10 +1,10 @@
 #tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent&version=1.1.0.29
+#tool nuget:?package=XamarinComponent
 
-#addin nuget:?package=Cake.XCode&version=1.0.4.0
-#addin nuget:?package=Cake.Xamarin&version=1.3.0.1
-#addin nuget:?package=Cake.Xamarin.Build&version=1.0.11.0
-#addin nuget:?package=Cake.FileHelpers&version=1.0.3.2
+#addin nuget:?package=Cake.XCode
+#addin nuget:?package=Cake.Xamarin
+#addin nuget:?package=Cake.Xamarin.Build
+#addin nuget:?package=Cake.FileHelpers
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
@@ -268,7 +268,7 @@ Task ("component-docs").Does (() =>
 	foreach (var compDir in componentDirs) {
 
 		var f = compDir.CombineWithFilePath ("./component/GettingStarted.template.md");
-		
+
 		if (!FileExists (f))
 			continue;
 
@@ -300,7 +300,7 @@ Task ("component-docs").Does (() =>
 	foreach (var compDir in componentDirs) {
 
 		var f = compDir.CombineWithFilePath ("./component/Details.template.md");
-		
+
 		if (!FileExists (f))
 			continue;
 
