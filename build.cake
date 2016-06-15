@@ -1,19 +1,19 @@
 #tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent&version=1.1.0.29
+#tool nuget:?package=XamarinComponent
 
-#addin nuget:?package=Cake.XCode&version=1.0.4.0
-#addin nuget:?package=Cake.Xamarin&version=1.3.0.1
-#addin nuget:?package=Cake.Xamarin.Build&version=1.0.11.0
-#addin nuget:?package=Cake.FileHelpers&version=1.0.3.2
+#addin nuget:?package=Cake.XCode
+#addin nuget:?package=Cake.Xamarin
+#addin nuget:?package=Cake.Xamarin.Build
+#addin nuget:?package=Cake.FileHelpers
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "23.3.0-beta1";
-var COMPONENT_VERSION = "23.3.0";
-var AAR_VERSION = "23.3.0";
+var NUGET_VERSION = "23.4.0";
+var COMPONENT_VERSION = "23.4.0";
+var AAR_VERSION = "23.4.0";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r29.zip";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 
@@ -268,7 +268,7 @@ Task ("component-docs").Does (() =>
 	foreach (var compDir in componentDirs) {
 
 		var f = compDir.CombineWithFilePath ("./component/GettingStarted.template.md");
-		
+
 		if (!FileExists (f))
 			continue;
 
@@ -300,7 +300,7 @@ Task ("component-docs").Does (() =>
 	foreach (var compDir in componentDirs) {
 
 		var f = compDir.CombineWithFilePath ("./component/Details.template.md");
-		
+
 		if (!FileExists (f))
 			continue;
 
