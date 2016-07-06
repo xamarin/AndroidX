@@ -8,8 +8,8 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "23.4.0";
-var COMPONENT_VERSION = "23.4.0";
+var NUGET_VERSION = "23.4.0.1";
+var COMPONENT_VERSION = "23.4.0.1";
 var AAR_VERSION = "23.4.0";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
