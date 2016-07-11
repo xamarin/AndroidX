@@ -16,6 +16,7 @@ var AAR_VERSION = "23.4.0";
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
+var MONO_API_TOOLS_URL = "http://xamarin-components-apiinfo.s3.amazonaws.com/mono-api-tools.zip";
 
 var AAR_DIRS = new [] {
 	"support-v4", "support-v13", "appcompat-v7", "gridlayout-v7", "mediarouter-v7", "recyclerview-v7",
@@ -169,6 +170,9 @@ Task ("externals")
 
 Task ("merge").IsDependentOn ("libs").Does (() =>
 {
+	if (FileExists ("./output/AndroidSupport.Merged.dll"))
+		DeleteFile ("./output/AndroidSupport.Merged.dll");
+
 	var mergeDlls = GetFiles ("./output/*.dll");
 
 	// Wait for ILRepack support in cake-0.5.2
@@ -181,21 +185,31 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 		},
 	});
 
+	Information ("Completed: {0}", "ILRepack");
+
 	// Don't want to think about what the paths will do to this on windows right now
 	if (!IsRunningOnWindows ()) {
-		// Next run the mono-api-info.exe to generate xml api info we can later diff with
-		var monoApiInfoExe = GetFiles ("../../**/mono-api-info.exe").FirstOrDefault ();
-		var monoApiDiffExe = GetFiles ("../../**/mono-api-diff.exe").FirstOrDefault ();
-		var monoApiHtmlExe = GetFiles ("../../**/mono-api-html.exe").FirstOrDefault ();
-
-		//eg: mono mono-api-info.exe --search-directory=/Library/Frameworks/Xamarin.Android.framework/Libraries/mandroid/platforms/android-23 ./Some.dll > api-info.xml
-		using(var process = StartAndReturnProcess (monoApiInfoExe, new ProcessSettings {
-			Arguments = "--search-directory=" + MONODROID_PATH + " ./output/AndroidSupport.Merged.dll",
-			RedirectStandardOutput = true,
-		})) {
-		    process.WaitForExit();
-		    FileWriteLines ("./output/AndroidSupport.api-info.xml", process.GetStandardOutput ().ToArray ());
+		// Download the tools needed to run the next steps
+		if (!DirectoryExists ("./tools/mono-api-tools")) {
+			EnsureDirectoryExists ("./tools/mono-api-tools/");
+			DownloadFile (MONO_API_TOOLS_URL, "./tools/mono-api-tools.zip");
+			Unzip ("./tools/mono-api-tools.zip", "./tools/mono-api-tools/");
 		}
+
+		// Next run the mono-api-info.exe to generate xml api info we can later diff with
+		var monoApiInfoExe = GetFiles ("./tools/**/mono-api-info.exe").FirstOrDefault ();
+		var monoApiDiffExe = GetFiles ("./tools/**/mono-api-diff.exe").FirstOrDefault ();
+		var monoApiHtmlExe = GetFiles ("./tools/**/mono-api-html.exe").FirstOrDefault ();
+
+		IEnumerable<string> procStdOut;
+
+		var interopPath = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/";
+		//eg: mono mono-api-info.exe --search-directory=/Library/Frameworks/Xamarin.Android.framework/Libraries/mandroid/platforms/android-23 ./Some.dll > api-info.xml
+		StartProcess (monoApiInfoExe, new ProcessSettings {
+			Arguments = "--search-directory=" + MONODROID_PATH + " --search-directory=" + interopPath + " ./output/AndroidSupport.Merged.dll",
+			RedirectStandardOutput = true,
+		}, out procStdOut);
+		FileWriteLines ("./output/AndroidSupport.api-info.xml", procStdOut.ToArray ());
 
 		// Grab the latest published api info from S3
 		var latestReleasedApiInfoUrl = "http://xamarin-components-apiinfo.s3.amazonaws.com/Support.Android-Latest.xml";
@@ -203,23 +217,19 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 
 		// Now diff against current release'd api info
 		// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-		using(var process = StartAndReturnProcess (monoApiDiffExe, new ProcessSettings {
+		StartProcess (monoApiDiffExe, new ProcessSettings {
 			Arguments = "./output/AndroidSupport.api-info.previous.xml ./output/AndroidSupport.api-info.xml",
 			RedirectStandardOutput = true,
-		})) {
-		    process.WaitForExit();
-		    FileWriteLines ("./output/AndroidSupport.api-diff.xml", process.GetStandardOutput ().ToArray ());
-		}
+		}, out procStdOut);
+		FileWriteLines ("./output/AndroidSupport.api-diff.xml", procStdOut.ToArray ());
 
 		// Now let's make a purty html file
 		// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-		using(var process = StartAndReturnProcess (monoApiHtmlExe, new ProcessSettings {
+		StartProcess (monoApiHtmlExe, new ProcessSettings {
 			Arguments = "-c -x ./output/AndroidSupport.api-info.previous.xml ./output/AndroidSupport.api-info.xml",
 			RedirectStandardOutput = true,
-		})) {
-		    process.WaitForExit();
-		    FileWriteLines ("./output/AndroidSupport.api-diff.html", process.GetStandardOutput ().ToArray ());
-		}
+		}, out procStdOut);
+		FileWriteLines ("./output/AndroidSupport.api-diff.html", procStdOut.ToArray ());
 	}
 });
 
