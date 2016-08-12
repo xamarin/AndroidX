@@ -25,19 +25,22 @@ using Android.App;
 	PackageName     = __Consts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Java.Interop.JavaLibraryReference ("libs/internal_impl-" + __SupportConsts.AarVersion + ".jar",
 	PackageName = __Consts.PackageName,
     SourceUrl = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version = __SupportConsts.Version)]
+    Version = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
 	PackageName     = __Consts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
 	public const string PackageName = "Xamarin.Android.Support.v7.MediaRouter";

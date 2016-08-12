@@ -25,7 +25,8 @@ using Android.App;
 	PackageName     = __Consts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 	
 static class __Consts {
 	public const string PackageName = "Xamarin.Android.Support.v7.Palette";
