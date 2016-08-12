@@ -10,15 +10,14 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "23.4.0.1";
-var COMPONENT_VERSION = "23.4.0.1";
-var AAR_VERSION = "23.4.0";
+var NUGET_VERSION = "24.1.1.0";
+var COMPONENT_VERSION = "24.1.1.0";
+var AAR_VERSION = "24.1.1";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r35.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
-var MONO_API_TOOLS_URL = "http://xamarin-components-apiinfo.s3.amazonaws.com/mono-api-tools.zip";
 
 var AAR_DIRS = new [] {
 	"support-v4", "support-v13", "appcompat-v7", "gridlayout-v7", "mediarouter-v7", "recyclerview-v7",
