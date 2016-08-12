@@ -3,13 +3,13 @@ using Android.Runtime;
 
 namespace Android.Support.Design.Widget
 {
-    public partial class CollapsingToolbarLayout
-    {
-        public void SetTitle (string title)
-        {           
-            this.Title = title;
-        }
-    }
+    //public partial class CollapsingToolbarLayout
+    //{
+    //    public void SetTitle (string title)
+    //    {           
+    //        this.Title = title;
+    //    }
+    //}
 
     public partial class Snackbar
     {
