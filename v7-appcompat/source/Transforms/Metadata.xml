@@ -33,7 +33,8 @@
   <attr path="/api/package[@name='android.support.v7.view.menu']/class[@name='ListMenuPresenter.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
 
   <attr path="/api/package[@name='android.support.v7.app']/class[@name='ActionBarDrawerToggle.DrawerArrowDrawableToggle']" name="visibility">public</attr>
-
+  <attr path="/api/package[@name='android.support.v7.widget']/class[@name='DropDownListView']" name="visibility">public</attr>
+	
   <remove-node path="/api/package[@name='android.support.v7.app']/class[@name='ActionBarDrawerToggle.DrawerArrowDrawableToggle']" />
 
   <attr path="/api/package[@name='android.support.v7.app']/class[@name='DrawerArrowDrawable']" name="visibility">public</attr>

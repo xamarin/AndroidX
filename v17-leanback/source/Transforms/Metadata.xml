@@ -61,4 +61,13 @@
 
 	<attr path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewSelectedListener']/method[@name='onItemSelected' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[4]" name="managedName">row</attr>
 
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrowseFragment.ListRowFragmentFactory']/method[@name='createFragment' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrowseSupportFragment.ListRowFragmentFactory']/method[@name='createFragment' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" name="managedReturn">Java.Lang.Object</attr>
+
+	<!-- The Browse*Fragment's contain inner classes which are named the same as a property generated for an interface they implement -->
+	<!-- This prevents the interface's method from being converted to a property which would collide with the class name, and instead leaves the GetMainFragment*AdapterProvider method name -->
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseFragment.MainFragmentAdapterProvider']/method[@name='getMainFragmentAdapter']" name="propertyName"></attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseFragment.MainFragmentRowsAdapterProvider']/method[@name='getMainFragmentRowsAdapter']" name="propertyName"></attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.MainFragmentAdapterProvider']/method[@name='getMainFragmentAdapter']" name="propertyName"></attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.MainFragmentRowsAdapterProvider']/method[@name='getMainFragmentRowsAdapter']" name="propertyName"></attr>
 </metadata>

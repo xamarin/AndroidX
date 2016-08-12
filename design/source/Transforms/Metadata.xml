@@ -39,5 +39,5 @@
 <!--	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']" />
 	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']" />-->
 
-
+	<attr path="/api/package[@name='android.support.design.widget']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
 </metadata>
