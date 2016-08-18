@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>RenderScriptSample.UITests</RootNamespace>
     <AssemblyName>RenderScriptSample.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
