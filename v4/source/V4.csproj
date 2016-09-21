@@ -63,7 +63,6 @@
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-    <TransformFile Include="Transforms\Metadata.generated.xml" />
     <TransformFile Include="Transforms\Metadata.ParameterNames.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +78,9 @@
     <InputJar Include="..\..\externals\support-v4\libs\internal_impl.jar">
       <Link>Jars\android-support-v4-internal_impl-aar.jar</Link>
     </InputJar>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
