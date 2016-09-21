@@ -7,10 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportdesign_128x128.png
-  - icons/xamandroidsupportdesign_512x512.png
-libraries:
-  android: ../../output/Xamarin.Android.Support.Design.dll
+  - ../../icons/design_128x128.png
+  - ../../icons/design_512x512.png
 is_shell: true
 packages:
   android:
@@ -18,20 +16,31 @@ packages:
 samples:
   - name: "Cheesesquare"
     path:  ../samples/Cheesesquare.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Animated-Vector-Drawable
+      - Compat
+      - Core-UI
+      - Core-Utils
+      - Fragments
+      - Media-Compat
       - Design
       - V7-AppCompat
       - V7-CardView
       - V7-RecyclerView
+      - Vector-Drawable
     installNuGets:
       - project: Cheesesquare
-        packages: 
-          - Xamarin.Android.Support.v4
+        packages:
+          - Xamarin.Android.Support.Animated.Vector.Drawable
+          - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
+          - Xamarin.Android.Support.Core.Utils
+          - Xamarin.Android.Support.Fragments
+          - Xamarin.Android.Support.Media.Compat
           - Xamarin.Android.Support.Design
           - Xamarin.Android.Support.v7.AppCompat
           - Xamarin.Android.Support.v7.CardView
           - Xamarin.Android.Support.v7.RecyclerView
+          - Xamarin.Android.Support.Vector.Drawable
 local-nuget-repo: ../../output
 no_build: true
-
