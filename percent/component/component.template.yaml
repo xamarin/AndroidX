@@ -7,10 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportpercent_128x128.png
-  - icons/xamandroidsupportpercent_512x512.png
-libraries:
-  android: ../../output/Xamarin.Android.Support.Percent.dll
+  - ../../icons/percent_128x128.png
+  - ../../icons/percent_512x512.png
 is_shell: true
 packages:
   android:
@@ -18,14 +16,13 @@ packages:
 samples:
   - name: "Percent Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Compat
       - Percent
     installNuGets:
       - project: AndroidSupportSample
-        packages: 
-          - Xamarin.Android.Support.v4
+        packages:
+          - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Percent
 local-nuget-repo: ../../output
 no_build: true
-
