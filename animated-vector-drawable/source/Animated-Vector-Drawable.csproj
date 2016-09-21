@@ -56,13 +56,9 @@
     <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Jars\AboutJars.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-    <TransformFile Include="Transforms\Metadata.generated.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\v4\source\V4.csproj">

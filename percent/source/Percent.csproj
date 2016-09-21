@@ -51,10 +51,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -70,6 +66,9 @@
       <Project>{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}</Project>
       <Name>V4</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <PropertyGroup>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>

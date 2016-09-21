@@ -51,10 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -64,6 +60,9 @@
     <InputJar Include="..\..\externals\build-tools\renderscript\lib\renderscript-v8.jar">
       <Link>Jars\renderscript-v8.jar</Link>
     </InputJar>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>

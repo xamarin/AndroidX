@@ -55,10 +55,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -74,6 +70,9 @@
     <InputJar Include="..\..\externals\gridlayout-v7\classes.jar">
       <Link>Jars\support-v7-gridlayout-aar.jar</Link>
     </InputJar>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>

@@ -58,8 +58,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
