@@ -1,6 +1,7 @@
 #tool nuget:?package=ILRepack&version=2.0.10
 #tool nuget:?package=XamarinComponent
 #tool nuget:?package=Cake.MonoApiTools
+#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
@@ -32,6 +33,17 @@ var AAR_DIRS = new [] {
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ())
 	MONODROID_PATH = MakeAbsolute (new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION +"/")).FullPath;
+
+var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
+if (IsRunningOnWindows ()) {
+
+	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
+
+	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
+	else
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
+}
 
 var buildSpec = new BuildSpec {
 	Libs = new [] {
@@ -318,6 +330,43 @@ Task ("component-docs").Does (() =>
 
 		FileWriteText (compDir.CombineWithFilePath ("./component/Details.md"), t.ToString ());
 	}
+});
+
+Task ("libs").IsDependentOn ("genapi");
+
+Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
+
+	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
+
+	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+
+	var libs = new FilePath [] {
+		"./Xamarin.Android.Support.Compat.dll",
+		"./Xamarin.Android.Support.Core.UI.dll",
+		"./Xamarin.Android.Support.Core.Utils.dll",
+		"./Xamarin.Android.Support.Fragment.dll",
+		"./Xamarin.Android.Support.Media.Compat.dll",
+	}; 
+
+
+	foreach (var lib in libs) {
+		var genName = lib.GetFilename () + ".generated.cs";
+
+		Information ("GenAPI: {0}", lib.FullPath);
+
+		StartProcess (GenApiToolPath, new ProcessSettings {
+			Arguments = string.Format("-libPath:{0} -out:./{1} -w:TypeForwards {2}",
+							MONODROID_PATH + "," + MSCORLIB_PATH,
+							genName,
+							lib.FullPath),
+			WorkingDirectory = "./output/",
+		});
+	}
+
+	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = "Release");
+
+	CopyFile ("./v4/source/bin/Release/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
