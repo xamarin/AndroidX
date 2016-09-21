@@ -27,20 +27,19 @@ using Android.App;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
 	SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
 	Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
 	SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
 	Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
-	public const string PackageName = "Xamarin.Android.Support.CustomTabs";
 	public const string AarPath = "m2repository/com/android/support/customtabs/" + __SupportConsts.AarVersion + "/customtabs-" + __SupportConsts.AarVersion + ".aar";
 }

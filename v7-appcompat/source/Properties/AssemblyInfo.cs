@@ -25,20 +25,19 @@ using Android.App;
 //
 // AppCompat-v7
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
     Version = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 // AppCompat-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl   = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
     Version     = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
-	public const string PackageName = "Xamarin.Android.Support.v7.AppCompat";
     public const string AarPath = "m2repository/com/android/support/appcompat-v7/" + __SupportConsts.AarVersion + "/appcompat-v7-" + __SupportConsts.AarVersion + ".aar";
 }

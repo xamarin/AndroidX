@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Android.App;
 
-// Information about this assembly is defined by the following attributes. 
+// Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("Xamarin.Android.Support.v13")]
@@ -22,30 +22,29 @@ using Android.App;
 
 [assembly: AssemblyVersion("1.0.0")]
 
-// The following attributes are used to specify the signing key for the assembly, 
+// The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-    PackageName     = __Consts.PackageName,
+    PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Java.Interop.JavaLibraryReference ("libs/internal_impl-" + __SupportConsts.AarVersion + ".jar",
-    PackageName     = __Consts.PackageName,
+    PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-    PackageName     = __Consts.PackageName,
+    PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
     EmbeddedArchive = __Consts.AarPath,
     Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
-    public const string PackageName = "Xamarin.Android.Support.v13";
     public const string AarPath = "m2repository/com/android/support/support-v13/" + __SupportConsts.AarVersion + "/support-v13-" + __SupportConsts.AarVersion + ".aar";
 }

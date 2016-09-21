@@ -67,8 +67,8 @@ using Android.App;
 	PackageName = __Consts.PackageName)]
 
 static class __Consts {
-	public const string RootDir = "android-6.0"; // Root dir might change on updates
-	public const string SupportUrl  = "http://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
-	public const string Version     = "23";
-	public const string PackageName = "Android Support Library v8";
+	public const string RootDir = "android-N"; // Root dir might change on updates
+	public const string SupportUrl  = "http://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
+	public const string Version     = "24";
+	public const string PackageName = "Xamarin.Android.Support.v8";
 }

@@ -10,25 +10,28 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "24.1.1.0";
-var COMPONENT_VERSION = "24.1.1.0";
-var AAR_VERSION = "24.1.1";
+var NUGET_VERSION = "24.2.1-alpha1";
+var COMPONENT_VERSION = "24.2.1.0";
+var AAR_VERSION = "24.2.1";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r35.zip";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r38.zip";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v6.0" : "android-24";
+var RENDERSCRIPT_FOLDER = "android-N";
 
 var AAR_DIRS = new [] {
 	"support-v4", "support-v13", "appcompat-v7", "gridlayout-v7", "mediarouter-v7", "recyclerview-v7",
 	"palette-v7", "cardview-v7", "leanback-v17", "design", "percent", "customtabs", "preference-v7",
 	"preference-v14", "preference-leanback-v17", "recommendation", "animated-vector-drawable",
-	"support-vector-drawable"
+	"support-vector-drawable", "support-compat", "support-core-utils", "support-core-ui",
+	"support-media-compat", "support-fragment", "transition"
 };
 
-var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-23/";
+var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ())
-	MONODROID_PATH = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/v6.0/").FullPath;
+	MONODROID_PATH = MakeAbsolute (new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION +"/")).FullPath;
 
 var buildSpec = new BuildSpec {
 	Libs = new [] {
@@ -164,8 +167,8 @@ Task ("externals")
 		DownloadFile (BUILD_TOOLS_URL, path + "buildtools.zip");
 	if (!FileExists (path + "build-tools/renderscript/lib/renderscript-v8.jar")) {
 		Unzip (path + "buildtools.zip", path);
-		CopyDirectory (path + "android-6.0", path + "build-tools");
-		DeleteDirectory (path + "android-6.0", true);
+		CopyDirectory (path + RENDERSCRIPT_FOLDER, path + "build-tools");
+		DeleteDirectory (path + RENDERSCRIPT_FOLDER, true);
 	}
 });
 

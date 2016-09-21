@@ -27,20 +27,19 @@ using Android.App;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
     Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
     Version         = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
-	public const string PackageName = "Xamarin.Android.Support.Preference.Leanback.v17";
     public const string AarPath = "m2repository/com/android/support/preference-leanback-v17/" + __SupportConsts.AarVersion + "/preference-leanback-v17-" + __SupportConsts.AarVersion + ".aar";
 }

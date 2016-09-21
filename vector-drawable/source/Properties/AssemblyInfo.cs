@@ -23,22 +23,19 @@ using Android.App;
 
 // GridLayout-v7
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
     Version = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 // GridLayout-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl   = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
     Version     = __SupportConsts.Version,
     Sha1sum = __SupportConsts.Sha1sum)]
 
-static class __Consts {	
-	public const string PackageName = "Xamarin.Android.Support.Vector.Drawable";
+static class __Consts {
     public const string AarPath = "m2repository/com/android/support/support-vector-drawable/" + __SupportConsts.AarVersion + "/support-vector-drawable-" + __SupportConsts.AarVersion + ".aar";
 }
-
-
