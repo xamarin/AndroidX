@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Android.Support.Core.UI</id>
+    <title>Xamarin Android Support Library - Core UI</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Core UI Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright 2013-2016</copyright>
+    <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/support-core-ui_128x128.png</iconUrl>
+    <dependencies>
+        <dependency id="Xamarin.Android.Support.Compat" version="[$version$]"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="output/Xamarin.Android.Support.Core.UI.dll" target="lib/MonoAndroid70" />
+  </files>
+</package>

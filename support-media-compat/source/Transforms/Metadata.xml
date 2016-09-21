@@ -1,0 +1,10 @@
+<metadata>
+	<attr path="/api/package[@name='android.support.mediacompat']" name="managedName">Android.Support.MediaCompat</attr>
+
+	<attr path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaSessionCompat.MediaSessionImplBase.Command']/field[@name='command']" name="managedName">CommandValue</attr>
+
+	<attr path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserServiceCompat.ServiceCallbacks']" name="visibility">internal</attr>
+
+	<attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
+</metadata>

@@ -1,0 +1,7 @@
+<enum-method-mappings>
+	<mapping jni-class="android/support/v4/widget/NestedScrollView">
+		<method jni-name="getNestedScrollAxes" parameter="return" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onNestedScrollAccepted" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onStartNestedScroll" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+	</mapping>
+</enum-method-mappings>

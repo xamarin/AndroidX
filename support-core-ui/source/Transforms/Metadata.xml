@@ -1,0 +1,27 @@
+<metadata>
+
+	<attr path="/api/package[@name='android.support.coreui']" name="managedName">Android.Support.CoreUI</attr>
+
+	<!-- 
+		There's set*Listner, add*Listener, and remove*Listener which cause duplicate events to be generated.
+		We would either expect a single set*Listener or the set of add/remove*Listener methods, but not both.
+		The set*Listener is deprecated, so let's just stop it from generating an event.
+	-->
+	<attr path="/api/package[@name='android.support.v4.view']/class[@name='ViewPager']/method[@name='setOnPageChangeListener']" name="eventName"></attr>
+	<attr path="/api/package[@name='android.support.v4.widget']/class[@name='DrawerLayout']/method[@name='setDrawerListener']" name="eventName"></attr>
+
+
+	<attr path="/api/package[@name='android.support.v4.widget']/interface[@name='DrawerLayoutImpl']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.widget']/class[@name='CursorFilter']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.view.animation']/class[@name='LookupTableInterpolator']" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.v4.app']/interface[@name='ActionBarDrawerToggle.ActionBarDrawerToggleImpl']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter.ChangeObserver']" name="visibility">public</attr>
+
+	<!-- Remove so we can implement manaully to get rid of the override modifier -->
+	<remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SwipeRefreshLayout']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v4.view']/class[@name='PagerTabStrip']/method[@name='setBackgroundColor' and count(parameter)=1 and parameter[1][@type='int']]" />
+
+	<attr path="/api/package[@name='android.support.v4.view']/class[@name='ViewPager.ViewPositionComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v4.view']/class[@name='ViewPager.ViewPositionComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+</metadata>

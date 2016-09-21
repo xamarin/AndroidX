@@ -1,0 +1,32 @@
+<enum-method-mappings>
+	<mapping jni-interface="android/support/v4/app/ActivityCompat$OnRequestPermissionsResultCallback">
+		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
+	</mapping>
+	<!-- Manually did JNI for this as it's not generated properly, but maybe in the future? -->
+<!--	<mapping jni-class="android/support/v4/app/FragmentActivity">
+		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission" />
+	</mapping>-->
+
+	<mapping jni-class="android/support/v4/content/ContextCompat">
+		<method jni-name="checkSelfPermission" parameter="return" clr-enum-type="Android.Content.PM.Permission" />
+	</mapping>
+
+
+	<mapping jni-interface="android/support/v4/internal/view/SupportMenuItem">
+		<method jni-name="setShowAsAction" parameter="p0" clr-enum-type="Android.Views.ShowAsAction" />
+	</mapping>
+
+	<mapping jni-interface="android/support/v4/internal/view/SupportMenuItem">
+		<method jni-name="setShowAsActionFlags" parameter="p0" clr-enum-type="Android.Views.ShowAsAction" />
+	</mapping>
+
+	<mapping jni-interface="android/support/v4/view/NestedScrollingChild">
+		<method jni-name="startNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+	</mapping>
+
+	<mapping jni-interface="android/support/v4/view/NestedScrollingParent">
+		<method jni-name="onNestedScrollAccepted" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onStartNestedScroll" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="getNestedScrollAxes" parameter="return" clr-enum-type="Android.Views.ScrollAxis" />
+	</mapping>
+</enum-method-mappings>
