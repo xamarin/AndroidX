@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChromeCustomTabsSample", "ChromeCustomTabsSample\ChromeCustomTabsSample.csproj", "{59CF662E-2BBD-40EF-B08D-1BF89D713D96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V4", "..\..\v4\source\V4.csproj", "{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTabs", "..\source\CustomTabs.csproj", "{5B33CEC5-C89D-4C5B-8365-17C83CCFAD4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compat", "..\..\support-compat\source\Compat.csproj", "{CA4194B2-8B2D-4C37-8790-C79C5803357A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,9 @@ Global
 		{5B33CEC5-C89D-4C5B-8365-17C83CCFAD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B33CEC5-C89D-4C5B-8365-17C83CCFAD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B33CEC5-C89D-4C5B-8365-17C83CCFAD4C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
