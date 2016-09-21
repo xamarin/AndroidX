@@ -12,13 +12,4 @@
 	<attr path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout']/field[@name='START']" name="managedName">StartAlignment</attr>
 	<attr path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout']/field[@name='TOP']" name="managedName">TopAlignment</attr>
 
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.Arc']" />
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.Assoc']" />
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.Axis']" />
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.Bounds']" />
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.Interval']" />
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.MutableInt']" />
-	<remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayout.PackedMap']" />
-
-
 </metadata>

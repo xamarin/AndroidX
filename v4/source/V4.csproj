@@ -6,7 +6,7 @@
     <ProjectGuid>{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Xamarin.Android.Support.v4r18</RootNamespace>
+    <RootNamespace>Xamarin.Android.Support</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>Xamarin.Android.Support.v4</AssemblyName>
@@ -15,6 +15,8 @@
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>publickey.snk</AssemblyOriginatorKeyFile> -->
     <AndroidClassParser>class-parse</AndroidClassParser>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

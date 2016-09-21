@@ -50,6 +50,7 @@
     <Compile Include="..\..\SupportConsts.cs">
       <Link>Properties\SupportConsts.cs</Link>
     </Compile>
+    <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
@@ -58,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\preference-leanback-v17\classes.jar">
-      <Link>Jars\classes.jar</Link>
+      <Link>Jars\v17-preference-leanback.jar</Link>
     </InputJar>
   </ItemGroup>
   <ItemGroup>

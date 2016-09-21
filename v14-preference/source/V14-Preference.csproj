@@ -51,6 +51,7 @@
     <Compile Include="..\..\SupportConsts.cs">
       <Link>Properties\SupportConsts.cs</Link>
     </Compile>
+    <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />

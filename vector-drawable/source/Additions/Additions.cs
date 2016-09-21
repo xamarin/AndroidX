@@ -3,34 +3,27 @@ using Android.Runtime;
 
 namespace Android.Support.Graphics.Drawable
 {
-    public partial class VectorDrawableCompat
+    public partial class VectorDrawableCommon
     {
-        public override void SetAlpha (int alpha)
-        {
-            Alpha = alpha;
+        /*
+         * Oddly, java_class_handle, class_ref, and ThresholdClass/ThresholdType were not being emitted
+         * for this class, and since this class subclasses Drawable, it was trying to use the superclass's members
+         * which are inaccessible.  Adding these in manually *seems* to fix the issue
+         */
+        internal static new IntPtr java_class_handle;
+        internal static new IntPtr class_ref {
+            get {
+                return JNIEnv.FindClass ("android/support/graphics/drawable/VectorDrawableCommon", ref java_class_handle);
+            }
         }
 
-//        [Register ("setColorFilter", "(Landroid/graphics/ColorFilter;)V", "GetSetColorFilter_Landroid_graphics_ColorFilter_Handler")]
-//        public override void SetColorFilter (Android.Graphics.ColorFilter cf)
-//        {
-//
-//        }
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=1 and parameter[1][@type='android.graphics.ColorFilter']]"
-//        [Register ("setColorFilter", "(Landroid/graphics/ColorFilter;)V", "GetSetColorFilter_Landroid_graphics_ColorFilter_Handler")]
-//        set {
-//            if (id_setColorFilter_Landroid_graphics_ColorFilter_ == IntPtr.Zero)
-//                id_setColorFilter_Landroid_graphics_ColorFilter_ = JNIEnv.GetMethodID (class_ref, "setColorFilter", "(Landroid/graphics/ColorFilter;)V");
-//            try {
-//                JValue* __args = stackalloc JValue [1];
-//                __args [0] = new JValue (value);
-//
-//                if (GetType () == ThresholdType)
-//                    JNIEnv.CallVoidMethod  (Handle, id_setColorFilter_Landroid_graphics_ColorFilter_, __args);
-//                else
-//                    JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setColorFilter", "(Landroid/graphics/ColorFilter;)V"), __args);
-//            } finally {
-//            }
-//        }
+        protected override IntPtr ThresholdClass {
+            get { return class_ref; }
+        }
+
+        protected override global::System.Type ThresholdType {
+            get { return typeof (VectorDrawableCommon); }
+        }
     }
 }
 

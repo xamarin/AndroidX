@@ -15,4 +15,12 @@
   - To change the type of the return value, use "return" as the parameter name.
   - The parameter names will be p0, p1, ... unless you provide JavaDoc file in the project.
   -->
+	<mapping jni-class="android/support/graphics/drawable/VectorDrawableCommon">
+		<method jni-name="getLayoutDirection" parameter="return" clr-enum-type="Android.Graphics.Drawables.Drawable.LayoutDirection" />
+		<method jni-name="setChangingConfigurations" parameter="configs" clr-enum-type="Android.Content.PM.ConfigChanges" />
+	</mapping>
+
+	<mapping jni-class="android/support/graphics/drawable/VectorDrawableCompat">
+		<method jni-name="getLayoutDirection" parameter="return" clr-enum-type="Android.Graphics.Drawables.Drawable.LayoutDirection" />
+	</mapping>
 </enum-method-mappings>

@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\percent\classes.jar">
-      <Link>Jars\classes.jar</Link>
+      <Link>Jars\support-percent.jar</Link>
     </InputJar>
   </ItemGroup>
   <ItemGroup>

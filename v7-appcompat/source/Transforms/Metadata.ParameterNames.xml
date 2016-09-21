@@ -2,4 +2,5 @@
 <metadata>
   <attr path="/api/package[@name='android.support.v7.widget']/class[@name='DrawableUtils']/method[@name='canSafelyMutateDrawable']/parameter[1]" name="managedName">drawable</attr>
   <attr path="/api/package[@name='android.support.v7.widget']/class[@name='DrawableUtils']/method[@name='getOpticalBounds']/parameter[1]" name="managedName">drawable</attr>
+  <attr path="/api/package[@name='android.support.v7.widget']/class[@name='ActionBarContextView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">visibility</attr>
 </metadata>

@@ -1,43 +1,35 @@
 ﻿<metadata>
+	<attr path="/api/package[@name='android.support.design.widget']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
 
-	<!--- Error CS0234: The type or namespace name `ViewOffsetBehavior' does not exist in the namespace `Android.Support.Design.Widget' -->
-	<attr path="/api/package[@name='android.support.design.widget']/class[@name='ViewOffsetBehavior']"
-	 	name="visibility">public</attr>
-
-	<!--- Error CS0115: `Android.Support.Design.Widget.AppBarLayout.Behavior.OnLayoutChild(Android.Support.Design.Widget.CoordinatorLayout, Android.Views.View, int)' 
-	      is marked as an override but no suitable method found to override  -->
-	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]" />
-
-	<!---Error CS0115: `Android.Support.Design.Widget.AppBarLayout.ScrollingViewBehavior.OnLayoutChild(Android.Support.Design.Widget.CoordinatorLayout, Android.Views.View, int)' 
-	     is marked as an override but no suitable method found to override -->
-	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]" />
-
-
-<!--	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='Snackbar.SnackbarLayout']" />-->
-	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
-	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@implements='android.support.design.widget.Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
-	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='Snackbar.SnackbarLayout.OnAttachStateChangeListener']" />
-	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='Snackbar.SnackbarLayout']/method[@name='setOnLayoutChangeListener']" />
-
-	<!-- ShadowViewDelegate is not public and is an interface so we can't make it public, so remove this implementation from the binding -->
-	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.ShadowDelegateImpl']" />
-
-
-	<attr path="/api/package[@name='android.support.design.widget']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected']/parameter[1]" name="managedName">menuItem</attr>
+	<remove-node path="/api/package[@name='android.support.design.internal']/class[@name='NavigationMenuPresenter']" />
 
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='HeaderBehavior']" name="visibility">public</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='HeaderScrollingViewBehavior']" name="visibility">public</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='ViewOffsetBehavior']" name="visibility">public</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='VisibilityAwareImageButton']" name="visibility">public</attr>
 
-	<!-- VisibilityAwareImageButton already defines setVisibility, so the generator should not create this override -->
-	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
-
 	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='HeaderScrollingViewBehavior']/method[@name='layoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]" />
 
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout.Behavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[2]" name="type">android.view.View</attr>
-<!--	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']" />
-	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']" />-->
 
-	<attr path="/api/package[@name='android.support.design.widget']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
+	<attr path="/api/package[@name='android.support.design.widget']/interface[@name='ShadowViewDelegate']" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout.ViewElevationComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout.ViewElevationComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+	
+	<!-- Manually fix these generator bug overrides https://bugzilla.xamarin.com/show_bug.cgi?id=44151  -->
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='CollapsingToolbarLayout']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='VisibilityAwareImageButton']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='TabLayout.TabView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='TextInputLayout']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='setBackgroundResource' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onDependentViewChanged' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='android.view.View']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='layoutDependsOn' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='android.view.View']]" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onRequestChildRectangleOnScreen' and count(parameter)=4 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='android.graphics.Rect'] and parameter[4][@type='boolean']]" />
+
+	<!-- Remove some non-public interfaces that the generator tries to bind -->
+	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='Snackbar.SnackbarLayout.OnAttachStateChangeListener']" />
 </metadata>

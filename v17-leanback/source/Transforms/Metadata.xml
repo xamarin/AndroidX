@@ -70,4 +70,21 @@
 	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseFragment.MainFragmentRowsAdapterProvider']/method[@name='getMainFragmentRowsAdapter']" name="propertyName"></attr>
 	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.MainFragmentAdapterProvider']/method[@name='getMainFragmentAdapter']" name="propertyName"></attr>
 	<attr path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.MainFragmentRowsAdapterProvider']/method[@name='getMainFragmentRowsAdapter']" name="propertyName"></attr>
+
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget.picker']/class[@name='Picker.PickerScrollArrayAdapter']" />
+
+	<attr path="/api/package[@name='android.support.v17.leanback.transition']/class[@name='FadeAndShortSlide.CalculateSlide']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BackgroundManager.DrawableWrapper']" name="visibility">public</attr>
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseCardView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseCardView']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='MediaNowPlayingView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget.picker']/class[@name='Picker']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchBar']/method[@name='setNextFocusDownId' and count(parameter)=1 and parameter[1][@type='int']]" />
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseGridView']/method[@name='setHasOverlappingRendering' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrowseFragment.MainFragmentItemViewSelectedListener']/method[@name='onItemSelected' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[4]" name="managedType">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrowseSupportFragment.MainFragmentItemViewSelectedListener']/method[@name='onItemSelected' and count(parameter)=4 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='android.support.v17.leanback.widget.RowPresenter.ViewHolder'] and parameter[4][@type='android.support.v17.leanback.widget.Row']]/parameter[4]" name="managedType">Java.Lang.Object</attr>
 </metadata>

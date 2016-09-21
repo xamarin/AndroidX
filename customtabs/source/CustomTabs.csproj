@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\customtabs\classes.jar">
-      <Link>Jars\classes.jar</Link>
+      <Link>Jars\support-customtabs.jar</Link>
     </InputJar>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
