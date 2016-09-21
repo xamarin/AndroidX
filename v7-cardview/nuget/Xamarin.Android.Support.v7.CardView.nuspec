@@ -9,9 +9,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>v7 CardView Android Support Library C# bindings for Xamarin</description>
     <copyright>Copyright 2013-2016</copyright>
-    <projectUrl>https://components.xamarin.com/view/xamandroidsupportv7cardview</projectUrl>
-    <licenseUrl>https://components.xamarin.com/license/xamandroidsupportv7cardview</licenseUrl>
-    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.v7.CardView.png</iconUrl>
+    <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/cardview_128x128.png</iconUrl>
   </metadata>
   <files>
     <file src="output/Xamarin.Android.Support.v7.CardView.dll" target="lib/MonoAndroid70" />
