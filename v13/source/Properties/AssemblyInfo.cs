@@ -10,9 +10,9 @@ using Android.App;
 [assembly: AssemblyTitle("Xamarin.Android.Support.v13")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Xamarin Inc.")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

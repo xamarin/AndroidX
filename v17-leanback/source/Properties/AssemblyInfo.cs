@@ -9,9 +9,9 @@ using Java.Interop;
 [assembly: AssemblyTitle("Xamarin.Android.Support.v17.Leanback")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Xamarin Inc.")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

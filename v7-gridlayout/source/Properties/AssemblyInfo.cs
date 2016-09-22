@@ -7,9 +7,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.Android.Support.v7.GridLayout")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Xamarin Inc.")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
