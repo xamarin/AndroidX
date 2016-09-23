@@ -3,6 +3,7 @@ using System.Linq;
 using Android.Support.V17.Leanback.App;
 using Android.Content;
 using Android.Support.V17.Leanback.Widget;
+using Java.Lang;
 
 namespace AndroidLeanbackSample
 {
@@ -14,17 +15,21 @@ namespace AndroidLeanbackSample
 
             buildAdapter ();
 
-            ItemViewClicked += (sender, e) => {
-                var item = (Video)e.Item;
-
-                var intent = new Intent (Intent.ActionView, Android.Net.Uri.Parse ("http://www.youtube.com/watch?v=" + item.Id));
-                StartActivity (intent);
-            };
+            //base.OnItemViewClickedListener = this;
 
             HeadersState = BrowseFragment.HeadersEnabled;
             Title = "Xamarin Webinars";
             BadgeDrawable = Resources.GetDrawable (Resource.Drawable.icon);
             HeadersTransitionOnBackEnabled = true;
+        }
+
+
+        public void OnItemClicked (Presenter.ViewHolder itemViewHolder, Java.Lang.Object item, RowPresenter.ViewHolder rowViewHolder, Row row)
+        {
+            var video = (Video)item;
+
+            var intent = new Intent (Intent.ActionView, Android.Net.Uri.Parse ("http://www.youtube.com/watch?v=" + video.Id));
+            StartActivity (intent);
         }
 
         void buildAdapter() 

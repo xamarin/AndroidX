@@ -1,8 +1,36 @@
 ﻿using System;
 using Android.Runtime;
+using Java.Interop;
 
 namespace Android.Support.V17.Leanback.Widget
 {
+    //[Register ("android/support/v17/leanback/widget/BaseOnItemViewClickedListener", "", "Android.Support.V17.Leanback.Widget.IBaseOnItemViewClickedListenerInvoker"), JavaTypeParameters (new string [] {
+    //    "T"
+    //})]
+    //public interface IBaseOnItemViewClickedListener<T> : IJavaObject, IDisposable where T : Java.Lang.Object
+    //{
+    //    //
+    //    // Methods
+    //    //
+    //    [Register ("onItemClicked", "(Landroid/support/v17/leanback/widget/Presenter$ViewHolder;Ljava/lang/Object;Landroid/support/v17/leanback/widget/RowPresenter$ViewHolder;Ljava/lang/Object;)V", "GetOnItemClicked_Landroid_support_v17_leanback_widget_Presenter_ViewHolder_Ljava_lang_Object_Landroid_support_v17_leanback_widget_RowPresenter_ViewHolder_Ljava_lang_Object_Handler:Android.Support.V17.Leanback.Widget.IBaseOnItemViewClickedListenerInvoker, Xamarin.Android.Support.v17.Leanback")]
+    //    void OnItemClicked (Presenter.ViewHolder itemViewHolder, Java.Lang.Object item, RowPresenter.ViewHolder rowViewHolder, T row);
+    //}
+
+
+    //[Register ("android/support/v17/leanback/widget/OnItemViewClickedListener", "", "Android.Support.V17.Leanback.Widget.IOnItemViewClickedListenerInvoker"), JavaTypeParameters (new string [] {
+    //    "T"
+    //})]
+    //public interface IOnItemViewClickedListener : IBaseOnItemViewClickedListener<Row>
+    //{
+    //}
+
+
+
+
+    //public interface IBaseOnItemViewClickedListener : IBaseOnItemViewClickedListener<Java.Lang.Object>
+    //{
+    //}
+
     public partial class BaseCardView
     {
         public override bool Selected {
@@ -176,6 +204,10 @@ namespace Android.Support.V17.Leanback.Widget
     }
 }
 
+namespace Android.Support.V17.Leanback.App
+{
+    
+}
 
 namespace Android.Support.V17.Leanback.Widget.Picker
 {

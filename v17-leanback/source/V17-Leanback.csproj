@@ -55,6 +55,7 @@
       <Link>Properties\SupportConsts.cs</Link>
     </Compile>
     <Compile Include="Additions\Additions.cs" />
+    <Compile Include="Additions\BrowseFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
