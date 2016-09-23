@@ -19,7 +19,7 @@ var AAR_VERSION = "24.2.1";
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r38.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v6.0" : "android-24";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
 var RENDERSCRIPT_FOLDER = "android-N";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
