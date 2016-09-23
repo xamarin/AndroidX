@@ -95,13 +95,37 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\v4\source\V4.csproj">
-      <Project>{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}</Project>
-      <Name>V4</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\source\V7-AppCompat.csproj">
       <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
       <Name>V7-AppCompat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\animated-vector-drawable\source\Animated-Vector-Drawable.csproj">
+      <Project>{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}</Project>
+      <Name>Animated-Vector-Drawable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-compat\source\Compat.csproj">
+      <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
+      <Name>Compat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-core-ui\source\Core-UI.csproj">
+      <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
+      <Name>Core-UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-core-utils\source\Core-Utils.csproj">
+      <Project>{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}</Project>
+      <Name>Core-Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-fragment\source\Fragment.csproj">
+      <Project>{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}</Project>
+      <Name>Fragment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-media-compat\source\Media-Compat.csproj">
+      <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
+      <Name>Media-Compat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\vector-drawable\source\Vector-Drawable.csproj">
+      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
+      <Name>Vector-Drawable</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

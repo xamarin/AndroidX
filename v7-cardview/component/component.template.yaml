@@ -7,11 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportv7cardview_128x128.png
-  - icons/xamandroidsupportv7cardview_512x512.png
-libraries:
-  android: 
-    - ../../output/Xamarin.Android.Support.v7.CardView.dll
+  - ../../icons/cardview_128x128.png
+  - ../../icons/cardview_512x512.png
 is_shell: true
 packages:
   android:
@@ -19,7 +16,7 @@ packages:
 samples:
   - name: "Android Support Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
+    removeProjects:
       - V7-CardView
     installNuGets:
       - project: AndroidSupportSample

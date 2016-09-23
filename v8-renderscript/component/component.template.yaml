@@ -7,10 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportv8_128x128.png
-  - icons/xamandroidsupportv8_512x512.png
-libraries:
-  android: ../../output/Xamarin.Android.Support.v8.RenderScript.dll
+  - ../../icons/v8-renderscript_128x128.png
+  - ../../icons/v8-renderscript_512x512.png
 is_shell: true
 packages:
   android:
@@ -18,7 +16,7 @@ packages:
 samples:
   - name: "RenderScript Sample"
     path:  ../samples/RenderScriptSample.sln
-    removeProjects: 
+    removeProjects:
       - V8-RenderScript
     installNuGets:
       - project: RenderScriptSample

@@ -5,9 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSupportSample", "And
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSupportSample.UITests", "AndroidSupportSample.UITests\AndroidSupportSample.UITests.csproj", "{3961DB6C-1AE7-4971-9B05-ED65A79FACC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V4", "..\..\v4\source\V4.csproj", "{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-GridLayout", "..\source\V7-GridLayout.csproj", "{D33F5F79-994B-4C34-BCC3-2B30CB630F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compat", "..\..\support-compat\source\Compat.csproj", "{CA4194B2-8B2D-4C37-8790-C79C5803357A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-UI", "..\..\support-core-ui\source\Core-UI.csproj", "{071EAE48-7BCE-4D68-8098-745B923A122F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,13 +25,17 @@ Global
 		{93B05B12-9FCC-45B0-813B-B1FB256829B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B05B12-9FCC-45B0-813B-B1FB256829B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B05B12-9FCC-45B0-813B-B1FB256829B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D33F5F79-994B-4C34-BCC3-2B30CB630F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D33F5F79-994B-4C34-BCC3-2B30CB630F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D33F5F79-994B-4C34-BCC3-2B30CB630F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D33F5F79-994B-4C34-BCC3-2B30CB630F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071EAE48-7BCE-4D68-8098-745B923A122F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071EAE48-7BCE-4D68-8098-745B923A122F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071EAE48-7BCE-4D68-8098-745B923A122F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071EAE48-7BCE-4D68-8098-745B923A122F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
