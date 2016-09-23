@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AndroidSupportSample.UITests</RootNamespace>
     <AssemblyName>AndroidSupportSample.UITests</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
