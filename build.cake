@@ -11,11 +11,12 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "24.2.1-alpha1";
+var NUGET_VERSION = "24.2.1-beta1";
 var COMPONENT_VERSION = "24.2.1.0";
 var AAR_VERSION = "24.2.1";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
+// FROM: https://dl.google.com/android/repository/addon2-1.xml
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r38.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
