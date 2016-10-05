@@ -55,12 +55,12 @@
       <Link>Properties\SupportConsts.cs</Link>
     </Compile>
     <Compile Include="Additions\Additions.cs" />
-    <Compile Include="Additions\BrowseFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\Metadata.ParameterNames.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Jars\" />
