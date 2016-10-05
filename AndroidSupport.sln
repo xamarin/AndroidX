@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media-Compat", "support-med
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transition", "transition\source\Transition.csproj", "{BF8F6617-A16E-43B8-9985-3D1066D1A081}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSupportAll", "support-compat\samples\AndroidSupportAll\AndroidSupportAll.csproj", "{F5E33C8B-15AE-4834-9112-5BAF5F0AA427}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,5 +159,9 @@ Global
 		{BF8F6617-A16E-43B8-9985-3D1066D1A081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF8F6617-A16E-43B8-9985-3D1066D1A081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8F6617-A16E-43B8-9985-3D1066D1A081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E33C8B-15AE-4834-9112-5BAF5F0AA427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E33C8B-15AE-4834-9112-5BAF5F0AA427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E33C8B-15AE-4834-9112-5BAF5F0AA427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E33C8B-15AE-4834-9112-5BAF5F0AA427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
