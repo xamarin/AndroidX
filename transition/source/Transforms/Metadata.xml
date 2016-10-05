@@ -1,14 +1,14 @@
 <metadata>
+	<attr path="/api/package[@name='android.support.transition']" name="managedName">Android.Support.Transitions</attr>
 
-  <attr path="/api/package[@name='android.transition']" name="managedName">Android.Support.Transition</attr>
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-  <!-- Fix params for some inherited parcelable types -->
-  <attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
-  <attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
-  <attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
-  <attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
-
-	<attr path="/api/package[@name='android.support.transition']/interface[@name='TransitionInterface']" name="visibility">public</attr>
-	<attr path="/api/package[@name='android.support.transition']/interface[@name='TransitionInterfaceListener']" name="visibility">public</attr>
-	<attr path="/api/package[@name='android.support.transition']/interface[@name='VisibilityInterface']" name="visibility">public</attr>
+	<!-- TransitionInterface, TransitionListenerInterface and VisibilityInterface are all marked as private and since they are java interfaces we cannot change visibility -->
+	<remove-node path="/api/package[@name='android.support.transition']/class[@name='Transition']/implements[1]" />
+	<remove-node path="/api/package[@name='android.support.transition']/interface[@name='Transition.TransitionListener']/implements[1]" />
+	<remove-node path="/api/package[@name='android.support.transition']/class[@name='Visibility']/implements[1]" />	
 </metadata>
