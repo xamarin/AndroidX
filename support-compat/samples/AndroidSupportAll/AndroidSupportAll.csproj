@@ -38,6 +38,7 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidSupportedAbis>armeabi;x86;armeabi-v7a;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
