@@ -59,6 +59,7 @@
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\Metadata.parameternames.xml" />
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\recyclerview-v7\classes.jar">

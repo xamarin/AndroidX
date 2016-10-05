@@ -15,12 +15,26 @@ namespace Android.Support.Design.Internal
 
 namespace Android.Support.Design.Widget
 {
+
+    public partial class AppBarLayout
+    {
+        public partial class OffsetChangedEventArgs
+        {
+            [Obsolete ("Use AppBarLayout property instead")]
+            public AppBarLayout Layout {
+                get { return AppBarLayout; }
+                //set { AppBarLayout = value; }
+            }
+        }
+    }
+
+
     public partial class CollapsingToolbarLayout
     {
-        //public void SetTitle (string title)
-        //{           
-        //    this.Title = title;
-        //}
+        public void SetTitle (string title)
+        {           
+            this.Title = title;
+        }
 
         public override Android.Views.ViewStates Visibility {
             get { return base.Visibility; }
@@ -99,7 +113,7 @@ namespace Android.Support.Design.Widget
         IntPtr id_getNestedViewAxes = IntPtr.Zero;
         IntPtr id_setNestedViewAxes = IntPtr.Zero;
 
-        public unsafe virtual int NestedScrollViewAxes {
+        public unsafe virtual int NestedScrollAxes {
             [Register ("getNestedViewAxes", "()I", "GetGetNestedViewAccessHandler")]
             get {
                 if (id_getNestedViewAxes == IntPtr.Zero) {
