@@ -13,6 +13,7 @@ is_shell: true
 packages:
   android:
     - Xamarin.Android.Support.Vector.Drawable, Version=$nuget-version$
+    - Xamarin.Android.Support.v7.AppCompat, Version=$nuget-version$
 samples:
   - name: "Vector Drawable Sample"
     path:  ../samples/VectorDrawableSample.sln
