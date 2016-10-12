@@ -211,8 +211,8 @@ Task ("diff")
 		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/"
 	};
 
-	MonoApiInfo ("./output/AndroidSupport.Merged.dll", 
-		"./output/AndroidSupport.api-info.xml", 
+	MonoApiInfo ("./output/AndroidSupport.Merged.dll",
+		"./output/AndroidSupport.api-info.xml",
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
 	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
@@ -220,13 +220,13 @@ Task ("diff")
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/AndroidSupport.api-info.previous.xml", 
+	MonoApiDiff ("./output/AndroidSupport.api-info.previous.xml",
 		"./output/AndroidSupport.api-info.xml",
 		"./output/AndroidSupport.api-diff.xml");
 
 	// Now let's make a purty html file
 	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/AndroidSupport.api-info.previous.xml", 
+	MonoApiHtml ("./output/AndroidSupport.api-info.previous.xml",
 		"./output/AndroidSupport.api-info.xml",
 		"./output/AndroidSupport.api-diff.html");
 });
@@ -349,26 +349,31 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 
 	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
 	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
 
 	var libs = new FilePath [] {
-		"./Xamarin.Android.Support.Compat.dll",
-		"./Xamarin.Android.Support.Core.UI.dll",
-		"./Xamarin.Android.Support.Core.Utils.dll",
-		"./Xamarin.Android.Support.Fragment.dll",
-		"./Xamarin.Android.Support.Media.Compat.dll",
-	}; 
+		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
+	};
 
 
 	foreach (var lib in libs) {
 		var genName = lib.GetFilename () + ".generated.cs";
 
+		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
+		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
+
 		Information ("GenAPI: {0}", lib.FullPath);
 
 		StartProcess (GenApiToolPath, new ProcessSettings {
-			Arguments = string.Format("-libPath:{0} -out:./{1} -w:TypeForwards {2}",
-							MONODROID_PATH + "," + MSCORLIB_PATH,
+			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
+							monoDroidPath + "," + MSCORLIB_PATH,
+							IsRunningOnWindows () ? "" : "./",
 							genName,
-							lib.FullPath),
+							libPath),
 			WorkingDirectory = "./output/",
 		});
 	}
