@@ -56,6 +56,9 @@ namespace ChromeCustomTabs
             customTabs.NavigationEvent += (navigationEvent, extras) => {
                 Android.Util.Log.Debug (TAG, "Navigation: " + navigationEvent);
             };
+            customTabs.ExtraCallback += (sender, args) => {
+                Android.Util.Log.Debug (TAG, "Extra Callback: " + args.CallbackName);
+            };
            
 
             simpleLaunch = FindViewById<Button> (Resource.Id.buttonSimpleLaunch);
