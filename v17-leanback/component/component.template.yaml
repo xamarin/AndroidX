@@ -7,13 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportv17leanback_128x128.png
-  - icons/xamandroidsupportv17leanback_512x512.png
-libraries:
-  android: 
-    - ../../output/Xamarin.Android.Support.v17.Leanback.dll
-    - ../../output/Xamarin.Android.Support.v4.dll
-    - ../../output/Xamarin.Android.Support.v7.RecyclerView.dll
+  - ../../icons/v17-leanback_128x128.png
+  - ../../icons/v17-leanback_512x512.png
 is_shell: true
 packages:
   android:
@@ -21,14 +16,22 @@ packages:
 samples:
   - name: "Android Support Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Compat
+      - Core-UI
+      - Core-Utils
+      - Fragment
+      - Media-Compat
       - V7-RecyclerView
       - V17-Leanback
     installNuGets:
       - project: AndroidSupportSample
         packages:
-          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
+          - Xamarin.Android.Support.Core.Utils
+          - Xamarin.Android.Support.Fragment
+          - Xamarin.Android.Support.Media.Compat
           - Xamarin.Android.Support.v7.RecyclerView
           - Xamarin.Android.Support.v17.Leanback
 local-nuget-repo: ../../output

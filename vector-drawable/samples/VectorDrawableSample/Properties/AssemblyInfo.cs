@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle ("VectorDrawableSample")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Xamarin")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

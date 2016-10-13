@@ -6,4 +6,6 @@
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[4]" name="managedName">widthUsed</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[5]" name="managedName">parentHeightMeasureSpec</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[6]" name="managedName">heightUsed</attr>
+	<attr path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]" name="managedName">visibility</attr>
+	<attr path="/api/package[@name='android.support.design.widget']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1]/parameter[1]" name="managedName">menuItem</attr>
 </metadata>

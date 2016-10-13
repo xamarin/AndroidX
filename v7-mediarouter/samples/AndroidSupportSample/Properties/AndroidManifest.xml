@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.supportv7mediarouter.sample">
-	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21" />
+	<uses-sdk android:minSdkVersion="10"  />
 	<!-- The smallest screen this app works on is a phone.  The app will
          scale its UI to larger screens but doesn't make good use of them
          so allow the compatibility mode button to be shown (mostly because

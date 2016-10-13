@@ -7,9 +7,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.Android.Support.v7.CardView")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Xamarin Inc.")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
@@ -26,19 +26,19 @@ using Android.App;
 // 		currently aren't working so i'm including the .aar file directly for now
 // CardView-v7
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version = __SupportConsts.Version)]
+    Version = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 // CardView-v7 resources
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl   = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version     = __SupportConsts.Version)]
+    Version     = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {	
-	public const string PackageName = "Xamarin.Android.Support.v7.CardView";
     public const string AarPath = "m2repository/com/android/support/cardview-v7/" + __SupportConsts.AarVersion + "/cardview-v7-" + __SupportConsts.AarVersion + ".aar";
 }
-

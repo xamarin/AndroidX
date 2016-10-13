@@ -7,28 +7,25 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportvectordrawable_128x128.png
-  - icons/xamandroidsupportvectordrawable_512x512.png
-libraries:
-  android: 
-    - ../../output/Xamarin.Android.Support.Vector.Drawable.dll
-    - ../../output/Xamarin.Android.Support.v4.dll
+  - ../../icons/vector-drawable_128x128.png
+  - ../../icons/vector-drawable_512x512.png
 is_shell: true
 packages:
   android:
     - Xamarin.Android.Support.Vector.Drawable, Version=$nuget-version$
+    - Xamarin.Android.Support.v7.AppCompat, Version=$nuget-version$
 samples:
   - name: "Vector Drawable Sample"
     path:  ../samples/VectorDrawableSample.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Compat
       - V7-AppCompat
       - Vector-Drawable
       - Animated-Vector-Drawable
     installNuGets:
       - project: VectorDrawableSample
         packages:
-          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.v7.AppCompat
           - Xamarin.Android.Support.Vector.Drawable
           - Xamarin.Android.Support.Animated.Vector.Drawable

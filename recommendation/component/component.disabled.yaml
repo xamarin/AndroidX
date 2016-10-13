@@ -7,10 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Support adding content recommendations in your app running on TV devices.
 icons:
-  - icons/xamandroidsupportrecommendation_128x128.png
-  - icons/xamandroidsupportrecommendation_512x512.png
-libraries:
-  android: ../../output/Xamarin.Android.Support.Recommendation.dll
+  - ../../icons/recommendation_128x128.png
+  - ../../icons/recommendation_512x512.png
 is_shell: true
 packages:
   android:
@@ -18,12 +16,21 @@ packages:
 samples:
   - name: "Recommendation Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
+    removeProjects:
+      - Compat
+      - Core-UI
+      - Core-Utils
+      - Fragment
+      - Media-Compat
       - Recommendation
     installNuGets:
       - project: AndroidSupportSample
-        packages: 
+        packages:
           - Xamarin.Android.Support.Recommendation
+          - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
+          - Xamarin.Android.Support.Core.Utils
+          - Xamarin.Android.Support.Fragment
+          - Xamarin.Android.Support.Media.Compat
 local-nuget-repo: ../../output
 no_build: true
-

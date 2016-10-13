@@ -52,6 +52,7 @@ $NUGET_EXE = Join-Path $TOOLS_DIR "nuget.exe"
 $NUGET_URL = "http://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
 $CAKE_EXE = Join-Path $TOOLS_DIR "Cake/Cake.exe"
 $PACKAGES_CONFIG = Join-Path $TOOLS_DIR "packages.config"
+$CAKE_PACKAGES_CONFIG = Join-Path $PSScriptRoot "cake.packages.config"
 
 # Should we use mono?
 $UseMono = "";
@@ -81,22 +82,28 @@ if ((Test-Path $PSScriptRoot) -and !(Test-Path $TOOLS_DIR)) {
 
 # Make sure that packages.config exist.
 if (!(Test-Path $PACKAGES_CONFIG)) {
-    Write-Verbose -Message "Downloading packages.config..."
-    try { Invoke-WebRequest -Uri http://cakebuild.net/download/bootstrapper/packages -OutFile $PACKAGES_CONFIG } catch {
-        Throw "Could not download packages.config."
+    if (!(Test-Path $CAKE_PACKAGES_CONFIG)) {
+        Write-Verbose -Message "Downloading packages.config..."
+        try { Invoke-WebRequest -Uri http://cakebuild.net/bootstrapper/packages -OutFile $PACKAGES_CONFIG } catch {
+            Throw "Could not download packages.config."
+        }
+    } else {
+        Write-Verbose -Message "using local cake.packages.config..."
+        Copy-Item $CAKE_PACKAGES_CONFIG $PACKAGES_CONFIG
     }
 }
 
+# Let's just skip this check and always download nuget.exe
 # Try find NuGet.exe in path if not exists
-if (!(Test-Path $NUGET_EXE)) {
-    Write-Verbose -Message "Trying to find nuget.exe in PATH..."
-    $existingPaths = $Env:Path -Split ';' | Where-Object { Test-Path $_ }
-    $NUGET_EXE_IN_PATH = Get-ChildItem -Path $existingPaths -Filter "nuget.exe" | Select -First 1
-    if ($NUGET_EXE_IN_PATH -ne $null -and (Test-Path $NUGET_EXE_IN_PATH.FullName)) {
-        Write-Verbose -Message "Found in PATH at $($NUGET_EXE_IN_PATH.FullName)."
-        $NUGET_EXE = $NUGET_EXE_IN_PATH.FullName
-    }
-}
+# if (!(Test-Path $NUGET_EXE)) {
+#    Write-Verbose -Message "Trying to find nuget.exe in PATH..."
+#    $existingPaths = $Env:Path -Split ';' | Where-Object { Test-Path $_ }
+#    $NUGET_EXE_IN_PATH = Get-ChildItem -Path $existingPaths -Filter "nuget.exe" | Select -First 1
+#    if ($NUGET_EXE_IN_PATH -ne $null -and (Test-Path $NUGET_EXE_IN_PATH.FullName)) {
+#        Write-Verbose -Message "Found in PATH at $($NUGET_EXE_IN_PATH.FullName)."
+#        $NUGET_EXE = $NUGET_EXE_IN_PATH.FullName
+#    }
+#}
 
 # Try download NuGet.exe if not exists
 if (!(Test-Path $NUGET_EXE)) {

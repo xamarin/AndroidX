@@ -138,10 +138,6 @@ namespace Android.Support.V7.App
             SetButton (whichButton, text, new IDialogInterfaceOnClickListenerImplementor () { Handler = handler });
         }
 
-
-
-
-
         class IDialogInterfaceOnClickListenerImplementor : Java.Lang.Object, Android.Content.IDialogInterfaceOnClickListener 
         {
             public EventHandler<Android.Content.DialogClickEventArgs> Handler { get; set; }
@@ -183,8 +179,5 @@ namespace Android.Support.V7.App
             }
         }
     }
-
-
-
 }
 

@@ -1,19 +1,2 @@
 <enum-method-mappings>
-	<mapping jni-class="android/support/v4/app/Fragment$SavedState">
-		<method jni-name="writeToParcel" parameter="flags" clr-enum-type="Android.OS.ParcelableWriteFlags" />
-	</mapping>
-	<mapping jni-interface="android/support/v4/app/ActivityCompat$OnRequestPermissionsResultCallback">
-		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
-	</mapping>
-	<!-- Manually did JNI for this as it's not generated properly, but maybe in the future? -->
-<!--	<mapping jni-class="android/support/v4/app/FragmentActivity">
-		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission" />
-	</mapping>-->
-	<mapping jni-class="android/support/v4/app/Fragment">
-		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
-	</mapping>
-
-	<mapping jni-class="android/support/v4/content/ContextCompat">
-		<method jni-name="checkSelfPermission" parameter="return" clr-enum-type="Android.Content.PM.Permission" />
-	</mapping>
 </enum-method-mappings>

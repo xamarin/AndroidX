@@ -7,12 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportv7recyclerview_128x128.png
-  - icons/xamandroidsupportv7recyclerview_512x512.png
-libraries:
-  android: 
-    - ../../output/Xamarin.Android.Support.v7.RecyclerView.dll
-    - ../../output/Xamarin.Android.Support.v4.dll
+  - ../../icons/v7-recyclerview_128x128.png
+  - ../../icons/v7-recyclerview_512x512.png
 is_shell: true
 packages:
   android:
@@ -20,13 +16,15 @@ packages:
 samples:
   - name: "Android Support Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Compat
+      - Core-UI
       - V7-RecyclerView
     installNuGets:
       - project: AndroidSupportSample
         packages:
-          - Xamarin.Android.Support.v4
+          - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
           - Xamarin.Android.Support.v7.RecyclerView
 local-nuget-repo: ../../output
 no_build: true

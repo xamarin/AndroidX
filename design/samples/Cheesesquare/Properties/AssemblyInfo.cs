@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Cheesesquare")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("redth")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

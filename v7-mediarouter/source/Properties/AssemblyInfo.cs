@@ -7,9 +7,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.Android.Support.v7.MediaRouter")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Xamarin Inc.")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
@@ -22,24 +22,26 @@ using Android.App;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Java.Interop.JavaLibraryReference ("libs/internal_impl-" + __SupportConsts.AarVersion + ".jar",
-	PackageName = __Consts.PackageName,
+	PackageName = __SupportConsts.PackageName,
     SourceUrl = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version = __SupportConsts.Version)]
+    Version = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
-	public const string PackageName = "Xamarin.Android.Support.v7.MediaRouter";
     public const string AarPath = "m2repository/com/android/support/mediarouter-v7/" + __SupportConsts.AarVersion + "/mediarouter-v7-" + __SupportConsts.AarVersion + ".aar";
 }

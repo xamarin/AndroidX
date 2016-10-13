@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle ("Xamarin.Android.Support.Preference.v14")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Xamarin Inc.")]
+[assembly: AssemblyCompany ("Microsoft Corporation")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Xamarin Inc.")]
+[assembly: AssemblyCopyright ("Copyright © Microsoft Corporation")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -27,18 +27,19 @@ using Android.App;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 [assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName     = __Consts.PackageName,
+	PackageName     = __SupportConsts.PackageName,
     SourceUrl       = __SupportConsts.Url,
 	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version)]
+    Version         = __SupportConsts.Version,
+    Sha1sum = __SupportConsts.Sha1sum)]
 
 static class __Consts {
-	public const string PackageName = "Xamarin.Android.Support.v14.Preference";
     public const string AarPath = "m2repository/com/android/support/preference-v14/" + __SupportConsts.AarVersion + "/preference-v14-" + __SupportConsts.AarVersion + ".aar";
 }

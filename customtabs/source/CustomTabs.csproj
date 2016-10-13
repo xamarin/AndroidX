@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{5B33CEC5-C89D-4C5B-8365-17C83CCFAD4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Xamarin.Android.Support.CustomTabs</RootNamespace>
@@ -11,10 +11,11 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.Android.Support.CustomTabs</AssemblyName>
-    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>publickey.snk</AssemblyOriginatorKeyFile> -->
+    <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,19 +55,20 @@
     <Compile Include="Additions\CustomTabsServiceConnectionImpl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-    <TransformFile Include="Transforms\Metadata.generated.xml" />
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\customtabs\classes.jar">
-      <Link>Jars\classes.jar</Link>
+      <Link>Jars\support-customtabs.jar</Link>
     </InputJar>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
+      <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
+      <Name>Compat</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <PropertyGroup>

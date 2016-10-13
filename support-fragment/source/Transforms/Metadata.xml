@@ -1,0 +1,8 @@
+<metadata>
+	<attr path="/api/package[@name='android.support.fragment']" name="managedName">Android.Support.Fragment</attr>
+
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='FragmentActivity']" name="extends">android.app.Activity</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='FragmentActivity.HostCallbacks']/method[@name='onGetHost' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+
+	<remove-node path="/api/package[@name='android.support.v4.app']/class[@name='FragmentActivity']/implements[@name='android.support.v4.app.ActivityCompatApi23.RequestPermissionsRequestCodeValidator']" />
+</metadata>

@@ -33,6 +33,10 @@ namespace Android.Support.CustomTabs
                         var evt = NavigationEvent;
                         if (evt != null)
                             evt (navEvent, extras);
+                    }, (callbackName, args) => {
+                        var evt = ExtraCallback;
+                        if (evt != null)
+                            evt (this, new ExtraCallbackEventArgs { CallbackName = callbackName, Args = args });
                     });
                 }
 
@@ -43,12 +47,20 @@ namespace Android.Support.CustomTabs
         CustomTabsServiceConnectionImpl connection;
 
         public delegate void NavigationEventDelegate (int navigationEvent, Bundle extras);
+        public delegate void ExtraCallbackDelegate (object sender, ExtraCallbackEventArgs e);
         public delegate void CustomTabsServiceConnectedDelegate (ComponentName name, CustomTabsClient client);
         public delegate void CustomTabsServiceDisconnectedDelegate (ComponentName name);
 
         public event NavigationEventDelegate NavigationEvent;
+        public event ExtraCallbackDelegate ExtraCallback;
         public event CustomTabsServiceConnectedDelegate CustomTabsServiceConnected;
         public event CustomTabsServiceDisconnectedDelegate CustomTabsServiceDisconnected;
+
+        public class ExtraCallbackEventArgs
+        {
+            public string CallbackName { get; set; }
+            public Bundle Args { get; set; }
+        }
 
         public CustomTabsActivityManager (Activity parentActivity)
         {
@@ -113,7 +125,7 @@ namespace Android.Support.CustomTabs
                 customTabsIntent = new CustomTabsIntent.Builder ()
                     .Build ();                    
             }
-                
+
             CustomTabsHelper.AddKeepAliveExtra (ParentActivity, customTabsIntent.Intent);
 
             customTabsIntent.LaunchUrl (ParentActivity, Android.Net.Uri.Parse (url));

@@ -12,5 +12,10 @@
 	<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.graphics.PorterDuff.Mode']]" />
 	<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setChangingConfigurations' and count(parameter)=1 and parameter[1][@type='int']]" />
 
-<!--	<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=1 and parameter[1][@type='android.graphics.ColorFilter']]" />-->
+	<attr path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=1 and parameter[1][@type='android.graphics.ColorFilter']]" name="propertyName"></attr>
+
+	<attr path="/api/package[@name='android.support.graphics.drawable']/class[@name='PathParser']" name="visibility">public</attr>
+	
+	<!--<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='getColorFilter' and count(parameter)=0]" />-->
+	<!--<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=1 and parameter[1][@type='android.graphics.ColorFilter']]" />-->
 </metadata>

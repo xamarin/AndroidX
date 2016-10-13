@@ -7,10 +7,10 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportpreferences_128x128.png
-  - icons/xamandroidsupportpreferences_512x512.png
+  - ../../icons/v7-preference_128x128.png
+  - ../../icons/v7-preference_512x512.png
 libraries:
-  android: 
+  android:
    - ../../output/Xamarin.Android.Support.v7.Preference.dll
    - ../../output/Xamarin.Android.Support.v14.Preference.dll
    - ../../output/Xamarin.Android.Support.v17.Preference.Leanback.dll
@@ -24,8 +24,12 @@ packages:
 samples:
   - name: "Preference V7, V14, V17 Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Compat
+      - Core-UI
+      - Core-Utils
+      - Fragment
+      - Media-Compat
       - V7-Preference
       - V14-Preference
       - V17-Leanback
@@ -36,8 +40,12 @@ samples:
       - Animated-Vector-Drawable
     installNuGets:
       - project: AndroidSupportSample
-        packages: 
-          - Xamarin.Android.Support.v4
+        packages:
+          - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
+          - Xamarin.Android.Support.Core.Utils
+          - Xamarin.Android.Support.Fragment
+          - Xamarin.Android.Support.Media.Compat
           - Xamarin.Android.Support.v7.Preference
           - Xamarin.Android.Support.v14.Preference
           - Xamarin.Android.Support.v17.Leanback
@@ -48,4 +56,3 @@ samples:
           - Xamarin.Android.Support.Animated.Vector.Drawable
 local-nuget-repo: ../../output
 no_build: true
-

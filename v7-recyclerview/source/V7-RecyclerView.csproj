@@ -4,19 +4,20 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</ProjectGuid>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>Xamarin.Android.Support.v7.RecyclerView</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.Android.Support.v7.RecyclerView</AssemblyName>
-    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>publickey.snk</AssemblyOriginatorKeyFile> -->
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+    <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,14 +56,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Additions\AboutAdditions.txt" />
-    <None Include="Jars\AboutJars.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-    <TransformFile Include="Transforms\Metadata.generated.xml" />
+    <TransformFile Include="Transforms\Metadata.parameternames.xml" />
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\recyclerview-v7\classes.jar">
@@ -70,10 +67,17 @@
     </InputJar>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\v4\source\V4.csproj">
-      <Project>{BCE98C50-BDB6-49C4-AFB4-78EB1357A3F2}</Project>
-      <Name>V4</Name>
+    <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
+      <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
+      <Name>Compat</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\support-core-ui\source\Core-UI.csproj">
+      <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
+      <Name>Core-UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Additions\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>

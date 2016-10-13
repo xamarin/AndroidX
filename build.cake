@@ -1,6 +1,7 @@
 #tool nuget:?package=ILRepack&version=2.0.10
 #tool nuget:?package=XamarinComponent
 #tool nuget:?package=Cake.MonoApiTools
+#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
@@ -10,26 +11,43 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "23.4.0.1";
-var COMPONENT_VERSION = "23.4.0.1";
-var AAR_VERSION = "23.4.0";
+var NUGET_VERSION = "24.2.1";
+var COMPONENT_VERSION = "24.2.1.0";
+var AAR_VERSION = "24.2.1";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r23-macosx.zip";
+// FROM: https://dl.google.com/android/repository/addon2-1.xml
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r38.zip";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
-var MONO_API_TOOLS_URL = "http://xamarin-components-apiinfo.s3.amazonaws.com/mono-api-tools.zip";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
+var RENDERSCRIPT_FOLDER = "android-N";
+
+// We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/23.4.0.1/api-info.xml";
 
 var AAR_DIRS = new [] {
 	"support-v4", "support-v13", "appcompat-v7", "gridlayout-v7", "mediarouter-v7", "recyclerview-v7",
 	"palette-v7", "cardview-v7", "leanback-v17", "design", "percent", "customtabs", "preference-v7",
 	"preference-v14", "preference-leanback-v17", "recommendation", "animated-vector-drawable",
-	"support-vector-drawable"
+	"support-vector-drawable", "support-compat", "support-core-utils", "support-core-ui",
+	"support-media-compat", "support-fragment", "transition"
 };
 
-var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/android-23/";
+var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ())
-	MONODROID_PATH = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/v6.0/").FullPath;
+	MONODROID_PATH = MakeAbsolute (new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION +"/")).FullPath;
+
+var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
+if (IsRunningOnWindows ()) {
+
+	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
+
+	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
+	else
+		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
+}
 
 var buildSpec = new BuildSpec {
 	Libs = new [] {
@@ -41,7 +59,7 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./design/source/bin/Release/Xamarin.Android.Support.Design.dll" },
 				new OutputFileCopy { FromFile = "./percent/source/bin/Release/Xamarin.Android.Support.Percent.dll" },
 				new OutputFileCopy { FromFile = "./recommendation/source/bin/Release/Xamarin.Android.Support.Recommendation.dll" },
-				new OutputFileCopy { FromFile = "./v4/source/bin/Release/Xamarin.Android.Support.v4.dll" },
+				//new OutputFileCopy { FromFile = "./v4/source/bin/Release/Xamarin.Android.Support.v4.dll" },
 				new OutputFileCopy { FromFile = "./v7-appcompat/source/bin/Release/Xamarin.Android.Support.v7.AppCompat.dll" },
 				new OutputFileCopy { FromFile = "./v7-cardview/source/bin/Release/Xamarin.Android.Support.v7.CardView.dll" },
 				new OutputFileCopy { FromFile = "./v7-gridlayout/source/bin/Release/Xamarin.Android.Support.v7.GridLayout.dll" },
@@ -56,6 +74,12 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./v17-preference-leanback/source/bin/Release/Xamarin.Android.Support.v17.Preference.Leanback.dll" },
 				new OutputFileCopy { FromFile = "./animated-vector-drawable/source/bin/Release/Xamarin.Android.Support.Animated.Vector.Drawable.dll" },
 				new OutputFileCopy { FromFile = "./vector-drawable/source/bin/Release/Xamarin.Android.Support.Vector.Drawable.dll" },
+				new OutputFileCopy { FromFile = "./support-compat/source/bin/Release/Xamarin.Android.Support.Compat.dll" },
+				new OutputFileCopy { FromFile = "./support-core-utils/source/bin/Release/Xamarin.Android.Support.Core.Utils.dll" },
+				new OutputFileCopy { FromFile = "./support-core-ui/source/bin/Release/Xamarin.Android.Support.Core.UI.dll" },
+				new OutputFileCopy { FromFile = "./support-fragment/source/bin/Release/Xamarin.Android.Support.Fragment.dll" },
+				new OutputFileCopy { FromFile = "./support-media-compat/source/bin/Release/Xamarin.Android.Support.Media.Compat.dll" },
+				new OutputFileCopy { FromFile = "./transition/source/bin/Release/Xamarin.Android.Support.Transition.dll" },
 			}
 		}
 	},
@@ -100,6 +124,12 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./v17-preference-leanback/nuget/Xamarin.Android.Support.v17.Preference.Leanback.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./animated-vector-drawable/nuget/Xamarin.Android.Support.Animated.Vector.Drawable.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./vector-drawable/nuget/Xamarin.Android.Support.Vector.Drawable.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-compat/nuget/Xamarin.Android.Support.Compat.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-core-utils/nuget/Xamarin.Android.Support.Core.Utils.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-core-ui/nuget/Xamarin.Android.Support.Core.UI.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-fragment/nuget/Xamarin.Android.Support.Fragment.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-media-compat/nuget/Xamarin.Android.Support.Media.Compat.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./transition/nuget/Xamarin.Android.Support.Transition.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
 	Components = new [] {
@@ -165,8 +195,8 @@ Task ("externals")
 		DownloadFile (BUILD_TOOLS_URL, path + "buildtools.zip");
 	if (!FileExists (path + "build-tools/renderscript/lib/renderscript-v8.jar")) {
 		Unzip (path + "buildtools.zip", path);
-		CopyDirectory (path + "android-6.0", path + "build-tools");
-		DeleteDirectory (path + "android-6.0", true);
+		CopyDirectory (path + RENDERSCRIPT_FOLDER, path + "build-tools");
+		DeleteDirectory (path + RENDERSCRIPT_FOLDER, true);
 	}
 });
 
@@ -181,23 +211,22 @@ Task ("diff")
 		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/"
 	};
 
-	MonoApiInfo ("./output/AndroidSupport.Merged.dll", 
-		"./output/AndroidSupport.api-info.xml", 
+	MonoApiInfo ("./output/AndroidSupport.Merged.dll",
+		"./output/AndroidSupport.api-info.xml",
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
-	// Grab the latest published api info from S3
-	var latestReleasedApiInfoUrl = "http://xamarin-components-apiinfo.s3.amazonaws.com/Support.Android-Latest.xml";
-	DownloadFile (latestReleasedApiInfoUrl, "./output/AndroidSupport.api-info.previous.xml");
+	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
+	DownloadFile (BASE_API_INFO_URL, "./output/AndroidSupport.api-info.previous.xml");
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/AndroidSupport.api-info.previous.xml", 
+	MonoApiDiff ("./output/AndroidSupport.api-info.previous.xml",
 		"./output/AndroidSupport.api-info.xml",
 		"./output/AndroidSupport.api-diff.xml");
 
 	// Now let's make a purty html file
 	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/AndroidSupport.api-info.previous.xml", 
+	MonoApiHtml ("./output/AndroidSupport.api-info.previous.xml",
 		"./output/AndroidSupport.api-info.xml",
 		"./output/AndroidSupport.api-diff.html");
 });
@@ -310,6 +339,48 @@ Task ("component-docs").Does (() =>
 
 		FileWriteText (compDir.CombineWithFilePath ("./component/Details.md"), t.ToString ());
 	}
+});
+
+Task ("libs").IsDependentOn ("genapi");
+
+Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
+
+	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
+
+	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
+
+	var libs = new FilePath [] {
+		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
+		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
+	};
+
+
+	foreach (var lib in libs) {
+		var genName = lib.GetFilename () + ".generated.cs";
+
+		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
+		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
+
+		Information ("GenAPI: {0}", lib.FullPath);
+
+		StartProcess (GenApiToolPath, new ProcessSettings {
+			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
+							monoDroidPath + "," + MSCORLIB_PATH,
+							IsRunningOnWindows () ? "" : "./",
+							genName,
+							libPath),
+			WorkingDirectory = "./output/",
+		});
+	}
+
+	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = "Release");
+
+	CopyFile ("./v4/source/bin/Release/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);

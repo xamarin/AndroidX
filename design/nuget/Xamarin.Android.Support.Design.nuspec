@@ -8,17 +8,22 @@
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Design Android Support Library C# bindings for Xamarin</description>
-    <copyright>Copyright 2013-2016</copyright>
-    <projectUrl>https://components.xamarin.com/view/xamandroidsupportdesign</projectUrl>
-    <licenseUrl>https://components.xamarin.com/license/xamandroidsupportdesign</licenseUrl>
-    <iconUrl>https://xamarin-component-icons.s3.amazonaws.com/Xamarin.Android.Support.Design.png</iconUrl>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/design_128x128.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.Android.Support.v7.AppCompat" version="[$version$]"/>
       <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.v4" version="[$version$]"/>
+      <!-- Support V4 -->
+      <dependency id="Xamarin.Android.Support.Compat" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.Core.Utils" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.Fragment" version="[$version$]"/>
+      <dependency id="Xamarin.Android.Support.Media.Compat" version="[$version$]"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="output/Xamarin.Android.Support.Design.dll" target="lib/MonoAndroid43" />
+    <file src="output/Xamarin.Android.Support.Design.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

@@ -7,12 +7,8 @@ src-url: https://github.com/xamarin/AndroidSupportComponents
 license: ../../component/License.md
 summary: Provide backward-compatible versions of Android framework APIs.
 icons:
-  - icons/xamandroidsupportv13-18_128x128.png
-  - icons/xamandroidsupportv13-18_512x512.png
-libraries:
-  android: 
-    - ../../output/Xamarin.Android.Support.v13.dll
-    - ../../output/Xamarin.Android.Support.v4.dll
+  - ../../icons/v13_128x128.png
+  - ../../icons/v13_512x512.png
 is_shell: true
 packages:
   android:
@@ -20,13 +16,21 @@ packages:
 samples:
   - name: "Android Support Sample"
     path:  ../samples/AndroidSupportSample.sln
-    removeProjects: 
-      - V4
+    removeProjects:
+      - Compat
+      - Core-UI
+      - Core-Utils
+      - Fragment
+      - Media-Compat
       - V13
     installNuGets:
       - project: AndroidSupportSample
-        packages: 
-          - Xamarin.Android.Support.v4
+        packages:
+          - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
+          - Xamarin.Android.Support.Core.Utils
+          - Xamarin.Android.Support.Fragment
+          - Xamarin.Android.Support.Media.Compat
           - Xamarin.Android.Support.v13
 local-nuget-repo: ../../output
 no_build: true
