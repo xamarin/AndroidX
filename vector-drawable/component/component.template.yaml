@@ -19,6 +19,10 @@ samples:
     path:  ../samples/VectorDrawableSample.sln
     removeProjects:
       - Compat
+      - Core-UI
+      - Core-Utils
+      - Fragment
+      - Media-Compat
       - V7-AppCompat
       - Vector-Drawable
       - Animated-Vector-Drawable
@@ -26,6 +30,10 @@ samples:
       - project: VectorDrawableSample
         packages:
           - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Support.Core.UI
+          - Xamarin.Android.Support.Core.Utils
+          - Xamarin.Android.Support.Fragment
+          - Xamarin.Android.Support.Media.Compat
           - Xamarin.Android.Support.v7.AppCompat
           - Xamarin.Android.Support.Vector.Drawable
           - Xamarin.Android.Support.Animated.Vector.Drawable
