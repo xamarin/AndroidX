@@ -19,7 +19,7 @@ var AAR_VERSION = "25.0.0";
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r39.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
+var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-24_r01.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
 var RENDERSCRIPT_FOLDER = "android-N";
 
