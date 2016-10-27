@@ -53,6 +53,7 @@
     <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TransformFile Include="..\..\Metadata.generated.xml" />
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />

@@ -13,7 +13,7 @@
     <AssemblyName>Xamarin.Android.Support.v7.CardView</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
-    <DelaySign>true</DelaySign>    
+    <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>publickey.snk</AssemblyOriginatorKeyFile> -->
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -53,6 +53,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <TransformFile Include="..\..\Metadata.generated.xml" />
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />

@@ -52,10 +52,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <TransformFile Include="..\..\Metadata.generated.xml" />
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-    <TransformFile Include="Transforms\Metadata.generated.xml" />
   </ItemGroup>
   <ItemGroup>
     <InputJar Include="..\..\externals\percent\classes.jar">
