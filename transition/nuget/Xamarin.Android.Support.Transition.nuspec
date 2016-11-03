@@ -22,6 +22,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="transitions/nuget/Xamarin.Android.Support.Transition.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.Transition.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

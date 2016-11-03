@@ -17,6 +17,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="support-core-utils/nuget/Xamarin.Android.Support.Core.Utils.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.Core.Utils.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

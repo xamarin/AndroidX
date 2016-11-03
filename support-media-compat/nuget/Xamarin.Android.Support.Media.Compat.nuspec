@@ -17,6 +17,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="support-media-compat/nuget/Xamarin.Android.Support.Media.Compat.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.Media.Compat.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

@@ -18,6 +18,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="v7-mediarouter/nuget/Xamarin.Android.Support.v7.MediaRouter.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.v7.MediaRouter.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

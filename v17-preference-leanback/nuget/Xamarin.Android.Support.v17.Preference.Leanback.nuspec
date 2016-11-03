@@ -27,6 +27,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="v17-preference-leanback/nuget/Xamarin.Android.Support.v17.Preference.Leanback.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.v17.Preference.Leanback.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

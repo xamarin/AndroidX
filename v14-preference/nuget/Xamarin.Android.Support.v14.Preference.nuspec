@@ -25,6 +25,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="v14-preference/nuget/Xamarin.Android.Support.v14.Preference.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.v14.Preference.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

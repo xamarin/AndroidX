@@ -14,6 +14,8 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/support-compat_128x128.png</iconUrl>
   </metadata>
   <files>
+    <file src="support-compat/nuget/Xamarin.Android.Support.Compat.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.Compat.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

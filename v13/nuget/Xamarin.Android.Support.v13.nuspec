@@ -22,6 +22,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="v13/nuget/Xamarin.Android.Support.v13.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.v13.dll" target="lib/MonoAndroid70" />
   </files>
 </package>
