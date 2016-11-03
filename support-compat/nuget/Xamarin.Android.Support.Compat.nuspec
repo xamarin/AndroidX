@@ -12,6 +12,9 @@
     <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/support-compat_128x128.png</iconUrl>
+    <dependencies>
+        <dependency id="Xamarin.Build.Download" version="0.3.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="support-compat/nuget/Xamarin.Android.Support.Compat.targets" target="build" />
