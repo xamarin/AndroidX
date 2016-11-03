@@ -18,6 +18,7 @@ var AAR_VERSION = "25.0.0";
 // FROM: https://dl.google.com/android/repository/addon.xml
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r39.zip";
+var M2_REPOSITORY_SHA1 = "89ad37d67a1018c42be36933cec3d7712141d42c";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
@@ -33,6 +34,53 @@ var AAR_DIRS = new [] {
 	"support-vector-drawable", "support-compat", "support-core-utils", "support-core-ui",
 	"support-media-compat", "support-fragment", "transition"
 };
+
+var AAR_INFOS = new [] {
+	new AarInfo ("support-v4", "v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-v13", "v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("appcompat-v7", "v7-appcompat", "Xamarin.Android.Support.v7.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("gridlayout-v7", "v7-gridlayout", "Xamarin.Android.Support.v7.GridLayout", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("mediarouter-v7", "v7-mediarouter", "Xamarin.Android.Support.v7.MediaRouter", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("recyclerview-v7", "v7-recyclerview", "Xamarin.Android.Support.v7.RecyclerView", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("palette-v7", "v7-palette", "Xamarin.Android.Support.v7.Palette", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("cardview-v7", "v7-cardview", "Xamarin.Android.Support.v7.CardView", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("leanback-v17", "v17-leanback", "Xamarin.Android.Support.v17.Leanback", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("design", "design", "Xamarin.Android.Support.Design", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("percent", "percent", "Xamarin.Android.Support.Percent", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("customtabs", "customtabs", "Xamarin.Android.Support.CustomTabs", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("preference-v7", "v7-preference", "Xamarin.Android.Support.v7.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("preference-v14", "v14-preference", "Xamarin.Android.Support.v14.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("preference-leanback-v17", "v17-preference-leanback", "Xamarin.Android.Support.v17.Preference.Leanback", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("recommendation", "recommendation", "Xamarin.Android.Support.Recommendation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("animated-vector-drawable", "animated-vector-drawable", "Xamarin.Android.Support.Animated.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-vector-drawable", "vector-drawable", "Xamarin.Android.Support.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-compat", "support-compat", "Xamarin.Android.Support.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-core-utils", "support-core-utils", "Xamarin.Android.Support.Core.Utils", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-core-ui", "support-core-ui", "Xamarin.Android.Support.Core.UI", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-media-compat", "support-media-compat", "Xamarin.Android.Support.Media.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-fragment", "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("transition", "transition", "Xamarin.Android.Support.Transitionß", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+};
+
+class AarInfo
+{
+	public AarInfo (string key, string path, string nugetId, string aarVersion, string nugetVersion, string componentVersion)
+	{
+		Key = key;
+		Path = path;
+		NugetId = nugetId;
+		AarVersion = aarVersion;
+		NuGetVersion = nugetVersion;
+		ComponentVersion = componentVersion;
+	}
+
+	public string Key { get; set; }
+	public string Path { get; set; }
+	public string NugetId { get;set; }
+	public string AarVersion { get; set; }
+	public string NuGetVersion { get; set; }
+	public string ComponentVersion { get; set; }
+}
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ())
@@ -262,6 +310,40 @@ Task ("component-setup").Does (() =>
 		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
 
 		FileWriteText (newYaml, manifestTxt);
+	}
+});
+
+Task ("nuget-setup").Does (() => {
+	var templateText = FileReadText ("./template.targets");
+
+	foreach (var aar in AAR_INFOS) {
+
+		var msName = aar.Key.Replace("-", "");
+		
+		var items = new Dictionary<string, string> {
+			{ "_XbdUrl_", "_XbdUrl_" + msName },
+			{ "_XbdSha1_", "_XbdSha1_" + msName },
+			{ "_XbdKey_", "_XbdKey_" + msName },
+			{ "_XbdAarFile_", "_XbdAarFile_" + msName },
+			{ "_XbdAarFileInSdk_", "_XbdAarFileInSdk_" + msName },
+			{ "_XbdAssemblyName_", "_XbdAssemblyName_" + msName },
+			{ "_XbdAarFileFullPath_", "_XbdAarFileFullPath_" + msName },
+			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
+			{ "$XbdUrl$", M2_REPOSITORY_URL },
+			{ "$XbdSha1$", M2_REPOSITORY_SHA1 },
+			{ "$XbdKey$", "androidsupport-" + AAR_VERSION },
+			{ "$XbdAssemblyName$", aar.NugetId },
+			{ "$AarKey$", aar.Key },
+			{ "$AarVersion$", aar.AarVersion}
+		};
+
+		var targetsText = templateText;
+
+		foreach (var kvp in items)
+			targetsText = targetsText.Replace (kvp.Key, kvp.Value);
+
+		var targetsFile = string.Format ("{0}/nuget/{1}.targets", aar.Path, aar.NugetId);
+		FileWriteText (targetsFile, targetsText);
 	}
 });
 
