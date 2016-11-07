@@ -59,14 +59,14 @@ var AAR_INFOS = new [] {
 	new AarInfo ("support-core-ui", "support-core-ui", "Xamarin.Android.Support.Core.UI", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-media-compat", "support-media-compat", "Xamarin.Android.Support.Media.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-fragment", "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new AarInfo ("transition", "transition", "Xamarin.Android.Support.Transitionß", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("transition", "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 };
 
 class AarInfo
 {
-	public AarInfo (string key, string path, string nugetId, string aarVersion, string nugetVersion, string componentVersion)
+	public AarInfo (string dir, string path, string nugetId, string aarVersion, string nugetVersion, string componentVersion)
 	{
-		Key = key;
+		Dir = dir;
 		Path = path;
 		NugetId = nugetId;
 		AarVersion = aarVersion;
@@ -74,7 +74,7 @@ class AarInfo
 		ComponentVersion = componentVersion;
 	}
 
-	public string Key { get; set; }
+	public string Dir { get; set; }
 	public string Path { get; set; }
 	public string NugetId { get;set; }
 	public string AarVersion { get; set; }
@@ -316,10 +316,13 @@ Task ("component-setup").Does (() =>
 Task ("nuget-setup").Does (() => {
 	var templateText = FileReadText ("./template.targets");
 
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
 	foreach (var aar in AAR_INFOS) {
 
-		var msName = aar.Key.Replace("-", "");
-		
+		var msName = aar.Dir.Replace("-", "");
+
 		var items = new Dictionary<string, string> {
 			{ "_XbdUrl_", "_XbdUrl_" + msName },
 			{ "_XbdSha1_", "_XbdSha1_" + msName },
@@ -333,7 +336,7 @@ Task ("nuget-setup").Does (() => {
 			{ "$XbdSha1$", M2_REPOSITORY_SHA1 },
 			{ "$XbdKey$", "androidsupport-" + AAR_VERSION },
 			{ "$XbdAssemblyName$", aar.NugetId },
-			{ "$AarKey$", aar.Key },
+			{ "$AarKey$", aar.Dir },
 			{ "$AarVersion$", aar.AarVersion}
 		};
 
@@ -344,6 +347,33 @@ Task ("nuget-setup").Does (() => {
 
 		var targetsFile = string.Format ("{0}/nuget/{1}.targets", aar.Path, aar.NugetId);
 		FileWriteText (targetsFile, targetsText);
+
+		// Merge each generated targets file into one main one
+		// this makes one file to import into our actual binding projects
+		// which is much easier/less maintenance
+		if (!FileExists ("./generated.targets"))
+			FileWriteText ("./generated.targets", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n</Project>");
+
+		// Load the doc to append to, and the doc to append
+		var xFileRoot = System.Xml.Linq.XDocument.Load ("./generated.targets");
+		System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
+		var xFileChild = System.Xml.Linq.XDocument.Load (targetsFile);
+		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
+
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xFileChild.Element (nsChild + "Project").Elements ())
+			xFileRoot.Element (nsRoot + "Project").Add (xItemToAdd);
+
+		// Inject a property to prevent errors from missing assemblies in .targets
+		// this allows us to use one big .targets file in all the projects and not have to figure out which specific
+		// ones each project needs to reference for development purposes
+		if (!xFileRoot.Descendants (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly").Any ()) {
+			xFileRoot.Element (nsRoot + "Project")
+				.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup", 
+					new System.Xml.Linq.XElement (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly", false)));
+		}
+
+		xFileRoot.Save ("./generated.targets");
 	}
 });
 
