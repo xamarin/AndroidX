@@ -215,14 +215,15 @@ Task ("externals")
 
 	// Copy the .aar's to a better location
 	foreach (var aar in AAR_INFOS) {
-		CopyFile (string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}.aar", aar.Dir, AAR_VERSION, aar.Dir, AAR_VERSION),
-			string.Format (path + "{0}.aar", aar));
-		Unzip (string.Format (path + "{0}.aar", aar), path + aar);
+		var aarDir = aar.Dir;
+		CopyFile (string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}.aar", aarDir, AAR_VERSION, aarDir, AAR_VERSION),
+			string.Format (path + "{0}.aar", aarDir));
+		Unzip (string.Format (path + "{0}.aar", aarDir), path + aarDir);
 
-		var implFile = path + aar + "/libs/internal_impl-" + AAR_VERSION + ".jar";
+		var implFile = path + aarDir + "/libs/internal_impl-" + AAR_VERSION + ".jar";
 
 		if (FileExists (implFile))
-			MoveFile (implFile, path + aar + "/libs/internal_impl.jar");
+			MoveFile (implFile, path + aarDir + "/libs/internal_impl.jar");
 	}
 
   // Get android docs
