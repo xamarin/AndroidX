@@ -27,14 +27,6 @@ var RENDERSCRIPT_FOLDER = "android-N";
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/24.2.1/api-info.xml";
 
-var AAR_DIRS = new [] {
-	"support-v4", "support-v13", "appcompat-v7", "gridlayout-v7", "mediarouter-v7", "recyclerview-v7",
-	"palette-v7", "cardview-v7", "leanback-v17", "design", "percent", "customtabs", "preference-v7",
-	"preference-v14", "preference-leanback-v17", "recommendation", "animated-vector-drawable",
-	"support-vector-drawable", "support-compat", "support-core-utils", "support-core-ui",
-	"support-media-compat", "support-fragment", "transition"
-};
-
 var AAR_INFOS = new [] {
 	new AarInfo ("support-v4", "v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-v13", "v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -221,8 +213,8 @@ Task ("externals")
 		Unzip(path + "m2repository.zip", path);
 
 	// Copy the .aar's to a better location
-	foreach (var aar in AAR_DIRS) {
-		CopyFile (string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}.aar", aar, AAR_VERSION, aar, AAR_VERSION),
+	foreach (var aar in AAR_INFOS) {
+		CopyFile (string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}.aar", aar.Dir, AAR_VERSION, aar.Dir, AAR_VERSION),
 			string.Format (path + "{0}.aar", aar));
 		Unzip (string.Format (path + "{0}.aar", aar), path + aar);
 
