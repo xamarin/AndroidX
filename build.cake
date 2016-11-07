@@ -194,6 +194,9 @@ var buildSpec = new BuildSpec {
 };
 
 
+var NUGET_SOURCES = EnvironmentVariable ("NUGET_SOURCES") ?? string.Empty;
+if (!string.IsNullOrEmpty (NUGET_SOURCES))
+	buildSpec.NuGetSources = NUGET_SOURCES.Split (';',',').Select (ns => new NuGetSource { Url = ns }).ToArray ();
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -449,7 +452,7 @@ Task ("component-docs").Does (() =>
 	}
 });
 
-Task ("libs").IsDependentOn ("genapi");
+Task ("libs").IsDependentOn ("genapi").IsDependentOn ("nuget-setup");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
 
