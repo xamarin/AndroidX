@@ -24,5 +24,8 @@ samples:
         packages:
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Percent
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Vector.Drawable.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output
 no_build: true
