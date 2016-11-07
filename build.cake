@@ -199,6 +199,7 @@ var buildSpec = new BuildSpec {
 // ######################################################
 
 Task ("externals")
+	.IsDependentOn ("externals-base")
 	.WithCriteria (() => !FileExists ("./externals/support-v4/classes.jar")).Does (() =>
 {
 	var path = "./externals/";
@@ -369,7 +370,9 @@ Task ("nuget-setup").Does (() => {
 	}
 });
 
-Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
+Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
+Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
 
 Task ("clean").IsDependentOn ("clean-base").Does (() =>
 {
