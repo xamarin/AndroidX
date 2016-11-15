@@ -12,8 +12,13 @@
     <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/cardview_128x128.png</iconUrl>
+    <dependencies>
+        <dependency id="Xamarin.Build.Download" version="0.3.0" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="v7-cardview/nuget/Xamarin.Android.Support.v7.CardView.targets" target="build" />
+
     <file src="output/Xamarin.Android.Support.v7.CardView.dll" target="lib/MonoAndroid70" />
   </files>
 </package>
