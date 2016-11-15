@@ -19,10 +19,10 @@ var AAR_VERSION = "25.0.0";
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r39.zip";
 var M2_REPOSITORY_SHA1 = "89ad37d67a1018c42be36933cec3d7712141d42c";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r25-macosx.zip";
 var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
-var RENDERSCRIPT_FOLDER = "android-N";
+var RENDERSCRIPT_FOLDER = "android-7.1.1";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/24.2.1/api-info.xml";
