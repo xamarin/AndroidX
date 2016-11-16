@@ -19,7 +19,7 @@
 
     <!-- If the Android SDK does NOT have Support Libs installed -->
     <PropertyGroup Condition="!Exists('$(_XbdAarFileInSdk_)')">
-        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)\$(_XbdKey_)\$(_XbdAarFile_)</_XbdAarFileFullPath_>
+        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)$(_XbdKey_)\$(_XbdAarFile_)</_XbdAarFileFullPath_>
     </PropertyGroup>
 
     <!-- If the Android SDK DOES have Support Libs installed -->
