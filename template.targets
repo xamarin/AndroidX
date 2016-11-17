@@ -11,7 +11,7 @@
         <_XbdAarFile_>m2repository\com\android\support\$AarKey$\$AarVersion$\$AarKey$-$AarVersion$.aar</_XbdAarFile_>
         
         <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
-        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)\$(_XbdKey_)\$(_XbdAarFile_)</_XbdAarFileFullPath_>
+        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)$(_XbdKey_)\$(_XbdAarFile_)</_XbdAarFileFullPath_>
 
         <!-- Assembly name to embed .aar in -->
         <_XbdAssemblyName_>$XbdAssemblyName$</_XbdAssemblyName_>
