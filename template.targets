@@ -10,25 +10,15 @@
         <!-- Path to .aar file within the extracted contents of the cached download -->
         <_XbdAarFile_>m2repository\com\android\support\$AarKey$\$AarVersion$\$AarKey$-$AarVersion$.aar</_XbdAarFile_>
         
-        <!-- Path to .aar file within the Android SDK -->
-        <_XbdAarFileInSdk_>$(AndroidSdkPath)\extras\android\$(_XbdAarFile_)</_XbdAarFileInSdk_>
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)\$(_XbdKey_)\$(_XbdAarFile_)</_XbdAarFileFullPath_>
 
         <!-- Assembly name to embed .aar in -->
         <_XbdAssemblyName_>$XbdAssemblyName$</_XbdAssemblyName_>
     </PropertyGroup>
 
-    <!-- If the Android SDK does NOT have Support Libs installed -->
-    <PropertyGroup Condition="!Exists('$(_XbdAarFileInSdk_)')">
-        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)$(_XbdKey_)\$(_XbdAarFile_)</_XbdAarFileFullPath_>
-    </PropertyGroup>
-
-    <!-- If the Android SDK DOES have Support Libs installed -->
-    <PropertyGroup Condition="Exists('$(_XbdAarFileInSdk_)')">
-        <_XbdAarFileFullPath_>$(_XbdAarFileInSdk_)</_XbdAarFileFullPath_>
-    </PropertyGroup>
-
     <ItemGroup>
-        <XamarinBuildDownload Include="$(_XbdKey_)" Condition="!Exists('$(_XbdAarFileInSdk_)')">
+        <XamarinBuildDownload Include="$(_XbdKey_)" Condition="!Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
             <Url>$(_XbdUrl_)</Url>
             <Kind>Zip</Kind>
             <Sha1>$(_XbdSha1_)</Sha1>
@@ -40,6 +30,11 @@
     </ItemGroup>
 
     <Target Name="_XbdRestoreItems_">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)" Condition="Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
+            <Output PropertyName="_XbdAarFileFullPath_" TaskParameter="Value" />
+        </CreateProperty>
+
         <ItemGroup>
             <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_)">
                 <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
