@@ -41,10 +41,10 @@
 
     <Target Name="_XbdRestoreItems_">
         <ItemGroup>
-            <RestoreAssemblyAar Include="$(_XbdAarFileFullPath_)">
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_)">
                 <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
                 <AssemblyName>$(_XbdAssemblyName_)</AssemblyName>
-            </RestoreAssemblyAar>
+            </XamarinBuildDownloadRestoreAssemblyAar>
         </ItemGroup>
     </Target>
 </Project>
