@@ -18,14 +18,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <XamarinBuildDownload Include="$(_XbdKey_)" Condition="!Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
-            <Url>$(_XbdUrl_)</Url>
-            <Kind>Zip</Kind>
-            <Sha1>$(_XbdSha1_)</Sha1>
-            <CustomErrorCode>XBD0100</CustomErrorCode>
-            <CustomErrorMessage>Please make sure 'Android Support Repository' is installed and updated to the latest version in the Android SDK Manager.  You can find it in the 'Extras' section of the Android SDK Manager.</CustomErrorMessage>
-            <ExclusiveLockTimeout>3600</ExclusiveLockTimeout>
-        </XamarinBuildDownload>
         <XamarinBuildRestoreResources Include="_XbdRestoreItems_"/>
     </ItemGroup>
 
@@ -34,6 +26,17 @@
         <CreateProperty Value="$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)" Condition="Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
             <Output PropertyName="_XbdAarFileFullPath_" TaskParameter="Value" />
         </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownload Include="$(_XbdKey_)" Condition="!Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
+                <Url>$(_XbdUrl_)</Url>
+                <Kind>Zip</Kind>
+                <Sha1>$(_XbdSha1_)</Sha1>
+                <CustomErrorCode>XBD0100</CustomErrorCode>
+                <CustomErrorMessage>Please make sure 'Android Support Repository' is installed and updated to the latest version in the Android SDK Manager.  You can find it in the 'Extras' section of the Android SDK Manager.</CustomErrorMessage>
+                <ExclusiveLockTimeout>3600</ExclusiveLockTimeout>
+            </XamarinBuildDownload>
+        </ItemGroup>
 
         <ItemGroup>
             <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_)">
