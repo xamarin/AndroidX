@@ -3,6 +3,7 @@
 #tool nuget:?package=Cake.MonoApiTools
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
+#addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
 #addin nuget:?package=Cake.Xamarin.Build
@@ -53,6 +54,14 @@ var AAR_INFOS = new [] {
 	new AarInfo ("support-fragment", "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("transition", "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 };
+
+class PartialZipInfo {
+	public string Url { get;set; }
+	public string LocalPath { get;set; }
+	public string Md5 { get;set; }
+	public long RangeStart { get;set; }
+	public long RangeEnd { get;set; }
+}
 
 class AarInfo
 {
@@ -311,19 +320,26 @@ Task ("component-setup").Does (() =>
 	}
 });
 
+
 Task ("nuget-setup").Does (() => {
 	var templateText = FileReadText ("./template.targets");
 
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
 
+	var downloadParts = DeserializeJsonFromFile<List<PartialZipInfo>> ("./partial-download-info.json");
+
 	foreach (var aar in AAR_INFOS) {
+
+		var part = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith (aar.Dir + "-" + aar.AarVersion + ".aar"));
+
+		if (part == null)
+			throw new Exception ("Now matching part found for '" + aar.Dir + "-" + aar.AarVersion + "' in partial-download-info.json ");
 
 		var msName = aar.Dir.Replace("-", "");
 
 		var items = new Dictionary<string, string> {
 			{ "_XbdUrl_", "_XbdUrl_" + msName },
-			{ "_XbdSha1_", "_XbdSha1_" + msName },
 			{ "_XbdKey_", "_XbdKey_" + msName },
 			{ "_XbdAarFile_", "_XbdAarFile_" + msName },
 			{ "_XbdAarFileInSdk_", "_XbdAarFileInSdk_" + msName },
@@ -331,9 +347,11 @@ Task ("nuget-setup").Does (() => {
 			{ "_XbdAarFileFullPath_", "_XbdAarFileFullPath_" + msName },
 			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
 			{ "$XbdUrl$", M2_REPOSITORY_URL },
-			{ "$XbdSha1$", M2_REPOSITORY_SHA1 },
-			{ "$XbdKey$", "androidsupport-" + AAR_VERSION },
+			{ "$XbdMd5$", part.Md5 },
+			{ "$XbdKey$", "androidsupport-" + AAR_VERSION + "/" + msName },
 			{ "$XbdAssemblyName$", aar.NugetId },
+			{ "$XbdRangeStart$", part.RangeStart.ToString() },
+			{ "$XbdRangeEnd$", part.RangeEnd.ToString() },
 			{ "$AarKey$", aar.Dir },
 			{ "$AarVersion$", aar.AarVersion}
 		};
