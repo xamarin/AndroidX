@@ -25,7 +25,7 @@
         </CreateProperty>
 
         <ItemGroup>
-            <XamarinBuildDownloadPartialZip Include="$(_XbdKey_)" Condition="!Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
+            <XamarinBuildDownloadPartialZip Include="$(_XbdKey_)" Condition="!Exists('$(_XbdAarFileFullPath_)')">
                 <Url>$XbdUrl$</Url>
                 <ToFile>$AarKey$-$AarVersion$.aar</ToFile>
                 <RangeStart>$XbdRangeStart$</RangeStart>
