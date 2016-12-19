@@ -64,8 +64,14 @@
 	<remove-node path="/api/package[@name='android.support.v17.leanback.widget.picker']/class[@name='Picker']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]" />
 	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchBar']/method[@name='setNextFocusDownId' and count(parameter)=1 and parameter[1][@type='int']]" />
 
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource']/method[@name='addProperty' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource']/method[@name='addProperty' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+	
+	
 	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseGridView']/method[@name='setHasOverlappingRendering' and count(parameter)=1 and parameter[1][@type='boolean']]" />
 
+
+	
 	<!-- The generator can't handle OnItemViewClickedListener implementing BaseOnItemViewClickedListener<Row> in java when it emits the ACW's when you implement the inteface in a c# class -->
 	<!-- This will remove the implementation and then fake it on the OnItemViewClickedListener interface by adding the method as if it existed there instead of the base interface -->
 	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='OnItemViewClickedListener']/implements[1]" />
@@ -140,5 +146,14 @@
 		</method>
 	</add-node>
 
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource.FloatProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ParallaxSource.FloatSource']]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource.FloatProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ParallaxSource.FloatSource']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource.IntProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ParallaxSource.IntSource']]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource.IntProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ParallaxSource.IntSource']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxRecyclerViewSource']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"/>
+	
 </metadata>
  

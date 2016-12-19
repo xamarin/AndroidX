@@ -5,7 +5,7 @@ namespace Android.Support.V17.Leanback.App
 {
 	public partial class BackgroundManager 
 	{
-        private partial class BitmapDrawable
+        public partial class BitmapDrawable
 		{
 			#pragma warning disable 108
 			public partial class ConstantState
