@@ -331,11 +331,12 @@ Task ("nuget-setup").Does (() => {
 
 	foreach (var aar in AAR_INFOS) {
 
-		var part = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith (aar.Dir + "-" + aar.AarVersion + ".aar"));
+		var part = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith ("/" + aar.Dir + "-" + aar.AarVersion + ".aar"));
 
 		if (part == null)
 			throw new Exception ("Now matching part found for '" + aar.Dir + "-" + aar.AarVersion + "' in partial-download-info.json ");
 
+		Information ("Found Part for: {0}-{1}, {2}", aar.Dir, aar.AarVersion, part.LocalPath);
 		var msName = aar.Dir.Replace("-", "");
 
 		var items = new Dictionary<string, string> {
