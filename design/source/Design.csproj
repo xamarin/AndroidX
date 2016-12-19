@@ -47,9 +47,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Additions\Additions.cs" />
-    <Compile Include="..\..\SupportConsts.cs">
-      <Link>Properties\SupportConsts.cs</Link>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="..\..\Metadata.generated.xml" />

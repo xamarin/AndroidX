@@ -54,9 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Additions\AlertDialog.cs" />
     <Compile Include="Additions\Toolbar.cs" />
-    <Compile Include="..\..\SupportConsts.cs">
-      <Link>Properties\SupportConsts.cs</Link>
-    </Compile>
     <Compile Include="Additions\Additions.cs" />
   </ItemGroup>
   <ItemGroup>

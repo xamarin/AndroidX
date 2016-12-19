@@ -49,9 +49,6 @@
     <Compile Include="Additions\Additions.cs" />
     <Compile Include="Additions\CustomTabsHelper.cs" />
     <Compile Include="Additions\KeepAliveService.cs" />
-    <Compile Include="..\..\SupportConsts.cs">
-      <Link>Properties\SupportConsts.cs</Link>
-    </Compile>
     <Compile Include="Additions\CustomTabsActivityManager.cs" />
     <Compile Include="Additions\CustomTabsServiceConnectionImpl.cs" />
   </ItemGroup>
