@@ -22,6 +22,7 @@ samples:
       - project: AndroidSupportSample
         packages: Xamarin.Android.Support.v7.CardView
     removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Tasks.VectorDrawable.targets')]"
       - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Vector.Drawable.targets')]"
       - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output
