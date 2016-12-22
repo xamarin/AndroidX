@@ -324,7 +324,7 @@ Task ("component-setup").Does (() =>
 });
 
 
-Task ("nuget-setup").Does (() => {
+Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
 	var templateText = FileReadText ("./template.targets");
 
 	if (FileExists ("./generated.targets"))
@@ -365,8 +365,30 @@ Task ("nuget-setup").Does (() => {
 		foreach (var kvp in items)
 			targetsText = targetsText.Replace (kvp.Key, kvp.Value);
 
-		var targetsFile = string.Format ("{0}/nuget/{1}.targets", aar.Path, aar.NugetId);
+		var targetsFile = new FilePath(string.Format ("{0}/nuget/{1}.targets", aar.Path, aar.NugetId));
 		FileWriteText (targetsFile, targetsText);
+
+		// Check for an existing .targets file in this nuget package
+		// we need to merge the generated one with it if it exists
+		// nuget only allows one automatic .targets file in the build/ folder
+		// of the nuget package, which must be named {nuget-package-id}.targets
+		// so we need to merge them all into one
+		var mergeFile = new FilePath (aar.Path + "/nuget/merge.targets");
+
+		if (FileExists (mergeFile)) {
+			Information ("merge.targets found, merging into generated file...");
+
+			// Load the doc to append to, and the doc to append
+			var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
+			System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
+			var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(mergeFile).FullPath);
+			System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
+			// Add all the elements under <Project> into the existing file's <Project> node
+			foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
+				xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
+
+			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
+		}
 
 		// Merge each generated targets file into one main one
 		// this makes one file to import into our actual binding projects
@@ -377,7 +399,7 @@ Task ("nuget-setup").Does (() => {
 		// Load the doc to append to, and the doc to append
 		var xFileRoot = System.Xml.Linq.XDocument.Load ("./generated.targets");
 		System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
-		var xFileChild = System.Xml.Linq.XDocument.Load (targetsFile);
+		var xFileChild = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
 		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
 
 		// Add all the elements under <Project> into the existing file's <Project> node
@@ -480,7 +502,7 @@ Task ("component-docs").Does (() =>
 	}
 });
 
-Task ("libs").IsDependentOn ("genapi").IsDependentOn ("nuget-setup");
+Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
 
@@ -520,6 +542,15 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = "Release");
 
 	CopyFile ("./v4/source/bin/Release/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
+});
+
+Task ("buildtasks").Does (() => 
+{
+	NuGetRestore ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
+
+	DotNetBuild ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = "Release");
+
+	CopyFile ("./vector-drawable/buildtask/bin/Release/Xamarin.Android.Support.Tasks.VectorDrawable.targets", "./vector-drawable/nuget/merge.targets");
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);

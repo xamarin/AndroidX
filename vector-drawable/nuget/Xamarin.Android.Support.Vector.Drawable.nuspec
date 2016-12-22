@@ -19,10 +19,7 @@
     </dependencies>
   </metadata>
   <files>
-    <!-- Include .targets file to setup AndroidResGenExtraArgs property to add -no-version-vectors to the aapt.exe call -->
-    <file src="vector-drawable/buildtask/bin/Release/Xamarin.Android.Support.Tasks.VectorDrawable.targets" target="build" />
     <file src="vector-drawable/buildtask/bin/Release/Xamarin.Android.Support.Tasks.VectorDrawable.dll" target="build" />
-
     <file src="vector-drawable/nuget/Xamarin.Android.Support.Vector.Drawable.targets" target="build" />
 
     <file src="output/Xamarin.Android.Support.Vector.Drawable.dll" target="lib/MonoAndroid70" />
