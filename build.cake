@@ -12,7 +12,7 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "25.1.0-beta2";
+var NUGET_VERSION = "25.1.0";
 var COMPONENT_VERSION = "25.1.0.0";
 var AAR_VERSION = "25.1.0";
 
