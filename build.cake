@@ -6,9 +6,12 @@
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build&version=1.0.25
+#addin nuget:?package=Cake.Xamarin.Build&version=1.1.8
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
+
+// From Cake.Xamarin.Build, dumps out versions of things
+LogSystemInfo ();
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
