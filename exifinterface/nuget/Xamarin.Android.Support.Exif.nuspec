@@ -17,7 +17,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="exifinterface/nuget/Xamarin.Android.Support.Exif.targets" target="build" />
+    <file src="exifinterface/nuget/Xamarin.Android.Support.Exif.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Exif.dll" target="lib/MonoAndroid70" />
   </files>

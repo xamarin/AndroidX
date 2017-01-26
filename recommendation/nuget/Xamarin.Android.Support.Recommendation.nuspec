@@ -24,7 +24,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="recommendation/nuget/Xamarin.Android.Support.Recommendation.targets" target="build" />
+    <file src="recommendation/nuget/Xamarin.Android.Support.Recommendation.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Recommendation.dll" target="lib/MonoAndroid70" />
   </files>

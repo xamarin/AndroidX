@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="v7-palette/nuget/Xamarin.Android.Support.v7.Palette.targets" target="build" />
+    <file src="v7-palette/nuget/Xamarin.Android.Support.v7.Palette.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.v7.Palette.dll" target="lib/MonoAndroid70" />
   </files>

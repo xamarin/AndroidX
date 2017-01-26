@@ -19,7 +19,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="percent/nuget/Xamarin.Android.Support.Percent.targets" target="build" />
+    <file src="percent/nuget/Xamarin.Android.Support.Percent.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Percent.dll" target="lib/MonoAndroid70" />
   </files>

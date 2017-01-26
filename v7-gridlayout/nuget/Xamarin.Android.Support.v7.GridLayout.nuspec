@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="v7-gridlayout/nuget/Xamarin.Android.Support.v7.GridLayout.targets" target="build" />
+    <file src="v7-gridlayout/nuget/Xamarin.Android.Support.v7.GridLayout.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.v7.GridLayout.dll" target="lib/MonoAndroid70" />
   </files>
