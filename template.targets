@@ -31,6 +31,8 @@
                 <RangeStart>$XbdRangeStart$</RangeStart>
                 <RangeEnd>$XbdRangeEnd$</RangeEnd>
                 <Md5>$XbdMd5$</Md5>
+                <CustomErrorMessage>Please open the Android SDK Manager and install the latest version of 'Android Support Repository' from the 'Extras' section, and then reload your solution.</CustomErrorMessage>
+                <CustomErrorCode>XBD404</CustomErrorCode>
             </XamarinBuildDownloadPartialZip>
         </ItemGroup>
 
