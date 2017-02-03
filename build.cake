@@ -29,7 +29,7 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
 var RENDERSCRIPT_FOLDER = "android-7.1.1";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/24.2.1/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.1.0/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 
