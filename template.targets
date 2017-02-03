@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_>$XbdKey$</_XbdKey_>
+        
+        <!-- Path to .aar file within the extracted contents of the cached download -->
+        <_XbdAarFile_>m2repository\com\android\support\$AarKey$\$AarVersion$\$AarKey$-$AarVersion$.aar</_XbdAarFile_>
+        
+        <!-- Full path to .aar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdAarFileFullPath_>$(XamarinBuildDownloadDir)$(_XbdKey_)\$AarKey$-$AarVersion$.aar</_XbdAarFileFullPath_>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_>$XbdAssemblyName$</_XbdAssemblyName_>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)" Condition="Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdAarFile_)')">
+            <Output PropertyName="_XbdAarFileFullPath_" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownloadPartialZip Include="$(_XbdKey_)" Condition="!Exists('$(_XbdAarFileFullPath_)')">
+                <Url>$XbdUrl$</Url>
+                <ToFile>$AarKey$-$AarVersion$.aar</ToFile>
+                <RangeStart>$XbdRangeStart$</RangeStart>
+                <RangeEnd>$XbdRangeEnd$</RangeEnd>
+                <Md5>$XbdMd5$</Md5>
+                <CustomErrorMessage>Please open the Android SDK Manager and install the latest version of 'Android Support Repository' from the 'Extras' section, and then reload your solution.</CustomErrorMessage>
+                <CustomErrorCode>XBD404</CustomErrorCode>
+            </XamarinBuildDownloadPartialZip>
+        </ItemGroup>
+
+        <ItemGroup>
+            <XamarinBuildDownloadRestoreAssemblyAar Include="$(_XbdAarFileFullPath_)">
+                <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_)</AssemblyName>
+            </XamarinBuildDownloadRestoreAssemblyAar>
+        </ItemGroup>
+    </Target>
+</Project>

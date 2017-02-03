@@ -32,5 +32,9 @@ samples:
           - Xamarin.Android.Support.Fragment
           - Xamarin.Android.Support.Media.Compat
           - Xamarin.Android.Support.v13
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Tasks.VectorDrawable.targets')]"
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Vector.Drawable.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output
 no_build: true

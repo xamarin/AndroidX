@@ -26,5 +26,9 @@ samples:
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Core.UI
           - Xamarin.Android.Support.v7.RecyclerView
+    removeNodes:
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Tasks.VectorDrawable.targets')]"
+      - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Vector.Drawable.targets')]"
+      - "//xNS:Import[contains (@Project, 'generated.targets')]"
 local-nuget-repo: ../../output
 no_build: true

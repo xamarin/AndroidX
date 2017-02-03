@@ -1,7 +1,23 @@
 <enum-method-mappings>
 	<mapping jni-class="android/support/v4/widget/NestedScrollView">
 		<method jni-name="getNestedScrollAxes" parameter="return" clr-enum-type="Android.Views.ScrollAxis" />
+		
 		<method jni-name="onNestedScrollAccepted" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onNestedScrollAccepted" parameter="p2" clr-enum-type="Android.Views.ScrollAxis" />
 		<method jni-name="onStartNestedScroll" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onStartNestedScroll" parameter="p2" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="startNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="startNestedScroll" parameter="p0" clr-enum-type="Android.Views.ScrollAxis" />
+	</mapping>
+
+	<mapping jni-class="android/support/v4/widget/SwipeRefreshLayout">
+		<method jni-name="getNestedScrollAxes" parameter="return" clr-enum-type="Android.Views.ScrollAxis" />
+		
+		<method jni-name="onNestedScrollAccepted" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onNestedScrollAccepted" parameter="p2" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onStartNestedScroll" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="onStartNestedScroll" parameter="p2" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="startNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+		<method jni-name="startNestedScroll" parameter="p0" clr-enum-type="Android.Views.ScrollAxis" />
 	</mapping>
 </enum-method-mappings>

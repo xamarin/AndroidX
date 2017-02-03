@@ -40,7 +40,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="Xamarin.Android.Support.Vector.Drawable.targets">
+    <None Include="Xamarin.Android.Support.Tasks.VectorDrawable.targets">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

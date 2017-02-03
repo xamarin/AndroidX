@@ -21,23 +21,3 @@ using Android.App;
 // if desired. See the Mono documentation for more information about signing.
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
-//
-// AppCompat-v7
-[assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName = __SupportConsts.PackageName,
-    SourceUrl = __SupportConsts.Url,
-	EmbeddedArchive = __Consts.AarPath,
-    Version = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-// AppCompat-v7 resources
-[assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName = __SupportConsts.PackageName,
-    SourceUrl   = __SupportConsts.Url,
-	EmbeddedArchive = __Consts.AarPath,
-    Version     = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-
-static class __Consts {
-    public const string AarPath = "m2repository/com/android/support/appcompat-v7/" + __SupportConsts.AarVersion + "/appcompat-v7-" + __SupportConsts.AarVersion + ".aar";
-}

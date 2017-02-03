@@ -6,9 +6,9 @@
 		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
 	</mapping>
 	<!-- Manually did JNI for this as it's not generated properly, but maybe in the future? -->
-<!--	<mapping jni-class="android/support/v4/app/FragmentActivity">
-		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission" />
-	</mapping>-->
+	<mapping jni-class="android/support/v4/app/FragmentActivity">
+		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
+	</mapping>
 	<mapping jni-class="android/support/v4/app/Fragment">
 		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
 	</mapping>

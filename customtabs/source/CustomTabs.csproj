@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -48,13 +49,11 @@
     <Compile Include="Additions\Additions.cs" />
     <Compile Include="Additions\CustomTabsHelper.cs" />
     <Compile Include="Additions\KeepAliveService.cs" />
-    <Compile Include="..\..\SupportConsts.cs">
-      <Link>Properties\SupportConsts.cs</Link>
-    </Compile>
     <Compile Include="Additions\CustomTabsActivityManager.cs" />
     <Compile Include="Additions\CustomTabsServiceConnectionImpl.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TransformFile Include="..\..\Metadata.generated.xml" />
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -70,8 +69,13 @@
       <Name>Compat</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <Import Project="..\..\generated.targets" />
   <PropertyGroup>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
   </PropertyGroup>
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.2\build\Xamarin.Build.Download.targets')" />
 </Project>

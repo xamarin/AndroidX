@@ -13,20 +13,26 @@
     <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/v17-preference-leanback_128x128.png</iconUrl>
     <dependencies>
-      <dependency id="Xamarin.Android.Support.v7.AppCompat" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.v7.Preference" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.v14.Preference" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.v17.Leanback" version="[$version$]"/>
-      <!-- Support V4 -->
-      <dependency id="Xamarin.Android.Support.Compat" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.Core.Utils" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.Fragment" version="[$version$]"/>
-      <dependency id="Xamarin.Android.Support.Media.Compat" version="[$version$]"/>
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.Build.Download" version="0.4.2" />
+
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.v7.Preference" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.v14.Preference" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.v17.Leanback" version="[$version$]"/>
+        <!-- Support V4 -->
+        <dependency id="Xamarin.Android.Support.Compat" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.Fragment" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.Media.Compat" version="[$version$]"/>
+      </group>
     </dependencies>
   </metadata>
   <files>
+    <file src="v17-preference-leanback/nuget/Xamarin.Android.Support.v17.Preference.Leanback.targets" target="build/MonoAndroid70" />
+
     <file src="output/Xamarin.Android.Support.v17.Preference.Leanback.dll" target="lib/MonoAndroid70" />
   </files>
 </package>

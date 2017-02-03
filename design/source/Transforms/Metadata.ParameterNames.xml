@@ -8,4 +8,9 @@
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[6]" name="managedName">heightUsed</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]" name="managedName">visibility</attr>
 	<attr path="/api/package[@name='android.support.design.widget']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1]/parameter[1]" name="managedName">menuItem</attr>
+
+	<attr path="/api/package[@name='android.support.design.widget']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[1]" name="managedName">appBarLayout</attr>
+	<attr path="/api/package[@name='android.support.design.widget']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[2]" name="managedName">verticalOffset</attr>
+
+
 </metadata>

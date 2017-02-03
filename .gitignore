@@ -15,7 +15,10 @@ output/
 *.xcuserstate
 *.xcuserstate
 *.csproj.user
+*/nuget/*.targets
+
 
 Resource.designer.cs
 component.yaml
 Details.md
+/generated.targets

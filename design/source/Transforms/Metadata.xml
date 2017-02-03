@@ -32,4 +32,8 @@
 	<!-- Remove some non-public interfaces that the generator tries to bind -->
 	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
 	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='Snackbar.SnackbarLayout.OnAttachStateChangeListener']" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
+	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
+
+	<remove-node path="/api/package[@name='android.support.design.internal']/class[@name='BottomNavigationItemView']" />
 </metadata>

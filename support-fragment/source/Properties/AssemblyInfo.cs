@@ -25,28 +25,3 @@ using Android.App;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
-[assembly: Java.Interop.JavaLibraryReference ("classes.jar",
-	PackageName     = __SupportConsts.PackageName,
-    SourceUrl       = __SupportConsts.Url,
-	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-
-[assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName     = __SupportConsts.PackageName,
-    SourceUrl       = __SupportConsts.Url,
-	EmbeddedArchive = __Consts.AarPath,
-    Version         = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-
-[assembly: Java.Interop.JavaLibraryReference ("libs/internal_impl-" + __SupportConsts.AarVersion + ".jar",
-    PackageName = __SupportConsts.PackageName,
-    SourceUrl = __SupportConsts.Url,
-    EmbeddedArchive = __Consts.AarPath,
-    Version = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-
-static class __Consts {
-    public const string AarPath = "m2repository/com/android/support/support-fragment/" + __SupportConsts.AarVersion + "/support-fragment-" + __SupportConsts.AarVersion + ".aar";
-}

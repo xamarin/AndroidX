@@ -3,36 +3,91 @@
 #tool nuget:?package=Cake.MonoApiTools
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
+#addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build
+#addin nuget:?package=Cake.Xamarin.Build&version=1.1.8
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
+// From Cake.Xamarin.Build, dumps out versions of things
+LogSystemInfo ();
+
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "24.2.1";
-var COMPONENT_VERSION = "24.2.1.0";
-var AAR_VERSION = "24.2.1";
+var NUGET_VERSION = "25.1.0";
+var COMPONENT_VERSION = "25.1.0.0";
+var AAR_VERSION = "25.1.0";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r38.zip";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r24-macosx.zip";
-var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r41.zip";
+var M2_REPOSITORY_SHA1 = "782e7233f18c890463e8602571d304e680ce354c";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r25-macosx.zip";
+//var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
-var RENDERSCRIPT_FOLDER = "android-N";
+var RENDERSCRIPT_FOLDER = "android-7.1.1";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/24.2.1/api-info.xml";
 
-var AAR_DIRS = new [] {
-	"support-v4", "support-v13", "appcompat-v7", "gridlayout-v7", "mediarouter-v7", "recyclerview-v7",
-	"palette-v7", "cardview-v7", "leanback-v17", "design", "percent", "customtabs", "preference-v7",
-	"preference-v14", "preference-leanback-v17", "recommendation", "animated-vector-drawable",
-	"support-vector-drawable", "support-compat", "support-core-utils", "support-core-ui",
-	"support-media-compat", "support-fragment", "transition"
+var CPU_COUNT = System.Environment.ProcessorCount;
+
+var AAR_INFOS = new [] {
+	new AarInfo ("support-v4", "v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-v13", "v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("appcompat-v7", "v7-appcompat", "Xamarin.Android.Support.v7.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("gridlayout-v7", "v7-gridlayout", "Xamarin.Android.Support.v7.GridLayout", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("mediarouter-v7", "v7-mediarouter", "Xamarin.Android.Support.v7.MediaRouter", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("recyclerview-v7", "v7-recyclerview", "Xamarin.Android.Support.v7.RecyclerView", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("palette-v7", "v7-palette", "Xamarin.Android.Support.v7.Palette", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("cardview-v7", "v7-cardview", "Xamarin.Android.Support.v7.CardView", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("leanback-v17", "v17-leanback", "Xamarin.Android.Support.v17.Leanback", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("design", "design", "Xamarin.Android.Support.Design", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("percent", "percent", "Xamarin.Android.Support.Percent", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("customtabs", "customtabs", "Xamarin.Android.Support.CustomTabs", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("preference-v7", "v7-preference", "Xamarin.Android.Support.v7.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("preference-v14", "v14-preference", "Xamarin.Android.Support.v14.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("preference-leanback-v17", "v17-preference-leanback", "Xamarin.Android.Support.v17.Preference.Leanback", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("recommendation", "recommendation", "Xamarin.Android.Support.Recommendation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("animated-vector-drawable", "animated-vector-drawable", "Xamarin.Android.Support.Animated.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-vector-drawable", "vector-drawable", "Xamarin.Android.Support.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-compat", "support-compat", "Xamarin.Android.Support.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-core-utils", "support-core-utils", "Xamarin.Android.Support.Core.Utils", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-core-ui", "support-core-ui", "Xamarin.Android.Support.Core.UI", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-media-compat", "support-media-compat", "Xamarin.Android.Support.Media.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-fragment", "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("transition", "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("exifinterface", "exifinterface", "Xamarin.Android.Support.Exif", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 };
+
+class PartialZipInfo {
+	public string Url { get;set; }
+	public string LocalPath { get;set; }
+	public string Md5 { get;set; }
+	public long RangeStart { get;set; }
+	public long RangeEnd { get;set; }
+}
+
+class AarInfo
+{
+	public AarInfo (string dir, string path, string nugetId, string aarVersion, string nugetVersion, string componentVersion)
+	{
+		Dir = dir;
+		Path = path;
+		NugetId = nugetId;
+		AarVersion = aarVersion;
+		NuGetVersion = nugetVersion;
+		ComponentVersion = componentVersion;
+	}
+
+	public string Dir { get; set; }
+	public string Path { get; set; }
+	public string NugetId { get;set; }
+	public string AarVersion { get; set; }
+	public string NuGetVersion { get; set; }
+	public string ComponentVersion { get; set; }
+}
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ())
@@ -54,6 +109,7 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder {
 			SolutionPath = "./AndroidSupport.sln",
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
+			MaxCpuCount = CPU_COUNT,
 			OutputFiles = new [] {
 				new OutputFileCopy { FromFile = "./customtabs/source/bin/Release/Xamarin.Android.Support.CustomTabs.dll" },
 				new OutputFileCopy { FromFile = "./design/source/bin/Release/Xamarin.Android.Support.Design.dll" },
@@ -80,28 +136,29 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./support-fragment/source/bin/Release/Xamarin.Android.Support.Fragment.dll" },
 				new OutputFileCopy { FromFile = "./support-media-compat/source/bin/Release/Xamarin.Android.Support.Media.Compat.dll" },
 				new OutputFileCopy { FromFile = "./transition/source/bin/Release/Xamarin.Android.Support.Transition.dll" },
+				new OutputFileCopy { FromFile = "./exifinterface/source/bin/Release/Xamarin.Android.Support.Exif.dll" },
 			}
 		}
 	},
 
 	Samples = new [] {
-		new DefaultSolutionBuilder { SolutionPath = "./customtabs/samples/ChromeCustomTabsSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./design/samples/Cheesesquare.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./percent/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./recommendation/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v4/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-appcompat/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-cardview/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-gridlayout/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-mediarouter/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-palette/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-preference/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-recyclerview/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v8-renderscript/samples/RenderScriptSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v13/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./v17-leanback/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
-		new DefaultSolutionBuilder { SolutionPath = "./animated-vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac },
+		new DefaultSolutionBuilder { SolutionPath = "./customtabs/samples/ChromeCustomTabsSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./design/samples/Cheesesquare.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./percent/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./recommendation/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v4/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-appcompat/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-cardview/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-gridlayout/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-mediarouter/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-palette/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-preference/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v7-recyclerview/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v8-renderscript/samples/RenderScriptSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v13/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./v17-leanback/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
+		new DefaultSolutionBuilder { SolutionPath = "./animated-vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT },
 	},
 
 	NuGets = new [] {
@@ -130,6 +187,7 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./support-fragment/nuget/Xamarin.Android.Support.Fragment.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./support-media-compat/nuget/Xamarin.Android.Support.Media.Compat.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./transition/nuget/Xamarin.Android.Support.Transition.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./exifinterface/nuget/Xamarin.Android.Support.Exif.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
 	Components = new [] {
@@ -154,11 +212,15 @@ var buildSpec = new BuildSpec {
 };
 
 
+var NUGET_SOURCES = EnvironmentVariable ("NUGET_SOURCES") ?? string.Empty;
+if (!string.IsNullOrEmpty (NUGET_SOURCES))
+	buildSpec.NuGetSources = NUGET_SOURCES.Split (';',',').Select (ns => new NuGetSource { Url = ns }).ToArray ();
 
 // You shouldn't have to configure anything below here
 // ######################################################
 
 Task ("externals")
+	.IsDependentOn ("externals-base")
 	.WithCriteria (() => !FileExists ("./externals/support-v4/classes.jar")).Does (() =>
 {
 	var path = "./externals/";
@@ -173,22 +235,24 @@ Task ("externals")
 		Unzip(path + "m2repository.zip", path);
 
 	// Copy the .aar's to a better location
-	foreach (var aar in AAR_DIRS) {
-		CopyFile (string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}.aar", aar, AAR_VERSION, aar, AAR_VERSION),
-			string.Format (path + "{0}.aar", aar));
-		Unzip (string.Format (path + "{0}.aar", aar), path + aar);
+	foreach (var aar in AAR_INFOS) {
+		var aarDir = aar.Dir;
+		CopyFile (string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}.aar", aarDir, AAR_VERSION, aarDir, AAR_VERSION),
+			string.Format (path + "{0}.aar", aarDir));
+		Unzip (string.Format (path + "{0}.aar", aarDir), path + aarDir);
 
-		var implFile = path + aar + "/libs/internal_impl-" + AAR_VERSION + ".jar";
+		var implFile = path + aarDir + "/libs/internal_impl-" + AAR_VERSION + ".jar";
 
 		if (FileExists (implFile))
-			MoveFile (implFile, path + aar + "/libs/internal_impl.jar");
+			MoveFile (implFile, path + aarDir + "/libs/internal_impl.jar");
 	}
 
-  // Get android docs
-	if (!FileExists (path + "docs.zip")) {
-		DownloadFile (DOCS_URL, path + "docs.zip");
-		Unzip (path + "docs.zip", path);
-  }
+	// We get docs a different way now
+ //  // Get android docs
+	// if (!FileExists (path + "docs.zip")) {
+	// 	DownloadFile (DOCS_URL, path + "docs.zip");
+	// 	Unzip (path + "docs.zip", path);
+ //  }
 
 	// Get Renderscript
 	if (!FileExists (path + "buildtools.zip"))
@@ -265,12 +329,115 @@ Task ("component-setup").Does (() =>
 	}
 });
 
-Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base");
+
+Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
+	var templateText = FileReadText ("./template.targets");
+
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
+	var downloadParts = DeserializeJsonFromFile<List<PartialZipInfo>> ("./partial-download-info.json");
+
+	foreach (var aar in AAR_INFOS) {
+
+		var part = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith ("/" + aar.Dir + "-" + aar.AarVersion + ".aar"));
+
+		if (part == null)
+			throw new Exception ("Now matching part found for '" + aar.Dir + "-" + aar.AarVersion + "' in partial-download-info.json ");
+
+		Information ("Found Part for: {0}-{1}, {2}", aar.Dir, aar.AarVersion, part.LocalPath);
+		var msName = aar.Dir.Replace("-", "");
+
+		var items = new Dictionary<string, string> {
+			{ "_XbdUrl_", "_XbdUrl_" + msName },
+			{ "_XbdKey_", "_XbdKey_" + msName },
+			{ "_XbdAarFile_", "_XbdAarFile_" + msName },
+			{ "_XbdAarFileInSdk_", "_XbdAarFileInSdk_" + msName },
+			{ "_XbdAssemblyName_", "_XbdAssemblyName_" + msName },
+			{ "_XbdAarFileFullPath_", "_XbdAarFileFullPath_" + msName },
+			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
+			{ "$XbdUrl$", M2_REPOSITORY_URL },
+			{ "$XbdMd5$", part.Md5 },
+			{ "$XbdKey$", "androidsupport-" + AAR_VERSION + "/" + msName },
+			{ "$XbdAssemblyName$", aar.NugetId },
+			{ "$XbdRangeStart$", part.RangeStart.ToString() },
+			{ "$XbdRangeEnd$", part.RangeEnd.ToString() },
+			{ "$AarKey$", aar.Dir },
+			{ "$AarVersion$", aar.AarVersion}
+		};
+
+		var targetsText = templateText;
+
+		foreach (var kvp in items)
+			targetsText = targetsText.Replace (kvp.Key, kvp.Value);
+
+		var targetsFile = new FilePath(string.Format ("{0}/nuget/{1}.targets", aar.Path, aar.NugetId));
+		FileWriteText (targetsFile, targetsText);
+
+		// Merge each generated targets file into one main one
+		// this makes one file to import into our actual binding projects
+		// which is much easier/less maintenance
+		if (!FileExists ("./generated.targets"))
+			FileWriteText ("./generated.targets", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n</Project>");
+
+		// Load the doc to append to, and the doc to append
+		var xFileRoot = System.Xml.Linq.XDocument.Load ("./generated.targets");
+		System.Xml.Linq.XNamespace nsRoot = xFileRoot.Root.Name.Namespace;
+		var xFileChild = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
+		System.Xml.Linq.XNamespace nsChild = xFileRoot.Root.Name.Namespace;
+
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xFileChild.Element (nsChild + "Project").Elements ())
+			xFileRoot.Element (nsRoot + "Project").Add (xItemToAdd);
+
+		// Inject a property to prevent errors from missing assemblies in .targets
+		// this allows us to use one big .targets file in all the projects and not have to figure out which specific
+		// ones each project needs to reference for development purposes
+		if (!xFileRoot.Descendants (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly").Any ()) {
+			xFileRoot.Element (nsRoot + "Project")
+				.AddFirst (new System.Xml.Linq.XElement (nsRoot + "PropertyGroup", 
+					new System.Xml.Linq.XElement (nsRoot + "XamarinBuildResourceMergeThrowOnMissingAssembly", false)));
+		}
+
+		xFileRoot.Save ("./generated.targets");
+
+		// Check for an existing .targets file in this nuget package
+		// we need to merge the generated one with it if it exists
+		// nuget only allows one automatic .targets file in the build/ folder
+		// of the nuget package, which must be named {nuget-package-id}.targets
+		// so we need to merge them all into one
+		var mergeFile = new FilePath (aar.Path + "/nuget/merge.targets");
+
+		if (FileExists (mergeFile)) {
+			Information ("merge.targets found, merging into generated file...");
+
+			// Load the doc to append to, and the doc to append
+			var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
+			System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
+			var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(mergeFile).FullPath);
+			System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
+			// Add all the elements under <Project> into the existing file's <Project> node
+			foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
+				xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
+
+			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
+		}
+	}
+});
+
+Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
+Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
 
 Task ("clean").IsDependentOn ("clean-base").Does (() =>
 {
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
 	if (DirectoryExists ("./externals"))
 		DeleteDirectory ("./externals", true);
+
+	CleanDirectories ("./**/packages");
 });
 
 
@@ -341,7 +508,7 @@ Task ("component-docs").Does (() =>
 	}
 });
 
-Task ("libs").IsDependentOn ("genapi");
+Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
 
@@ -381,6 +548,15 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = "Release");
 
 	CopyFile ("./v4/source/bin/Release/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
+});
+
+Task ("buildtasks").Does (() => 
+{
+	NuGetRestore ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
+
+	DotNetBuild ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = "Release");
+
+	CopyFile ("./vector-drawable/buildtask/bin/Release/Xamarin.Android.Support.Tasks.VectorDrawable.targets", "./vector-drawable/nuget/merge.targets");
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);

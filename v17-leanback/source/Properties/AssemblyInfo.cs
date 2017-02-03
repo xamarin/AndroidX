@@ -26,22 +26,3 @@ using Java.Interop;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-
-// Leanback-v17
-[assembly: JavaLibraryReference ("classes.jar",
-	PackageName = __SupportConsts.PackageName,
-    SourceUrl = __SupportConsts.Url,
-	EmbeddedArchive = __Consts.AarPath,
-    Version = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-// Leanback-v17 resources
-[assembly: Android.IncludeAndroidResourcesFromAttribute ("./",
-	PackageName = __SupportConsts.PackageName,
-    SourceUrl   = __SupportConsts.Url,
-	EmbeddedArchive = __Consts.AarPath,
-    Version     = __SupportConsts.Version,
-    Sha1sum = __SupportConsts.Sha1sum)]
-
-static class __Consts {
-    public const string AarPath = "m2repository/com/android/support/leanback-v17/" + __SupportConsts.AarVersion + "/leanback-v17-" + __SupportConsts.AarVersion + ".aar";
-}
