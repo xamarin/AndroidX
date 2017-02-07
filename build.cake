@@ -6,7 +6,7 @@
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build&version=1.1.8
+#addin nuget:?package=Cake.Xamarin.Build&version=1.1.13
 #addin nuget:?package=Cake.FileHelpers
 #addin nuget:?package=Cake.MonoApiTools
 
@@ -329,14 +329,24 @@ Task ("component-setup").Does (() =>
 	}
 });
 
-
-Task ("nuget-setup").IsDependentOn ("buildtasks").Does (() => {
+Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
+	.WithCriteria (!FileExists ("./generated.targets")).Does (() => {
 	var templateText = FileReadText ("./template.targets");
 
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
 
-	var downloadParts = DeserializeJsonFromFile<List<PartialZipInfo>> ("./partial-download-info.json");
+	// Get the zip file offsets for the relevant aar's
+	var downloadParts = FindZipEntries ("./externals/m2repository.zip")
+		.Where (e => e.EntryName.Contains (AAR_VERSION)
+			&& (e.EntryName.Contains (".aar") || e.EntryName.Contains (".jar")))
+		.Select (e => new PartialZipInfo {
+			RangeStart = e.RangeStart,
+			RangeEnd = e.RangeEnd,
+			Url = M2_REPOSITORY_URL,
+			LocalPath = e.EntryName,
+			Md5 = ReadZipEntryText ("./externals/m2repository.zip", e.EntryName + ".md5", readBinaryAsHex: false)
+		}).ToList ();
 
 	foreach (var aar in AAR_INFOS) {
 
