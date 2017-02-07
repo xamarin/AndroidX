@@ -15,14 +15,14 @@ LogSystemInfo ();
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "25.1.0";
-var COMPONENT_VERSION = "25.1.0.0";
-var AAR_VERSION = "25.1.0";
+var NUGET_VERSION = "25.1.1";
+var COMPONENT_VERSION = "25.1.1.0";
+var AAR_VERSION = "25.1.1";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r41.zip";
-var M2_REPOSITORY_SHA1 = "782e7233f18c890463e8602571d304e680ce354c";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r42.zip";
+var M2_REPOSITORY_SHA1 = "175c56e2e2aa6fec560430318f56ed98eaeaea04";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r25-macosx.zip";
 //var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
