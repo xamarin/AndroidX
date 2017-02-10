@@ -22,7 +22,7 @@ namespace AndroidSupportSample.UITests
                 .StartApp ();
         }
 
-//        [Test]
+        [Test]
         public void Repl ()
         {
             app.Repl ();
@@ -55,13 +55,13 @@ namespace AndroidSupportSample.UITests
         }
 
         [Test]
-        public void FormJava ()
+        public void FormCSharp ()
         {
             app.Screenshot ("Launch");
-            app.Tap (q => q.Text ("3. Form (Java)"));
-            app.Screenshot ("Tap 3. Form (Java)");
+            app.Tap (q => q.Text ("3. Form (C#)"));
+            app.Screenshot ("Tap 3. Form (C#)");
             app.WaitForElement (q => q.Class ("GridLayout"));
-            app.Screenshot ("Form Java");
+            app.Screenshot ("Form C#");
         }
     }
 }
