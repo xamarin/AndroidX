@@ -36,8 +36,6 @@ namespace Cheesesquare.UITests
         {
             app.Screenshot ("Launch");
             app.Tap (q => q.Id ("fab"));
-            app.Screenshot ("Tap Button");
-			app.WaitForElement (q => q.Id("snackbar_text"), timeout: TimeSpan.FromSeconds(10));
             app.Screenshot ("Snackbar");
         }
 
