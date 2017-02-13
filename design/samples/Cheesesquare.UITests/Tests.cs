@@ -26,7 +26,7 @@ namespace Cheesesquare.UITests
         public void ClickingHamburgerShouldRevealDrawer ()
         {            
             app.Screenshot ("Launch");
-            app.Tap(t => t.Class("ImageButton"));
+            app.Tap(t => t.Marked("Navigate up"));
             app.WaitForElement(t => t.Text("Discussion"));
             app.Screenshot ("Tap Hamburger");
         }
@@ -36,8 +36,6 @@ namespace Cheesesquare.UITests
         {
             app.Screenshot ("Launch");
             app.Tap (q => q.Id ("fab"));
-            app.Screenshot ("Tap Button");
-            app.WaitForElement (q => q.Id ("snackbar_text"));
             app.Screenshot ("Snackbar");
         }
 

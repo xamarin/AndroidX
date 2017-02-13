@@ -91,24 +91,20 @@ namespace AndroidSupportSample.UITests
         public void DisplayOptions ()
         {
             app.Screenshot ("Launch");
-            app.Tap(q => q.Text("Display Options"));
-            app.WaitForElement (q => q.Class ("Toolbar"));
+            app.Tap(q => q.Marked("Display Options"));
+            app.WaitForElement (q => q.Marked ("toggle_navigation"));
             app.Screenshot ("Display Options");
 
-            app.Tap (q => q.Id ("toggle_home_as_up"));
-            app.WaitForElement (q => q.Class ("ImageButton"));
+            app.Tap (q => q.Marked ("toggle_home_as_up"));
+            app.WaitForElement (q => q.Marked ("Navigate up"));
             app.Screenshot ("Toggle Home as Up");
 
-            app.Tap (q => q.Id ("toggle_show_title"));
-            app.WaitForNoElement (q => q.Text ("Display Options"));
+            app.Tap (q => q.Marked ("toggle_show_title"));
+            app.WaitForNoElement (q => q.Marked ("Display Options"));
             app.Screenshot ("Hide Title");
-            app.Tap (q => q.Id ("toggle_show_title"));
-            app.WaitForElement (q => q.Text ("Display Options"));
+            app.Tap (q => q.Marked ("toggle_show_title"));
+            app.WaitForElement (q => q.Marked ("Display Options"));
             app.Screenshot ("Show Title");
-
-            app.Tap (q => q.Id ("toggle_visibility"));
-            app.WaitForNoElement (q => q.Class ("Toolbar"));
-            app.Screenshot ("Hide Toolbar");
         }
 
         [Test]
