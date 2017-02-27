@@ -15,21 +15,20 @@ LogSystemInfo ();
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-var NUGET_VERSION = "25.1.1";
-var COMPONENT_VERSION = "25.1.1.0";
-var AAR_VERSION = "25.1.1";
+var NUGET_VERSION = "25.2.0-beta1";
+var COMPONENT_VERSION = "25.2.0.0";
+var AAR_VERSION = "25.2.0";
 
 // FROM: https://dl.google.com/android/repository/addon.xml
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r42.zip";
-var M2_REPOSITORY_SHA1 = "175c56e2e2aa6fec560430318f56ed98eaeaea04";
+var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r44.zip";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r25-macosx.zip";
 //var DOCS_URL = "https://dl-ssl.google.com/android/repository/docs-23_r01.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
 var RENDERSCRIPT_FOLDER = "android-7.1.1";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.1.0/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.1.1/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 
