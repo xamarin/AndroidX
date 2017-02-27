@@ -363,55 +363,55 @@ namespace Android.Support.V7.Widget
     }
 
 
-    public partial class ScrollingTabContainerView
-    {
-        private partial class TabView
-        {
-            public override bool Selected {
-                set {
-                    SetSelected (value);
-                }
-                get {
-                    return base.Selected;
-                }
-            }
+//    public partial class ScrollingTabContainerView
+//    {
+//        private partial class TabView
+//        {
+//            public override bool Selected {
+//                set {
+//                    SetSelected (value);
+//                }
+//                get {
+//                    return base.Selected;
+//                }
+//            }
 
-            static Delegate cb_setSelected_Z;
-#pragma warning disable 0169
-            static Delegate GetSetSelected_ZHandler ()
-            {
-                if (cb_setSelected_Z == null)
-                    cb_setSelected_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>)n_SetSelected_Z);
-                return cb_setSelected_Z;
-            }
+//            static Delegate cb_setSelected_Z;
+//#pragma warning disable 0169
+//            static Delegate GetSetSelected_ZHandler ()
+//            {
+//                if (cb_setSelected_Z == null)
+//                    cb_setSelected_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>)n_SetSelected_Z);
+//                return cb_setSelected_Z;
+//            }
 
-            static void n_SetSelected_Z (IntPtr jnienv, IntPtr native__this, bool selected)
-            {
-                global::Android.Support.V7.Widget.ScrollingTabContainerView.TabView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ScrollingTabContainerView.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-                __this.SetSelected (selected);
-            }
-#pragma warning restore 0169
+//            static void n_SetSelected_Z (IntPtr jnienv, IntPtr native__this, bool selected)
+//            {
+//                global::Android.Support.V7.Widget.ScrollingTabContainerView.TabView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ScrollingTabContainerView.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//                __this.SetSelected (selected);
+//            }
+//#pragma warning restore 0169
 
-            static IntPtr id_setSelected_Z;
-            // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ScrollingTabContainerView.TabView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]"
-            [Register ("setSelected", "(Z)V", "GetSetSelected_ZHandler")]
-            public unsafe void SetSelected (bool selected)
-            {
-                if (id_setSelected_Z == IntPtr.Zero)
-                    id_setSelected_Z = JNIEnv.GetMethodID (class_ref, "setSelected", "(Z)V");
-                try {
-                    JValue* __args = stackalloc JValue [1];
-                    __args [0] = new JValue (selected);
+//            static IntPtr id_setSelected_Z;
+//            // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ScrollingTabContainerView.TabView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]"
+//            [Register ("setSelected", "(Z)V", "GetSetSelected_ZHandler")]
+//            public unsafe void SetSelected (bool selected)
+//            {
+//                if (id_setSelected_Z == IntPtr.Zero)
+//                    id_setSelected_Z = JNIEnv.GetMethodID (class_ref, "setSelected", "(Z)V");
+//                try {
+//                    JValue* __args = stackalloc JValue [1];
+//                    __args [0] = new JValue (selected);
 
-                    if (GetType () == ThresholdType)
-                        JNIEnv.CallVoidMethod (((global::Java.Lang.Object)this).Handle, id_setSelected_Z, __args);
-                    else
-                        JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setSelected", "(Z)V"), __args);
-                } finally {
-                }
-            }
-        }
-    }
+//                    if (GetType () == ThresholdType)
+//                        JNIEnv.CallVoidMethod (((global::Java.Lang.Object)this).Handle, id_setSelected_Z, __args);
+//                    else
+//                        JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setSelected", "(Z)V"), __args);
+//                } finally {
+//                }
+//            }
+//        }
+//    }
 }
 
 namespace Android.Support.V7.View.Menu
