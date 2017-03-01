@@ -55,6 +55,7 @@
     <Compile Include="Additions\AlertDialog.cs" />
     <Compile Include="Additions\Toolbar.cs" />
     <Compile Include="Additions\Additions.cs" />
+    <Compile Include="Additions\ActionMenuView.cs" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="..\..\Metadata.generated.xml" />
