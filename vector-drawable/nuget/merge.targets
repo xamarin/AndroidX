@@ -39,8 +39,11 @@
     Name="_XamarinAndroidSupportVectorDrawableArgs"
 		BeforeTargets="_UpdateAndroidResgen">
       <!-- Adds an argument to the call to aapt to support vectors -->
-      <PropertyGroup Condition="!($(AndroidResgenExtraArgs.Contains('--no-version-vectors')))">
-          <AndroidResgenExtraArgs>$(AndroidResgenExtraArgs.Trim()) --no-version-vectors</AndroidResgenExtraArgs>
+      <PropertyGroup Condition=" '$(AndroidResgenExtraArgs)' != '' AND !$(AndroidResgenExtraArgs.Contains('--no-version-vectors'))">
+        <AndroidResgenExtraArgs>$(AndroidResgenExtraArgs.Trim()) --no-version-vectors</AndroidResgenExtraArgs>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(AndroidResgenExtraArgs)' == ''">
+        <AndroidResgenExtraArgs>--no-version-vectors</AndroidResgenExtraArgs>
       </PropertyGroup>
   </Target>
 
