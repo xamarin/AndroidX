@@ -15,7 +15,7 @@
        _ResolveMonoAndroidSdks;$(VectorDrawableCheckBuildToolsVersionTaskDependsOn);
     </VectorDrawableCheckBuildToolsVersionTaskDependsOn>
     <VectorDrawableCheckBuildToolsVersionTaskBeforeTargets>
-      UpdateAndroidResgen;$(VectorDrawableCheckBuildToolsVersionTaskBeforeTargets);
+      _UpdateAndroidResgen;$(VectorDrawableCheckBuildToolsVersionTaskBeforeTargets);
     </VectorDrawableCheckBuildToolsVersionTaskBeforeTargets>
   </PropertyGroup>
 
