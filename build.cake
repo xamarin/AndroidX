@@ -134,6 +134,8 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./support-media-compat/source/bin/Release/Xamarin.Android.Support.Media.Compat.dll" },
 				new OutputFileCopy { FromFile = "./transition/source/bin/Release/Xamarin.Android.Support.Transition.dll" },
 				new OutputFileCopy { FromFile = "./exifinterface/source/bin/Release/Xamarin.Android.Support.Exif.dll" },
+
+				new OutputFileCopy { FromFile = "./support-annotations/source/bin/Release/Xamarin.Android.Support.Annotations.dll" },
 			}
 		}
 	},
