@@ -14,7 +14,7 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/master/icons/v7-preference_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid70">
-        <dependency id="Xamarin.Build.Download" version="0.4.2" />
+        <dependency id="Xamarin.Build.Download" version="0.4.3" />
 
         <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]"/>
         <dependency id="Xamarin.Android.Support.v7.AppCompat" version="[$version$]"/>
