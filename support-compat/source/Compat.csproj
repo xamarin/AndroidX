@@ -63,9 +63,6 @@
     <InputJar Include="..\..\externals\support-compat\classes.jar">
       <Link>Jars\android-support-compat-aar.jar</Link>
     </InputJar>
-    <InputJar Include="..\..\externals\support-compat\libs\internal_impl.jar">
-      <Link>Jars\android-support-compat-internal_impl-aar.jar</Link>
-    </InputJar>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
