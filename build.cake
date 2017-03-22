@@ -244,6 +244,7 @@ Task ("externals")
 			MoveFile (implFile, path + aarDir + "/libs/internal_impl.jar");
 	}
 
+	CopyFile (string.Format (path + "m2repository/com/android/support/support-annotations/{0}/support-annotations-{0}.jar", AAR_VERSION), path + "support-annotations.jar");
 	// We get docs a different way now
  //  // Get android docs
 	// if (!FileExists (path + "docs.zip")) {
@@ -327,7 +328,23 @@ Task ("component-setup").Does (() =>
 });
 
 Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
-	.WithCriteria (!FileExists ("./generated.targets")).Does (() => {
+	.WithCriteria (!FileExists ("./generated.targets")).Does (() => 
+{
+
+	Action<FilePath, FilePath> mergeTargetsFiles = (FilePath fromFile, FilePath intoFile) =>
+	{
+		// Load the doc to append to, and the doc to append
+		var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(intoFile).FullPath);
+		System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
+		var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(fromFile).FullPath);
+		System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
+			xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
+
+		xOrig.Save (MakeAbsolute (intoFile).FullPath);
+	};
+
 	var templateText = FileReadText ("./template.targets");
 
 	if (FileExists ("./generated.targets"))
@@ -417,19 +434,20 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 		if (FileExists (mergeFile)) {
 			Information ("merge.targets found, merging into generated file...");
-
-			// Load the doc to append to, and the doc to append
-			var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
-			System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
-			var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(mergeFile).FullPath);
-			System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
-			// Add all the elements under <Project> into the existing file's <Project> node
-			foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
-				xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
-
-			xOrig.Save (MakeAbsolute (targetsFile).FullPath);
+			mergeTargetsFiles (mergeFile, targetsFile);
 		}
 	}
+
+	// Support annotations needs merging tool
+	var annotationsPart = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith ("/support-annotations-" + AAR_VERSION + ".jar"));
+	var annotationsTemplateText = FileReadText ("./support-annotations/nuget/template.targets");
+	annotationsTemplateText = annotationsTemplateText.Replace ("$AarVersion$", AAR_VERSION)
+								.Replace ("$XbdRangeStart$", annotationsPart.RangeStart.ToString())
+								.Replace ("$XbdRangeEnd$", annotationsPart.RangeEnd.ToString())
+								.Replace ("$XbdMd5$", annotationsPart.Md5);
+								
+	FileWriteText ("./support-annotations/nuget/Xamarin.Android.Support.Annotations.targets", annotationsTemplateText);
+	mergeTargetsFiles ("./support-annotations/nuget/Xamarin.Android.Support.Annotations.targets", "./generated.targets");
 });
 
 Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");

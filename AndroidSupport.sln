@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transition", "transition\so
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exif", "exifinterface\source\Exif.csproj", "{EBD7CBA0-E16C-460D-908C-89D453DDC556}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotations", "support-annotations\source\Annotations.csproj", "{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,5 +165,9 @@ Global
 		{EBD7CBA0-E16C-460D-908C-89D453DDC556}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD7CBA0-E16C-460D-908C-89D453DDC556}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD7CBA0-E16C-460D-908C-89D453DDC556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
