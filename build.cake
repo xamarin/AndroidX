@@ -185,6 +185,7 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./support-media-compat/nuget/Xamarin.Android.Support.Media.Compat.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./transition/nuget/Xamarin.Android.Support.Transition.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./exifinterface/nuget/Xamarin.Android.Support.Exif.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-annotations/nuget/Xamarin.Android.Support.Annotations.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
 	Components = new [] {
