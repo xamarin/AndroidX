@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Android.App;
+using Java.Interop;
 
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
@@ -25,3 +26,7 @@ using Android.App;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
+
+// This is needed for compiling javac in apps, but the actual lib is not needed in the app itself
+// only for the compilation stage, so we don't need to actually package it in the app
+[assembly: DoNotPackage ("support-annotations.jar")]
