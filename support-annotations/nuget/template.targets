@@ -26,7 +26,7 @@
 
         <ItemGroup>
             <XamarinBuildDownloadPartialZip Include="$(_XbdKey_supportannotations)" Condition="!Exists('$(_XbdJarFileFullPath_supportannotations)')">
-                <Url>https://dl-ssl.google.com/android/repository/android_m2repository_r42.zip</Url>
+                <Url>$XbdUrl$</Url>
                 <ToFile>support-annotations-$AarVersion$.jar</ToFile>
                 <RangeStart>$XbdRangeStart$</RangeStart>
                 <RangeEnd>$XbdRangeEnd$</RangeEnd>

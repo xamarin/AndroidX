@@ -443,11 +443,13 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 	// Support annotations needs merging tool
 	var annotationsPart = downloadParts.FirstOrDefault (p => p.LocalPath.EndsWith ("/support-annotations-" + AAR_VERSION + ".jar"));
+
 	var annotationsTemplateText = FileReadText ("./support-annotations/nuget/template.targets");
 	annotationsTemplateText = annotationsTemplateText.Replace ("$AarVersion$", AAR_VERSION)
 								.Replace ("$XbdRangeStart$", annotationsPart.RangeStart.ToString())
 								.Replace ("$XbdRangeEnd$", annotationsPart.RangeEnd.ToString())
-								.Replace ("$XbdMd5$", annotationsPart.Md5);
+								.Replace ("$XbdMd5$", annotationsPart.Md5)
+								.Replace ("$XbdUrl$", M2_REPOSITORY_URL);
 								
 	FileWriteText ("./support-annotations/nuget/Xamarin.Android.Support.Annotations.targets", annotationsTemplateText);
 	mergeTargetsFiles ("./support-annotations/nuget/Xamarin.Android.Support.Annotations.targets", "./generated.targets");
