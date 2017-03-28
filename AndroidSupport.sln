@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exif", "exifinterface\sourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotations", "support-annotations\source\Annotations.csproj", "{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicAnimation", "dynamic-animation\source\DynamicAnimation.csproj", "{157F6FC3-90D1-40D5-91D0-A2552034B41A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -169,5 +171,9 @@ Global
 		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157F6FC3-90D1-40D5-91D0-A2552034B41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157F6FC3-90D1-40D5-91D0-A2552034B41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157F6FC3-90D1-40D5-91D0-A2552034B41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157F6FC3-90D1-40D5-91D0-A2552034B41A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

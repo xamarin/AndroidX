@@ -153,7 +153,14 @@
 	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource.IntProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ParallaxSource.IntSource']]" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxSource.IntProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ParallaxSource.IntSource']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 
-	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxRecyclerViewSource']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"/>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax.IntProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.Parallax']]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax.IntProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.Parallax']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax.FloatProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.Parallax']]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax.FloatProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.Parallax']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+	
+<!--	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxRecyclerViewSource']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"/>-->
+	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='RecyclerViewParallax']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]" />
 	
 </metadata>
  
