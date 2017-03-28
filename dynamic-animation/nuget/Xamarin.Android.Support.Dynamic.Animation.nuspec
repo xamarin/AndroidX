@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Xamarin.Android.Support.Dynamic.Animations</id>
-    <title>Xamarin Android Support Library - Dynamic Animations</title>
+    <id>Xamarin.Android.Support.Dynamic.Animation</id>
+    <title>Xamarin Android Support Library - Dynamic Animation</title>
     <version>$version$</version>
     <authors>Xamarin Inc.</authors>
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Dynamic Animations Android Support Library C# bindings for Xamarin</description>
+    <description>Dynamic Animation Android Support Library C# bindings for Xamarin</description>
     <copyright>Copyright © Microsoft Corporation</copyright>
     <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
-    <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/dynamic-animations_128x128.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/dynamic-animation_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid70">
         <dependency id="Xamarin.Build.Download" version="0.4.3" />
@@ -19,8 +19,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="dynamic-animations/nuget/Xamarin.Android.Support.Dynamic.Animations.targets" target="build/MonoAndroid70" />
+    <file src="dynamic-animation/nuget/Xamarin.Android.Support.Dynamic.Animation.targets" target="build/MonoAndroid70" />
 
-    <file src="output/Xamarin.Android.Support.Dynamic.Animations.dll" target="lib/MonoAndroid70" />
+    <file src="output/Xamarin.Android.Support.Dynamic.Animation.dll" target="lib/MonoAndroid70" />
   </files>
 </package>
