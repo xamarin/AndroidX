@@ -14,6 +14,7 @@
 LogSystemInfo ();
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
+var BUILD_CONFIG = Argument ("config", "Release");
 
 var NUGET_VERSION = "25.3.1-beta1";
 var COMPONENT_VERSION = "25.3.1.0";
@@ -109,35 +110,35 @@ var buildSpec = new BuildSpec {
 			BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac,
 			MaxCpuCount = CPU_COUNT,
 			OutputFiles = new [] {
-				new OutputFileCopy { FromFile = "./customtabs/source/bin/Release/Xamarin.Android.Support.CustomTabs.dll" },
-				new OutputFileCopy { FromFile = "./design/source/bin/Release/Xamarin.Android.Support.Design.dll" },
-				new OutputFileCopy { FromFile = "./dynamic-animation/source/bin/Release/Xamarin.Android.Support.Dynamic.Animation.dll" },
-				new OutputFileCopy { FromFile = "./percent/source/bin/Release/Xamarin.Android.Support.Percent.dll" },
-				new OutputFileCopy { FromFile = "./recommendation/source/bin/Release/Xamarin.Android.Support.Recommendation.dll" },
-				//new OutputFileCopy { FromFile = "./v4/source/bin/Release/Xamarin.Android.Support.v4.dll" },
-				new OutputFileCopy { FromFile = "./v7-appcompat/source/bin/Release/Xamarin.Android.Support.v7.AppCompat.dll" },
-				new OutputFileCopy { FromFile = "./v7-cardview/source/bin/Release/Xamarin.Android.Support.v7.CardView.dll" },
-				new OutputFileCopy { FromFile = "./v7-gridlayout/source/bin/Release/Xamarin.Android.Support.v7.GridLayout.dll" },
-				new OutputFileCopy { FromFile = "./v7-mediarouter/source/bin/Release/Xamarin.Android.Support.v7.MediaRouter.dll" },
-				new OutputFileCopy { FromFile = "./v7-palette/source/bin/Release/Xamarin.Android.Support.v7.Palette.dll" },
-				new OutputFileCopy { FromFile = "./v7-preference/source/bin/Release/Xamarin.Android.Support.v7.Preference.dll" },
-				new OutputFileCopy { FromFile = "./v7-recyclerview/source/bin/Release/Xamarin.Android.Support.v7.RecyclerView.dll" },
-				new OutputFileCopy { FromFile = "./v8-renderscript/source/bin/Release/Xamarin.Android.Support.v8.RenderScript.dll" },
-				new OutputFileCopy { FromFile = "./v13/source/bin/Release/Xamarin.Android.Support.v13.dll" },
-				new OutputFileCopy { FromFile = "./v14-preference/source/bin/Release/Xamarin.Android.Support.v14.Preference.dll" },
-				new OutputFileCopy { FromFile = "./v17-leanback/source/bin/Release/Xamarin.Android.Support.v17.Leanback.dll" },
-				new OutputFileCopy { FromFile = "./v17-preference-leanback/source/bin/Release/Xamarin.Android.Support.v17.Preference.Leanback.dll" },
-				new OutputFileCopy { FromFile = "./animated-vector-drawable/source/bin/Release/Xamarin.Android.Support.Animated.Vector.Drawable.dll" },
-				new OutputFileCopy { FromFile = "./vector-drawable/source/bin/Release/Xamarin.Android.Support.Vector.Drawable.dll" },
-				new OutputFileCopy { FromFile = "./support-compat/source/bin/Release/Xamarin.Android.Support.Compat.dll" },
-				new OutputFileCopy { FromFile = "./support-core-utils/source/bin/Release/Xamarin.Android.Support.Core.Utils.dll" },
-				new OutputFileCopy { FromFile = "./support-core-ui/source/bin/Release/Xamarin.Android.Support.Core.UI.dll" },
-				new OutputFileCopy { FromFile = "./support-fragment/source/bin/Release/Xamarin.Android.Support.Fragment.dll" },
-				new OutputFileCopy { FromFile = "./support-media-compat/source/bin/Release/Xamarin.Android.Support.Media.Compat.dll" },
-				new OutputFileCopy { FromFile = "./transition/source/bin/Release/Xamarin.Android.Support.Transition.dll" },
-				new OutputFileCopy { FromFile = "./exifinterface/source/bin/Release/Xamarin.Android.Support.Exif.dll" },
+				new OutputFileCopy { FromFile = "./customtabs/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.CustomTabs.dll" },
+				new OutputFileCopy { FromFile = "./design/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Design.dll" },
+				new OutputFileCopy { FromFile = "./dynamic-animation/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Dynamic.Animation.dll" },
+				new OutputFileCopy { FromFile = "./percent/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Percent.dll" },
+				new OutputFileCopy { FromFile = "./recommendation/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Recommendation.dll" },
+				//new OutputFileCopy { FromFile = "./v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll" },
+				new OutputFileCopy { FromFile = "./v7-appcompat/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.AppCompat.dll" },
+				new OutputFileCopy { FromFile = "./v7-cardview/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.CardView.dll" },
+				new OutputFileCopy { FromFile = "./v7-gridlayout/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.GridLayout.dll" },
+				new OutputFileCopy { FromFile = "./v7-mediarouter/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.MediaRouter.dll" },
+				new OutputFileCopy { FromFile = "./v7-palette/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.Palette.dll" },
+				new OutputFileCopy { FromFile = "./v7-preference/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.Preference.dll" },
+				new OutputFileCopy { FromFile = "./v7-recyclerview/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.RecyclerView.dll" },
+				new OutputFileCopy { FromFile = "./v8-renderscript/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v8.RenderScript.dll" },
+				new OutputFileCopy { FromFile = "./v13/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v13.dll" },
+				new OutputFileCopy { FromFile = "./v14-preference/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v14.Preference.dll" },
+				new OutputFileCopy { FromFile = "./v17-leanback/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v17.Leanback.dll" },
+				new OutputFileCopy { FromFile = "./v17-preference-leanback/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v17.Preference.Leanback.dll" },
+				new OutputFileCopy { FromFile = "./animated-vector-drawable/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Animated.Vector.Drawable.dll" },
+				new OutputFileCopy { FromFile = "./vector-drawable/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Vector.Drawable.dll" },
+				new OutputFileCopy { FromFile = "./support-compat/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Compat.dll" },
+				new OutputFileCopy { FromFile = "./support-core-utils/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Core.Utils.dll" },
+				new OutputFileCopy { FromFile = "./support-core-ui/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Core.UI.dll" },
+				new OutputFileCopy { FromFile = "./support-fragment/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Fragment.dll" },
+				new OutputFileCopy { FromFile = "./support-media-compat/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Media.Compat.dll" },
+				new OutputFileCopy { FromFile = "./transition/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Transition.dll" },
+				new OutputFileCopy { FromFile = "./exifinterface/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Exif.dll" },
 
-				new OutputFileCopy { FromFile = "./support-annotations/source/bin/Release/Xamarin.Android.Support.Annotations.dll" },
+				new OutputFileCopy { FromFile = "./support-annotations/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Annotations.dll" },
 			}
 		}
 	},
@@ -248,6 +249,11 @@ Task ("externals")
 
 		if (FileExists (implFile))
 			MoveFile (implFile, path + aarDir + "/libs/internal_impl.jar");
+
+		var srcsFile = string.Format (path + "m2repository/com/android/support/{0}/{1}/{2}-{3}-sources.jar", aarDir, AAR_VERSION, aarDir, AAR_VERSION);
+		if (FileExists(srcsFile))
+			CopyFile (srcsFile, string.Format (path + "{0}-docs.jar", aarDir));
+
 	}
 
 	CopyFile (string.Format (path + "m2repository/com/android/support/support-annotations/{0}/support-annotations-{0}.jar", AAR_VERSION), path + "support-annotations.jar");
@@ -578,18 +584,18 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 		});
 	}
 
-	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = "Release");
+	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
 
-	CopyFile ("./v4/source/bin/Release/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
+	CopyFile ("./v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
 
 Task ("buildtasks").Does (() => 
 {
 	NuGetRestore ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
 
-	DotNetBuild ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = "Release");
+	DotNetBuild ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
 
-	CopyFile ("./vector-drawable/buildtask/bin/Release/Xamarin.Android.Support.Tasks.VectorDrawable.targets", "./vector-drawable/nuget/merge.targets");
+	CopyFile ("./vector-drawable/buildtask/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Tasks.VectorDrawable.targets", "./vector-drawable/nuget/merge.targets");
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
