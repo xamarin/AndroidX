@@ -594,8 +594,6 @@ Task ("buildtasks").Does (() =>
 	NuGetRestore ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
 
 	DotNetBuild ("./vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
-
-	CopyFile ("./vector-drawable/buildtask/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Tasks.VectorDrawable.targets", "./vector-drawable/nuget/merge.targets");
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);

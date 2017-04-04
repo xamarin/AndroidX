@@ -1,17 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
-  <!-- Adds an argument to the call to aapt to support vectors -->
-  <PropertyGroup>
-    <AndroidResgenExtraArgs>$(AndroidResgenExtraArgs)--no-version-vectors</AndroidResgenExtraArgs>
-  </PropertyGroup>
-
   <!-- 
     * 
     * Xamarin Android Support Vector Drawable MSBuild Tasks
     * 
   -->
-
   <PropertyGroup>
     <VectorDrawableCheckBuildToolsVersionTaskFilename Condition=" '$(VectorDrawableCheckBuildToolsVersionTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.Android.Support.Tasks.VectorDrawable.dll</VectorDrawableCheckBuildToolsVersionTaskFilename>
   </PropertyGroup>
@@ -40,6 +33,18 @@
     <VectorDrawableCheckBuildToolsVersionTask
       AndroidSdkBuildToolsPath="$(AndroidSdkBuildToolsPath)">
     </VectorDrawableCheckBuildToolsVersionTask>
+  </Target>
+
+  <Target 
+    Name="_XamarinAndroidSupportVectorDrawableArgs"
+		BeforeTargets="_UpdateAndroidResgen">
+      <!-- Adds an argument to the call to aapt to support vectors -->
+      <PropertyGroup Condition=" '$(AndroidResgenExtraArgs)' != '' AND !$(AndroidResgenExtraArgs.Contains('--no-version-vectors'))">
+        <AndroidResgenExtraArgs>$(AndroidResgenExtraArgs.TrimEnd(' ')) --no-version-vectors</AndroidResgenExtraArgs>
+      </PropertyGroup>
+      <PropertyGroup Condition="'$(AndroidResgenExtraArgs)' == ''">
+        <AndroidResgenExtraArgs>--no-version-vectors</AndroidResgenExtraArgs>
+      </PropertyGroup>
   </Target>
 
 </Project>
