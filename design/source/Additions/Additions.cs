@@ -11,6 +11,15 @@ namespace Android.Support.Design.Internal
             Enabled = enabled;
         }
     }
+
+    public partial class BottomNavigationItemView
+    {
+        public void SetEnabled (bool enabled)
+        {
+            Enabled = enabled;
+        }
+    }
+
 }
 
 namespace Android.Support.Design.Widget

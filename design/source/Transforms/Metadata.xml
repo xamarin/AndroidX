@@ -35,5 +35,4 @@
 	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
 	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
 
-	<remove-node path="/api/package[@name='android.support.design.internal']/class[@name='BottomNavigationItemView']" />
 </metadata>
