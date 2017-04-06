@@ -64,7 +64,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\dynamic-animation\classes.jar">
+    <InputJar Include="..\..\externals\support-dynamic-animation\classes.jar">
       <Link>Jars\dynamic-animation-aar.jar</Link>
     </InputJar>
   </ItemGroup>
