@@ -15,6 +15,8 @@
     <dependencies>
       <group targetFramework="MonoAndroid70">
         <dependency id="Xamarin.Build.Download" version="0.4.3" />
+
+        <dependency id="Xamarin.Android.Support.Annotations" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
