@@ -16,7 +16,7 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "25.3.1";
+var NUGET_VERSION = "25.3.1-beta2";
 var COMPONENT_VERSION = "25.3.1.0";
 var AAR_VERSION = "25.3.1";
 
