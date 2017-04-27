@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <!-- Unique key for cached download -->
+        <_XbdKey_supportannotations>androidsupport-$AarVersion$/supportannotations</_XbdKey_supportannotations>
+        
+        <!-- Path to .jar file within the extracted contents of the cached download -->
+        <_XbdJarFile_supportannotations>m2repository\com\android\support\support-annotations\$AarVersion$\support-annotations-$AarVersion$.jar</_XbdJarFile_supportannotations>
+        
+        <!-- Full path to .jar file, assuming we had to download to the cache - we reset this later if it is in the sdk -->
+        <_XbdJarFileFullPath_supportannotations>$(XamarinBuildDownloadDir)$(_XbdKey_supportannotations)\support-annotations-$AarVersion$.jar</_XbdJarFileFullPath_supportannotations>
+
+        <!-- Assembly name to embed .aar in -->
+        <_XbdAssemblyName_supportannotations>Xamarin.Android.Support.Annotations</_XbdAssemblyName_supportannotations>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <XamarinBuildRestoreResources Include="_XbdRestoreItems_supportannotations"/>
+    </ItemGroup>
+
+    <Target Name="_XbdRestoreItems_supportannotations">
+        <!-- Check if the aar file is in the android sdk already and change the path to use to it, if it's found -->
+        <CreateProperty Value="$(AndroidSdkDirectory)\extras\android\$(_XbdJarFile_supportannotations)" Condition="Exists('$(AndroidSdkDirectory)\extras\android\$(_XbdJarFile_supportannotations)')">
+            <Output PropertyName="_XbdJarFileFullPath_supportannotations" TaskParameter="Value" />
+        </CreateProperty>
+
+        <ItemGroup>
+            <XamarinBuildDownloadPartialZip Include="$(_XbdKey_supportannotations)" Condition="!Exists('$(_XbdJarFileFullPath_supportannotations)')">
+                <Url>$XbdUrl$</Url>
+                <ToFile>support-annotations-$AarVersion$.jar</ToFile>
+                <RangeStart>$XbdRangeStart$</RangeStart>
+                <RangeEnd>$XbdRangeEnd$</RangeEnd>
+                <Md5>$XbdMd5$</Md5>
+                <CustomErrorMessage>Please open the Android SDK Manager and install the latest version of 'Android Support Repository' from the 'Extras' section, and then reload your solution.</CustomErrorMessage>
+                <CustomErrorCode>XBD404</CustomErrorCode>
+            </XamarinBuildDownloadPartialZip>
+        </ItemGroup>
+
+        <ItemGroup>
+            <RestoreAssemblyResource Include="$(_XbdJarFileFullPath_supportannotations)">
+                <LogicalName>support-annotations.jar</LogicalName>
+                <AssemblyName>$(_XbdAssemblyName_supportannotations)</AssemblyName>
+            </RestoreAssemblyResource>
+        </ItemGroup>
+    </Target>
+</Project>

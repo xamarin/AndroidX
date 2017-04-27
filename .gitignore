@@ -16,7 +16,8 @@ output/
 *.xcuserstate
 *.csproj.user
 */nuget/*.targets
-
+!merge.targets
+!template.targets
 
 Resource.designer.cs
 component.yaml

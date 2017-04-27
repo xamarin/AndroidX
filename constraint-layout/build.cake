@@ -6,8 +6,8 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 
-var NUGET_VERSION = "1.0.0-alpha9";
-var AAR_VERSION = "1.0.0-alpha9";
+var NUGET_VERSION = "1.0.0-beta5";
+var AAR_VERSION = "1.0.0-beta5";
 
 var CONSTRAINT_LAYOUT_URL = string.Format ("https://dl-ssl.google.com/android/repository/com.android.support.constraint-constraint-layout-{0}.zip", AAR_VERSION);
 var CONSTRAINT_LAYOUT_SOLVER_URL = string.Format ("https://dl-ssl.google.com/android/repository/com.android.support.constraint-constraint-layout-solver-{0}.zip", AAR_VERSION);
