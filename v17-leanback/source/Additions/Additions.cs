@@ -228,49 +228,22 @@ namespace Android.Support.V17.Leanback.Widget
 
 	public partial class RecyclerViewParallax
 	{
-		static Delegate cb_createProperty_Ljava_lang_String_I;
-#pragma warning disable 0169
-		static Delegate GetCreateProperty_Ljava_lang_String_IHandler()
-		{
-			if (cb_createProperty_Ljava_lang_String_I == null)
-				cb_createProperty_Ljava_lang_String_I = JNINativeWrapper.CreateDelegate((Func<IntPtr, IntPtr, IntPtr, int, IntPtr>)n_CreateProperty_Ljava_lang_String_I);
-			return cb_createProperty_Ljava_lang_String_I;
-		}
-
-		static IntPtr n_CreateProperty_Ljava_lang_String_I(IntPtr jnienv, IntPtr native__this, IntPtr native_name, int index)
-		{
-			global::Android.Support.V17.Leanback.Widget.RecyclerViewParallax __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.RecyclerViewParallax>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			string name = JNIEnv.GetString(native_name, JniHandleOwnership.DoNotTransfer);
-			IntPtr __ret = JNIEnv.ToLocalJniHandle(__this.CreateProperty(name, index));
-			return __ret;
-		}
-#pragma warning restore 0169
-
-		static IntPtr id_createProperty_Ljava_lang_String_I;
 		// Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='RecyclerViewParallax']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
-		[Register("createProperty", "(Ljava/lang/String;I)Landroid/support/v17/leanback/widget/RecyclerViewParallax$ChildPositionProperty;", "GetCreateProperty_Ljava_lang_String_IHandler")]
+		[Register("createProperty", "(Ljava/lang/String;I)Landroid/util/Property;", "GetCreateProperty_Ljava_lang_String_IHandler")]
 		public override unsafe Java.Lang.Object CreateProperty(string name, int index)
 		{
-			if (id_createProperty_Ljava_lang_String_I == IntPtr.Zero)
-				id_createProperty_Ljava_lang_String_I = JNIEnv.GetMethodID(class_ref, "createProperty", "(Ljava/lang/String;I)Landroid/support/v17/leanback/widget/RecyclerViewParallax$ChildPositionProperty;");
-			IntPtr native_name = JNIEnv.NewString(name);
-			try
-			{
-				JValue* __args = stackalloc JValue[2];
-				__args[0] = new JValue(native_name);
-				__args[1] = new JValue(index);
+			// TODO: Implement JNI
+			return null;
+		}
 
-				global::Android.Support.V17.Leanback.Widget.RecyclerViewParallax.ChildPositionProperty __ret;
-				if (((object)this).GetType() == ThresholdType)
-					__ret = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.RecyclerViewParallax.ChildPositionProperty>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_createProperty_Ljava_lang_String_I, __args), JniHandleOwnership.TransferLocalRef);
-				else
-					__ret = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.RecyclerViewParallax.ChildPositionProperty>(JNIEnv.CallNonvirtualObjectMethod(((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID(ThresholdClass, "createProperty", "(Ljava/lang/String;I)Landroid/support/v17/leanback/widget/RecyclerViewParallax$ChildPositionProperty;"), __args), JniHandleOwnership.TransferLocalRef);
-				return __ret;
-			}
-			finally
-			{
-				JNIEnv.DeleteLocalRef(native_name);
-			}
+
+
+
+		[Register("addProperty", "(Ljava/lang/String;)Landroid/util/Property;", "GetAddProperty_Ljava_lang_String_Handler")]
+		public override unsafe Java.Lang.Object AddProperty(string name)
+		{
+			// TODO: Implement
+			return null;
 		}
 	}
 }
