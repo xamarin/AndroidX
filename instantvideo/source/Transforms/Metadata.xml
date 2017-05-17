@@ -1,0 +1,12 @@
+<metadata>
+	<attr path="/api/package[@name='android.support.media.instantvideo']" name="managedName">Android.Support.Media.InstantVideo</attr>
+	<attr path="/api/package[@name='android.support.media.instantvideo.preload']" name="managedName">Android.Support.Media.InstantVideo.Preload</attr>
+	<attr path="/api/package[@name='android.support.media.instantvideo.widget']" name="managedName">Android.Support.Media.InstantVideo.Widget</attr>
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+</metadata>

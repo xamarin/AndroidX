@@ -122,8 +122,9 @@ var buildSpec = new BuildSpec {
 			OutputFiles = new [] {
 				new OutputFileCopy { FromFile = "./customtabs/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.CustomTabs.dll" },
 				new OutputFileCopy { FromFile = "./design/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Design.dll" },
-				new OutputFileCopy { FromFile = "./dynamic-animation/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Dynamic.Animation.dll" },
+				//TODO: Restore // new OutputFileCopy { FromFile = "./dynamic-animation/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Dynamic.Animation.dll" },
 				new OutputFileCopy { FromFile = "./percent/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Percent.dll" },
+				new OutputFileCopy { FromFile = "./instantvideo/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.InstantVideo.dll" },
 				new OutputFileCopy { FromFile = "./recommendation/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Recommendation.dll" },
 				//new OutputFileCopy { FromFile = "./v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll" },
 				new OutputFileCopy { FromFile = "./v7-appcompat/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v7.AppCompat.dll" },
@@ -145,8 +146,10 @@ var buildSpec = new BuildSpec {
 				new OutputFileCopy { FromFile = "./support-core-ui/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Core.UI.dll" },
 				new OutputFileCopy { FromFile = "./support-fragment/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Fragment.dll" },
 				new OutputFileCopy { FromFile = "./support-media-compat/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Media.Compat.dll" },
+				new OutputFileCopy { FromFile = "./support-tv-provider/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.TV.Provider.dll" },
 				new OutputFileCopy { FromFile = "./transition/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Transition.dll" },
 				new OutputFileCopy { FromFile = "./exifinterface/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Exif.dll" },
+				new OutputFileCopy { FromFile = "./wearable/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Wearable.dll" },
 
 				new OutputFileCopy { FromFile = "./support-annotations/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.Annotations.dll" },
 			}
@@ -176,8 +179,9 @@ var buildSpec = new BuildSpec {
 	NuGets = new [] {
 		new NuGetInfo { NuSpec = "./customtabs/nuget/Xamarin.Android.Support.CustomTabs.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./design/nuget/Xamarin.Android.Support.Design.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
-		new NuGetInfo { NuSpec = "./dynamic-animation/nuget/Xamarin.Android.Support.Dynamic.Animation.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		//TODO: Restore // new NuGetInfo { NuSpec = "./dynamic-animation/nuget/Xamarin.Android.Support.Dynamic.Animation.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./percent/nuget/Xamarin.Android.Support.Percent.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./instantvideo/nuget/Xamarin.Android.Support.InstantVideo.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./recommendation/nuget/Xamarin.Android.Support.Recommendation.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./v4/nuget/Xamarin.Android.Support.v4.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./v7-appcompat/nuget/Xamarin.Android.Support.v7.AppCompat.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
@@ -199,8 +203,10 @@ var buildSpec = new BuildSpec {
 		new NuGetInfo { NuSpec = "./support-core-ui/nuget/Xamarin.Android.Support.Core.UI.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./support-fragment/nuget/Xamarin.Android.Support.Fragment.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./support-media-compat/nuget/Xamarin.Android.Support.Media.Compat.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./support-tv-provider/nuget/Xamarin.Android.Support.TV.Provider.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./transition/nuget/Xamarin.Android.Support.Transition.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./exifinterface/nuget/Xamarin.Android.Support.Exif.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
+		new NuGetInfo { NuSpec = "./wearable/nuget/Xamarin.Android.Support.Wearable.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 		new NuGetInfo { NuSpec = "./support-annotations/nuget/Xamarin.Android.Support.Annotations.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true },
 	},
 
