@@ -16,9 +16,9 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "25.3.1";
-var COMPONENT_VERSION = "25.3.1.0";
-var AAR_VERSION = "25.3.1";
+var NUGET_VERSION = "26.0.0-alpha1";
+var COMPONENT_VERSION = "26.0.0.0";
+var AAR_VERSION = "26.0.0-alpha1";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var M2_REPOSITORY_URL = "https://dl-ssl.google.com/android/repository/android_m2repository_r47.zip";
@@ -27,7 +27,7 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.0" : "android-24";
 var RENDERSCRIPT_FOLDER = "android-7.1.1";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.1.1/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.3.1/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var USE_MSBUILD_ON_MAC = true;
@@ -48,6 +48,7 @@ var AAR_INFOS = new [] {
 	new AarInfo ("leanback-v17", "v17-leanback", "Xamarin.Android.Support.v17.Leanback", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("design", "design", "Xamarin.Android.Support.Design", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("percent", "percent", "Xamarin.Android.Support.Percent", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("instantvideo", "instantvideo", "Xamarin.Android.Support.InstantVideo", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("customtabs", "customtabs", "Xamarin.Android.Support.CustomTabs", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("preference-v7", "v7-preference", "Xamarin.Android.Support.v7.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("preference-v14", "v14-preference", "Xamarin.Android.Support.v14.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -58,11 +59,13 @@ var AAR_INFOS = new [] {
 	new AarInfo ("support-compat", "support-compat", "Xamarin.Android.Support.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-core-utils", "support-core-utils", "Xamarin.Android.Support.Core.Utils", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-core-ui", "support-core-ui", "Xamarin.Android.Support.Core.UI", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new AarInfo ("support-dynamic-animation", "dynamic-animation", "Xamarin.Android.Support.Dynamic.Animation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	//TODO: Restore //new AarInfo ("support-dynamic-animation", "dynamic-animation", "Xamarin.Android.Support.Dynamic.Animation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-media-compat", "support-media-compat", "Xamarin.Android.Support.Media.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("support-fragment", "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("support-tv-provider", "support-tv-provider", "Xamarin.Android.Support.TV.Provider", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("transition", "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new AarInfo ("exifinterface", "exifinterface", "Xamarin.Android.Support.Exif", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new AarInfo ("wearable", "wearable", "Xamarin.Android.Support.Wearable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 };
 
 class PartialZipInfo {
