@@ -410,7 +410,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 			{ "_XbdRestoreItems_", "_XbdRestoreItems_" + msName },
 			{ "$XbdUrl$", M2_REPOSITORY_URL },
 			{ "$XbdMd5$", part.Md5 },
-			{ "$XbdKey$", "androidsupport-" + AAR_VERSION.Replace("-", "_") + "/" + msName },
+			{ "$XbdKey$", "androidsupport-" + AAR_VERSION.Replace("-", ".") + "/" + msName },
 			{ "$XbdAssemblyName$", aar.NugetId },
 			{ "$XbdRangeStart$", part.RangeStart.ToString() },
 			{ "$XbdRangeEnd$", part.RangeEnd.ToString() },
