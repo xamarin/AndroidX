@@ -21,7 +21,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="dynamic-animation/nuget/Xamarin.Android.Support.Dynamic.Animation.targets" target="build/MonoAndroid70" />
+    <file src="support-dynamic-animation/nuget/Xamarin.Android.Support.Dynamic.Animation.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Dynamic.Animation.dll" target="lib/MonoAndroid70" />
   </files>

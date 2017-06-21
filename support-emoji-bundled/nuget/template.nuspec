@@ -21,7 +21,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="support-emoji/nuget/Xamarin.Android.Support.Emoji.Bundled.targets" target="build/MonoAndroid70" />
+    <file src="support-emoji-bundled/nuget/Xamarin.Android.Support.Emoji.Bundled.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Emoji.Bundled.dll" target="lib/MonoAndroid70" />
   </files>
