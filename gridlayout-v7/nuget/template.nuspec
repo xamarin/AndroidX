@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.Android.Support.v7.GridLayout</id>
+    <title>Xamarin Android Support Library - v7 GridLayout</title>
+    <version>$version$</version>
+    <authors>Xamarin Inc.</authors>
+    <owners>Xamarin Inc.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>v7 GridLayout Android Support Library C# bindings for Xamarin</description>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
+    <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/gridlayout_128x128.png</iconUrl>
+    <dependencies>
+      <group targetFramework="MonoAndroid70">
+        <dependency id="Xamarin.Build.Download" version="$xbdversion$" />
+
+        <dependency id="Xamarin.Android.Support.Compat" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]"/>
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="v7-gridlayout/nuget/Xamarin.Android.Support.v7.GridLayout.targets" target="build/MonoAndroid70" />
+
+    <file src="output/Xamarin.Android.Support.v7.GridLayout.dll" target="lib/MonoAndroid70" />
+  </files>
+</package>
