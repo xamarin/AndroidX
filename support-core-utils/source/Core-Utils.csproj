@@ -59,14 +59,6 @@
     <TransformFile Include="Transforms\Metadata.xml" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\support-core-utils\classes.jar">
-      <Link>Jars\android-support-core-utils-aar.jar</Link>
-    </InputJar>
-    <InputJar Include="..\..\externals\support-core-utils\libs\internal_impl.jar">
-      <Link>Jars\android-support-core-utils-internal_impl-aar.jar</Link>
-    </InputJar>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
       <Name>Compat</Name>
@@ -74,11 +66,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
+    <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="..\..\externals\support-core-utils.aar">
+      <Link>support-core-utils.aar</Link>
+    </LibraryProjectZip>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\..\generated.targets" />
   <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>

@@ -58,12 +58,8 @@
     <TransformFile Include="Transforms\Metadata.xml" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\support-tv-provider\classes.jar">
-      <Link>Jars\android-support-tv-provider-aar.jar</Link>
-    </InputJar>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Additions\" />
+    <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -74,7 +70,11 @@
       <Name>Compat</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="..\..\externals\support-tv-provider.aar">
+      <Link>support-tv-provider.aar</Link>
+    </LibraryProjectZip>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\..\generated.targets" />
   <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>

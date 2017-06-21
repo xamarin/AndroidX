@@ -56,11 +56,6 @@
     <TransformFile Include="Transforms\Metadata.ParameterNames.xml" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\design\classes.jar">
-      <Link>Jars\support-design.jar</Link>
-    </InputJar>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\v7-recyclerview\source\V7-RecyclerView.csproj">
       <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
       <Name>V7-RecyclerView</Name>
@@ -93,11 +88,17 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Jars\" />
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="..\..\externals\design.aar">
+      <Link>design.aar</Link>
+    </LibraryProjectZip>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\..\generated.targets" />
   <PropertyGroup>
     <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
   </PropertyGroup>
-  <Import Project="..\..\generated.targets" />
   <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>
