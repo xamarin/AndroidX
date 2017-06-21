@@ -46,4 +46,9 @@
 
 	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=1 and parameter[1][@type='T']]" />
 	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.Object']]" />
+
+	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatApi24Impl']" />
+	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatBaseImpl']" />
+
+	<remove-node path="/api/package[@name='android.support.v4.app']/class[@name='JobIntentService.CommandProcessor']" />
 </metadata>
