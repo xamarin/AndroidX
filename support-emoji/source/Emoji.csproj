@@ -41,7 +41,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <!--Docs URL Can be found here: http://dl-ssl.google.com/android/repository/repository-8.xml -->
-    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <DroidDocPaths>..\..\docs\reference</DroidDocPaths>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

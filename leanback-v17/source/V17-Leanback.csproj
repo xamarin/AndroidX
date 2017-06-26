@@ -65,7 +65,7 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <PropertyGroup>
-    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <DroidDocPaths>..\..\docs\reference</DroidDocPaths>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\v7-recyclerview\source\V7-RecyclerView.csproj">

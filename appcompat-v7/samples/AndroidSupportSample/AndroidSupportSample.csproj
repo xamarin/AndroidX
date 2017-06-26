@@ -130,6 +130,5 @@
       <Name>Vector-Drawable</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\..\generated.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>

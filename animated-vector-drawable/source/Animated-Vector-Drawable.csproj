@@ -42,7 +42,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup>
-    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <DroidDocPaths>..\..\docs\reference</DroidDocPaths>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
