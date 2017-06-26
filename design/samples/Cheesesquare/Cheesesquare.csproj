@@ -14,9 +14,9 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <AssemblyName>Cheesesquare</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -125,23 +125,10 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Resources\layout\" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\source\Design.csproj">
-      <Project>{8022A1F5-C228-4B21-8194-BC9E76F9174A}</Project>
-      <Name>Design</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\v7-appcompat\source\V7-AppCompat.csproj">
-      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
-      <Name>V7-AppCompat</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\v7-cardview\source\V7-CardView.csproj">
-      <Project>{E9848EF1-14E6-4144-95A0-926A52F301B5}</Project>
-      <Name>V7-CardView</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\v7-recyclerview\source\V7-RecyclerView.csproj">
-      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
-      <Name>V7-RecyclerView</Name>
+    <ProjectReference Include="..\..\..\animated-vector-drawable\source\Animated-Vector-Drawable.csproj">
+      <Project>{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}</Project>
+      <Name>Animated-Vector-Drawable</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\support-compat\source\Compat.csproj">
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
@@ -155,6 +142,10 @@
       <Project>{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}</Project>
       <Name>Core-Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\source\Design.csproj">
+      <Project>{8022A1F5-C228-4B21-8194-BC9E76F9174A}</Project>
+      <Name>Design</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\support-fragment\source\Fragment.csproj">
       <Project>{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}</Project>
       <Name>Fragment</Name>
@@ -163,14 +154,23 @@
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\vector-drawable\source\Vector-Drawable.csproj">
+    <ProjectReference Include="..\..\..\appcompat-v7\source\V7-AppCompat.csproj">
+      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
+      <Name>V7-AppCompat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\cardview-v7\source\V7-CardView.csproj">
+      <Project>{E9848EF1-14E6-4144-95A0-926A52F301B5}</Project>
+      <Name>V7-CardView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\recyclerview-v7\source\V7-RecyclerView.csproj">
+      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
+      <Name>V7-RecyclerView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-vector-drawable\source\Vector-Drawable.csproj">
       <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
       <Name>Vector-Drawable</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\animated-vector-drawable\source\Animated-Vector-Drawable.csproj">
-      <Project>{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}</Project>
-      <Name>Animated-Vector-Drawable</Name>
-    </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>

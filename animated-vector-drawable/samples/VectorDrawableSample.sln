@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDrawableSample", "VectorDrawableSample\VectorDrawableSample.csproj", "{05B87270-652B-438E-BCFF-AC65BC4C892F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\v7-appcompat\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animated-Vector-Drawable", "..\source\Animated-Vector-Drawable.csproj", "{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector-Drawable", "..\..\vector-drawable\source\Vector-Drawable.csproj", "{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compat", "..\..\support-compat\source\Compat.csproj", "{CA4194B2-8B2D-4C37-8790-C79C5803357A}"
 EndProject
@@ -19,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media-Compat", "..\..\suppo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fragment", "..\..\support-fragment\source\Fragment.csproj", "{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector-Drawable", "..\..\support-vector-drawable\source\Vector-Drawable.csproj", "{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\appcompat-v7\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,18 +29,10 @@ Global
 		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA4194B2-8B2D-4C37-8790-C79C5803357A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,5 +53,13 @@ Global
 		{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
