@@ -68,10 +68,6 @@
     <DroidDocPaths>..\..\docs\reference</DroidDocPaths>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\v7-recyclerview\source\V7-RecyclerView.csproj">
-      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
-      <Name>V7-RecyclerView</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
       <Name>Compat</Name>
@@ -91,6 +87,10 @@
     <ProjectReference Include="..\..\support-fragment\source\Fragment.csproj">
       <Project>{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}</Project>
       <Name>Fragment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\recyclerview-v7\source\V7-RecyclerView.csproj">
+      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
+      <Name>V7-RecyclerView</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -65,10 +65,6 @@
     <TransformFile Include="Transforms\Metadata.ParameterNames.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\vector-drawable\source\Vector-Drawable.csproj">
-      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
-      <Name>Vector-Drawable</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
       <Name>Compat</Name>
@@ -92,6 +88,10 @@
     <ProjectReference Include="..\..\support-media-compat\source\Media-Compat.csproj">
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\support-vector-drawable\source\Vector-Drawable.csproj">
+      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
+      <Name>Vector-Drawable</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

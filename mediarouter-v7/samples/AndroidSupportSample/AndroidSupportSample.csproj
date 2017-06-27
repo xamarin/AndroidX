@@ -78,23 +78,22 @@
     <Folder Include="Media\" />
     <Folder Include="Resources\menu\" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\v7-appcompat\source\V7-AppCompat.csproj">
-      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
-      <Name>V7-AppCompat</Name>
+    <ProjectReference Include="..\..\..\support-vector-drawable\source\Vector-Drawable.csproj">
+      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
+      <Name>Vector-Drawable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\palette-v7\source\V7-Palette.csproj">
+      <Project>{D9C9670F-8B06-4083-9EEF-42E4D1DE22C1}</Project>
+      <Name>V7-Palette</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\source\V7-MediaRouter.csproj">
       <Project>{9E11B536-73E2-4BC6-9921-92889CF089CB}</Project>
       <Name>V7-MediaRouter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\vector-drawable\source\Vector-Drawable.csproj">
-      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
-      <Name>Vector-Drawable</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\v7-palette\source\V7-Palette.csproj">
-      <Project>{D9C9670F-8B06-4083-9EEF-42E4D1DE22C1}</Project>
-      <Name>V7-Palette</Name>
+    <ProjectReference Include="..\..\..\appcompat-v7\source\V7-AppCompat.csproj">
+      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
+      <Name>V7-AppCompat</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\support-media-compat\source\Media-Compat.csproj">
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
@@ -121,5 +120,6 @@
       <Name>Animated-Vector-Drawable</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>
