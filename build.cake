@@ -509,6 +509,8 @@ Task ("buildtasks").Does (() =>
 
 Task ("droiddocs").Does(() => 
 {
+	EnsureDirectoryExists("./output");
+	
 	var compressedDocsFile = "./output/docs-" + AAR_VERSION + ".zip";
 
 	if (!FileExists(compressedDocsFile)) {
