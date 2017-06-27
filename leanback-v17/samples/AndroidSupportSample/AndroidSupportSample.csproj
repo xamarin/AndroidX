@@ -18,7 +18,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -82,14 +82,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\source\V17-Leanback.csproj">
-      <Project>{DA26C0C2-286A-4B41-9DF7-84D7E5D00C68}</Project>
-      <Name>V17-Leanback</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\v7-recyclerview\source\V7-RecyclerView.csproj">
-      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
-      <Name>V7-RecyclerView</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\support-core-ui\source\Core-UI.csproj">
       <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
       <Name>Core-UI</Name>
@@ -109,6 +101,14 @@
     <ProjectReference Include="..\..\..\support-media-compat\source\Media-Compat.csproj">
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\source\V17-Leanback.csproj">
+      <Project>{DA26C0C2-286A-4B41-9DF7-84D7E5D00C68}</Project>
+      <Name>V17-Leanback</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\recyclerview-v7\source\V7-RecyclerView.csproj">
+      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
+      <Name>V7-RecyclerView</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />

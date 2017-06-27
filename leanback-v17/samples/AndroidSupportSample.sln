@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSupportSample", "And
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSupportSample.UITests", "AndroidSupportSample.UITests\AndroidSupportSample.UITests.csproj", "{A03D5BFA-CDDE-48BA-A53A-B6E901FBB7F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-RecyclerView", "..\..\v7-recyclerview\source\V7-RecyclerView.csproj", "{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V17-Leanback", "..\source\V17-Leanback.csproj", "{DA26C0C2-286A-4B41-9DF7-84D7E5D00C68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compat", "..\..\support-compat\source\Compat.csproj", "{CA4194B2-8B2D-4C37-8790-C79C5803357A}"
@@ -19,16 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fragment", "..\..\support-f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media-Compat", "..\..\support-media-compat\source\Media-Compat.csproj", "{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-RecyclerView", "..\..\recyclerview-v7\source\V7-RecyclerView.csproj", "{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A03D5BFA-CDDE-48BA-A53A-B6E901FBB7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A03D5BFA-CDDE-48BA-A53A-B6E901FBB7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A03D5BFA-CDDE-48BA-A53A-B6E901FBB7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,5 +57,9 @@ Global
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

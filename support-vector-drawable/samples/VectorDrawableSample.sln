@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDrawableSample", "VectorDrawableSample\VectorDrawableSample.csproj", "{05B87270-652B-438E-BCFF-AC65BC4C892F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\v7-appcompat\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector-Drawable", "..\source\Vector-Drawable.csproj", "{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animated-Vector-Drawable", "..\..\animated-vector-drawable\source\Animated-Vector-Drawable.csproj", "{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}"
@@ -19,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fragment", "..\..\support-f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media-Compat", "..\..\support-media-compat\source\Media-Compat.csproj", "{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\appcompat-v7\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +29,6 @@ Global
 		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B87270-652B-438E-BCFF-AC65BC4C892F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
 		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,5 +57,9 @@ Global
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

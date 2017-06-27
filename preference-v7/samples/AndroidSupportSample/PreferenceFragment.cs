@@ -16,7 +16,7 @@ namespace AndroidSupportSample
         }
     }
 
-    public class SamplePreferencesFragment : PreferenceFragment
+    public class SamplePreferencesFragment : PreferenceFragmentCompat
     {
         public override void OnCreatePreferences (Bundle savedInstanceState, String rootKey) 
         {

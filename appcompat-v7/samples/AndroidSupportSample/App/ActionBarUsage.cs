@@ -46,11 +46,11 @@ namespace AndroidSupportSample
 			var searchView = MenuItemCompat.GetActionView (arg1);
 			var searchView2 = searchView as Android.Support.V7.Widget.SearchView;
 			searchView2.QueryTextChange += (sender, e) => {
-				e.Handled = OnQueryTextChange (e.NewText);
+				e.Handled = OnQueryTextChange (e.P0);
 			};
 
 			searchView2.QueryTextSubmit += (sender, e) => {
-				e.Handled = OnQueryTextSubmit (e.Query);
+				e.Handled = OnQueryTextSubmit (e.P0);
 			};
 
 			return true;
