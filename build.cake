@@ -16,9 +16,9 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "26.0.0-beta2";
-var COMPONENT_VERSION = "26.0.0.0";
-var AAR_VERSION = "26.0.0-beta2";
+var NUGET_VERSION = "25.4.0";
+var COMPONENT_VERSION = "25.4.0.0";
+var AAR_VERSION = "25.4.0";
 var XBD_VERSION = "0.4.5";
 
 var SUPPORT_PKG_NAME = "com.android.support";
@@ -65,14 +65,16 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-dynamic-animation", "Xamarin.Android.Support.Dynamic.Animation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-media-compat", "Xamarin.Android.Support.Media.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "support-tv-provider", "Xamarin.Android.Support.TV.Provider", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-tv-provider", "Xamarin.Android.Support.TV.Provider", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "exifinterface", "Xamarin.Android.Support.Exif", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "wearable", "Xamarin.Android.Support.Wearable", "26.0.0-alpha1", "26.0.0-alpha1", COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-annotations", "Xamarin.Android.Support.Annotations", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION, true),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji", "Xamarin.Android.Support.Emoji", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-appcompat", "Xamarin.Android.Support.Emoji.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-bundled", "Xamarin.Android.Support.Emoji.Bundled", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji", "Xamarin.Android.Support.Emoji", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-appcompat", "Xamarin.Android.Support.Emoji.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-bundled", "Xamarin.Android.Support.Emoji.Bundled", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+
+	new ArtifactInfo (SUPPORT_PKG_NAME, "renderscript-v8", "Xamarin.Android.Support.v8.RenderScript", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 };
 
 class PartialZipInfo {
@@ -137,18 +139,18 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./design/samples/Cheesesquare.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./percent/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./recommendation/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v4/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-appcompat/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-cardview/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-gridlayout/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-mediarouter/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-palette/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-preference/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v7-recyclerview/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v8-renderscript/samples/RenderScriptSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v13/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./v17-leanback/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./support-v4/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./appcompat-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./cardview-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./gridlayout-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./mediarouter-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./palette-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./preference-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./recyclerview-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./renderscript-v8/samples/RenderScriptSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./support-v13/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./leanback-v17/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		new DefaultSolutionBuilder { SolutionPath = "./support-vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./animated-vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 	},
 
@@ -160,17 +162,17 @@ var buildSpec = new BuildSpec {
 		new Component { ManifestDirectory = "./design/component" },
 		new Component { ManifestDirectory = "./percent/component" },
 		new Component { ManifestDirectory = "./recommendation/component" },
-		new Component { ManifestDirectory = "./v4/component" },
-		new Component { ManifestDirectory = "./v7-appcompat/component" },
-		new Component { ManifestDirectory = "./v7-cardview/component" },
-		new Component { ManifestDirectory = "./v7-gridlayout/component" },
-		new Component { ManifestDirectory = "./v7-palette/component" },
-		new Component { ManifestDirectory = "./v7-preference/component" },
-		new Component { ManifestDirectory = "./v7-recyclerview/component" },
-		new Component { ManifestDirectory = "./v8-renderscript/component" },
-		new Component { ManifestDirectory = "./v13/component" },
-		new Component { ManifestDirectory = "./v17-leanback/component" },
-		new Component { ManifestDirectory = "./vector-drawable/component" },
+		new Component { ManifestDirectory = "./support-v4/component" },
+		new Component { ManifestDirectory = "./appcompat-v7/component" },
+		new Component { ManifestDirectory = "./cardview-v7/component" },
+		new Component { ManifestDirectory = "./gridlayout-v7/component" },
+		new Component { ManifestDirectory = "./palette-v7/component" },
+		new Component { ManifestDirectory = "./preference-v7/component" },
+		new Component { ManifestDirectory = "./recyclerview-v7/component" },
+		new Component { ManifestDirectory = "./renderscript-v8/component" },
+		new Component { ManifestDirectory = "./support-v13/component" },
+		new Component { ManifestDirectory = "./leanback-v17/component" },
+		new Component { ManifestDirectory = "./support-vector-drawable/component" },
 	}
 
 };
@@ -194,6 +196,10 @@ Task ("externals")
 
 	// Copy the .aar's to a better location
 	foreach (var art in ARTIFACTS) {
+
+		// Manually process renderscript later
+		if (art.ArtifactId == "renderscript-v8")
+			continue;
 
 		var localArtifact = "./externals/" + art.ArtifactId + (art.IsJar ? ".jar" : ".aar");
 		var artifactUrl = MAVEN_REPO_URL + art.Package.Replace (".", "/") + "/" + art.ArtifactId + "/" + art.ArtifactVersion + "/" + art.ArtifactId + "-" + art.ArtifactVersion + (art.IsJar ? ".jar" : ".aar");
@@ -448,8 +454,8 @@ Task ("component-docs").Does (() =>
 });
 
 //Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-//Task ("libs").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-Task ("libs").IsDependentOn ("libs-base");
+Task ("libs").IsDependentOn ("genapi").IsDependentOn ("libs-base");
+//Task ("libs").IsDependentOn ("libs-base");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
 
