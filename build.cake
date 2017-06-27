@@ -215,7 +215,9 @@ Task ("externals")
 			// https://github.com/Redth/Cake.Xamarin.Build/blob/master/Cake.Xamarin.Build/AndroidAarFixer.cs#L24-L152
 			FixAndroidAarFile(localArtifact, art.ArtifactId, true, true);
 
-			Unzip (localArtifact, "./externals/" + art.ArtifactId);
+			// Only unzip if it doesn't exist
+			if (!DirectoryExists("./externals/" + art.ArtifactId))
+				Unzip (localArtifact, "./externals/" + art.ArtifactId);
 		}
 	}
 
@@ -510,7 +512,7 @@ Task ("buildtasks").Does (() =>
 Task ("droiddocs").Does(() => 
 {
 	EnsureDirectoryExists("./output");
-	
+
 	var compressedDocsFile = "./output/docs-" + AAR_VERSION + ".zip";
 
 	if (!FileExists(compressedDocsFile)) {
