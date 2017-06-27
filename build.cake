@@ -3,6 +3,7 @@
 #tool nuget:?package=Cake.MonoApiTools
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
+#addin nuget:?package=Cake.Compression
 #addin nuget:?package=Cake.Json
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
@@ -187,6 +188,7 @@ if (!string.IsNullOrEmpty (NUGET_SOURCES))
 
 Task ("externals")
 	.IsDependentOn ("externals-base")
+	.IsDependentOn ("droiddocs")
 	.WithCriteria (() => !FileExists ("./externals/support-v4/classes.jar"))
 	.Does (() =>
 {
@@ -504,6 +506,22 @@ Task ("buildtasks").Does (() =>
 	DotNetBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
 });
 
+
+Task ("droiddocs").Does(() => 
+{
+	var compressedDocsFile = "./output/docs-" + AAR_VERSION + ".zip";
+
+	if (!FileExists(compressedDocsFile)) {
+		if (IsRunningOnWindows ())
+			StartProcess ("util/droiddocs.exe", "scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+		else
+			StartProcess ("mono", "util/droiddocs.exe scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+		ZipCompress ("./docs", compressedDocsFile);
+	}
+
+	if (!DirectoryExists("./docs"))
+		Unzip (compressedDocsFile, "./docs");
+});
 
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
