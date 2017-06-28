@@ -229,6 +229,11 @@ Task ("externals")
 		CopyDirectory (path + RENDERSCRIPT_FOLDER, path + "build-tools");
 		DeleteDirectory (path + RENDERSCRIPT_FOLDER, true);
 	}
+
+	// Download v4 manually since we build it separately as a type forwarder lib and it isn't downloaded in the set of main externals
+	var supportV4ArtifactUrl = MAVEN_REPO_URL + SUPPORT_PKG_NAME.Replace (".", "/") + "/support-v4/" + AAR_VERSION + "/support-v4-" + AAR_VERSION + ".aar";
+	DownloadFile (supportV4ArtifactUrl, "./externals/support-v4.aar");
+	Unzip ("./externals/support-v4.aar", "./externals/support-v4");
 });
 
 Task ("diff")
@@ -520,6 +525,14 @@ Task ("droiddocs").Does(() =>
 			StartProcess ("util/droiddocs.exe", "scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
 		else
 			StartProcess ("mono", "util/droiddocs.exe scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+
+		// Scraper misses a few files we require
+		EnsureDirectoryExists("./docs/reference");
+		DownloadFile("https://developer.android.com/reference/classes.html", "./docs/reference/classes.html");
+		CopyFile ("./docs/reference/classes.html", "./docs/reference/index.html");
+		DownloadFile("https://developer.android.com/reference/packages.html", "./docs/reference/packages.html");
+		
+
 		ZipCompress ("./docs", compressedDocsFile);
 	}
 
