@@ -230,7 +230,7 @@ Task ("externals")
 		DeleteDirectory (path + RENDERSCRIPT_FOLDER, true);
 	}
 
-	// Download v4 manually since we build it separately as a type forwarder lib and it isn't downloaded in the set of main externals
+	// Download v4 manually since we build it separately as a type forwarder lib and it isn't downloaded in the set of main externals 
 	var supportV4ArtifactUrl = MAVEN_REPO_URL + SUPPORT_PKG_NAME.Replace (".", "/") + "/support-v4/" + AAR_VERSION + "/support-v4-" + AAR_VERSION + ".aar";
 	DownloadFile (supportV4ArtifactUrl, "./externals/support-v4.aar");
 	Unzip ("./externals/support-v4.aar", "./externals/support-v4");
@@ -538,6 +538,14 @@ Task ("droiddocs").Does(() =>
 
 	if (!DirectoryExists("./docs"))
 		Unzip (compressedDocsFile, "./docs");
+
+		if (!FileExists("./Metadata.generated.xml")) {
+			// Generate metadata file from docs
+			if (IsRunningOnWindows ())
+				StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+			else
+				StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+		}
 });
 
 

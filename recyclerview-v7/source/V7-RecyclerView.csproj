@@ -59,6 +59,9 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
     <TransformFile Include="Transforms\Metadata.parameternames.xml" />
+    <TransformFile Include="..\..\Metadata.generated.xml">
+      <Link>Transforms\Metadata.generated.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
