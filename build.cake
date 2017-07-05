@@ -17,10 +17,10 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "25.4.0";
+var NUGET_VERSION = "25.4.0-rc1";
 var COMPONENT_VERSION = "25.4.0.0";
 var AAR_VERSION = "25.4.0";
-var XBD_VERSION = "0.4.5";
+var XBD_VERSION = "0.4.6";
 
 var SUPPORT_PKG_NAME = "com.android.support";
 
