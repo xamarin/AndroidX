@@ -340,7 +340,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 			projElem.Add (new System.Xml.Linq.XElement (nsTargets + "ItemGroup", 
 				new System.Xml.Linq.XElement (nsTargets + "ProguardConfiguration",
-					new System.Xml.Linq.XAttribute (nsTargets + "Include", "$(MSBuildThisFileDirectory)..\\proguard\\proguard.txt"))));
+					new System.Xml.Linq.XAttribute ("Include", "$(MSBuildThisFileDirectory)..\\proguard\\proguard.txt"))));
 		}
 
 		xTargets.Save (MakeAbsolute(targetsFile).FullPath);
@@ -366,15 +366,16 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 		var xNuspec = System.Xml.Linq.XDocument.Load (MakeAbsolute(nuspecFile).FullPath);
 		System.Xml.Linq.XNamespace nsNuspec = xNuspec.Root.Name.Namespace;
 
-	// 	// Check if we have a proguard.txt file for this artifact and include it in the nuspec if so
-	// 	if (FileExists (proguardFile)) {
-	// 		var filesElem = xNuspec.Root.Descendants (nsNuspec + "files")?.FirstOrDefault();
-	// 		filesElem.Add (new System.Xml.Linq.XElement (nsNuspec + "file", 
-	// 			new System.Xml.Linq.XAttribute(nsNuspec + "src", proguardFile.ToString()),
-	// 			new System.Xml.Linq.XAttribute(nsNuspec + "target", "proguard/proguard.txt")));
-	// 	}
+		// Check if we have a proguard.txt file for this artifact and include it in the nuspec if so
+		if (FileExists (proguardFile)) {
+			Information ("Adding {0} to {1}", "proguard.txt", nuspecFile);
+			var filesElem = xNuspec.Root.Descendants (nsNuspec + "files")?.FirstOrDefault();
+			filesElem.Add (new System.Xml.Linq.XElement (nsNuspec + "file", 
+				new System.Xml.Linq.XAttribute(nsNuspec + "src", proguardFile.ToString()),
+				new System.Xml.Linq.XAttribute(nsNuspec + "target", "proguard/proguard.txt")));
+		}
 
-	// 	xNuspec.Save(MakeAbsolute(new FilePath(art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec")).FullPath);
+	 	xNuspec.Save(MakeAbsolute(nuspecFile).FullPath);
 	}
 });
 
