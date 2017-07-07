@@ -340,7 +340,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 			projElem.Add (new System.Xml.Linq.XElement (nsTargets + "ItemGroup", 
 				new System.Xml.Linq.XElement (nsTargets + "ProguardConfiguration",
-					new System.Xml.Linq.XAttribute ("Include", "$(MSBuildThisFileDirectory)..\\proguard\\proguard.txt"))));
+					new System.Xml.Linq.XAttribute ("Include", "$(MSBuildThisFileDirectory)..\\..\\proguard\\proguard.txt"))));
 		}
 
 		xTargets.Save (MakeAbsolute(targetsFile).FullPath);
