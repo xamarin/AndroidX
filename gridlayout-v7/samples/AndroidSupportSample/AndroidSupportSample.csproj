@@ -93,5 +93,9 @@
       <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
       <Name>Core-UI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

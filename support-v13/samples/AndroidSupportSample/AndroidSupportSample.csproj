@@ -97,5 +97,9 @@
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

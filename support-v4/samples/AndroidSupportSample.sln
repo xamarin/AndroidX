@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fragment", "..\..\support-f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media-Compat", "..\..\support-media-compat\source\Media-Compat.csproj", "{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotations", "..\..\support-annotations\source\Annotations.csproj", "{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,5 +57,9 @@ Global
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

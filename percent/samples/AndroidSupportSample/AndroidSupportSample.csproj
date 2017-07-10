@@ -76,5 +76,9 @@
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
       <Name>Compat</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

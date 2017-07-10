@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compat", "..\..\support-com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-UI", "..\..\support-core-ui\source\Core-UI.csproj", "{071EAE48-7BCE-4D68-8098-745B923A122F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotations", "..\..\support-annotations\source\Annotations.csproj", "{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +39,9 @@ Global
 		{071EAE48-7BCE-4D68-8098-745B923A122F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{071EAE48-7BCE-4D68-8098-745B923A122F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{071EAE48-7BCE-4D68-8098-745B923A122F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

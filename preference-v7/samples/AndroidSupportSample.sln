@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V17-Leanback", "..\..\leanb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V17-Preference-Leanback", "..\..\preference-leanback-v17\source\V17-Preference-Leanback.csproj", "{6948B25E-4A71-4F31-B042-D21B0B99ADA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotations", "..\..\support-annotations\source\Annotations.csproj", "{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,5 +99,9 @@ Global
 		{6948B25E-4A71-4F31-B042-D21B0B99ADA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6948B25E-4A71-4F31-B042-D21B0B99ADA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6948B25E-4A71-4F31-B042-D21B0B99ADA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

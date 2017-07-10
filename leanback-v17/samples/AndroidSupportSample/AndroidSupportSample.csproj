@@ -110,5 +110,9 @@
       <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
       <Name>V7-RecyclerView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

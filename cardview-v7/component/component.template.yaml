@@ -17,10 +17,13 @@ samples:
   - name: "Android Support Sample"
     path:  ../samples/AndroidSupportSample.sln
     removeProjects:
+      - Annotations
       - V7-CardView
     installNuGets:
       - project: AndroidSupportSample
-        packages: Xamarin.Android.Support.v7.CardView
+        packages: 
+          - Xamarin.Android.Support.Annotations
+          - Xamarin.Android.Support.v7.CardView
     removeNodes:
       - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Tasks.VectorDrawable.targets')]"
       - "//xNS:Import[contains (@Project, 'Xamarin.Android.Support.Vector.Drawable.targets')]"

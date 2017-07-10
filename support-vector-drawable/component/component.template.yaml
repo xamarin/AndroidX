@@ -18,6 +18,7 @@ samples:
   - name: "Vector Drawable Sample"
     path:  ../samples/VectorDrawableSample.sln
     removeProjects:
+      - Annotations
       - Compat
       - Core-UI
       - Core-Utils
@@ -29,6 +30,7 @@ samples:
     installNuGets:
       - project: VectorDrawableSample
         packages:
+          - Xamarin.Android.Support.Annotations
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Core.UI
           - Xamarin.Android.Support.Core.Utils

@@ -17,11 +17,13 @@ samples:
   - name: "Chrome Custom Tabs Sample"
     path:  ../samples/ChromeCustomTabsSample.sln
     removeProjects:
+      - Annotations
       - Compat
       - CustomTabs
     installNuGets:
       - project: ChromeCustomTabsSample
         packages:
+          - Xamarin.Android.Support.Annotations
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.CustomTabs
     removeNodes:

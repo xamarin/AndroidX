@@ -17,6 +17,7 @@ samples:
   - name: "Android Support Sample"
     path:  ../samples/AndroidSupportSample.sln
     removeProjects:
+      - Annotations
       - Compat
       - Core-UI
       - Core-Utils
@@ -26,6 +27,7 @@ samples:
     installNuGets:
       - project: AndroidSupportSample
         packages:
+          - Xamarin.Android.Support.Annotations
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Core.UI
           - Xamarin.Android.Support.Core.Utils

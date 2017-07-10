@@ -18,6 +18,7 @@ samples:
     path:  ../samples/VectorDrawableSample.sln
     removeProjects:
       - Animated-Vector-Drawable
+      - Annotations
       - Compat
       - Core-UI
       - Core-Utils
@@ -29,6 +30,7 @@ samples:
       - project: VectorDrawableSample
         packages:
           - Xamarin.Android.Support.Animated.Vector.Drawable
+          - Xamarin.Android.Support.Annotations
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Core.UI
           - Xamarin.Android.Support.Core.Utils

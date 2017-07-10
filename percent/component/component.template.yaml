@@ -17,11 +17,13 @@ samples:
   - name: "Percent Sample"
     path:  ../samples/AndroidSupportSample.sln
     removeProjects:
+      - Annotations
       - Compat
       - Percent
     installNuGets:
       - project: AndroidSupportSample
         packages:
+          - Xamarin.Android.Support.Annotations 
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Percent
     removeNodes:

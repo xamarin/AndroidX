@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media-Compat", "..\..\suppo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7-AppCompat", "..\..\appcompat-v7\source\V7-AppCompat.csproj", "{B4ED245B-BBD8-4549-9990-476A36AAD381}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Annotations", "..\..\support-annotations\source\Annotations.csproj", "{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,5 +63,9 @@ Global
 		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4ED245B-BBD8-4549-9990-476A36AAD381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

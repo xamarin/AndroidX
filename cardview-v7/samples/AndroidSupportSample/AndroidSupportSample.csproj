@@ -72,6 +72,10 @@
       <Project>{E9848EF1-14E6-4144-95A0-926A52F301B5}</Project>
       <Name>V7-CardView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
