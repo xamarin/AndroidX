@@ -17,7 +17,7 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "25.4.0-rc1";
+var NUGET_VERSION = "25.4.0";
 var COMPONENT_VERSION = "25.4.0.0";
 var AAR_VERSION = "25.4.0";
 var XBD_VERSION = "0.4.6";
@@ -123,6 +123,9 @@ if (IsRunningOnWindows ()) {
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
 
+var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true }).ToList ();
+nugetInfos.Add (new NuGetInfo { NuSpec = "./support-v4/nuget/Xamarin.Android.Support.v4.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true });
+
 var buildSpec = new BuildSpec {
 	Libs = new [] {
 		new DefaultSolutionBuilder {
@@ -155,7 +158,7 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./animated-vector-drawable/samples/VectorDrawableSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 	},
 
-	NuGets = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true }).ToArray (),
+	NuGets = nugetInfos.ToArray (),
 
 	Components = new [] {
 		new Component { ManifestDirectory = "./animated-vector-drawable/component" },
@@ -321,7 +324,10 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 	var templateText = FileReadText ("./template.targets");
 
-	foreach (var art in ARTIFACTS) {
+	var nugetArtifacts = ARTIFACTS.ToList ();
+	nugetArtifacts.Add (new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION));
+
+	foreach (var art in nugetArtifacts) {
 
 		var proguardFile = new FilePath(string.Format("./externals/{0}/proguard.txt", art.ArtifactId));
 
