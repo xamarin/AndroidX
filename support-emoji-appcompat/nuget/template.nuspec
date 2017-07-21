@@ -14,8 +14,6 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/support-emoji-appcompat_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid70">
-        <dependency id="Xamarin.Build.Download" version="$xbdversion$" />
-        
         <dependency id="Xamarin.Android.Support.Emoji" version="[$version$]" />
         <dependency id="Xamarin.Android.Support.v7.AppCompat" version="[$version$]" />
       </group>

@@ -12,11 +12,6 @@
     <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
     <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/support-annotations_128x128.png</iconUrl>
-    <dependencies>
-      <group targetFramework="MonoAndroid70">
-        <dependency id="Xamarin.Build.Download" version="$xbdversion$" />
-      </group>
-    </dependencies>
   </metadata>
   <files>
     <file src="output/Xamarin.Android.Support.Annotations.dll" target="lib/MonoAndroid70" />

@@ -14,8 +14,6 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/dynamic-animation_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid70">
-        <dependency id="Xamarin.Build.Download" version="$xbdversion$" />
-
         <dependency id="Xamarin.Android.Support.Annotations" version="[$version$]" />
       </group>
     </dependencies>
