@@ -64,9 +64,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\support-annotations.jar">
+    <EmbeddedJar Include="..\..\externals\support-annotations.jar">
       <Link>Jars\support-annotations.jar</Link>
-    </InputJar>
+    </EmbeddedJar>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   
