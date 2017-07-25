@@ -23,5 +23,7 @@
     <file src="instantvideo/nuget/Xamarin.Android.Support.InstantVideo.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.InstantVideo.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

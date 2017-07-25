@@ -25,5 +25,7 @@
     <file src="support-fragment/nuget/Xamarin.Android.Support.Fragment.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Fragment.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

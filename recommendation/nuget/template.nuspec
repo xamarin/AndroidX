@@ -27,5 +27,7 @@
     <file src="recommendation/nuget/Xamarin.Android.Support.Recommendation.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Recommendation.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

@@ -22,5 +22,7 @@
     <file src="percent/nuget/Xamarin.Android.Support.Percent.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Percent.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

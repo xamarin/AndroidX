@@ -22,5 +22,7 @@
     <file src="support-core-ui/nuget/Xamarin.Android.Support.Core.UI.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Core.UI.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

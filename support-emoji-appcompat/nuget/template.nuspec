@@ -23,5 +23,7 @@
     <file src="support-emoji-appcompat/nuget/Xamarin.Android.Support.Emoji.AppCompat.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Emoji.AppCompat.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

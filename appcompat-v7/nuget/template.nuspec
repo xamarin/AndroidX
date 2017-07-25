@@ -29,5 +29,7 @@
     <file src="appcompat-v7/nuget/Xamarin.Android.Support.v7.AppCompat.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.v7.AppCompat.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

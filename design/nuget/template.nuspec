@@ -31,5 +31,7 @@
     <file src="design/nuget/Xamarin.Android.Support.Design.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Design.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

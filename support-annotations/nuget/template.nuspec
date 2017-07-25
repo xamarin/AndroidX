@@ -15,5 +15,7 @@
   </metadata>
   <files>
     <file src="output/Xamarin.Android.Support.Annotations.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

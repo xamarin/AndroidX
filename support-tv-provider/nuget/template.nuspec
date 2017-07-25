@@ -23,5 +23,7 @@
     <file src="support-tv-provider/nuget/Xamarin.Android.Support.TV.Provider.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.TV.Provider.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

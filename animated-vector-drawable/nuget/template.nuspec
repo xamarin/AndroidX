@@ -22,5 +22,7 @@
     <file src="animated-vector-drawable/nuget/Xamarin.Android.Support.Animated.Vector.Drawable.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Animated.Vector.Drawable.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>
