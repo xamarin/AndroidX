@@ -27,5 +27,7 @@
     <file src="transition/nuget/Xamarin.Android.Support.Transition.targets" target="build/MonoAndroid70" />
 
     <file src="output/Xamarin.Android.Support.Transition.dll" target="lib/MonoAndroid70" />
+
+    <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>
