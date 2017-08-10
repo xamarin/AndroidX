@@ -375,10 +375,14 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 		// Check if we have a proguard.txt file for this artifact and include it in the nuspec if so
 		if (FileExists (proguardFile)) {
 			Information ("Adding {0} to {1}", "proguard.txt", nuspecFile);
-			var filesElem = xNuspec.Root.Descendants (nsNuspec + "files")?.FirstOrDefault();
-			filesElem.Add (new System.Xml.Linq.XElement (nsNuspec + "file", 
-				new System.Xml.Linq.XAttribute(nsNuspec + "src", proguardFile.ToString()),
-				new System.Xml.Linq.XAttribute(nsNuspec + "target", "proguard/proguard.txt")));
+			var filesElems = xNuspec.Root.Descendants (nsNuspec + "files");
+
+			if (filesElems != null) {
+				var filesElem = filesElems.First();
+				filesElem.Add (new System.Xml.Linq.XElement (nsNuspec + "file", 
+					new System.Xml.Linq.XAttribute(nsNuspec + "src", proguardFile.ToString()),
+					new System.Xml.Linq.XAttribute(nsNuspec + "target", "proguard/proguard.txt")));
+			} 
 		}
 
 	 	xNuspec.Save(MakeAbsolute(nuspecFile).FullPath);
