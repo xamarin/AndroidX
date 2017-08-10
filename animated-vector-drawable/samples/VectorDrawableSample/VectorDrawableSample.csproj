@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
+  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>VectorDrawableSample</RootNamespace>
     <AssemblyName>VectorDrawableSample</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -69,17 +69,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\v7-appcompat\source\V7-AppCompat.csproj">
-      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
-      <Name>V7-AppCompat</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\animated-vector-drawable\source\Animated-Vector-Drawable.csproj">
+    <ProjectReference Include="..\..\source\Animated-Vector-Drawable.csproj">
       <Project>{75CB848E-6EE8-4DAF-8AD4-1782641F69D3}</Project>
       <Name>Animated-Vector-Drawable</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\vector-drawable\source\Vector-Drawable.csproj">
-      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
-      <Name>Vector-Drawable</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\support-compat\source\Compat.csproj">
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
@@ -101,8 +93,18 @@
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\appcompat-v7\source\V7-AppCompat.csproj">
+      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
+      <Name>V7-AppCompat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-vector-drawable\source\Vector-Drawable.csproj">
+      <Project>{418B64BA-2BAC-4B92-8888-CAFEAAF7E860}</Project>
+      <Name>Vector-Drawable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
-  <Import Project="..\..\..\generated.targets" />
-  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>

@@ -16,8 +16,10 @@ output/
 *.xcuserstate
 *.csproj.user
 */nuget/*.targets
+*/nuget/*.nuspec
 !merge.targets
 !template.targets
+!template.nuspec
 
 Resource.designer.cs
 component.yaml

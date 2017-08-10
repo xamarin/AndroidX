@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
+  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -41,7 +41,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <!--Docs URL Can be found here: http://dl-ssl.google.com/android/repository/repository-8.xml -->
-    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <DroidDocPaths>..\..\docs\reference</DroidDocPaths>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,14 +58,9 @@
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <InputJar Include="..\..\externals\support-core-ui\classes.jar">
-      <Link>Jars\android-support-core-ui-aar.jar</Link>
-    </InputJar>
-    <InputJar Include="..\..\externals\support-core-ui\libs\internal_impl.jar">
-      <Link>Jars\android-support-core-ui-internal_impl-aar.jar</Link>
-    </InputJar>
+    <TransformFile Include="..\..\Metadata.generated.xml">
+      <Link>Transforms\Metadata.generated.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
@@ -76,7 +71,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="..\..\externals\support-core-ui.aar">
+      <Link>support-core-ui.aar</Link>
+    </LibraryProjectZip>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\..\generated.targets" />
-  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
+  
 </Project>

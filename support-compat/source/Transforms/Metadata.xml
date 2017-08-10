@@ -21,6 +21,7 @@
   <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getLabel' and count(parameter)=0]" name="visibility">protected</attr>
   <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getResultKey' and count(parameter)=0]" name="visibility">protected</attr>
   <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getChoices' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getAllowedDataTypes' and count(parameter)=0]" name="visibility">protected</attr>
 	
 	<attr path="/api/package[@name='android.support.v4.content']/class[@name='ModernAsyncTask.WorkerRunnable']" name="visibility">internal</attr>
 	<attr path="/api/package[@name='android.support.v4.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
@@ -34,8 +35,20 @@
 
 	<!-- Needed to rename this so we can implement it in our own partial class to mark it as override -->
 	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs' and count(parameter)=0]" name="managedName">_GetRemoteInputs</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getDataOnlyRemoteInputs' and count(parameter)=0]" name="managedName">_GetDataOnlyRemoteInputs</attr>
+	
 	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">public</attr>
 
 	<attr path="/api/package[@name='android.support.v4.app']/interface[@name='ActivityCompatApi23.RequestPermissionsRequestCodeValidator']" name="visibility">public</attr>
 	<attr path="/api/package[@name='android.support.v4.app']/class[@name='ActivityCompatApi23']" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.v4.util']/class[@name='ArraySet']" name="extends">global::Android.Runtime.JavaCollection</attr>
+
+	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=1 and parameter[1][@type='T']]" />
+	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.Object']]" />
+
+	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatApi24Impl']" />
+	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatBaseImpl']" />
+
+	<remove-node path="/api/package[@name='android.support.v4.app']/class[@name='JobIntentService.CommandProcessor']" />
 </metadata>

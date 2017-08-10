@@ -17,6 +17,7 @@ samples:
   - name: "Cheesesquare"
     path:  ../samples/Cheesesquare.sln
     removeProjects:
+      - Annotations
       - Animated-Vector-Drawable
       - Compat
       - Core-UI
@@ -31,6 +32,7 @@ samples:
     installNuGets:
       - project: Cheesesquare
         packages:
+          - Xamarin.Android.Support.Annotations
           - Xamarin.Android.Support.Animated.Vector.Drawable
           - Xamarin.Android.Support.Compat
           - Xamarin.Android.Support.Core.UI

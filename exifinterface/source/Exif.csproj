@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
+  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -39,7 +39,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <!--Docs URL Can be found here: http://dl-ssl.google.com/android/repository/repository-8.xml -->
-    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <DroidDocPaths>..\..\docs\reference</DroidDocPaths>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,19 +55,21 @@
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
     <TransformFile Include="Transforms\Metadata.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <InputJar Include="..\..\externals\exifinterface\classes.jar">
-      <Link>Jars\android-exifinterface-aar.jar</Link>
-    </InputJar>
+    <TransformFile Include="..\..\Metadata.generated.xml">
+      <Link>Transforms\Metadata.generated.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
+    <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="..\..\externals\exifinterface.aar">
+      <Link>exifinterface.aar</Link>
+    </LibraryProjectZip>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  <Import Project="..\..\generated.targets" />
-  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
 </Project>
