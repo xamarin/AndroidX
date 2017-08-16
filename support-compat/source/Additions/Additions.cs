@@ -52,10 +52,10 @@ namespace Android.Support.V4.App
                 return _GetRemoteInputs ();
             }
 
-			//public override global::Android.Support.V4.App.RemoteInputCompatBase.RemoteInput[] GetDataOnlyRemoteInputs()
-			//{
-			//	return _GetDataOnlyRemoteInputs();
-			//}
+			public override global::Android.Support.V4.App.RemoteInputCompatBase.RemoteInput[] GetDataOnlyRemoteInputs()
+			{
+				return _GetDataOnlyRemoteInputs();
+			}
 
 		}
     }
