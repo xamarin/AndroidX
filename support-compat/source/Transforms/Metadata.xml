@@ -51,4 +51,8 @@
 	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatBaseImpl']" />
 
 	<remove-node path="/api/package[@name='android.support.v4.app']/class[@name='JobIntentService.CommandProcessor']" />
+
+	<remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='TypefaceCompatApi26Impl']" />
+
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
 </metadata>
