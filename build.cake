@@ -20,6 +20,7 @@ var BUILD_CONFIG = Argument ("config", "Release");
 var NUGET_VERSION = "25.4.0.2";
 var COMPONENT_VERSION = "25.4.0.0";
 var AAR_VERSION = "25.4.0";
+var DOC_VERSION = "2017-08-22";
 var XBD_VERSION = "0.4.6";
 
 var SUPPORT_PKG_NAME = "com.android.support";
@@ -529,7 +530,7 @@ Task ("droiddocs").Does(() =>
 {
 	EnsureDirectoryExists("./output");
 
-	var compressedDocsFile = "./output/docs-" + AAR_VERSION + ".zip";
+	var compressedDocsFile = "./output/docs-" + DOC_VERSION + ".zip";
 
 	if (!FileExists(compressedDocsFile)) {
 		if (IsRunningOnWindows ())
