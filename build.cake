@@ -17,7 +17,7 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "25.4.0.1";
+var NUGET_VERSION = "25.4.0.2";
 var COMPONENT_VERSION = "25.4.0.0";
 var AAR_VERSION = "25.4.0";
 var XBD_VERSION = "0.4.6";
@@ -31,7 +31,7 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.1" : "android-25";
 var RENDERSCRIPT_FOLDER = "android-O";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.3.1/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.1/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var USE_MSBUILD_ON_MAC = true;
