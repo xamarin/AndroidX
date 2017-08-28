@@ -4,21 +4,21 @@ using Android.Runtime;
 namespace Android.Support.Design.Internal
 {
 
-    //public partial class NavigationMenuItemView
-    //{
-    //    public void SetEnabled (bool enabled)
-    //    {
-    //        Enabled = enabled;
-    //    }
-    //}
+    public partial class NavigationMenuItemView
+    {
+        public void SetEnabled (bool enabled)
+        {
+            Enabled = enabled;
+        }
+    }
 
-    //public partial class BottomNavigationItemView
-    //{
-    //    public void SetEnabled (bool enabled)
-    //    {
-    //        Enabled = enabled;
-    //    }
-    //}
+    public partial class BottomNavigationItemView
+    {
+        public void SetEnabled (bool enabled)
+        {
+            Enabled = enabled;
+        }
+    }
 
 }
 

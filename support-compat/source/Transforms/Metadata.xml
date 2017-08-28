@@ -55,8 +55,5 @@
 	<remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='TypefaceCompatApi26Impl']" />
 
 	<!-- The generator binds both CharSequence and java.lang.String as System.String types so if we have overloads which only differ in java by CharSequence and String, we'll end up with duplicate .net binding overloads, so we remove the extra bindings -->
-	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" />
-	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]" />
-	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.text.TextDirectionHeuristicCompat']]" />
-	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.text.TextDirectionHeuristicCompat'] and parameter[3][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
 </metadata>

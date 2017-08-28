@@ -59,14 +59,6 @@
     </TransformFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\v7-recyclerview\source\V7-RecyclerView.csproj">
-      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
-      <Name>V7-RecyclerView</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\v7-appcompat\source\V7-AppCompat.csproj">
-      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
-      <Name>V7-AppCompat</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
       <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
       <Name>Compat</Name>
@@ -86,6 +78,18 @@
     <ProjectReference Include="..\..\support-media-compat\source\Media-Compat.csproj">
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\appcompat-v7\source\V7-AppCompat.csproj">
+      <Project>{B4ED245B-BBD8-4549-9990-476A36AAD381}</Project>
+      <Name>V7-AppCompat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\recyclerview-v7\source\V7-RecyclerView.csproj">
+      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
+      <Name>V7-RecyclerView</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

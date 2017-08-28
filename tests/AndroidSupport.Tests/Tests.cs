@@ -39,5 +39,23 @@ namespace AndroidSupport.Tests
 			Assert.NotNull(bundleOrig);
 			Assert.NotNull(bundleCompat);
 		}
+
+		[Fact]
+		public void Support_Design_Internal_Classes_Exist()
+		{
+			var ctx = MainActivity.TestParentActivity;
+			var a = new Android.Support.Design.Internal.BottomNavigationItemView(ctx);
+			var b = new Android.Support.Design.Internal.BottomNavigationMenu(ctx);
+			var c = new Android.Support.Design.Internal.BottomNavigationMenuView(ctx);
+			var d = new Android.Support.Design.Internal.SnackbarContentLayout(ctx);
+		}
+
+		[Fact]
+		public void Support_Design_Classes_Exist()
+		{
+			var ctx = MainActivity.TestParentActivity;
+			var e = new Android.Support.Design.Widget.BottomSheetDialog(ctx);
+			var f = new Android.Support.Design.Widget.BottomSheetDialogFragment();
+		}
 	}
 }
