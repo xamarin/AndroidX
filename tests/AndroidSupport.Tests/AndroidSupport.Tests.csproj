@@ -149,8 +149,8 @@
     <Reference Include="Xamarin.Android.Support.Vector.Drawable">
       <HintPath>..\..\output\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.InstantVideo">
-      <HintPath>..\..\output\Xamarin.Android.Support.InstantVideo.dll</HintPath>
+		<Reference Include="Xamarin.Android.Support.Wear">
+      <HintPath>..\..\output\Xamarin.Android.Support.Wear.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
