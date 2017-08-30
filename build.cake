@@ -17,9 +17,14 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "26.0.0-beta1";
-var COMPONENT_VERSION = "26.0.0.0";
-var AAR_VERSION = "26.0.0";
+// Lists all the artifacts and their versions for com.android.support.*
+// https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
+// Master list of all the packages in the repo:
+// https://dl.google.com/dl/android/maven2/master-index.xml
+
+var NUGET_VERSION = "26.0.1-beta1";
+var COMPONENT_VERSION = "26.0.1.0";
+var AAR_VERSION = "26.0.1";
 var DOC_VERSION = "2017-08-22";
 
 var SUPPORT_PKG_NAME = "com.android.support";
@@ -69,7 +74,7 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-tv-provider", "Xamarin.Android.Support.TV.Provider", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "exifinterface", "Xamarin.Android.Support.Exif", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "wearable", "Xamarin.Android.Support.Wearable", "26.0.0-alpha1", "26.0.0-alpha1", COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "wear", "Xamarin.Android.Support.Wear", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-annotations", "Xamarin.Android.Support.Annotations", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION, true),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji", "Xamarin.Android.Support.Emoji", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-appcompat", "Xamarin.Android.Support.Emoji.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -557,7 +562,6 @@ Task ("droiddocs").Does(() =>
 				StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
 		}
 });
-
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 

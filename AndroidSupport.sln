@@ -59,8 +59,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicAnimation", "support
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstantVideo", "instantvideo\source\InstantVideo.csproj", "{137DABCD-BAC3-4CA6-B55B-A0ED565DC20E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wearable", "wearable\source\Wearable.csproj", "{F5E0D83F-81A8-40A9-9EFF-7605213AC743}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TV-Provider", "support-tv-provider\source\TV-Provider.csproj", "{0F4287F5-1E32-4E81-88B1-6E37F54BC6A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emoji-Bundled", "support-emoji-bundled\source\Emoji-Bundled.csproj", "{44CC369D-0196-4C80-88D1-C2016998263F}"
@@ -68,6 +66,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emoji-AppCompat", "support-emoji-appcompat\source\Emoji-AppCompat.csproj", "{6824FF5C-9F50-4DE2-BF34-0314071FF83C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emoji", "support-emoji\source\Emoji.csproj", "{B0FA3251-5C9E-4E2E-AB4B-9B53F320C8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wear", "wear\source\Wear.csproj", "{F5E0D83F-81A8-40A9-9EFF-7605213AC743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,10 +191,6 @@ Global
 		{137DABCD-BAC3-4CA6-B55B-A0ED565DC20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{137DABCD-BAC3-4CA6-B55B-A0ED565DC20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{137DABCD-BAC3-4CA6-B55B-A0ED565DC20E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F4287F5-1E32-4E81-88B1-6E37F54BC6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F4287F5-1E32-4E81-88B1-6E37F54BC6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F4287F5-1E32-4E81-88B1-6E37F54BC6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -211,5 +207,9 @@ Global
 		{B0FA3251-5C9E-4E2E-AB4B-9B53F320C8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0FA3251-5C9E-4E2E-AB4B-9B53F320C8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0FA3251-5C9E-4E2E-AB4B-9B53F320C8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E0D83F-81A8-40A9-9EFF-7605213AC743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

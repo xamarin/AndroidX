@@ -7,10 +7,10 @@
     <ProjectGuid>{F5E0D83F-81A8-40A9-9EFF-7605213AC743}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Android.Support.Wearable</RootNamespace>
+    <RootNamespace>Android.Support.Wear</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AssemblyName>Xamarin.Android.Support.Wearable</AssemblyName>
+    <AssemblyName>Xamarin.Android.Support.Wear</AssemblyName>
     <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
@@ -67,8 +67,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\externals\wearable.aar">
-      <Link>wearable.aar</Link>
+    <LibraryProjectZip Include="..\..\externals\wear.aar">
+      <Link>wear.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
