@@ -7,4 +7,6 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
+	<attr path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissLayout']" name="visibility">public</attr>
+
 </metadata>
