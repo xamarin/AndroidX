@@ -22,10 +22,10 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "26.0.1-beta1";
-var COMPONENT_VERSION = "26.0.1.0";
-var AAR_VERSION = "26.0.1";
-var DOC_VERSION = "2017-08-22";
+var NUGET_VERSION = "26.0.2-beta1";
+var COMPONENT_VERSION = "26.0.2.0";
+var AAR_VERSION = "26.0.2";
+var DOC_VERSION = "2017-09-05";
 
 var SUPPORT_PKG_NAME = "com.android.support";
 
@@ -36,7 +36,7 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
 var RENDERSCRIPT_FOLDER = "android-8.0.0";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.1/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.2/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var USE_MSBUILD_ON_MAC = true;
@@ -553,13 +553,13 @@ Task ("droiddocs").Does(() =>
 	if (!DirectoryExists("./docs"))
 		Unzip (compressedDocsFile, "./docs");
 
-		if (!FileExists("./Metadata.generated.xml")) {
-			// Generate metadata file from docs
-			if (IsRunningOnWindows ())
-				StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
-			else
-				StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
-		}
+	// if (!FileExists("./Metadata.generated.xml")) {
+	// 	// Generate metadata file from docs
+	// 	if (IsRunningOnWindows ())
+	// 		StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+	// 	else
+	// 		StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+	// }
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
