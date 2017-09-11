@@ -553,13 +553,13 @@ Task ("droiddocs").Does(() =>
 	if (!DirectoryExists("./docs"))
 		Unzip (compressedDocsFile, "./docs");
 
-	// if (!FileExists("./Metadata.generated.xml")) {
-	// 	// Generate metadata file from docs
-	// 	if (IsRunningOnWindows ())
-	// 		StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
-	// 	else
-	// 		StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
-	// }
+	if (!FileExists("./Metadata.generated.xml")) {
+		// Generate metadata file from docs
+		if (IsRunningOnWindows ())
+			StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+		else
+			StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+	}
 });
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
