@@ -39,7 +39,7 @@
 		<method jni-name="getNestedScrollAxes" parameter="return" clr-enum-type="Android.Views.ScrollAxis" />
 	</mapping>
 
-	<mapping jni-class="android/support/v4/widget/AutoSizeTextView">
+	<mapping jni-class="android/support/v4/widget/AutoSizeableTextView">
 		<method jni-name="getAutoSizeTextType" parameter="return" clr-enum-type="Android.Widget.AutoSizeTextType" />
 		<method jni-name="setAutoSizeTextTypeWithDefaults" parameter="p0" clr-enum-type="Android.Widget.AutoSizeTextType" />
 	</mapping>
