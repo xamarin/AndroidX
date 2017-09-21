@@ -3,12 +3,12 @@
 #tool nuget:?package=Cake.MonoApiTools
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
-#addin nuget:?package=Cake.Compression
-#addin nuget:?package=Cake.Json
+#addin nuget:?package=Cake.Compression&version=0.1.2
+#addin nuget:?package=Cake.Json&version=1.0.2.13
 #addin nuget:?package=Cake.XCode
 #addin nuget:?package=Cake.Xamarin
 #addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
-#addin nuget:?package=Cake.FileHelpers
+#addin nuget:?package=Cake.FileHelpers&version=1.0.4
 #addin nuget:?package=Cake.MonoApiTools
 
 // From Cake.Xamarin.Build, dumps out versions of things
