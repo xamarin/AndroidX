@@ -62,6 +62,9 @@
     <TransformFile Include="..\..\Metadata.generated.xml">
       <Link>Transforms\Metadata.generated.xml</Link>
     </TransformFile>
+    <TransformFile Include="..\..\Metadata.common.xml">
+      <Link>Transforms\Metadata.common.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <ItemGroup>
