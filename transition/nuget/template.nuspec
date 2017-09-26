@@ -24,8 +24,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="transition/nuget/Xamarin.Android.Support.Transition.targets" target="build/MonoAndroid80" />
-
     <file src="output/Xamarin.Android.Support.Transition.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />

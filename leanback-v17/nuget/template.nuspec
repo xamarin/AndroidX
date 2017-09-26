@@ -25,8 +25,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="leanback-v17/nuget/Xamarin.Android.Support.v17.Leanback.targets" target="build/MonoAndroid80" />
-
     <file src="output/Xamarin.Android.Support.v17.Leanback.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />

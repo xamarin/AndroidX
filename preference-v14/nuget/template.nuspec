@@ -27,8 +27,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="preference-v14/nuget/Xamarin.Android.Support.v14.Preference.targets" target="build/MonoAndroid80" />
-
     <file src="output/Xamarin.Android.Support.v14.Preference.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
