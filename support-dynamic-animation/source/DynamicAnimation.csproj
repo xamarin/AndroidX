@@ -75,6 +75,12 @@
       <Link>support-dynamic-animation.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\support-core-utils\source\Core-Utils.csproj">
+      <Project>{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}</Project>
+      <Name>Core-Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   
 </Project>
