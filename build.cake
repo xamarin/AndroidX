@@ -1,15 +1,15 @@
 #tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent
-#tool nuget:?package=Cake.MonoApiTools
+#tool nuget:?package=XamarinComponent&version=1.1.0.49
+#tool nuget:?package=Cake.MonoApiTools&version=1.0.10
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 
 #addin nuget:?package=Cake.Compression&version=0.1.2
 #addin nuget:?package=Cake.Json&version=1.0.2.13
-#addin nuget:?package=Cake.XCode
-#addin nuget:?package=Cake.Xamarin
+#addin nuget:?package=Cake.XCode&version=2.0.13
+#addin nuget:?package=Cake.Xamarin&version=1.3.0.15
 #addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
 #addin nuget:?package=Cake.FileHelpers&version=1.0.4
-#addin nuget:?package=Cake.MonoApiTools
+#addin nuget:?package=Cake.MonoApiTools&version=1.0.10
 
 // From Cake.Xamarin.Build, dumps out versions of things
 LogSystemInfo ();
