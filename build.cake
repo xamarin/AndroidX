@@ -1,15 +1,7 @@
-#tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent&version=1.1.0.49
-#tool nuget:?package=Cake.MonoApiTools&version=1.0.10
-#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-
-#addin nuget:?package=Cake.Compression&version=0.1.2
-#addin nuget:?package=Cake.Json&version=1.0.2.13
-#addin nuget:?package=Cake.XCode&version=2.0.13
-#addin nuget:?package=Cake.Xamarin&version=1.3.0.15
-#addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
-#addin nuget:?package=Cake.FileHelpers&version=1.0.4
-#addin nuget:?package=Cake.MonoApiTools&version=1.0.10
+// Loads our list of addins from the tools folder
+// this assumes using the new bootstrapper build.sh in the root folder
+// which downloads the required files
+#load "./tools/addins.cake"
 
 // From Cake.Xamarin.Build, dumps out versions of things
 LogSystemInfo ();
@@ -286,7 +278,7 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 		CopyAttrs = true,
 		AllowMultiple = true,
 		//TargetKind = ILRepack.TargetKind.Dll,
-		Libs = new List<FilePath> {
+		Libs = new List<DirectoryPath> {
 			MONODROID_PATH
 		},
 	});
@@ -307,93 +299,6 @@ Task ("component-setup").Does (() =>
 		FileWriteText (newYaml, manifestTxt);
 	}
 });
-
-Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
-	.Does (() => 
-{
-
-	Action<FilePath, FilePath> mergeTargetsFiles = (FilePath fromFile, FilePath intoFile) =>
-	{
-		// Load the doc to append to, and the doc to append
-		var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(intoFile).FullPath);
-		System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
-		var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(fromFile).FullPath);
-		System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
-		// Add all the elements under <Project> into the existing file's <Project> node
-		foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
-			xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
-
-		xOrig.Save (MakeAbsolute (intoFile).FullPath);
-	};
-
-	var templateText = FileReadText ("./template.targets");
-
-	var nugetArtifacts = ARTIFACTS.ToList ();
-	nugetArtifacts.Add (new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION));
-
-	foreach (var art in nugetArtifacts) {
-
-		var proguardFile = new FilePath(string.Format("./externals/{0}/proguard.txt", art.ArtifactId));
-
-		var targetsText = templateText;
-		var targetsFile = new FilePath(string.Format ("{0}/nuget/{1}.targets", art.ArtifactId, art.NugetId));
-		FileWriteText (targetsFile, targetsText);
-
-		// Transform all .targets files
-		var xTargets = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
-		System.Xml.Linq.XNamespace nsTargets = xTargets.Root.Name.Namespace;
-
-		if (FileExists (proguardFile)) {
-			var projElem = xTargets.Element(nsTargets + "Project");
-
-			Information ("Adding {0} to {1}", "proguard.txt", targetsFile);
-
-			projElem.Add (new System.Xml.Linq.XElement (nsTargets + "ItemGroup", 
-				new System.Xml.Linq.XElement (nsTargets + "ProguardConfiguration",
-					new System.Xml.Linq.XAttribute ("Include", "$(MSBuildThisFileDirectory)..\\..\\proguard\\proguard.txt"))));
-		}
-
-		xTargets.Save (MakeAbsolute(targetsFile).FullPath);
-
-		// Check for an existing .targets file in this nuget package
-		// we need to merge the generated one with it if it exists
-		// nuget only allows one automatic .targets file in the build/ folder
-		// of the nuget package, which must be named {nuget-package-id}.targets
-		// so we need to merge them all into one
-		var mergeFile = new FilePath (art.ArtifactId + "/nuget/merge.targets");
-
-		if (FileExists (mergeFile)) {
-			Information ("merge.targets found, merging into generated file...");
-			mergeTargetsFiles (mergeFile, targetsFile);
-		}
-
-		
-		// Transform all template.nuspec files
-		var nuspecText = FileReadText(art.ArtifactId + "/nuget/template.nuspec");
-		var nuspecFile = new FilePath(art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec");
-		FileWriteText(nuspecFile, nuspecText);
-		var xNuspec = System.Xml.Linq.XDocument.Load (MakeAbsolute(nuspecFile).FullPath);
-		System.Xml.Linq.XNamespace nsNuspec = xNuspec.Root.Name.Namespace;
-
-		// Check if we have a proguard.txt file for this artifact and include it in the nuspec if so
-		if (FileExists (proguardFile)) {
-			Information ("Adding {0} to {1}", "proguard.txt", nuspecFile);
-			var filesElems = xNuspec.Root.Descendants (nsNuspec + "files");
-
-			if (filesElems != null) {
-				var filesElem = filesElems.First();
-				filesElem.Add (new System.Xml.Linq.XElement (nsNuspec + "file", 
-					new System.Xml.Linq.XAttribute(nsNuspec + "src", proguardFile.ToString()),
-					new System.Xml.Linq.XAttribute(nsNuspec + "target", "proguard/proguard.txt")));
-			} 
-		}
-
-	 	xNuspec.Save(MakeAbsolute(nuspecFile).FullPath);
-	}
-});
-
-Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
-//Task ("nuget").IsDependentOn ("nuget-base").IsDependentOn ("libs");
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
 
@@ -477,7 +382,7 @@ Task ("component-docs").Does (() =>
 });
 
 //Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-Task ("libs").IsDependentOn ("genapi").IsDependentOn ("libs-base");
+Task ("libs").IsDependentOn("buildtasks").IsDependentOn ("genapi").IsDependentOn ("libs-base");
 //Task ("libs").IsDependentOn ("libs-base");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
@@ -515,7 +420,7 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 		});
 	}
 
-	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+	MSBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
 
 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
@@ -524,7 +429,7 @@ Task ("buildtasks").Does (() =>
 {
 	NuGetRestore ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
 
-	DotNetBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
+	MSBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
 });
 
 
