@@ -39,8 +39,8 @@
     <Compile Include="VectorDrawableCheckBuildToolsVersionTask.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\nuget\template.targets">
-      <Link>template.targets</Link>
+    <None Include="..\nuget\merge.targets">
+      <Link>merge.targets</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

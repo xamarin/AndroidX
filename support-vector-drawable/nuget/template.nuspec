@@ -20,7 +20,7 @@
   </metadata>
   <files>
     <file src="support-vector-drawable/buildtask/bin/Release/Xamarin.Android.Support.Tasks.VectorDrawable.dll" target="build/MonoAndroid80" />
-    <file src="support-vector-drawable/nuget/template.targets" target="build/MonoAndroid80/Xamarin.Android.Support.Vector.Drawable.targets" />
+    <file src="support-vector-drawable/nuget/Xamarin.Android.Support.Vector.Drawable.targets" target="build/MonoAndroid80/Xamarin.Android.Support.Vector.Drawable.targets" />
 
     <file src="output/Xamarin.Android.Support.Vector.Drawable.dll" target="lib/MonoAndroid80" />
 

@@ -19,6 +19,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="percent/nuget/Xamarin.Android.Support.Percent.targets" target="build/MonoAndroid80" />
+
     <file src="output/Xamarin.Android.Support.Percent.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />

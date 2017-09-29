@@ -19,6 +19,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="customtabs/nuget/Xamarin.Android.Support.CustomTabs.targets" target="build/MonoAndroid80" />
+
     <file src="output/Xamarin.Android.Support.CustomTabs.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />

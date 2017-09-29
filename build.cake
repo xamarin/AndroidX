@@ -300,6 +300,95 @@ Task ("component-setup").Does (() =>
 	}
 });
 
+
+Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
+	.Does (() => 
+{
+
+	Action<FilePath, FilePath> mergeTargetsFiles = (FilePath fromFile, FilePath intoFile) =>
+	{
+		// Load the doc to append to, and the doc to append
+		var xOrig = System.Xml.Linq.XDocument.Load (MakeAbsolute(intoFile).FullPath);
+		System.Xml.Linq.XNamespace nsOrig = xOrig.Root.Name.Namespace;
+		var xMerge = System.Xml.Linq.XDocument.Load (MakeAbsolute(fromFile).FullPath);
+		System.Xml.Linq.XNamespace nsMerge = xMerge.Root.Name.Namespace;
+		// Add all the elements under <Project> into the existing file's <Project> node
+		foreach (var xItemToAdd in xMerge.Element (nsMerge + "Project").Elements ())
+			xOrig.Element (nsOrig + "Project").Add (xItemToAdd);
+
+		xOrig.Save (MakeAbsolute (intoFile).FullPath);
+	};
+
+	var templateText = FileReadText ("./template.targets");
+
+	var nugetArtifacts = ARTIFACTS.ToList ();
+	nugetArtifacts.Add (new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION));
+
+	foreach (var art in nugetArtifacts) {
+
+		var proguardFile = new FilePath(string.Format("./externals/{0}/proguard.txt", art.ArtifactId));
+
+		var targetsText = templateText;
+		var targetsFile = new FilePath(string.Format ("{0}/nuget/{1}.targets", art.ArtifactId, art.NugetId));
+		FileWriteText (targetsFile, targetsText);
+
+		// Transform all .targets files
+		var xTargets = System.Xml.Linq.XDocument.Load (MakeAbsolute(targetsFile).FullPath);
+		System.Xml.Linq.XNamespace nsTargets = xTargets.Root.Name.Namespace;
+
+		if (FileExists (proguardFile)) {
+			var projElem = xTargets.Element(nsTargets + "Project");
+
+			Information ("Adding {0} to {1}", "proguard.txt", targetsFile);
+
+			projElem.Add (new System.Xml.Linq.XElement (nsTargets + "ItemGroup", 
+				new System.Xml.Linq.XElement (nsTargets + "ProguardConfiguration",
+					new System.Xml.Linq.XAttribute ("Include", "$(MSBuildThisFileDirectory)..\\..\\proguard\\proguard.txt"))));
+		}
+
+		xTargets.Save (MakeAbsolute(targetsFile).FullPath);
+
+		// Check for an existing .targets file in this nuget package
+		// we need to merge the generated one with it if it exists
+		// nuget only allows one automatic .targets file in the build/ folder
+		// of the nuget package, which must be named {nuget-package-id}.targets
+		// so we need to merge them all into one
+		var mergeFile = new FilePath (art.ArtifactId + "/nuget/merge.targets");
+
+		if (FileExists (mergeFile)) {
+			Information ("merge.targets found, merging into generated file...");
+			mergeTargetsFiles (mergeFile, targetsFile);
+		}
+
+		
+		// Transform all template.nuspec files
+		var nuspecText = FileReadText(art.ArtifactId + "/nuget/template.nuspec");
+		//nuspecText = nuspecText.Replace ("$xbdversion$", XBD_VERSION);
+		var nuspecFile = new FilePath(art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec");
+		FileWriteText(nuspecFile, nuspecText);
+		var xNuspec = System.Xml.Linq.XDocument.Load (MakeAbsolute(nuspecFile).FullPath);
+		System.Xml.Linq.XNamespace nsNuspec = xNuspec.Root.Name.Namespace;
+
+		// Check if we have a proguard.txt file for this artifact and include it in the nuspec if so
+		if (FileExists (proguardFile)) {
+			Information ("Adding {0} to {1}", "proguard.txt", nuspecFile);
+			var filesElems = xNuspec.Root.Descendants (nsNuspec + "files");
+
+			if (filesElems != null) {
+				var filesElem = filesElems.First();
+				filesElem.Add (new System.Xml.Linq.XElement (nsNuspec + "file", 
+					new System.Xml.Linq.XAttribute(nsNuspec + "src", proguardFile.ToString()),
+					new System.Xml.Linq.XAttribute(nsNuspec + "target", "proguard/proguard.txt")));
+			} 
+		}
+
+	 	xNuspec.Save(MakeAbsolute(nuspecFile).FullPath);
+	}
+});
+
+Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
+
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
 
 Task ("clean").IsDependentOn ("clean-base").Does (() =>

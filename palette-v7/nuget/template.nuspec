@@ -20,6 +20,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="palette-v7/nuget/Xamarin.Android.Support.v7.Palette.targets" target="build/MonoAndroid80" />
+
     <file src="output/Xamarin.Android.Support.v7.Palette.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />

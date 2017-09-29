@@ -28,6 +28,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="design/nuget/Xamarin.Android.Support.Design.targets" target="build/MonoAndroid80" />
+
     <file src="output/Xamarin.Android.Support.Design.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />

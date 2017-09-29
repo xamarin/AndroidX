@@ -26,6 +26,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="appcompat-v7/nuget/Xamarin.Android.Support.v7.AppCompat.targets" target="build/MonoAndroid80" />
+    
     <file src="output/Xamarin.Android.Support.v7.AppCompat.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
