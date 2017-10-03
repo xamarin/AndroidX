@@ -14,12 +14,16 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "26.0.2";
-var COMPONENT_VERSION = "26.0.2.0";
-var AAR_VERSION = "26.0.2";
-var DOC_VERSION = "2017-09-05";
+var NUGET_VERSION = "26.1.0";
+var COMPONENT_VERSION = "26.1.0.0";
+var AAR_VERSION = "26.1.0";
+var DOC_VERSION = "2017-10-02";
+
+
 
 var SUPPORT_PKG_NAME = "com.android.support";
+var ARCH_LIFECYCLE_PKG_NAME = "android.arch.lifecycle";
+var ARCH_CORE_PKG_NAME = "android.arch.core";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
@@ -38,6 +42,10 @@ if (!IsRunningOnWindows())
 	CPU_COUNT = 1;
 
 var ARTIFACTS = new [] {
+	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-core/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.1", "1.0.1", "1.0.1.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.0", "1.0.0", "1.0.0.0"  { PathPrefix = "arch-lifecycle/" }),
+
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "appcompat-v7", "Xamarin.Android.Support.v7.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -102,6 +110,7 @@ class ArtifactInfo
 	public string NuGetVersion { get; set; }
 	public string ComponentVersion { get; set; }
 	public bool IsJar { get; set; }
+	public string PathPrefix { get;set; }
 }
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
@@ -119,7 +128,7 @@ if (IsRunningOnWindows ()) {
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
 
-var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true }).ToList ();
+var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.PathPrefix + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true }).ToList ();
 nugetInfos.Add (new NuGetInfo { NuSpec = "./support-v4/nuget/Xamarin.Android.Support.v4.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true });
 
 var buildSpec = new BuildSpec {
@@ -130,7 +139,7 @@ var buildSpec = new BuildSpec {
 			MaxCpuCount = CPU_COUNT,
 			AlwaysUseMSBuild = USE_MSBUILD_ON_MAC,
 			Verbosity = Cake.Core.Diagnostics.Verbosity.Diagnostic,
-			OutputFiles = ARTIFACTS.Select (a => new OutputFileCopy { FromFile = "./" + a.ArtifactId + "/source/bin/" + BUILD_CONFIG + "/" + a.NugetId + ".dll" }).ToArray (),
+			OutputFiles = ARTIFACTS.Select (a => new OutputFileCopy { FromFile = "./" + a.PathPrefix + a.ArtifactId + "/source/bin/" + BUILD_CONFIG + "/" + a.NugetId + ".dll" }).ToArray (),
 		}
 	},
 
@@ -202,7 +211,7 @@ Task ("externals")
 		if (art.ArtifactId == "renderscript-v8")
 			continue;
 
-		var localArtifact = "./externals/" + art.ArtifactId + (art.IsJar ? ".jar" : ".aar");
+		var localArtifact = "./externals/"  + art.PathPrefix + art.ArtifactId + (art.IsJar ? ".jar" : ".aar");
 		var artifactUrl = MAVEN_REPO_URL + art.Package.Replace (".", "/") + "/" + art.ArtifactId + "/" + art.ArtifactVersion + "/" + art.ArtifactId + "-" + art.ArtifactVersion + (art.IsJar ? ".jar" : ".aar");
 
 		if (!FileExists (localArtifact))
@@ -215,8 +224,8 @@ Task ("externals")
 			FixAndroidAarFile(localArtifact, art.ArtifactId, true, true);
 
 			// Only unzip if it doesn't exist
-			if (!DirectoryExists("./externals/" + art.ArtifactId))
-				Unzip (localArtifact, "./externals/" + art.ArtifactId);
+			if (!DirectoryExists("./externals/" + art.PathPrefix + art.ArtifactId))
+				Unzip (localArtifact, "./externals/" + art.PathPrefix + art.ArtifactId);
 		}
 	}
 
@@ -326,10 +335,10 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 	foreach (var art in nugetArtifacts) {
 
-		var proguardFile = new FilePath(string.Format("./externals/{0}/proguard.txt", art.ArtifactId));
+		var proguardFile = new FilePath(string.Format("./externals/{0}/proguard.txt", art.PathPrefix + art.ArtifactId));
 
 		var targetsText = templateText;
-		var targetsFile = new FilePath(string.Format ("{0}/nuget/{1}.targets", art.ArtifactId, art.NugetId));
+		var targetsFile = new FilePath(string.Format ("{0}/nuget/{1}.targets", art.PathPrefix + art.ArtifactId, art.NugetId));
 		FileWriteText (targetsFile, targetsText);
 
 		// Transform all .targets files
@@ -353,7 +362,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 		// nuget only allows one automatic .targets file in the build/ folder
 		// of the nuget package, which must be named {nuget-package-id}.targets
 		// so we need to merge them all into one
-		var mergeFile = new FilePath (art.ArtifactId + "/nuget/merge.targets");
+		var mergeFile = new FilePath (art.PathPrefix + art.ArtifactId + "/nuget/merge.targets");
 
 		if (FileExists (mergeFile)) {
 			Information ("merge.targets found, merging into generated file...");
@@ -362,9 +371,9 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 
 		
 		// Transform all template.nuspec files
-		var nuspecText = FileReadText(art.ArtifactId + "/nuget/template.nuspec");
+		var nuspecText = FileReadText(art.PathPrefix + art.ArtifactId + "/nuget/template.nuspec");
 		//nuspecText = nuspecText.Replace ("$xbdversion$", XBD_VERSION);
-		var nuspecFile = new FilePath(art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec");
+		var nuspecFile = new FilePath(art.PathPrefix + art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec");
 		FileWriteText(nuspecFile, nuspecText);
 		var xNuspec = System.Xml.Linq.XDocument.Load (MakeAbsolute(nuspecFile).FullPath);
 		System.Xml.Linq.XNamespace nsNuspec = xNuspec.Root.Name.Namespace;
