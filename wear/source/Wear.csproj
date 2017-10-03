@@ -74,6 +74,24 @@
       <Link>wear.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\support-core-ui\source\Core-UI.csproj">
+      <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
+      <Name>Core-UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\percent\source\Percent.csproj">
+      <Project>{A557F298-10FD-4F47-8C96-20387E2AA741}</Project>
+      <Name>Percent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\recyclerview-v7\source\V7-RecyclerView.csproj">
+      <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
+      <Name>V7-RecyclerView</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   
 </Project>

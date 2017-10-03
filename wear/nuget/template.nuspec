@@ -16,6 +16,8 @@
       <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]" />
         <dependency id="Xamarin.Android.Support.Annotations" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.Percent" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>

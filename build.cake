@@ -42,9 +42,9 @@ if (!IsRunningOnWindows())
 	CPU_COUNT = 1;
 
 var ARTIFACTS = new [] {
-	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-core/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.1", "1.0.1", "1.0.1.0") { PathPrefix = "arch-lifecycle/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.0", "1.0.0", "1.0.0.0"  { PathPrefix = "arch-lifecycle/" }),
+	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0", true) { PathPrefix = "arch-core/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.1", "1.0.1", "1.0.1.0", true) { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
 
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -211,11 +211,13 @@ Task ("externals")
 		if (art.ArtifactId == "renderscript-v8")
 			continue;
 
-		var localArtifact = "./externals/"  + art.PathPrefix + art.ArtifactId + (art.IsJar ? ".jar" : ".aar");
+		var localArtifact = new FilePath ("./externals/"  + art.PathPrefix + art.ArtifactId + (art.IsJar ? ".jar" : ".aar"));
 		var artifactUrl = MAVEN_REPO_URL + art.Package.Replace (".", "/") + "/" + art.ArtifactId + "/" + art.ArtifactVersion + "/" + art.ArtifactId + "-" + art.ArtifactVersion + (art.IsJar ? ".jar" : ".aar");
 
-		if (!FileExists (localArtifact))
+		if (!FileExists (localArtifact)) {
+			EnsureDirectoryExists (localArtifact.GetDirectory ());
 			DownloadFile (artifactUrl, localArtifact);
+		}
 
 		// Open and fix .aar files
 		if (!art.IsJar) {
