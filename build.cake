@@ -195,9 +195,9 @@ if (!string.IsNullOrEmpty (NUGET_SOURCES))
 // ######################################################
 
 Task ("externals")
-	.IsDependentOn ("externals-base")
-	.IsDependentOn ("droiddocs")
 	.WithCriteria (() => !FileExists ("./externals/support-v4/classes.jar"))
+	.IsDependentOn ("droiddocs")
+	.IsDependentOn ("externals-base")
 	.Does (() =>
 {
 	var path = "./externals/";
@@ -244,6 +244,11 @@ Task ("externals")
 	var supportV4ArtifactUrl = MAVEN_REPO_URL + SUPPORT_PKG_NAME.Replace (".", "/") + "/support-v4/" + AAR_VERSION + "/support-v4-" + AAR_VERSION + ".aar";
 	DownloadFile (supportV4ArtifactUrl, "./externals/support-v4.aar");
 	Unzip ("./externals/support-v4.aar", "./externals/support-v4");
+
+	// Fix naming for some of the arch libraries that have duplicate names of each other
+	MoveFile ("./externals/arch-core/common.jar", "./externals/arch-core/arch-core-common.jar");
+	MoveFile ("./externals/arch-lifecycle/common.jar", "./externals/arch-lifecycle/arch-lifecycle-common.jar");
+	MoveFile ("./externals/arch-lifecycle/runtime.aar", "./externals/arch-lifecycle/arch-lifecycle-runtime.aar");
 });
 
 Task ("diff")
@@ -312,7 +317,9 @@ Task ("component-setup").Does (() =>
 });
 
 
-Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
+Task ("nuget-setup")
+	.IsDependentOn ("externals")
+	.IsDependentOn ("buildtasks")
 	.Does (() => 
 {
 
@@ -397,12 +404,24 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 	}
 });
 
-Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn("diff").IsDependentOn ("libs");
+Task ("nuget")
+	.IsDependentOn ("libs")
+	.IsDependentOn ("nuget-setup")
+	.IsDependentOn ("nuget-base");
 
+Task ("ci")
+	.IsDependentOn ("diff")
+	.IsDependentOn ("component");
 
-Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
+Task ("component")
+	.IsDependentOn ("libs")
+	.IsDependentOn ("component-docs")
+	.IsDependentOn ("component-setup")
+	.IsDependentOn ("component-base");
 
-Task ("clean").IsDependentOn ("clean-base").Does (() =>
+Task ("clean")
+	.IsDependentOn ("clean-base")
+	.Does (() =>
 {
 	if (FileExists ("./generated.targets"))
 		DeleteFile ("./generated.targets");
@@ -481,12 +500,16 @@ Task ("component-docs").Does (() =>
 	}
 });
 
-//Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-Task ("libs").IsDependentOn("buildtasks").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-//Task ("libs").IsDependentOn ("libs-base");
+Task ("libs")
+	.IsDependentOn ("buildtasks")
+	.IsDependentOn ("genapi")
+	.IsDependentOn ("libs-base");
 
-Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
-
+Task ("genapi")
+	.IsDependentOn ("externals")
+	.IsDependentOn ("libs-base")
+	.Does (() => 
+{
 	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
 
 	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
@@ -533,7 +556,7 @@ Task ("buildtasks").Does (() =>
 });
 
 
-Task ("droiddocs").Does(() => 
+Task ("droiddocs").Does (() => 
 {
 	EnsureDirectoryExists("./output");
 
