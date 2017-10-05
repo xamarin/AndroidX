@@ -19,6 +19,9 @@ samples:
     removeProjects:
       - Annotations
       - Compat
+      - Arch.Core.Common
+      - Arch.Lifecycle.Common
+      - Arch.Lifecycle.Runtime
       - Core-Utils
       - V7-Palette
     installNuGets:
@@ -26,6 +29,9 @@ samples:
         packages:
           - Xamarin.Android.Support.Annotations
           - Xamarin.Android.Support.Compat
+          - Xamarin.Android.Arch.Core.Common
+          - Xamarin.Android.Arch.Lifecycle.Common
+          - Xamarin.Android.Arch.Lifecycle.Runtime
           - Xamarin.Android.Support.Core.Utils
           - Xamarin.Android.Support.v7.Palette
     removeNodes:
