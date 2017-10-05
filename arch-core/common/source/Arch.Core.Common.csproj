@@ -74,7 +74,7 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="..\..\..\externals\arch-core\common.jar">
+    <EmbeddedJar Include="..\..\..\externals\arch-core\arch-core-common.jar">
       <Link>arch-core-common.jar</Link>
     </EmbeddedJar>
   </ItemGroup>

@@ -82,7 +82,7 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\externals\arch-lifecycle\runtime.aar">
+    <LibraryProjectZip Include="..\..\..\externals\arch-lifecycle\arch-lifecycle-runtime.aar">
       <Link>arch-lifecycle-runtime.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
