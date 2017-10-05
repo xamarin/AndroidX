@@ -397,7 +397,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 	}
 });
 
-Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn("diff").IsDependentOn ("libs");
 
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
