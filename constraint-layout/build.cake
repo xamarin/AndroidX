@@ -6,11 +6,11 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 
-var NUGET_VERSION = "1.0.2";
+var NUGET_VERSION = "1.0.2.2";
 var AAR_VERSION = "1.0.2";
 
-var CONSTRAINT_LAYOUT_URL = string.Format ("https://dl-ssl.google.com/android/repository/com.android.support.constraint-constraint-layout-{0}.zip", AAR_VERSION);
-var CONSTRAINT_LAYOUT_SOLVER_URL = string.Format ("https://dl-ssl.google.com/android/repository/com.android.support.constraint-constraint-layout-solver-{0}.zip", AAR_VERSION);
+var CONSTRAINT_LAYOUT_URL = string.Format ("https://dl.google.com/dl/android/maven2/com/android/support/constraint/constraint-layout/{0}/constraint-layout-{0}.aar", AAR_VERSION);
+var CONSTRAINT_LAYOUT_SOLVER_URL = string.Format ("https://dl.google.com/dl/android/maven2/com/android/support/constraint/constraint-layout-solver/{0}/constraint-layout-solver-{0}.jar", AAR_VERSION);
 
 
 var buildSpec = new BuildSpec {
@@ -43,17 +43,10 @@ Task ("externals")
 
 	EnsureDirectoryExists (path);
 
-	// Get the actual .aar files and extract
-	if (!FileExists (path + "constraintlayout.zip"))
-		DownloadFile (CONSTRAINT_LAYOUT_URL, path + "constraintlayout.zip");
-	if (!FileExists (path + "constraintlayout/source.properties"))
-		Unzip(path + "constraintlayout.zip", path);
-	Unzip (path + "constraintlayout/constraint-layout-" + AAR_VERSION + ".aar", path + "constraintlayout/");
-
-	if (!FileExists (path + "constraintlayoutsolver.zip"))
-		DownloadFile (CONSTRAINT_LAYOUT_SOLVER_URL, path + "constraintlayoutsolver.zip");
-	if (!FileExists (path + "solver/source.properties"))
-		Unzip(path + "constraintlayoutsolver.zip", path);
+	if (!FileExists (path + "constraint-layout.aar"))
+		DownloadFile (CONSTRAINT_LAYOUT_URL, path + "constraint-layout.aar");
+	if (!FileExists (path + "constraint-layout-solver.jar"))
+		DownloadFile (CONSTRAINT_LAYOUT_SOLVER_URL, path + "constraint-layout-solver.jar");
 });
 
 Task ("clean").IsDependentOn ("clean-base").Does (() => 

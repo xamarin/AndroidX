@@ -52,11 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
+    <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <InputJar Include="..\..\externals\solver\constraint-layout-solver-1.0.2.jar">
-      <Link>Jars\constraint-layout-solver.jar</Link>
-    </InputJar>
+    <EmbeddedJar Include="..\..\externals\constraint-layout-solver.jar">
+      <Link>constraint-layout-solver.jar</Link>
+    </EmbeddedJar>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
