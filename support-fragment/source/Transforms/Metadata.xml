@@ -9,4 +9,11 @@
 	<remove-node path="/api/package[@name='android.support.v4.app']/class[@name='FragmentActivity']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]" />
 
 	<remove-node path="/api/package[@name='android.support.v4.app']/interface[@name='Fragment.OnStartEnterTransitionListener']" />
+
+	<add-node path="/api/package[@name='android.support.v4.app']/class[@name='FragmentActivity']">
+		<implements name="android.arch.lifecycle.LifecycleOwner" name-generic-aware="android.arch.lifecycle.LifecycleOwner">
+		</implements>
+		<method abstract="false" deprecated="not deprecated" final="false" name="getLifecycle" native="false" return="android.arch.lifecycle.Lifecycle" static="false" synchronized="false" visibility="public">
+		</method>
+	</add-node>
 </metadata>
