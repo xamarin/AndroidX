@@ -15,7 +15,7 @@
 	<attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInputCompatBase']" name="visibility">public</attr>
 
 	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
-  <attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs']" name="visibility">protected</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs']" name="visibility">protected</attr>
   <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getAllowFreeFormInput' and count(parameter)=0]" name="visibility">protected</attr>
   <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
   <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getLabel' and count(parameter)=0]" name="visibility">protected</attr>
@@ -54,5 +54,8 @@
 
 	<remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='TypefaceCompatApi26Impl']" />
 
+	<!-- The generator binds both CharSequence and java.lang.String as System.String types so if we have overloads which only differ in java by CharSequence and String, we'll end up with duplicate .net binding overloads, so we remove the extra bindings -->
 	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
+
+	<remove-node path="/api/package[@name='android.support.v4.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']" />
 </metadata>

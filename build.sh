@@ -1,103 +1,27 @@
-#!/usr/bin/env bash
-###############################################################
-# This is the Cake bootstrapper script that is responsible for
-# downloading Cake and all specified tools from NuGet.
-###############################################################
-
-# Define directories.
+COMMIT="f61d7eda6d3ce4112a79937c8cceb94ad5aa081c"
+URL="https://raw.githubusercontent.com/xamarin/XamarinComponents/$COMMIT/Util/Bootstrapper/cake.sh"
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-TOOLS_DIR=$SCRIPT_DIR/tools
-export NUGET_EXE=$TOOLS_DIR/nuget.exe
-CAKE_EXE=$TOOLS_DIR/Cake/Cake.exe
+SCRIPT="$SCRIPT_DIR/cake.sh"
 
-# Define default arguments.
-SCRIPT="build.cake"
-TARGET="Default"
-CONFIGURATION="Release"
-VERBOSITY="verbose"
-DRYRUN=
-SHOW_VERSION=false
-SCRIPT_ARGUMENTS=()
+# Get the commit last used to grab these files so we can check if an update's needed
+commitTxt=""    
+if [ -f "$SCRIPT.commit" ]; then commitTxt=$(cat "$SCRIPT.commit"); fi
 
-# Parse arguments.
-for i in "$@"; do
-    case $1 in
-        -s|--script) SCRIPT="$2"; shift ;;
-        -t|--target) TARGET="$2"; shift ;;
-        -c|--configuration) CONFIGURATION="$2"; shift ;;
-        -v|--verbosity) VERBOSITY="$2"; shift ;;
-        -d|--dryrun) DRYRUN="-dryrun" ;;
-        --version) SHOW_VERSION=true ;;
-        --) shift; SCRIPT_ARGUMENTS+=("$@"); break ;;
-        *) SCRIPT_ARGUMENTS+=("$1") ;;
-    esac
-    shift
-done
+# If the cached file's commit doesn't match our desired, or if it's 'master' go download the right version
+if [[ "$commitTxt" != "$COMMIT" ||  "$commitTxt" == "master" ]]; then
 
-# Make sure the tools folder exist.
-if [ ! -d "$TOOLS_DIR" ]; then
-  mkdir "$TOOLS_DIR"
-fi
+    echo "Downloading $SCRIPT..."
 
-# Make sure that packages.config exist.
-if [ ! -f "$TOOLS_DIR/packages.config" ]; then
-    if [ ! -f "$SCRIPT_DIR/cake.packages.config" ]; then
-       echo "Downloading packages.config..."
-       curl -Lsfo "$TOOLS_DIR/packages.config" http://cakebuild.net/bootstrapper/packages
-       if [ $? -ne 0 ]; then
-           echo "An error occured while downloading packages.config."
-           exit 1
-        fi
-    else
-        echo "using local cake.packages.config..."
-        cp "$SCRIPT_DIR/cake.packages.config" "$TOOLS_DIR/packages.config"
-    fi
-fi
-
-# Download NuGet if it does not exist.
-if [ ! -f "$NUGET_EXE" ]; then
-    echo "Downloading NuGet..."
-    curl -Lsfo "$NUGET_EXE" https://dist.nuget.org/win-x86-commandline/v3.4.4/NuGet.exe
-    # v3/Latest URL:  https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+    # Download the script
+    curl -Lsfo $SCRIPT $URL
     if [ $? -ne 0 ]; then
-        echo "An error occured while downloading nuget.exe."
+        echo "An error occured while downloading $SCRIPT."
         exit 1
     fi
+
+    # Write out the commit hash used to cache for future runs
+    echo $COMMIT > "$SCRIPT.commit"
 fi
 
-# BEGIN TEMP WORKAROUND
-# There is a bug in Mono's System.IO.Compression
-# This binary fixes the bug for now
-# Download System.IO.Compression if it does not exist.
-SYSIOCOMP=$TOOLS_DIR/System.IO.Compression.dll
-if [ ! -f "$SYSIOCOMP" ]; then
-    echo "Downloading System.IO.Compression.dll ..."
-    curl -Lsfo "$SYSIOCOMP" http://xamarin-components-binaries.s3.amazonaws.com/System.IO.Compression.dll
-    if [ $? -ne 0 ]; then
-        echo "An error occured while downloading System.IO.Compression.dll."
-        exit 1
-    fi
-fi
-# END TEMP WORKAROUND
-
-# Restore tools from NuGet.
-pushd "$TOOLS_DIR" >/dev/null
-mono "$NUGET_EXE" install -ExcludeVersion
-if [ $? -ne 0 ]; then
-    echo "Could not restore NuGet packages."
-    exit 1
-fi
-popd >/dev/null
-
-# Make sure that Cake has been installed.
-if [ ! -f "$CAKE_EXE" ]; then
-    echo "Could not find Cake.exe at '$CAKE_EXE'."
-    exit 1
-fi
-
-# Start Cake
-if $SHOW_VERSION; then
-    exec mono "$CAKE_EXE" -version
-else
-    exec mono "$CAKE_EXE" $SCRIPT -verbosity=$VERBOSITY -configuration=$CONFIGURATION -target=$TARGET $DRYRUN "${SCRIPT_ARGUMENTS[@]}"
-fi
+export BOOTSTRAPPER_COMMIT="$COMMIT"
+sh $SCRIPT $@

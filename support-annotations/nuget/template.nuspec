@@ -14,7 +14,9 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/support-annotations_128x128.png</iconUrl>
   </metadata>
   <files>
-    <file src="output/Xamarin.Android.Support.Annotations.dll" target="lib/MonoAndroid70" />
+    <file src="support-annotations/nuget/Xamarin.Android.Support.Annotations.targets" target="build/MonoAndroid80" />
+
+    <file src="output/Xamarin.Android.Support.Annotations.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>

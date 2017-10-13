@@ -5,7 +5,7 @@ using Android.App;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("Xamarin.Android.Support.InstantVideo")]
+[assembly: AssemblyTitle("Xamarin.Android.Support.Wear")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany ("Microsoft Corporation")]

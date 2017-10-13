@@ -13,7 +13,7 @@
     <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/v7-appcompat_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid70">
+      <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.Android.Support.Vector.Drawable" version="[$version$]"/>
         <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="[$version$]"/>
         <!-- Support V4 -->
@@ -26,9 +26,9 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="appcompat-v7/nuget/Xamarin.Android.Support.v7.AppCompat.targets" target="build/MonoAndroid70" />
-
-    <file src="output/Xamarin.Android.Support.v7.AppCompat.dll" target="lib/MonoAndroid70" />
+    <file src="appcompat-v7/nuget/Xamarin.Android.Support.v7.AppCompat.targets" target="build/MonoAndroid80" />
+    
+    <file src="output/Xamarin.Android.Support.v7.AppCompat.dll" target="lib/MonoAndroid80" />
 
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>

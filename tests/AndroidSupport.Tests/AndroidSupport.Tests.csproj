@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AndroidSupport.Tests</RootNamespace>
     <AssemblyName>AndroidSupport.Tests</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -149,8 +149,8 @@
     <Reference Include="Xamarin.Android.Support.Vector.Drawable">
       <HintPath>..\..\output\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.InstantVideo">
-      <HintPath>..\..\output\Xamarin.Android.Support.InstantVideo.dll</HintPath>
+		<Reference Include="Xamarin.Android.Support.Wear">
+      <HintPath>..\..\output\Xamarin.Android.Support.Wear.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

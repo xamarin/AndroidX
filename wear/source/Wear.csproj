@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{137DABCD-BAC3-4CA6-B55B-A0ED565DC20E}</ProjectGuid>
+    <ProjectGuid>{F5E0D83F-81A8-40A9-9EFF-7605213AC743}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Android.Support.InstantVideo</RootNamespace>
+    <RootNamespace>Android.Support.Wear</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AssemblyName>Xamarin.Android.Support.InstantVideo</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <AssemblyName>Xamarin.Android.Support.Wear</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>publickey.snk</AssemblyOriginatorKeyFile> -->
@@ -58,6 +58,9 @@
     <TransformFile Include="..\..\Metadata.generated.xml">
       <Link>Transforms\Metadata.generated.xml</Link>
     </TransformFile>
+    <TransformFile Include="..\..\Metadata.common.xml">
+      <Link>Transforms\Metadata.common.xml</Link>
+    </TransformFile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Additions\" />
@@ -67,15 +70,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\support-compat\source\Compat.csproj">
-      <Project>{CA4194B2-8B2D-4C37-8790-C79C5803357A}</Project>
-      <Name>Compat</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <LibraryProjectZip Include="..\..\externals\instantvideo.aar">
-      <Link>instantvideo.aar</Link>
+    <LibraryProjectZip Include="..\..\externals\wear.aar">
+      <Link>wear.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  
 </Project>

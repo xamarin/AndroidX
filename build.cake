@@ -1,15 +1,7 @@
-#tool nuget:?package=ILRepack&version=2.0.10
-#tool nuget:?package=XamarinComponent
-#tool nuget:?package=Cake.MonoApiTools
-#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-
-#addin nuget:?package=Cake.Compression
-#addin nuget:?package=Cake.Json
-#addin nuget:?package=Cake.XCode
-#addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.Xamarin.Build&version=2.0.18
-#addin nuget:?package=Cake.FileHelpers
-#addin nuget:?package=Cake.MonoApiTools
+// Loads our list of addins from the tools folder
+// this assumes using the new bootstrapper build.sh in the root folder
+// which downloads the required files
+#load "./tools/addins.cake"
 
 // From Cake.Xamarin.Build, dumps out versions of things
 LogSystemInfo ();
@@ -17,22 +9,26 @@ LogSystemInfo ();
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 
-var NUGET_VERSION = "25.4.0.2";
-var COMPONENT_VERSION = "25.4.0.0";
-var AAR_VERSION = "25.4.0";
-var DOC_VERSION = "2017-08-22";
-var XBD_VERSION = "0.4.6";
+// Lists all the artifacts and their versions for com.android.support.*
+// https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
+// Master list of all the packages in the repo:
+// https://dl.google.com/dl/android/maven2/master-index.xml
+
+var NUGET_VERSION = "26.0.2";
+var COMPONENT_VERSION = "26.0.2.0";
+var AAR_VERSION = "26.0.2";
+var DOC_VERSION = "2017-09-05";
 
 var SUPPORT_PKG_NAME = "com.android.support";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r26-rc2-macosx.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v7.1" : "android-25";
-var RENDERSCRIPT_FOLDER = "android-O";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r26-macosx.zip";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
+var RENDERSCRIPT_FOLDER = "android-8.0.0";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.1/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.2/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var USE_MSBUILD_ON_MAC = true;
@@ -53,7 +49,6 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (SUPPORT_PKG_NAME, "leanback-v17", "Xamarin.Android.Support.v17.Leanback", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "design", "Xamarin.Android.Support.Design", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "percent", "Xamarin.Android.Support.Percent", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "instantvideo", "Xamarin.Android.Support.InstantVideo", "26.0.0-alpha1", "26.0.0-alpha1", COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "customtabs", "Xamarin.Android.Support.CustomTabs", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "preference-v7", "Xamarin.Android.Support.v7.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "preference-v14", "Xamarin.Android.Support.v14.Preference", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -67,14 +62,14 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-dynamic-animation", "Xamarin.Android.Support.Dynamic.Animation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-media-compat", "Xamarin.Android.Support.Media.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-fragment", "Xamarin.Android.Support.Fragment", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-tv-provider", "Xamarin.Android.Support.TV.Provider", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "support-tv-provider", "Xamarin.Android.Support.TV.Provider", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "transition", "Xamarin.Android.Support.Transition", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "exifinterface", "Xamarin.Android.Support.Exif", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	new ArtifactInfo (SUPPORT_PKG_NAME, "wearable", "Xamarin.Android.Support.Wearable", "26.0.0-alpha1", "26.0.0-alpha1", COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "wear", "Xamarin.Android.Support.Wear", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-annotations", "Xamarin.Android.Support.Annotations", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION, true),
-	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji", "Xamarin.Android.Support.Emoji", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-appcompat", "Xamarin.Android.Support.Emoji.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
-	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-bundled", "Xamarin.Android.Support.Emoji.Bundled", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji", "Xamarin.Android.Support.Emoji", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-appcompat", "Xamarin.Android.Support.Emoji.AppCompat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "support-emoji-bundled", "Xamarin.Android.Support.Emoji.Bundled", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 
 	new ArtifactInfo (SUPPORT_PKG_NAME, "renderscript-v8", "Xamarin.Android.Support.v8.RenderScript", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 };
@@ -145,10 +140,10 @@ var buildSpec = new BuildSpec {
 		new DefaultSolutionBuilder { SolutionPath = "./percent/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./recommendation/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./support-v4/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./appcompat-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		//new DefaultSolutionBuilder { SolutionPath = "./appcompat-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./cardview-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./gridlayout-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
-		new DefaultSolutionBuilder { SolutionPath = "./mediarouter-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
+		//new DefaultSolutionBuilder { SolutionPath = "./mediarouter-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./palette-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./preference-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
 		new DefaultSolutionBuilder { SolutionPath = "./recyclerview-v7/samples/AndroidSupportSample.sln", BuildsOn = BuildPlatforms.Windows | BuildPlatforms.Mac, MaxCpuCount = CPU_COUNT, AlwaysUseMSBuild = USE_MSBUILD_ON_MAC },
@@ -168,7 +163,7 @@ var buildSpec = new BuildSpec {
 		new Component { ManifestDirectory = "./percent/component" },
 		new Component { ManifestDirectory = "./recommendation/component" },
 		new Component { ManifestDirectory = "./support-v4/component" },
-		new Component { ManifestDirectory = "./appcompat-v7/component" },
+		//new Component { ManifestDirectory = "./appcompat-v7/component" },
 		new Component { ManifestDirectory = "./cardview-v7/component" },
 		new Component { ManifestDirectory = "./gridlayout-v7/component" },
 		new Component { ManifestDirectory = "./palette-v7/component" },
@@ -283,7 +278,7 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 		CopyAttrs = true,
 		AllowMultiple = true,
 		//TargetKind = ILRepack.TargetKind.Dll,
-		Libs = new List<FilePath> {
+		Libs = new List<DirectoryPath> {
 			MONODROID_PATH
 		},
 	});
@@ -304,6 +299,7 @@ Task ("component-setup").Does (() =>
 		FileWriteText (newYaml, manifestTxt);
 	}
 });
+
 
 Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 	.Does (() => 
@@ -367,7 +363,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 		
 		// Transform all template.nuspec files
 		var nuspecText = FileReadText(art.ArtifactId + "/nuget/template.nuspec");
-		nuspecText = nuspecText.Replace ("$xbdversion$", XBD_VERSION);
+		//nuspecText = nuspecText.Replace ("$xbdversion$", XBD_VERSION);
 		var nuspecFile = new FilePath(art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec");
 		FileWriteText(nuspecFile, nuspecText);
 		var xNuspec = System.Xml.Linq.XDocument.Load (MakeAbsolute(nuspecFile).FullPath);
@@ -391,7 +387,7 @@ Task ("nuget-setup").IsDependentOn ("buildtasks").IsDependentOn ("externals")
 });
 
 Task ("nuget").IsDependentOn ("nuget-setup").IsDependentOn ("nuget-base").IsDependentOn ("libs");
-//Task ("nuget").IsDependentOn ("nuget-base").IsDependentOn ("libs");
+
 
 Task ("component").IsDependentOn ("component-docs").IsDependentOn ("component-setup").IsDependentOn ("component-base").IsDependentOn ("libs");
 
@@ -475,7 +471,7 @@ Task ("component-docs").Does (() =>
 });
 
 //Task ("libs").IsDependentOn ("nuget-setup").IsDependentOn ("genapi").IsDependentOn ("libs-base");
-Task ("libs").IsDependentOn ("genapi").IsDependentOn ("libs-base");
+Task ("libs").IsDependentOn("buildtasks").IsDependentOn ("genapi").IsDependentOn ("libs-base");
 //Task ("libs").IsDependentOn ("libs-base");
 
 Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (() => {
@@ -513,7 +509,7 @@ Task ("genapi").IsDependentOn ("libs-base").IsDependentOn ("externals").Does (()
 		});
 	}
 
-	DotNetBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+	MSBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
 
 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
@@ -522,7 +518,7 @@ Task ("buildtasks").Does (() =>
 {
 	NuGetRestore ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
 
-	DotNetBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
+	MSBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
 });
 
 
@@ -551,15 +547,14 @@ Task ("droiddocs").Does(() =>
 	if (!DirectoryExists("./docs"))
 		Unzip (compressedDocsFile, "./docs");
 
-		if (!FileExists("./Metadata.generated.xml")) {
-			// Generate metadata file from docs
-			if (IsRunningOnWindows ())
-				StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
-			else
-				StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
-		}
+	if (!FileExists("./Metadata.generated.xml")) {
+		// Generate metadata file from docs
+		if (IsRunningOnWindows ())
+			StartProcess ("util/droiddocs.exe", "transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+		else
+			StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
+	}
 });
-
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 

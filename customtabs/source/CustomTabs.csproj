@@ -12,7 +12,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Xamarin.Android.Support.CustomTabs</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>publickey.snk</AssemblyOriginatorKeyFile> -->
@@ -59,6 +59,9 @@
     <TransformFile Include="Transforms\Metadata.xml" />
     <TransformFile Include="..\..\Metadata.generated.xml">
       <Link>Transforms\Metadata.generated.xml</Link>
+    </TransformFile>
+    <TransformFile Include="..\..\Metadata.common.xml">
+      <Link>Transforms\Metadata.common.xml</Link>
     </TransformFile>
   </ItemGroup>
   <ItemGroup>

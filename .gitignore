@@ -5,6 +5,7 @@ packages/
 externals/
 output/
 docs/
+.vs/
 
 *.xam
 *.DS_Store
@@ -26,3 +27,4 @@ Resource.designer.cs
 component.yaml
 Details.md
 /generated.targets
+*.commit
