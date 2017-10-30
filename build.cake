@@ -14,11 +14,10 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "26.1.0.1";
-var COMPONENT_VERSION = "26.1.0.0";
-var AAR_VERSION = "26.1.0";
-var DOC_VERSION = "2017-10-02";
-
+var NUGET_VERSION = "27.0.0-beta1";
+var COMPONENT_VERSION = "27.0.0.0";
+var AAR_VERSION = "27.0.0";
+var DOC_VERSION = "2017-10-30";
 
 
 var SUPPORT_PKG_NAME = "com.android.support";
@@ -27,12 +26,12 @@ var ARCH_CORE_PKG_NAME = "android.arch.core";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r26-macosx.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
-var RENDERSCRIPT_FOLDER = "android-8.0.0";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r27-macosx.zip";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.1" : "android-27";
+var RENDERSCRIPT_FOLDER = "android-8.1.0";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.2/api-info.xml";
+var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/26.1.0/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var USE_MSBUILD_ON_MAC = true;
