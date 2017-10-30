@@ -128,7 +128,7 @@ if (IsRunningOnWindows ()) {
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
 
-var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.PathPrefix + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true }).ToList ();
+var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.PathPrefix + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = a.NugetVersion, RequireLicenseAcceptance = true }).ToList ();
 nugetInfos.Add (new NuGetInfo { NuSpec = "./support-v4/nuget/Xamarin.Android.Support.v4.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true });
 
 var buildSpec = new BuildSpec {
