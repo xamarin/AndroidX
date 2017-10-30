@@ -152,6 +152,15 @@
 		<Reference Include="Xamarin.Android.Support.Wear">
       <HintPath>..\..\output\Xamarin.Android.Support.Wear.dll</HintPath>
     </Reference>
+		<Reference Include="Xamarin.Android.Arch.Core.Common">
+		  <HintPath>..\..\output\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+		  <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+		  <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+		</Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

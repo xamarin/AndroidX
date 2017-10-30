@@ -72,5 +72,9 @@
       <Project>{257D3C55-FADE-4C65-9967-7DCDE23F83A8}</Project>
       <Name>Recommendation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -74,5 +74,11 @@
       <Link>exifinterface.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\support-annotations\source\Annotations.csproj">
+      <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
+      <Name>Annotations</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
