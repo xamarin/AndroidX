@@ -146,6 +146,18 @@
 		<Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
 		  <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
 		</Reference>
+		<Reference Include="Xamarin.Android.Support.Emoji.AppCompat">
+		  <HintPath>..\..\output\Xamarin.Android.Support.Emoji.AppCompat.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Android.Support.Emoji.Bundled">
+		  <HintPath>..\..\output\Xamarin.Android.Support.Emoji.Bundled.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Android.Support.Emoji">
+		  <HintPath>..\..\output\Xamarin.Android.Support.Emoji.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Android.Support.TV.Provider">
+		  <HintPath>..\..\output\Xamarin.Android.Support.TV.Provider.dll</HintPath>
+		</Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="xunit.core" Version="2.3.1" />
