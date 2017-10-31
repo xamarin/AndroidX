@@ -14,7 +14,7 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "26.1.0";
+var NUGET_VERSION = "26.1.0.1";
 var COMPONENT_VERSION = "26.1.0.0";
 var AAR_VERSION = "26.1.0";
 var DOC_VERSION = "2017-10-02";
@@ -128,7 +128,7 @@ if (IsRunningOnWindows ()) {
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
 
-var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.PathPrefix + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = a.NugetVersion, RequireLicenseAcceptance = true }).ToList ();
+var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.PathPrefix + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = a.NuGetVersion, RequireLicenseAcceptance = true }).ToList ();
 nugetInfos.Add (new NuGetInfo { NuSpec = "./support-v4/nuget/Xamarin.Android.Support.v4.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true });
 
 var buildSpec = new BuildSpec {
