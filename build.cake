@@ -29,6 +29,8 @@ var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r27-macosx.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.1" : "android-27";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
+var REFERENCE_DOCS_URL = "https://developer.android.com/reference/";
+var REFERENCE_DOCS_PACKAGELIST_URL = REFERENCE_DOCS_URL + "android/support/package-list";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/26.1.0/api-info.xml";
@@ -563,15 +565,15 @@ Task ("droiddocs").Does (() =>
 
 	if (!FileExists(compressedDocsFile)) {
 		if (IsRunningOnWindows ())
-			StartProcess ("util/droiddocs.exe", "scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+			StartProcess ("util/droiddocs.exe", "scrape --out ./docs --url  " + REFERENCE_DOCS_URL + " --package-list-source " + REFERENCE_DOCS_PACKAGELIST_URL + " --package-filter \"android.support\"");
 		else
-			StartProcess ("mono", "util/droiddocs.exe scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+			StartProcess ("mono", "util/droiddocs.exe scrape --out ./docs --url  " + REFERENCE_DOCS_URL + " --package-list-source " + REFERENCE_DOCS_PACKAGELIST_URL + " --package-filter \"android.support\"");
 
 		// Scraper misses a few files we require
 		EnsureDirectoryExists("./docs/reference");
-		DownloadFile("https://developer.android.com/reference/classes.html", "./docs/reference/classes.html");
+		DownloadFile(REFERENCE_DOCS_URL + "classes.html", "./docs/reference/classes.html");
 		CopyFile ("./docs/reference/classes.html", "./docs/reference/index.html");
-		DownloadFile("https://developer.android.com/reference/packages.html", "./docs/reference/packages.html");
+		DownloadFile(REFERENCE_DOCS_URL + "packages.html", "./docs/reference/packages.html");
 		
 
 		ZipCompress ("./docs", compressedDocsFile);
