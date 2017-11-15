@@ -282,7 +282,9 @@ Task ("diff")
 		"./output/AndroidSupport.api-diff.html");
 });
 
-Task ("merge").IsDependentOn ("libs").Does (() =>
+Task ("merge")
+	.IsDependentOn ("libs")
+	.Does (() =>
 {
 	if (FileExists ("./output/AndroidSupport.Merged.dll"))
 		DeleteFile ("./output/AndroidSupport.Merged.dll");
@@ -300,29 +302,10 @@ Task ("merge").IsDependentOn ("libs").Does (() =>
 	});
 });
 
-
-Task ("component-setup").Does (() =>
-{
-	var yamls = GetFiles ("./**/component/component.template.yaml");
-
-	foreach (var yaml in yamls) {
-		var manifestTxt = FileReadText (yaml)
-			.Replace ("$nuget-version$", NUGET_VERSION)
-			.Replace ("$version$", COMPONENT_VERSION);
-
-		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
-
-		FileWriteText (newYaml, manifestTxt);
-	}
-});
-
-
 Task ("nuget-setup")
-	.IsDependentOn ("externals")
 	.IsDependentOn ("buildtasks")
 	.Does (() => 
 {
-
 	Action<FilePath, FilePath> mergeTargetsFiles = (FilePath fromFile, FilePath intoFile) =>
 	{
 		// Load the doc to append to, and the doc to append
@@ -378,7 +361,6 @@ Task ("nuget-setup")
 			mergeTargetsFiles (mergeFile, targetsFile);
 		}
 
-		
 		// Transform all template.nuspec files
 		var nuspecText = FileReadText(art.PathPrefix + art.ArtifactId + "/nuget/template.nuspec");
 		//nuspecText = nuspecText.Replace ("$xbdversion$", XBD_VERSION);
@@ -404,36 +386,25 @@ Task ("nuget-setup")
 	}
 });
 
-Task ("nuget")
-	.IsDependentOn ("libs")
-	.IsDependentOn ("nuget-setup")
-	.IsDependentOn ("nuget-base");
-
-Task ("ci")
-	.IsDependentOn ("diff")
-	.IsDependentOn ("component");
-
-Task ("component")
-	.IsDependentOn ("libs")
-	.IsDependentOn ("component-docs")
-	.IsDependentOn ("component-setup")
-	.IsDependentOn ("component-base");
-
-Task ("clean")
-	.IsDependentOn ("clean-base")
+Task ("component-setup")
 	.Does (() =>
 {
-	if (FileExists ("./generated.targets"))
-		DeleteFile ("./generated.targets");
+	var yamls = GetFiles ("./**/component/component.template.yaml");
 
-	if (DirectoryExists ("./externals"))
-		DeleteDirectory ("./externals", true);
+	foreach (var yaml in yamls) {
+		var manifestTxt = FileReadText (yaml)
+			.Replace ("$nuget-version$", NUGET_VERSION)
+			.Replace ("$version$", COMPONENT_VERSION);
 
-	CleanDirectories ("./**/packages");
+		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
+
+		FileWriteText (newYaml, manifestTxt);
+	}
 });
 
-
-Task ("component-docs").Does (() =>
+Task ("component-docs")
+	.IsDependentOn ("component-setup")
+	.Does (() =>
 {
 	var gettingStartedTemplates = new Dictionary<string, string> ();
 
@@ -500,11 +471,6 @@ Task ("component-docs").Does (() =>
 	}
 });
 
-Task ("libs")
-	.IsDependentOn ("buildtasks")
-	.IsDependentOn ("genapi")
-	.IsDependentOn ("libs-base");
-
 Task ("genapi")
 	.IsDependentOn ("externals")
 	.IsDependentOn ("libs-base")
@@ -548,7 +514,8 @@ Task ("genapi")
 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
 
-Task ("buildtasks").Does (() => 
+Task ("buildtasks")
+	.Does (() => 
 {
 	NuGetRestore ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
 
@@ -556,7 +523,8 @@ Task ("buildtasks").Does (() =>
 });
 
 
-Task ("droiddocs").Does (() => 
+Task ("droiddocs")
+	.Does (() => 
 {
 	EnsureDirectoryExists("./output");
 
@@ -589,6 +557,61 @@ Task ("droiddocs").Does (() =>
 			StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
 	}
 });
+
+Task ("ci-setup")
+	.WithCriteria (!BuildSystem.IsLocalBuild)
+	.Does (() => 
+{
+	var buildCommit = "DEV";
+	var buildNumber = "DEBUG";
+	var buildTimestamp = DateTime.UtcNow.ToString ();
+
+	if (BuildSystem.IsRunningOnJenkins) {
+		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
+		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
+	} else if (BuildSystem.IsRunningOnVSTS) {
+		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
+		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
+	}
+
+	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_COMMIT}", buildCommit);
+	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_NUMBER}", buildNumber);
+	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_TIMESTAMP}", buildTimestamp);
+});
+
+Task ("clean")
+	.IsDependentOn ("clean-base")
+	.Does (() =>
+{
+	if (FileExists ("./generated.targets"))
+		DeleteFile ("./generated.targets");
+
+	if (DirectoryExists ("./externals"))
+		DeleteDirectory ("./externals", true);
+
+	CleanDirectories ("./**/packages");
+});
+
+Task ("nuget")
+	.IsDependentOn ("libs")
+	.IsDependentOn ("nuget-setup")
+	.IsDependentOn ("nuget-base");
+
+Task ("component")
+	.IsDependentOn ("nuget")
+	.IsDependentOn ("component-docs")
+	.IsDependentOn ("component-base");
+	
+Task ("libs")
+	.IsDependentOn ("externals")
+	.IsDependentOn ("nuget-setup")
+	.IsDependentOn ("libs-base")
+	.IsDependentOn ("genapi");
+
+Task ("ci")
+	.IsDependentOn ("ci-setup")
+	.IsDependentOn ("diff")
+	.IsDependentOn ("component");
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 
