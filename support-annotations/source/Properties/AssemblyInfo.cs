@@ -30,3 +30,7 @@ using Java.Interop;
 // This is needed for compiling javac in apps, but the actual lib is not needed in the app itself
 // only for the compilation stage, so we don't need to actually package it in the app
 [assembly: DoNotPackage ("support-annotations.jar")]
+
+[assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
+[assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
+[assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
