@@ -20,6 +20,10 @@ using Android.App;
 
 [assembly: AssemblyVersion ("1.0.0")]
 
+[assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
+[assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
+[assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
+
 // The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.
 
@@ -72,7 +76,3 @@ static class __Consts {
 	public const string Version     = "24";
 	public const string PackageName = "Xamarin.Android.Support.v8";
 }
-
-[assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
-[assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
-[assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
