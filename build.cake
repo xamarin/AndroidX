@@ -44,7 +44,8 @@ if (!IsRunningOnWindows())
 var ARTIFACTS = new [] {
 	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0", true) { PathPrefix = "arch-core/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.1", "1.0.1", "1.0.1.0", true) { PathPrefix = "arch-lifecycle/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.3", "1.0.3", "1.0.3.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "extensions", "Xamarin.Android.Arch.Lifecycle.Extensions", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
 
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -249,6 +250,7 @@ Task ("externals")
 	MoveFile ("./externals/arch-core/common.jar", "./externals/arch-core/arch-core-common.jar");
 	MoveFile ("./externals/arch-lifecycle/common.jar", "./externals/arch-lifecycle/arch-lifecycle-common.jar");
 	MoveFile ("./externals/arch-lifecycle/runtime.aar", "./externals/arch-lifecycle/arch-lifecycle-runtime.aar");
+	MoveFile ("./externals/arch-lifecycle/extensions.aar", "./externals/arch-lifecycle/arch-lifecycle-extensions.aar");
 });
 
 Task ("diff")
