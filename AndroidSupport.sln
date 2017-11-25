@@ -75,7 +75,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Runtime", "a
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-Utils", "support-core-utils\source\Core-Utils.csproj", "{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Extensions", "arch-lifecycle\extensions\source\Arch.Lifecycle.Extensions\Arch.Lifecycle.Extensions.csproj", "{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Extensions", "arch-lifecycle\extensions\source\Arch.Lifecycle.Extensions.csproj", "{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
