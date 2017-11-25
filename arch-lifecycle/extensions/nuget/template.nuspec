@@ -24,7 +24,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="arch-lifecycle/common/nuget/Xamarin.Android.Arch.Lifecycle.Extensions.targets" target="build/MonoAndroid80" />
+    <file src="arch-lifecycle/extensions/nuget/Xamarin.Android.Arch.Lifecycle.Extensions.targets" target="build/MonoAndroid80" />
 
     <file src="output/Xamarin.Android.Arch.Lifecycle.Extensions.dll" target="lib/MonoAndroid80" />
 
