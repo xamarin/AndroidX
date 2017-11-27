@@ -41,24 +41,23 @@ namespace Android.Support.V4.Util
     }
 }
 
-namespace Android.Support.V4.App
-{
-    public partial class NotificationCompat
-    {
-        public partial class Action
-        {
-            public override global::Android.Support.V4.App.RemoteInputCompatBase.RemoteInput [] GetRemoteInputs ()
-            {
-                return _GetRemoteInputs ();
-            }
+// namespace Android.Support.V4.App
+// {
+//     public partial class NotificationCompat
+//     {
+//         public partial class Action
+//         {
+//             public override global::Android.Support.V4.App.RemoteInputCompatBase.RemoteInput [] GetRemoteInputs ()
+//             {
+//                 return _GetRemoteInputs ();
+//             }
 
-			public override global::Android.Support.V4.App.RemoteInputCompatBase.RemoteInput[] GetDataOnlyRemoteInputs()
-			{
-				return _GetDataOnlyRemoteInputs();
-			}
-
-		}
-    }
-}
+// 			public override global::Android.Support.V4.App.RemoteInputCompatBase.RemoteInput[] GetDataOnlyRemoteInputs()
+// 			{
+// 				return _GetDataOnlyRemoteInputs();
+// 			}
+// 		}
+//     }
+// }
 
 
