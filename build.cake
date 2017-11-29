@@ -27,7 +27,7 @@ var ARCH_CORE_PKG_NAME = "android.arch.core";
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r27-macosx.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.1" : "android-27";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var REFERENCE_DOCS_URL = "https://developer.android.com/reference/";
 var REFERENCE_DOCS_PACKAGELIST_URL = REFERENCE_DOCS_URL + "android/support/package-list";
