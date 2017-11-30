@@ -17,8 +17,8 @@ docs/
 *.xcuserstate
 *.xcuserstate
 *.csproj.user
-*/nuget/*.targets
-*/nuget/*.nuspec
+**/nuget/*.targets
+**/nuget/*.nuspec
 !merge.targets
 !template.targets
 !template.nuspec
