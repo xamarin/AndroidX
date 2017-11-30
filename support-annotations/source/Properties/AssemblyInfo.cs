@@ -36,3 +36,5 @@ using Java.Interop;
 // This is needed for compiling javac in apps, but the actual lib is not needed in the app itself
 // only for the compilation stage, so we don't need to actually package it in the app
 [assembly: DoNotPackage ("support-annotations.jar")]
+
+[assembly: LinkerSafe]

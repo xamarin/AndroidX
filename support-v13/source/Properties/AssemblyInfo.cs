@@ -27,3 +27,5 @@ using Android.App;
 [assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
 
 [assembly: AssemblyInformationalVersion ("{NUGET_VERSION}")]
+
+[assembly: LinkerSafe]
