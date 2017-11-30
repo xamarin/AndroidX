@@ -37,4 +37,4 @@ using Java.Interop;
 // only for the compilation stage, so we don't need to actually package it in the app
 [assembly: DoNotPackage ("support-annotations.jar")]
 
-[assembly: LinkerSafe]
+[assembly: Android.LinkerSafe]

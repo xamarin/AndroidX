@@ -32,4 +32,4 @@ using Android.App;
 
 [assembly: AssemblyInformationalVersion ("{NUGET_VERSION}")]
 
-[assembly: LinkerSafe]
+[assembly: Android.LinkerSafe]

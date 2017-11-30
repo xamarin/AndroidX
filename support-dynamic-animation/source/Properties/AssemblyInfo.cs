@@ -33,4 +33,4 @@ using Java.Interop;
 
 [assembly: AssemblyInformationalVersion ("{NUGET_VERSION}")]
 
-[assembly: LinkerSafe]
+[assembly: Android.LinkerSafe]
