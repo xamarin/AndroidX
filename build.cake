@@ -102,6 +102,7 @@ class ArtifactInfo
 		NuGetVersion = nugetVersion;
 		ComponentVersion = componentVersion;
 		IsJar = isJar;
+		PathPrefix = string.Empty;
 	}
 
 	public string Package { get; set; }
@@ -411,6 +412,7 @@ Task ("nuget")
 	.IsDependentOn ("nuget-base");
 
 Task ("ci")
+	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("diff")
 	.IsDependentOn ("component");
 
@@ -433,8 +435,34 @@ Task ("clean")
 	CleanDirectories ("./**/packages");
 });
 
+Task ("ci-setup")
+	.WithCriteria (!BuildSystem.IsLocalBuild)
+	.Does (() => 
+{
+	var buildCommit = "DEV";
+	var buildNumber = "DEBUG";
+	var buildTimestamp = DateTime.UtcNow.ToString ();
 
-Task ("component-docs").Does (() =>
+	if (BuildSystem.IsRunningOnJenkins) {
+		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
+		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
+	} else if (BuildSystem.IsRunningOnVSTS) {
+		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
+		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
+	}
+
+	foreach (var art in ARTIFACTS) {
+		var glob = "./" + art.PathPrefix + art.ArtifactId + "/**/source/**/AssemblyInfo.cs";
+
+		ReplaceTextInFiles(glob, "{NUGET_VERSION}", art.NuGetVersion);
+		ReplaceTextInFiles(glob, "{BUILD_COMMIT}", buildCommit);
+		ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
+		ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
+	}
+});
+
+Task ("component-docs")
+	.Does (() =>
 {
 	var gettingStartedTemplates = new Dictionary<string, string> ();
 
@@ -549,7 +577,8 @@ Task ("genapi")
 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
 });
 
-Task ("buildtasks").Does (() => 
+Task ("buildtasks")
+	.Does (() => 
 {
 	NuGetRestore ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
 
@@ -557,7 +586,8 @@ Task ("buildtasks").Does (() =>
 });
 
 
-Task ("droiddocs").Does (() => 
+Task ("droiddocs")
+	.Does (() => 
 {
 	EnsureDirectoryExists("./output");
 
