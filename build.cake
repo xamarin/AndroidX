@@ -14,10 +14,10 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "27.0.0-beta1";
-var COMPONENT_VERSION = "27.0.0.0";
-var AAR_VERSION = "27.0.0";
-var DOC_VERSION = "2017-10-30";
+var NUGET_VERSION = "27.0.2-beta1";
+var COMPONENT_VERSION = "27.0.2.0";
+var AAR_VERSION = "27.0.2";
+var DOC_VERSION = "2017-12-01";
 
 
 var SUPPORT_PKG_NAME = "com.android.support";
@@ -66,6 +66,7 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (SUPPORT_PKG_NAME, "animated-vector-drawable", "Xamarin.Android.Support.Animated.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-vector-drawable", "Xamarin.Android.Support.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-compat", "Xamarin.Android.Support.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "support-content", "Xamarin.Android.Support.Content", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-core-utils", "Xamarin.Android.Support.Core.Utils", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-core-ui", "Xamarin.Android.Support.Core.UI", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-dynamic-animation", "Xamarin.Android.Support.Dynamic.Animation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
