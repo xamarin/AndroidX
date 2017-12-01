@@ -14,9 +14,20 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "27.0.2-beta1";
+var NUGET_PRE = "-beta1";
+
+var NUGET_VERSION = "27.0.2" + NUGET_PRE;
 var COMPONENT_VERSION = "27.0.2.0";
 var AAR_VERSION = "27.0.2";
+
+var ARCH_CORE_COMMON_AAR_VERSION = "1.0.0";
+var ARCH_LIFECYCLE_COMMON_AAR_VERSION = "1.0.3";
+var ARCH_LIFECYCLE_RUNTIME_AAR_VERSION = "1.0.3";
+
+var ARCH_CORE_COMMON_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+var ARCH_LIFECYCLE_COMMON_NUGET_VERSION = "1.0.3" + NUGET_PRE;
+var ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION = "1.0.3" + NUGET_PRE;
+
 var DOC_VERSION = "2017-12-01";
 
 
@@ -43,9 +54,9 @@ if (!IsRunningOnWindows())
 	CPU_COUNT = 1;
 
 var ARTIFACTS = new [] {
-	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0", true) { PathPrefix = "arch-core/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.1", "1.0.1", "1.0.1.0", true) { PathPrefix = "arch-lifecycle/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", ARCH_CORE_COMMON_AAR_VERSION, ARCH_CORE_COMMON_NUGET_VERSION, "1.0.0.0", true) { PathPrefix = "arch-core/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", ARCH_LIFECYCLE_COMMON_AAR_VERSION, ARCH_LIFECYCLE_COMMON_NUGET_VERSION, "1.0.0.0", true) { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", ARCH_LIFECYCLE_RUNTIME_AAR_VERSION, ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION, "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
 
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
