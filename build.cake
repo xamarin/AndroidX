@@ -46,12 +46,8 @@ var REFERENCE_DOCS_PACKAGELIST_URL = REFERENCE_DOCS_URL + "android/support/packa
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/26.1.0/api-info.xml";
 
-var CPU_COUNT = System.Environment.ProcessorCount;
+var CPU_COUNT = 1;
 var USE_MSBUILD_ON_MAC = true;
-
-// MSBUILD has issues on *nix/osx with a different CPU Count being specified
-if (!IsRunningOnWindows())
-	CPU_COUNT = 1;
 
 var ARTIFACTS = new [] {
 	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", ARCH_CORE_COMMON_AAR_VERSION, ARCH_CORE_COMMON_NUGET_VERSION, "1.0.0.0", true) { PathPrefix = "arch-core/" },
