@@ -57,7 +57,7 @@ var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
 var RENDERSCRIPT_FOLDER = "android-8.0.0";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.2/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.2/api-info.xml";
 
 var CPU_COUNT = System.Environment.ProcessorCount;
 var USE_MSBUILD_ON_MAC = true;
