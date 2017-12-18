@@ -41,7 +41,7 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_PRE = "-beta1";
+var NUGET_PRE = "";
 
 var NUGET_VERSION = "27.0.2" + NUGET_PRE;
 var COMPONENT_VERSION = "27.0.2.0";
@@ -55,7 +55,7 @@ var ARCH_CORE_COMMON_NUGET_VERSION = "1.0.0" + NUGET_PRE;
 var ARCH_LIFECYCLE_COMMON_NUGET_VERSION = "1.0.3" + NUGET_PRE;
 var ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION = "1.0.3" + NUGET_PRE;
 
-var DOC_VERSION = "2017-12-01";
+var DOC_VERSION = "2017-12-18";
 
 
 var SUPPORT_PKG_NAME = "com.android.support";
