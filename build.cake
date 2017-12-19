@@ -428,19 +428,6 @@ Task ("nuget-setup")
 	}
 });
 
-Task ("clean")
-	.IsDependentOn ("clean-base")
-	.Does (() =>
-{
-	var yamls = GetFiles ("./**/component/component.template.yaml");
-
-	foreach (var yaml in yamls) {
-		var manifestTxt = FileReadText (yaml)
-			.Replace ("$nuget-version$", NUGET_VERSION)
-			.Replace ("$version$", COMPONENT_VERSION);
-
-		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
-
 Task ("ci-setup")
 	.WithCriteria (!BuildSystem.IsLocalBuild)
 	.Does (() => 
@@ -620,27 +607,6 @@ Task ("droiddocs")
 		else
 			StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
 	}
-});
-
-Task ("ci-setup")
-	.WithCriteria (!BuildSystem.IsLocalBuild)
-	.Does (() => 
-{
-	var buildCommit = "DEV";
-	var buildNumber = "DEBUG";
-	var buildTimestamp = DateTime.UtcNow.ToString ();
-
-	if (BuildSystem.IsRunningOnJenkins) {
-		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
-		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
-	} else if (BuildSystem.IsRunningOnVSTS) {
-		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
-		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
-	}
-
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_COMMIT}", buildCommit);
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_NUMBER}", buildNumber);
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_TIMESTAMP}", buildTimestamp);
 });
 
 Task ("clean")
