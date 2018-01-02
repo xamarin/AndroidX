@@ -8,9 +8,9 @@
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Content Android Support Library C# bindings for Xamarin</description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
-    <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865339</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865381</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/support-content_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
@@ -21,9 +21,7 @@
   </metadata>
   <files>
     <file src="support-content/nuget/Xamarin.Android.Support.Content.targets" target="build/MonoAndroid80" />
-
     <file src="output/Xamarin.Android.Support.Content.dll" target="lib/MonoAndroid80" />
-
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>
