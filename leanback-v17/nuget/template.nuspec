@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Xamarin.Android.Support.v17.Leanback</id>
     <title>Xamarin Android Support Library - v17 Leanback</title>
@@ -8,27 +8,25 @@
     <owners>Xamarin Inc.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>v17 Leanback Android Support Library C# bindings for Xamarin</description>
-    <copyright>Copyright © Microsoft Corporation</copyright>
-    <projectUrl>https://github.com/xamarin/AndroidSupportComponents/</projectUrl>
-    <licenseUrl>https://github.com/xamarin/AndroidSupportComponents/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865331</projectUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865381</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/v17-leanback_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]" />
         <!-- Support V4 -->
-        <dependency id="Xamarin.Android.Support.Compat" version="[$version$]"/>
-        <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]"/>
-        <dependency id="Xamarin.Android.Support.Core.Utils" version="[$version$]"/>
-        <dependency id="Xamarin.Android.Support.Fragment" version="[$version$]"/>
-        <dependency id="Xamarin.Android.Support.Media.Compat" version="[$version$]"/>
+        <dependency id="Xamarin.Android.Support.Compat" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.Core.UI" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.Fragment" version="[$version$]" />
+        <dependency id="Xamarin.Android.Support.Media.Compat" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
     <file src="leanback-v17/nuget/Xamarin.Android.Support.v17.Leanback.targets" target="build/MonoAndroid80" />
-
     <file src="output/Xamarin.Android.Support.v17.Leanback.dll" target="lib/MonoAndroid80" />
-
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>
