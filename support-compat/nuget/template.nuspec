@@ -15,7 +15,7 @@
     <dependencies>
       <group targetFramework="MonoAndroid80">
         <dependency id="Xamarin.Android.Support.Annotations" version="[$version$]" />
-        <dependency id="Xamarin.Android.Arch.Lifecycle.Runtime" version="1.0.0" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Runtime" version="1.0.3" />
       </group>
     </dependencies>
   </metadata>
