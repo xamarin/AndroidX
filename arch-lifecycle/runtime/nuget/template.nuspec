@@ -14,9 +14,9 @@
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/arch-lifecycle-runtime_128x128.png</iconUrl>
     <dependencies>
       <group targetFramework="MonoAndroid80">
-        <dependency id="Xamarin.Android.Support.Annotations" version="26.1.0" />
-        <dependency id="Xamarin.Android.Arch.Lifecycle.Common" version="1.0.1" />
-        <dependency id="Xamarin.Android.Arch.Core.Common" version="1.0.0" />
+        <dependency id="Xamarin.Android.Support.Annotations" version="$com.android.support.support-annotations$" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Common" version="$android.arch.lifecycle.common$" />
+        <dependency id="Xamarin.Android.Arch.Core.Common" version="$android.arch.core.common$" />
       </group>
     </dependencies>
   </metadata>

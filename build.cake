@@ -392,6 +392,15 @@ Task ("nuget-setup")
 
 		// Transform all template.nuspec files
 		var nuspecText = FileReadText(art.PathPrefix + art.ArtifactId + "/nuget/template.nuspec");
+
+		// We use a pattern of $package.id.artifact.id$ as a placeholder in nuspec templates
+		// which we want to substitute the actual nuget version into
+		// So for example $com.android.support.support-compat$ would get replaced with the nuget version for Xamarin.Android.Support.Compat
+		foreach (var artifactInfo in ARTIFACTS) {
+			var placeholder = "$" + artifactInfo.Package + "." + artifactInfo.ArtifactId + "$";
+			nuspecText = nuspecText.Replace(placeholder, artifactInfo.NuGetVersion);
+		}
+
 		//nuspecText = nuspecText.Replace ("$xbdversion$", XBD_VERSION);
 		var nuspecFile = new FilePath(art.PathPrefix + art.ArtifactId + "/nuget/" + art.NugetId + ".nuspec");
 		FileWriteText(nuspecFile, nuspecText);
