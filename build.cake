@@ -48,12 +48,17 @@ var COMPONENT_VERSION = "27.0.2.0";
 var AAR_VERSION = "27.0.2";
 
 var ARCH_CORE_COMMON_AAR_VERSION = "1.0.0";
+var ARCH_CORE_RUNTIME_AAR_VERSION = "1.0.0";
 var ARCH_LIFECYCLE_COMMON_AAR_VERSION = "1.0.3";
 var ARCH_LIFECYCLE_RUNTIME_AAR_VERSION = "1.0.3";
+var ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION = "1.0.0";
 
 var ARCH_CORE_COMMON_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+var ARCH_CORE_RUNTIME_NUGET_VERSION = "1.0.0" + NUGET_PRE;
 var ARCH_LIFECYCLE_COMMON_NUGET_VERSION = "1.0.3" + NUGET_PRE;
 var ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION = "1.0.3" + NUGET_PRE;
+var ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+
 
 var DOC_VERSION = "2017-12-18";
 
@@ -78,8 +83,10 @@ var USE_MSBUILD_ON_MAC = true;
 
 var ARTIFACTS = new [] {
 	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", ARCH_CORE_COMMON_AAR_VERSION, ARCH_CORE_COMMON_NUGET_VERSION, "1.0.0.0", true) { PathPrefix = "arch-core/" },
+	new ArtifactInfo (ARCH_CORE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Core.Runtime", ARCH_CORE_RUNTIME_AAR_VERSION, ARCH_CORE_RUNTIME_NUGET_VERSION, "1.0.0.0") { PathPrefix = "arch-core/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", ARCH_LIFECYCLE_COMMON_AAR_VERSION, ARCH_LIFECYCLE_COMMON_NUGET_VERSION, "1.0.0.0", true) { PathPrefix = "arch-lifecycle/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", ARCH_LIFECYCLE_RUNTIME_AAR_VERSION, ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION, "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "extensions", "Xamarin.Android.Arch.Lifecycle.Extensions", ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION, ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION, "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
 
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -289,8 +296,10 @@ Task ("externals")
 
 	// Fix naming for some of the arch libraries that have duplicate names of each other
 	MoveFile ("./externals/arch-core/common.jar", "./externals/arch-core/arch-core-common.jar");
+	MoveFile ("./externals/arch-core/runtime.aar", "./externals/arch-core/arch-core-runtime.aar");
 	MoveFile ("./externals/arch-lifecycle/common.jar", "./externals/arch-lifecycle/arch-lifecycle-common.jar");
 	MoveFile ("./externals/arch-lifecycle/runtime.aar", "./externals/arch-lifecycle/arch-lifecycle-runtime.aar");
+	MoveFile ("./externals/arch-lifecycle/extensions.aar", "./externals/arch-lifecycle/arch-lifecycle-extensions.aar");
 });
 
 Task ("diff")
@@ -454,7 +463,24 @@ Task ("ci-setup")
 	}
 });
 
+Task ("component-setup")
+	.Does (() =>
+{
+	var yamls = GetFiles ("./**/component/component.template.yaml");
+
+	foreach (var yaml in yamls) {
+		var manifestTxt = FileReadText (yaml)
+			.Replace ("$nuget-version$", NUGET_VERSION)
+			.Replace ("$version$", COMPONENT_VERSION);
+
+		var newYaml = yaml.GetDirectory ().CombineWithFilePath ("component.yaml");
+
+		FileWriteText (newYaml, manifestTxt);
+	}
+});
+
 Task ("component-docs")
+	.IsDependentOn ("component-setup")
 	.Does (() =>
 {
 	var gettingStartedTemplates = new Dictionary<string, string> ();

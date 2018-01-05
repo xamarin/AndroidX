@@ -39,7 +39,7 @@ The build script for this project uses [Cake](http://cakebuild.net).  To run the
 
 **Mac**:
 ```
-sh build.sh --target libs
+sh build.sh --target=libs
 ```
 
 **Windows (experimental support only)**:

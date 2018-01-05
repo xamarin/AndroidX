@@ -5,7 +5,7 @@ using Android.App;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("Xamarin.Android.Support.Transition")]
+[assembly: AssemblyTitle("Xamarin.Android.Arch.Core.Runtime")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany ("Microsoft Corporation")]
@@ -25,9 +25,6 @@ using Android.App;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-[assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
-[assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
-[assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
 
 [assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
 [assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
