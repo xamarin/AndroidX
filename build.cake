@@ -69,7 +69,7 @@ if (!IsRunningOnWindows())
 var ARTIFACTS = new [] {
 	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0", true) { PathPrefix = "arch-core/" },
 	new ArtifactInfo (ARCH_CORE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Core.Runtime", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-core/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.1", "1.0.1", "1.0.1.0", true) { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.3", "1.0.3", "1.0.3.0", true) { PathPrefix = "arch-lifecycle/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.3", "1.0.3", "1.0.3.0") { PathPrefix = "arch-lifecycle/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "extensions", "Xamarin.Android.Arch.Lifecycle.Extensions", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
 
