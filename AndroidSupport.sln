@@ -76,7 +76,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-Utils", "support-core-utils\source\Core-Utils.csproj", "{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Content", "support-content\source\Content.csproj", "{F38426DC-DF6F-4FB3-8E9B-1F2E2BBEB554}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Core.Runtime", "arch-core\runtime\source\Arch.Core.Runtime.csproj", "{4C9E1C1E-09C3-469C-B3C2-79651DF13871}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Extensions", "arch-lifecycle\extensions\source\Arch.Lifecycle.Extensions.csproj", "{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}"
 EndProject
 Global

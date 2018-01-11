@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="arch-core/common/nuget/Xamarin.Android.Arch.Core.Runtime.targets" target="build/MonoAndroid80" />
+    <file src="arch-core/runtime/nuget/Xamarin.Android.Arch.Core.Runtime.targets" target="build/MonoAndroid80" />
 
     <file src="output/Xamarin.Android.Arch.Core.Runtime.dll" target="lib/MonoAndroid80" />
 
