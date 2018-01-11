@@ -13,7 +13,7 @@
     <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865381</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/v17-leanback_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid80">
+      <group targetFramework="MonoAndroid81">
         <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="[$version$]" />
         <!-- Support V4 -->
         <dependency id="Xamarin.Android.Support.Compat" version="[$version$]" />
@@ -25,8 +25,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="leanback-v17/nuget/Xamarin.Android.Support.v17.Leanback.targets" target="build/MonoAndroid80" />
-    <file src="output/Xamarin.Android.Support.v17.Leanback.dll" target="lib/MonoAndroid80" />
+    <file src="leanback-v17/nuget/Xamarin.Android.Support.v17.Leanback.targets" target="build/MonoAndroid81" />
+    <file src="output/Xamarin.Android.Support.v17.Leanback.dll" target="lib/MonoAndroid81" />
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>
