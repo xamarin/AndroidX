@@ -41,7 +41,7 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_PRE = "-preview2";
+var NUGET_PRE = "";
 
 var NUGET_VERSION = "27.0.2" + NUGET_PRE;
 var COMPONENT_VERSION = "27.0.2.0";
