@@ -9,4 +9,9 @@
 
 	<attr path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissLayout']" name="visibility">public</attr>
 
+	<!-- Making SwipeDismissLayout public made some private interfaces public which is always bad, so remove them -->
+	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnDismissedListener']" />
+	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnPreSwipeListener']" />
+	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnSwipeProgressChangedListener']" />
+
 </metadata>
