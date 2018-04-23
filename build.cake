@@ -62,7 +62,6 @@ var ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION = "1.0.0" + NUGET_PRE;
 
 var DOC_VERSION = "2017-12-18";
 
-
 var SUPPORT_PKG_NAME = "com.android.support";
 var ARCH_LIFECYCLE_PKG_NAME = "android.arch.lifecycle";
 var ARCH_CORE_PKG_NAME = "android.arch.core";
