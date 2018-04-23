@@ -21,6 +21,12 @@ using Java.Interop;
 
 [assembly: AssemblyVersion("1.0.0")]
 
+[assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
+[assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
+[assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
+
+[assembly: AssemblyInformationalVersion ("{NUGET_VERSION}")]
+
 // The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.
 
@@ -31,6 +37,4 @@ using Java.Interop;
 // only for the compilation stage, so we don't need to actually package it in the app
 [assembly: DoNotPackage ("support-annotations.jar")]
 
-[assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
-[assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
-[assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
+[assembly: Android.LinkerSafe]

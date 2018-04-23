@@ -24,6 +24,10 @@ using Android.App;
 [assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
 [assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
 
+[assembly: AssemblyInformationalVersion ("{NUGET_VERSION}")]
+
+[assembly: Android.LinkerSafe]
+
 // The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.
 

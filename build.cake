@@ -41,10 +41,26 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_VERSION = "26.1.0.2";
-var COMPONENT_VERSION = "26.1.0.0";
-var AAR_VERSION = "26.1.0";
-var DOC_VERSION = "2017-10-02";
+var NUGET_PRE = "";
+
+var NUGET_VERSION = "27.0.2" + NUGET_PRE;
+var COMPONENT_VERSION = "27.0.2.0";
+var AAR_VERSION = "27.0.2";
+
+var ARCH_CORE_COMMON_AAR_VERSION = "1.0.0";
+var ARCH_CORE_RUNTIME_AAR_VERSION = "1.0.0";
+var ARCH_LIFECYCLE_COMMON_AAR_VERSION = "1.0.3";
+var ARCH_LIFECYCLE_RUNTIME_AAR_VERSION = "1.0.3";
+var ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION = "1.0.0";
+
+var ARCH_CORE_COMMON_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+var ARCH_CORE_RUNTIME_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+var ARCH_LIFECYCLE_COMMON_NUGET_VERSION = "1.0.3" + NUGET_PRE;
+var ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION = "1.0.3" + NUGET_PRE;
+var ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+
+
+var DOC_VERSION = "2017-12-18";
 
 var SUPPORT_PKG_NAME = "com.android.support";
 var ARCH_LIFECYCLE_PKG_NAME = "android.arch.lifecycle";
@@ -52,26 +68,24 @@ var ARCH_CORE_PKG_NAME = "android.arch.core";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r26-macosx.zip";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r27-macosx.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
-var RENDERSCRIPT_FOLDER = "android-8.0.0";
+var RENDERSCRIPT_FOLDER = "android-8.1.0";
+var REFERENCE_DOCS_URL = "https://developer.android.com/reference/";
+var REFERENCE_DOCS_PACKAGELIST_URL = REFERENCE_DOCS_URL + "android/support/package-list";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/25.4.0.2/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/26.1.0/api-info.xml";
 
-var CPU_COUNT = System.Environment.ProcessorCount;
+var CPU_COUNT = 1;
 var USE_MSBUILD_ON_MAC = true;
 
-// MSBUILD has issues on *nix/osx with a different CPU Count being specified
-if (!IsRunningOnWindows())
-	CPU_COUNT = 1;
-
 var ARTIFACTS = new [] {
-	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", "1.0.0", "1.0.0", "1.0.0.0", true) { PathPrefix = "arch-core/" },
-	new ArtifactInfo (ARCH_CORE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Core.Runtime", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-core/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", "1.0.3", "1.0.3", "1.0.3.0", true) { PathPrefix = "arch-lifecycle/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", "1.0.3", "1.0.3", "1.0.3.0") { PathPrefix = "arch-lifecycle/" },
-	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "extensions", "Xamarin.Android.Arch.Lifecycle.Extensions", "1.0.0", "1.0.0", "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_CORE_PKG_NAME, "common", "Xamarin.Android.Arch.Core.Common", ARCH_CORE_COMMON_AAR_VERSION, ARCH_CORE_COMMON_NUGET_VERSION, "1.0.0.0", true) { PathPrefix = "arch-core/" },
+	new ArtifactInfo (ARCH_CORE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Core.Runtime", ARCH_CORE_RUNTIME_AAR_VERSION, ARCH_CORE_RUNTIME_NUGET_VERSION, "1.0.0.0") { PathPrefix = "arch-core/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "common", "Xamarin.Android.Arch.Lifecycle.Common", ARCH_LIFECYCLE_COMMON_AAR_VERSION, ARCH_LIFECYCLE_COMMON_NUGET_VERSION, "1.0.3.0", true) { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", ARCH_LIFECYCLE_RUNTIME_AAR_VERSION, ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION, "1.0.3.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "extensions", "Xamarin.Android.Arch.Lifecycle.Extensions", ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION, ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION, "1.0.0.0") { PathPrefix = "arch-lifecycle/" },
 
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-v13", "Xamarin.Android.Support.v13", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -92,6 +106,7 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (SUPPORT_PKG_NAME, "animated-vector-drawable", "Xamarin.Android.Support.Animated.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-vector-drawable", "Xamarin.Android.Support.Vector.Drawable", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-compat", "Xamarin.Android.Support.Compat", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
+	new ArtifactInfo (SUPPORT_PKG_NAME, "support-content", "Xamarin.Android.Support.Content", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-core-utils", "Xamarin.Android.Support.Core.Utils", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-core-ui", "Xamarin.Android.Support.Core.UI", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
 	new ArtifactInfo (SUPPORT_PKG_NAME, "support-dynamic-animation", "Xamarin.Android.Support.Dynamic.Animation", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),
@@ -128,6 +143,7 @@ class ArtifactInfo
 		NuGetVersion = nugetVersion;
 		ComponentVersion = componentVersion;
 		IsJar = isJar;
+		PathPrefix = string.Empty;
 	}
 
 	public string Package { get; set; }
@@ -141,8 +157,10 @@ class ArtifactInfo
 }
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
-if (IsRunningOnWindows ())
-	MONODROID_PATH = MakeAbsolute (new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.ProgramFilesX86)).Combine ("Reference Assemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION +"/")).FullPath;
+if (IsRunningOnWindows ()) {
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
+}
 
 var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
 if (IsRunningOnWindows ()) {
@@ -154,6 +172,9 @@ if (IsRunningOnWindows ()) {
 	else
 		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
 }
+
+Information ("MONODROID_PATH: {0}", MONODROID_PATH);
+Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
 
 var nugetInfos = ARTIFACTS.Select (a => new NuGetInfo { NuSpec = "./" + a.PathPrefix + a.ArtifactId + "/nuget/" + a.NugetId + ".nuspec", Version = a.NuGetVersion, RequireLicenseAcceptance = true }).ToList ();
 nugetInfos.Add (new NuGetInfo { NuSpec = "./support-v4/nuget/Xamarin.Android.Support.v4.nuspec", Version = NUGET_VERSION, RequireLicenseAcceptance = true });
@@ -424,6 +445,32 @@ Task ("nuget-setup")
 	}
 });
 
+Task ("ci-setup")
+	.WithCriteria (!BuildSystem.IsLocalBuild)
+	.Does (() => 
+{
+	var buildCommit = "DEV";
+	var buildNumber = "DEBUG";
+	var buildTimestamp = DateTime.UtcNow.ToString ();
+
+	if (BuildSystem.IsRunningOnJenkins) {
+		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
+		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
+	} else if (BuildSystem.IsRunningOnVSTS) {
+		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
+		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
+	}
+
+	foreach (var art in ARTIFACTS) {
+		var glob = "./" + art.PathPrefix + art.ArtifactId + "/**/source/**/AssemblyInfo.cs";
+
+		ReplaceTextInFiles(glob, "{NUGET_VERSION}", art.NuGetVersion);
+		ReplaceTextInFiles(glob, "{BUILD_COMMIT}", buildCommit);
+		ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
+		ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
+	}
+});
+
 Task ("component-setup")
 	.Does (() =>
 {
@@ -570,15 +617,15 @@ Task ("droiddocs")
 
 	if (!FileExists(compressedDocsFile)) {
 		if (IsRunningOnWindows ())
-			StartProcess ("util/droiddocs.exe", "scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+			StartProcess ("util/droiddocs.exe", "scrape --out ./docs --url  " + REFERENCE_DOCS_URL + " --package-list-source " + REFERENCE_DOCS_PACKAGELIST_URL + " --package-filter \"android.support\"");
 		else
-			StartProcess ("mono", "util/droiddocs.exe scrape --out ./docs --url  https://developer.android.com/reference/ --package-filter \"android.support\"");
+			StartProcess ("mono", "util/droiddocs.exe scrape --out ./docs --url  " + REFERENCE_DOCS_URL + " --package-list-source " + REFERENCE_DOCS_PACKAGELIST_URL + " --package-filter \"android.support\"");
 
 		// Scraper misses a few files we require
 		EnsureDirectoryExists("./docs/reference");
-		DownloadFile("https://developer.android.com/reference/classes.html", "./docs/reference/classes.html");
+		DownloadFile(REFERENCE_DOCS_URL + "classes.html", "./docs/reference/classes.html");
 		CopyFile ("./docs/reference/classes.html", "./docs/reference/index.html");
-		DownloadFile("https://developer.android.com/reference/packages.html", "./docs/reference/packages.html");
+		DownloadFile(REFERENCE_DOCS_URL + "packages.html", "./docs/reference/packages.html");
 		
 
 		ZipCompress ("./docs", compressedDocsFile);
@@ -594,27 +641,6 @@ Task ("droiddocs")
 		else
 			StartProcess ("mono", "util/droiddocs.exe transform --out ./Metadata.generated.xml --type Metadata --dir ./docs --prefix \"/reference/\" --package-filter \"android.support\"");
 	}
-});
-
-Task ("ci-setup")
-	.WithCriteria (!BuildSystem.IsLocalBuild)
-	.Does (() => 
-{
-	var buildCommit = "DEV";
-	var buildNumber = "DEBUG";
-	var buildTimestamp = DateTime.UtcNow.ToString ();
-
-	if (BuildSystem.IsRunningOnJenkins) {
-		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
-		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
-	} else if (BuildSystem.IsRunningOnVSTS) {
-		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
-		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
-	}
-
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_COMMIT}", buildCommit);
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_NUMBER}", buildNumber);
-	ReplaceTextInFiles("./**/source/**/AssemblyInfo.cs", "{BUILD_TIMESTAMP}", buildTimestamp);
 });
 
 Task ("clean")

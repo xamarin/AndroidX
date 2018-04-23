@@ -26,6 +26,11 @@ using Java.Interop;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
+
 [assembly: AssemblyMetadata ("BUILD_COMMIT",      "{BUILD_COMMIT}")]
 [assembly: AssemblyMetadata ("BUILD_NUMBER",    "{BUILD_NUMBER}")]
 [assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
+
+[assembly: AssemblyInformationalVersion ("{NUGET_VERSION}")]
+
+[assembly: Android.LinkerSafe]

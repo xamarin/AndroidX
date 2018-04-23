@@ -13,14 +13,14 @@
     <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865381</licenseUrl>
     <iconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/support-emoji-bundled_128x128.png</iconUrl>
     <dependencies>
-      <group targetFramework="MonoAndroid80">
+      <group targetFramework="MonoAndroid81">
         <dependency id="Xamarin.Android.Support.Emoji" version="[$version$]" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="support-emoji-bundled/nuget/Xamarin.Android.Support.Emoji.Bundled.targets" target="build/MonoAndroid80" />
-    <file src="output/Xamarin.Android.Support.Emoji.Bundled.dll" target="lib/MonoAndroid80" />
+    <file src="support-emoji-bundled/nuget/Xamarin.Android.Support.Emoji.Bundled.targets" target="build/MonoAndroid81" />
+    <file src="output/Xamarin.Android.Support.Emoji.Bundled.dll" target="lib/MonoAndroid81" />
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>

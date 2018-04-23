@@ -68,9 +68,9 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="..\..\..\externals\arch-core\arch-core-runtime.aar">
+    <LibraryProjectZip Include="..\..\..\externals\arch-core\arch-core-runtime.aar">
       <Link>arch-core-runtime.aar</Link>
-    </EmbeddedJar>
+    </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   
