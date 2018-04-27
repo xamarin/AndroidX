@@ -170,5 +170,30 @@
 
 	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax.FloatParallax']/method[@name='addProperty' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
 	<remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax.IntParallax']/method[@name='addProperty' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v17.leanback.widget.GuidedAction'] and parameter[2][@type='android.support.v17.leanback.widget.GuidedAction']]/parameter[1]"
+        name="managedType">
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v17.leanback.widget.GuidedAction'] and parameter[2][@type='android.support.v17.leanback.widget.GuidedAction']]/parameter[2]"
+        name="managedType">
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v17.leanback.widget.GuidedAction'] and parameter[2][@type='android.support.v17.leanback.widget.GuidedAction']]/parameter[1]"
+        name="managedType">
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v17.leanback.widget.GuidedAction'] and parameter[2][@type='android.support.v17.leanback.widget.GuidedAction']]/parameter[2]"
+        name="managedType">
+        Java.Lang.Object
+    </attr>
+
+
+    
 </metadata>
  
