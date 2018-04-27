@@ -120,5 +120,7 @@
 
   <remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='AbsActionBarView']/field[@name='mActionMenuPresenter']" />-->
 
-	
+
+  <remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='MenuPopupWindow.MenuDropDownListView']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" ></remove-node> 
+    
 </metadata>

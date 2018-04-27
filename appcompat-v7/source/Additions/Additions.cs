@@ -313,54 +313,55 @@ namespace Android.Support.V7.Widget
     }
 
 
+// mc++ begin
+//    public partial class ListViewCompat
+//    {
+//        public override Android.Graphics.Drawables.Drawable Selector {
+//            set {
+//                SetSelector (value);
+//            }
+//            get {
+//                return base.Selector;
+//            }
+//        }
 
-    public partial class ListViewCompat
-    {
-        public override Android.Graphics.Drawables.Drawable Selector {
-            set {
-                SetSelector (value);
-            }
-            get {
-                return base.Selector;
-            }
-        }
+//        static Delegate cb_setSelector_Landroid_graphics_drawable_Drawable_;
+//#pragma warning disable 0169
+//        static Delegate GetSetSelector_Landroid_graphics_drawable_Drawable_Handler ()
+//        {
+//            if (cb_setSelector_Landroid_graphics_drawable_Drawable_ == null)
+//                cb_setSelector_Landroid_graphics_drawable_Drawable_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>)n_SetSelector_Landroid_graphics_drawable_Drawable_);
+//            return cb_setSelector_Landroid_graphics_drawable_Drawable_;
+//        }
 
-        static Delegate cb_setSelector_Landroid_graphics_drawable_Drawable_;
-#pragma warning disable 0169
-        static Delegate GetSetSelector_Landroid_graphics_drawable_Drawable_Handler ()
-        {
-            if (cb_setSelector_Landroid_graphics_drawable_Drawable_ == null)
-                cb_setSelector_Landroid_graphics_drawable_Drawable_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>)n_SetSelector_Landroid_graphics_drawable_Drawable_);
-            return cb_setSelector_Landroid_graphics_drawable_Drawable_;
-        }
+//        static void n_SetSelector_Landroid_graphics_drawable_Drawable_ (IntPtr jnienv, IntPtr native__this, IntPtr native_sel)
+//        {
+//            global::Android.Support.V7.Widget.ListViewCompat __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ListViewCompat> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//            global::Android.Graphics.Drawables.Drawable sel = global::Java.Lang.Object.GetObject<global::Android.Graphics.Drawables.Drawable> (native_sel, JniHandleOwnership.DoNotTransfer);
+//            __this.SetSelector (sel);
+//        }
+//#pragma warning restore 0169
 
-        static void n_SetSelector_Landroid_graphics_drawable_Drawable_ (IntPtr jnienv, IntPtr native__this, IntPtr native_sel)
-        {
-            global::Android.Support.V7.Widget.ListViewCompat __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ListViewCompat> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-            global::Android.Graphics.Drawables.Drawable sel = global::Java.Lang.Object.GetObject<global::Android.Graphics.Drawables.Drawable> (native_sel, JniHandleOwnership.DoNotTransfer);
-            __this.SetSelector (sel);
-        }
-#pragma warning restore 0169
+    //    static IntPtr id_setSelector_Landroid_graphics_drawable_Drawable_;
+    //    // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ListViewCompat']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"
+    //    [Register ("setSelector", "(Landroid/graphics/drawable/Drawable;)V", "GetSetSelector_Landroid_graphics_drawable_Drawable_Handler")]
+    //    public unsafe void SetSelector (global::Android.Graphics.Drawables.Drawable sel)
+    //    {
+    //        if (id_setSelector_Landroid_graphics_drawable_Drawable_ == IntPtr.Zero)
+    //            id_setSelector_Landroid_graphics_drawable_Drawable_ = JNIEnv.GetMethodID (class_ref, "setSelector", "(Landroid/graphics/drawable/Drawable;)V");
+    //        try {
+    //            JValue* __args = stackalloc JValue [1];
+    //            __args [0] = new JValue (sel);
 
-        static IntPtr id_setSelector_Landroid_graphics_drawable_Drawable_;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ListViewCompat']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"
-        [Register ("setSelector", "(Landroid/graphics/drawable/Drawable;)V", "GetSetSelector_Landroid_graphics_drawable_Drawable_Handler")]
-        public unsafe void SetSelector (global::Android.Graphics.Drawables.Drawable sel)
-        {
-            if (id_setSelector_Landroid_graphics_drawable_Drawable_ == IntPtr.Zero)
-                id_setSelector_Landroid_graphics_drawable_Drawable_ = JNIEnv.GetMethodID (class_ref, "setSelector", "(Landroid/graphics/drawable/Drawable;)V");
-            try {
-                JValue* __args = stackalloc JValue [1];
-                __args [0] = new JValue (sel);
-
-                if (GetType () == ThresholdType)
-                    JNIEnv.CallVoidMethod (((global::Java.Lang.Object)this).Handle, id_setSelector_Landroid_graphics_drawable_Drawable_, __args);
-                else
-                    JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setSelector", "(Landroid/graphics/drawable/Drawable;)V"), __args);
-            } finally {
-            }
-        }
-    }
+    //            if (GetType () == ThresholdType)
+    //                JNIEnv.CallVoidMethod (((global::Java.Lang.Object)this).Handle, id_setSelector_Landroid_graphics_drawable_Drawable_, __args);
+    //            else
+    //                JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setSelector", "(Landroid/graphics/drawable/Drawable;)V"), __args);
+    //        } finally {
+    //        }
+    //    }
+    //}
+    // mc++ end
 
 
 //    public partial class ScrollingTabContainerView
