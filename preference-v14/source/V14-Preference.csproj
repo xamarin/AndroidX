@@ -124,16 +124,6 @@
       <Link>preference-v14.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
-    <!--
-    -->
-    <ItemGroup>
-        <Compile Include="obj\Debug\generated\src\**\*.cs" />
-        <Compile Include="obj\Release\generated\src\**\*.cs" />
-        <None Include="obj\Debug\api.xml" />
-        <None Include="obj\Release\api.xml" />
-    </ItemGroup>
 
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  
-
 </Project>
