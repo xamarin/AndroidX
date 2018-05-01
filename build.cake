@@ -5,7 +5,6 @@
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 #tool nuget:?package=NUnit.Runners&version=2.6.4
 #tool nuget:?package=Paket
-#tool nuget:?package=vswhere
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.0.0
@@ -155,7 +154,7 @@ class ArtifactInfo
 
 var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
 if (IsRunningOnWindows ()) {
-	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { /* Requires = "Component.Xamarin"*/ });
 	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
 }
 
