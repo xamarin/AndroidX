@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Constraint.Layout.Solver">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Constraint.Layout.Solver.1.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.Solver.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Constraint.Layout">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Constraint.Layout.1.1.0\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,10 +89,6 @@
       <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
       <Name>Core-UI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\percent\source\Percent.csproj">
-      <Project>{A557F298-10FD-4F47-8C96-20387E2AA741}</Project>
-      <Name>Percent</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\recyclerview-v7\source\V7-RecyclerView.csproj">
       <Project>{514ED7A8-0F25-4F61-B7B3-A4A652FD7192}</Project>
       <Name>V7-RecyclerView</Name>
@@ -97,7 +99,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj">
       <Project>{25CE44A9-FA51-4468-952F-21A13F066384}</Project>
-      <Name>Arch.Lifecycle.Runtime</Name>
+      <Name>Arch.Lifecycle.LiveData.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\arch-lifecycle\common\source\Arch.Lifecycle.Common.csproj">
       <Project>{1489A4D8-8D13-4113-BD73-3025CDE3E3A0}</Project>

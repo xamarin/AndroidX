@@ -71,7 +71,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Core.Common", "arch-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Common", "arch-lifecycle\common\source\Arch.Lifecycle.Common.csproj", "{1489A4D8-8D13-4113-BD73-3025CDE3E3A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Runtime", "arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj", "{25CE44A9-FA51-4468-952F-21A13F066384}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.LiveData.Core", "arch-lifecycle\livedata-core\source\Arch.Lifecycle.LiveData.Core.csproj", "{25CE44A9-FA51-4468-952F-21A13F066384}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-Utils", "support-core-utils\source\Core-Utils.csproj", "{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}"
 EndProject
@@ -80,6 +80,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Core.Runtime", "arch-core\runtime\source\Arch.Core.Runtime.csproj", "{4C9E1C1E-09C3-469C-B3C2-79651DF13871}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.Extensions", "arch-lifecycle\extensions\source\Arch.Lifecycle.Extensions.csproj", "{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arch.Lifecycle.ViewModel", "arch-lifecycle\viewmodel\source\Arch.Lifecycle.ViewModel.csproj", "{ACAF71C0-C260-410E-B572-1C28F6178CBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,10 @@ Global
 		{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAF71C0-C260-410E-B572-1C28F6178CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAF71C0-C260-410E-B572-1C28F6178CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAF71C0-C260-410E-B572-1C28F6178CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAF71C0-C260-410E-B572-1C28F6178CBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4C9E1C1E-09C3-469C-B3C2-79651DF13870} = {3AC04D8E-9E4C-401F-AED5-239F226BF9C2}
@@ -250,5 +256,6 @@ Global
 		{25CE44A9-FA51-4468-952F-21A13F066384} = {3AC04D8E-9E4C-401F-AED5-239F226BF9C2}
 		{4C9E1C1E-09C3-469C-B3C2-79651DF13871} = {3AC04D8E-9E4C-401F-AED5-239F226BF9C2}
 		{8DFA4E1A-7DF0-4FC5-A8F3-8E6E30E3DA70} = {3AC04D8E-9E4C-401F-AED5-239F226BF9C2}
+		{ACAF71C0-C260-410E-B572-1C28F6178CBB} = {3AC04D8E-9E4C-401F-AED5-239F226BF9C2}
 	EndGlobalSection
 EndGlobal

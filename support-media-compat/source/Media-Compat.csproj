@@ -83,7 +83,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj">
       <Project>{25CE44A9-FA51-4468-952F-21A13F066384}</Project>
-      <Name>Arch.Lifecycle.Runtime</Name>
+      <Name>Arch.Lifecycle.LiveData.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

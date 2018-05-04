@@ -82,10 +82,6 @@
       <Project>{1489A4D8-8D13-4113-BD73-3025CDE3E3A0}</Project>
       <Name>Arch.Lifecycle.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj">
-      <Project>{25CE44A9-FA51-4468-952F-21A13F066384}</Project>
-      <Name>Arch.Lifecycle.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\support-annotations\source\Annotations.csproj">
       <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
       <Name>Annotations</Name>
@@ -93,6 +89,14 @@
     <ProjectReference Include="..\..\support-core-utils\source\Core-Utils.csproj">
       <Project>{BEABEB36-8FFE-4CD9-B6E6-D67686C8BB98}</Project>
       <Name>Core-Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\arch-lifecycle\livedata-core\source\Arch.Lifecycle.LiveData.Core.csproj">
+      <Project>{25CE44A9-FA51-4468-952F-21A13F066384}</Project>
+      <Name>Arch.Lifecycle.LiveData.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\arch-lifecycle\viewmodel\source\Arch.Lifecycle.ViewModel.csproj">
+      <Project>{ACAF71C0-C260-410E-B572-1C28F6178CBB}</Project>
+      <Name>Arch.Lifecycle.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -108,5 +112,5 @@
     </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-  
+    
 </Project>

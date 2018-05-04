@@ -111,9 +111,13 @@
       <Project>{1489A4D8-8D13-4113-BD73-3025CDE3E3A0}</Project>
       <Name>Arch.Lifecycle.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj">
-      <Project>{25CE44A9-FA51-4468-952F-21A13F066384}</Project>
-      <Name>Arch.Lifecycle.Runtime</Name>
+    <ProjectReference Include="..\..\arch-lifecycle\viewmodel\source\Arch.Lifecycle.ViewModel.csproj">
+      <Project>{ACAF71C0-C260-410E-B572-1C28F6178CBB}</Project>
+      <Name>Arch.Lifecycle.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\arch-lifecycle\livedata-core\source\Arch.Lifecycle.LiveData.Core.csproj">
+      <Project>{D2F466C7-CEE0-43FE-938C-7961CF9AB483}</Project>
+      <Name>Arch.Lifecycle.LiveData.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -128,4 +132,14 @@
     </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+    <!--
+    <ItemGroup>
+        <Compile Include="obj\Debug\generated\src\*.cs" />
+        <Compile Include="obj\Release\generated\src\*.cs" />
+        <None Include="obj\Debug\api.xml" />
+        <None Include="obj\Release\api.xml" />
+    </ItemGroup>    
+    -->
+
+    
 </Project>

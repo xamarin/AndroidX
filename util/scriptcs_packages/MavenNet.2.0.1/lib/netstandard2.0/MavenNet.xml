@@ -1,0 +1,3468 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MavenNet</name>
+    </assembly>
+    <members>
+        <member name="T:MavenNet.Models.Project">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;project&amp;gt;&lt;/code&gt; element is the root of the descriptor.
+                   The following table lists all of the possible child elements.
+                   
+                 </para>
+            <para>3.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;project&amp;gt;&lt;/code&gt; element is the root of the descriptor.
+                   The following table lists all of the possible child elements.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.ModelVersion">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Declares to which version of project descriptor this POM conforms.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Parent">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The location of the parent project, if one exists. Values from the parent
+                       project will be the default for this project if they are left unspecified. The location
+                       is given as a group ID, artifact ID and version.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.GroupId">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       A universally unique identifier for a project. It is normal to
+                       use a fully-qualified package name to distinguish it from other
+                       projects with a similar name (eg. &lt;code&gt;org.apache.maven&lt;/code&gt;).
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.ArtifactId">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The identifier for this artifact that is unique within the group given by the
+                       group ID. An artifact is something that is either produced or used by a project.
+                       Examples of artifacts produced by Maven for a project include: JARs, source and binary
+                       distributions, and WARs.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The current version of the artifact produced by this project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Packaging">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The type of artifact this project produces, for example &lt;code&gt;jar&lt;/code&gt;
+                         &lt;code&gt;war&lt;/code&gt;
+                         &lt;code&gt;ear&lt;/code&gt;
+                         &lt;code&gt;pom&lt;/code&gt;.
+                       Plugins can create their own packaging, and
+                       therefore their own packaging types,
+                       so this list does not contain all possible types.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Name">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The full name of the project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Description">
+            <summary>
+            <para>3.0.0+</para>
+            <para>A detailed description of the project, used by Maven whenever it needs to
+                       describe the project, such as on the web site. While this element can be specified as
+                       CDATA to enable the use of HTML tags within the description, it is discouraged to allow
+                       plain text representation. If you need to modify the index page of the generated web
+                       site, you are able to specify your own instead of adjusting this text.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Url">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The URL to the project's homepage.
+                       &lt;br /&gt;&lt;b&gt;Default value is&lt;/b&gt;: parent value [+ path adjustment] + artifactId
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.InceptionYear">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The year of the project's inception, specified with 4 digits. This value is
+                       used when generating copyright notices as well as being informational.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Organization">
+            <summary>
+            <para>3.0.0+</para>
+            <para>This element describes various attributes of the organization to which the
+                       project belongs. These attributes are utilized when documentation is created (for
+                       copyright notices and links).</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Licenses">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       This element describes all of the licenses for this project.
+                       Each license is described by a &lt;code&gt;license&lt;/code&gt; element, which
+                       is then described by additional elements.
+                       Projects should only list the license(s) that applies to the project
+                       and not the licenses that apply to dependencies.
+                       If multiple licenses are listed, it is assumed that the user can select
+                       any of them, not that they must accept all.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.LicensesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Licenses-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Licenses collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Project.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Project" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Project" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Developers">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Describes the committers of a project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.DevelopersSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Developers-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Developers collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Contributors">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Describes the contributors to a project that are not yet committers.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.ContributorsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Contributors-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Contributors collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.MailingLists">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Contains information about a project's mailing lists.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.MailingListsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MailingLists-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the MailingLists collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Prerequisites">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Describes the prerequisites in the build environment for this project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Modules">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The modules (sometimes called subprojects) to build as a part of this
+                       project. Each module listed is a relative path to the directory containing the module.
+                       To be consistent with the way default urls are calculated from parent, it is recommended
+                       to have module names match artifact ids.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.ModulesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Modules-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Modules collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Scm">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Specification for the SCM used by the project, such as CVS, Subversion, etc.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.IssueManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The project's issue management system information.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.CiManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The project's continuous integration information.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.DistributionManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Distribution information for a project that enables deployment of the site
+                       and artifacts to remote web servers and repositories respectively.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Properties">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Properties that can be used throughout the POM as a substitution, and
+                       are used as filters in resources if enabled.
+                       The format is &lt;code&gt;&amp;lt;name&amp;gt;value&amp;lt;/name&amp;gt;&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.DependencyManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Default dependency information for projects that inherit from this one. The
+                       dependencies in this section are not immediately resolved. Instead, when a POM derived
+                       from this one declares a dependency described by a matching groupId and artifactId, the
+                       version and other values from this section are used for that dependency if they were not
+                       already specified.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Dependencies">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       This element describes all of the dependencies associated with a
+                       project.
+                       These dependencies are used to construct a classpath for your
+                       project during the build process. They are automatically downloaded from the
+                       repositories defined in this project.
+                       See &lt;a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html"&gt;the
+                       dependency mechanism&lt;/a&gt; for more information.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.DependenciesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependencies-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependencies collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Repositories">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The lists of the remote repositories for discovering dependencies and
+                       extensions.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.RepositoriesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Repositories-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Repositories collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.PluginRepositories">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The lists of the remote repositories for discovering plugins for builds and
+                       reports.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.PluginRepositoriesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PluginRepositories-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the PluginRepositories collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Build">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Information required to build the project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Reports">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       &lt;b&gt;Deprecated&lt;/b&gt;. Now ignored by Maven.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Reporting">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       This element includes the specification of report plugins to use
+                       to generate the reports on the Maven-generated site.
+                       These reports will be run when a user executes &lt;code&gt;mvn site&lt;/code&gt;.
+                       All of the reports will be included in the navigation bar for browsing.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.Profiles">
+            <summary>
+            <para>4.0.0+</para>
+            <para>A listing of project-local build profiles which will modify the build process
+                       when activated.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Project.ProfilesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Profiles-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Profiles collection is empty.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Parent">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;parent&amp;gt;&lt;/code&gt; element contains information required to locate the parent project from which
+                   this project will inherit from.
+                   &lt;strong&gt;Note:&lt;/strong&gt; The children of this element are not interpolated and must be given as literal values.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Parent.GroupId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The group id of the parent project to inherit from.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Parent.ArtifactId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The artifact id of the parent project to inherit from.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Parent.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The version of the parent project to inherit.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Parent.RelativePath">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The relative path of the parent &lt;code&gt;pom.xml&lt;/code&gt; file within the check out.
+                       If not specified, it defaults to &lt;code&gt;../pom.xml&lt;/code&gt;.
+                       Maven looks for the parent POM first in this location on
+                       the filesystem, then the local repository, and lastly in the remote repo.
+                       &lt;code&gt;relativePath&lt;/code&gt; allows you to select a different location,
+                       for example when your structure is flat, or deeper without an intermediate parent POM.
+                       However, the group ID, artifact ID and version are still required,
+                       and must match the file in the location given or it will revert to the repository for the POM.
+                       This feature is only for enhancing the development in a local checkout of that project.
+                       Set the value to an empty string in case you want to disable the feature and always resolve
+                       the parent POM from the repositories.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Organization">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Specifies the organization that produces this project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Organization.Name">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The full name of the organization.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Organization.Url">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The URL to the organization's home page.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelLicenses">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelLicenses.License">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelLicenses.LicenseSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die License-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the License collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelLicenses.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelLicenses" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelLicenses" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.License">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Describes the licenses for this project. This is used to generate the license
+                   page of the project's web site, as well as being taken into consideration in other reporting
+                   and validation. The licenses listed for the project are that of the project itself, and not
+                   of dependencies.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.License.Name">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The full legal name of the license.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.License.Url">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The official url for the license text.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.License.Distribution">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The primary method by which this project may be distributed.
+                       &lt;dl&gt;
+                         &lt;dt&gt;repo&lt;/dt&gt;
+                         &lt;dd&gt;may be downloaded from the Maven repository&lt;/dd&gt;
+                         &lt;dt&gt;manual&lt;/dt&gt;
+                         &lt;dd&gt;user must manually download and install the dependency.&lt;/dd&gt;
+                       &lt;/dl&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.License.Comments">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Addendum information pertaining to this license.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelDevelopers">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelDevelopers.Developer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelDevelopers.DeveloperSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Developer-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Developer collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelDevelopers.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelDevelopers" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelDevelopers" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Developer">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Information about one of the committers on this project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Id">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The unique ID of the developer in the SCM.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Name">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The full name of the contributor.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Email">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The email address of the contributor.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Url">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The URL for the homepage of the contributor.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Organization">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The organization to which the contributor belongs.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.OrganizationUrl">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The URL of the organization.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Roles">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The roles the contributor plays in the project. Each role is described by a
+                       &lt;code&gt;role&lt;/code&gt; element, the body of which is a role name. This can also be used to
+                       describe the contribution.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.RolesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Roles-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Roles collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Developer.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Developer" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Developer" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Timezone">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                         The timezone the contributor is in. Typically, this is a number in the range
+                         &lt;a href="http://en.wikipedia.org/wiki/UTC%E2%88%9212:00"&gt;-12&lt;/a&gt; to &lt;a href="http://en.wikipedia.org/wiki/UTC%2B14:00"&gt;+14&lt;/a&gt;
+                         or a valid time zone id like "America/Montreal" (UTC-05:00) or "Europe/Paris" (UTC+01:00).
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Developer.Properties">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Properties about the contributor, such as an instant messenger handle.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DeveloperRoles">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeveloperRoles.Role">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeveloperRoles.RoleSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Role-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Role collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.DeveloperRoles.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.DeveloperRoles" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.DeveloperRoles" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DeveloperProperties">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeveloperProperties.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeveloperProperties.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.DeveloperProperties.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.DeveloperProperties" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.DeveloperProperties" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelContributors">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelContributors.Contributor">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelContributors.ContributorSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Contributor-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Contributor collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelContributors.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelContributors" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelContributors" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Contributor">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Description of a person who has contributed to the project, but who does not have
+                   commit privileges. Usually, these contributions come in the form of patches submitted.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Name">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The full name of the contributor.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Email">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The email address of the contributor.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Url">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The URL for the homepage of the contributor.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Organization">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The organization to which the contributor belongs.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.OrganizationUrl">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The URL of the organization.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Roles">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The roles the contributor plays in the project. Each role is described by a
+                       &lt;code&gt;role&lt;/code&gt; element, the body of which is a role name. This can also be used to
+                       describe the contribution.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.RolesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Roles-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Roles collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Contributor.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Contributor" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Contributor" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Timezone">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                         The timezone the contributor is in. Typically, this is a number in the range
+                         &lt;a href="http://en.wikipedia.org/wiki/UTC%E2%88%9212:00"&gt;-12&lt;/a&gt; to &lt;a href="http://en.wikipedia.org/wiki/UTC%2B14:00"&gt;+14&lt;/a&gt;
+                         or a valid time zone id like "America/Montreal" (UTC-05:00) or "Europe/Paris" (UTC+01:00).
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Contributor.Properties">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Properties about the contributor, such as an instant messenger handle.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ContributorRoles">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ContributorRoles.Role">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ContributorRoles.RoleSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Role-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Role collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ContributorRoles.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ContributorRoles" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ContributorRoles" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ContributorProperties">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ContributorProperties.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ContributorProperties.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ContributorProperties.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ContributorProperties" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ContributorProperties" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelMailingLists">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelMailingLists.MailingList">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelMailingLists.MailingListSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die MailingList-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the MailingList collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelMailingLists.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelMailingLists" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelMailingLists" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.MailingList">
+            <summary>
+            <para>3.0.0+</para>
+            <para>This element describes all of the mailing lists associated with a project. The
+                   auto-generated site references this information.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.Name">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The name of the mailing list.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.Subscribe">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The email address or link that can be used to subscribe to
+                       the mailing list.  If this is an email address, a
+                       &lt;code&gt;mailto:&lt;/code&gt; link will automatically be created
+                       when the documentation is created.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.Unsubscribe">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The email address or link that can be used to unsubscribe to
+                       the mailing list.  If this is an email address, a
+                       &lt;code&gt;mailto:&lt;/code&gt; link will automatically be created
+                       when the documentation is created.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.Post">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The email address or link that can be used to post to
+                       the mailing list.  If this is an email address, a
+                       &lt;code&gt;mailto:&lt;/code&gt; link will automatically be created
+                       when the documentation is created.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.Archive">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The link to a URL where you can browse the mailing list archive.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.OtherArchives">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The link to alternate URLs where you can browse the list archive.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingList.OtherArchivesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OtherArchives-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the OtherArchives collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.MailingList.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.MailingList" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.MailingList" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.MailingListOtherArchives">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingListOtherArchives.OtherArchive">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.MailingListOtherArchives.OtherArchiveSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die OtherArchive-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the OtherArchive collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.MailingListOtherArchives.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.MailingListOtherArchives" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.MailingListOtherArchives" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Prerequisites">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Describes the prerequisites a project can have.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Prerequisites.Maven">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       For a plugin project, the minimum version of Maven required to use
+                       the resulting plugin.&lt;br /&gt;
+                       For specifying the minimum version of Maven required to build a
+                       project, this element is &lt;b&gt;deprecated&lt;/b&gt;. Use the Maven Enforcer
+                       Plugin's &lt;a href="https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html"&gt;&lt;code&gt;requireMavenVersion&lt;/code&gt;&lt;/a&gt;
+                       rule instead.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelModules">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelModules.Module">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelModules.ModuleSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Module-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Module collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelModules.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelModules" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelModules" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Scm">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;scm&amp;gt;&lt;/code&gt; element contains informations required to the SCM
+                   (Source Control Management) of the project.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Scm.Connection">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The source control management system URL
+                       that describes the repository and how to connect to the
+                       repository. For more information, see the
+                       &lt;a href="http://maven.apache.org/scm/scm-url-format.html"&gt;URL format&lt;/a&gt;
+                       and &lt;a href="http://maven.apache.org/scm/scms-overview.html"&gt;list of supported SCMs&lt;/a&gt;.
+                       This connection is read-only.
+                       &lt;br /&gt;&lt;b&gt;Default value is&lt;/b&gt;: parent value [+ path adjustment] + artifactId
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Scm.DeveloperConnection">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Just like &lt;code&gt;connection&lt;/code&gt;, but for developers, i.e. this scm connection
+                       will not be read only.
+                       &lt;br /&gt;&lt;b&gt;Default value is&lt;/b&gt;: parent value [+ path adjustment] + artifactId
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Scm.Tag">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The tag of current code. By default, it's set to HEAD during development.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Scm.Url">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The URL to the project's browsable SCM repository, such as ViewVC or Fisheye.
+                       &lt;br /&gt;&lt;b&gt;Default value is&lt;/b&gt;: parent value [+ path adjustment] + artifactId
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.IssueManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Information about the issue tracking (or bug tracking) system used to manage this
+                   project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.IssueManagement.System">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The name of the issue management system, e.g. Bugzilla</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.IssueManagement.Url">
+            <summary>
+            <para>4.0.0+</para>
+            <para>URL for the issue management system used by the project.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.CiManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;CiManagement&amp;gt;&lt;/code&gt; element contains informations required to the
+                   continuous integration system of the project.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.CiManagement.System">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The name of the continuous integration system, e.g. &lt;code&gt;continuum&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.CiManagement.Url">
+            <summary>
+            <para>4.0.0+</para>
+            <para>URL for the continuous integration system used by the project if it has a web
+                       interface.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.CiManagement.Notifiers">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Configuration for notifying developers/users when a build is unsuccessful,
+                       including user information and notification mode.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.CiManagement.NotifiersSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Notifiers-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Notifiers collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.CiManagement.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.CiManagement" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.CiManagement" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.CiManagementNotifiers">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.CiManagementNotifiers.Notifier">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.CiManagementNotifiers.NotifierSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Notifier-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Notifier collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.CiManagementNotifiers.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.CiManagementNotifiers" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.CiManagementNotifiers" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Notifier">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Configures one method for notifying users/developers when a build breaks.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.Type">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The mechanism used to deliver notifications.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.SendOnError">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Whether to send notifications on error.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.SendOnFailure">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Whether to send notifications on failure.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.SendOnSuccess">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Whether to send notifications on success.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.SendOnWarning">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Whether to send notifications on warning.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.Address">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       &lt;b&gt;Deprecated&lt;/b&gt;. Where to send the notification to - eg email address.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Notifier.Configuration">
+            <summary>
+            <para>0.0.0+</para>
+            <para>Extended configuration specific to this notifier goes here.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.NotifierConfiguration">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.NotifierConfiguration.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.NotifierConfiguration.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.NotifierConfiguration.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.NotifierConfiguration" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.NotifierConfiguration" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DistributionManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>This elements describes all that pertains to distribution for a project. It is
+                   primarily used for deployment of artifacts and the site produced by the build.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DistributionManagement.Repository">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Information needed to deploy the artifacts generated by the project to a
+                       remote repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DistributionManagement.SnapshotRepository">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Where to deploy snapshots of artifacts to. If not given, it defaults to the
+                       &lt;code&gt;repository&lt;/code&gt; element.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DistributionManagement.Site">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Information needed for deploying the web site of the project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DistributionManagement.DownloadUrl">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The URL of the project's download page. If not given users will be
+                       referred to the homepage given by &lt;code&gt;url&lt;/code&gt;.
+                       This is given to assist in locating artifacts that are not in the repository due to
+                       licensing restrictions.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DistributionManagement.Relocation">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Relocation information of the artifact if it has been moved to a new group ID
+                       and/or artifact ID.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DistributionManagement.Status">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Gives the status of this artifact in the remote repository.
+                       This must not be set in your local project, as it is updated by
+                       tools placing it in the reposiory. Valid values are: &lt;code&gt;none&lt;/code&gt; (default),
+                       &lt;code&gt;converted&lt;/code&gt; (repository manager converted this from an Maven 1 POM),
+                       &lt;code&gt;partner&lt;/code&gt;
+                       (directly synced from a partner Maven 2 repository), &lt;code&gt;deployed&lt;/code&gt; (was deployed from a Maven 2
+                       instance), &lt;code&gt;verified&lt;/code&gt; (has been hand verified as correct and final).
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DeploymentRepository">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Repository contains the information needed for deploying to the remote
+                   repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.UniqueVersion">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Whether to assign snapshots a unique version comprised of the timestamp and
+                       build number, or to use the same version each time</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.Releases">
+            <summary>
+            <para>4.0.0+</para>
+            <para>How to handle downloading of releases from this repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.Snapshots">
+            <summary>
+            <para>4.0.0+</para>
+            <para>How to handle downloading of snapshots from this repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.Id">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       A unique identifier for a repository. This is used to match the repository
+                       to configuration in the &lt;code&gt;settings.xml&lt;/code&gt; file, for example. Furthermore, the identifier is
+                       used during POM inheritance and profile injection to detect repositories that should be merged.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.Name">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Human readable name of the repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.Url">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The url of the repository, in the form &lt;code&gt;protocol://hostname/path&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DeploymentRepository.Layout">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The type of layout this repository uses for locating and storing artifacts -
+                       can be &lt;code&gt;legacy&lt;/code&gt; or &lt;code&gt;default&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.RepositoryPolicy">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Download policy.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.RepositoryPolicy.Enabled">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Whether to use this repository for downloading this type of artifact. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;true&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.RepositoryPolicy.UpdatePolicy">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The frequency for downloading updates - can be
+                       &lt;code&gt;always,&lt;/code&gt;
+                       &lt;code&gt;daily&lt;/code&gt;
+                       (default),
+                       &lt;code&gt;interval:XXX&lt;/code&gt;
+                       (in minutes) or
+                       &lt;code&gt;never&lt;/code&gt;
+                       (only if it doesn't exist locally).
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.RepositoryPolicy.ChecksumPolicy">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       What to do when verification of an artifact checksum fails. Valid values are
+                       &lt;code&gt;ignore&lt;/code&gt;
+                       ,
+                       &lt;code&gt;fail&lt;/code&gt;
+                       or
+                       &lt;code&gt;warn&lt;/code&gt;
+                       (the default).
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Site">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Contains the information needed for deploying websites.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Site.Id">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       A unique identifier for a deployment location. This is used to match the
+                       site to configuration in the &lt;code&gt;settings.xml&lt;/code&gt; file, for example.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Site.Name">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Human readable name of the deployment location.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Site.Url">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The url of the location where website is deployed, in the form &lt;code&gt;protocol://hostname/path&lt;/code&gt;.
+                       &lt;br /&gt;&lt;b&gt;Default value is&lt;/b&gt;: parent value [+ path adjustment] + artifactId
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Relocation">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Describes where an artifact has moved to. If any of the values are omitted, it is
+                   assumed to be the same as it was before.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Relocation.GroupId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The group ID the artifact has moved to.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Relocation.ArtifactId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The new artifact ID of the artifact.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Relocation.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The new version of the artifact.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Relocation.Message">
+            <summary>
+            <para>4.0.0+</para>
+            <para>An additional message to show the user about the move, such as the reason.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelProperties">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelProperties.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelProperties.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelProperties.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelProperties" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelProperties" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DependencyManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Section for management of default dependency information for use in a group of
+                   POMs.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DependencyManagement.Dependencies">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The dependencies specified here are not used until they are referenced in a
+                       POM within the group. This allows the specification of a "standard" version for a
+                       particular dependency.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DependencyManagement.DependenciesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependencies-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependencies collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.DependencyManagement.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.DependencyManagement" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.DependencyManagement" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DependencyManagementDependencies">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DependencyManagementDependencies.Dependency">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DependencyManagementDependencies.DependencySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependency-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependency collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.DependencyManagementDependencies.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.DependencyManagementDependencies" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.DependencyManagementDependencies" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Dependency">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;dependency&amp;gt;&lt;/code&gt; element contains information about a dependency
+                   of the project.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.GroupId">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The project group that produced the dependency, e.g.
+                       &lt;code&gt;org.apache.maven&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.ArtifactId">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The unique id for an artifact produced by the project group, e.g.
+                       &lt;code&gt;maven-artifact&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.Version">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       The version of the dependency, e.g. &lt;code&gt;3.2.1&lt;/code&gt;. In Maven 2, this can also be
+                       specified as a range of versions.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.Type">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The type of dependency. While it
+                       usually represents the extension on the filename of the dependency,
+                       that is not always the case. A type can be mapped to a different
+                       extension and a classifier.
+                       The type often corresponds to the packaging used, though this is also
+                       not always the case.
+                       Some examples are &lt;code&gt;jar&lt;/code&gt;, &lt;code&gt;war&lt;/code&gt;, &lt;code&gt;ejb-client&lt;/code&gt;
+                       and &lt;code&gt;test-jar&lt;/code&gt;: see &lt;a href="../maven-core/artifact-handlers.html"&gt;default
+                       artifact handlers&lt;/a&gt; for a list.
+                       New types can be defined by plugins that set
+                       &lt;code&gt;extensions&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;, so this is not a complete list.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.Classifier">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The classifier of the dependency. It is appended to
+                       the filename after the version. This allows:
+                       &lt;ul&gt;
+                       &lt;li&gt;refering to attached artifact, for example &lt;code&gt;sources&lt;/code&gt; and &lt;code&gt;javadoc&lt;/code&gt;:
+                       see &lt;a href="../maven-core/artifact-handlers.html"&gt;default artifact handlers&lt;/a&gt; for a list,&lt;/li&gt;
+                       &lt;li&gt;distinguishing two artifacts
+                       that belong to the same POM but were built differently.
+                       For example, &lt;code&gt;jdk14&lt;/code&gt; and &lt;code&gt;jdk15&lt;/code&gt;.&lt;/li&gt;
+                       &lt;/ul&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.Scope">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The scope of the dependency - &lt;code&gt;compile&lt;/code&gt;, &lt;code&gt;runtime&lt;/code&gt;,
+                       &lt;code&gt;test&lt;/code&gt;, &lt;code&gt;system&lt;/code&gt;, and &lt;code&gt;provided&lt;/code&gt;. Used to
+                       calculate the various classpaths used for compilation, testing, and so on.
+                       It also assists in determining which artifacts to include in a distribution of
+                       this project. For more information, see
+                       &lt;a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html"&gt;the
+                       dependency mechanism&lt;/a&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.SystemPath">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       FOR SYSTEM SCOPE ONLY. Note that use of this property is &lt;b&gt;discouraged&lt;/b&gt;
+                       and may be replaced in later versions. This specifies the path on the filesystem
+                       for this dependency.
+                       Requires an absolute path for the value, not relative.
+                       Use a property that gives the machine specific absolute path,
+                       e.g. &lt;code&gt;${java.home}&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.Exclusions">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Lists a set of artifacts that should be excluded from this dependency's
+                       artifact list when it comes to calculating transitive dependencies.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.ExclusionsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Exclusions-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Exclusions collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Dependency.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Dependency" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Dependency" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Dependency.Optional">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Indicates the dependency is optional for use of this library. While the
+                       version of the dependency will be taken into account for dependency calculation if the
+                       library is used elsewhere, it will not be passed on transitively. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;false&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.DependencyExclusions">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DependencyExclusions.Exclusion">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.DependencyExclusions.ExclusionSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Exclusion-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Exclusion collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.DependencyExclusions.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.DependencyExclusions" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.DependencyExclusions" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Exclusion">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;exclusion&amp;gt;&lt;/code&gt; element contains informations required to exclude
+                   an artifact to the project.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Exclusion.ArtifactId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The artifact ID of the project to exclude.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Exclusion.GroupId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The group ID of the project to exclude.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelDependencies">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelDependencies.Dependency">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelDependencies.DependencySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependency-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependency collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelDependencies.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelDependencies" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelDependencies" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelRepositories">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelRepositories.Repository">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelRepositories.RepositorySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Repository-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Repository collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelRepositories.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelRepositories" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelRepositories" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Repository">
+            <summary>
+            <para>4.0.0+</para>
+            <para>A repository contains the information needed for establishing connections with
+                   remote repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Repository.Releases">
+            <summary>
+            <para>4.0.0+</para>
+            <para>How to handle downloading of releases from this repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Repository.Snapshots">
+            <summary>
+            <para>4.0.0+</para>
+            <para>How to handle downloading of snapshots from this repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Repository.Id">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       A unique identifier for a repository. This is used to match the repository
+                       to configuration in the &lt;code&gt;settings.xml&lt;/code&gt; file, for example. Furthermore, the identifier is
+                       used during POM inheritance and profile injection to detect repositories that should be merged.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Repository.Name">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Human readable name of the repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Repository.Url">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The url of the repository, in the form &lt;code&gt;protocol://hostname/path&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Repository.Layout">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The type of layout this repository uses for locating and storing artifacts -
+                       can be &lt;code&gt;legacy&lt;/code&gt; or &lt;code&gt;default&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelPluginRepositories">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelPluginRepositories.PluginRepository">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelPluginRepositories.PluginRepositorySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PluginRepository-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the PluginRepository collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelPluginRepositories.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelPluginRepositories" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelPluginRepositories" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Build">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;build&amp;gt;&lt;/code&gt; element contains informations required to build the project.
+                   Default values are defined in Super POM.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.SourceDirectory">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       This element specifies a directory containing the source of the project. The
+                       generated build system will compile the sources from this directory when the project is
+                       built. The path given is relative to the project descriptor.
+                       The default value is &lt;code&gt;src/main/java&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.ScriptSourceDirectory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       This element specifies a directory containing the script sources of the
+                       project. This directory is meant to be different from the sourceDirectory, in that its
+                       contents will be copied to the output directory in most cases (since scripts are
+                       interpreted rather than compiled).
+                       The default value is &lt;code&gt;src/main/scripts&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.TestSourceDirectory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       This element specifies a directory containing the unit test source of the
+                       project. The generated build system will compile these directories when the project is
+                       being tested. The path given is relative to the project descriptor.
+                       The default value is &lt;code&gt;src/test/java&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.OutputDirectory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       The directory where compiled application classes are placed.
+                       The default value is &lt;code&gt;target/classes&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.TestOutputDirectory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       The directory where compiled test classes are placed.
+                       The default value is &lt;code&gt;target/test-classes&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.Extensions">
+            <summary>
+            <para>4.0.0+</para>
+            <para>A set of build extensions to use from this project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.ExtensionsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Extensions-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Extensions collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Build.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Build" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Build" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.DefaultGoal">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The default goal (or phase in Maven 2) to execute when none is specified for
+                       the project. Note that in case of a multi-module build, only the default goal of the top-level
+                       project is relevant, i.e. the default goals of child modules are ignored. Since Maven 3,
+                       multiple goals/phases can be separated by whitespace.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.Resources">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       This element describes all of the classpath resources such as properties
+                       files associated with a project. These resources are often included in the final
+                       package.
+                       The default value is &lt;code&gt;src/main/resources&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.ResourcesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Resources-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Resources collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.TestResources">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       This element describes all of the classpath resources such as properties
+                       files associated with a project's unit tests.
+                       The default value is &lt;code&gt;src/test/resources&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.TestResourcesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TestResources-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the TestResources collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.Directory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       The directory where all files generated by the build are placed.
+                       The default value is &lt;code&gt;target&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.FinalName">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The filename (excluding the extension, and with no path information) that
+                       the produced artifact will be called.
+                       The default value is &lt;code&gt;${artifactId}-${version}&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.Filters">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The list of filter properties files that are used when filtering is enabled.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.FiltersSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Filters-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Filters collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.PluginManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Default plugin information to be made available for reference by projects
+                       derived from this one. This plugin configuration will not be resolved or bound to the
+                       lifecycle unless referenced. Any local configuration for a given plugin will override
+                       the plugin's entire definition here.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.Plugins">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The list of plugins to use.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Build.PluginsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugins-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugins collection is empty.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildExtensions.Extension">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildExtensions.ExtensionSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Extension-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Extension collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildExtensions.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildExtensions" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildExtensions" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Extension">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Describes a build extension to utilise.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Extension.GroupId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The group ID of the extension's artifact.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Extension.ArtifactId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The artifact ID of the extension.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Extension.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The version of the extension.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildResources">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildResources.Resource">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildResources.ResourceSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Resource-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Resource collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildResources.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildResources" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildResources" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Resource">
+            <summary>
+            <para>3.0.0+</para>
+            <para>This element describes all of the classpath resources associated with a project
+                   or unit tests.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.TargetPath">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       Describe the resource target path. The path is relative to the target/classes
+                       directory (i.e. &lt;code&gt;${project.build.outputDirectory}&lt;/code&gt;).
+                       For example, if you want that resource to appear in a specific package
+                       (&lt;code&gt;org.apache.maven.messages&lt;/code&gt;), you must specify this
+                       element with this value: &lt;code&gt;org/apache/maven/messages&lt;/code&gt;.
+                       This is not required if you simply put the resources in that directory
+                       structure at the source, however.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.Filtering">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       Whether resources are filtered to replace tokens with parameterised values or not.
+                       The values are taken from the &lt;code&gt;properties&lt;/code&gt; element and from the
+                       properties in the files listed in the &lt;code&gt;filters&lt;/code&gt; element. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;false&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.Directory">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Describe the directory where the resources are stored. The path is relative
+                       to the POM.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.Includes">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       A list of patterns to include, e.g. &lt;code&gt;**&amp;#47;*.xml&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.IncludesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Includes-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Includes collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Resource.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Resource" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Resource" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.Excludes">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       A list of patterns to exclude, e.g. &lt;code&gt;**&amp;#47;*.xml&lt;/code&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Resource.ExcludesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Excludes-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Excludes collection is empty.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ResourceIncludes">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ResourceIncludes.Include">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ResourceIncludes.IncludeSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Include-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Include collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ResourceIncludes.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ResourceIncludes" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ResourceIncludes" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ResourceExcludes">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ResourceExcludes.Exclude">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ResourceExcludes.ExcludeSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Exclude-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Exclude collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ResourceExcludes.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ResourceExcludes" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ResourceExcludes" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildTestResources">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildTestResources.TestResource">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildTestResources.TestResourceSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TestResource-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the TestResource collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildTestResources.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildTestResources" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildTestResources" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildFilters">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildFilters.Filter">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildFilters.FilterSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Filter-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Filter collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildFilters.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildFilters" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildFilters" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Section for management of default plugin information for use in a group of POMs.
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginManagement.Plugins">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The list of plugins to use.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginManagement.PluginsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugins-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugins collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginManagement.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginManagement" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginManagement" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginManagementPlugins">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginManagementPlugins.Plugin">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginManagementPlugins.PluginSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugin-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugin collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginManagementPlugins.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginManagementPlugins" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginManagementPlugins" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Plugin">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;plugin&amp;gt;&lt;/code&gt; element contains informations required for a plugin.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.GroupId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The group ID of the plugin in the repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.ArtifactId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The artifact ID of the plugin in the repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The version (or valid range of versions) of the plugin to be used.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Extensions">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Whether to load Maven extensions (such as packaging and type handlers) from
+                       this plugin. For performance reasons, this should only be enabled when necessary. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;false&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Executions">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Multiple specifications of a set of goals to execute during the build
+                       lifecycle, each having (possibly) a different configuration.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.ExecutionsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Executions-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Executions collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Plugin.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Plugin" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Plugin" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Dependencies">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Additional dependencies that this project needs to introduce to the plugin's
+                       classloader.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.DependenciesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependencies-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependencies collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Goals">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       &lt;b&gt;Deprecated&lt;/b&gt;. Unused by Maven.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Inherited">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Whether any configuration should be propagated to child POMs. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;true&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Plugin.Configuration">
+            <summary>
+            <para>0.0.0+</para>
+            <para>
+                       
+                       &lt;p&gt;The configuration as DOM object.&lt;/p&gt;
+                       &lt;p&gt;By default, every element content is trimmed, but starting with Maven 3.1.0, you can add
+                       &lt;code&gt;xml:space="preserve"&lt;/code&gt; to elements you want to preserve whitespace.&lt;/p&gt;
+                       &lt;p&gt;You can control how child POMs inherit configuration from parent POMs by adding &lt;code&gt;combine.children&lt;/code&gt;
+                       or &lt;code&gt;combine.self&lt;/code&gt; attributes to the children of the configuration element:&lt;/p&gt;
+                       &lt;ul&gt;
+                       &lt;li&gt;&lt;code&gt;combine.children&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;append&lt;/code&gt;,&lt;/li&gt;
+                       &lt;li&gt;&lt;code&gt;combine.self&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;override&lt;/code&gt;.&lt;/li&gt;
+                       &lt;/ul&gt;
+                       &lt;p&gt;See &lt;a href="http://maven.apache.org/pom.html#Plugins"&gt;POM Reference documentation&lt;/a&gt; and
+                       &lt;a href="http://plexus.codehaus.org/plexus-utils/apidocs/org/codehaus/plexus/util/xml/Xpp3DomUtils.html"&gt;Xpp3DomUtils&lt;/a&gt;
+                       for more information.&lt;/p&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginExecutions">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecutions.Execution">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecutions.ExecutionSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Execution-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Execution collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginExecutions.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginExecutions" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginExecutions" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginExecution">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;execution&amp;gt;&lt;/code&gt; element contains informations required for the
+                   execution of a plugin.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecution.Id">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The identifier of this execution for labelling the goals during the build,
+                       and for matching executions to merge during inheritance and profile injection.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecution.Phase">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The build lifecycle phase to bind the goals in this execution to. If omitted,
+                       the goals will be bound to the default phase specified by the plugin. </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecution.Goals">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The goals to execute with the given configuration.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecution.GoalsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Goals-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Goals collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginExecution.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginExecution" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginExecution" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecution.Inherited">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Whether any configuration should be propagated to child POMs. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;true&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecution.Configuration">
+            <summary>
+            <para>0.0.0+</para>
+            <para>
+                       
+                       &lt;p&gt;The configuration as DOM object.&lt;/p&gt;
+                       &lt;p&gt;By default, every element content is trimmed, but starting with Maven 3.1.0, you can add
+                       &lt;code&gt;xml:space="preserve"&lt;/code&gt; to elements you want to preserve whitespace.&lt;/p&gt;
+                       &lt;p&gt;You can control how child POMs inherit configuration from parent POMs by adding &lt;code&gt;combine.children&lt;/code&gt;
+                       or &lt;code&gt;combine.self&lt;/code&gt; attributes to the children of the configuration element:&lt;/p&gt;
+                       &lt;ul&gt;
+                       &lt;li&gt;&lt;code&gt;combine.children&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;append&lt;/code&gt;,&lt;/li&gt;
+                       &lt;li&gt;&lt;code&gt;combine.self&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;override&lt;/code&gt;.&lt;/li&gt;
+                       &lt;/ul&gt;
+                       &lt;p&gt;See &lt;a href="http://maven.apache.org/pom.html#Plugins"&gt;POM Reference documentation&lt;/a&gt; and
+                       &lt;a href="http://plexus.codehaus.org/plexus-utils/apidocs/org/codehaus/plexus/util/xml/Xpp3DomUtils.html"&gt;Xpp3DomUtils&lt;/a&gt;
+                       for more information.&lt;/p&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginExecutionGoals">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecutionGoals.Goal">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecutionGoals.GoalSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Goal-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Goal collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginExecutionGoals.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginExecutionGoals" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginExecutionGoals" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginExecutionConfiguration">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecutionConfiguration.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginExecutionConfiguration.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginExecutionConfiguration.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginExecutionConfiguration" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginExecutionConfiguration" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginDependencies">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginDependencies.Dependency">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginDependencies.DependencySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependency-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependency collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginDependencies.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginDependencies" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginDependencies" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginGoals">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginGoals.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginGoals.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginGoals.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginGoals" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginGoals" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.PluginConfiguration">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginConfiguration.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.PluginConfiguration.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.PluginConfiguration.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.PluginConfiguration" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.PluginConfiguration" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildPlugins">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildPlugins.Plugin">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildPlugins.PluginSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugin-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugin collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildPlugins.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildPlugins" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildPlugins" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelReports">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelReports.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelReports.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelReports.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelReports" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelReports" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Reporting">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Section for management of reports and their configuration.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Reporting.ExcludeDefaults">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       If true, then the default reports are not included in the site generation.
+                       This includes the reports in the "Project Info" menu. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;false&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Reporting.OutputDirectory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Where to store all of the generated reports. The default is
+                       &lt;code&gt;${project.build.directory}/site&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Reporting.Plugins">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The reporting plugins to use and their configuration.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Reporting.PluginsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugins-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugins collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Reporting.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Reporting" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Reporting" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportingPlugins">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportingPlugins.Plugin">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportingPlugins.PluginSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugin-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugin collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportingPlugins.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportingPlugins" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportingPlugins" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportPlugin">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                   
+                   The &lt;code&gt;&amp;lt;plugin&amp;gt;&lt;/code&gt; element contains informations required for a report plugin.
+                   
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.GroupId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The group ID of the reporting plugin in the repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.ArtifactId">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The artifact ID of the reporting plugin in the repository.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The version of the reporting plugin to be used.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.ReportSets">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Multiple specifications of a set of reports, each having (possibly) different
+                       configuration. This is the reporting parallel to an &lt;code&gt;execution&lt;/code&gt; in the build.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.ReportSetsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ReportSets-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the ReportSets collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportPlugin.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportPlugin" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportPlugin" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.Inherited">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Whether any configuration should be propagated to child POMs. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;true&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPlugin.Configuration">
+            <summary>
+            <para>0.0.0+</para>
+            <para>
+                       
+                       &lt;p&gt;The configuration as DOM object.&lt;/p&gt;
+                       &lt;p&gt;By default, every element content is trimmed, but starting with Maven 3.1.0, you can add
+                       &lt;code&gt;xml:space="preserve"&lt;/code&gt; to elements you want to preserve whitespace.&lt;/p&gt;
+                       &lt;p&gt;You can control how child POMs inherit configuration from parent POMs by adding &lt;code&gt;combine.children&lt;/code&gt;
+                       or &lt;code&gt;combine.self&lt;/code&gt; attributes to the children of the configuration element:&lt;/p&gt;
+                       &lt;ul&gt;
+                       &lt;li&gt;&lt;code&gt;combine.children&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;append&lt;/code&gt;,&lt;/li&gt;
+                       &lt;li&gt;&lt;code&gt;combine.self&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;override&lt;/code&gt;.&lt;/li&gt;
+                       &lt;/ul&gt;
+                       &lt;p&gt;See &lt;a href="http://maven.apache.org/pom.html#Plugins"&gt;POM Reference documentation&lt;/a&gt; and
+                       &lt;a href="http://plexus.codehaus.org/plexus-utils/apidocs/org/codehaus/plexus/util/xml/Xpp3DomUtils.html"&gt;Xpp3DomUtils&lt;/a&gt;
+                       for more information.&lt;/p&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportPluginReportSets">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPluginReportSets.ReportSet">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPluginReportSets.ReportSetSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die ReportSet-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the ReportSet collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportPluginReportSets.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportPluginReportSets" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportPluginReportSets" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportSet">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Represents a set of reports and configuration to be used to generate them.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSet.Id">
+            <summary>
+            <para>0.0.0+</para>
+            <para>The unique id for this report set, to be used during POM inheritance and profile injection
+                       for merging of report sets.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSet.Reports">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The list of reports from this plugin which should be generated from this set.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSet.ReportsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Reports-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Reports collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportSet.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportSet" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportSet" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSet.Inherited">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Whether any configuration should be propagated to child POMs. Note: While the type
+                       of this field is &lt;code&gt;String&lt;/code&gt; for technical reasons, the semantic type is actually
+                       &lt;code&gt;Boolean&lt;/code&gt;. Default value is &lt;code&gt;true&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSet.Configuration">
+            <summary>
+            <para>0.0.0+</para>
+            <para>
+                       
+                       &lt;p&gt;The configuration as DOM object.&lt;/p&gt;
+                       &lt;p&gt;By default, every element content is trimmed, but starting with Maven 3.1.0, you can add
+                       &lt;code&gt;xml:space="preserve"&lt;/code&gt; to elements you want to preserve whitespace.&lt;/p&gt;
+                       &lt;p&gt;You can control how child POMs inherit configuration from parent POMs by adding &lt;code&gt;combine.children&lt;/code&gt;
+                       or &lt;code&gt;combine.self&lt;/code&gt; attributes to the children of the configuration element:&lt;/p&gt;
+                       &lt;ul&gt;
+                       &lt;li&gt;&lt;code&gt;combine.children&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;append&lt;/code&gt;,&lt;/li&gt;
+                       &lt;li&gt;&lt;code&gt;combine.self&lt;/code&gt;: available values are &lt;code&gt;merge&lt;/code&gt; (default) and &lt;code&gt;override&lt;/code&gt;.&lt;/li&gt;
+                       &lt;/ul&gt;
+                       &lt;p&gt;See &lt;a href="http://maven.apache.org/pom.html#Plugins"&gt;POM Reference documentation&lt;/a&gt; and
+                       &lt;a href="http://plexus.codehaus.org/plexus-utils/apidocs/org/codehaus/plexus/util/xml/Xpp3DomUtils.html"&gt;Xpp3DomUtils&lt;/a&gt;
+                       for more information.&lt;/p&gt;
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportSetReports">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSetReports.Report">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSetReports.ReportSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Report-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Report collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportSetReports.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportSetReports" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportSetReports" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportSetConfiguration">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSetConfiguration.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportSetConfiguration.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportSetConfiguration.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportSetConfiguration" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportSetConfiguration" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ReportPluginConfiguration">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPluginConfiguration.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ReportPluginConfiguration.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ReportPluginConfiguration.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ReportPluginConfiguration" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ReportPluginConfiguration" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ModelProfiles">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelProfiles.Profile">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ModelProfiles.ProfileSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Profile-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Profile collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ModelProfiles.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ModelProfiles" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ModelProfiles" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Profile">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Modifications to the build process which is activated based on environmental
+                   parameters or command line arguments.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Id">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The identifier of this build profile. This is used for command line
+                       activation, and identifies profiles to be merged.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Activation">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The conditional logic which will automatically trigger the inclusion of this
+                       profile.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Build">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Information required to build the project.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Modules">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The modules (sometimes called subprojects) to build as a part of this
+                       project. Each module listed is a relative path to the directory containing the module.
+                       To be consistent with the way default urls are calculated from parent, it is recommended
+                       to have module names match artifact ids.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.ModulesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Modules-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Modules collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.Profile.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.Profile" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.Profile" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.DistributionManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Distribution information for a project that enables deployment of the site
+                       and artifacts to remote web servers and repositories respectively.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Properties">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Properties that can be used throughout the POM as a substitution, and
+                       are used as filters in resources if enabled.
+                       The format is &lt;code&gt;&amp;lt;name&amp;gt;value&amp;lt;/name&amp;gt;&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.DependencyManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Default dependency information for projects that inherit from this one. The
+                       dependencies in this section are not immediately resolved. Instead, when a POM derived
+                       from this one declares a dependency described by a matching groupId and artifactId, the
+                       version and other values from this section are used for that dependency if they were not
+                       already specified.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Dependencies">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       
+                       This element describes all of the dependencies associated with a
+                       project.
+                       These dependencies are used to construct a classpath for your
+                       project during the build process. They are automatically downloaded from the
+                       repositories defined in this project.
+                       See &lt;a href="http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html"&gt;the
+                       dependency mechanism&lt;/a&gt; for more information.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.DependenciesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependencies-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependencies collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Repositories">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The lists of the remote repositories for discovering dependencies and
+                       extensions.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.RepositoriesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Repositories-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Repositories collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.PluginRepositories">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The lists of the remote repositories for discovering plugins for builds and
+                       reports.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.PluginRepositoriesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PluginRepositories-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the PluginRepositories collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Reports">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       &lt;b&gt;Deprecated&lt;/b&gt;. Now ignored by Maven.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Profile.Reporting">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       This element includes the specification of report plugins to use
+                       to generate the reports on the Maven-generated site.
+                       These reports will be run when a user executes &lt;code&gt;mvn site&lt;/code&gt;.
+                       All of the reports will be included in the navigation bar for browsing.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.Activation">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The conditions within the build runtime environment which will trigger the
+                   automatic inclusion of the build profile. Multiple conditions can be defined, which must
+                   be all satisfied to activate the profile.
+                 </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Activation.ActiveByDefault">
+            <summary>
+            <para>4.0.0+</para>
+            <para>If set to true, this profile will be active unless another profile in this
+                       pom is activated using the command line -P option or by one of that profile's
+                       activators.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Activation.Jdk">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       Specifies that this profile will be activated when a matching JDK is detected.
+                       For example, &lt;code&gt;1.4&lt;/code&gt; only activates on JDKs versioned 1.4,
+                       while &lt;code&gt;!1.4&lt;/code&gt; matches any JDK that is not version 1.4. Ranges are supported too:
+                       &lt;code&gt;[1.5,)&lt;/code&gt; activates when the JDK is 1.5 minimum.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Activation.Os">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Specifies that this profile will be activated when matching operating system
+                       attributes are detected.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Activation.Property">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Specifies that this profile will be activated when this system property is
+                       specified.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.Activation.File">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Specifies that this profile will be activated based on existence of a file.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ActivationOS">
+            <summary>
+            <para>4.0.0+</para>
+            <para>This is an activator which will detect an operating system's attributes in order
+                   to activate its profile.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationOS.Name">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The name of the operating system to be used to activate the profile. This must be an exact match
+                       of the &lt;code&gt;${os.name}&lt;/code&gt; Java property, such as &lt;code&gt;Windows XP&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationOS.Family">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The general family of the OS to be used to activate the profile, such as
+                       &lt;code&gt;windows&lt;/code&gt; or &lt;code&gt;unix&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationOS.Arch">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The architecture of the operating system to be used to activate the
+                     profile.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationOS.Version">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The version of the operating system to be used to activate the
+                     profile.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ActivationProperty">
+            <summary>
+            <para>4.0.0+</para>
+            <para>This is the property specification used to activate a profile. If the value field
+                   is empty, then the existence of the named property will activate the profile, otherwise it
+                   does a case-sensitive match against the property value as well.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationProperty.Name">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The name of the property to be used to activate a profile.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationProperty.Value">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The value of the property required to activate a profile.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ActivationFile">
+            <summary>
+            <para>4.0.0+</para>
+            <para>This is the file specification used to activate the profile. The &lt;code&gt;missing&lt;/code&gt; value
+                   is the location of a file that needs to exist, and if it doesn't, the profile will be
+                   activated. On the other hand, &lt;code&gt;exists&lt;/code&gt; will test for the existence of the file and if it is
+                   there, the profile will be activated.&lt;br/&gt;
+                   Variable interpolation for these file specifications is limited to &lt;code&gt;${basedir}&lt;/code&gt;,
+                   System properties and request properties.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationFile.Missing">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The name of the file that must be missing to activate the
+                     profile.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ActivationFile.Exists">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The name of the file that must exist to activate the profile.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildBase">
+            <summary>
+            <para>3.0.0+</para>
+            <para>Generic informations for a build.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.DefaultGoal">
+            <summary>
+            <para>3.0.0+</para>
+            <para>The default goal (or phase in Maven 2) to execute when none is specified for
+                       the project. Note that in case of a multi-module build, only the default goal of the top-level
+                       project is relevant, i.e. the default goals of child modules are ignored. Since Maven 3,
+                       multiple goals/phases can be separated by whitespace.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.Resources">
+            <summary>
+            <para>3.0.0+</para>
+            <para>
+                       This element describes all of the classpath resources such as properties
+                       files associated with a project. These resources are often included in the final
+                       package.
+                       The default value is &lt;code&gt;src/main/resources&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.ResourcesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Resources-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Resources collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildBase.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildBase" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildBase" /> class.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.TestResources">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       This element describes all of the classpath resources such as properties
+                       files associated with a project's unit tests.
+                       The default value is &lt;code&gt;src/test/resources&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.TestResourcesSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TestResources-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the TestResources collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.Directory">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       The directory where all files generated by the build are placed.
+                       The default value is &lt;code&gt;target&lt;/code&gt;.
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.FinalName">
+            <summary>
+            <para>4.0.0+</para>
+            <para>
+                       
+                       The filename (excluding the extension, and with no path information) that
+                       the produced artifact will be called.
+                       The default value is &lt;code&gt;${artifactId}-${version}&lt;/code&gt;.
+                       
+                     </para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.Filters">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The list of filter properties files that are used when filtering is enabled.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.FiltersSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Filters-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Filters collection is empty.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.PluginManagement">
+            <summary>
+            <para>4.0.0+</para>
+            <para>Default plugin information to be made available for reference by projects
+                       derived from this one. This plugin configuration will not be resolved or bound to the
+                       lifecycle unless referenced. Any local configuration for a given plugin will override
+                       the plugin's entire definition here.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.Plugins">
+            <summary>
+            <para>4.0.0+</para>
+            <para>The list of plugins to use.</para>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBase.PluginsSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugins-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugins collection is empty.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildBaseResources">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBaseResources.Resource">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBaseResources.ResourceSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Resource-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Resource collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildBaseResources.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildBaseResources" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildBaseResources" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildBaseTestResources">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBaseTestResources.TestResource">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBaseTestResources.TestResourceSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die TestResource-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the TestResource collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildBaseTestResources.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildBaseTestResources" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildBaseTestResources" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildBaseFilters">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBaseFilters.Filter">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBaseFilters.FilterSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Filter-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Filter collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildBaseFilters.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildBaseFilters" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildBaseFilters" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.BuildBasePlugins">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBasePlugins.Plugin">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.BuildBasePlugins.PluginSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Plugin-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Plugin collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.BuildBasePlugins.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.BuildBasePlugins" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.BuildBasePlugins" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ProfileModules">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileModules.Module">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileModules.ModuleSpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Module-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Module collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ProfileModules.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ProfileModules" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ProfileModules" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ProfileProperties">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileProperties.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileProperties.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ProfileProperties.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ProfileProperties" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ProfileProperties" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ProfileDependencies">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileDependencies.Dependency">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileDependencies.DependencySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Dependency-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Dependency collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ProfileDependencies.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ProfileDependencies" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ProfileDependencies" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ProfileRepositories">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileRepositories.Repository">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileRepositories.RepositorySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Repository-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Repository collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ProfileRepositories.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ProfileRepositories" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ProfileRepositories" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ProfilePluginRepositories">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfilePluginRepositories.PluginRepository">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfilePluginRepositories.PluginRepositorySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die PluginRepository-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the PluginRepository collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ProfilePluginRepositories.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ProfilePluginRepositories" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ProfilePluginRepositories" /> class.</para>
+            </summary>
+        </member>
+        <member name="T:MavenNet.Models.ProfileReports">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileReports.Any">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:MavenNet.Models.ProfileReports.AnySpecified">
+            <summary>
+            <para xml:lang="de">Ruft einen Wert ab, der angibt, ob die Any-Collection leer ist.</para>
+            <para xml:lang="en">Gets a value indicating whether the Any collection is empty.</para>
+            </summary>
+        </member>
+        <member name="M:MavenNet.Models.ProfileReports.#ctor">
+            <summary>
+            <para xml:lang="de">Initialisiert eine neue Instanz der <see cref="T:MavenNet.Models.ProfileReports" /> Klasse.</para>
+            <para xml:lang="en">Initializes a new instance of the <see cref="T:MavenNet.Models.ProfileReports" /> class.</para>
+            </summary>
+        </member>
+    </members>
+</doc>

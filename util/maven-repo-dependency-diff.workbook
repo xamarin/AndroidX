@@ -1,4 +1,6 @@
 ---
+id: 9bddd5ed-92df-41a5-9325-3839b423f1ad
+title: maven-repo-dependency-diff
 uti: com.xamarin.workbook
 platforms:
 - Console
@@ -14,8 +16,8 @@ using MavenNet;
 
 ```csharp
 const string MAVEN_REPO = "../externals/m2repository/";
-const string OLD_VER = "25.1.1";
-const string NEW_VER = "25.3.1";
+const string OLD_VER = "27.0.2";
+const string NEW_VER = "27.1.1";
 ```
 
 ```csharp
