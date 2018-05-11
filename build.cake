@@ -82,6 +82,7 @@ var ARTIFACTS = new [] {
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "runtime", "Xamarin.Android.Arch.Lifecycle.Runtime", ARCH_LIFECYCLE_RUNTIME_AAR_VERSION, ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION, "1.1.1.0") { PathPrefix = "arch-lifecycle/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "extensions", "Xamarin.Android.Arch.Lifecycle.Extensions", ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION, ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION, "1.1.1.0") { PathPrefix = "arch-lifecycle/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "livedata-core", "Xamarin.Android.Arch.Lifecycle.LiveData.Core", ARCH_LIFECYCLE_RUNTIME_AAR_VERSION, ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION, "1.1.1.0") { PathPrefix = "arch-lifecycle/" },
+	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "livedata", "Xamarin.Android.Arch.Lifecycle.LiveData", ARCH_LIFECYCLE_RUNTIME_AAR_VERSION, ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION, "1.1.1.0") { PathPrefix = "arch-lifecycle/" },
 	new ArtifactInfo (ARCH_LIFECYCLE_PKG_NAME, "viewmodel", "Xamarin.Android.Arch.Lifecycle.ViewModel", ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION, ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION, "1.1.1.0") { PathPrefix = "arch-lifecycle/" },
 
 	//new ArtifactInfo (SUPPORT_PKG_NAME, "support-v4", "Xamarin.Android.Support.v4", AAR_VERSION, NUGET_VERSION, COMPONENT_VERSION),

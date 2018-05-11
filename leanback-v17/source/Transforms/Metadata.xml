@@ -194,6 +194,9 @@
     </attr>
 
 
+    <remove-node path="/api/package[@name='android.support.v17.leanback.transition']/class[@name='TransitionHelper.TransitionHelperApi21Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v17.leanback.transition']/class[@name='LeanbackTransitionHelper.LeanbackTransitionHelperKitKatImpl']" />
     
 </metadata>
  

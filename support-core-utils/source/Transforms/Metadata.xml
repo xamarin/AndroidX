@@ -8,4 +8,11 @@
 	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.text.TextDirectionHeuristicCompat'] and parameter[3][@type='boolean']]" />
 	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]" />
 
+    
+    <remove-node path="/api/package[@name='android.support.v4.app']/class[@name='TaskStackBuilder.TaskStackBuilderApi16Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi19Impl']" />
+
+    
 </metadata>

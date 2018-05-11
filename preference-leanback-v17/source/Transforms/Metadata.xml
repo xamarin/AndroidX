@@ -14,4 +14,7 @@
 
 
 	<remove-node path="/api/package[@name='android.support.v17.internal.widget']/class[@name='OutlineOnlyWithChildrenFrameLayout']/method[@name='setOutlineProvider' and count(parameter)=1 and parameter[1][@type='android.view.ViewOutlineProvider']]" />
+    
+    <remove-node path="/api/package[@name='android.support.v17.preference']/class[@name='LeanbackPreferenceFragmentTransitionHelperApi21']" />
+
 </metadata>

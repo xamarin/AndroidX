@@ -4,13 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{d2f466c7-cee0-43fe-938c-7961cf9ab483}</ProjectGuid>
+    <ProjectGuid>{07e739cc-71ba-44f9-b461-a001624d71cc}</ProjectGuid>
     <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Android.Arch.Lifecycle.LiveData.Core</RootNamespace>
+    <RootNamespace>Android.Arch.Lifecycle.LiveData</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AssemblyName>Xamarin.Android.Arch.Lifecycle.LiveData.Core</AssemblyName>
+    <AssemblyName>Xamarin.Android.Arch.Lifecycle.LiveData</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <!-- <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
@@ -68,9 +68,9 @@
       <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
       <Name>Annotations</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\arch-core\common\source\Arch.Core.Common.csproj">
-      <Project>{4C9E1C1E-09C3-469C-B3C2-79651DF13870}</Project>
-      <Name>Arch.Core.Common</Name>
+    <ProjectReference Include="..\..\livedata-core\source\Arch.Lifecycle.LiveData.Core.csproj">
+      <Project>{D2F466C7-CEE0-43FE-938C-7961CF9AB483}</Project>
+      <Name>Arch.Lifecycle.LiveData.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\common\source\Arch.Lifecycle.Common.csproj">
       <Project>{1489A4D8-8D13-4113-BD73-3025CDE3E3A0}</Project>
@@ -82,10 +82,10 @@
     <Folder Include="Jars\" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="..\..\..\externals\arch-lifecycle\livedata-core.aar">
-      <Link>livedata-core.aar</Link>
+    <LibraryProjectZip Include="..\..\..\externals\arch-lifecycle\livedata.aar">
+      <Link>livedata.aar</Link>
     </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-
+     
 </Project>

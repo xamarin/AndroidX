@@ -58,4 +58,50 @@
 	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
 
 	<remove-node path="/api/package[@name='android.support.v4.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']" />
+
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='AccessibilityDelegateCompat.AccessibilityDelegateApi16Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='GestureDetectorCompat.GestureDetectorCompatImplJellybeanMr2']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='LayoutInflaterCompat.LayoutInflaterCompatApi21Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='MenuItemCompat.MenuItemCompatApi26Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi16Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi17Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi19Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi21Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi23Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi24Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi26Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewGroupCompat.ViewGroupCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewGroupCompat.ViewGroupCompatApi21Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewParentCompat.ViewParentCompatApi19Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewParentCompat.ViewParentCompatApi21Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='CompoundButtonCompat.CompoundButtonCompatApi21Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='CompoundButtonCompat.CompoundButtonCompatApi23Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='EdgeEffectCompat.EdgeEffectApi21Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='ImageViewCompat.LollipopViewCompatImpl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='PopupWindowCompat.PopupWindowCompatApi19Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='PopupWindowCompat.PopupWindowCompatApi21Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='PopupWindowCompat.PopupWindowCompatApi23Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SlidingPaneLayout.SlidingPanelLayoutImplJB']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SlidingPaneLayout.SlidingPanelLayoutImplJBMR1']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi16Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi17Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi23Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi26Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi27Impl']" />
+
 </metadata>

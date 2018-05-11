@@ -77,7 +77,7 @@
       <Name>Compat</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj">
-      <Project>{25CE44A9-FA51-4468-952F-21A13F066384}</Project>
+      <Project>{D2F466C7-CEE0-43FE-938C-7961CF9AB483}</Project>
       <Name>Arch.Lifecycle.LiveData.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\arch-lifecycle\common\source\Arch.Lifecycle.Common.csproj">
