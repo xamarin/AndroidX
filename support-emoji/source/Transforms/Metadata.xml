@@ -3,4 +3,6 @@
 	<attr path="/api/package[@name='android.support.emoji']" name="managedName">Android.Support.Emoji</attr>
 	<attr path="/api/package[@name='android.support.emoji.flatbuffer']" name="managedName">Android.Support.Emoji.FlatBuffer</attr>
 
+    <attr path="/api/package[@name='androidx.text.emoji.flatbuffer']" name="managedName">AndroidX.Text.Emoji.FlatBuffer</attr>
+
 </metadata>

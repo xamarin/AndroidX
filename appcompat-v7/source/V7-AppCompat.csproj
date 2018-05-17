@@ -132,14 +132,5 @@
     </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
-    <!--
-    <ItemGroup>
-        <Compile Include="obj\Debug\generated\src\*.cs" />
-        <Compile Include="obj\Release\generated\src\*.cs" />
-        <None Include="obj\Debug\api.xml" />
-        <None Include="obj\Release\api.xml" />
-    </ItemGroup>    
-    -->
-
     
 </Project>

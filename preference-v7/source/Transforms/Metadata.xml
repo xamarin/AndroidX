@@ -22,5 +22,7 @@
 
 	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']" />
 	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" />
-	
+
+    <attr path="/api/package[@name='android.support.v14.preference']" name="managedName">Android.Support.V14.Preferences</attr>
+    
 </metadata>

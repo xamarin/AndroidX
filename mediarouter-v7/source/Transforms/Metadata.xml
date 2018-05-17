@@ -20,8 +20,12 @@
 	<attr path="/api/package[@name='android.support.v7.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='android.support.v7.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]" name="managedType">params Java.Lang.Object[]</attr>-->
 
-
-    <remove-node path="/api/package[@name='android.support.v7.media']/class[@name='SystemMediaRouteProvider']" />
+    <attr 
+        path="/api/package[@name='android.support.v7.media']/class[@name='SystemMediaRouteProvider']"
+        name="visibility"
+        >
+        public
+    </attr>
     <remove-node path="/api/package[@name='android.support.v7.media']/class[@name='SystemMediaRouteProvider.JellybeanImpl']" />
     <remove-node path="/api/package[@name='android.support.v7.media']/class[@name='RemoteControlClientCompat.JellybeanImpl']" />
     

@@ -104,4 +104,9 @@
     <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi26Impl']" />
     <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi27Impl']" />
 
+
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi19Impl']" />
+
+    
 </metadata>
