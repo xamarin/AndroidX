@@ -21,8 +21,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="arch-lifecycle/livedata-core/nuget/Xamarin.Android.Arch.Lifecycle.LiveData Core.targets" target="build/MonoAndroid80" />
-    <file src="output/Xamarin.Android.Arch.Lifecycle.LiveData Core.dll" target="lib/MonoAndroid80" />
+    <file src="arch-lifecycle/livedata-core/nuget/Xamarin.Android.Arch.Lifecycle.LiveData.Core.targets" target="build/MonoAndroid80" />
+    <file src="output/Xamarin.Android.Arch.Lifecycle.LiveData.Core.dll" target="lib/MonoAndroid80" />
     <file src="External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
   </files>
 </package>
