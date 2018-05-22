@@ -35,4 +35,26 @@
 	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
 	<remove-node path="/api/package[@name='android.support.design.widget']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
 
+   <add-node
+        path="/api/package[@name='android.support.design.widget']/class[@name='HeaderScrollingViewBehavior']"
+        >
+      <method 
+        abstract="false" deprecated="not deprecated" final="false" name="onMeasureChild" 
+        native="false" return="boolean" static="false" synchronized="false" visibility="public"
+        >
+        <parameter name="parent" type="android.support.design.widget.CoordinatorLayout">
+        </parameter>
+        <parameter name="child" type="android.view.View">
+        </parameter>
+        <parameter name="parentWidthMeasureSpec" type="int">
+        </parameter>
+        <parameter name="widthUsed" type="int">
+        </parameter>
+        <parameter name="parentHeightMeasureSpec" type="int">
+        </parameter>
+        <parameter name="heightUsed" type="int">
+        </parameter>
+      </method>
+    </add-node>
+    
 </metadata>

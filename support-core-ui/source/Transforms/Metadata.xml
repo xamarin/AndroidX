@@ -35,5 +35,11 @@
     <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SlidingPaneLayout.SlidingPanelLayoutImplJBMR']" />
     <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SlidingPaneLayout.SlidingPanelLayoutImplJBMR1']" />
 
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout']/method[@name='getNestedScrollAxes']" 
+        name="managedType"
+        >
+        Android.Views.ScrollAxis
+    </attr>
 
 </metadata>

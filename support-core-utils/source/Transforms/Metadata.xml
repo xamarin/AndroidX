@@ -14,5 +14,8 @@
     <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi18Impl']" />
     <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi19Impl']" />
 
+    <attr path="/api/package[@name='android.support.v4.content']/class[@name='FileProvider.SimplePathStrategy']" 
+          name="visibility">public</attr>
+    
     
 </metadata>
