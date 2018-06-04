@@ -68,7 +68,7 @@ var REFERENCE_DOCS_URL = "https://developer.android.com/reference/";
 var REFERENCE_DOCS_PACKAGELIST_URL = REFERENCE_DOCS_URL + "android/support/package-list";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/26.1.0/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/27.0.2/api-info.xml";
 
 var CPU_COUNT = 1;
 var USE_MSBUILD_ON_MAC = true;
