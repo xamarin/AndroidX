@@ -70,10 +70,6 @@
       <Project>{071EAE48-7BCE-4D68-8098-745B923A122F}</Project>
       <Name>Core-UI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\support-fragment\source\Fragment.csproj">
-      <Project>{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}</Project>
-      <Name>Fragment</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\support-media-compat\source\Media-Compat.csproj">
       <Project>{BD8BB4A9-5ACD-47FB-923C-0DC858E1A42D}</Project>
       <Name>Media-Compat</Name>
@@ -101,6 +97,14 @@
     <ProjectReference Include="..\..\arch-lifecycle\runtime\source\Arch.Lifecycle.Runtime.csproj">
       <Project>{D2F466C7-CEE0-43FE-938C-7961CF9AB483}</Project>
       <Name>Arch.Lifecycle.LiveData.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\support-fragment\source\Fragment.csproj">
+      <Project>{2DE9FDA4-3F63-49E2-BD45-5C072A0350D8}</Project>
+      <Name>Fragment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\arch-lifecycle\viewmodel\source\Arch.Lifecycle.ViewModel.csproj">
+      <Project>{ACAF71C0-C260-410E-B572-1C28F6178CBB}</Project>
+      <Name>Arch.Lifecycle.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

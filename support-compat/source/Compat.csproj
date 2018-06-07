@@ -95,6 +95,10 @@
       <Project>{4C9E1C1E-09C3-469C-B3C2-79651DF13870}</Project>
       <Name>Arch.Core.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\arch-core\runtime\source\Arch.Core.Runtime.csproj">
+      <Project>{4C9E1C1E-09C3-469C-B3C2-79651DF13871}</Project>
+      <Name>Arch.Core.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
       

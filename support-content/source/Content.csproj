@@ -78,6 +78,10 @@
       <Project>{EFC85AD8-90A7-4C98-8CEA-A875213DA5DC}</Project>
       <Name>Annotations</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\arch-core\runtime\source\Arch.Core.Runtime.csproj">
+      <Project>{4C9E1C1E-09C3-469C-B3C2-79651DF13871}</Project>
+      <Name>Arch.Core.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
