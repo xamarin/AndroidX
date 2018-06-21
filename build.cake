@@ -16,7 +16,8 @@
 #addin nuget:?package=Cake.Xamarin&version=3.0.0
 #addin nuget:?package=Cake.XCode&version=4.0.0
 #addin nuget:?package=Cake.Xamarin.Build&version=4.0.0
-#addin nuget:?package=Cake.Compression&version=0.1.4
+#addin nuget:?package=SharpZipLib&version=0.86.0
+#addin nuget:?package=Cake.Compression&version=0.1.6
 #addin nuget:?package=Cake.Android.SdkManager&version=3.0.0
 #addin nuget:?package=Cake.Android.Adb&version=3.0.0
 #addin nuget:?package=Cake.MonoApiTools&version=2.0.0
@@ -35,7 +36,7 @@ var BUILD_CONFIG = Argument ("config", "Release");
 
 var NUGET_PRE = "";
 
-var NUGET_VERSION = "27.0.2" + NUGET_PRE;
+var NUGET_VERSION = "27.0.2.1" + NUGET_PRE;
 var COMPONENT_VERSION = "27.0.2.0";
 var AAR_VERSION = "27.0.2";
 
@@ -45,11 +46,11 @@ var ARCH_LIFECYCLE_COMMON_AAR_VERSION = "1.0.3";
 var ARCH_LIFECYCLE_RUNTIME_AAR_VERSION = "1.0.3";
 var ARCH_LIFECYCLE_EXTENSIONS_AAR_VERSION = "1.0.0";
 
-var ARCH_CORE_COMMON_NUGET_VERSION = "1.0.0" + NUGET_PRE;
-var ARCH_CORE_RUNTIME_NUGET_VERSION = "1.0.0" + NUGET_PRE;
-var ARCH_LIFECYCLE_COMMON_NUGET_VERSION = "1.0.3" + NUGET_PRE;
-var ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION = "1.0.3" + NUGET_PRE;
-var ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION = "1.0.0" + NUGET_PRE;
+var ARCH_CORE_COMMON_NUGET_VERSION = "1.0.0.1" + NUGET_PRE;
+var ARCH_CORE_RUNTIME_NUGET_VERSION = "1.0.0.1" + NUGET_PRE;
+var ARCH_LIFECYCLE_COMMON_NUGET_VERSION = "1.0.3.1" + NUGET_PRE;
+var ARCH_LIFECYCLE_RUNTIME_NUGET_VERSION = "1.0.3.1" + NUGET_PRE;
+var ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION = "1.0.0.1" + NUGET_PRE;
 
 
 var DOC_VERSION = "2017-12-18";
@@ -67,7 +68,7 @@ var REFERENCE_DOCS_URL = "https://developer.android.com/reference/";
 var REFERENCE_DOCS_PACKAGELIST_URL = REFERENCE_DOCS_URL + "android/support/package-list";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/26.1.0/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/27.0.2/api-info.xml";
 
 var CPU_COUNT = 1;
 var USE_MSBUILD_ON_MAC = true;
