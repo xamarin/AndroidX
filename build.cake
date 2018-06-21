@@ -5,6 +5,7 @@
 #tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 #tool nuget:?package=NUnit.Runners&version=2.6.4
 #tool nuget:?package=Paket
+#tool nuget:?package=vswhere
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.0.0
@@ -53,7 +54,6 @@ var ARCH_LIFECYCLE_EXTENSIONS_NUGET_VERSION = "1.0.0.1" + NUGET_PRE;
 
 
 var DOC_VERSION = "2017-12-18";
-
 
 var SUPPORT_PKG_NAME = "com.android.support";
 var ARCH_LIFECYCLE_PKG_NAME = "android.arch.lifecycle";
