@@ -64,6 +64,8 @@ var MAVEN_REPO_URL = "https://dl.google.com/dl/android/maven2/";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r27-macosx.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
+var DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
+var REFERENCE_DOCS_URL = "https://developer.android.com/reference/";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
 var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/27.0.2/api-info.xml";
@@ -602,7 +604,17 @@ Task ("buildtasks")
 Task ("droiddocs")
 	.Does (() => 
 {
-	// This is now cached in the repo in Metadata.generated.xml
+	if (!FileExists("./externals/docs.zip"))
+		DownloadFile(DOCS_URL, "./externals/docs.zip");
+	
+	if (DirectoryExists("./docs"))
+		DeleteDirectory("./docs", true);
+	
+	Unzip("./externals/docs.zip", "./docs");
+
+	DownloadFile(REFERENCE_DOCS_URL + "classes.html", "./docs/reference/classes.html");
+	CopyFile ("./docs/reference/classes.html", "./docs/reference/index.html");
+	DownloadFile(REFERENCE_DOCS_URL + "packages.html", "./docs/reference/packages.html");
 });
 
 Task ("clean")
