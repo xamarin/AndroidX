@@ -612,6 +612,8 @@ Task ("droiddocs")
 	
 	Unzip("./externals/docs.zip", "./docs");
 
+	EnsureDirectoryExists("./docs/reference/");
+	
 	DownloadFile(REFERENCE_DOCS_URL + "classes.html", "./docs/reference/classes.html");
 	CopyFile ("./docs/reference/classes.html", "./docs/reference/index.html");
 	DownloadFile(REFERENCE_DOCS_URL + "packages.html", "./docs/reference/packages.html");
