@@ -604,12 +604,16 @@ Task ("buildtasks")
 Task ("droiddocs")
 	.Does (() => 
 {
+	EnsureDirectoryExists("./externals/");
+
 	if (!FileExists("./externals/docs.zip"))
 		DownloadFile(DOCS_URL, "./externals/docs.zip");
 	
 	if (DirectoryExists("./docs"))
 		DeleteDirectory("./docs", true);
 	
+	EnsureDirectoryExists("./docs/");
+
 	Unzip("./externals/docs.zip", "./docs");
 
 	EnsureDirectoryExists("./docs/reference/");
