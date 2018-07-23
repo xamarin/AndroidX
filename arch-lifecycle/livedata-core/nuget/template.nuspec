@@ -17,6 +17,7 @@
         <dependency id="Xamarin.Android.Support.Annotations" version="$com.android.support.support-annotations$" />
         <dependency id="Xamarin.Android.Arch.Lifecycle.Common" version="$android.arch.lifecycle.common$" />
         <dependency id="Xamarin.Android.Arch.Core.Common" version="$android.arch.core.common$" />
+        <dependency id="Xamarin.Android.Arch.Core.Runtime" version="$android.arch.core.runtime$" />
       </group>
     </dependencies>
   </metadata>
