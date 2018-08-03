@@ -1,8 +1,0 @@
-<metadata>
-
-  <remove-node path="/api/*/class[substring(@name, string-length(@name) - 3) = 'Impl']" />
-  <remove-node path="/api/*/class[substring(@name, string-length(@name) - 7) = 'ImplBase']" />
-  <remove-node path="/api/*/interface[substring(@name, string-length(@name) - 3) = 'Impl']" />
-  <remove-node path="/api/*/interface[substring(@name, string-length(@name) - 7) = 'ImplBase']" />
-
-</metadata>

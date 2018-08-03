@@ -1,0 +1,9 @@
+﻿<metadata>
+	<attr path="/api/package[@name='android.support.v14.preference']" name="managedName">Android.Support.V14.Preferences</attr>
+	
+	<attr path="/api/package[@name='android.support.v14.preference']/class[@name='MultiSelectListPreference']/method[@name='getValues' and count(parameter)=0]" name="propertyName"></attr>
+
+    <!--
+	<remove-node path="/api/package[@name='android.support.v14.preference']/class[@name='MultiSelectListPreference']/method[@name='getValues' and count(parameter)=0]" />
+    -->
+</metadata>

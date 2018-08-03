@@ -1,0 +1,5 @@
+<metadata>
+	<remove-node path="/api/package[@name='android.arch.lifecycle']/interface[@name='LifecycleRegistryOwner']" />
+
+	<remove-node path="/api/package[@name='android.arch.lifecycle']/interface[@name='ReportFragment.ActivityInitializationListener']" />
+</metadata>

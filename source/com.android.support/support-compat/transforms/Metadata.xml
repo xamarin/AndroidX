@@ -1,0 +1,112 @@
+<metadata>
+
+	<attr path="/api/package[@name='android.support.compat']" name="managedName">Android.Support.Compat</attr>
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	
+	<!-- Manually implement this to return ICollection instead of the generic version -->
+	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='ArrayMap']/method[@name='entrySet' and count(parameter)=0]" />
+
+	<!-- NotificationCompat.BuilderExtender was not marked public, even though other implementations were -->
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.BuilderExtender']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.content']/class[@name='ModernAsyncTask']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatBase']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInputCompatBase']" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs']" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getAllowFreeFormInput' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getLabel' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getResultKey' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getChoices' and count(parameter)=0]" name="visibility">protected</attr>
+  <attr path="/api/package[@name='android.support.v4.app']/class[@name='RemoteInput']/method[@name='getAllowedDataTypes' and count(parameter)=0]" name="visibility">protected</attr>
+	
+	<attr path="/api/package[@name='android.support.v4.content']/class[@name='ModernAsyncTask.WorkerRunnable']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v4.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.text']/class[@name='TextDirectionHeuristicsCompat.TextDirectionHeuristicImpl']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/interface[@name='NotificationManagerCompat.Task']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v4.content.res']/interface[@name='ConfigurationHelper.ConfigurationHelperImpl']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v4.hardware.fingerprint']/interface[@name='FingerprintManagerCompat.FingerprintManagerCompatImpl']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='android.support.v4.view.accessibility']/interface[@name='AccessibilityWindowInfoCompat.AccessibilityWindowInfoImpl']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.view']/interface[@name='WindowInsetsCompat.WindowInsetsCompatImpl']" name="visibility">internal</attr>
+
+
+	<!-- Needed to rename this so we can implement it in our own partial class to mark it as override -->
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs' and count(parameter)=0]" name="managedName">_GetRemoteInputs</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getDataOnlyRemoteInputs' and count(parameter)=0]" name="managedName">_GetDataOnlyRemoteInputs</attr>
+	
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.v4.app']/interface[@name='ActivityCompatApi23.RequestPermissionsRequestCodeValidator']" name="visibility">public</attr>
+	<attr path="/api/package[@name='android.support.v4.app']/class[@name='ActivityCompatApi23']" name="visibility">public</attr>
+
+	<attr path="/api/package[@name='android.support.v4.util']/class[@name='ArraySet']" name="extends">global::Android.Runtime.JavaCollection</attr>
+
+	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=1 and parameter[1][@type='T']]" />
+	<remove-node path="/api/package[@name='android.support.v4.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.Object']]" />
+
+	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatApi24Impl']" />
+	<remove-node path="/api/package[@name='android.support.v4.os']/class[@name='LocaleListCompat.LocaleListCompatBaseImpl']" />
+
+	<remove-node path="/api/package[@name='android.support.v4.app']/class[@name='JobIntentService.CommandProcessor']" />
+
+	<remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='TypefaceCompatApi26Impl']" />
+
+	<!-- The generator binds both CharSequence and java.lang.String as System.String types so if we have overloads which only differ in java by CharSequence and String, we'll end up with duplicate .net binding overloads, so we remove the extra bindings -->
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
+
+	<remove-node path="/api/package[@name='android.support.v4.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']" />
+
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='AccessibilityDelegateCompat.AccessibilityDelegateApi16Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='GestureDetectorCompat.GestureDetectorCompatImplJellybeanMr2']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='LayoutInflaterCompat.LayoutInflaterCompatApi21Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='MenuItemCompat.MenuItemCompatApi26Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi16Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi17Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi19Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi21Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi23Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi24Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewCompat.ViewCompatApi26Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewGroupCompat.ViewGroupCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewGroupCompat.ViewGroupCompatApi21Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewParentCompat.ViewParentCompatApi19Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.view']/class[@name='ViewParentCompat.ViewParentCompatApi21Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='CompoundButtonCompat.CompoundButtonCompatApi21Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='CompoundButtonCompat.CompoundButtonCompatApi23Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='EdgeEffectCompat.EdgeEffectApi21Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='ImageViewCompat.LollipopViewCompatImpl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='PopupWindowCompat.PopupWindowCompatApi19Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='PopupWindowCompat.PopupWindowCompatApi21Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='PopupWindowCompat.PopupWindowCompatApi23Impl']" />
+    
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SlidingPaneLayout.SlidingPanelLayoutImplJB']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='SlidingPaneLayout.SlidingPanelLayoutImplJBMR1']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi16Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi17Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi23Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi26Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='TextViewCompat.TextViewCompatApi27Impl']" />
+
+
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi19Impl']" />
+
+    
+</metadata>

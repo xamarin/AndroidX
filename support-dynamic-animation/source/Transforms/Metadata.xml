@@ -1,8 +1,0 @@
-<metadata>
-
-	<attr path="/api/package[@name='android.support.animation']" name="managedName">Android.Support.Animation</attr>
-	<attr path="/api/package[@name='android.support.dynamicanimation']" name="managedName">Android.Support.DynamicAnimation</attr>
-
-	<remove-node path="/api/package[@name='android.support.animation']/class[@name='SpringForce']/implements[@name='android.support.animation.Force']" />
-
-</metadata>

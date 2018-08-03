@@ -1,0 +1,28 @@
+﻿<metadata>
+
+	<attr path="/api/package[@name='android.support.v7.preference']" name="managedName">Android.Support.V7.Preferences</attr>
+
+	<remove-node path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeInternalListener']" />
+
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='Preference']/method[@name='compareTo']/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+	<!-- Fix generics -->
+	<!--<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+-->
+<!--	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" />-->
+<!--	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="managedReturn">Java.Lang.Object</attr>-->
+
+<!--	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="managedReturn"></attr>-->
+
+	<!--<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='bindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
+-->
+
+	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']" />
+	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" />
+
+    <attr path="/api/package[@name='android.support.v14.preference']" name="managedName">Android.Support.V14.Preferences</attr>
+    
+</metadata>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.supportv17leanback.sample">
-	<uses-sdk android:minSdkVersion="10" />
-	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
-	<application android:label="AndroidSupportSample" android:theme="@style/Theme.Leanback" android:icon="@drawable/icon" android:banner="@drawable/tvbanner"></application>
-	<uses-permission android:name="android.permission.INTERNET" />
-</manifest>

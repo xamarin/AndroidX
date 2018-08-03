@@ -1,0 +1,3 @@
+<metadata>
+    <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/field[@name='mCursorFilter']" />
+</metadata>

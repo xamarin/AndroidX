@@ -1,0 +1,21 @@
+<metadata>
+	<attr path="/api/package[@name='android.support.coreutils']" name="managedName">Android.Support.CoreUtils</attr>
+
+	<attr path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" />
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.text.TextDirectionHeuristicCompat']]" />
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.text.TextDirectionHeuristicCompat'] and parameter[3][@type='boolean']]" />
+	<remove-node path="/api/package[@name='android.support.v4.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]" />
+
+    
+    <remove-node path="/api/package[@name='android.support.v4.app']/class[@name='TaskStackBuilder.TaskStackBuilderApi16Impl']" />
+
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi18Impl']" />
+    <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi19Impl']" />
+
+    <attr path="/api/package[@name='android.support.v4.content']/class[@name='FileProvider.SimplePathStrategy']" 
+          name="visibility">public</attr>
+    
+    
+</metadata>

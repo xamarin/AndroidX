@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<metadata>
-  <attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onInterceptTouchEvent']/parameter[1]" name="managedName">recyclerView</attr>
-  <attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onInterceptTouchEvent']/parameter[2]" name="managedName">@event</attr>
-  <attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onTouchEvent']/parameter[1]" name="managedName">recyclerView</attr>
-  <attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onTouchEvent']/parameter[2]" name="managedName">@event</attr>
-  <attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onRequestDisallowInterceptTouchEvent']/parameter[1]" name="managedName">disallow</attr>
-</metadata>
