@@ -1,0 +1,9 @@
+<metadata>
+    <attr path="/api/package[@name='androidx.slice']" name="managedName">AndroidX.Slice</attr>
+    <attr path="/api/package[@name='androidx.slice.compat']" name="managedName">AndroidX.Slice.Compat</attr>
+    <attr path="/api/package[@name='androidx.slice.core']" name="managedName">AndroidX.Slice.Core</attr>
+
+    <attr path="/api/package[@name='androidx.slice.core']/class[@name='SliceActionImpl']/method[@name='setChecked' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">AndroidX.Slice.Core.ISliceAction</attr>
+    <attr path="/api/package[@name='androidx.slice.core']/class[@name='SliceActionImpl']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" name="managedReturn">AndroidX.Slice.Core.ISliceAction</attr>
+    <attr path="/api/package[@name='androidx.slice.core']/class[@name='SliceActionImpl']/method[@name='setPriority' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">AndroidX.Slice.Core.ISliceAction</attr>
+</metadata>

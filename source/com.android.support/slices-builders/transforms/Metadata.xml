@@ -1,0 +1,6 @@
+<metadata>
+    <attr path="/api/package[@name='androidx.slice.builders']" name="managedName">AndroidX.Slice.Builders</attr>
+
+    <remove-node path="/api/package[@name='androidx.slice.builders.impl']" />
+
+</metadata>
