@@ -1,0 +1,6 @@
+<metadata>
+    <attr path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout.ViewElevationComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout.ViewElevationComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+
+    <attr path="/api/package[@name='android.support.design.widget']/interface[@name='CoordinatorLayout.AttachedBehavior']/method[@name='getBehavior']" name="propertyName"></attr>
+</metadata>

@@ -1,0 +1,8 @@
+<metadata>
+    <attr path="/api/package[@name='androidx.recyclerview.selection']" name="managedName">AndroidX.RecyclerView.Selection</attr>
+
+    <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='StableIdKeyProvider']/method[@name='getPosition' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='StableIdKeyProvider']/method[@name='getKey' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
+
+    <remove-node path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='getSelection' and count(parameter)=0]" />
+</metadata>

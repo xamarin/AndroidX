@@ -197,6 +197,7 @@
     <remove-node path="/api/package[@name='android.support.v17.leanback.transition']/class[@name='TransitionHelper.TransitionHelperApi21Impl']" />
     
     <remove-node path="/api/package[@name='android.support.v17.leanback.transition']/class[@name='LeanbackTransitionHelper.LeanbackTransitionHelperKitKatImpl']" />
-    
+
+    <remove-node path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='setCustomSelectionActionModeCallback' and count(parameter)=1 and parameter[1][@type='android.view.ActionMode.Callback']]" />
 </metadata>
  

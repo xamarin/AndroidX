@@ -428,13 +428,13 @@ namespace Android.Support.V7.View.Menu
         }
     }
 
-    //public partial class ActionMenuItemView
-    //{
-    //    public void SetEnabled (bool enabled)
-    //    {
-    //        Enabled = enabled;
-    //    }
-    //}
+    public partial class ActionMenuItemView
+    {
+        public void SetEnabled (bool enabled)
+        {
+            Enabled = enabled;
+        }
+    }
 
     public partial class ListMenuItemView
     {
@@ -443,6 +443,14 @@ namespace Android.Support.V7.View.Menu
             Enabled = enabled;
         }
     }
+
+	public partial class MenuBuilder
+	{
+		public void SetGroupDividerEnabled(bool enabled)
+		{
+			GroupDividerEnabled = enabled;
+		}
+	}
 
 	public partial class MenuAdapter
 	{

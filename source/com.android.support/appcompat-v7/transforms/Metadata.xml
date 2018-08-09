@@ -124,5 +124,6 @@
 
 
   <remove-node path="/api/package[@name='android.support.v7.widget']/class[@name='MenuPopupWindow.MenuDropDownListView']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" ></remove-node> 
-    
+
+  <remove-node path="/api/package[@name='android.support.v7.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" />
 </metadata>
