@@ -104,7 +104,7 @@
   <ItemGroup>
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
-    <ProjectReference Include="..\..\source\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" />
+    <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" />
       }
     }
   </ItemGroup>
