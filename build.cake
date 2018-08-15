@@ -34,11 +34,10 @@ var BUILD_CONFIG = Argument ("config", "Release");
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
 var NUGET_PRE = "";
-var DOC_VERSION = "2017-12-18";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r27-macosx.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v8.0" : "android-26";
+var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r28-macosx.zip";
+var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
 
