@@ -1,0 +1,6 @@
+<enum-method-mappings>
+    <!--path="/api/package[@name='android.support.design.widget']/class[@name='CoordinatorLayout']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"-->
+    <mapping jni-class="android/support/design/widget/CoordinatorLayout">
+        <method jni-name="setVisibility" parameter="visibility" clr-enum-type="Android.Views.ViewStates" />
+    </mapping>
+</enum-method-mappings>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <add-node path="/api/package[@name='android.arch.lifecycle']/class[@name='HolderFragment']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="getViewModelStore" native="false" return="android.arch.lifecycle.ViewModelStore" static="false" synchronized="false" visibility="public">
+        </method>
+    </add-node>
+</metadata>
