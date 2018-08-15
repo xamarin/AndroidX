@@ -39,6 +39,8 @@ var NUGET_PRE = "";
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r28-macosx.zip";
 var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
+var TF_MONIKER = "monoandroid90";
+
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
@@ -163,11 +165,12 @@ Task ("merge")
 	if (FileExists ("./output/AndroidSupport.Merged.dll"))
 		DeleteFile ("./output/AndroidSupport.Merged.dll");
 
-	var allDlls = GetFiles ("./generated/**/Release/**/*.dll");
+	var allDlls = GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll");
 
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
+		.Where (g => !g.FullPath.Contains("v4"))
 		.ToList();
 
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
