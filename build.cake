@@ -111,6 +111,8 @@ Task("binderate")
 Task("libs")
 	.Does(() =>
 {
+	NuGetRestore("./generated/AndroidSupport.sln", new NuGetRestoreSettings { });
+
 	MSBuild("./generated/AndroidSupport.sln", c => c.Configuration = "Release");
 });
 
