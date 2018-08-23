@@ -34,6 +34,7 @@
 
   <PropertyGroup>
     <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -117,9 +118,44 @@
     }
   </ItemGroup>
 
+  @if (@Model.NuGetPackageId == "Xamarin.Android.Support.v4") 
+  {
+    <Target Name="AndroidSupportLibrariesTypeForwardersGenerationWithGenAPI">
+      <Message Text="AndroidSupportLibrariesTypeForwardersGenerationWithGenAPI" ></Message>
+      <PropertyGroup>
+        <GenAPIPath>$(MSBuildProjectDirectory)/../../tools/microsoft.dotnet.buildtools.genapi.1.0.0-beta-00081/Microsoft.DotNet.BuildTools.GenAPI/tools/GenAPI.exe</GenAPIPath>
+      </PropertyGroup>
+ 
+      <ItemGroup>
+        @foreach (var dep in @Model.NuGetDependencies) 
+        {
+            if (dep.IsProjectReference) 
+            {
+              <GenAPIItemBase 
+                Include="../../generated/@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)/"
+                >
+                <GenAPIAssembly>"$(IntermediateOutputPath)/@(dep.NuGetPackageId).dll"</GenAPIAssembly>
+                <GenAPICSCode>./Additions/@(dep.NuGetPackageId).cs</GenAPICSCode>
+              </GenAPIItemBase>
+            }
+        }
+      </ItemGroup>
+
+      <Message Text="    GenAPIItemBase  = %(GenAPIItemBase.Identity) %0A        %(GenAPIItemBase.GenAPICSCode) %0A        %(GenAPIItemBase.GenAPIAssembly)"></Message>
+      <!--
+      // For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+      // GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+      -->
+      <MakeDir Directories="./Additions" />         
+      <Exec
+        Command="mono $(GenAPIPath) -libPath:$(MONOANDROID) -out:%(GenAPIItemBase.GenAPICSCode) -w:TypeForwards %(GenAPIItemBase.Identity)/%(GenAPIItemBase.GenAPIAssembly) " 
+        />
+    </Target>
+  } 
+
   <ItemGroup>
     <PackageReference Include="MSBuild.Sdk.Extras" Version="1.4.0" PrivateAssets="All" />
   </ItemGroup>
-
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+  
 </Project>
