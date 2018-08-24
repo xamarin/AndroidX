@@ -129,7 +129,7 @@ Task("nuget")
 
 Task ("diff")
 	.WithCriteria (!IsRunningOnWindows ())
-	//.IsDependentOn ("merge")
+	.IsDependentOn ("merge")
 	.Does (() =>
 {
 	var SEARCH_DIRS = new FilePath [] {
@@ -277,6 +277,7 @@ Task ("clean")
 
 Task ("ci")
 	.IsDependentOn ("ci-setup")
+	.IsDependentOn ("binderate")
 	.IsDependentOn ("diff");
 
 RunTarget (TARGET);
