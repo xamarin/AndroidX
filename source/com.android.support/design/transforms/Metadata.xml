@@ -98,4 +98,415 @@
     <attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState' and count(parameter)=2 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        abl
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        layoutDirection
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        parentWidthMeasureSpec
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[4]"
+        name="managedName"
+        >
+        widthUsed
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[5]"
+        name="managedName"
+        >
+        parentHeightMeasureSpec
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[6]"
+        name="managedName"
+        >
+        heightUsed
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        coordinatorLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        target
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[4]"
+        name="managedName"
+        >
+        dx
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[5]"
+        name="managedName"
+        >
+        dy
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[6]"
+        name="managedName"
+        >
+        consumed
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[7]"
+        name="managedName"
+        >
+        type
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        coordinatorLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        target
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[4]"
+        name="managedName"
+        >
+        dx
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[5]"
+        name="managedName"
+        >
+        dy
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[6]"
+        name="managedName"
+        >
+        consumed
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[7]"
+        name="managedName"
+        >
+        type
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[1]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[1]/parameter[2]"
+        name="managedName"
+        >
+        appBarLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[1]/parameter[3]"
+        name="managedName"
+        >
+        state
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState' and count(parameter)=2 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState' and count(parameter)=2 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout']]/parameter[2]"
+        name="managedName"
+        >
+        abl
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        directTargetChild
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[4]"
+        name="managedName"
+        >
+        target
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[5]"
+        name="managedName"
+        >
+        nestedScrollAxes
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[6]"
+        name="managedName"
+        >
+        type
+    </attr>
+    
+
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        coordinatorLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        abl
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        target
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int']]/parameter[4]"
+        name="managedName"
+        >
+        type
+    </attr>
+    
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='setDragCallback' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.AppBarLayout.BaseBehavior.BaseDragCallback']]/parameter[1]"
+        name="managedName"
+        >
+        callback
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='setTopAndBottomOffset' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        offset
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='setTopAndBottomOffset' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        offset
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='setLeftAndRightOffset' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        offset
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.ScrollingViewBehavior']/method[@name='setLeftAndRightOffset' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        offset
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='BottomNavigationView.OnNavigationItemReselectedListener']/method[@name='onNavigationItemReselected' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
+        name="managedName"
+        >
+        item
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='BottomNavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
+        name="managedName"
+        >
+        item
+    </attr>
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior']/method[@name='onInterceptTouchEvent' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='android.view.MotionEvent']]/parameter[3]"
+        name="managedName"
+        >
+        event
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior']/method[@name='onTouchEvent' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='android.view.MotionEvent']]/parameter[3]"
+        name="managedName"
+        >
+        event
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='getInsetDodgeRect' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='android.graphics.Rect']]/parameter[1]"    
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='getInsetDodgeRect' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='android.graphics.Rect']]/parameter[2]"    
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='getInsetDodgeRect' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='android.graphics.Rect']]/parameter[3]"    
+        name="managedName"
+        >
+        rect
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onDependentViewChanged' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onDependentViewChanged' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='android.view.View']]/parameter[2]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onDependentViewChanged' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='android.view.View']]/parameter[3]"
+        name="managedName"
+        >
+        dependency
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.FloatingActionButton'] and parameter[3][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        layoutDirection
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='SwipeDismissBehavior.OnDismissListener']/method[@name='onDismiss' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='SwipeDismissBehavior.OnDismissListener']/method[@name='onDragStateChanged' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        state
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    
+    
+    
+    
 </metadata>

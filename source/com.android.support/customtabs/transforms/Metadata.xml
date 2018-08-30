@@ -7,4 +7,18 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
   <attr path="/api/package[@name='android.support.customtabs']" name="managedName">Android.Support.CustomTabs</attr>
+    
+    <attr
+        path="/api/package[@name='android.support.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='android.support.customtabs.CustomTabsClient']]/parameter[1]"
+        name="managedName"
+        >
+        name
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='android.support.customtabs.CustomTabsClient']]/parameter[2]"
+        name="managedName"
+        >
+        client
+    </attr>
+    
 </metadata>
