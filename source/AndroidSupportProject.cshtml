@@ -105,6 +105,11 @@
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
+    <!-- For those artifacts with lib/ folder -->
+    <InputJar 
+      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
+      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
+      />
       } else {
     <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }
@@ -116,10 +121,16 @@
     <!-- ProjectReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
-    <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" />
+        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" />
       }
     }
+    <!-- some additional fixes -->
+    @if (@Model.NuGetPackageId == "Xamarin.Android.Support.Transition") 
+    {
+        <ProjectReference Include="..\com.android.support.support-fragment\com.android.support.support-fragment.csproj" />
+    }
   </ItemGroup>
+  
 
   <ItemGroup>
     <!-- PackageReference -->
@@ -163,7 +174,8 @@
         Command="mono $(GenAPIPath) -libPath:$(MONOANDROID) -out:%(GenAPIItemBase.GenAPICSCode) -w:TypeForwards %(GenAPIItemBase.Identity)/%(GenAPIItemBase.GenAPIAssembly) " 
         />
     </Target>
-  } 
+  }
+
 
   <ItemGroup>
     <PackageReference Include="MSBuild.Sdk.Extras" Version="1.4.0" PrivateAssets="All" />
