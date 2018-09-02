@@ -1,29 +1,16 @@
 // Tools needed by cake addins
-#tool nuget:?package=XamarinComponent&version=1.1.0.49
 #tool nuget:?package=ILRepack&version=2.0.13
-#tool nuget:?package=Cake.MonoApiTools&version=2.0.0
-#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
-#tool nuget:?package=NUnit.Runners&version=2.6.4
-#tool nuget:?package=Paket
+#tool nuget:?package=Cake.MonoApiTools&version=3.0.1
+//#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 #tool nuget:?package=vswhere
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.0.0
-#addin nuget:?package=Cake.Json&version=3.0.1
-#addin nuget:?package=Newtonsoft.Json&version=9.0.1
-#addin nuget:?package=Cake.Yaml&version=2.1.0
-#addin nuget:?package=YamlDotNet&version=4.2.1
-#addin nuget:?package=Cake.Xamarin&version=3.0.0
-#addin nuget:?package=Cake.XCode&version=4.0.0
-#addin nuget:?package=Cake.Xamarin.Build&version=4.0.0
+#addin nuget:?package=Cake.FileHelpers&version=3.1.0
 #addin nuget:?package=Cake.Compression&version=0.1.6
-#addin nuget:?package=Cake.Android.SdkManager&version=3.0.0
-#addin nuget:?package=Cake.Android.Adb&version=3.0.0
-#addin nuget:?package=Cake.MonoApiTools&version=2.0.0
-#addin nuget:?package=Cake.Xamarin.Binding.Util&version=2.0.0
+#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 
 // From Cake.Xamarin.Build, dumps out versions of things
-LogSystemInfo ();
+//LogSystemInfo ();
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
@@ -138,7 +125,7 @@ Task ("diff")
 	.IsDependentOn ("merge")
 	.Does (() =>
 {
-	var SEARCH_DIRS = new FilePath [] {
+	var SEARCH_DIRS = new DirectoryPath [] {
 		MONODROID_PATH,
 		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/v1.0/",
 		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/"
@@ -217,46 +204,46 @@ Task ("ci-setup")
 	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
 });
 
-Task ("genapi")
-	.IsDependentOn ("libs")
-	.Does (() => 
-{
-	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
+// Task ("genapi")
+// 	.IsDependentOn ("libs")
+// 	.Does (() => 
+// {
+// 	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
 
-	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
-	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
-	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
+// 	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+// 	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+// 	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
 
-	var libs = new FilePath [] {
-		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
-		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
-		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
-		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
-		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
-	};
+// 	var libs = new FilePath [] {
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
+// 		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
+// 	};
 
-	foreach (var lib in libs) {
-		var genName = lib.GetFilename () + ".generated.cs";
+// 	foreach (var lib in libs) {
+// 		var genName = lib.GetFilename () + ".generated.cs";
 
-		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
-		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
+// 		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
+// 		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
 
-		Information ("GenAPI: {0}", lib.FullPath);
+// 		Information ("GenAPI: {0}", lib.FullPath);
 
-		StartProcess (GenApiToolPath, new ProcessSettings {
-			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
-							monoDroidPath + "," + MSCORLIB_PATH,
-							IsRunningOnWindows () ? "" : "./",
-							genName,
-							libPath),
-			WorkingDirectory = "./output/",
-		});
-	}
+// 		StartProcess (GenApiToolPath, new ProcessSettings {
+// 			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
+// 							monoDroidPath + "," + MSCORLIB_PATH,
+// 							IsRunningOnWindows () ? "" : "./",
+// 							genName,
+// 							libPath),
+// 			WorkingDirectory = "./output/",
+// 		});
+// 	}
 
-	MSBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
+// 	MSBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
 
-	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
-});
+// 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
+// });
 
 // Task ("buildtasks")
 // 	.Does (() => 
