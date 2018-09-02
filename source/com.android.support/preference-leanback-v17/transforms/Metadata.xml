@@ -16,5 +16,14 @@
 	<remove-node path="/api/package[@name='android.support.v17.internal.widget']/class[@name='OutlineOnlyWithChildrenFrameLayout']/method[@name='setOutlineProvider' and count(parameter)=1 and parameter[1][@type='android.view.ViewOutlineProvider']]" />
     
     <remove-node path="/api/package[@name='android.support.v17.preference']/class[@name='LeanbackPreferenceFragmentTransitionHelperApi21']" />
-
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.preference']/interface[@name='LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener']/method[@name='onItemClick' and count(parameter)=1 and parameter[1][@type='android.support.v17.preference.LeanbackListPreferenceDialogFragment.ViewHolder']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>
+    
+    
 </metadata>

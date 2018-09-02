@@ -506,6 +506,122 @@
         tab
     </attr>
     
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.BaseBehavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='T'] and parameter[3][@type='android.os.Parcelable']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.BaseBehavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='T'] and parameter[3][@type='android.os.Parcelable']]/parameter[2]"
+        name="managedName"
+        >
+        appBarLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.BaseBehavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='T'] and parameter[3][@type='android.os.Parcelable']]/parameter[3]"
+        name="managedName"
+        >
+        state
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='AppBarLayout.BaseOnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        appBarLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/interface[@name='AppBarLayout.BaseOnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        offset
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.BaseBehavior.BaseDragCallback']/method[@name='canDrag' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
+        name="managedName"
+        >
+        @object
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior']/method[@name='onInterceptTouchEvent' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='android.view.MotionEvent']]/parameter[3]"
+        name="managedName"
+        >
+        event
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior']/method[@name='onTouchEvent' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='android.view.MotionEvent']]/parameter[3]"
+        name="managedName"
+        >
+        event
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior.BottomSheetCallback']/method[@name='onSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[1]"
+        name="managedName"
+        >
+        bottomSheet
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior.BottomSheetCallback']/method[@name='onSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[2]"
+        name="managedName"
+        >
+        slideOffset
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior.BottomSheetCallback']/method[@name='onStateChanged' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[1]"    
+        name="managedName"
+        >
+        bottomSheet
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='BottomSheetBehavior.BottomSheetCallback']/method[@name='onStateChanged' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[2]"    
+        name="managedName"
+        >
+        newState
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='onAttachedToLayoutParams' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.CoordinatorLayout.LayoutParams']]/parameter[1]"
+        name="managedName"
+        >
+        layoutParams
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton.Behavior']/method[@name='setInternalAutoHideListener' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]"
+        name="managedName"
+        >
+        listener
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='SwipeDismissBehavior']/method[@name='onInterceptTouchEvent' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='android.view.MotionEvent']]/parameter[3]"
+        name="managedName"
+        >
+        event
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='SwipeDismissBehavior']/method[@name='onTouchEvent' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='V'] and parameter[3][@type='android.view.MotionEvent']]/parameter[3]"    
+        name="managedName"
+        >
+        event
+    </attr>
+    
+    
+    
+    
     
     
     

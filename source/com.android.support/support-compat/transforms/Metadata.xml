@@ -107,6 +107,75 @@
 
     <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi18Impl']" />
     <remove-node path="/api/package[@name='android.support.v4.graphics']/class[@name='BitmapCompat.BitmapCompatApi19Impl']" />
+    
+    <attr 
+        path="/api/package[@name='android.support.v13.view']/interface[@name='DragStartHelper.OnDragStartListener']/method[@name='onDragStart' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v13.view.DragStartHelper']]/parameter[1]"
+        name="managedName"
+        >
+        v
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v13.view']/interface[@name='DragStartHelper.OnDragStartListener']/method[@name='onDragStart' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v13.view.DragStartHelper']]/parameter[2]"
+        name="managedName"
+        >
+        helper
+    </attr>
 
     
-</metadata>
+    <attr 
+        path="/api/package[@name='android.support.v13.view.inputmethod']/interface[@name='InputConnectionCompat.OnCommitContentListener']/method[@name='onCommitContent' and count(parameter)=3 and parameter[1][@type='android.support.v13.view.inputmethod.InputContentInfoCompat'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        inputContentInfo
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v13.view.inputmethod']/interface[@name='InputConnectionCompat.OnCommitContentListener']/method[@name='onCommitContent' and count(parameter)=3 and parameter[1][@type='android.support.v13.view.inputmethod.InputContentInfoCompat'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        flags
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v13.view.inputmethod']/interface[@name='InputConnectionCompat.OnCommitContentListener']/method[@name='onCommitContent' and count(parameter)=3 and parameter[1][@type='android.support.v13.view.inputmethod.InputContentInfoCompat'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[3]"
+        name="managedName"
+        >
+        opts
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ActionProvider.SubUiVisibilityListener']/method[@name='onSubUiVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"    
+        name="managedName"
+        >
+        isVisible
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ActionProvider.VisibilityListener']/method[@name='onActionProviderVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        isVisible
+    </attr>
+
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPropertyAnimatorListener']/method[@name='onAnimationCancel' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPropertyAnimatorListener']/method[@name='onAnimationEnd' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPropertyAnimatorListener']/method[@name='onAnimationStart' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    
+    
+\</metadata>

@@ -10,4 +10,7 @@
 	<remove-node path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.ItemAnimator.ItemAnimatorListener']" />
 	<attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onInterceptTouchEvent' and count(parameter)=2 and parameter[1][@type='android.support.v7.widget.RecyclerView'] and parameter[2][@type='android.view.MotionEvent']]/parameter[2]" name="managedName">@event</attr>
 	<attr path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnItemTouchListener']/method[@name='onTouchEvent' and count(parameter)=2 and parameter[1][@type='android.support.v7.widget.RecyclerView'] and parameter[2][@type='android.view.MotionEvent']]/parameter[2]" name="managedName">@event</attr>
+    
+    <attr path="/api/package[@name='android.support.v7.widget']/class[@name='LayoutState']" name="visibility">public</attr>
+    
 </metadata>

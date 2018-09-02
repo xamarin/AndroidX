@@ -1,3 +1,17 @@
 <metadata>
     <remove-node path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/field[@name='mCursorFilter']" />
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/interface[@name='CursorFilter.CursorFilterClient']" 
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorFilter']" 
+        name="visibility"
+        >
+        public
+    </attr>
+        
 </metadata>

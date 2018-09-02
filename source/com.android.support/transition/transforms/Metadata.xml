@@ -20,5 +20,49 @@
 	<remove-node path="/api/package[@name='android.support.transition']/class[@name='FragmentTransitionSupport']/method[@name='scheduleHideFragmentView' and count(parameter)=3 and parameter[1][@type='java.lang.Object'] and parameter[2][@type='android.view.View'] and parameter[3][@type='java.util.ArrayList&lt;android.view.View&gt;']]" />
 	<remove-node path="/api/package[@name='android.support.transition']/class[@name='FragmentTransitionSupport']/method[@name='setSharedElementTargets' and count(parameter)=3 and parameter[1][@type='java.lang.Object'] and parameter[2][@type='android.view.View'] and parameter[3][@type='java.util.ArrayList&lt;android.view.View&gt;']]" />
 	<remove-node path="/api/package[@name='android.support.transition']/class[@name='FragmentTransitionSupport']/method[@name='replaceTargets' and count(parameter)=3 and parameter[1][@type='java.lang.Object'] and parameter[2][@type='java.util.ArrayList&lt;android.view.View&gt;'] and parameter[3][@type='java.util.ArrayList&lt;android.view.View&gt;']]" />
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionCancel' and count(parameter)=1 and parameter[1][@type='android.support.transition.Transition']]/parameter[1]"
+        name="managedName"
+        >
+        transition
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionEnd' and count(parameter)=1 and parameter[1][@type='android.support.transition.Transition']]/parameter[1]"
+        name="managedName"
+        >
+        transition
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionPause' and count(parameter)=1 and parameter[1][@type='android.support.transition.Transition']]/parameter[1]"
+        name="managedName"
+        >
+        transition
+    </attr>
+    
+        
+    <attr 
+        path="/api/package[@name='android.support.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionResume' and count(parameter)=1 and parameter[1][@type='android.support.transition.Transition']]/parameter[1]"
+        name="managedName"
+        >
+        transition
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionStart' and count(parameter)=1 and parameter[1][@type='android.support.transition.Transition']]/parameter[1]"
+        name="managedName"
+        >
+        transition
+    </attr>
+
+    
+    
+    
 </metadata>
 

@@ -32,7 +32,6 @@
         velocity        
     </attr>
     
-    
     <attr
         path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[1]"
         name="managedName"
@@ -52,6 +51,25 @@
         velocity        
     </attr>
 
+    
+    <attr
+        path="/api/package[@name='android.support.animation']/class[@name='FloatPropertyCompat']/method[@name='getValue' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
+        name="managedName"
+        >
+        @object        
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[1]"
+        name="managedName"
+        >
+        @object        
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[2]"
+        name="managedName"
+        >
+        @value        
+    </attr>
     
     
     

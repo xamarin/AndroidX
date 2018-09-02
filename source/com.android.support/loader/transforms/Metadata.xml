@@ -1,3 +1,28 @@
 <metadata>
 	<attr path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+
+
+    <attr 
+        path="/api/package[@name='android.support.v4.content']/interface[@name='Loader.OnLoadCanceledListener']/method[@name='onLoadCanceled' and count(parameter)=1 and parameter[1][@type='android.support.v4.content.Loader&lt;D&gt;']]/parameter[1]"
+        name="managedName"
+        >
+        loader
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.content']/interface[@name='Loader.OnLoadCompleteListener']/method[@name='onLoadComplete' and count(parameter)=2 and parameter[1][@type='android.support.v4.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[1]"
+        name="managedName"
+        >
+        loader
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.content']/interface[@name='Loader.OnLoadCompleteListener']/method[@name='onLoadComplete' and count(parameter)=2 and parameter[1][@type='android.support.v4.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[1]"
+        name="managedName"
+        >
+        data
+    </attr>
+
+    
+    
 </metadata>
