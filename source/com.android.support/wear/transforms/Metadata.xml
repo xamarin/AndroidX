@@ -14,4 +14,13 @@
 	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnPreSwipeListener']" />
 	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnSwipeProgressChangedListener']" />
 
+
+    
+    <attr
+        path="/api/package[@name='android.support.wear.widget.drawer']/interface[@name='WearableNavigationDrawerView.OnItemSelectedListener']/method[@name='onItemSelected' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="propertyName"
+        >
+        pos
+    </attr>
+
 </metadata>

@@ -13,4 +13,25 @@
     
     <attr path="/api/package[@name='android.support.v7.widget']/class[@name='LayoutState']" name="visibility">public</attr>
     
+
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnChildAttachStateChangeListener']/method[@name='onChildViewAttachedToWindow' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.OnChildAttachStateChangeListener']/method[@name='onChildViewDetachedFromWindow' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.RecyclerListener']/method[@name='onViewRecycled' and count(parameter)=1 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder']]/parameter[1]"
+        name="managedName"
+        >
+        holder
+    </attr>
+    
 </metadata>

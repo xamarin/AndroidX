@@ -3,4 +3,78 @@
 
     <attr path="/api/package[@name='android.support.v4.view']/class[@name='ViewPager.ViewPositionComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='android.support.v4.view']/class[@name='ViewPager.ViewPositionComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnPageChangeListener']/method[@name='onPageScrollStateChanged' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        state
+    </attr>
+
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        viewPager
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        oldAdapter
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        newAdapter
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnPageChangeListener']/method[@name='onPageScrollStateChanged' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"    
+        name="managedName"
+        >
+        state
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnPageChangeListener']/method[@name='onPageScrolled' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='float'] and parameter[3][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnPageChangeListener']/method[@name='onPageScrolled' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='float'] and parameter[3][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        positionOffset
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnPageChangeListener']/method[@name='onPageScrolled' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='float'] and parameter[3][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        positionOffsetPixels
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnPageChangeListener']/method[@name='onPageSelected' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"    
+        name="managedName"
+        >
+        position
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.PageTransformer']/method[@name='transformPage' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]"
+        name="managedName"
+        >
+        position
+    </attr>
+    
+    
+    
 </metadata>

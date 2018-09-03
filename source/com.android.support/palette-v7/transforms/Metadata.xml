@@ -1,3 +1,25 @@
 <metadata>
-   
+
+    <attr
+        path="/api/package[@name='android.support.v7.graphics']/interface[@name='Palette.Filter']/method[@name='isAllowed' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='float[]']]/parameter[1]"    
+        name="propertyName"
+        >
+        rgb
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.graphics']/interface[@name='Palette.Filter']/method[@name='isAllowed' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='float[]']]/parameter[2]"    
+        name="propertyName"
+        >
+        hsl
+    </attr>
+
+    
+    <attr
+        path="/api/package[@name='android.support.v7.graphics']/interface[@name='Palette.PaletteAsyncListener']/method[@name='onGenerated' and count(parameter)=1 and parameter[1][@type='android.support.v7.graphics.Palette']]/parameter[1]"    
+        name="propertyName"
+        >
+        palette
+    </attr>
+    
+    
 </metadata>
