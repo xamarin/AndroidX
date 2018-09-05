@@ -18,9 +18,15 @@
     
     <attr
         path="/api/package[@name='android.support.wear.widget.drawer']/interface[@name='WearableNavigationDrawerView.OnItemSelectedListener']/method[@name='onItemSelected' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         pos
     </attr>
-
+    
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/interface[@name='CircularProgressLayout.OnTimerFinishedListener']/method[@name='onTimerFinished' and count(parameter)=1 and parameter[1][@type='android.support.wear.widget.CircularProgressLayout']]/parameter[1]"
+        name="managedName"
+        >
+        layout
+    </attr>
 </metadata>

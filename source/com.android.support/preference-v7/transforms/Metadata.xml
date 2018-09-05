@@ -42,7 +42,7 @@
     
 
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceClickListener']/method[@name='onPreferenceClick' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/preference[1]"    
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceClickListener']/method[@name='onPreferenceClick' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"    
         name="managedName"
         >
         preference
@@ -64,7 +64,7 @@
     </attr>
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceManager.OnPreferenceTreeClickListener']/method[@name='onPreferenceTreeClick' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/preference[1]"
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceManager.OnPreferenceTreeClickListener']/method[@name='onPreferenceTreeClick' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         preference

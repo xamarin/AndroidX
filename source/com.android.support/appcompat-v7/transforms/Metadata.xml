@@ -148,7 +148,7 @@
     
     <attr 
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         isVisible
     </attr>
@@ -156,13 +156,13 @@
     
     <attr 
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         itemPosition
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         itemId
     </attr>
@@ -170,39 +170,39 @@
     
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabReselected' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='android.support.v4.app.FragmentTransaction']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         tab
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabReselected' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='android.support.v4.app.FragmentTransaction']]/parameter[2]"
-        name="propertyName"
+        name="managedName"
         >
         ft
     </attr>
 
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabSelected' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='android.support.v4.app.FragmentTransaction']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         tab
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabSelected' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='android.support.v4.app.FragmentTransaction']]/parameter[2]"
-        name="propertyName"
+        name="managedName"
         >
         ft
     </attr>
 
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabUnselected' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='android.support.v4.app.FragmentTransaction']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         tab
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabUnselected' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='android.support.v4.app.FragmentTransaction']]/parameter[2]"
-        name="propertyName"
+        name="managedName"
         >
         ft
     </attr>
@@ -210,29 +210,36 @@
     
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='ActionMenuView.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         item
     </attr>
     
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='PopupMenu.OnDismissListener']/method[@name='onDismiss' and count(parameter)=1 and parameter[1][@type='android.support.v7.widget.PopupMenu']]/parameter[1]"    
-        name="propertyName"
+        name="managedName"
         >
         menu
     </attr>
     
+    <attr
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='PopupMenu.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
+        name="managedName"
+        >
+        item
+    </attr>
+
     
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='SearchView.OnQueryTextListener']/method[@name='onQueryTextChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"    
-        name="propertyName"
+        name="managedName"
         >
         newText
     </attr>
     
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='SearchView.OnQueryTextListener']/method[@name='onQueryTextSubmit' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"   
-        name="propertyName"
+        name="managedName"
         >
         newText
     </attr>
@@ -240,13 +247,13 @@
     
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='SearchView.OnSuggestionListener']/method[@name='onSuggestionClick' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         position
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='SearchView.OnSuggestionListener']/method[@name='onSuggestionSelect' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         position
     </attr>
@@ -254,13 +261,13 @@
 
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='ShareActionProvider.OnShareTargetSelectedListener']/method[@name='onShareTargetSelected' and count(parameter)=2 and parameter[1][@type='android.support.v7.widget.ShareActionProvider'] and parameter[2][@type='android.content.Intent']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         source
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='ShareActionProvider.OnShareTargetSelectedListener']/method[@name='onShareTargetSelected' and count(parameter)=2 and parameter[1][@type='android.support.v7.widget.ShareActionProvider'] and parameter[2][@type='android.content.Intent']]/parameter[2]"
-        name="propertyName"
+        name="managedName"
         >
         intent
     </attr>
@@ -268,14 +275,14 @@
 
     <attr
         path="/api/package[@name='android.support.v7.widget']/interface[@name='Toolbar.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"    
-        name="propertyName"
+        name="managedName"
         >
         item
     </attr>
     
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         isVisible
     </attr>
@@ -283,13 +290,13 @@
     
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
-        name="propertyName"
+        name="managedName"
         >
         itemPosition
     </attr>
     <attr
         path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[2]"
-        name="propertyName"
+        name="managedName"
         >
         itemId
     </attr>
