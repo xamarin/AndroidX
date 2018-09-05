@@ -273,7 +273,26 @@
         item
     </attr>
     
-
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="propertyName"
+        >
+        isVisible
+    </attr>
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
+        name="propertyName"
+        >
+        itemPosition
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[2]"
+        name="propertyName"
+        >
+        itemId
+    </attr>
     
     
     
