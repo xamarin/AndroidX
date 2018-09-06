@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask 
+      AssemblyFile="Xamarin.Android.Support.BuildTasks.dll" 
+      TaskName="Xamarin.Android.Support.BuildTasks.VerifyVersionsTask" />
+
+  <Target
+    Name="_VerifyXamarinAndroidSupportVersions"
+    AfterTargets="ResolveAssemblyReferences">
+
+    <VerifyVersionsTask
+        TargetFrameworkVersion="$(TargetFrameworkVersion)"
+        TargetApiLevel="$(_AndroidApiLevel)"
+        AndroidSdkBuildToolsVersion="$(AndroidSdkBuildToolsVersion)"
+        ProjectExtensionsPath="$(MSBuildProjectExtensionsPath)"
+        ProjectPath="$(MSBuildProjectDirectory)"
+        >
+    </VerifyVersionsTask>
+
+  </Target>
+    
+</Project>

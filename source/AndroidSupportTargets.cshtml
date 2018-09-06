@@ -1,4 +1,6 @@
 ﻿@using System.Linq
+@using System.IO
+@using System.Xml.Linq
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   @if (@Model.MavenArtifacts.Count > 0) {
@@ -19,15 +21,16 @@
     }   
   </ItemGroup>
 
-  @if (@Model.Name == "support-vector-drawable") {
-  <Target Name="_XamarinAndroidSupportVectorDrawableArgs" BeforeTargets="_UpdateAndroidResgen">
-    <!-- Adds an argument to the call to aapt to support vectors -->
-    <PropertyGroup Condition=" '$(AndroidResgenExtraArgs)' != '' AND !$(AndroidResgenExtraArgs.Contains('--no-version-vectors'))">
-      <AndroidResgenExtraArgs>$(AndroidResgenExtraArgs.TrimEnd(' ')) --no-version-vectors</AndroidResgenExtraArgs>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(AndroidResgenExtraArgs)' == ''">
-      <AndroidResgenExtraArgs>--no-version-vectors</AndroidResgenExtraArgs>
-    </PropertyGroup>
-  </Target>
+@{
+  string mergeTargets = Path.Combine(Model.Config.BasePath, "source", Model.MavenGroupId, Model.Name, "merge.targets");
+  if (File.Exists(mergeTargets)) {
+    XDocument xmlTargets = XDocument.Load(mergeTargets);
+    XNamespace nsChild = xmlTargets.Root.Name.Namespace;
+    @Raw("\r\n\r\n");
+    foreach (var xelem in xmlTargets.Element (nsChild + "Project").Elements ()) {
+      @Raw("\r\n" + xelem.ToString());
+    }
+    @Raw("\r\n\r\n");
   }
+}
 </Project>
