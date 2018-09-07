@@ -117,6 +117,7 @@ Task("nuget")
         c.Configuration = "Release";
         c.Targets.Clear();
         c.Targets.Add("Pack");
+		c.Properties.Add("PackageOutputPath", new [] { "output" });
     });
 });
 
