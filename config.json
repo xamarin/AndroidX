@@ -386,6 +386,13 @@
 			"version" : "1.1.0",
 			"nugetId" : "Xamarin.Android.Support.Constraint.Layout",
 			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.android.support.constraint",
+			"artifactId" : "constraint-layout-solver",
+			"version" : "1.1.0",
+			"nugetId" : "Xamarin.Android.Support.Constraint.Layout.Solver",
+			"dependencyOnly" : true
 		}
 	]
 }]
