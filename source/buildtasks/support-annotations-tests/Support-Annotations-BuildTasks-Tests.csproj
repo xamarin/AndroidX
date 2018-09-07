@@ -62,5 +62,7 @@
       <Name>Support-Annotations-BuildTasks</Name>
     </ProjectReference>
   </ItemGroup>
+  <Target Name="Pack">
+  </Target>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

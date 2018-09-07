@@ -58,5 +58,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
+  <Target Name="Pack">
+  </Target>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
