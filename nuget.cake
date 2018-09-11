@@ -27,6 +27,9 @@
 // --useExplicitVersion      [True|False]
 //                           This can be used to indicate that the dependencies
 //                               should use hard/exact versions: [x.x.x]
+// --prereleaseLabel        [Prelease label to use for the new package version]
+//                           This can be used to add a prerelease label to the
+//                               nuget package version being created
 ///////////////////////////////////////////////////////////////////////////////
 // EXAMPLE USE CASE
 //
@@ -38,6 +41,7 @@
 //       --incrementVersion=False `
 //       --packLatestOnly=True `
 //       --useExplicitVersion=True
+//       --prereleaseLabel=rc1
 //       --packagesPath="./externals/packages"
 //       --workingPath="./working/packages"
 //       --outputPath="./output/packages"
@@ -65,6 +69,7 @@ var keepLatestVersion = Argument("keepLatestVersion", false);
 var incrementVersion = Argument("incrementVersion", true);
 var packLatestOnly = Argument("packLatestOnly", false);
 var useExplicitVersion = Argument("useExplicitVersion", true);
+var prereleaseLabel = Argument("prereleaseLabel", (string)null);
 
 var packagesPath = (DirectoryPath)Argument("packagesPath", "externals/packages");
 var workingPath = (DirectoryPath)Argument("workingPath", "working/packages");
@@ -118,7 +123,7 @@ var seedPackages = new [] {
     "Xamarin.Android.Support.Transition",
     "Xamarin.Android.Support.Vector.Drawable",
     "Xamarin.Android.Support.Wear",
-    //"Xamarin.Android.Support.Wearable",
+    "Xamarin.Android.Support.Wearable",
     "Xamarin.Android.Support.v13",
     "Xamarin.Android.Support.v14.Preference",
     "Xamarin.Android.Support.v17.Leanback",
@@ -182,16 +187,13 @@ NuGetVersion GetNewVersion(string id, NuGetVersion old)
             return old;
     }
 
-    if (!incrementVersion)
-        return old;
-
     return new NuGetVersion(
         old.Major,
         old.Minor,
         old.Patch,
-        990 + old.Revision,
-        (string)null,   // old.Release,
-        (string)null);  // old.Metadata);
+        incrementVersion ? 990 + old.Revision : old.Revision,
+        prereleaseLabel,
+        (string)null);
 }
 
 NuGetVersion GetNewVersion(string id, VersionRange old)
@@ -215,7 +217,7 @@ Task("DownloadNuGets")
     };
 
     if (!string.IsNullOrEmpty(localSource)) {
-        nugetSources.Add(Repository.Factory.GetCoreV3(localSource));
+        nugetSources.Add(Repository.Factory.GetCoreV3(MakeAbsolute((DirectoryPath)localSource).FullPath));
     }
 
     var nugetCache = new SourceCacheContext();
@@ -564,7 +566,6 @@ Task("PackNuGets")
             var nuspec = GetFiles($"{version.Dir}/*.nuspec").FirstOrDefault();
             Information($"Packing {nuspec}...");
             NuGetPack(nuspec, new NuGetPackSettings {
-                Version = version.Ver.ToString(),
                 BasePath = nuspec.GetDirectory(),
                 OutputDirectory = outputPath
             });
