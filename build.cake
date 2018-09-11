@@ -166,7 +166,7 @@ Task ("merge")
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
-		.Where (g => !g.FullPath.Contains("v4"))
+		.Where (g => !g.FullPath.Contains("v4") && !g.FullPath.Contains(".Android.Support.Constraint.Layout."))
 		.ToList();
 
 	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
