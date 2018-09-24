@@ -88,7 +88,7 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setState' and count(parameter)=1 and parameter[1][@type='int[]']]" 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setState' and count(parameter)=1 and parameter[1][@type='int[]']]/parameter[1]" 
         name="managedName"
         >
         stateSet
