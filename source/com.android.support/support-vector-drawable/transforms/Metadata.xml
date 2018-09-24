@@ -18,4 +18,80 @@
 	
 	<!--<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='getColorFilter' and count(parameter)=0]" />-->
 	<!--<remove-node path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setColorFilter' and count(parameter)=1 and parameter[1][@type='android.graphics.ColorFilter']]" />-->
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='applyTheme' and count(parameter)=1 and parameter[1][@type='android.content.res.Resources.Theme']]/parameter[1]"
+        name="managedName"
+        >
+        t
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='getPadding' and count(parameter)=1 and parameter[1][@type='android.graphics.Rect']]/parameter[1]"
+        name="managedName"
+        >
+        padding
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setFilterBitmap' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        filter
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setHotspot' and count(parameter)=2 and parameter[1][@type='float'] and parameter[2][@type='float']]/parameter[1]"
+        name="managedName"
+        >
+        x
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setHotspot' and count(parameter)=2 and parameter[1][@type='float'] and parameter[2][@type='float']]/parameter[2]"
+        name="managedName"
+        >
+        y
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setHotspotBounds' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        left
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setHotspotBounds' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        top
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setHotspotBounds' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        right
+    </attr>
+
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setHotspotBounds' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int']]/parameter[4]"
+        name="managedName"
+        >
+        bottom
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/class[@name='VectorDrawableCompat']/method[@name='setState' and count(parameter)=1 and parameter[1][@type='int[]']]" 
+        name="managedName"
+        >
+        stateSet
+    </attr>
+    
 </metadata>

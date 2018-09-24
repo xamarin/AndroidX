@@ -63,6 +63,90 @@
 
     
     
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='PathMotion']/method[@name='getPath' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[1]"
+        name="managedName"
+        >
+        startX
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='PathMotion']/method[@name='getPath' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[2]"
+        name="managedName"
+        >
+        startY
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='PathMotion']/method[@name='getPath' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[3]"
+        name="managedName"
+        >
+        endX
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='PathMotion']/method[@name='getPath' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[4]"
+        name="managedName"
+        >
+        endY
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='Transition.EpicenterCallback']/method[@name='onGetEpicenter' and count(parameter)=1 and parameter[1][@type='android.support.transition.Transition']]/parameter[1]"
+        name="managedName"
+        >
+        transition
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='Transition']/method[@name='captureEndValues' and count(parameter)=1 and parameter[1][@type='android.support.transition.TransitionValues']]/parameter[1]"
+        name="managedName"
+        >
+        transitionValues
+    </attr>
+    
+    
+
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='Transition']/method[@name='captureStartValues' and count(parameter)=1 and parameter[1][@type='android.support.transition.TransitionValues']]/parameter[1]"
+        name="managedName"
+        >
+        transitionValues    
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='TransitionPropagation']/method[@name='captureValues' and count(parameter)=1 and parameter[1][@type='android.support.transition.TransitionValues']]/parameter[1]"
+        name="managedName"
+        >
+        transitionValues    
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='android.support.transition.Transition'] and parameter[3][@type='android.support.transition.TransitionValues'] and parameter[4][@type='android.support.transition.TransitionValues']]/parameter[1]"
+        name="managedName"
+        >
+        sceneRoot    
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='android.support.transition.Transition'] and parameter[3][@type='android.support.transition.TransitionValues'] and parameter[4][@type='android.support.transition.TransitionValues']]/parameter[2]"
+        name="managedName"
+        >
+        transition    
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='android.support.transition.Transition'] and parameter[3][@type='android.support.transition.TransitionValues'] and parameter[4][@type='android.support.transition.TransitionValues']]/parameter[3]"
+        name="managedName"
+        >
+        startValues    
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='android.support.transition.Transition'] and parameter[3][@type='android.support.transition.TransitionValues'] and parameter[4][@type='android.support.transition.TransitionValues']]/parameter[4]"
+        name="managedName"
+        >
+        endValues    
+    </attr>
+    
     
 </metadata>
 

@@ -8,5 +8,21 @@
 
 	<!-- in the android.jar bindings, this is not exposed as a property, so we can't override the property -->
 	<attr path="/api/package[@name='android.support.graphics.drawable']/class[@name='AnimatedVectorDrawableCompat']/method[@name='getConstantState' and count(parameter)=0]" name="propertyName"></attr>
-
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/interface[@name='Animatable2Compat']/method[@name='registerAnimationCallback' and count(parameter)=1 and parameter[1][@type='android.support.graphics.drawable.Animatable2Compat.AnimationCallback']]/parameter[1]"
+        name="managedName"
+        >
+        callback        
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.graphics.drawable']/interface[@name='Animatable2Compat']/method[@name='unregisterAnimationCallback' and count(parameter)=1 and parameter[1][@type='android.support.graphics.drawable.Animatable2Compat.AnimationCallback']]/parameter[1]"
+        name="managedName"
+        >
+        callback        
+    </attr>
+        
+    
+    
 </metadata>

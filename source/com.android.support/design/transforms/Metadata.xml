@@ -619,6 +619,25 @@
         event
     </attr>
     
+
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[1]"    
+        name="managedName"
+        >
+        parent
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[2]"    
+        name="managedName"
+        >
+        appBarLayout
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.design.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='android.support.design.widget.CoordinatorLayout'] and parameter[2][@type='android.support.design.widget.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[1]"    
+        name="managedName"
+        >
+        state
+    </attr>
     
     
     
