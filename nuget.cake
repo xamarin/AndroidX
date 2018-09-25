@@ -154,6 +154,12 @@ bool IsBlacklisted(string id)
 
 NuGetVersion GetSupportVersion(FilePath nuspec)
 {
+    var range = GetSupportVersionRange(nuspec);
+    return range.MinVersion ?? range.MaxVersion;
+}
+
+VersionRange GetSupportVersionRange(FilePath nuspec)
+{
     var xdoc = XDocument.Load(nuspec.FullPath);
     var ns = xdoc.Root.Name.Namespace;
 
@@ -171,7 +177,35 @@ NuGetVersion GetSupportVersion(FilePath nuspec)
         version = xmd.Element(ns + "version").Value;
     }
 
-    return NuGetVersion.Parse(version);
+    return VersionRange.Parse(version);
+}
+
+NuGetVersion GetArchVersion(FilePath nuspec)
+{
+    var range = GetArchVersionRange(nuspec);
+    return range.MinVersion ?? range.MaxVersion;
+}
+
+VersionRange GetArchVersionRange(FilePath nuspec)
+{
+    var xdoc = XDocument.Load(nuspec.FullPath);
+    var ns = xdoc.Root.Name.Namespace;
+
+    var xmd = xdoc.Root.Element(ns + "metadata");
+    var xid = xmd.Element(ns + "id");
+
+    string version;
+    if (xid.Value.ToLower().StartsWith("xamarin.android.support")) {
+        version = xmd
+            .Descendants(ns + "dependency")
+            .First(e => e.Attribute("id").Value.ToLower().StartsWith("xamarin.android.arch"))
+            .Attribute("version")
+            .Value;
+    } else {
+        version = xmd.Element(ns + "version").Value;
+    }
+
+    return VersionRange.Parse(version);
 }
 
 NuGetVersion GetNewVersion(string id, string old)
@@ -368,10 +402,12 @@ Task("PrepareWorkingDirectory")
         if (GetDirectories($"{dir}/{subdir}/*/*").Any())
             throw new Exception($"'{dir}' contains sub directories.");
 
-        // make sure the files are in the right folder, but
-        // only if there is one folder - more means this is
-        // already a fat package
-        if (GetDirectories($"{dir}/{subdir}/*").Count() == 1) {
+        // make sure the files are in the right folder:
+        //  - 0 means that this is a thin package
+        //      probably not the core build/lib folders (probably proguard)
+        //  - 1 means that this is a thin package
+        //  - 2+ more means this is already a fat package
+        if (GetDirectories($"{dir}/{subdir}/*").Count() <= 1) {
             EnsureDirectoryExists(dir.Combine("temp"));
             MoveFiles($"{dir}/{subdir}/**/*", dir.Combine("temp"));
             CleanDirectories($"{dir}/{subdir}");
@@ -381,8 +417,8 @@ Task("PrepareWorkingDirectory")
 
     NuGetFramework NormalizeNuspec(FilePath nuspec)
     {
-        var version = GetSupportVersion(nuspec);
-        var targetFw = apiLevelVersion[version.Major];
+        var supportVersion = GetSupportVersion(nuspec);
+        var targetFw = apiLevelVersion[supportVersion.Major];
 
         var xdoc = XDocument.Load(nuspec.FullPath);
         var ns = xdoc.Root.Name.Namespace;
@@ -390,6 +426,7 @@ Task("PrepareWorkingDirectory")
 
         // set the new version of the package
         var xv = xmd.Element(ns + "version");
+        var version = NuGetVersion.Parse(xv.Value);
         xv.Value = GetNewVersion(xmd.Element(ns + "id").Value, version).ToNormalizedString();
 
         // make sure the <dependencies> element exists
@@ -410,7 +447,7 @@ Task("PrepareWorkingDirectory")
         // some packages have the wrong <group> targets, so recreate everything
         var xnewGroups = new Dictionary<int, XElement>();
         foreach (var pair in apiLevelVersion) {
-            if (pair.Key > version.Major)
+            if (pair.Key > supportVersion.Major)
                 continue;
             xnewGroups.Add(pair.Key, new XElement(ns + "group",
                 new XAttribute("targetFramework", pair.Value.GetShortFolderName())));
@@ -425,7 +462,7 @@ Task("PrepareWorkingDirectory")
                 .Where(x => x.Attribute("id").Value.ToLower().StartsWith("xamarin.android.support"))
                 .Select(x => VersionRange.Parse(x.Attribute("version").Value))
                 .FirstOrDefault();
-            var minVersion = firstSupportVersion?.MinVersion ?? version;
+            var minVersion = firstSupportVersion?.MinVersion ?? supportVersion;
             xnewGroups[minVersion.Major].Add(xgroupDeps);
         }
 
@@ -521,8 +558,10 @@ Task("CreateFatNuGets")
         var xdoc = XDocument.Load(nuspec);
         var ns = xdoc.Root.Name.Namespace;
         var xmd = xdoc.Root.Element(ns + "metadata");
+        var xversion = xmd.Element(ns + "version");
         var xdeps = xmd.Element(ns + "dependencies");
         var xgroups = xdeps.Elements(ns + "group");
+        var isArch = id.ToLower().StartsWith("xamarin.android.arch");
 
         foreach (var included in includedVersions) {
             var includedNuspec = $"{workingPath}/{id}/{included.ToNormalizedString()}/{id}.nuspec";
@@ -535,6 +574,21 @@ Task("CreateFatNuGets")
 
             foreach (var ixgroup in ixgroups) {
                 var xgroup = xgroups.FirstOrDefault(g => g.Attribute("targetFramework").Value == ixgroup.Attribute("targetFramework").Value);
+                foreach (var ixdep in ixgroup.Elements(ins + "dependency")) {
+                    var includedArch = ixdep.Attribute("id").Value.ToLower().StartsWith("xamarin.android.arch");
+                    string newVersion = null;
+                    if (isArch == includedArch) {
+                        // if both are arch, or both are support, use the current version
+                        newVersion = xversion.Value;
+                    } else if (isArch) {
+                        // if the main is arch, but this is support
+                        newVersion = GetSupportVersion(nuspec).ToNormalizedString();
+                    } else {
+                        // if the main is support and this is arch
+                        newVersion = GetArchVersion(nuspec).ToNormalizedString();
+                    }
+                    ixdep.SetAttributeValue("version", useExplicitVersion ? $"[{newVersion}]" : newVersion);
+                }
                 xgroup.Add(ixgroup.Elements());
             }
         }
