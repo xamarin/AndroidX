@@ -336,5 +336,278 @@
     </attr>
     
     
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrowseFragment.FragmentFactory']/method[@name='createFragment' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]"
+        name="managedName"
+        >
+        row
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseFragment.FragmentHost']/method[@name='notifyDataReady' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.app.BrowseFragment.MainFragmentAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        fragmentAdapter
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseFragment.FragmentHost']/method[@name='notifyViewCreated' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.app.BrowseFragment.MainFragmentAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        fragmentAdapter
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseFragment.FragmentHost']/method[@name='showTitleView' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        show
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='BrowseSupportFragment.FragmentFactory']/method[@name='createFragment' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]"
+        name="managedName"
+        >
+        row
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.FragmentHost']/method[@name='notifyDataReady' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.app.BrowseSupportFragment.MainFragmentAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        fragmentAdapter
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.FragmentHost']/method[@name='notifyViewCreated' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.app.BrowseSupportFragment.MainFragmentAdapter']]/parameter[1]"
+        name="managedName"
+        >
+        fragmentAdapter
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='BrowseSupportFragment.FragmentHost']/method[@name='showTitleView' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        show
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        inflater
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        container
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[3]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        outState
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='setAlignment' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        windowAlignOffsetTop
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[2]"
+        name="managedName"
+        >
+        smooth
+    </attr>
+    
+
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        inflater
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        container
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[3]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>
+   
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        outState
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='setAlignment' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        windowAlignOffsetTop
+    </attr>
+
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='HeadersSupportFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[2]"
+        name="managedName"
+        >
+        smooth
+    </attr>
+    
+
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[1]"    
+        name="managedName"
+        >
+        inflater
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[2]"    
+        name="managedName"
+        >
+        container
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[3]"    
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsFragment']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        outState
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[2]"
+        name="managedName"
+        >
+        smooth
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsSupportFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        inflater
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsSupportFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        container
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsSupportFragment']/method[@name='onCreateView' and count(parameter)=3 and parameter[1][@type='android.view.LayoutInflater'] and parameter[2][@type='android.view.ViewGroup'] and parameter[3][@type='android.os.Bundle']]/parameter[3]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsSupportFragment']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        outState
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsSupportFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/class[@name='RowsSupportFragment']/method[@name='setSelectedPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='boolean']]/parameter[2]"
+        name="managedName"
+        >
+        smooth
+    </attr>
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='SearchFragment.SearchResultProvider']/method[@name='onQueryTextChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        newQuery
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='SearchFragment.SearchResultProvider']/method[@name='onQueryTextSubmit' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        query
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='SearchSupportFragment.SearchResultProvider']/method[@name='onQueryTextChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        newQuery
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.app']/interface[@name='SearchSupportFragment.SearchResultProvider']/method[@name='onQueryTextSubmit' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        query
+    </attr>
+
+    
+    
 </metadata>
  

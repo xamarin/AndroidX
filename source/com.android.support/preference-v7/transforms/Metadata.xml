@@ -71,5 +71,68 @@
     </attr>
     
     
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/class[@name='PreferenceDialogFragment']/method[@name='onDialogClosed' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        positiveResult    
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        caller
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        name="managedName"
+        >
+        pref
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/class[@name='PreferenceFragment']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/class[@name='PreferenceFragment']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+        name="managedName"
+        >
+        rootKey
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[1]"
+        name="managedName"
+        >
+        caller
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[2]"
+        name="managedName"
+        >
+        pref
+    </attr>
+
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        caller
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        name="managedName"
+        >
+        pref
+    </attr>
     
 </metadata>

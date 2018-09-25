@@ -38,11 +38,10 @@
     
     
     <attr
-        path="/api/package[@name='android.support.v13.app']/class[@name='FragmentStatePagerAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]/parameteer[1]"
+        path="/api/package[@name='android.support.v13.app']/class[@name='FragmentStatePagerAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
         name="managedName"
         >
         position
     </attr>
-    
     
 </metadata>
