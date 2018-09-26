@@ -656,5 +656,200 @@
     </attr>
     
     
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.media']/interface[@name='SurfaceHolderGlueHost']/method[@name='setSurfaceHolderCallback' and count(parameter)=1 and parameter[1][@type='android.view.SurfaceHolder.Callback']]/parameter[1]"
+        name="managedName"
+        >
+        callback
+    </attr>
+    
+        
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.media']/class[@name='PlaybackBaseControlGlue']/method[@name='onActionClicked' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.Action']]/parameter[1]"
+        name="managedName"
+        >
+        action
+    </attr>
+    
+    
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.media']/class[@name='PlaybackBaseControlGlue']/method[@name='onKey' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='int'] and parameter[3][@type='android.view.KeyEvent']]/parameter[1]"
+        name="managedName"
+        >
+        v
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.media']/class[@name='PlaybackBaseControlGlue']/method[@name='onKey' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='int'] and parameter[3][@type='android.view.KeyEvent']]/parameter[2]"
+        name="managedName"
+        >
+        keyCode
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.media']/class[@name='PlaybackBaseControlGlue']/method[@name='onKey' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='int'] and parameter[3][@type='android.view.KeyEvent']]/parameter[3]"
+        name="managedName"
+        >
+        event
+    </attr>
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='ImeKeyMonitor']/method[@name='setImeKeyListener' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.ImeKeyMonitor.ImeKeyListener']]/parameter[1]"
+        name="managedName"
+        >
+        listener
+    </attr>
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='PlaybackSeekUi']/method[@name='setPlaybackSeekUiClient' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.PlaybackSeekUi.Client']]/parameter[1]"    
+        name="managedName"
+        >
+        client
+    </attr>
+
+    
+
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='ViewHolderTask']/method[@name='run' and count(parameter)=1 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>
+    
+    
+
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ItemBridgeAdapter.Wrapper']/method[@name='createWrapper' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        root
+    </attr>
+
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ItemBridgeAdapter.Wrapper']/method[@name='wrap' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        wrapper
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ItemBridgeAdapter.Wrapper']/method[@name='wrap' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View']]/parameter[2]"
+        name="managedName"
+        >
+        wrapped
+    </attr>
+
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        name
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Parallax']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        index
+    </attr>
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Presenter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Presenter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder'] and parameter[2][@type='java.lang.Object']]/parameter[2]"
+        name="managedName"
+        >
+        item
+    </attr>
+
+        
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Presenter']/method[@name='onCreateViewHolder' and count(parameter)=1 and parameter[1][@type='android.view.ViewGroup']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='Presenter']/method[@name='onUnbindViewHolder' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.Presenter.ViewHolder']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='PresenterSelector']/method[@name='getPresenter' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]"    
+        name="managedName"
+        >
+        item
+    </attr>
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='onInitializeAccessibilityNodeInfo' and count(parameter)=1 and parameter[1][@type='android.view.accessibility.AccessibilityNodeInfo']]/parameter[1]"
+        name="managedName"
+        >
+        info
+    </attr>
+    
+    
+
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='setFinalRecognizedText' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        name="managedName"
+        >
+        finalText
+    </attr>
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        stableText
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+        name="managedName"
+        >
+        pendingText
+    </attr>
+    
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='GuidedActionAutofillSupport']/method[@name='setOnAutofillListener' and count(parameter)=1 and parameter[1][@type='android.support.v17.leanback.widget.GuidedActionAutofillSupport.OnAutofillListener']]/parameter[1]"
+        name="managedName"
+        >
+        listener
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ObjectAdapter']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+    
+
+    
+    
 </metadata>
  

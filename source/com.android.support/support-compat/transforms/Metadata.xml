@@ -248,5 +248,25 @@
     </attr>
     
     
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/interface[@name='ActivityCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[1]"
+        name="managedName"
+        >
+        requestCode
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/interface[@name='ActivityCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[2]"
+        name="managedName"
+        >
+        permissions
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/interface[@name='ActivityCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[3]"    
+        name="managedName"
+        >
+        grantResults
+    </attr>
+    
+    
     
 </metadata>
