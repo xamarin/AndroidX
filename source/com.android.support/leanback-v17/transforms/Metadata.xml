@@ -608,6 +608,53 @@
     </attr>
 
     
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='BrowseFrameLayout.OnFocusSearchListener']/method[@name='onFocusSearch' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        focused
+    </attr>
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='BrowseFrameLayout.OnFocusSearchListener']/method[@name='onFocusSearch' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        direction
+    </attr>
+    
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='FacetProvider']/method[@name='getFacet' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;?&gt;']]/parameter[1]"
+        name="managedName"
+        >
+        facetClass
+    </attr>
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='FacetProviderAdapter']/method[@name='getFacetProvider' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"    
+        name="managedName"
+        >
+        type
+    </attr>
+    
+
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='FragmentAnimationProvider']/method[@name='onImeAppearing' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;android.animation.Animator&gt;']]/parameter[1]"
+        name="managedName"
+        >
+        animators
+    </attr>
+    
+    
+
+    
+     <attr 
+        path="/api/package[@name='android.support.v17.leanback.widget']/interface[@name='FragmentAnimationProvider']/method[@name='onImeDisappearing' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;android.animation.Animator&gt;']]/parameter[1]"
+        name="managedName"
+        >
+        animators
+    </attr>
+    
     
 </metadata>
  
