@@ -268,5 +268,81 @@
     </attr>
     
     
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/interface[@name='NotificationCompat.Extender']/method[@name='extend' and count(parameter)=1 and parameter[1][@type='android.support.v4.app.NotificationCompat.Builder']]/parameter[1]"
+        name="managedName"
+        >
+        builder
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/interface[@name='NotificationCompat.Action.Extender']/method[@name='extend' and count(parameter)=1 and parameter[1][@type='android.support.v4.app.NotificationCompat.Action.Builder']]/parameter[1]"
+        name="managedName"
+        >
+        builder
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='cancel' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        packageName
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='cancel' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String']]/parameter[2]"
+        name="managedName"
+        >
+        id
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='cancel' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String']]/parameter[3]"
+        name="managedName"
+        >
+        tag
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='cancelAll' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        packageName
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='notify' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='android.app.Notification']]/parameter[1]"
+        name="managedName"
+        >
+        packageName
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='notify' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='android.app.Notification']]/parameter[2]"
+        name="managedName"
+        >
+        id
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='notify' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='android.app.Notification']]/parameter[3]"
+        name="managedName"
+        >
+        tag
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.app']/class[@name='NotificationCompatSideChannelService']/method[@name='notify' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='android.app.Notification']]/parameter[4]"
+        name="managedName"
+        >
+        notification
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.internal.view']/interface[@name='SupportMenu']/method[@name='setGroupDividerEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        isEnabled
+    </attr>
     
 </metadata>

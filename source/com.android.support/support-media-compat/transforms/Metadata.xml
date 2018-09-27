@@ -27,5 +27,121 @@
     <remove-node path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaSessionCompat.MediaSessionImplApi18']" />
     <remove-node path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaSessionCompat.MediaSessionImplApi19']" />
     <remove-node path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaSessionCompat.MediaSessionImplApi21']" />
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onConnectionFailed' and count(parameter)=1 and parameter[1][@type='android.os.Messenger']]/parameter[1]"
+        name="managedName"
+        >
+        callback    
+    </attr>
 
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        callback
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        parentId
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[3]"
+        name="managedName"
+        >
+        list
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[4]"
+        name="managedName"
+        >
+        options
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[5]"
+        name="managedName"
+        >
+        notifyChildrenChangedOptionsA
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        notifyChildrenChangedOptionsB
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onGetRoot' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        clientPackageName
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onGetRoot' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        clientUid
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onGetRoot' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[3]"
+        name="managedName"
+        >
+        rootHints
+    </attr>
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media']/class[@name='VolumeProviderCompat.Callback']/method[@name='onVolumeChanged' and count(parameter)=1 and parameter[1][@type='android.support.v4.media.VolumeProviderCompat']]/parameter[1]"
+        name="managedName"
+        >
+        volumeProvider
+    </attr>
+
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onLoadChildren' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.media.MediaBrowserServiceCompat.Result&lt;java.util.List&lt;android.support.v4.media.MediaBrowserCompat.MediaItem&gt;&gt;']]/parameter[1]"    
+        name="managedName"
+        >
+        parentId
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onLoadChildren' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.support.v4.media.MediaBrowserServiceCompat.Result&lt;java.util.List&lt;android.support.v4.media.MediaBrowserCompat.MediaItem&gt;&gt;']]/parameter[2]"    
+        name="managedName"
+        >
+        result
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/interface[@name='IMediaSession']/method[@name='sendCommand' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='android.support.v4.media.session.MediaSessionCompat.ResultReceiverWrapper']]/parameter[1]"
+        name="managedName"
+        >
+        command
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/interface[@name='IMediaSession']/method[@name='sendCommand' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='android.support.v4.media.session.MediaSessionCompat.ResultReceiverWrapper']]/parameter[2]"
+        name="managedName"
+        >
+        bundle
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/interface[@name='IMediaSession']/method[@name='sendCommand' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='android.support.v4.media.session.MediaSessionCompat.ResultReceiverWrapper']]/parameter[3]"
+        name="managedName"
+        >
+        wrapper
+    </attr>
+    
+    
+    
 </metadata>
