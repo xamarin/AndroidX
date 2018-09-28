@@ -22,7 +22,7 @@
 
     <attr path="/api/package[@name='android.support.v7.view.menu']/class[@name='ListMenuPresenter.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='android.support.v7.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
-  <attr path="/api/package[@name='android.support.v7.view.menu']/class[@name='Menu.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='android.support.v7.view.menu']/class[@name='Menu.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
 
     <attr path="/api/package[@name='android.support.v7.widget']/class[@name='AbsActionBarView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" name="propertyName">Visibility</attr>
 
@@ -300,6 +300,394 @@
         >
         itemId
     </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addOnMenuVisibilityListener' and count(parameter)=1 and parameter[1][@type='android.support.v7.app.ActionBar.OnMenuVisibilityListener']]/parameter[1]"
+        name="managedName"
+        >
+        listener
+    </attr>
+
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=1 and parameter[1][@type='android.support.v7.app.ActionBar.Tab']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='boolean']]/parameter[2]"
+        name="managedName"
+        >
+        setSelected
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        position
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[2]"
+        name="managedName"
+        >
+        position
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='android.support.v7.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[3]"
+        name="managedName"
+        >
+        setSelected
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='getTabAt' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        index
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='removeOnMenuVisibilityListener' and count(parameter)=1 and parameter[1][@type='android.support.v7.app.ActionBar.OnMenuVisibilityListener']]/parameter[1]"
+        name="managedName"
+        >
+        listener
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='removeTab' and count(parameter)=1 and parameter[1][@type='android.support.v7.app.ActionBar.Tab']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='removeTabAt' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='selectTab' and count(parameter)=1 and parameter[1][@type='android.support.v7.app.ActionBar.Tab']]/parameter[1]"
+        name="managedName"
+        >
+        tab
+    </attr>
+  
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setBackgroundDrawable' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
+        name="managedName"
+        >
+        d
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v7.app.ActionBar.LayoutParams']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v7.app.ActionBar.LayoutParams']]/parameter[2]"
+        name="managedName"
+        >
+        layoutParams
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayHomeAsUpEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        showHomeAsUp
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayOptions' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        options
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayOptions' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        mask
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayShowCustomEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        showCustom
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayShowHomeEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        showHome
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayShowTitleEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        showTitle
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setDisplayUseLogoEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        useLogo
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
+        name="managedName"
+        >
+        icon
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setListNavigationCallbacks' and count(parameter)=2 and parameter[1][@type='android.widget.SpinnerAdapter'] and parameter[2][@type='android.support.v7.app.ActionBar.OnNavigationListener']]/parameter[1]"
+        name="managedName"
+        >
+        adapter
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setListNavigationCallbacks' and count(parameter)=2 and parameter[1][@type='android.widget.SpinnerAdapter'] and parameter[2][@type='android.support.v7.app.ActionBar.OnNavigationListener']]/parameter[2]"
+        name="managedName"
+        >
+        callback
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setLogo' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
+        name="managedName"
+        >
+        logo
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setLogo' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setSelectedNavigationItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        name="managedName"
+        >
+        contentDesc
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        name="managedName"
+        >
+        contentDesc
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        layoutResId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
+        name="managedName"
+        >
+        icon
+    </attr>
+    
+    
+  
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setTabListener' and count(parameter)=1 and parameter[1][@type='android.support.v7.app.ActionBar.TabListener']]/parameter[1]"
+        name="managedName"
+        >
+        listener
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setTag' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]"
+        name="managedName"
+        >
+        obj
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setText' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='ActionBar.Tab']/method[@name='setText' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        name="managedName"
+        >
+        text
+    </attr>
+    
+    
+       
+    
     
     
     

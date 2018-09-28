@@ -14,4 +14,77 @@
         public
     </attr>
         
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/method[@name='bindView' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.content.Context'] and parameter[3][@type='android.database.Cursor']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/method[@name='bindView' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.content.Context'] and parameter[3][@type='android.database.Cursor']]/parameter[2]"
+        name="managedName"
+        >
+        context
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/method[@name='bindView' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.content.Context'] and parameter[3][@type='android.database.Cursor']]/parameter[3]"
+        name="managedName"
+        >
+        cursor
+    </attr>
+    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/method[@name='newView' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='android.view.ViewGroup']]/parameter[1]"
+        name="managedName"
+        >
+        context
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/method[@name='newView' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='android.view.ViewGroup']]/parameter[2]"
+        name="managedName"
+        >
+        cursor
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/class[@name='CursorAdapter']/method[@name='newView' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='android.view.ViewGroup']]/parameter[3]"
+        name="managedName"
+        >
+        parent
+    </attr>
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/interface[@name='SimpleCursorAdapter.CursorToStringConverter']/method[@name='convertToString' and count(parameter)=1 and parameter[1][@type='android.database.Cursor']]/parameter[1]"
+        name="managedName"
+        >
+        cursor
+    </attr>
+    
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        cursor
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+    </attr>
+    
+    
 </metadata>

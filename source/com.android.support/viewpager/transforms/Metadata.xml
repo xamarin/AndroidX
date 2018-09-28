@@ -19,13 +19,13 @@
         viewPager
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[1]"
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[2]"
         name="managedName"
         >
         oldAdapter
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[1]"
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.OnAdapterChangeListener']/method[@name='onAdapterChanged' and count(parameter)=3 and parameter[1][@type='android.support.v4.view.ViewPager'] and parameter[2][@type='android.support.v4.view.PagerAdapter'] and parameter[3][@type='android.support.v4.view.PagerAdapter']]/parameter[3]"
         name="managedName"
         >
         newAdapter
@@ -69,12 +69,34 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.PageTransformer']/method[@name='transformPage' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]"
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.PageTransformer']/method[@name='transformPage' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[1]"
+        name="managedName"
+        >
+        page
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/interface[@name='ViewPager.PageTransformer']/method[@name='transformPage' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[2]"
         name="managedName"
         >
         position
     </attr>
     
     
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/class[@name='PagerAdapter']/method[@name='isViewFromObject' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.Object']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.view']/class[@name='PagerAdapter']/method[@name='isViewFromObject' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.Object']]/parameter[2]"
+        name="managedName"
+        >
+        @object
+    </attr>
+    
+    
+        
     
 </metadata>

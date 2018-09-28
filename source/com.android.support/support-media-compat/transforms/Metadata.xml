@@ -144,4 +144,194 @@
     
     
     
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        mediaId
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        extras
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        query
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        extras
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        uri
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        extras
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        mediaId
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        extras
+    </attr>
+
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"    
+        name="managedName"
+        >
+        query
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"    
+        name="managedName"
+        >
+        extras
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        uri
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        extras
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='seekTo' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]"
+        name="managedName"
+        >
+        pos
+    </attr>
+    
+    
+
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='android.support.v4.media.session.PlaybackStateCompat.CustomAction'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        customAction
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='android.support.v4.media.session.PlaybackStateCompat.CustomAction'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        args
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        action
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
+        name="managedName"
+        >
+        args
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setCaptioningEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        enabled
+    </attr>
+
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRating' and count(parameter)=1 and parameter[1][@type='android.support.v4.media.RatingCompat']]/parameter[1]"
+        name="managedName"
+        >
+        rating
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRating' and count(parameter)=2 and parameter[1][@type='android.support.v4.media.RatingCompat'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"    
+        name="managedName"
+        >
+        rating
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRating' and count(parameter)=2 and parameter[1][@type='android.support.v4.media.RatingCompat'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"    
+        name="managedName"
+        >
+        extras
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRepeatMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        repeatMode
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setShuffleMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        shuffleMode
+    </attr>
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='skipToQueueItem' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]"
+        name="managedName"
+        >
+        id
+    </attr>
+    
+    
+    
+
 </metadata>
