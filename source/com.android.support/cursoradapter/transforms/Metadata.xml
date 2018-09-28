@@ -84,6 +84,7 @@
         path="/api/package[@name='android.support.v4.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[3]"
         name="managedName"
         >
+        columnIndex
     </attr>
     
     

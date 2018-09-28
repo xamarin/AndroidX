@@ -686,9 +686,206 @@
     </attr>
     
     
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarDescription' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        contentDescRes
+    </attr>        
+
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        upDrawable
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        contentDescRes
+    </attr>        
        
     
     
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='addContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[1]"
+        name="managedName"
+        >
+        v
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='addContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[2]"
+        name="managedName"
+        >
+        lp
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[1]"
+        name="managedName"
+        >
+        parent
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[2]"
+        name="managedName"
+        >
+        name
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[3]"
+        name="managedName"
+        >
+        context
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[4]"
+        name="managedName"
+        >
+        attrs
+    </attr>        
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='findViewById' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        id
+    </attr>        
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='hasWindowFeature' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        featureId
+    </attr>        
+    
+
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='onConfigurationChanged' and count(parameter)=1 and parameter[1][@type='android.content.res.Configuration']]/parameter[1]"
+        name="managedName"
+        >
+        newConfig
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='onCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='onPostCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>        
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
+        name="managedName"
+        >
+        outState
+    </attr>        
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='requestWindowFeature' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        featureId
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        v
+    </attr>        
+    
+    
+
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>        
+
+    
+    
+     <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[1]"
+        name="managedName"
+        >
+        v
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[2]"
+        name="managedName"
+        >
+        lp        
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setSupportActionBar' and count(parameter)=1 and parameter[1][@type='android.support.v7.widget.Toolbar']]/parameter[1]"
+        name="managedName"
+        >
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setLocalNightMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        mode
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setSupportActionBar' and count(parameter)=1 and parameter[1][@type='android.support.v7.widget.Toolbar']]/parameter[1]"
+        name="managedName"
+        >
+        toolbar
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        name="managedName"
+        >
+        title
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/class[@name='AppCompatDelegate']/method[@name='startSupportActionMode' and count(parameter)=1 and parameter[1][@type='android.support.v7.view.ActionMode.Callback']]/parameter[1]"
+        name="managedName"
+        >
+        callback
+    </attr>        
     
     
 </metadata>
