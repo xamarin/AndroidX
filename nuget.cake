@@ -75,6 +75,10 @@ var packagesPath = (DirectoryPath)Argument("packagesPath", "externals/packages")
 var workingPath = (DirectoryPath)Argument("workingPath", "working/packages");
 var outputPath = (DirectoryPath)Argument("outputPath", "output/packages");
 
+if (!string.IsNullOrEmpty(localSource)) {
+    localSource = MakeAbsolute((DirectoryPath)localSource).FullPath;
+}
+
 var apiLevelVersion = new Dictionary<int, NuGetFramework> {
     // {  1, NuGetFramework.Parse("monoandroid1.0") },
     // { 15, NuGetFramework.Parse("monoandroid4.0.3") },
@@ -251,7 +255,7 @@ Task("DownloadNuGets")
     };
 
     if (!string.IsNullOrEmpty(localSource)) {
-        nugetSources.Add(Repository.Factory.GetCoreV3(MakeAbsolute((DirectoryPath)localSource).FullPath));
+        nugetSources.Add(Repository.Factory.GetCoreV3(localSource));
     }
 
     var nugetCache = new SourceCacheContext();
@@ -283,7 +287,8 @@ Task("DownloadNuGets")
 
             foreach (var nugetSource in nugetSources) {
                 var mdRes = await nugetSource.GetResourceAsync<MetadataResource>();
-                var allVersions = await mdRes.GetVersions(id, false, false, nugetCache, nugetLogger, default);
+                var includePrerelease = nugetSource.PackageSource.Source == localSource;
+                var allVersions = await mdRes.GetVersions(id, includePrerelease, false, nugetCache, nugetLogger, default);
 
                 // process the versions
                 foreach (var version in allVersions) {
