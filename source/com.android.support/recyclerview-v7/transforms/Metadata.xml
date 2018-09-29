@@ -170,5 +170,428 @@
     
     
     
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[1]"
+        name="managedName"
+        >
+        oldItem 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[2]"
+        name="managedName"
+        >
+        newItem 
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[1]"
+        name="managedName"
+        >
+        oldItem 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[2]"
+        name="managedName"
+        >
+        newItem 
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[1]"
+        name="managedName"
+        >
+        item1 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[2]"
+        name="managedName"
+        >
+        item2
+    </attr>    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[1]"
+        name="managedName"
+        >
+        item1 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[2]"
+        name="managedName"
+        >
+        item2
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[1]"
+        name="managedName"
+        >
+        o1 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[2]"
+        name="managedName"
+        >
+        o2
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[1]"
+        name="managedName"
+        >
+        o1 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='T2'] and parameter[2][@type='T2']]/parameter[2]"
+        name="managedName"
+        >
+        o2
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='onChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.BatchedCallback']/method[@name='onChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        count
+    </attr>    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='onChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='SortedList.Callback']/method[@name='onChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        count
+    </attr>    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayoutManager.DefaultSpanSizeLookup']/method[@name='getSpanSize' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='getDecoratedEnd' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='getDecoratedMeasurement' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='getDecoratedMeasurementInOther' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"    
+        name="managedName"
+        >
+        view
+    </attr>    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='getDecoratedStart' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='getTransformedEndWithDecoration' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+   
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='getTransformedStartWithDecoration' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='offsetChild' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        view
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='offsetChild' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        offset
+    </attr>    
+    
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='OrientationHelper']/method[@name='offsetChildren' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        amount
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.Adapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        holder 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.Adapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        position
+    </attr>    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.Adapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        parent 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.Adapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        viewType
+    </attr>    
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.ChildDrawingOrderCallback']/method[@name='onGetChildDrawingOrder' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        childCount
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.ChildDrawingOrderCallback']/method[@name='onGetChildDrawingOrder' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        i    
+    </attr>    
+ 
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateAppearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateAppearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[2]"
+        name="managedName"
+        >
+        preLayoutInfo
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateAppearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[3]"
+        name="managedName"
+        >
+        postLayoutInfo
+    </attr>    
+    
+        
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateChange' and count(parameter)=4 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[4][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[1]"
+        name="managedName"
+        >
+        oldHolder
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateChange' and count(parameter)=4 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[4][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[2]"
+        name="managedName"
+        >
+        newHolder
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateChange' and count(parameter)=4 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[4][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[3]"
+        name="managedName"
+        >
+        preLayoutInfo
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateChange' and count(parameter)=4 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[4][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[4]"
+        name="managedName"
+        >
+        postLayoutInfo
+    </attr>    
+        
+        
+        
+        
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateDisappearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateDisappearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[2]"
+        name="managedName"
+        >
+        preLayoutInfo
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateDisappearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[3]"
+        name="managedName"
+        >
+        postLayoutInfo
+    </attr>    
+        
+        
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateDisappearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateDisappearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[2]"
+        name="managedName"
+        >
+        preLayoutInfo
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animateDisappearance' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[3]"
+        name="managedName"
+        >
+        postLayoutInfo
+    </attr>    
+        
+        
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='endAnimation' and count(parameter)=1 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder']]/parameter[1]"
+        name="managedName"
+        >
+        item
+    </attr>    
+    
+
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.LayoutManager.LayoutPrefetchRegistry']/method[@name='addPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        layoutPosition
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.LayoutManager.LayoutPrefetchRegistry']/method[@name='addPosition' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        pixelDistance
+    </attr>    
+        
+        
+        
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.OnFlingListener']/method[@name='onFling' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        velocityX 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.OnFlingListener']/method[@name='onFling' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        velocityY
+    </attr>    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ViewCacheExtension']/method[@name='getViewForPositionAndType' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.Recycler'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[1]"    
+        name="managedName"
+        >
+        recycler 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ViewCacheExtension']/method[@name='getViewForPositionAndType' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.Recycler'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[2]"    
+        name="managedName"
+        >
+        position 
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ViewCacheExtension']/method[@name='getViewForPositionAndType' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.Recycler'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[3]"    
+        name="managedName"
+        >
+        @type 
+    </attr>    
+    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/interface[@name='RecyclerView.SmoothScroller.ScrollVectorProvider']/method[@name='computeScrollVectorForPosition' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        targetPosition
+    </attr>    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animatePersistence' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[1]"
+        name="managedName"
+        >
+        viewHolder
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animatePersistence' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[2]"
+        name="managedName"
+        >
+        preLayoutInfo
+    </attr>    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='RecyclerView.ItemAnimator']/method[@name='animatePersistence' and count(parameter)=3 and parameter[1][@type='android.support.v7.widget.RecyclerView.ViewHolder'] and parameter[2][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo'] and parameter[3][@type='android.support.v7.widget.RecyclerView.ItemAnimator.ItemHolderInfo']]/parameter[3]"
+        name="managedName"
+        >
+        postLayoutInfo
+    </attr>    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.widget']/class[@name='GridLayoutManager.SpanSizeLookup']/method[@name='getSpanSize' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>    
+    
+    
+    
     
 </metadata>

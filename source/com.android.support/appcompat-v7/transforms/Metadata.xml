@@ -914,5 +914,82 @@
     
     
     
+    <attr
+        path="/api/package[@name='android.support.v7.view']/class[@name='ActionMode']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>        
+    
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.view']/class[@name='ActionMode']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        resId
+    </attr>        
+    
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onActionItemClicked' and count(parameter)=2 and parameter[1][@type='android.support.v7.view.ActionMode'] and parameter[2][@type='android.view.MenuItem']]/parameter[1]"
+        name="managedName"
+        >
+        mode 
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onActionItemClicked' and count(parameter)=2 and parameter[1][@type='android.support.v7.view.ActionMode'] and parameter[2][@type='android.view.MenuItem']]/parameter[2]"
+        name="managedName"
+        >
+        item
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onCreateActionMode' and count(parameter)=2 and parameter[1][@type='android.support.v7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[1]"
+        name="managedName"
+        >
+        mode
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onCreateActionMode' and count(parameter)=2 and parameter[1][@type='android.support.v7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[2]"
+        name="managedName"
+        >
+        menu
+    </attr>        
+
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onDestroyActionMode' and count(parameter)=1 and parameter[1][@type='android.support.v7.view.ActionMode']]/parameter[1]"
+        name="managedName"
+        >
+        mode
+    </attr>        
+    
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onPrepareActionMode' and count(parameter)=2 and parameter[1][@type='android.support.v7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[1]"
+        name="managedName"
+        >
+        mode 
+    </attr>        
+    <attr
+        path="/api/package[@name='android.support.v7.view']/interface[@name='ActionMode.Callback']/method[@name='onPrepareActionMode' and count(parameter)=2 and parameter[1][@type='android.support.v7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[2]"
+        name="managedName"
+        >
+        menu
+    </attr>        
+    
+    
+    
+    
+    
     
 </metadata>

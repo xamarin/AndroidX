@@ -141,7 +141,7 @@
         path="/api/package[@name='android.support.v7.preference']/interface[@name='DialogPreference.TargetFragment']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
         name="managedName"
         >
-        pref
+        key
     </attr>
     
     
