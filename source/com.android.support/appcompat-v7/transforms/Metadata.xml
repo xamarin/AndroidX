@@ -888,4 +888,31 @@
     </attr>        
     
     
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='AppCompatCallback']/method[@name='onSupportActionModeFinished' and count(parameter)=1 and parameter[1][@type='android.support.v7.view.ActionMode']]/parameter[1]"
+        name="managedName"
+        >
+        mode
+    </attr>        
+    
+        
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='AppCompatCallback']/method[@name='onSupportActionModeStarted' and count(parameter)=1 and parameter[1][@type='android.support.v7.view.ActionMode']]/parameter[1]"
+        name="managedName"
+        >
+        mode
+    </attr>        
+    
+    
+    <attr
+        path="/api/package[@name='android.support.v7.app']/interface[@name='AppCompatCallback']/method[@name='onWindowStartingSupportActionMode' and count(parameter)=1 and parameter[1][@type='android.support.v7.view.ActionMode.Callback']]/parameter[1]"
+        name="managedName"
+        >
+        callback
+    </attr>        
+    
+    
+    
+    
 </metadata>

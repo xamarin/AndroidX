@@ -34,4 +34,141 @@
         holder
     </attr>
     
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='AsyncListUtil.DataCallback']/method[@name='fillData' and count(parameter)=3 and parameter[1][@type='T[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        data 
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='AsyncListUtil.DataCallback']/method[@name='fillData' and count(parameter)=3 and parameter[1][@type='T[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        startPosition 
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='AsyncListUtil.DataCallback']/method[@name='fillData' and count(parameter)=3 and parameter[1][@type='T[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[3]"
+        name="managedName"
+        >
+        itemCount 
+    </attr>
+        
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='AsyncListUtil.ViewCallback']/method[@name='getItemRangeInto' and count(parameter)=1 and parameter[1][@type='int[]']]/parameter[1]"
+        name="managedName"
+        >
+        outRange
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='AsyncListUtil.ViewCallback']/method[@name='onItemLoaded' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position
+    </attr>
+    
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='DiffUtil.Callback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        oldItemPosition
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='DiffUtil.Callback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        newItemPosition
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='DiffUtil.Callback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        oldItemPosition
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/class[@name='DiffUtil.Callback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        newItemPosition 
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onChanged' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.Object']]/parameter[1]"
+        name="managedName"
+        >
+        position 
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onChanged' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.Object']]/parameter[2]"
+        name="managedName"
+        >
+        count 
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onChanged' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='java.lang.Object']]/parameter[3]"
+        name="managedName"
+        >
+        payload
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onInserted' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position 
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onInserted' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        count
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onMoved' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        fromPosition
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onMoved' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        toPosition
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onRemoved' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        position 
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.util']/interface[@name='ListUpdateCallback']/method[@name='onRemoved' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        count
+    </attr>
+    
+    
+    
+    
+    
 </metadata>

@@ -34,7 +34,7 @@
         preference
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeListener']/method[@name='onPreferenceChange' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='java.lang.Object']]/parameter[1]"
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeListener']/method[@name='onPreferenceChange' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='java.lang.Object']]/parameter[2]"
         name="managedName"
         >
         newValue
@@ -133,6 +133,130 @@
         name="managedName"
         >
         pref
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='DialogPreference.TargetFragment']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        name="managedName"
+        >
+        pref
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceDialogFragmentCompat']/method[@name='onDialogClosed' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        positiveResult
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceFragmentCompat']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        savedInstanceState
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceFragmentCompat']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+        name="managedName"
+        >
+        rootKey
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        caller  
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        name="managedName"
+        >
+        pref 
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        caller
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        name="managedName"
+        >
+        pref
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[1]"
+        name="managedName"
+        >
+        caller
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[2]"
+        name="managedName"
+        >
+        pref
+    </attr>
+
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceGroup.PreferencePositionCallback']/method[@name='getPreferenceAdapterPosition' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        preference
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceGroup.PreferencePositionCallback']/method[@name='getPreferenceAdapterPosition' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        name="managedName"
+        >
+        key
+    </attr>
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        p1
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        name="managedName"
+        >
+        p2
+    </attr>
+    
+    
+    
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        name="managedName"
+        >
+        p1
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        name="managedName"
+        >
+        p2
     </attr>
     
 </metadata>
