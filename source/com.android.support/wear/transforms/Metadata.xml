@@ -29,4 +29,78 @@
         >
         layout
     </attr>
+
+
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='canScrollHorizontally' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        direction
+    </attr>
+    
+    
+    
+
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='onInterceptTouchEvent' and count(parameter)=1 and parameter[1][@type='android.view.MotionEvent']]/parameter[1]"
+        name="managedName"
+        >
+        ev
+    </attr>
+        
+        
+        
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='onTouchEvent' and count(parameter)=1 and parameter[1][@type='android.view.MotionEvent']]/parameter[1]"
+        name="managedName"
+        >
+        ev
+    </attr>
+        
+        
+        
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='requestDisallowInterceptTouchEvent' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedName"
+        >
+        disallowIntercept
+    </attr>
+        
+        
+        
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/class[@name='WearableLinearLayoutManager.LayoutCallback']/method[@name='onLayoutFinished' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v7.widget.RecyclerView']]/parameter[1]"
+        name="managedName"
+        >
+        child
+    </attr>
+    <attr
+        path="/api/package[@name='android.support.wear.widget']/class[@name='WearableLinearLayoutManager.LayoutCallback']/method[@name='onLayoutFinished' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v7.widget.RecyclerView']]/parameter[2]"
+        name="managedName"
+        >
+        parent
+    </attr>
+        
+        
+        
+    <attr
+        path="/api/package[@name='android.support.wear.widget.drawer']/class[@name='WearableNavigationDrawerView.WearableNavigationDrawerAdapter']/method[@name='getItemDrawable' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        pos
+    </attr>
+        
+        
+        
+    <attr
+        path="/api/package[@name='android.support.wear.widget.drawer']/class[@name='WearableNavigationDrawerView.WearableNavigationDrawerAdapter']/method[@name='getItemText' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        pos
+    </attr>
+
+        
+    
+    
+    
 </metadata>
