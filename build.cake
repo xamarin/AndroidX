@@ -99,21 +99,21 @@ Task("libs")
 	.IsDependentOn("nuget-restore")
 	.Does(() =>
 {
-	NuGetRestore("./generated/AndroidSupport.sln", new NuGetRestoreSettings { });
+	NuGetRestore("./generated/AndroidX.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/AndroidSupport.sln", c => c.Configuration = "Release");
+	MSBuild("./generated/AndroidX.sln", c => c.Configuration = "Release");
 });
 
 Task("nuget-restore")
 	.Does(() =>
 {
-	NuGetRestore("./generated/AndroidSupport.sln", new NuGetRestoreSettings { });
+	NuGetRestore("./generated/AndroidX.sln", new NuGetRestoreSettings { });
 });
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	MSBuild ("./generated/AndroidSupport.sln", c => {
+	MSBuild ("./generated/AndroidX.sln", c => {
         c.Configuration = "Release";
         c.Targets.Clear();
         c.Targets.Add("Pack");
