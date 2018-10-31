@@ -1,398 +1,538 @@
 [{
 	"mavenRepositoryType" : "Google",
-	"slnFile" : "generated/AndroidSupport.sln",
+	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": [
-		"source/buildtasks/support-annotations/Support-Annotations-BuildTasks.csproj",
-		"source/buildtasks/support-annotations-tests/Support-Annotations-BuildTasks-Tests.csproj",
-		"source/buildtasks/support-vector-drawable/Support-Vector-Drawable-BuildTasks.csproj"
 	],
 	"templates" : [
 		{
-			"templateFile": "source/AndroidSupportTargets.cshtml",
+			"templateFile": "source/AndroidXTargets.cshtml",
 			"outputFileRule" : "generated/{groupid}.{artifactid}/{nugetid}.targets"
 		},
 		{
-			"templateFile": "source/AndroidSupportProject.cshtml",
+			"templateFile": "source/AndroidXProject.cshtml",
 			"outputFileRule" : "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
 		}
 	],
 	"artifacts" : [
 		{
-			"groupId" : "android.arch.core",
-			"artifactId" : "common",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Core.Common"
-		},
-		{
-			"groupId" : "android.arch.core",
-			"artifactId" : "runtime",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Core.Runtime"
-		},
-		
-		{
-			"groupId" : "android.arch.lifecycle",
-			"artifactId" : "common",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Common"
-		},
-		{
-			"groupId" : "android.arch.lifecycle",
-			"artifactId" : "extensions",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Extensions"
-		},
-		{
-			"groupId" : "android.arch.lifecycle",
-			"artifactId" : "livedata",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Lifecycle.LiveData"
-		},
-		{
-			"groupId" : "android.arch.lifecycle",
-			"artifactId" : "livedata-core",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Lifecycle.LiveData.Core"
-		},
-		{
-			"groupId" : "android.arch.lifecycle",
-			"artifactId" : "runtime",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Lifecycle.Runtime"
-		},
-		{
-			"groupId" : "android.arch.lifecycle",
-			"artifactId" : "viewmodel",
-			"version" : "1.1.1",
-			"nugetId" : "Xamarin.Android.Arch.Lifecycle.ViewModel"
-		},
-
-
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "animated-vector-drawable",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Animated.Vector.Drawable"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "appcompat-v7",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v7.AppCompat"
-		},
-		{
-			"groupId" : "com.android.support",
+			"groupId" : "androidx.annotation",
+			"artifactId" : "annotation",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Annotation.Annotation",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.appcompat",
+			"artifactId" : "appcompat",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Appcompat.Appcompat",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.arch.core",
+			"artifactId" : "core-common",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Arch.Core.Core.Common",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.arch.core",
+			"artifactId" : "core-runtime",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Arch.Core.Runtime",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.asynclayoutinflater",
 			"artifactId" : "asynclayoutinflater",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.AsyncLayoutInflater"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "cardview-v7",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v7.CardView"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "collections",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Collections"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.AsyncLayerInflater",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.browser",
+			"artifactId" : "browser",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Browser.Browser",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.cardview",
+			"artifactId" : "cardview",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.CardView.CardView",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.collection",
+			"artifactId" : "collection",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Collection.Collection",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.constraintlayout",
+			"artifactId" : "constraintlayout",
+			"version" : "1.1.3",
+			"nugetId" : "Xamarin.AndroidX.ConstraintLayout.ConstraintLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.constraintlayout",
+			"artifactId" : "constraintlayout-solver",
+			"version" : "1.1.3",
+			"nugetId" : "Xamarin.AndroidX.ConstraintLayout.Solver",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.contentpager",
+			"artifactId" : "contentpager",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.ContentPager.ContentPager",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.coordinatorlayout",
 			"artifactId" : "coordinatorlayout",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.CoordinaterLayout"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.CoordinatorLayout.CoordinatorLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.core",
+			"artifactId" : "core",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Core.Core",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.cursoradapter",
 			"artifactId" : "cursoradapter",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.CursorAdapter"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "customtabs",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.CustomTabs"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.CursorAdapter.CursorAdapter",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.customview",
 			"artifactId" : "customview",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.CustomView"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "design",
-			"version" : "28.0.0-rc01",
-			"nugetId" : "Xamarin.Android.Support.Design"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.CustomView.CustomView",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.documentfile",
 			"artifactId" : "documentfile",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.DocumentFile"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.DocumentFile.DocumentFile",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.drawerlayout",
 			"artifactId" : "drawerlayout",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.DrawerLayout"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.DrawerLayout.DrawerLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.dynamicanimation",
+			"artifactId" : "dynamicanimation",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.DynamicAnimation.DynamicAnimation",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.emoji",
+			"artifactId" : "emoji",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Emoji.Emoji",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.emoji",
+			"artifactId" : "emoji-appcompat",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Emoji.AppCompat",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.emoji",
+			"artifactId" : "emoji-bundled",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Emoji.Bundled",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.exifinterface",
 			"artifactId" : "exifinterface",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Exif"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "gridlayout-v7",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v7.GridLayout"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.ExIfInterface.ExIfInterface",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.fragment",
+			"artifactId" : "fragment",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Fragment.Fragment",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.gridlayout",
+			"artifactId" : "gridlayout",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.GridLayout.GridLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.heifwriter",
 			"artifactId" : "heifwriter",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.HeifWriter"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.HeifWriter.HeifWriter",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.interpolator",
 			"artifactId" : "interpolator",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Interpolator"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "leanback-v17",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v17.Leanback"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Interpolator.Interpolator",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.leanback",
+			"artifactId" : "leanback",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Leanback.Leanback",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.leanback",
+			"artifactId" : "leanback-preference",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Leanback.Preference",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.legacy",
+			"artifactId" : "legacy-preference-v14",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Legacy.PreferenceV14",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.legacy",
+			"artifactId" : "legacy-support-core-ui",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Legacy.CoreUI",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.legacy",
+			"artifactId" : "legacy-support-core-utils",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Legacy.CoreUtils",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.legacy",
+			"artifactId" : "legacy-support-v13",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Legacy.SupportV13",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.legacy",
+			"artifactId" : "legacy-support-v4",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Legacy.SupportV4",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-common",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.Common",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-common-java8",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.CommonJava8",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-extensions",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.Extensions",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-livedata",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.LiveData",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-livedata-core",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.LiveDataCore",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-process",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.Process",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-reactivestreams",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-runtime",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.Runtime",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-service",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.Service",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.lifecycle",
+			"artifactId" : "lifecycle-viewmodel",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Lifecycle.ViewModel",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.loader",
 			"artifactId" : "loader",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Loader"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Loader.Loader",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.localbroadcastmanager",
 			"artifactId" : "localbroadcastmanager",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.LocalBroadcastManager"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "palette-v7",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v7.Palette"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "percent",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Percent"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "preference-leanback-v17",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v17.Preference.Leanback"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "preference-v14",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v14.Preference"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "preference-v7",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v7.Preference"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.LocalBroadcastManager.LocalBroadcastManager",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.media",
+			"artifactId" : "media",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Media.Media",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.mediarouter",
+			"artifactId" : "mediarouter",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Mediarouter.Mediarouter",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.paging",
+			"artifactId" : "paging-common",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Paging.Paging",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.paging",
+			"artifactId" : "paging-runtime",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Paging.Runtime",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.paging",
+			"artifactId" : "paging-rxjava2",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Paging.RXJava2",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.palette",
+			"artifactId" : "palette",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Pallete.Pallete",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.percentlayout",
+			"artifactId" : "percentlayout",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.PercentLayout.PercentLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.preference",
+			"artifactId" : "preference",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Preference.Preference",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.print",
 			"artifactId" : "print",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Print"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Print.Print",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.recommendation",
 			"artifactId" : "recommendation",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Recommendation"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Recommendation.Recommendation",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.recyclerview",
+			"artifactId" : "recyclerview",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.RecyclerView.RecyclerView",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.recyclerview",
 			"artifactId" : "recyclerview-selection",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.RecyclerView.Selection"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "recyclerview-v7",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v7.RecyclerView"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "slices-builders",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Slices.Builders"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "slices-core",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Slices.Core"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "slices-view",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Slices.View"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.RecyclerView.Selection",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.slice",
+			"artifactId" : "slice-builders",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Slice.Builders",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.slice",
+			"artifactId" : "slice-core",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Slice.Core",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.slice",
+			"artifactId" : "slice-view",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Slice.View",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.slidingpanelayout",
 			"artifactId" : "slidingpanelayout",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.SlidingPaneLayout"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-annotations",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Annotations"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-compat",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Compat"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-core-ui",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Core.UI"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-core-utils",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Core.Utils"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-dynamic-animation",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Dynamic.Animation"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-emoji",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Emoji"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-emoji-appcompat",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Emoji.AppCompat"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-emoji-bundled",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Emoji.Bundled"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-fragment",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Fragment"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-media-compat",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Media.Compat"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-tv-provider",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.TV.Provider"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-v13",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v13"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-vector-drawable",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Vector.Drawable"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.SlidingPanelLayout.SlidingPanelLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.swiperefreshlayout",
 			"artifactId" : "swiperefreshlayout",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.SwipeRefreshLayout"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.SwipeRefreshLayout.SwipeRefreshLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.transition",
 			"artifactId" : "transition",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Transition"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Transition.Transition",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.tvprovider",
+			"artifactId" : "tvprovider",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.TvProvider.TvProvider",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.vectordrawable",
+			"artifactId" : "vectordrawable",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.VectorDrawable.VectorDrawable",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.vectordrawable",
+			"artifactId" : "vectordrawable-animated",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.VectorDrawable.Animated",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.versionedparcelable",
 			"artifactId" : "versionedparcelable",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.VersionedParcelable"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.VersionedParcelable.VersionedParcelable",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.viewpager",
 			"artifactId" : "viewpager",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.ViewPager"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.ViewPager.ViewPager",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.wear",
 			"artifactId" : "wear",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.Wear"
-		},
-		{
-			"groupId" : "com.android.support",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Wear.Wear",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.webkit",
 			"artifactId" : "webkit",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.WebKit"
-		},
-		{
-			"groupId" : "com.android.support",
-			"artifactId" : "support-v4",
-			"version" : "28.0.0",
-			"nugetId" : "Xamarin.Android.Support.v4"
-		},
-		{
-			"groupId" : "com.android.support.constraint",
-			"artifactId" : "constraint-layout",
-			"version" : "1.1.0",
-			"nugetId" : "Xamarin.Android.Support.Constraint.Layout",
-			"dependencyOnly" : true
-		},
-		{
-			"groupId" : "com.android.support.constraint",
-			"artifactId" : "constraint-layout-solver",
-			"version" : "1.1.0",
-			"nugetId" : "Xamarin.Android.Support.Constraint.Layout.Solver",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.WebKit.WebKit",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "com.google.android.material",
+			"artifactId" : "material",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Meterial.Material",
+			"dependencyOnly" : false
+		}
+
+
+		
+
+		,{
+			"groupId" : "org.reactivestreams",
+			"artifactId" : "reactive-streams",
+			"version" : "1.0.0",
 			"dependencyOnly" : true
 		}
+		,{
+			"groupId" : "io.reactivex.rxjava2",
+			"artifactId" : "rxjava",
+			"version" : "2.0.6",
+			"dependencyOnly" : true
+		}
+		,{
+			"groupId" : "com.google.guava",
+			"artifactId" : "guava",
+			"version" : "23.6",
+			"dependencyOnly" : true
+		}
+
 	]
 }]
