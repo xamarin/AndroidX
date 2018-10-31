@@ -1,11 +1,5 @@
 ﻿using System;
-namespace Android.Support.Palette
+namespace AndroidX.Palette.Pallete
 {
-    public class Additions
-    {
-        public Additions ()
-        {
-        }
-    }
 }
 

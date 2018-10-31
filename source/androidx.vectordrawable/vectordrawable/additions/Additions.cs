@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace Android.Support.Graphics.Drawable
+namespace AndroidX.VectorDrawable.VectorDrawable
 {
     //public partial class VectorDrawableCommon
     //{

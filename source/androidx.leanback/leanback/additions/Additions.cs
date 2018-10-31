@@ -2,7 +2,7 @@
 using Android.Runtime;
 using Java.Interop;
 
-namespace Android.Support.V17.Leanback.Widget
+namespace AndroidX.Leanback.Leanback
 {
     public partial class BaseCardView
     {
@@ -248,12 +248,12 @@ namespace Android.Support.V17.Leanback.Widget
 	}
 }
 
-namespace Android.Support.V17.Leanback.App
+namespace AndroidX.Leanback.Leanback.App
 {
     
 }
 
-namespace Android.Support.V17.Leanback.Widget.Picker
+namespace AndroidX.Leanback.Leanback.Widget.Picker
 {
     public partial class Picker
     {

@@ -2,7 +2,7 @@
 using System.Collections;
 using Android.Runtime;
 
-//namespace Android.Support.V4.Util
+//namespace AndroidX.Core.Core
 //{
 //	public partial class ArrayMap
 //	{
@@ -44,7 +44,7 @@ using Android.Runtime;
 //	}
 //}
 
-namespace Android.Support.V4.Text
+namespace Android.Core.Core.Text
 {
 	public partial class PrecomputedTextCompat
 	{

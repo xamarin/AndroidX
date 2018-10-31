@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace Android.Support.V7.App
+namespace AndroidX.Appcompat.AppCompat
+
 {
     public partial class AlertDialog
     {

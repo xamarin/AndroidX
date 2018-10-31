@@ -2,7 +2,7 @@
 using Android.Runtime;
 using Java.Interop;
 
-namespace Android.Support.V7.View
+namespace AndroidX.Appcompat.AppCompat
 {
 
     public partial class SupportActionModeWrapper

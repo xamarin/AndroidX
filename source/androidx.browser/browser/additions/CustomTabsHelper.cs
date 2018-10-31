@@ -3,7 +3,7 @@ using Android.Content;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Android.Support.CustomTabs
+namespace AndroidX.Browser.Browser
 {
     public class CustomTabsHelper 
     {

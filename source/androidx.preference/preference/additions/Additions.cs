@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace Android.Support.V7.Preferences
+namespace Androidx.Preference.Preference
 {
      public partial class PreferenceGroupAdapter
      {

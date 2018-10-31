@@ -7,9 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Graphics;
-using Android.Support.CustomTabs;
+using AndroidX.Browser.Browser;
 
-namespace Android.Support.CustomTabs
+namespace AndroidX.Browser.Browser
 {
 
     class CustomTabsServiceConnectionImpl : CustomTabsServiceConnection

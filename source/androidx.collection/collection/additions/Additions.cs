@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Android.Support.V4.Util
+namespace AndroidX.Collection.Collection
 {
 	public partial class ArrayMap
 	{

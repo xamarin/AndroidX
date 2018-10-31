@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace Android.Arch.Lifecycle
+namespace AndroidX.Lifecycle.Common
 {
 	public partial class Lifecycle
 	{

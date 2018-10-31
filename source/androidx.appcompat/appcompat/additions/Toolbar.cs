@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Android.Support.V7.Widget
+namespace AndroidX.Appcompat.AppCompat
 {
     public partial class Toolbar
     {        

@@ -2,7 +2,7 @@
 //using System.Collections.Generic;
 //using Android.Runtime;
 
-//namespace Android.Support.V4.Widget
+//namespace AndroidX.SwipeRefreshLayout.SwipeRefreshLayout.Widget
 //{
 //    // Metadata.xml XPath class reference: path="/api/package[@name='android.support.v4.widget']/class[@name='SwipeRefreshLayout']"
 //    public partial class SwipeRefreshLayout

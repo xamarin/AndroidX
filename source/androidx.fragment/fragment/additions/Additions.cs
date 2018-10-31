@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Android.Runtime;
 
-namespace Android.Support.V4.App
+namespace AndroidX.Fragment.Fragment
 {
     public partial class FragmentActivity
     {

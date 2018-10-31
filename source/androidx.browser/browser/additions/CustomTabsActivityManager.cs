@@ -4,7 +4,7 @@ using Android.OS;
 using System.Collections.Generic;
 using Android.App;
 
-namespace Android.Support.CustomTabs
+namespace AndroidX.Browser.Browser
 {
     public class CustomTabsActivityManager
     {

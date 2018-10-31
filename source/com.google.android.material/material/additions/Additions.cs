@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace Android.Support.Design.Internal
+namespace AndroidX.Material
 {
 
     public partial class NavigationMenuItemView

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Android.Support.Media.TV
+namespace AndroidX.TvProvider.TvProvider
 {
 	public partial class Program
 	{

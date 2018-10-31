@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace Android.Support.Transitions
+namespace AndroidX.Transition.Transition
 {
 	public partial class FragmentTransitionSupport
 	{

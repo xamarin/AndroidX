@@ -1,5 +1,5 @@
 ﻿//using System;
-//namespace Android.Support.Graphics.Drawable
+//namespace AndroidX.VectorDrawable.VectorDrawable.Drawable
 //{
 //    // Metadata.xml XPath class reference: path="/api/package[@name='android.support.graphics.drawable']/class[@name='AnimatedVectorDrawableCompat']"
 //    public partial class AnimatedVectorDrawableCompat

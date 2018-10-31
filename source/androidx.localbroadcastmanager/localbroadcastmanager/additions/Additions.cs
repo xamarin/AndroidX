@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xamarin.AndroidX
+namespace AndroidX.LocalBroadcastManager.LocalBroadcastManager
 {
 }
 

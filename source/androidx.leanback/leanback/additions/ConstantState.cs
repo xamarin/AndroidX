@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace Android.Support.V17.Leanback.App
+namespace AndroidX.Leanback.Leanback.App
 {
 	public partial class BackgroundManager 
 	{
@@ -34,7 +34,7 @@ namespace Android.Support.V17.Leanback.App
 }
 
 
-//namespace Android.Support.V17.Leanback.Animation {
+//namespace AndroidX.Leanback.Leanback.Animation {
 //
 //    // Metadata.xml XPath class reference: path="/api/package[@name='android.support.v17.leanback.animation']/class[@name='UntargetableAnimatorSet']"
 //    public partial class UntargetableAnimatorSet 

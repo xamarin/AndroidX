@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
-namespace AndroidX.Slice.Widget
+namespace AndroidX.Slice.Slice.Widget
 {
 
 	// Metadata.xml XPath class reference: path="/api/package[@name='androidx.slice.widget']/class[@name='LargeSliceAdapter']"

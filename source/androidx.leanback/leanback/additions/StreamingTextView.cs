@@ -1,7 +1,7 @@
 ﻿//using System;
 //using Android.Runtime;
 //
-//namespace Android.Support.V17.Leanback.Widget
+//namespace AndroidX.Leanback.Leanback.Widget
 //{
 //    public partial class StreamingTextView : Android.Widget.EditText
 //    {

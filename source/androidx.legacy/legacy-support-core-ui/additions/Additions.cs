@@ -2,7 +2,7 @@
 //using System.Collections.Generic;
 //using Android.Runtime;
 
-//namespace Android.Support.V4.View
+//namespace AndroidX.Legacy.View
 //{
 //    // Metadata.xml XPath class reference: path="/api/package[@name='android.support.v4.view']/class[@name='PagerTabStrip']"
 //    public partial class PagerTabStrip

@@ -1,7 +1,7 @@
 ﻿//using System;
 //using Android.Runtime;
 
-//namespace Android.Support.V7.Widget
+//namespace AndroidX.RecyclerView.RecyclerView.Widget
 //{
 //    public partial class RecyclerView
 //    {
