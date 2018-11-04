@@ -1,7 +1,20 @@
-﻿@using System.Linq
+﻿<?xml version="1.0" encoding="utf-8"?>
+@using System.Linq
 @using System.IO
 @using System.Xml.Linq
-<?xml version="1.0" encoding="utf-8"?>
+@functions 
+{
+  public static void RemoveXmlns(XElement e)
+  {
+    e.Name = e.Name.LocalName;
+     foreach (var node in e.DescendantNodes())
+    {
+      var n = node as XElement;
+      if (n != null)
+        RemoveXmlns(n);
+    }
+  }
+}
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
@@ -28,6 +41,7 @@
     XNamespace nsChild = xmlTargets.Root.Name.Namespace;
     @Raw("\r\n\r\n");
     foreach (var xelem in xmlTargets.Element (nsChild + "Project").Elements ()) {
+      RemoveXmlns(xelem);
       @Raw("\r\n" + xelem.ToString());
     }
     @Raw("\r\n\r\n");
