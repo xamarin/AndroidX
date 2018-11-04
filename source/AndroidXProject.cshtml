@@ -121,7 +121,8 @@
     <!-- ProjectReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
-        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" />
+        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
+
       }
     }
     <!-- some additional fixes -->
