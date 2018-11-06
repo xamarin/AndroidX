@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AndroidX.Appcompat.AppCompat
+namespace AndroidX.AppCompat.Widget
 {
     public partial class Toolbar
     {        
@@ -28,7 +28,7 @@ namespace AndroidX.Appcompat.AppCompat
             }
         }
 
-        internal partial class NavigationOnClickEventDispatcher : Java.Lang.Object, Views.View.IOnClickListener
+        internal partial class NavigationOnClickEventDispatcher : Java.Lang.Object, global::Android.Views.View.IOnClickListener
         {
             Toolbar sender;
 
@@ -49,7 +49,7 @@ namespace AndroidX.Appcompat.AppCompat
 
         public class NavigationClickEventArgs : EventArgs
         {
-            public Views.View View { get; internal set; }
+            public global::Android.Views.View View { get; internal set; }
         }
     }
 }

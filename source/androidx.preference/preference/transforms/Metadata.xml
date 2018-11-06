@@ -1,55 +1,53 @@
 ﻿<metadata>
-
-	<attr path="/api/package[@name='android.support.v7.preference']" name="managedName">Android.Support.V7.Preferences</attr>
-
-	<remove-node path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeInternalListener']" />
-
-	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='Preference']/method[@name='compareTo']/parameter[1]" name="managedType">Java.Lang.Object</attr>
-
-	<!-- Fix generics -->
-	<!--<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
-	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
--->
-<!--	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" />-->
-<!--	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="managedReturn">Java.Lang.Object</attr>-->
-
-<!--	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="managedReturn"></attr>-->
-
-	<!--<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">android.support.v7.widget.RecyclerView.ViewHolder</attr>
-	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='bindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
-	<attr path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">android.support.v7.widget.RecyclerView.ViewHolder</attr>
--->
-
-	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']" />
-	<remove-node path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" />
-
-    <attr path="/api/package[@name='android.support.v14.preference']" name="managedName">Android.Support.V14.Preferences</attr>
+    <attr path="/api/package[@name='androidx.preference']" name="managedName">AndroidX.Preference</attr>
+    <attr path="/api/package[@name='androidx.preference.internal']" name="managedName">AndroidX.Preference.Internal</attr>
     
+    <remove-node path="/api/package[@name='androidx.preference']/interface[@name='Preference.OnPreferenceChangeInternalListener']" />
+
+    <attr path="/api/package[@name='androidx.preference']/class[@name='Preference']/method[@name='compareTo']/parameter[1]" name="managedType">Java.Lang.Object</attr>
     
+    <!-- Fix generics -->
+    <!--<attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">7.widget.RecyclerView.ViewHolder</attr>
+    <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">7.widget.RecyclerView.ViewHolder</attr>
+    -->
+    
+<!--    <remove-node path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" />-->
+<!--    <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="managedReturn">Java.Lang.Object</attr>-->
+
+<!--    <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="managedReturn"></attr>-->
+
+    <!--<attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">7.widget.RecyclerView.ViewHolder</attr>
+    <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='bindViewHolder']/parameter[1]" name="type">7.widget.RecyclerView.ViewHolder</attr>
+    <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">7.widget.RecyclerView.ViewHolder</attr>
+-->
+
+    <remove-node path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']" />
+    <remove-node path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" />
 
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeListener']/method[@name='onPreferenceChange' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='java.lang.Object']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='Preference.OnPreferenceChangeListener']/method[@name='onPreferenceChange' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='java.lang.Object']]/parameter[1]"
         name="managedName"
         >
         preference
     </attr>
+    
+    
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceChangeListener']/method[@name='onPreferenceChange' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='java.lang.Object']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='Preference.OnPreferenceChangeListener']/method[@name='onPreferenceChange' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='java.lang.Object']]/parameter[2]"
         name="managedName"
         >
         newValue
     </attr>
-    
 
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='Preference.OnPreferenceClickListener']/method[@name='onPreferenceClick' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"    
+        path="/api/package[@name='androidx.preference']/interface[@name='Preference.OnPreferenceClickListener']/method[@name='onPreferenceClick' and count(parameter)=1 and parameter[1][@type='androidx.preference.Preference']]/parameter[1]"    
         name="managedName"
         >
         preference
     </attr>
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceManager.OnDisplayPreferenceDialogListener']/method[@name='onDisplayPreferenceDialog' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceManager.OnDisplayPreferenceDialogListener']/method[@name='onDisplayPreferenceDialog' and count(parameter)=1 and parameter[1][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         preference
@@ -57,14 +55,14 @@
     
 
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceManager.OnNavigateToScreenListener']/method[@name='onNavigateToScreen' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.PreferenceScreen']]/parameter[1]"    
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceManager.OnNavigateToScreenListener']/method[@name='onNavigateToScreen' and count(parameter)=1 and parameter[1][@type='androidx.preference.PreferenceScreen']]/parameter[1]"    
         name="managedName"
         >
         preferenceScreen
     </attr>
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceManager.OnPreferenceTreeClickListener']/method[@name='onPreferenceTreeClick' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceManager.OnPreferenceTreeClickListener']/method[@name='onPreferenceTreeClick' and count(parameter)=1 and parameter[1][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         preference
@@ -72,7 +70,7 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/class[@name='PreferenceDialogFragment']/method[@name='onDialogClosed' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceDialogFragment']/method[@name='onDialogClosed' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
         name="managedName"
         >
         positiveResult    
@@ -80,13 +78,13 @@
 
     
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragment.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='14.preference.PreferenceFragment'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         caller
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragment.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='14.preference.PreferenceFragment'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]"
         name="managedName"
         >
         pref
@@ -94,13 +92,13 @@
 
     
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/class[@name='PreferenceFragment']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceFragment']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[1]"
         name="managedName"
         >
         savedInstanceState
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/class[@name='PreferenceFragment']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceFragment']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[2]"
         name="managedName"
         >
         rootKey
@@ -108,13 +106,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragment.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='14.preference.PreferenceFragment'] and parameter[2][@type='androidx.preference.PreferenceScreen']]/parameter[1]"
         name="managedName"
         >
         caller
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragment.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='14.preference.PreferenceFragment'] and parameter[2][@type='androidx.preference.PreferenceScreen']]/parameter[2]"
         name="managedName"
         >
         pref
@@ -123,13 +121,13 @@
 
     
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragment.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='14.preference.PreferenceFragment'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         caller
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v14.preference']/interface[@name='PreferenceFragment.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v14.preference.PreferenceFragment'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragment.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='14.preference.PreferenceFragment'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]"
         name="managedName"
         >
         pref
@@ -138,7 +136,7 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='DialogPreference.TargetFragment']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='DialogPreference.TargetFragment']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
         name="managedName"
         >
         key
@@ -147,7 +145,7 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceDialogFragmentCompat']/method[@name='onDialogClosed' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceDialogFragmentCompat']/method[@name='onDialogClosed' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
         name="managedName"
         >
         positiveResult
@@ -156,13 +154,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceFragmentCompat']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceFragmentCompat']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[1]"
         name="managedName"
         >
         savedInstanceState
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceFragmentCompat']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceFragmentCompat']/method[@name='onCreatePreferences' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]/parameter[2]"
         name="managedName"
         >
         rootKey
@@ -170,13 +168,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceFragmentCompat'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         caller  
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceDisplayDialogCallback']/method[@name='onPreferenceDisplayDialog' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceFragmentCompat'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]"
         name="managedName"
         >
         pref 
@@ -185,13 +183,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceFragmentCompat'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         caller
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartFragmentCallback']/method[@name='onPreferenceStartFragment' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceFragmentCompat'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]"
         name="managedName"
         >
         pref
@@ -200,13 +198,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceFragmentCompat'] and parameter[2][@type='androidx.preference.PreferenceScreen']]/parameter[1]"
         name="managedName"
         >
         caller
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.PreferenceFragmentCompat'] and parameter[2][@type='android.support.v7.preference.PreferenceScreen']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceFragmentCompat.OnPreferenceStartScreenCallback']/method[@name='onPreferenceStartScreen' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceFragmentCompat'] and parameter[2][@type='androidx.preference.PreferenceScreen']]/parameter[2]"
         name="managedName"
         >
         pref
@@ -215,7 +213,7 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceGroup.PreferencePositionCallback']/method[@name='getPreferenceAdapterPosition' and count(parameter)=1 and parameter[1][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceGroup.PreferencePositionCallback']/method[@name='getPreferenceAdapterPosition' and count(parameter)=1 and parameter[1][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         preference
@@ -224,7 +222,7 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/interface[@name='PreferenceGroup.PreferencePositionCallback']/method[@name='getPreferenceAdapterPosition' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/interface[@name='PreferenceGroup.PreferencePositionCallback']/method[@name='getPreferenceAdapterPosition' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
         name="managedName"
         >
         key
@@ -232,13 +230,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         p1
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]"
         name="managedName"
         >
         p2
@@ -247,16 +245,47 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[1]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]"
         name="managedName"
         >
         p1
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v7.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='android.support.v7.preference.Preference'] and parameter[2][@type='android.support.v7.preference.Preference']]/parameter[2]"
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]"
         name="managedName"
         >
         p2
     </attr>
+    
+    <!--
+    mc++ AndroidX
+    -->
+    
+    <add-node
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']"
+        >
+        <method 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            jni-return="V" jni-signature="(Landroid/views/ViewHolder;I)V" 
+            visibility="public" static="false" abstract="false" return="void" name="onBindViewHolder" 
+            >
+            <parameter type="android.views.ViewHolder" name="holder" jni-type="Landroid/views/ViewHolder;">
+            </parameter>
+            <parameter type="int" name="position" jni-type="I">
+            </parameter>
+        </method>
+        <method 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            jni-return="Ljava/lang/Object;" jni-signature="(Landroid/view/ViewGroup;I)Ljava/lang/Object;" 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="onCreateViewHolder" 
+            >
+            <parameter type="android.view.ViewGroup" name="parent" jni-type="Landroid/view/ViewGroup;">
+            </parameter>
+            <parameter type="int" name="viewType" jni-type="I">
+            </parameter>
+        </method>
+        
+    </add-node>
+
     
 </metadata>

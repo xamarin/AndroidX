@@ -1,12 +1,12 @@
 <metadata>
     <attr 
-        path="/api/package[@name='android.arch.lifecycle']/class[@name='LiveData.ObserverWrapper']"
+        path="/api/package[@name='androidx.lifecycle']/class[@name='LiveData.ObserverWrapper']"
         name="visibility"
         >
         public
     </attr>
     <attr 
-        path="/api/package[@name='android.arch.lifecycle']/class[@name='LiveData.LifecycleBoundObserver']"
+        path="/api/package[@name='androidx.lifecycle']/class[@name='LiveData.LifecycleBoundObserver']"
         name="visibility"
         >
         public

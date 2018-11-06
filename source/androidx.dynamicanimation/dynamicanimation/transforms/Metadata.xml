@@ -1,51 +1,51 @@
 <metadata>
 
-	<attr path="/api/package[@name='android.support.animation']" name="managedName">Android.Support.Animation</attr>
-	<attr path="/api/package[@name='android.support.dynamicanimation']" name="managedName">Android.Support.DynamicAnimation</attr>
+	<attr path="/api/package[@name='androidx.dynamicanimation.animation']" name="managedName">AndroidX.DynamicAnimation.Animation</attr>
+    <attr path="/api/package[@name='androidx.dynamicanimation.animation']" name="managedName">AndroidX.DynamicAnimation</attr>
 
-	<remove-node path="/api/package[@name='android.support.animation']/class[@name='SpringForce']/implements[@name='android.support.animation.Force']" />
-    <remove-node path="/api/package[@name='android.support.animation']/class[@name='FlingAnimation.DragForce']/implements[@name='android.support.animation.Force']" />
+	<remove-node path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='SpringForce']/implements[@name='android.support.animation.Force']" />
+    <remove-node path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FlingAnimation.DragForce']/implements[@name='android.support.animation.Force']" />
     
     
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[1]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[1]"
         name="managedName"
         >
         animation        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[2]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[2]"
         name="managedName"
         >
         canceled        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[3]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[3]"
         name="managedName"
         >
         value        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[4]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[4]"
         name="managedName"
         >
         velocity        
     </attr>
     
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[1]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[1]"
         name="managedName"
         >
         animation        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[2]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[2]"
         name="managedName"
         >
         value        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[3]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationUpdateListener']/method[@name='onAnimationUpdate' and count(parameter)=3 and parameter[1][@type='android.support.animation.DynamicAnimation'] and parameter[2][@type='float'] and parameter[3][@type='float']]/parameter[3]"
         name="managedName"
         >
         velocity        
@@ -53,24 +53,33 @@
 
     
     <attr
-        path="/api/package[@name='android.support.animation']/class[@name='FloatPropertyCompat']/method[@name='getValue' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FloatPropertyCompat']/method[@name='getValue' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]"
         name="managedName"
         >
         @object        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[1]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[1]"
         name="managedName"
         >
         @object        
     </attr>
     <attr
-        path="/api/package[@name='android.support.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[2]"
+        path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[2]"
         name="managedName"
         >
         @value        
     </attr>
     
-    
+
+    <!--
+    mc++ AndroidX
+    -->
+    <attr
+        path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='Force']"
+        name="visibility"
+        >
+        public        
+    </attr>
     
 </metadata>

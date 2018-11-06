@@ -1,13 +1,13 @@
-<metadata>
+﻿<metadata>
     
     <attr
-        path="/api/package[@name='android.support.v4.widget']/interface[@name='SwipeRefreshLayout.OnChildScrollUpCallback']/method[@name='canChildScrollUp' and count(parameter)=2 and parameter[1][@type='android.support.v4.widget.SwipeRefreshLayout'] and parameter[2][@type='android.view.View']]/parameter[1]"    
+        path="/api/package[@name='androidx.swiperefreshlayout.widget']/interface[@name='SwipeRefreshLayout.OnChildScrollUpCallback']/method[@name='canChildScrollUp' and count(parameter)=2 and parameter[1][@type='4.widget.SwipeRefreshLayout'] and parameter[2][@type='android.view.View']]/parameter[1]"    
         name="managedName"
         >
         parent        
     </attr>
     <attr
-        path="/api/package[@name='android.support.v4.widget']/interface[@name='SwipeRefreshLayout.OnChildScrollUpCallback']/method[@name='canChildScrollUp' and count(parameter)=2 and parameter[1][@type='android.support.v4.widget.SwipeRefreshLayout'] and parameter[2][@type='android.view.View']]/parameter[2]"    
+        path="/api/package[@name='androidx.swiperefreshlayout.widget']/interface[@name='SwipeRefreshLayout.OnChildScrollUpCallback']/method[@name='canChildScrollUp' and count(parameter)=2 and parameter[1][@type='4.widget.SwipeRefreshLayout'] and parameter[2][@type='android.view.View']]/parameter[2]"    
         name="managedName"
         >
         child

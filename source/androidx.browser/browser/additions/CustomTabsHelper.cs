@@ -2,8 +2,10 @@
 using Android.Content;
 using System.Collections.Generic;
 using System.Linq;
+using AndroidX.Browser.CustomTabs;
 
-namespace AndroidX.Browser.Browser
+
+namespace AndroidX.Browser.CustomTabs
 {
     public class CustomTabsHelper 
     {

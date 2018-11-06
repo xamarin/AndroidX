@@ -1,6 +1,6 @@
-<enum-method-mappings>
-	<!--path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='MediaNowPlayingView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"-->
-	<mapping jni-class="android/support/v17/leanback/widget/MediaNowPlayingView">
+﻿<enum-method-mappings>
+	<!--path="/api/package[@name='17.leanback.widget']/class[@name='MediaNowPlayingView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"-->
+	<mapping jni-class="androidx/leanback/widget/MediaNowPlayingView">
 		<method jni-name="setVisibility" parameter="visibility" clr-enum-type="Android.Views.ViewStates" />
 	</mapping>
 </enum-method-mappings>

@@ -1,5 +1,5 @@
 <metadata>
-	<attr path="/api/package[@name='android.support.media.tv']" name="managedName">Android.Support.Media.TV</attr>
+	<attr path="/api/package[@name='androidx.tvprovider.media.tv']" name="managedName">AndroidX.TvProvider.Media.TV</attr>
 
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
@@ -7,6 +7,21 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-	<attr path="/api/package[@name='android.support.media.tv']/class[@name='Program']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='android.support.media.tv.Program']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-<!--	<attr path="/api/package[@name='android.support.media.tv']/class[@name='Program']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='android.support.media.tv.Program']]" name="managedName">_CompareTo</attr>-->
+	<attr path="/api/package[@name='androidx.tvprovider.media.tv']/class[@name='Program']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='android.support.media.tv.Program']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+<!--	<attr path="/api/package[@name='androidx.tvprovider.media.tv']/class[@name='Program']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='android.support.media.tv.Program']]" name="managedName">_CompareTo</attr>-->
+    
+    
+    <!--
+    mc++ AndroidX
+    -->
+    
+    <!--
+    corrects correction from few lines above - bulk search replacement did not change parameter type!!
+    -->
+    <attr
+        path="/api/package[@name='androidx.tvprovider.media.tv']/class[@name='Program']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.tvprovider.media.tv.Program']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
 </metadata>

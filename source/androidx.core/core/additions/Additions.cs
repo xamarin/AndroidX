@@ -44,7 +44,7 @@ using Android.Runtime;
 //	}
 //}
 
-namespace Android.Core.Core.Text
+namespace AndroidX.Core.Text
 {
 	public partial class PrecomputedTextCompat
 	{

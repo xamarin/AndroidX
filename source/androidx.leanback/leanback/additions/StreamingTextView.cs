@@ -7,7 +7,7 @@
 //    {
 //
 //        static IntPtr id_ctor_Landroid_content_Context_Landroid_util_AttributeSet_;
-//        // Metadata.xml XPath constructor reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='StreamingTextView']/constructor[@name='StreamingTextView' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]"
+//        // Metadata.xml XPath constructor reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='StreamingTextView']/constructor[@name='StreamingTextView' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet']]"
 //        [Register (".ctor", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "")]
 //        public StreamingTextView (global::Android.Content.Context p0, global::Android.Util.IAttributeSet p1) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 //        {
@@ -33,7 +33,7 @@
 //       
 //
 //        static IntPtr id_ctor_Landroid_content_Context_Landroid_util_AttributeSet_I;
-//        // Metadata.xml XPath constructor reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='StreamingTextView']/constructor[@name='StreamingTextView' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int']]"
+//        // Metadata.xml XPath constructor reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='StreamingTextView']/constructor[@name='StreamingTextView' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.util.AttributeSet'] and parameter[3][@type='int']]"
 //        [Register (".ctor", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "")]
 //        public StreamingTextView (global::Android.Content.Context p0, global::Android.Util.IAttributeSet p1, int p2) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 //        {
@@ -75,7 +75,7 @@
 //
 //
 //        static IntPtr id_onInitializeAccessibilityNodeInfo_Landroid_view_accessibility_AccessibilityNodeInfo_;
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='onInitializeAccessibilityNodeInfo' and count(parameter)=1 and parameter[1][@type='android.view.accessibility.AccessibilityNodeInfo']]"
+//        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='SearchEditText']/method[@name='onInitializeAccessibilityNodeInfo' and count(parameter)=1 and parameter[1][@type='android.view.accessibility.AccessibilityNodeInfo']]"
 //        [Register ("onInitializeAccessibilityNodeInfo", "(Landroid/view/accessibility/AccessibilityNodeInfo;)V", "GetOnInitializeAccessibilityNodeInfo_Landroid_view_accessibility_AccessibilityNodeInfo_Handler")]
 //        public void OnInitializeAccessibilityNodeInfo (global::Android.Views.Accessibility.AccessibilityNodeInfo p0)
 //        {
@@ -90,7 +90,7 @@
 //
 //
 //        static IntPtr id_reset;
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='reset' and count(parameter)=0]"
+//        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='SearchEditText']/method[@name='reset' and count(parameter)=0]"
 //        [Register ("reset", "()V", "GetResetHandler")]
 //        public void Reset ()
 //        {
@@ -105,7 +105,7 @@
 //
 //
 //        static IntPtr id_setFinalRecognizedText_Ljava_lang_CharSequence_;
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='setFinalRecognizedText' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
+//        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='SearchEditText']/method[@name='setFinalRecognizedText' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
 //        [Register ("setFinalRecognizedText", "(Ljava/lang/CharSequence;)V", "GetSetFinalRecognizedText_Ljava_lang_CharSequence_Handler")]
 //        public void SetFinalRecognizedText (global::Java.Lang.ICharSequence p0)
 //        {
@@ -122,7 +122,7 @@
 //
 //
 //        static IntPtr id_updateRecognizedText_Ljava_lang_String_Ljava_lang_String_;
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+//        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
 //        [Register ("updateRecognizedText", "(Ljava/lang/String;Ljava/lang/String;)V", "GetUpdateRecognizedText_Ljava_lang_String_Ljava_lang_String_Handler")]
 //        public void UpdateRecognizedText (string p0, string p1)
 //        {
@@ -142,7 +142,7 @@
 //
 //
 //        static IntPtr id_updateRecognizedText_Ljava_lang_String_Ljava_util_List_;
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.List']]"
+//        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='SearchEditText']/method[@name='updateRecognizedText' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.List']]"
 //        [Register ("updateRecognizedText", "(Ljava/lang/String;Ljava/util/List;)V", "GetUpdateRecognizedText_Ljava_lang_String_Ljava_util_List_Handler")]
 //        public void UpdateRecognizedText (string p0, global::System.Collections.IList p1)
 //        {

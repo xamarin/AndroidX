@@ -126,9 +126,9 @@
       }
     }
     <!-- some additional fixes -->
-    @if (@Model.NuGetPackageId == "Xamarin.Android.Support.Transition") 
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition.Transition") 
     {
-        <ProjectReference Include="..\com.android.support.support-fragment\com.android.support.support-fragment.csproj" />
+        <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
     }
   </ItemGroup>
   
@@ -142,14 +142,14 @@
     }
   </ItemGroup>
 
-  @if (@Model.NuGetPackageId == "Xamarin.Android.Support.Annotations")
+  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation.Annotation")
   {
     <ItemGroup>
       <None Include="..\..\source\buildtasks\support-annotations\bin\$(Configuration)\Xamarin.Android.Support.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
     </ItemGroup>
   }
 
-  @if (@Model.NuGetPackageId == "Xamarin.Android.Support.Vector.Drawable")
+  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable.VectorDrawable")
   {
     <ItemGroup>
       <None Include="..\..\source\buildtasks\support-vector-drawable\bin\$(Configuration)\Xamarin.Android.Support.Tasks.VectorDrawable.dll" Pack="True" PackagePath="build\$(TargetFramework)" />

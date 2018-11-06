@@ -1,7 +1,8 @@
 ﻿using System;
 using Android.OS;
+using AndroidX.Browser.CustomTabs;
 
-namespace AndroidX.Browser.Browser
+namespace AndroidX.Browser.CustomTabs
 {
     public partial class CustomTabsClient
     {

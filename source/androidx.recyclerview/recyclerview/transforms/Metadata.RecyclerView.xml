@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-    <!--<add-node path="/api/package[@name='android.support.v7.widget']">
+    <!--<add-node path="/api/package[@name='androidx.appcompat.widget']">
         <class abstract="false" deprecated="not deprecated" jni-extends="Landroid/view/ViewGroup;" extends="android.view.ViewGroup" extends-generic-aware="android.view.ViewGroup" final="false" name="RecyclerView" jni-signature="Landroid/support/v7/widget/RecyclerView;" static="false" visibility="public">
-            <implements name="android.support.v4.view.ScrollingView" name-generic-aware="android.support.v4.view.ScrollingView" jni-type="Landroid/support/v4/view/ScrollingView;" />
-            <implements name="android.support.v4.view.NestedScrollingChild2" name-generic-aware="android.support.v4.view.NestedScrollingChild2" jni-type="Landroid/support/v4/view/NestedScrollingChild2;" />
+            <implements name="4.view.ScrollingView" name-generic-aware="4.view.ScrollingView" jni-type="Landroid/support/v4/view/ScrollingView;" />
+            <implements name="4.view.NestedScrollingChild2" name-generic-aware="4.view.NestedScrollingChild2" jni-type="Landroid/support/v4/view/NestedScrollingChild2;" />
             <constructor deprecated="not deprecated" final="false" name="RecyclerView" static="false" visibility="public" bridge="false" synthetic="false" jni-signature="(Landroid/content/Context;)V">
                 <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
             </constructor>
@@ -24,24 +24,24 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="addItemDecoration" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V">
-                <parameter name="decor" type="android.support.v7.widget.RecyclerView.ItemDecoration" jni-type="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" />
+                <parameter name="decor" type="7.widget.RecyclerView.ItemDecoration" jni-type="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="addItemDecoration" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$ItemDecoration;I)V">
-                <parameter name="decor" type="android.support.v7.widget.RecyclerView.ItemDecoration" jni-type="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" />
+                <parameter name="decor" type="7.widget.RecyclerView.ItemDecoration" jni-type="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" />
                 <parameter name="index" type="int" jni-type="I" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="addOnChildAttachStateChangeListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnChildAttachStateChangeListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnChildAttachStateChangeListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="addOnItemTouchListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnItemTouchListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnItemTouchListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnItemTouchListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnItemTouchListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnItemTouchListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="addOnScrollListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnScrollListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnScrollListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnScrollListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnScrollListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="checkLayoutParams" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" visibility="protected"
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/ViewGroup$LayoutParams;)Z">
@@ -133,23 +133,23 @@
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/View;)Landroid/view/View;">
                 <parameter name="view" type="android.view.View" jni-type="Landroid/view/View;" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="findContainingViewHolder" native="false" return="android.support.v7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="findContainingViewHolder" native="false" return="7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;">
                 <parameter name="view" type="android.view.View" jni-type="Landroid/view/View;" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="findViewHolderForAdapterPosition" native="false" return="android.support.v7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="findViewHolderForAdapterPosition" native="false" return="7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;">
                 <parameter name="position" type="int" jni-type="I" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="findViewHolderForItemId" native="false" return="android.support.v7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="findViewHolderForItemId" native="false" return="7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(J)Landroid/support/v7/widget/RecyclerView$ViewHolder;">
                 <parameter name="id" type="long" jni-type="J" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="findViewHolderForLayoutPosition" native="false" return="android.support.v7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="findViewHolderForLayoutPosition" native="false" return="7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;">
                 <parameter name="position" type="int" jni-type="I" />
             </method>
-            <method abstract="false" deprecated="deprecated" final="false" name="findViewHolderForPosition" native="false" return="android.support.v7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="deprecated" final="false" name="findViewHolderForPosition" native="false" return="7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;">
                 <parameter name="position" type="int" jni-type="I" />
             </method>
@@ -173,7 +173,7 @@
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;">
                 <parameter name="p" type="android.view.ViewGroup.LayoutParams" jni-type="Landroid/view/ViewGroup$LayoutParams;" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="getAdapter" native="false" return="android.support.v7.widget.RecyclerView.Adapter" jni-return="Landroid/support/v7/widget/RecyclerView$Adapter;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getAdapter" native="false" return="7.widget.RecyclerView.Adapter" jni-return="Landroid/support/v7/widget/RecyclerView$Adapter;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerView$Adapter;" />
             <method abstract="false" deprecated="not deprecated" final="false" name="getBaseline" native="false" return="int" jni-return="I" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()I" />
@@ -198,40 +198,40 @@
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/View;)I">
                 <parameter name="child" type="android.view.View" jni-type="Landroid/view/View;" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="getChildViewHolder" native="false" return="android.support.v7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getChildViewHolder" native="false" return="7.widget.RecyclerView.ViewHolder" jni-return="Landroid/support/v7/widget/RecyclerView$ViewHolder;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;">
                 <parameter name="child" type="android.view.View" jni-type="Landroid/view/View;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="getClipToPadding" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Z" />
-            <method abstract="false" deprecated="not deprecated" final="false" name="getCompatAccessibilityDelegate" native="false" return="android.support.v7.widget.RecyclerViewAccessibilityDelegate" jni-return="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getCompatAccessibilityDelegate" native="false" return="7.widget.RecyclerViewAccessibilityDelegate" jni-return="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;" />
             <method abstract="false" deprecated="not deprecated" final="false" name="getDecoratedBoundsWithMargins" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/View;Landroid/graphics/Rect;)V">
                 <parameter name="view" type="android.view.View" jni-type="Landroid/view/View;" />
                 <parameter name="outBounds" type="android.graphics.Rect" jni-type="Landroid/graphics/Rect;" />
             </method>
-            <method abstract="false" deprecated="not deprecated" final="false" name="getEdgeEffectFactory" native="false" return="android.support.v7.widget.RecyclerView.EdgeEffectFactory" jni-return="Landroid/support/v7/widget/RecyclerView$EdgeEffectFactory;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getEdgeEffectFactory" native="false" return="7.widget.RecyclerView.EdgeEffectFactory" jni-return="Landroid/support/v7/widget/RecyclerView$EdgeEffectFactory;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerView$EdgeEffectFactory;" />
-            <method abstract="false" deprecated="not deprecated" final="false" name="getItemAnimator" native="false" return="android.support.v7.widget.RecyclerView.ItemAnimator" jni-return="Landroid/support/v7/widget/RecyclerView$ItemAnimator;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getItemAnimator" native="false" return="7.widget.RecyclerView.ItemAnimator" jni-return="Landroid/support/v7/widget/RecyclerView$ItemAnimator;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerView$ItemAnimator;" />
-            <method abstract="false" deprecated="not deprecated" final="false" name="getItemDecorationAt" native="false" return="android.support.v7.widget.RecyclerView.ItemDecoration" jni-return="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getItemDecorationAt" native="false" return="7.widget.RecyclerView.ItemDecoration" jni-return="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)Landroid/support/v7/widget/RecyclerView$ItemDecoration;">
                 <parameter name="index" type="int" jni-type="I" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="getItemDecorationCount" native="false" return="int" jni-return="I" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()I" />
-            <method abstract="false" deprecated="not deprecated" final="false" name="getLayoutManager" native="false" return="android.support.v7.widget.RecyclerView.LayoutManager" jni-return="Landroid/support/v7/widget/RecyclerView$LayoutManager;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getLayoutManager" native="false" return="7.widget.RecyclerView.LayoutManager" jni-return="Landroid/support/v7/widget/RecyclerView$LayoutManager;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerView$LayoutManager;" />
             <method abstract="false" deprecated="not deprecated" final="false" name="getMaxFlingVelocity" native="false" return="int" jni-return="I" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()I" />
             <method abstract="false" deprecated="not deprecated" final="false" name="getMinFlingVelocity" native="false" return="int" jni-return="I" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()I" />
-            <method abstract="false" deprecated="not deprecated" final="false" name="getOnFlingListener" native="false" return="android.support.v7.widget.RecyclerView.OnFlingListener" jni-return="Landroid/support/v7/widget/RecyclerView$OnFlingListener;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getOnFlingListener" native="false" return="7.widget.RecyclerView.OnFlingListener" jni-return="Landroid/support/v7/widget/RecyclerView$OnFlingListener;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerView$OnFlingListener;" />
             <method abstract="false" deprecated="not deprecated" final="false" name="getPreserveFocusAfterLayout" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Z" />
-            <method abstract="false" deprecated="not deprecated" final="false" name="getRecycledViewPool" native="false" return="android.support.v7.widget.RecyclerView.RecycledViewPool" jni-return="Landroid/support/v7/widget/RecyclerView$RecycledViewPool;" static="false" synchronized="false" visibility="public"
+            <method abstract="false" deprecated="not deprecated" final="false" name="getRecycledViewPool" native="false" return="7.widget.RecyclerView.RecycledViewPool" jni-return="Landroid/support/v7/widget/RecyclerView$RecycledViewPool;" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()Landroid/support/v7/widget/RecyclerView$RecycledViewPool;" />
             <method abstract="false" deprecated="not deprecated" final="false" name="getScrollState" native="false" return="int" jni-return="I" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="()I" />
@@ -340,7 +340,7 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="removeItemDecoration" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V">
-                <parameter name="decor" type="android.support.v7.widget.RecyclerView.ItemDecoration" jni-type="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" />
+                <parameter name="decor" type="7.widget.RecyclerView.ItemDecoration" jni-type="Landroid/support/v7/widget/RecyclerView$ItemDecoration;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="removeItemDecorationAt" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)V">
@@ -348,15 +348,15 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="removeOnChildAttachStateChangeListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnChildAttachStateChangeListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnChildAttachStateChangeListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="removeOnItemTouchListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnItemTouchListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnItemTouchListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnItemTouchListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnItemTouchListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnItemTouchListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="removeOnScrollListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnScrollListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnScrollListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnScrollListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnScrollListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="requestChildFocus" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/view/View;Landroid/view/View;)V">
@@ -395,15 +395,15 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setAccessibilityDelegateCompat" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;)V">
-                <parameter name="accessibilityDelegate" type="android.support.v7.widget.RecyclerViewAccessibilityDelegate" jni-type="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;" />
+                <parameter name="accessibilityDelegate" type="7.widget.RecyclerViewAccessibilityDelegate" jni-type="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setAdapter" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$Adapter;)V">
-                <parameter name="adapter" type="android.support.v7.widget.RecyclerView.Adapter" jni-type="Landroid/support/v7/widget/RecyclerView$Adapter;" />
+                <parameter name="adapter" type="7.widget.RecyclerView.Adapter" jni-type="Landroid/support/v7/widget/RecyclerView$Adapter;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setChildDrawingOrderCallback" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$ChildDrawingOrderCallback;)V">
-                <parameter name="childDrawingOrderCallback" type="android.support.v7.widget.RecyclerView.ChildDrawingOrderCallback" jni-type="Landroid/support/v7/widget/RecyclerView$ChildDrawingOrderCallback;" />
+                <parameter name="childDrawingOrderCallback" type="7.widget.RecyclerView.ChildDrawingOrderCallback" jni-type="Landroid/support/v7/widget/RecyclerView$ChildDrawingOrderCallback;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setClipToPadding" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Z)V">
@@ -411,7 +411,7 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setEdgeEffectFactory" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$EdgeEffectFactory;)V">
-                <parameter name="edgeEffectFactory" type="android.support.v7.widget.RecyclerView.EdgeEffectFactory" jni-type="Landroid/support/v7/widget/RecyclerView$EdgeEffectFactory;" />
+                <parameter name="edgeEffectFactory" type="7.widget.RecyclerView.EdgeEffectFactory" jni-type="Landroid/support/v7/widget/RecyclerView$EdgeEffectFactory;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setHasFixedSize" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Z)V">
@@ -419,7 +419,7 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setItemAnimator" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$ItemAnimator;)V">
-                <parameter name="animator" type="android.support.v7.widget.RecyclerView.ItemAnimator" jni-type="Landroid/support/v7/widget/RecyclerView$ItemAnimator;" />
+                <parameter name="animator" type="7.widget.RecyclerView.ItemAnimator" jni-type="Landroid/support/v7/widget/RecyclerView$ItemAnimator;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setItemViewCacheSize" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)V">
@@ -431,7 +431,7 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setLayoutManager" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V">
-                <parameter name="layout" type="android.support.v7.widget.RecyclerView.LayoutManager" jni-type="Landroid/support/v7/widget/RecyclerView$LayoutManager;" />
+                <parameter name="layout" type="7.widget.RecyclerView.LayoutManager" jni-type="Landroid/support/v7/widget/RecyclerView$LayoutManager;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setNestedScrollingEnabled" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Z)V">
@@ -439,11 +439,11 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setOnFlingListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnFlingListener;)V">
-                <parameter name="onFlingListener" type="android.support.v7.widget.RecyclerView.OnFlingListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnFlingListener;" />
+                <parameter name="onFlingListener" type="7.widget.RecyclerView.OnFlingListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnFlingListener;" />
             </method>
             <method abstract="false" deprecated="deprecated" final="false" name="setOnScrollListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.OnScrollListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnScrollListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.OnScrollListener" jni-type="Landroid/support/v7/widget/RecyclerView$OnScrollListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setPreserveFocusAfterLayout" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Z)V">
@@ -451,11 +451,11 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setRecycledViewPool" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$RecycledViewPool;)V">
-                <parameter name="pool" type="android.support.v7.widget.RecyclerView.RecycledViewPool" jni-type="Landroid/support/v7/widget/RecyclerView$RecycledViewPool;" />
+                <parameter name="pool" type="7.widget.RecyclerView.RecycledViewPool" jni-type="Landroid/support/v7/widget/RecyclerView$RecycledViewPool;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setRecyclerListener" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$RecyclerListener;)V">
-                <parameter name="listener" type="android.support.v7.widget.RecyclerView.RecyclerListener" jni-type="Landroid/support/v7/widget/RecyclerView$RecyclerListener;" />
+                <parameter name="listener" type="7.widget.RecyclerView.RecyclerListener" jni-type="Landroid/support/v7/widget/RecyclerView$RecyclerListener;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setScrollingTouchSlop" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(I)V">
@@ -463,7 +463,7 @@
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="setViewCacheExtension" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$ViewCacheExtension;)V">
-                <parameter name="extension" type="android.support.v7.widget.RecyclerView.ViewCacheExtension" jni-type="Landroid/support/v7/widget/RecyclerView$ViewCacheExtension;" />
+                <parameter name="extension" type="7.widget.RecyclerView.ViewCacheExtension" jni-type="Landroid/support/v7/widget/RecyclerView$ViewCacheExtension;" />
             </method>
             <method abstract="false" deprecated="not deprecated" final="false" name="smoothScrollBy" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(II)V">
@@ -499,7 +499,7 @@
                 bridge="false" synthetic="false" jni-signature="()V" />
             <method abstract="false" deprecated="not deprecated" final="false" name="swapAdapter" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
                 bridge="false" synthetic="false" jni-signature="(Landroid/support/v7/widget/RecyclerView$Adapter;Z)V">
-                <parameter name="adapter" type="android.support.v7.widget.RecyclerView.Adapter" jni-type="Landroid/support/v7/widget/RecyclerView$Adapter;" />
+                <parameter name="adapter" type="7.widget.RecyclerView.Adapter" jni-type="Landroid/support/v7/widget/RecyclerView$Adapter;" />
                 <parameter name="removeAndRecycleExistingViews" type="boolean" jni-type="Z" />
             </method>
             <field deprecated="not deprecated" final="true" name="HORIZONTAL" static="true" synthetic="false" transient="false" type="int" type-generic-aware="int" jni-signature="I" value="0"

@@ -1,19 +1,19 @@
 <metadata>
 
     <attr
-        path="/api/package[@name='android.support.v4.view.animation']/class[@name='FastOutLinearInInterpolator']/method[@name='getInterpolation' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"
+        path="/api/package[@name='androidx.core.view.animation']/class[@name='FastOutLinearInInterpolator']/method[@name='getInterpolation' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"
         name="managedName"
         >  
         input
     </attr>
     <attr
-        path="/api/package[@name='android.support.v4.view.animation']/class[@name='FastOutSlowInInterpolator']/method[@name='getInterpolation' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"
+        path="/api/package[@name='androidx.core.view.animation']/class[@name='FastOutSlowInInterpolator']/method[@name='getInterpolation' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"
         name="managedName"
         >        
         input
     </attr>
     <attr
-        path="/api/package[@name='android.support.v4.view.animation']/class[@name='LinearOutSlowInInterpolator']/method[@name='getInterpolation' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"        
+        path="/api/package[@name='androidx.core.view.animation']/class[@name='LinearOutSlowInInterpolator']/method[@name='getInterpolation' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"        
         name="managedName"
         >        
         input

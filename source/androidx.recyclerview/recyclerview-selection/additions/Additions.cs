@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
-namespace AndroidX.RecyclerView.RecyclerView.Selection
+namespace AndroidX.RecyclerView.Selection
 {
 	public partial class DefaultSelectionTracker
 	{

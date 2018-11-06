@@ -1,8 +1,9 @@
 ﻿using System;
 using Android.Runtime;
 using Java.Interop;
+using Java.Lang;
 
-namespace AndroidX.Appcompat.AppCompat
+namespace AndroidX.AppCompat.View
 {
 
     public partial class SupportActionModeWrapper
@@ -18,14 +19,14 @@ namespace AndroidX.Appcompat.AppCompat
 
         static IntPtr n_GetTitle (IntPtr jnienv, IntPtr native__this)
         {
-            global::Android.Support.V7.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.AppCompat.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             return CharSequence.ToLocalJniHandle (__this.TitleFormatted);
         }
 #pragma warning restore 0169
 
         static IntPtr id_getTitle;
         public override unsafe global::Java.Lang.ICharSequence TitleFormatted {
-            // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.view']/class[@name='SupportActionModeWrapper']/method[@name='getTitle' and count(parameter)=0]"
+            // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='getTitle' and count(parameter)=0]"
             [Register ("getTitle", "()Ljava/lang/CharSequence;", "GetGetTitleHandler")]
             get {
                 if (id_getTitle == IntPtr.Zero)
@@ -57,14 +58,14 @@ namespace AndroidX.Appcompat.AppCompat
 
         static void n_SetTitle_Ljava_lang_CharSequence_ (IntPtr jnienv, IntPtr native__this, IntPtr native_title)
         {
-            global::Android.Support.V7.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.AppCompat.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Java.Lang.ICharSequence title = global::Java.Lang.Object.GetObject<global::Java.Lang.ICharSequence> (native_title, JniHandleOwnership.DoNotTransfer);
             __this.SetTitle (title);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setTitle_Ljava_lang_CharSequence_;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.view']/class[@name='SupportActionModeWrapper']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
         [Register ("setTitle", "(Ljava/lang/CharSequence;)V", "GetSetTitle_Ljava_lang_CharSequence_Handler")]
         public unsafe void SetTitle (global::Java.Lang.ICharSequence title)
         {
@@ -99,14 +100,14 @@ namespace AndroidX.Appcompat.AppCompat
 
         static IntPtr n_GetSubtitle (IntPtr jnienv, IntPtr native__this)
         {
-            global::Android.Support.V7.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.AppCompat.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             return CharSequence.ToLocalJniHandle (__this.SubtitleFormatted);
         }
 #pragma warning restore 0169
 
         static IntPtr id_getSubtitle;
         public override unsafe global::Java.Lang.ICharSequence SubtitleFormatted {
-            // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.view']/class[@name='SupportActionModeWrapper']/method[@name='getSubtitle' and count(parameter)=0]"
+            // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='getSubtitle' and count(parameter)=0]"
             [Register ("getSubtitle", "()Ljava/lang/CharSequence;", "GetGetSubtitleHandler")]
             get {
                 if (id_getSubtitle == IntPtr.Zero)
@@ -137,14 +138,14 @@ namespace AndroidX.Appcompat.AppCompat
 
         static void n_SetSubtitle_Ljava_lang_CharSequence_ (IntPtr jnienv, IntPtr native__this, IntPtr native_subtitle)
         {
-            global::Android.Support.V7.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.AppCompat.View.SupportActionModeWrapper __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.View.SupportActionModeWrapper> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Java.Lang.ICharSequence subtitle = global::Java.Lang.Object.GetObject<global::Java.Lang.ICharSequence> (native_subtitle, JniHandleOwnership.DoNotTransfer);
             __this.SetSubtitle (subtitle);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setSubtitle_Ljava_lang_CharSequence_;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.view']/class[@name='SupportActionModeWrapper']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
         [Register ("setSubtitle", "(Ljava/lang/CharSequence;)V", "GetSetSubtitle_Ljava_lang_CharSequence_Handler")]
         public unsafe void SetSubtitle (global::Java.Lang.ICharSequence subtitle)
         {
@@ -166,7 +167,7 @@ namespace AndroidX.Appcompat.AppCompat
     }
 }
 
-namespace Android.Support.V7.Widget
+namespace AndroidX.AppCompat.Widget
 {
     public partial class AbsActionBarView
     {
@@ -190,14 +191,14 @@ namespace Android.Support.V7.Widget
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Android.Support.V7.Widget.AbsActionBarView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.AbsActionBarView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.AppCompat.Widget.AbsActionBarView __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.Widget.AbsActionBarView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setVisibility_I;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='AbsActionBarView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"
         [Register ("setVisibility", "(I)V", "GetSetVisibility_IHandler")]
         public unsafe virtual void SetVisibility ([global::Android.Runtime.GeneratedEnum] global::Android.Views.ViewStates visibility)
         {
@@ -239,14 +240,14 @@ namespace Android.Support.V7.Widget
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Android.Support.V7.Widget.ActionBarContainer __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ActionBarContainer> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.AppCompat.Widget.ActionBarContainer __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.Widget.ActionBarContainer> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setVisibility_I;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ActionBarContainer']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionBarContainer']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"
         [Register ("setVisibility", "(I)V", "GetSetVisibility_IHandler")]
         public unsafe void SetVisibility ([global::Android.Runtime.GeneratedEnum] global::Android.Views.ViewStates visibility)
         {
@@ -288,14 +289,14 @@ namespace Android.Support.V7.Widget
 
 //        static void n_SetAdapter_Landroid_widget_SpinnerAdapter_ (IntPtr jnienv, IntPtr native__this, IntPtr native_adapter)
 //        {
-//            global::Android.Support.V7.Widget.AppCompatSpinner __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.AppCompatSpinner> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//            global::AndroidX.AppCompat.Widget.AppCompatSpinner __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.Widget.AppCompatSpinner> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 //            global::Android.Widget.ISpinnerAdapter adapter = (global::Android.Widget.ISpinnerAdapter)global::Java.Lang.Object.GetObject<global::Android.Widget.ISpinnerAdapter> (native_adapter, JniHandleOwnership.DoNotTransfer);
 //            __this.SetAdapter (adapter);
 //        }
 //#pragma warning restore 0169
 
     //    static IntPtr id_setAdapter_Landroid_widget_SpinnerAdapter_;
-    //    // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='AppCompatSpinner']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.SpinnerAdapter']]"
+    //    // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.widget']/class[@name='AppCompatSpinner']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.SpinnerAdapter']]"
     //    [Register ("setAdapter", "(Landroid/widget/SpinnerAdapter;)V", "GetSetAdapter_Landroid_widget_SpinnerAdapter_Handler")]
     //    public unsafe void SetAdapter (global::Android.Widget.ISpinnerAdapter adapter)
     //    {
@@ -338,14 +339,14 @@ namespace Android.Support.V7.Widget
 
 //        static void n_SetSelector_Landroid_graphics_drawable_Drawable_ (IntPtr jnienv, IntPtr native__this, IntPtr native_sel)
 //        {
-//            global::Android.Support.V7.Widget.ListViewCompat __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ListViewCompat> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//            global::AndroidX.AppCompat.Widget.ListViewCompat __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.Widget.ListViewCompat> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 //            global::Android.Graphics.Drawables.Drawable sel = global::Java.Lang.Object.GetObject<global::Android.Graphics.Drawables.Drawable> (native_sel, JniHandleOwnership.DoNotTransfer);
 //            __this.SetSelector (sel);
 //        }
 //#pragma warning restore 0169
 
     //    static IntPtr id_setSelector_Landroid_graphics_drawable_Drawable_;
-    //    // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ListViewCompat']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"
+    //    // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.widget']/class[@name='ListViewCompat']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"
     //    [Register ("setSelector", "(Landroid/graphics/drawable/Drawable;)V", "GetSetSelector_Landroid_graphics_drawable_Drawable_Handler")]
     //    public unsafe void SetSelector (global::Android.Graphics.Drawables.Drawable sel)
     //    {
@@ -390,13 +391,13 @@ namespace Android.Support.V7.Widget
 
 //            static void n_SetSelected_Z (IntPtr jnienv, IntPtr native__this, bool selected)
 //            {
-//                global::Android.Support.V7.Widget.ScrollingTabContainerView.TabView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.Widget.ScrollingTabContainerView.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//                global::AndroidX.AppCompat.Widget.ScrollingTabContainerView.TabView __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.Widget.ScrollingTabContainerView.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 //                __this.SetSelected (selected);
 //            }
 //#pragma warning restore 0169
 
 //            static IntPtr id_setSelected_Z;
-//            // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.widget']/class[@name='ScrollingTabContainerView.TabView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]"
+//            // Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.widget']/class[@name='ScrollingTabContainerView.TabView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]"
 //            [Register ("setSelected", "(Z)V", "GetSetSelected_ZHandler")]
 //            public unsafe void SetSelected (bool selected)
 //            {
@@ -417,12 +418,12 @@ namespace Android.Support.V7.Widget
 //    }
 }
 
-namespace Android.Support.V7.View.Menu
+namespace AndroidX.AppCompat.View.Menu
 {
-    // Metadata.xml XPath class reference: path="/api/package[@name='android.support.v7.view.menu']/class[@name='BaseMenuPresenter']"
+    // Metadata.xml XPath class reference: path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='BaseMenuPresenter']"
     public abstract partial class BaseMenuPresenter
     {
-        public void SetCallback (global::Android.Support.V7.View.Menu.IMenuPresenterCallback callback)
+        public void SetCallback (global::AndroidX.AppCompat.View.Menu.IMenuPresenterCallback callback)
         {
             Callback = callback;
         }
@@ -466,12 +467,12 @@ namespace Android.Support.V7.View.Menu
 
 		static Java.Lang.Object n_GetItem_I(IntPtr jnienv, IntPtr native__this, int position)
 		{
-			global::Android.Support.V7.View.Menu.MenuAdapter __this = global::Java.Lang.Object.GetObject<global::Android.Support.V7.View.Menu.MenuAdapter>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.AppCompat.View.Menu.MenuAdapter __this = global::Java.Lang.Object.GetObject<global::AndroidX.AppCompat.View.Menu.MenuAdapter>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			return __this.GetItem(position);
 		}
 #pragma warning restore 0169
 
-		// Metadata.xml XPath method reference: path="/api/package[@name='android.support.v7.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]"
+		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]"
 		[Register("getItem", "(I)J", "GetGetItem_IHandler")]
 		public override unsafe Java.Lang.Object GetItem(int position)
 		{

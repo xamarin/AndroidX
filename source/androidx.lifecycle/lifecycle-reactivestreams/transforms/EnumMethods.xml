@@ -1,4 +1,4 @@
-﻿<enum-method-mappings>
+<enum-method-mappings>
 	<!--
   This example changes the Java method:
     android.support.v4.app.Fragment.SavedState.writeToParcel (int flags)
@@ -6,7 +6,7 @@
     android.support.v4.app.Fragment.SavedState.writeToParcel (Android.OS.ParcelableWriteFlags flags)
   when bound in C#.
 
-  <mapping jni-class="android/support/v4/app/Fragment.SavedState">
+  <mapping jni-class="androidx/core/app/Fragment.SavedState">
     <method jni-name="writeToParcel" parameter="flags" clr-enum-type="Android.OS.ParcelableWriteFlags" />
   </mapping>
 

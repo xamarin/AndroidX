@@ -2,7 +2,7 @@
 using Android.App;
 using Android.OS;
 
-namespace AndroidX.Browser.Browser
+namespace AndroidX.Browser.CustomTabs
 {
     // Empty service to bind to, to raise the application's importance to the OS
     [Service]

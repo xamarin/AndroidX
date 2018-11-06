@@ -1,6 +1,6 @@
 <metadata>
 	<attr path="/api/package[@name='android.support.exifinterface']" name="managedName">Android.Support.ExifInterface</attr>
-	<attr path="/api/package[@name='android.support.media']" name="managedName">Android.Support.Media</attr>
+	<attr path="/api/package[@name='androidx.exifinterface.media']" name="managedName">Android.Support.Media</attr>
 
 	<!-- Fix params for some inherited parcelable types -->
 	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>

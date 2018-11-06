@@ -289,13 +289,6 @@
 		}
 		,{
 			"groupId" : "androidx.lifecycle",
-			"artifactId" : "lifecycle-reactivestreams",
-			"version" : "2.0.0",
-			"nugetId" : "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-runtime",
 			"version" : "2.0.0",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Runtime",
@@ -341,27 +334,6 @@
 			"artifactId" : "mediarouter",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Mediarouter.Mediarouter",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.paging",
-			"artifactId" : "paging-common",
-			"version" : "2.0.0",
-			"nugetId" : "Xamarin.AndroidX.Paging.Paging",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.paging",
-			"artifactId" : "paging-runtime",
-			"version" : "2.0.0",
-			"nugetId" : "Xamarin.AndroidX.Paging.Runtime",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.paging",
-			"artifactId" : "paging-rxjava2",
-			"version" : "2.0.0",
-			"nugetId" : "Xamarin.AndroidX.Paging.RXJava2",
 			"dependencyOnly" : false
 		}
 		,{

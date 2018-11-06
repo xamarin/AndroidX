@@ -1,7 +1,7 @@
 <metadata>
 
     <attr 
-        path="/api/package[@name='android.support.v4.provider']/class[@name='DocumentFile']/method[@name='createDirectory' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        path="/api/package[@name='androidx.documentfile.provider']/class[@name='DocumentFile']/method[@name='createDirectory' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
         name="managedName"
         >
         displayName
@@ -9,13 +9,13 @@
     
     
     <attr 
-        path="/api/package[@name='android.support.v4.provider']/class[@name='DocumentFile']/method[@name='createFile' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+        path="/api/package[@name='androidx.documentfile.provider']/class[@name='DocumentFile']/method[@name='createFile' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[1]"
         name="managedName"
         >
         mimeType
     </attr>
     <attr 
-        path="/api/package[@name='android.support.v4.provider']/class[@name='DocumentFile']/method[@name='createFile' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+        path="/api/package[@name='androidx.documentfile.provider']/class[@name='DocumentFile']/method[@name='createFile' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[2]"
         name="managedName"
         >
         displayName
@@ -24,7 +24,7 @@
 
     
     <attr 
-        path="/api/package[@name='android.support.v4.provider']/class[@name='DocumentFile']/method[@name='renameTo' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+        path="/api/package[@name='androidx.documentfile.provider']/class[@name='DocumentFile']/method[@name='renameTo' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
         name="managedName"
         >
         displayName

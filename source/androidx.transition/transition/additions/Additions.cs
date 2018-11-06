@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.Runtime;
 
-namespace AndroidX.Transition.Transition
+namespace AndroidX.Transitions
 {
 	public partial class FragmentTransitionSupport
 	{
@@ -16,7 +16,7 @@ namespace AndroidX.Transition.Transition
 
 		static void n_AddTargets_Ljava_lang_Object_Ljava_util_ArrayList_(IntPtr jnienv, IntPtr native__this, IntPtr native_transitionObj, IntPtr native_views)
 		{
-			global::Android.Support.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::Android.Support.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::AndroidX.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object transitionObj = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_transitionObj, JniHandleOwnership.DoNotTransfer);
 			var views = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_views, JniHandleOwnership.DoNotTransfer);
 			__this.AddTargets(transitionObj, views);
@@ -62,7 +62,7 @@ namespace AndroidX.Transition.Transition
 
 		static void n_ScheduleRemoveTargets_Ljava_lang_Object_Ljava_lang_Object_Ljava_util_ArrayList_Ljava_lang_Object_Ljava_util_ArrayList_Ljava_lang_Object_Ljava_util_ArrayList_(IntPtr jnienv, IntPtr native__this, IntPtr native_overallTransitionObj, IntPtr native_enterTransition, IntPtr native_enteringViews, IntPtr native_exitTransition, IntPtr native_exitingViews, IntPtr native_sharedElementTransition, IntPtr native_sharedElementsIn)
 		{
-			global::Android.Support.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::Android.Support.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::AndroidX.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object overallTransitionObj = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_overallTransitionObj, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object enterTransition = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_enterTransition, JniHandleOwnership.DoNotTransfer);
 			var enteringViews = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_enteringViews, JniHandleOwnership.DoNotTransfer);
@@ -121,7 +121,7 @@ namespace AndroidX.Transition.Transition
 
 		static void n_SwapSharedElementTargets_Ljava_lang_Object_Ljava_util_ArrayList_Ljava_util_ArrayList_(IntPtr jnienv, IntPtr native__this, IntPtr native_sharedElementTransitionObj, IntPtr native_sharedElementsOut, IntPtr native_sharedElementsIn)
 		{
-			global::Android.Support.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::Android.Support.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::AndroidX.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object sharedElementTransitionObj = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_sharedElementTransitionObj, JniHandleOwnership.DoNotTransfer);
 			var sharedElementsOut = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_sharedElementsOut, JniHandleOwnership.DoNotTransfer);
 			var sharedElementsIn = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_sharedElementsIn, JniHandleOwnership.DoNotTransfer);
@@ -170,7 +170,7 @@ namespace AndroidX.Transition.Transition
 
 		static void n_ScheduleHideFragmentView_Ljava_lang_Object_Landroid_view_View_Ljava_util_ArrayList_(IntPtr jnienv, IntPtr native__this, IntPtr native_exitTransitionObj, IntPtr native_fragmentView, IntPtr native_exitingViews)
 		{
-			global::Android.Support.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::Android.Support.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::AndroidX.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object exitTransitionObj = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_exitTransitionObj, JniHandleOwnership.DoNotTransfer);
 			global::Android.Views.View fragmentView = global::Java.Lang.Object.GetObject<global::Android.Views.View>(native_fragmentView, JniHandleOwnership.DoNotTransfer);
 			var exitingViews = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_exitingViews, JniHandleOwnership.DoNotTransfer);
@@ -219,7 +219,7 @@ namespace AndroidX.Transition.Transition
 
 		static void n_SetSharedElementTargets_Ljava_lang_Object_Landroid_view_View_Ljava_util_ArrayList_(IntPtr jnienv, IntPtr native__this, IntPtr native_transitionObj, IntPtr native_nonExistentView, IntPtr native_sharedViews)
 		{
-			global::Android.Support.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::Android.Support.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::AndroidX.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object transitionObj = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_transitionObj, JniHandleOwnership.DoNotTransfer);
 			global::Android.Views.View nonExistentView = global::Java.Lang.Object.GetObject<global::Android.Views.View>(native_nonExistentView, JniHandleOwnership.DoNotTransfer);
 			var sharedViews = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_sharedViews, JniHandleOwnership.DoNotTransfer);
@@ -266,7 +266,7 @@ namespace AndroidX.Transition.Transition
 
 		static void n_ReplaceTargets_Ljava_lang_Object_Ljava_util_ArrayList_Ljava_util_ArrayList_(IntPtr jnienv, IntPtr native__this, IntPtr native_transitionObj, IntPtr native_oldTargets, IntPtr native_newTargets)
 		{
-			global::Android.Support.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::Android.Support.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::AndroidX.Transitions.FragmentTransitionSupport __this = global::Java.Lang.Object.GetObject<global::AndroidX.Transitions.FragmentTransitionSupport>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Java.Lang.Object transitionObj = global::Java.Lang.Object.GetObject<global::Java.Lang.Object>(native_transitionObj, JniHandleOwnership.DoNotTransfer);
 			var oldTargets = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_oldTargets, JniHandleOwnership.DoNotTransfer);
 			var newTargets = global::Android.Runtime.JavaList<global::Android.Views.View>.FromJniHandle(native_newTargets, JniHandleOwnership.DoNotTransfer);

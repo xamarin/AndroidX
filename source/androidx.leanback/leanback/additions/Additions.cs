@@ -2,7 +2,7 @@
 using Android.Runtime;
 using Java.Interop;
 
-namespace AndroidX.Leanback.Leanback
+namespace AndroidX.Leanback.Widget
 {
     public partial class BaseCardView
     {
@@ -22,13 +22,13 @@ namespace AndroidX.Leanback.Leanback
 
         static void n_SetSelected_Z (IntPtr jnienv, IntPtr native__this, bool selected)
         {
-            global::Android.Support.V17.Leanback.Widget.BaseCardView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.BaseCardView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.Leanback.Widget.BaseCardView __this = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Widget.BaseCardView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetSelected (selected);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setSelected_Z;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseCardView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='BaseCardView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]"
         [Register ("setSelected", "(Z)V", "GetSetSelected_ZHandler")]
         public unsafe void SetSelected (bool selected)
         {
@@ -63,13 +63,13 @@ namespace AndroidX.Leanback.Leanback
 
         static void n_SetActivated_Z (IntPtr jnienv, IntPtr native__this, bool activated)
         {
-            global::Android.Support.V17.Leanback.Widget.BaseCardView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.BaseCardView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.Leanback.Widget.BaseCardView __this = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Widget.BaseCardView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetActivated (activated);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setActivated_Z;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='BaseCardView']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='BaseCardView']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]"
         [Register ("setActivated", "(Z)V", "GetSetActivated_ZHandler")]
         public unsafe void SetActivated (bool activated)
         {
@@ -91,7 +91,7 @@ namespace AndroidX.Leanback.Leanback
 
     public partial class MediaNowPlayingView
     {
-        public override Views.ViewStates Visibility {
+        public override Android.Views.ViewStates Visibility {
             get { return base.Visibility; }
             set { SetVisibility (value); }
         }
@@ -107,14 +107,14 @@ namespace AndroidX.Leanback.Leanback
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Android.Support.V17.Leanback.Widget.MediaNowPlayingView __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.MediaNowPlayingView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.Leanback.Widget.MediaNowPlayingView __this = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Widget.MediaNowPlayingView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setVisibility_I;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='MediaNowPlayingView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='MediaNowPlayingView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"
         [Register ("setVisibility", "(I)V", "GetSetVisibility_IHandler")]
         public unsafe void SetVisibility ([global::Android.Runtime.GeneratedEnum] global::Android.Views.ViewStates visibility)
         {
@@ -151,13 +151,13 @@ namespace AndroidX.Leanback.Leanback
 
         static void n_SetNextFocusDownId_I (IntPtr jnienv, IntPtr native__this, int viewId)
         {
-            global::Android.Support.V17.Leanback.Widget.SearchBar __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.SearchBar> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.Leanback.Widget.SearchBar __this = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Widget.SearchBar> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetNextFocusDownId (viewId);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setNextFocusDownId_I;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='SearchBar']/method[@name='setNextFocusDownId' and count(parameter)=1 and parameter[1][@type='int']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='SearchBar']/method[@name='setNextFocusDownId' and count(parameter)=1 and parameter[1][@type='int']]"
         [Register ("setNextFocusDownId", "(I)V", "GetSetNextFocusDownId_IHandler")]
         public unsafe void SetNextFocusDownId (int viewId)
         {
@@ -190,7 +190,7 @@ namespace AndroidX.Leanback.Leanback
 
 //        static IntPtr n_CreateProperty_Ljava_lang_String_I(IntPtr jnienv, IntPtr native__this, IntPtr native_name, int index)
 //        {
-//            global::Android.Support.V17.Leanback.Widget.ParallaxRecyclerViewSource __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.ParallaxRecyclerViewSource>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+//            global::AndroidX.Leanback.Leanback.Widget.ParallaxRecyclerViewSource __this = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Leanback.Widget.ParallaxRecyclerViewSource>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 //            string name = JNIEnv.GetString(native_name, JniHandleOwnership.DoNotTransfer);
 //            IntPtr __ret = JNIEnv.ToLocalJniHandle(__this.CreateProperty(name, index));
 //            return __ret;
@@ -198,7 +198,7 @@ namespace AndroidX.Leanback.Leanback
 //#pragma warning restore 0169
 
 //        static IntPtr id_createProperty_Ljava_lang_String_I;
-//        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='ParallaxRecyclerViewSource']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
+//        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget']/class[@name='ParallaxRecyclerViewSource']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
 //        [Register("createProperty", "(Ljava/lang/String;I)Landroid/support/v17/leanback/widget/ParallaxRecyclerViewSource$ChildPositionProperty;", "GetCreateProperty_Ljava_lang_String_IHandler")]
 //        public override unsafe Java.Lang.Object CreateProperty(string name, int index)
 //        {
@@ -211,11 +211,11 @@ namespace AndroidX.Leanback.Leanback
 //                __args[0] = new JValue(native_name);
 //                __args[1] = new JValue(index);
 
-//                global::Android.Support.V17.Leanback.Widget.ParallaxRecyclerViewSource.ChildPositionProperty __ret;
+//                global::AndroidX.Leanback.Leanback.Widget.ParallaxRecyclerViewSource.ChildPositionProperty __ret;
 //                if (GetType() == ThresholdType)
-//                    __ret = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.ParallaxRecyclerViewSource.ChildPositionProperty>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_createProperty_Ljava_lang_String_I, __args), JniHandleOwnership.TransferLocalRef);
+//                    __ret = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Leanback.Widget.ParallaxRecyclerViewSource.ChildPositionProperty>(JNIEnv.CallObjectMethod(((global::Java.Lang.Object)this).Handle, id_createProperty_Ljava_lang_String_I, __args), JniHandleOwnership.TransferLocalRef);
 //                else
-//                    __ret = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.ParallaxRecyclerViewSource.ChildPositionProperty>(JNIEnv.CallNonvirtualObjectMethod(((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID(ThresholdClass, "createProperty", "(Ljava/lang/String;I)Landroid/support/v17/leanback/widget/ParallaxRecyclerViewSource$ChildPositionProperty;"), __args), JniHandleOwnership.TransferLocalRef);
+//                    __ret = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Leanback.Widget.ParallaxRecyclerViewSource.ChildPositionProperty>(JNIEnv.CallNonvirtualObjectMethod(((global::Java.Lang.Object)this).Handle, ThresholdClass, JNIEnv.GetMethodID(ThresholdClass, "createProperty", "(Ljava/lang/String;I)Landroid/support/v17/leanback/widget/ParallaxRecyclerViewSource$ChildPositionProperty;"), __args), JniHandleOwnership.TransferLocalRef);
 //                return __ret;
 //            }
 //            finally
@@ -228,7 +228,7 @@ namespace AndroidX.Leanback.Leanback
 
 	public partial class RecyclerViewParallax
 	{
-		// Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget']/class[@name='RecyclerViewParallax']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
+		// Metadata.xml XPath method reference: path="/api/package[@name='androidX.leanback.leanback.widget']/class[@name='RecyclerViewParallax']/method[@name='createProperty' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
 		[Register("createProperty", "(Ljava/lang/String;I)Landroid/util/Property;", "GetCreateProperty_Ljava_lang_String_IHandler")]
 		public override unsafe Java.Lang.Object CreateProperty(string name, int index)
 		{
@@ -248,12 +248,12 @@ namespace AndroidX.Leanback.Leanback
 	}
 }
 
-namespace AndroidX.Leanback.Leanback.App
+namespace AndroidX.Leanback.App
 {
     
 }
 
-namespace AndroidX.Leanback.Leanback.Widget.Picker
+namespace AndroidX.Leanback.Widget.Picker
 {
     public partial class Picker
     {
@@ -272,13 +272,13 @@ namespace AndroidX.Leanback.Leanback.Widget.Picker
 
         static void n_SetActivated_Z (IntPtr jnienv, IntPtr native__this, bool activated)
         {
-            global::Android.Support.V17.Leanback.Widget.Picker.Picker __this = global::Java.Lang.Object.GetObject<global::Android.Support.V17.Leanback.Widget.Picker.Picker> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::AndroidX.Leanback.Widget.Picker.Picker __this = global::Java.Lang.Object.GetObject<global::AndroidX.Leanback.Widget.Picker.Picker> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetActivated (activated);
         }
 #pragma warning restore 0169
 
         static IntPtr id_setActivated_Z;
-        // Metadata.xml XPath method reference: path="/api/package[@name='android.support.v17.leanback.widget.picker']/class[@name='Picker']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        // Metadata.xml XPath method reference: path="/api/package[@name='AndroidX.Leanback.leanback.widget.picker']/class[@name='Picker']/method[@name='setActivated' and count(parameter)=1 and parameter[1][@type='boolean']]"
         [Register ("setActivated", "(Z)V", "GetSetActivated_ZHandler")]
         public unsafe void SetActivated (bool activated)
         {

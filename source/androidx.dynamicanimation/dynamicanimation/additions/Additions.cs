@@ -1,7 +1,7 @@
 ﻿// using System;
 // using Android.Runtime;
 
-// namespace AndroidX.DynamicAnimation.DynamicAnimation
+// namespace AndroidX.DynamicAnimation.Animation
 // {
 // 	internal static class __JniCtorUtil
 // 	{

@@ -1,4 +1,4 @@
-<metadata>
+﻿<metadata>
 	<attr path="/api/package[@name='android.support.wearable.view']" name="managedName">Android.Support.Wearable.View</attr>
 
 	<!-- Fix params for some inherited parcelable types -->
@@ -7,24 +7,24 @@
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
 	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
 
-	<attr path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissLayout']" name="visibility">public</attr>
+	<attr path="/api/package[@name='androidx.wear.widget']/class[@name='SwipeDismissLayout']" name="visibility">public</attr>
 
 	<!-- Making SwipeDismissLayout public made some private interfaces public which is always bad, so remove them -->
-	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnDismissedListener']" />
-	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnPreSwipeListener']" />
-	<remove-node path="/api/package[@name='android.support.wear.widget']/interface[@name='SwipeDismissLayout.OnSwipeProgressChangedListener']" />
+	<remove-node path="/api/package[@name='androidx.wear.widget']/interface[@name='SwipeDismissLayout.OnDismissedListener']" />
+	<remove-node path="/api/package[@name='androidx.wear.widget']/interface[@name='SwipeDismissLayout.OnPreSwipeListener']" />
+	<remove-node path="/api/package[@name='androidx.wear.widget']/interface[@name='SwipeDismissLayout.OnSwipeProgressChangedListener']" />
 
 
     
     <attr
-        path="/api/package[@name='android.support.wear.widget.drawer']/interface[@name='WearableNavigationDrawerView.OnItemSelectedListener']/method[@name='onItemSelected' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget.drawer']/interface[@name='WearableNavigationDrawerView.OnItemSelectedListener']/method[@name='onItemSelected' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
         name="managedName"
         >
         pos
     </attr>
     
     <attr
-        path="/api/package[@name='android.support.wear.widget']/interface[@name='CircularProgressLayout.OnTimerFinishedListener']/method[@name='onTimerFinished' and count(parameter)=1 and parameter[1][@type='android.support.wear.widget.CircularProgressLayout']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget']/interface[@name='CircularProgressLayout.OnTimerFinishedListener']/method[@name='onTimerFinished' and count(parameter)=1 and parameter[1][@type='android.support.wear.widget.CircularProgressLayout']]/parameter[1]"
         name="managedName"
         >
         layout
@@ -32,7 +32,7 @@
 
 
     <attr
-        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='canScrollHorizontally' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='canScrollHorizontally' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
         name="managedName"
         >
         direction
@@ -42,7 +42,7 @@
     
 
     <attr
-        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='onInterceptTouchEvent' and count(parameter)=1 and parameter[1][@type='android.view.MotionEvent']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='onInterceptTouchEvent' and count(parameter)=1 and parameter[1][@type='android.view.MotionEvent']]/parameter[1]"
         name="managedName"
         >
         ev
@@ -51,7 +51,7 @@
         
         
     <attr
-        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='onTouchEvent' and count(parameter)=1 and parameter[1][@type='android.view.MotionEvent']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='onTouchEvent' and count(parameter)=1 and parameter[1][@type='android.view.MotionEvent']]/parameter[1]"
         name="managedName"
         >
         ev
@@ -60,7 +60,7 @@
         
         
     <attr
-        path="/api/package[@name='android.support.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='requestDisallowInterceptTouchEvent' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget']/class[@name='SwipeDismissFrameLayout']/method[@name='requestDisallowInterceptTouchEvent' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
         name="managedName"
         >
         disallowIntercept
@@ -69,13 +69,13 @@
         
         
     <attr
-        path="/api/package[@name='android.support.wear.widget']/class[@name='WearableLinearLayoutManager.LayoutCallback']/method[@name='onLayoutFinished' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v7.widget.RecyclerView']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget']/class[@name='WearableLinearLayoutManager.LayoutCallback']/method[@name='onLayoutFinished' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='7.widget.RecyclerView']]/parameter[1]"
         name="managedName"
         >
         child
     </attr>
     <attr
-        path="/api/package[@name='android.support.wear.widget']/class[@name='WearableLinearLayoutManager.LayoutCallback']/method[@name='onLayoutFinished' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.support.v7.widget.RecyclerView']]/parameter[2]"
+        path="/api/package[@name='androidx.wear.widget']/class[@name='WearableLinearLayoutManager.LayoutCallback']/method[@name='onLayoutFinished' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='7.widget.RecyclerView']]/parameter[2]"
         name="managedName"
         >
         parent
@@ -84,7 +84,7 @@
         
         
     <attr
-        path="/api/package[@name='android.support.wear.widget.drawer']/class[@name='WearableNavigationDrawerView.WearableNavigationDrawerAdapter']/method[@name='getItemDrawable' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget.drawer']/class[@name='WearableNavigationDrawerView.WearableNavigationDrawerAdapter']/method[@name='getItemDrawable' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
         name="managedName"
         >
         pos
@@ -93,7 +93,7 @@
         
         
     <attr
-        path="/api/package[@name='android.support.wear.widget.drawer']/class[@name='WearableNavigationDrawerView.WearableNavigationDrawerAdapter']/method[@name='getItemText' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        path="/api/package[@name='androidx.wear.widget.drawer']/class[@name='WearableNavigationDrawerView.WearableNavigationDrawerAdapter']/method[@name='getItemText' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
         name="managedName"
         >
         pos
