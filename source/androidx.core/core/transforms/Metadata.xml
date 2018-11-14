@@ -57,7 +57,7 @@
 	<attr path="/api/package[@name='androidx.core.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
 	<attr path="/api/package[@name='androidx.core.text']/class[@name='TextDirectionHeuristicsCompat.TextDirectionHeuristicImpl']" name="visibility">internal</attr>
 	<attr path="/api/package[@name='androidx.core.app']/interface[@name='NotificationManagerCompat.Task']" name="visibility">internal</attr>
-	<attr path="/api/package[@name='4.content.res']/interface[@name='ConfigurationHelper.ConfigurationHelperImpl']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='androidx.core.content.res']/interface[@name='ConfigurationHelper.ConfigurationHelperImpl']" name="visibility">internal</attr>
 	<attr path="/api/package[@name='androidx.core.hardware.fingerprint']/interface[@name='FingerprintManagerCompat.FingerprintManagerCompatImpl']" name="visibility">internal</attr>
 	<attr path="/api/package[@name='androidx.core.view.accessibility']/interface[@name='AccessibilityWindowInfoCompat.AccessibilityWindowInfoImpl']" name="visibility">public</attr>
 	<attr path="/api/package[@name='androidx.customview.view']/interface[@name='WindowInsetsCompat.WindowInsetsCompatImpl']" name="visibility">internal</attr>
@@ -247,31 +247,31 @@
 
     
     <attr 
-        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='4.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[1]"
+        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='androidx.core.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[1]"
         name="managedName"
         >
         v
     </attr>
     <attr 
-        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='4.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[2]"
+        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='androidx.core.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[2]"
         name="managedName"
         >
         scrollX
     </attr>
     <attr 
-        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='4.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[3]"
+        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='androidx.core.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[3]"
         name="managedName"
         >
         scrollY
     </attr>
     <attr 
-        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='4.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[4]"
+        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='androidx.core.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[4]"
         name="managedName"
         >
         oldScrollX
     </attr>
     <attr 
-        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='4.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[5]"
+        path="/api/package[@name='androidx.core.widget']/interface[@name='NestedScrollView.OnScrollChangeListener']/method[@name='onScrollChange' and count(parameter)=5 and parameter[1][@type='androidx.core.widget.NestedScrollView'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]/parameter[5]"
         name="managedName"
         >
         oldScrollY
@@ -299,13 +299,13 @@
     
     
     <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='NotificationCompat.Extender']/method[@name='extend' and count(parameter)=1 and parameter[1][@type='4.app.NotificationCompat.Builder']]/parameter[1]"
+        path="/api/package[@name='androidx.core.app']/interface[@name='NotificationCompat.Extender']/method[@name='extend' and count(parameter)=1 and parameter[1][@type='androidx.core.app.NotificationCompat.Builder']]/parameter[1]"
         name="managedName"
         >
         builder
     </attr>
     <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='NotificationCompat.Action.Extender']/method[@name='extend' and count(parameter)=1 and parameter[1][@type='4.app.NotificationCompat.Action.Builder']]/parameter[1]"
+        path="/api/package[@name='androidx.core.app']/interface[@name='NotificationCompat.Action.Extender']/method[@name='extend' and count(parameter)=1 and parameter[1][@type='androidx.core.app.NotificationCompat.Action.Builder']]/parameter[1]"
         name="managedName"
         >
         builder
@@ -950,13 +950,13 @@
     
     
     <attr 
-        path="/api/package[@name='androidx.customview.view']/interface[@name='OnApplyWindowInsetsListener']/method[@name='onApplyWindowInsets' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='4.view.WindowInsetsCompat']]/parameter[1]"
+        path="/api/package[@name='androidx.customview.view']/interface[@name='OnApplyWindowInsetsListener']/method[@name='onApplyWindowInsets' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='androidx.core.view.WindowInsetsCompat']]/parameter[1]"
         name="managedName"
         >
         v
     </attr>
     <attr 
-        path="/api/package[@name='androidx.customview.view']/interface[@name='OnApplyWindowInsetsListener']/method[@name='onApplyWindowInsets' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='4.view.WindowInsetsCompat']]/parameter[2]"
+        path="/api/package[@name='androidx.customview.view']/interface[@name='OnApplyWindowInsetsListener']/method[@name='onApplyWindowInsets' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='androidx.core.view.WindowInsetsCompat']]/parameter[2]"
         name="managedName"
         >
         insets
@@ -1024,10 +1024,11 @@
     <remove-node
         path="/api/package[@name='androidx.core.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']"
         />
+    <!--
     <remove-node 
         path="/api/package[@name='androidx.core.internal.view']/interface[@name='SupportMenuItem']" 
         />      
-
+        -->
     <attr
         path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingChild']/method[@name='startNestedScroll' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
         name="managedType"
