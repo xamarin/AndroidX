@@ -1,28 +1,22 @@
 ﻿using System;
 using Android.Runtime;
+using Java.Interop;
+using Java.Lang;
 
 namespace AndroidX.Material
 {
 
     public partial class NavigationMenuItemView
     {
-        public void SetEnabled (bool enabled)
-        {
-            Enabled = enabled;
-        }
     }
 
     public partial class BottomNavigationItemView
     {
-        public void SetEnabled (bool enabled)
-        {
-            Enabled = enabled;
-        }
     }
 
 }
 
-namespace Android.Support.Design.Widget
+namespace Xamarin.Google.Android.Material.AppBar
 {
 
     //public partial class AppBarLayout
@@ -45,7 +39,7 @@ namespace Android.Support.Design.Widget
             this.Title = title;
         }
 
-        public override Android.Views.ViewStates Visibility {
+        public override global::Android.Views.ViewStates Visibility {
             get { return base.Visibility; }
             set { SetVisibility (value); }
         }
@@ -61,7 +55,7 @@ namespace Android.Support.Design.Widget
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Android.Support.Design.Widget.CollapsingToolbarLayout __this = global::Java.Lang.Object.GetObject<global::Android.Support.Design.Widget.CollapsingToolbarLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Xamarin.Google.Android.Material.AppBar.CollapsingToolbarLayout __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.AppBar.CollapsingToolbarLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
@@ -86,41 +80,46 @@ namespace Android.Support.Design.Widget
             }
         }
     }
+}
 
+namespace Xamarin.Google.Android.Material.Snackbar
+{
     public partial class Snackbar
     {
-        public Snackbar SetAction (string text, Action<Android.Views.View> clickHandler)
+        public Snackbar SetAction(string text, Action<global::Android.Views.View> clickHandler)
         {
-            return SetAction (text, new SnackbarActionClickImplementor { Handler = clickHandler });
+            return SetAction(text, new SnackbarActionClickImplementor { Handler = clickHandler });
         }
 
-        public Snackbar SetAction (Java.Lang.ICharSequence text, Action<Android.Views.View> clickHandler)
+        public Snackbar SetAction(Java.Lang.ICharSequence text, Action<global::Android.Views.View> clickHandler)
         {
-            return SetAction (text, new SnackbarActionClickImplementor { Handler = clickHandler });
+            return SetAction(text, new SnackbarActionClickImplementor { Handler = clickHandler });
         }
 
-        public Snackbar SetAction (int resId, Action<Android.Views.View> clickHandler)
+        public Snackbar SetAction(int resId, Action<global::Android.Views.View> clickHandler)
         {
-            return SetAction (resId, new SnackbarActionClickImplementor { Handler = clickHandler });
+            return SetAction(resId, new SnackbarActionClickImplementor { Handler = clickHandler });
         }
 
-        internal class SnackbarActionClickImplementor : Java.Lang.Object, Android.Views.View.IOnClickListener
+        internal class SnackbarActionClickImplementor : Java.Lang.Object, global::Android.Views.View.IOnClickListener
         {
-            public Action<Android.Views.View> Handler { get; set; }
+            public Action<global::Android.Views.View> Handler { get; set; }
 
-            public void OnClick (Android.Views.View v)
+            public void OnClick(global::Android.Views.View v)
             {
                 var h = Handler;
                 if (h != null)
-                    h (v);
-            }                
+                    h(v);
+            }
         }
     }
+}
 
-
+namespace Xamarin.Google.Android.Material.Internal
+{
     public partial class VisibilityAwareImageButton
     {
-        public override Android.Views.ViewStates Visibility {
+        public override global::Android.Views.ViewStates Visibility {
             get { return base.Visibility; }
             set { SetVisibility (value); }
         }
@@ -136,7 +135,7 @@ namespace Android.Support.Design.Widget
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Android.Support.Design.Widget.VisibilityAwareImageButton __this = global::Java.Lang.Object.GetObject<global::Android.Support.Design.Widget.VisibilityAwareImageButton> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Xamarin.Google.Android.Material.Internal.VisibilityAwareImageButton __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.Internal.VisibilityAwareImageButton> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
@@ -206,7 +205,10 @@ namespace Android.Support.Design.Widget
     //        }
     //    }
     //}
+}
 
+namespace Xamarin.Google.Android.Material.Tabs
+{
     public partial class TabLayout
     {
         public partial class TabView
@@ -231,7 +233,8 @@ namespace Android.Support.Design.Widget
 
             static void n_SetSelected_Z (IntPtr jnienv, IntPtr native__this, bool selected)
             {
-                global::Android.Support.Design.Widget.TabLayout.TabView __this = global::Java.Lang.Object.GetObject<global::Android.Support.Design.Widget.TabLayout.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+
+                global::Xamarin.Google.Android.Material.Tabs.TabLayout.TabView __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.Tabs.TabLayout.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
                 __this.SetSelected (selected);
             }
 #pragma warning restore 0169
@@ -256,7 +259,10 @@ namespace Android.Support.Design.Widget
             }
         }
     }
+}
 
+namespace Xamarin.Google.Android.Material.TextField 
+{
 
     public partial class TextInputLayout
     {
@@ -280,7 +286,7 @@ namespace Android.Support.Design.Widget
 
         static void n_SetEnabled_Z (IntPtr jnienv, IntPtr native__this, bool enabled)
         {
-            global::Android.Support.Design.Widget.TextInputLayout __this = global::Java.Lang.Object.GetObject<global::Android.Support.Design.Widget.TextInputLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Xamarin.Google.Android.Material.TextField.TextInputLayout __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.TextField.TextInputLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetEnabled (enabled);
         }
 #pragma warning restore 0169
@@ -337,4 +343,138 @@ namespace Android.Support.Design.CircularReveal
 		}
 	}
 }
+
+
+namespace Xamarin.Google.Android.Material.BottomNavigation
+{
+
+    // Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.material.bottomnavigation']/class[@name='BottomNavigationItemView']"
+    // [global::Android.Runtime.Register("com/google/android/material/bottomnavigation/BottomNavigationItemView", DoNotGenerateAcw = true)]
+    public partial class BottomNavigationItemView 
+    {
+        bool enabled;
+        public bool Enabled
+        {
+            get
+            {
+                return enabled;
+            }
+            set
+            {
+                SetEnabled(value);
+            }
+        }
+
+                static Delegate cb_setEnabled_Z;
+        #pragma warning disable 0169
+                static Delegate GetSetEnabled_ZHandler()
+                {
+                    if (cb_setEnabled_Z == null)
+                        cb_setEnabled_Z = JNINativeWrapper.CreateDelegate((Action<IntPtr, IntPtr, bool>)n_SetEnabled_Z);
+                    return cb_setEnabled_Z;
+                }
+
+                static void n_SetEnabled_Z(IntPtr jnienv, IntPtr native__this, bool enabled)
+                {
+                    global::Xamarin.Google.Android.Material.BottomNavigation.BottomNavigationItemView __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.BottomNavigation.BottomNavigationItemView>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+                    __this.SetEnabled(enabled);
+                }
+        #pragma warning restore 0169
+
+        // Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.material.bottomnavigation']/class[@name='BottomNavigationItemView']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        [Register("setEnabled", "(Z)V", "GetSetEnabled_ZHandler")]
+        public unsafe void SetEnabled(bool enabled)
+        {
+            const string __id = "setEnabled.(Z)V";
+            try
+            {
+                JniArgumentValue* __args = stackalloc JniArgumentValue[1];
+                __args[0] = new JniArgumentValue(enabled);
+                _members.InstanceMethods.InvokeVirtualVoidMethod(__id, this, __args);
+            }
+            finally
+            {
+            }
+        }
+    }
+}
+
+namespace Xamarin.Google.Android.Material.Internal
+{
+
+    // Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.material.internal']/class[@name='NavigationMenuItemView']"
+    //[global::Android.Runtime.Register("com/google/android/material/internal/NavigationMenuItemView", DoNotGenerateAcw = true)]
+    public partial class NavigationMenuItemView : global::Xamarin.Google.Android.Material.Internal.ForegroundLinearLayout, global::AndroidX.AppCompat.View.Menu.IMenuViewItemView
+    {
+        bool enabled;
+        public bool Enabled
+        {
+            get
+            {
+                return enabled;
+            }
+            set
+            {
+                SetEnabled(value); 
+            }
+        }
+
+
+        static Delegate cb_setEnabled_Z;
+#pragma warning disable 0169
+        static Delegate GetSetEnabled_ZHandler()
+        {
+            if (cb_setEnabled_Z == null)
+                cb_setEnabled_Z = JNINativeWrapper.CreateDelegate((Action<IntPtr, IntPtr, bool>)n_SetEnabled_Z);
+            return cb_setEnabled_Z;
+        }
+
+        static void n_SetEnabled_Z(IntPtr jnienv, IntPtr native__this, bool enabled)
+        {
+            global::Xamarin.Google.Android.Material.Internal.NavigationMenuItemView __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.Internal.NavigationMenuItemView>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            __this.SetEnabled(enabled);
+        }
+#pragma warning restore 0169
+
+        // Metadata.xml XPath method reference: path="/api/package[@name='com.google.android.material.internal']/class[@name='NavigationMenuItemView']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        [Register("setEnabled", "(Z)V", "GetSetEnabled_ZHandler")]
+        public unsafe void SetEnabled(bool enabled)
+        {
+            const string __id = "setEnabled.(Z)V";
+            try
+            {
+                JniArgumentValue* __args = stackalloc JniArgumentValue[1];
+                __args[0] = new JniArgumentValue(enabled);
+                _members.InstanceMethods.InvokeVirtualVoidMethod(__id, this, __args);
+            }
+            finally
+            {
+            }
+        }
+    }
+}
+
+namespace Xamarin.Google.Android.Material.CircularReveal
+{
+    // Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']"
+    //[global::Android.Runtime.Register("com/google/android/material/circularreveal/CircularRevealWidget$CircularRevealProperty", DoNotGenerateAcw = true)]
+    public partial class CircularRevealWidgetCircularRevealProperty 
+    {
+        public override Java.Lang.Object Get(Java.Lang.Object @object)
+        {
+
+            return this.Get(@object as Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget);
+        }
+    }
+
+    public partial class CircularRevealWidgetCircularRevealScrimColorProperty
+    {
+        public override Java.Lang.Object Get(Java.Lang.Object @object)
+        {
+
+            return this.Get(@object as Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget);
+        }
+    }
+}
+
 
