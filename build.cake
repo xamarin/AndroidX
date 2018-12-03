@@ -315,6 +315,7 @@ Task ("clean")
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
-	.IsDependentOn ("diff");
+	.IsDependentOn ("diff")
+	.IsDependentOn ("nuget-validation");
 
 RunTarget (TARGET);
