@@ -8,6 +8,7 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.1.0
 #addin nuget:?package=Cake.Compression&version=0.1.6
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
+#addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
 
 // From Cake.Xamarin.Build, dumps out versions of things
 //LogSystemInfo ();
@@ -119,6 +120,48 @@ Task("nuget")
         c.Targets.Add("Pack");
 		c.Properties.Add("PackageOutputPath", new [] { "output" });
     });
+});
+
+Task("nuget-validation")
+    .IsDependentOn("nuget")
+	.Does(()=>
+{
+	//setup validation options
+	var options = new Xamarin.Nuget.Validator.NugetValidatorOptions()
+	{
+		Copyright = "© Microsoft Corporation. All rights reserved.",
+		Author = "Microsoft",
+		Owner = "Microsoft",
+		NeedsProjectUrl = true,
+		NeedsLicenseUrl = true,
+		ValidateRequireLicenseAcceptance = true,
+		ValidPackageNamespace = new [] { "Xamarin", "Mono", "SkiaSharp", "HarfBuzzSharp", "mdoc" },
+	};
+
+	var nupkgFiles = GetFiles ("./output/*.nupkg");
+
+	Information ("Found ({0}) Nuget's to validate", nupkgFiles.Count ());
+
+	foreach (var nupkgFile in nupkgFiles)
+	{
+		Information ("Verifiying Metadata of {0}", nupkgFile.GetFilename ());
+
+		var result = Xamarin.Nuget.Validator.NugetValidator.Validate(MakeAbsolute(nupkgFile).FullPath, options);
+
+		if (!result.Success)
+		{
+			Information ("Metadata validation failed for: {0} \n\n", nupkgFile.GetFilename ());
+			Information (string.Join("\n    ", result.ErrorMessages));
+			throw new Exception ($"Invalid Metadata for: {nupkgFile.GetFilename ()}");
+
+		}
+		else
+		{
+			Information ("Metadata validation passed for: {0}", nupkgFile.GetFilename ());
+		}
+			
+	}
+
 });
 
 Task ("diff")
@@ -272,6 +315,7 @@ Task ("clean")
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
-	.IsDependentOn ("diff");
+	.IsDependentOn ("diff")
+	.IsDependentOn ("nuget-validation");
 
 RunTarget (TARGET);
