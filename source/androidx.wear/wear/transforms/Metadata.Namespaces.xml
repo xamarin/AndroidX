@@ -1,0 +1,55 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.wear.activity']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Activity
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.ambient']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Ambient
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.internal.widget']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Internal.Widget
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.internal.widget.drawer']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Internal.Widget.Drawer
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.utils']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Utils
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.widget']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Widget
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.widget.drawer']" 
+        name="managedName"
+        >
+        AndroidX.Wear.Widget.Drawer
+    </attr>
+    
+    
+
+</metadata>

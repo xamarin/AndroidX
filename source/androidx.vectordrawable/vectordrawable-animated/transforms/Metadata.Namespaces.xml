@@ -1,0 +1,17 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.vectordrawable.graphics.drawable']" 
+        name="managedName"
+        >
+        AndroidX.VectorDrawable.Graphics.Drawable
+    </attr>
+    
+</metadata>

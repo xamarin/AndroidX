@@ -1,0 +1,25 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.slice.builders']" 
+        name="managedName"
+        >
+        AndroidX.Slice.Builders
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.slice.builders.impl']" 
+        name="managedName"
+        >
+        AndroidX.Slice.Builders.Impl
+    </attr>
+    
+    
+
+</metadata>

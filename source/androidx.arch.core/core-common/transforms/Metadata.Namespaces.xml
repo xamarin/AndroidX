@@ -1,0 +1,25 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.arch.core.internal']" 
+        name="managedName"
+        >
+        AndroidX.Arch.Core.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.arch.core.util']" 
+        name="managedName"
+        >
+        AndroidX.Arch.Core.Util
+    </attr>
+    
+    
+
+</metadata>

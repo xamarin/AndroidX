@@ -1,0 +1,18 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.versionedparcelable']" 
+        name="managedName"
+        >
+        AndroidX.VersionedParcelable
+    </attr>
+    
+
+</metadata>
