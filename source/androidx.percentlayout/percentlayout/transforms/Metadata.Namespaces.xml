@@ -1,2 +1,18 @@
 ﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.percentlayout.widget']" 
+        name="managedName"
+        >
+        AndroidX.PercentLayout.Widget
+    </attr>
+    
+    
 </metadata>

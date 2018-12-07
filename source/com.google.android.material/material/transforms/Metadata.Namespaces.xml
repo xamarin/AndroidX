@@ -56,6 +56,12 @@
         Xamarin.Google.Android.Material.Canvas
     </attr>
     <attr
+        path="/api/package[@name='com.google.android.material.card']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Material.Card
+    </attr>
+    <attr
         path="/api/package[@name='com.google.android.material.chip']"
         name="managedName"
         >

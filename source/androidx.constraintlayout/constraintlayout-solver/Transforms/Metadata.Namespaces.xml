@@ -13,5 +13,17 @@
         >
         AndroidX.ConstraintLayout.Widget
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.solver']" 
+        name="managedName"
+        >
+        AndroidX.ConstraintLayout.Solver
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.solver.widgets']" 
+        name="managedName"
+        >
+        AndroidX.ConstraintLayout.Solver.Widgets
+    </attr>
     
 </metadata>

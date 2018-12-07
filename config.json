@@ -254,13 +254,6 @@
 		}
 		,{
 			"groupId" : "androidx.lifecycle",
-			"artifactId" : "lifecycle-common-java8",
-			"version" : "2.0.0",
-			"nugetId" : "Xamarin.AndroidX.Lifecycle.CommonJava8",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-extensions",
 			"version" : "2.0.0",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Extensions",
