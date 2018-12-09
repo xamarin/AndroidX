@@ -6,6 +6,9 @@
         >
         Package
     </attr>
+    <attr path="/api/package[@name='android.support.customtabs']" name="managedName">AndroidX.Support.CustomTabs</attr>
+    <attr path="/api/package[@name='androidx.browser.browseractions']" name="managedName">AndroidX.Browser.BrowserActions</attr>
+    <attr path="/api/package[@name='androidx.browser.customtabs']" name="managedName">AndroidX.Browser.CustomTabs</attr>
     -->
     <attr 
         path="/api/package[@name='android.support.customtabs']" 

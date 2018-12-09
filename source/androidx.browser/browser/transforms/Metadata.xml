@@ -6,9 +6,6 @@
   This sample removes the method: 4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='androidx.loader.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
-  <attr path="/api/package[@name='android.support.customtabs']" name="managedName">AndroidX.Support.CustomTabs</attr>
-  <attr path="/api/package[@name='androidx.browser.browseractions']" name="managedName">AndroidX.Browser.BrowserActions</attr>
-  <attr path="/api/package[@name='androidx.browser.customtabs']" name="managedName">AndroidX.Browser.CustomTabs</attr>
     
     <attr
         path="/api/package[@name='androidx.browser.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='android.support.customtabs.CustomTabsClient']]/parameter[1]"
