@@ -159,7 +159,6 @@ Task("nuget-validation")
 		{
 			Information ("Metadata validation passed for: {0}", nupkgFile.GetFilename ());
 		}
-			
 	}
 
 });
@@ -179,8 +178,18 @@ Task ("diff")
 		"./output/AndroidSupport.api-info.xml",
 		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
 
-	// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
-	DownloadFile (BASE_API_INFO_URL, "./output/AndroidSupport.api-info.previous.xml");
+	try
+	{
+		// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
+		DownloadFile (BASE_API_INFO_URL, "./output/AndroidSupport.api-info.previous.xml");
+	}
+	catch
+	{
+		Warning($"Download failed: {BASE_API_INFO_URL}");
+		string base_api_info_file = @"../AndroidSupportComponents-28.0.0-binderate/output/AndroidSupport.api-info.xml ";
+		Warning($"	using local file {base_api_info_file}");
+		CopyFile(base_api_info_file, "./output/AndroidSupport.api-info.previous.xml");
+	}
 
 	// Now diff against current release'd api info
 	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
