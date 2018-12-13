@@ -51,7 +51,7 @@
     <Compile Include="NugetPackages.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\com.android.support\support-annotations\merge.targets">
+    <None Include="..\..\androidx.annotation\annotation\merge.targets">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

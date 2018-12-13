@@ -39,7 +39,7 @@
     <Compile Include="VectorDrawableCheckBuildToolsVersionTask.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\com.android.support\support-vector-drawable\merge.targets">
+    <None Include="..\..\androidx.annotation\annotation\merge.targets">
       <Link>merge.targets</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
