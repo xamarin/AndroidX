@@ -118,6 +118,8 @@ Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
+	var outputPath = new DirectoryPath("./output");
+
 	MSBuild ("./generated/AndroidX.sln", c => {
         	c.Configuration = "Release";
         	c.Targets.Clear();
