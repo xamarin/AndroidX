@@ -118,13 +118,11 @@ Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	var outputPath = new DirectoryPath("./output");
-
 	MSBuild ("./generated/AndroidX.sln", c => {
         	c.Configuration = "Release";
         	c.Targets.Clear();
         	c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
+		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
