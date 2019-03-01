@@ -12,19 +12,19 @@ resources:
 
 jobs:
 
-  - job: build_macos
-    displayName: Build macOS Library
+  - job: build
+    displayName: 'Build Libraries & NuGets'
     pool:
       vmImage: macos-10.13
     steps:
       # Make sure to select the correct Xamarin and mono
       - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
-        displayName: Switch to the latest Xamarin SDK
+        displayName: 'Switch to the latest Xamarin SDK'
       - bash: echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_$(XCODE_VERSION).app;sudo xcode-select --switch /Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer
-        displayName: Switch to the latest Xcode
+        displayName: 'Switch to the latest Xcode'
       # Build the libraries and packages
       - bash: sh build.sh --target=ci --settings_skipverification=true --verbosity=diagnostic
-        displayName: Build Everything
+        displayName: 'Build everything'
       - bash: |
           # Make a temp folder to move the created nugets to before we fat package them
           mkdir -p $(Build.SourcesDirectory)/tmp/nuget
@@ -43,16 +43,16 @@ jobs:
             --useExplicitVersion=True
           # Move the other output bits back to the original output folder
           mv $(Build.SourcesDirectory)/tmp/output/* $(Build.SourcesDirectory)/output
-        displayName: Create FAT NuGets
+        displayName: 'Create FAT NuGets'
       # Publish the artifacts
       - task: PublishBuildArtifacts@1
-        displayName: Publish Unsigned Artifacts
+        displayName: 'Publish Unsigned NuGets'
         inputs:
           PathtoPublish: '$(Build.SourcesDirectory)/output'
           ArtifactName: nuget
       # make sure we are following the rules
       - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-        displayName: Component Detection
+        displayName: 'Component Detection'
         inputs:
           scanType: LogOnly
 
@@ -60,7 +60,7 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - job: signing
       displayName: Signing NuGets
-      dependsOn: build_windows
+      dependsOn: build
       pool:
         name: VSEng-XamarinCustom
         demands:
