@@ -102,7 +102,10 @@ Task("libs")
 {
 	NuGetRestore("./generated/AndroidX.sln", new NuGetRestoreSettings { });
 
-	MSBuild("./generated/AndroidX.sln", c => c.Configuration = "Release");
+	MSBuild("./generated/AndroidX.sln", c => {
+		c.Configuration = "Release";
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 });
 
 Task("nuget-restore")
@@ -115,11 +118,14 @@ Task("nuget")
 	.Does(() =>
 {
 	MSBuild ("./generated/AndroidX.sln", c => {
-        c.Configuration = "Release";
-        c.Targets.Clear();
-        c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { "output" });
-    });
+        	c.Configuration = "Release";
+        	c.Targets.Clear();
+        	c.Targets.Add("Pack");
+		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(outputPath).FullPath });
+		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+	});
 });
 
 Task("nuget-validation")
