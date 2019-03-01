@@ -106,6 +106,7 @@ Task("libs")
 		c.Configuration = "Release";
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+	});
 });
 
 Task("nuget-restore")
