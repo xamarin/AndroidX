@@ -13,7 +13,7 @@ resources:
 jobs:
 
   - job: build
-    displayName: 'Build Libraries & NuGets'
+    displayName: 'Build Libraries & NuGets (macOS)'
     pool:
       vmImage: macos-10.13
     steps:
@@ -50,6 +50,20 @@ jobs:
         inputs:
           PathtoPublish: '$(Build.SourcesDirectory)/output'
           ArtifactName: nuget
+      # make sure we are following the rules
+      - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
+        displayName: 'Component Detection'
+        inputs:
+          scanType: LogOnly
+
+  - job: build_windows
+    displayName: 'Build Libraries & NuGets (Windows)'
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+      # Build the libraries and packages
+      - powershell: build.ps1 --target=ci --settings_skipverification=true --verbosity=normal
+        displayName: 'Build everything'
       # make sure we are following the rules
       - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
         displayName: 'Component Detection'
