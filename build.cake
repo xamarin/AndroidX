@@ -30,35 +30,24 @@ var NUGET_PRE = "";
 
 // FROM: https://dl.google.com/android/repository/addon2-1.xml
 var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r28-macosx.zip";
-var ANDROID_SDK_VERSION = IsRunningOnWindows () ? "v9.0" : "android-28";
+var ANDROID_SDK_VERSION = "v9.0";
 var RENDERSCRIPT_FOLDER = "android-8.1.0";
 var TF_MONIKER = "monoandroid90";
 
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/ea/ea65204c51cf20873c17c32584f3b12ed390ac55/android-support.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/27.1.1-rc/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.1/api-info.xml";
 
-
-var MONODROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid/platforms/" + ANDROID_SDK_VERSION + "/";
+var MONODROID_BASE_PATH = (DirectoryPath)"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/";
 if (IsRunningOnWindows ()) {
 	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
-	MONODROID_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/" + ANDROID_SDK_VERSION).FullPath;
+	MONODROID_BASE_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/");
 }
+var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
 
-var MSCORLIB_PATH = "/Library/Frameworks/Xamarin.Android.framework/Libraries/mono/2.1/";
-if (IsRunningOnWindows ()) {
-
-	var DOTNETDIR = new DirectoryPath (Environment.GetFolderPath (Environment.SpecialFolder.Windows)).Combine ("Microsoft.NET/");
-
-	if (DirectoryExists (DOTNETDIR.Combine ("Framework64")))
-		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework64/v4.0.30319/")).FullPath;
-	else
-		MSCORLIB_PATH = MakeAbsolute (DOTNETDIR.Combine("Framework/v4.0.30319/")).FullPath;
-}
-
-Information ("MONODROID_PATH: {0}", MONODROID_PATH);
-Information ("MSCORLIB_PATH: {0}", MSCORLIB_PATH);
+Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
+Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -242,44 +231,26 @@ Task("nuget-validation")
 });
 
 Task ("diff")
-	.WithCriteria (!IsRunningOnWindows ())
 	.IsDependentOn ("merge")
 	.Does (() =>
 {
 	var SEARCH_DIRS = new DirectoryPath [] {
+		MONODROID_BASE_PATH.Combine("v1.0"),
 		MONODROID_PATH,
-		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/v1.0/",
-		"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mono/2.1/"
 	};
 
-	MonoApiInfo ("./output/AndroidSupport.Merged.dll",
-		"./output/AndroidSupport.api-info.xml",
-		new MonoApiInfoToolSettings { SearchPaths = SEARCH_DIRS });
+	MonoApiInfo ("./output/AndroidSupport.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
+		SearchPaths = SEARCH_DIRS
+	});
 
-	try
-	{
-		// Grab the last public release's api-info.xml to use as a base to compare and make an API diff
-		DownloadFile (BASE_API_INFO_URL, "./output/AndroidSupport.api-info.previous.xml");
-	}
-	catch
-	{
-		Warning($"Download failed: {BASE_API_INFO_URL}");
-		string base_api_info_file = @"../AndroidSupportComponents-28.0.0-binderate/output/AndroidSupport.api-info.xml ";
-		Warning($"	using local file {base_api_info_file}");
-		CopyFile(base_api_info_file, "./output/AndroidSupport.api-info.previous.xml");
-	}
+	DownloadFile (BASE_API_INFO_URL, "./output/api-info.previous.xml");
 
-	// Now diff against current release'd api info
-	// eg: mono mono-api-diff.exe ./gps.r26.xml ./gps.r27.xml > gps.diff.xml
-	MonoApiDiff ("./output/AndroidSupport.api-info.previous.xml",
-		"./output/AndroidSupport.api-info.xml",
-		"./output/AndroidSupport.api-diff.xml");
+	// Now diff against current released api info
+	MonoApiDiff ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.xml");
 
-	// Now let's make a purty html file
-	// eg: mono mono-api-html.exe -c -x ./gps.previous.info.xml ./gps.current.info.xml > gps.diff.html
-	MonoApiHtml ("./output/AndroidSupport.api-info.previous.xml",
-		"./output/AndroidSupport.api-info.xml",
-		"./output/AndroidSupport.api-diff.html");
+	// Now let's make pretty files
+	MonoApiHtml ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.html");
+	MonoApiMarkdown ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.md");
 });
 
 Task ("merge")
@@ -291,17 +262,15 @@ Task ("merge")
 	if (FileExists ("./output/AndroidSupport.Merged.dll"))
 		DeleteFile ("./output/AndroidSupport.Merged.dll");
 
-	var allDlls = GetFiles ("./generated/**/bin/" + BUILD_CONFIG + "/" + TF_MONIKER + "/*.dll");
+	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.AndroidX.*.dll");
 
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
-		.Where (g => !g.FullPath.Contains("v4") && !g.FullPath.Contains(".Android.Support.Constraint.Layout."))
 		.ToList();
 
-	Information("Merging: \n {0}", string.Join("\n", mergeDlls));
+	Information("Merging: \n - {0}", string.Join("\n - ", mergeDlls));
 
-	// Wait for ILRepack support in cake-0.5.2
 	ILRepack ("./output/AndroidSupport.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
 		CopyAttrs = true,
 		AllowMultiple = true,
