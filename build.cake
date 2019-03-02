@@ -128,7 +128,6 @@ Task("nuget")
 });
 
 Task("nuget-fat")
-	.IsDependentOn("nuget")
 	.Does(() =>
 {
 	// Make a temp folder to move the created nugets to before we fat package them
@@ -162,7 +161,6 @@ Task("nuget-fat")
 });
 
 Task("nuget-validation")
-	.IsDependentOn("nuget-fat")
 	.Does(() =>
 {
 	//setup validation options
@@ -296,55 +294,6 @@ Task ("ci-setup")
 	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
 });
 
-// Task ("genapi")
-// 	.IsDependentOn ("libs")
-// 	.Does (() => 
-// {
-// 	var GenApiToolPath = GetFiles ("./tools/**/GenAPI.exe").FirstOrDefault ();
-
-// 	// For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
-// 	// GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
-// 	var libDirPrefix = IsRunningOnWindows () ? "output/" : "";
-
-// 	var libs = new FilePath [] {
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Compat.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.UI.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Core.Utils.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Fragment.dll",
-// 		"./" + libDirPrefix + "Xamarin.Android.Support.Media.Compat.dll",
-// 	};
-
-// 	foreach (var lib in libs) {
-// 		var genName = lib.GetFilename () + ".generated.cs";
-
-// 		var libPath = IsRunningOnWindows () ? MakeAbsolute (lib).FullPath : lib.FullPath;
-// 		var monoDroidPath = IsRunningOnWindows () ? "\"" + MONODROID_PATH + "\"" : MONODROID_PATH;
-
-// 		Information ("GenAPI: {0}", lib.FullPath);
-
-// 		StartProcess (GenApiToolPath, new ProcessSettings {
-// 			Arguments = string.Format("-libPath:{0} -out:{1}{2} -w:TypeForwards {3}",
-// 							monoDroidPath + "," + MSCORLIB_PATH,
-// 							IsRunningOnWindows () ? "" : "./",
-// 							genName,
-// 							libPath),
-// 			WorkingDirectory = "./output/",
-// 		});
-// 	}
-
-// 	MSBuild ("./AndroidSupport.TypeForwarders.sln", c => c.Configuration = BUILD_CONFIG);
-
-// 	CopyFile ("./support-v4/source/bin/" + BUILD_CONFIG + "/Xamarin.Android.Support.v4.dll", "./output/Xamarin.Android.Support.v4.dll");
-// });
-
-// Task ("buildtasks")
-// 	.Does (() => 
-// {
-// 	NuGetRestore ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj");
-
-// 	MSBuild ("./support-vector-drawable/buildtask/Vector-Drawable-BuildTasks.csproj", c => c.Configuration = BUILD_CONFIG);
-// });
-
 Task ("clean")
 	.Does (() =>
 {
@@ -360,10 +309,16 @@ Task ("clean")
 	CleanDirectories ("./**/packages");
 });
 
+Task ("ci-fat")
+	.IsDependentOn ("ci-setup")
+	.IsDependentOn ("nuget-fat")
+	.IsDependentOn ("nuget-validation");
+
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
-	.IsDependentOn ("diff")
-	.IsDependentOn ("nuget-validation");
+	.IsDependentOn ("nuget")
+	.IsDependentOn ("nuget-validation")
+	.IsDependentOn ("diff");
 
 RunTarget (TARGET);

@@ -25,13 +25,44 @@ jobs:
         displayName: 'Switch to the latest Xcode'
       # Build the libraries and packages
       - bash: sh build.sh --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
-        displayName: 'Build everything'
+        displayName: 'Build NuGets'
       # Publish the artifacts
       - task: PublishBuildArtifacts@1
-        displayName: 'Publish Unsigned NuGets'
+        displayName: 'Publish thin NuGets'
         inputs:
-          PathtoPublish: '$(Build.SourcesDirectory)/output'
-          ArtifactName: nuget
+          pathToPublish: '$(Build.SourcesDirectory)/output'
+          artifactName: 'output'
+      # make sure we are following the rules
+      - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
+        displayName: 'Component Detection'
+        inputs:
+          scanType: LogOnly
+
+  - job: build_fat
+    displayName: 'Build Fat NuGets (macOS)'
+    pool:
+      vmImage: macos-10.13
+    steps:
+      # Make sure to select the correct Xamarin and mono
+      - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
+        displayName: 'Switch to the latest Xamarin SDK'
+      - bash: echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_$(XCODE_VERSION).app;sudo xcode-select --switch /Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer
+        displayName: 'Switch to the latest Xcode'
+      # Download the "thin" artifacts
+      - task: DownloadBuildArtifacts@1
+        displayName: 'Download thin NuGets'
+        inputs:
+          DownloadPath: '$(Build.SourcesDirectory)/output'
+          artifactName: 'output'
+      # Build the libraries and packages
+      - bash: sh build.sh --target=ci-fat --settings_skipverification=true --verbosity=$(VERBOSITY)
+        displayName: 'Build fat NuGets'
+      # Publish the artifacts
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish unsigned fat NuGets'
+        inputs:
+          pathToPublish: '$(Build.SourcesDirectory)/output'
+          artifactName: nuget
       # make sure we are following the rules
       - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
         displayName: 'Component Detection'
@@ -56,7 +87,7 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - job: signing
       displayName: Signing NuGets
-      dependsOn: build
+      dependsOn: build_fat
       pool:
         name: VSEng-XamarinCustom
         demands:
