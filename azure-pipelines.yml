@@ -32,11 +32,6 @@ jobs:
         inputs:
           pathToPublish: '$(Build.SourcesDirectory)/output'
           artifactName: 'output'
-      # make sure we are following the rules
-      - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-        displayName: 'Component Detection'
-        inputs:
-          scanType: LogOnly
 
   - job: build_fat
     displayName: 'Build Fat NuGets (macOS)'
@@ -49,10 +44,10 @@ jobs:
       - bash: echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_$(XCODE_VERSION).app;sudo xcode-select --switch /Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer
         displayName: 'Switch to the latest Xcode'
       # Download the "thin" artifacts
-      - task: DownloadBuildArtifacts@1
+      - task: DownloadBuildArtifacts@0
         displayName: 'Download thin NuGets'
         inputs:
-          DownloadPath: '$(Build.SourcesDirectory)/output'
+          downloadPath: '$(Build.SourcesDirectory)/output'
           artifactName: 'output'
       # Build the libraries and packages
       - bash: sh build.sh --target=ci-fat --settings_skipverification=true --verbosity=$(VERBOSITY)
@@ -63,11 +58,6 @@ jobs:
         inputs:
           pathToPublish: '$(Build.SourcesDirectory)/output'
           artifactName: nuget
-      # make sure we are following the rules
-      - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-        displayName: 'Component Detection'
-        inputs:
-          scanType: LogOnly
 
   - job: build_windows
     displayName: 'Build Libraries & NuGets (Windows)'
@@ -77,11 +67,6 @@ jobs:
       # Build the libraries and packages
       - powershell: .\build.ps1 --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
         displayName: 'Build everything'
-      # make sure we are following the rules
-      - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-        displayName: 'Component Detection'
-        inputs:
-          scanType: LogOnly
 
   # only sign the packages when running on Windows, and using the private server which has the certificates
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
@@ -105,6 +90,3 @@ jobs:
           inputs:
             artifactName: nuget-signed
             pathToPublish: '$(Build.ArtifactStagingDirectory)/signed'
-        # make sure we are following the rules
-        - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-          displayName: 'Component Detection'
