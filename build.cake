@@ -15,6 +15,7 @@
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
+var VERBOSITY = (Verbosity) Enum.Parse (typeof(Verbosity), Argument ("v", Argument ("verbosity", "Normal")), true);
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -103,6 +104,7 @@ Task("libs")
 		c.Configuration = "Release";
 		c.Restore = true;
 		c.MaxCpuCount = 0;
+		c.Verbosity = VERBOSITY;
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 	});
@@ -114,6 +116,8 @@ Task("nuget")
 {
 	MSBuild ("./generated/AndroidX.sln", c => {
 		c.Configuration = "Release";
+		c.MaxCpuCount = 0;
+		c.Verbosity = VERBOSITY;
 		c.Targets.Clear();
 		c.Targets.Add("Pack");
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
