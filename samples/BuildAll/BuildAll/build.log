@@ -1,0 +1,655 @@
+Microsoft (R) Build Engine version 16.0.360-preview+g9781d96883 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  BuildAll -> C:\Projects\AndroidX\samples\BuildAll\BuildAll\bin\Debug\BuildAll.dll
+  obj\Debug\90\android\src\androidx\appcompat\widget\Toolbar_NavigationOnClickEventDispatcher.java:27: error: cannot find symbol
+  	public Toolbar_NavigationOnClickEventDispatcher (androidx.appcompat.widget.Toolbar p0)
+  	                                                                          ^
+    symbol:   class Toolbar
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\androidx\browser\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java:5: error: cannot find symbol
+  	extends androidx.browser.customtabs.CustomTabsCallback
+  	                                   ^
+    symbol:   class CustomTabsCallback
+    location: package androidx.browser.customtabs
+  obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java:5: error: cannot find symbol
+  	extends androidx.browser.customtabs.CustomTabsServiceConnection
+  	                                   ^
+    symbol:   class CustomTabsServiceConnection
+    location: package androidx.browser.customtabs
+  obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java:28: error: cannot find symbol
+  	public void onCustomTabsServiceConnected (android.content.ComponentName p0, androidx.browser.customtabs.CustomTabsClient p1)
+  	                                                                                                       ^
+    symbol:   class CustomTabsClient
+    location: package androidx.browser.customtabs
+  obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java:33: error: cannot find symbol
+  	private native void n_onCustomTabsServiceConnected (android.content.ComponentName p0, androidx.browser.customtabs.CustomTabsClient p1);
+  	                                                                                                                 ^
+    symbol:   class CustomTabsClient
+    location: package androidx.browser.customtabs
+  obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java:8: error: package android.support.v4.media.session.MediaSessionCompat does not exist
+  		android.support.v4.media.session.MediaSessionCompat.OnActiveChangeListener
+  		                                                   ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnMenuVisibilityListenerImplementor.java:8: error: package androidx.appcompat.app.ActionBar does not exist
+  		androidx.appcompat.app.ActionBar.OnMenuVisibilityListener
+  		                                ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnNavigationListenerImplementor.java:8: error: package androidx.appcompat.app.ActionBar does not exist
+  		androidx.appcompat.app.ActionBar.OnNavigationListener
+  		                                ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:8: error: package androidx.appcompat.app.ActionBar does not exist
+  		androidx.appcompat.app.ActionBar.TabListener
+  		                                ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:30: error: package androidx.appcompat.app.ActionBar does not exist
+  	public void onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1)
+  	                                                             ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:30: error: package androidx.fragment.app does not exist
+  	public void onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1)
+  	                                                                                           ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:35: error: package androidx.appcompat.app.ActionBar does not exist
+  	private native void n_onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1);
+  	                                                                       ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:35: error: package androidx.fragment.app does not exist
+  	private native void n_onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1);
+  	                                                                                                     ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:38: error: package androidx.appcompat.app.ActionBar does not exist
+  	public void onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1)
+  	                                                           ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:38: error: package androidx.fragment.app does not exist
+  	public void onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1)
+  	                                                                                         ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:43: error: package androidx.appcompat.app.ActionBar does not exist
+  	private native void n_onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1);
+  	                                                                     ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:43: error: package androidx.fragment.app does not exist
+  	private native void n_onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1);
+  	                                                                                                   ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:46: error: package androidx.appcompat.app.ActionBar does not exist
+  	public void onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1)
+  	                                                             ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:46: error: package androidx.fragment.app does not exist
+  	public void onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1)
+  	                                                                                           ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:51: error: package androidx.appcompat.app.ActionBar does not exist
+  	private native void n_onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1);
+  	                                                                       ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java:51: error: package androidx.fragment.app does not exist
+  	private native void n_onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1);
+  	                                                                                                     ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ActionMenuView_OnMenuItemClickListenerImplementor.java:8: error: package androidx.appcompat.widget.ActionMenuView does not exist
+  		androidx.appcompat.widget.ActionMenuView.OnMenuItemClickListener
+  		                                        ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ContentFrameLayout_OnAttachListenerImplementor.java:8: error: package androidx.appcompat.widget.ContentFrameLayout does not exist
+  		androidx.appcompat.widget.ContentFrameLayout.OnAttachListener
+  		                                            ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java:8: error: package androidx.appcompat.widget.FitWindowsViewGroup does not exist
+  		androidx.appcompat.widget.FitWindowsViewGroup.OnFitSystemWindowsListener
+  		                                             ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java:8: error: cannot find symbol
+  		androidx.appcompat.widget.MenuItemHoverListener
+  		                         ^
+    symbol:   class MenuItemHoverListener
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java:29: error: package androidx.appcompat.view.menu does not exist
+  	public void onItemHoverEnter (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1)
+  	                                                          ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java:34: error: package androidx.appcompat.view.menu does not exist
+  	private native void n_onItemHoverEnter (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1);
+  	                                                                    ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java:37: error: package androidx.appcompat.view.menu does not exist
+  	public void onItemHoverExit (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1)
+  	                                                         ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java:42: error: package androidx.appcompat.view.menu does not exist
+  	private native void n_onItemHoverExit (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1);
+  	                                                                   ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java:8: error: package androidx.appcompat.widget.PopupMenu does not exist
+  		androidx.appcompat.widget.PopupMenu.OnDismissListener
+  		                                   ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java:28: error: cannot find symbol
+  	public void onDismiss (androidx.appcompat.widget.PopupMenu p0)
+  	                                                ^
+    symbol:   class PopupMenu
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java:33: error: cannot find symbol
+  	private native void n_onDismiss (androidx.appcompat.widget.PopupMenu p0);
+  	                                                          ^
+    symbol:   class PopupMenu
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnMenuItemClickListenerImplementor.java:8: error: package androidx.appcompat.widget.PopupMenu does not exist
+  		androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener
+  		                                   ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnCloseListenerImplementor.java:8: error: package androidx.appcompat.widget.SearchView does not exist
+  		androidx.appcompat.widget.SearchView.OnCloseListener
+  		                                    ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnQueryTextListenerImplementor.java:8: error: package androidx.appcompat.widget.SearchView does not exist
+  		androidx.appcompat.widget.SearchView.OnQueryTextListener
+  		                                    ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnSuggestionListenerImplementor.java:8: error: package androidx.appcompat.widget.SearchView does not exist
+  		androidx.appcompat.widget.SearchView.OnSuggestionListener
+  		                                    ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java:8: error: package androidx.appcompat.widget.ShareActionProvider does not exist
+  		androidx.appcompat.widget.ShareActionProvider.OnShareTargetSelectedListener
+  		                                             ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java:28: error: cannot find symbol
+  	public boolean onShareTargetSelected (androidx.appcompat.widget.ShareActionProvider p0, android.content.Intent p1)
+  	                                                               ^
+    symbol:   class ShareActionProvider
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java:33: error: cannot find symbol
+  	private native boolean n_onShareTargetSelected (androidx.appcompat.widget.ShareActionProvider p0, android.content.Intent p1);
+  	                                                                         ^
+    symbol:   class ShareActionProvider
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\Toolbar_OnMenuItemClickListenerImplementor.java:8: error: package androidx.appcompat.widget.Toolbar does not exist
+  		androidx.appcompat.widget.Toolbar.OnMenuItemClickListener
+  		                                 ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java:8: error: package androidx.appcompat.widget.ViewStubCompat does not exist
+  		androidx.appcompat.widget.ViewStubCompat.OnInflateListener
+  		                                        ^
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java:28: error: cannot find symbol
+  	public void onInflate (androidx.appcompat.widget.ViewStubCompat p0, android.view.View p1)
+  	                                                ^
+    symbol:   class ViewStubCompat
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java:33: error: cannot find symbol
+  	private native void n_onInflate (androidx.appcompat.widget.ViewStubCompat p0, android.view.View p1);
+  	                                                          ^
+    symbol:   class ViewStubCompat
+    location: package androidx.appcompat.widget
+  obj\Debug\90\android\src\mono\androidx\asynclayoutinflater\view\AsyncLayoutInflater_OnInflateFinishedListenerImplementor.java:8: error: package androidx.asynclayoutinflater.view.AsyncLayoutInflater does not exist
+  		androidx.asynclayoutinflater.view.AsyncLayoutInflater.OnInflateFinishedListener
+  		                                                     ^
+  obj\Debug\90\android\src\mono\androidx\browser\browseractions\BrowserActionsIntent_BrowserActionsFallDialogListenerImplementor.java:8: error: package androidx.browser.browseractions.BrowserActionsIntent does not exist
+  		androidx.browser.browseractions.BrowserActionsIntent.BrowserActionsFallDialogListener
+  		                                                    ^
+  obj\Debug\90\android\src\mono\androidx\core\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java:8: error: package androidx.core.app.SharedElementCallback does not exist
+  		androidx.core.app.SharedElementCallback.OnSharedElementsReadyListener
+  		                                       ^
+  obj\Debug\90\android\src\mono\androidx\core\os\CancellationSignal_OnCancelListenerImplementor.java:8: error: package androidx.core.os.CancellationSignal does not exist
+  		androidx.core.os.CancellationSignal.OnCancelListener
+  		                                   ^
+  obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_SubUiVisibilityListenerImplementor.java:8: error: package androidx.core.view.ActionProvider does not exist
+  		androidx.core.view.ActionProvider.SubUiVisibilityListener
+  		                                 ^
+  obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_VisibilityListenerImplementor.java:8: error: package androidx.core.view.ActionProvider does not exist
+  		androidx.core.view.ActionProvider.VisibilityListener
+  		                                 ^
+  obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java:8: error: package androidx.core.view.DragStartHelper does not exist
+  		androidx.core.view.DragStartHelper.OnDragStartListener
+  		                                  ^
+  obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java:28: error: package androidx.core.view does not exist
+  	public boolean onDragStart (android.view.View p0, androidx.core.view.DragStartHelper p1)
+  	                                                                    ^
+  obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java:33: error: package androidx.core.view does not exist
+  	private native boolean n_onDragStart (android.view.View p0, androidx.core.view.DragStartHelper p1);
+  	                                                                              ^
+  obj\Debug\90\android\src\mono\androidx\core\view\MenuItemCompat_OnActionExpandListenerImplementor.java:8: error: package androidx.core.view.MenuItemCompat does not exist
+  		androidx.core.view.MenuItemCompat.OnActionExpandListener
+  		                                 ^
+  obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java:8: error: package androidx.core.view does not exist
+  		androidx.core.view.OnApplyWindowInsetsListener
+  		                  ^
+  obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java:28: error: package androidx.core.view does not exist
+  	public androidx.core.view.WindowInsetsCompat onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1)
+  	                                                                                                          ^
+  obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java:28: error: package androidx.core.view does not exist
+  	public androidx.core.view.WindowInsetsCompat onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1)
+  	                         ^
+  obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java:33: error: package androidx.core.view does not exist
+  	private native androidx.core.view.WindowInsetsCompat n_onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1);
+  	                                                                                                                    ^
+  obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java:33: error: package androidx.core.view does not exist
+  	private native androidx.core.view.WindowInsetsCompat n_onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1);
+  	                                 ^
+  obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorListenerImplementor.java:8: error: package androidx.core.view does not exist
+  		androidx.core.view.ViewPropertyAnimatorListener
+  		                  ^
+  obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorUpdateListenerImplementor.java:8: error: package androidx.core.view does not exist
+  		androidx.core.view.ViewPropertyAnimatorUpdateListener
+  		                  ^
+  obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.java:8: error: package androidx.core.view.accessibility.AccessibilityManagerCompat does not exist
+  		androidx.core.view.accessibility.AccessibilityManagerCompat.AccessibilityStateChangeListener
+  		                                                           ^
+  obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.java:8: error: package androidx.core.view.accessibility.AccessibilityManagerCompat does not exist
+  		androidx.core.view.accessibility.AccessibilityManagerCompat.TouchExplorationStateChangeListener
+  		                                                           ^
+  obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java:8: error: package androidx.core.view.inputmethod.InputConnectionCompat does not exist
+  		androidx.core.view.inputmethod.InputConnectionCompat.OnCommitContentListener
+  		                                                    ^
+  obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java:28: error: package androidx.core.view.inputmethod does not exist
+  	public boolean onCommitContent (androidx.core.view.inputmethod.InputContentInfoCompat p0, int p1, android.os.Bundle p2)
+  	                                                              ^
+  obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java:33: error: package androidx.core.view.inputmethod does not exist
+  	private native boolean n_onCommitContent (androidx.core.view.inputmethod.InputContentInfoCompat p0, int p1, android.os.Bundle p2);
+  	                                                                        ^
+  obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java:8: error: package androidx.core.widget.NestedScrollView does not exist
+  		androidx.core.widget.NestedScrollView.OnScrollChangeListener
+  		                                     ^
+  obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java:28: error: package androidx.core.widget does not exist
+  	public void onScrollChange (androidx.core.widget.NestedScrollView p0, int p1, int p2, int p3, int p4)
+  	                                                ^
+  obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java:33: error: package androidx.core.widget does not exist
+  	private native void n_onScrollChange (androidx.core.widget.NestedScrollView p0, int p1, int p2, int p3, int p4);
+  	                                                          ^
+  obj\Debug\90\android\src\mono\androidx\drawerlayout\widget\DrawerLayout_DrawerListenerImplementor.java:8: error: package androidx.drawerlayout.widget.DrawerLayout does not exist
+  		androidx.drawerlayout.widget.DrawerLayout.DrawerListener
+  		                                         ^
+  obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java:8: error: package androidx.dynamicanimation.animation.DynamicAnimation does not exist
+  		androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationEndListener
+  		                                                    ^
+  obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java:28: error: package androidx.dynamicanimation.animation does not exist
+  	public void onAnimationEnd (androidx.dynamicanimation.animation.DynamicAnimation p0, boolean p1, float p2, float p3)
+  	                                                               ^
+  obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java:33: error: package androidx.dynamicanimation.animation does not exist
+  	private native void n_onAnimationEnd (androidx.dynamicanimation.animation.DynamicAnimation p0, boolean p1, float p2, float p3);
+  	                                                                         ^
+  obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java:8: error: package androidx.dynamicanimation.animation.DynamicAnimation does not exist
+  		androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationUpdateListener
+  		                                                    ^
+  obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java:28: error: package androidx.dynamicanimation.animation does not exist
+  	public void onAnimationUpdate (androidx.dynamicanimation.animation.DynamicAnimation p0, float p1, float p2)
+  	                                                                  ^
+  obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java:33: error: package androidx.dynamicanimation.animation does not exist
+  	private native void n_onAnimationUpdate (androidx.dynamicanimation.animation.DynamicAnimation p0, float p1, float p2);
+  	                                                                            ^
+  obj\Debug\90\android\src\mono\androidx\fragment\app\FragmentManager_OnBackStackChangedListenerImplementor.java:8: error: package androidx.fragment.app.FragmentManager does not exist
+  		androidx.fragment.app.FragmentManager.OnBackStackChangedListener
+  		                                     ^
+  obj\Debug\90\android\src\mono\androidx\fragment\app\Fragment_OnStartEnterTransitionListenerImplementor.java:8: error: package androidx.fragment.app.Fragment does not exist
+  		androidx.fragment.app.Fragment.OnStartEnterTransitionListener
+  		                              ^
+  obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java:8: error: package androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder does not exist
+  		androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener
+  		                                                                            ^
+  obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java:28: error: package androidx.leanback.preference.LeanbackListPreferenceDialogFragment does not exist
+  	public void onItemClick (androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder p0)
+  	                                                                                          ^
+  obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java:33: error: package androidx.leanback.preference.LeanbackListPreferenceDialogFragment does not exist
+  	private native void n_onItemClick (androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder p0);
+  	                                                                                                    ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java:8: error: package androidx.leanback.widget does not exist
+  		androidx.leanback.widget.BaseOnItemViewClickedListener
+  		                        ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java:28: error: package androidx.leanback.widget.Presenter does not exist
+  	public void onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3)
+  	                                                             ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java:28: error: package androidx.leanback.widget.RowPresenter does not exist
+  	public void onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3)
+  	                                                                                                                                       ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java:33: error: package androidx.leanback.widget.Presenter does not exist
+  	private native void n_onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3);
+  	                                                                       ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java:33: error: package androidx.leanback.widget.RowPresenter does not exist
+  	private native void n_onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3);
+  	                                                                                                                                                 ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java:8: error: package androidx.leanback.widget does not exist
+  		androidx.leanback.widget.BaseOnItemViewSelectedListener
+  		                        ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java:28: error: package androidx.leanback.widget.Presenter does not exist
+  	public void onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3)
+  	                                                              ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java:28: error: package androidx.leanback.widget.RowPresenter does not exist
+  	public void onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3)
+  	                                                                                                                                        ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java:33: error: package androidx.leanback.widget.Presenter does not exist
+  	private native void n_onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3);
+  	                                                                        ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java:33: error: package androidx.leanback.widget.RowPresenter does not exist
+  	private native void n_onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3);
+  	                                                                                                                                                  ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnChildFocusListenerImplementor.java:8: error: package androidx.leanback.widget.BrowseFrameLayout does not exist
+  		androidx.leanback.widget.BrowseFrameLayout.OnChildFocusListener
+  		                                          ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnFocusSearchListenerImplementor.java:8: error: package androidx.leanback.widget.BrowseFrameLayout does not exist
+  		androidx.leanback.widget.BrowseFrameLayout.OnFocusSearchListener
+  		                                          ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java:8: error: package androidx.leanback.widget.GuidedActionAdapter does not exist
+  		androidx.leanback.widget.GuidedActionAdapter.ClickListener
+  		                                            ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java:28: error: package androidx.leanback.widget does not exist
+  	public void onGuidedActionClicked (androidx.leanback.widget.GuidedAction p0)
+  	                                                           ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java:33: error: package androidx.leanback.widget does not exist
+  	private native void n_onGuidedActionClicked (androidx.leanback.widget.GuidedAction p0);
+  	                                                                     ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java:8: error: package androidx.leanback.widget.GuidedActionAdapter does not exist
+  		androidx.leanback.widget.GuidedActionAdapter.EditListener
+  		                                            ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java:31: error: package androidx.leanback.widget does not exist
+  	public void onGuidedActionEditCanceled (androidx.leanback.widget.GuidedAction p0)
+  	                                                                ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java:36: error: package androidx.leanback.widget does not exist
+  	private native void n_onGuidedActionEditCanceled (androidx.leanback.widget.GuidedAction p0);
+  	                                                                          ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java:39: error: package androidx.leanback.widget does not exist
+  	public long onGuidedActionEditedAndProceed (androidx.leanback.widget.GuidedAction p0)
+  	                                                                    ^
+  obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java:44: error: package androidx.leanback.widget does not exist
+  	private native long n_onGuidedActionEditedAndProceed (androidx.leanback.widget.GuidedAction p0);
+  	                                                                              ^
+  Note: Some input files use unchecked or unsafe operations.
+  Note: Recompile with -Xlint:unchecked for details.
+  100 errors
+obj\Debug\90\android\src\androidx\appcompat\widget\Toolbar_NavigationOnClickEventDispatcher.java(27,76): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\appcompat\widget\Toolbar_NavigationOnClickEventDispatcher.java(27,76): javac.exe error : 	public Toolbar_NavigationOnClickEventDispatcher (androidx.appcompat.widget.Toolbar p0) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\appcompat\widget\Toolbar_NavigationOnClickEventDispatcher.java(27,76): javac.exe error :   symbol:   class Toolbar [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\appcompat\widget\Toolbar_NavigationOnClickEventDispatcher.java(27,76): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\appcompat\widget\Toolbar_NavigationOnClickEventDispatcher.java(27,76): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\browser\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java(5,37): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\browser\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java(5,37): javac.exe error : 	extends androidx.browser.customtabs.CustomTabsCallback [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\browser\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java(5,37): javac.exe error :   symbol:   class CustomTabsCallback [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\browser\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java(5,37): javac.exe error :   location: package androidx.browser.customtabs [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\androidx\browser\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java(5,37): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(5,37): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(5,37): javac.exe error : 	extends androidx.browser.customtabs.CustomTabsServiceConnection [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(5,37): javac.exe error :   symbol:   class CustomTabsServiceConnection [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(5,37): javac.exe error :   location: package androidx.browser.customtabs [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(5,37): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(28,105): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(28,105): javac.exe error : 	public void onCustomTabsServiceConnected (android.content.ComponentName p0, androidx.browser.customtabs.CustomTabsClient p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(28,105): javac.exe error :   symbol:   class CustomTabsClient [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(28,105): javac.exe error :   location: package androidx.browser.customtabs [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(28,105): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(33,115): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(33,115): javac.exe error : 	private native void n_onCustomTabsServiceConnected (android.content.ComponentName p0, androidx.browser.customtabs.CustomTabsClient p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(33,115): javac.exe error :   symbol:   class CustomTabsClient [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(33,115): javac.exe error :   location: package androidx.browser.customtabs [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\md504013d03dba78facd4820dd5ae1fc508\CustomTabsServiceConnectionImpl.java(33,115): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java(8,54): javac.exe error :  error: package android.support.v4.media.session.MediaSessionCompat does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java(8,54): javac.exe error : 		android.support.v4.media.session.MediaSessionCompat.OnActiveChangeListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java(8,54): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnMenuVisibilityListenerImplementor.java(8,35): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnMenuVisibilityListenerImplementor.java(8,35): javac.exe error : 		androidx.appcompat.app.ActionBar.OnMenuVisibilityListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnMenuVisibilityListenerImplementor.java(8,35): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnNavigationListenerImplementor.java(8,35): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnNavigationListenerImplementor.java(8,35): javac.exe error : 		androidx.appcompat.app.ActionBar.OnNavigationListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_OnNavigationListenerImplementor.java(8,35): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(8,35): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(8,35): javac.exe error : 		androidx.appcompat.app.ActionBar.TabListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(8,35): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(30,63): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(30,63): javac.exe error : 	public void onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(30,63): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(30,93): javac.exe error :  error: package androidx.fragment.app does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(30,93): javac.exe error : 	public void onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(30,93): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(35,73): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(35,73): javac.exe error : 	private native void n_onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(35,73): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(35,103): javac.exe error :  error: package androidx.fragment.app does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(35,103): javac.exe error : 	private native void n_onTabReselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(35,103): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(38,61): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(38,61): javac.exe error : 	public void onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(38,61): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(38,91): javac.exe error :  error: package androidx.fragment.app does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(38,91): javac.exe error : 	public void onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(38,91): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(43,71): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(43,71): javac.exe error : 	private native void n_onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(43,71): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(43,101): javac.exe error :  error: package androidx.fragment.app does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(43,101): javac.exe error : 	private native void n_onTabSelected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(43,101): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(46,63): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(46,63): javac.exe error : 	public void onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(46,63): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(46,93): javac.exe error :  error: package androidx.fragment.app does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(46,93): javac.exe error : 	public void onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(46,93): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(51,73): javac.exe error :  error: package androidx.appcompat.app.ActionBar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(51,73): javac.exe error : 	private native void n_onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(51,73): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(51,103): javac.exe error :  error: package androidx.fragment.app does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(51,103): javac.exe error : 	private native void n_onTabUnselected (androidx.appcompat.app.ActionBar.Tab p0, androidx.fragment.app.FragmentTransaction p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\app\ActionBar_TabListenerImplementor.java(51,103): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ActionMenuView_OnMenuItemClickListenerImplementor.java(8,43): javac.exe error :  error: package androidx.appcompat.widget.ActionMenuView does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ActionMenuView_OnMenuItemClickListenerImplementor.java(8,43): javac.exe error : 		androidx.appcompat.widget.ActionMenuView.OnMenuItemClickListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ActionMenuView_OnMenuItemClickListenerImplementor.java(8,43): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ContentFrameLayout_OnAttachListenerImplementor.java(8,47): javac.exe error :  error: package androidx.appcompat.widget.ContentFrameLayout does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ContentFrameLayout_OnAttachListenerImplementor.java(8,47): javac.exe error : 		androidx.appcompat.widget.ContentFrameLayout.OnAttachListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ContentFrameLayout_OnAttachListenerImplementor.java(8,47): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java(8,48): javac.exe error :  error: package androidx.appcompat.widget.FitWindowsViewGroup does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java(8,48): javac.exe error : 		androidx.appcompat.widget.FitWindowsViewGroup.OnFitSystemWindowsListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java(8,48): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(8,28): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(8,28): javac.exe error : 		androidx.appcompat.widget.MenuItemHoverListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(8,28): javac.exe error :   symbol:   class MenuItemHoverListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(8,28): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(8,28): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(29,60): javac.exe error :  error: package androidx.appcompat.view.menu does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(29,60): javac.exe error : 	public void onItemHoverEnter (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(29,60): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(34,70): javac.exe error :  error: package androidx.appcompat.view.menu does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(34,70): javac.exe error : 	private native void n_onItemHoverEnter (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(34,70): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(37,59): javac.exe error :  error: package androidx.appcompat.view.menu does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(37,59): javac.exe error : 	public void onItemHoverExit (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(37,59): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(42,69): javac.exe error :  error: package androidx.appcompat.view.menu does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(42,69): javac.exe error : 	private native void n_onItemHoverExit (androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\MenuItemHoverListenerImplementor.java(42,69): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(8,38): javac.exe error :  error: package androidx.appcompat.widget.PopupMenu does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(8,38): javac.exe error : 		androidx.appcompat.widget.PopupMenu.OnDismissListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(8,38): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(28,50): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(28,50): javac.exe error : 	public void onDismiss (androidx.appcompat.widget.PopupMenu p0) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(28,50): javac.exe error :   symbol:   class PopupMenu [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(28,50): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(28,50): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(33,60): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(33,60): javac.exe error : 	private native void n_onDismiss (androidx.appcompat.widget.PopupMenu p0); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(33,60): javac.exe error :   symbol:   class PopupMenu [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(33,60): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnDismissListenerImplementor.java(33,60): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnMenuItemClickListenerImplementor.java(8,38): javac.exe error :  error: package androidx.appcompat.widget.PopupMenu does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnMenuItemClickListenerImplementor.java(8,38): javac.exe error : 		androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\PopupMenu_OnMenuItemClickListenerImplementor.java(8,38): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnCloseListenerImplementor.java(8,39): javac.exe error :  error: package androidx.appcompat.widget.SearchView does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnCloseListenerImplementor.java(8,39): javac.exe error : 		androidx.appcompat.widget.SearchView.OnCloseListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnCloseListenerImplementor.java(8,39): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnQueryTextListenerImplementor.java(8,39): javac.exe error :  error: package androidx.appcompat.widget.SearchView does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnQueryTextListenerImplementor.java(8,39): javac.exe error : 		androidx.appcompat.widget.SearchView.OnQueryTextListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnQueryTextListenerImplementor.java(8,39): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnSuggestionListenerImplementor.java(8,39): javac.exe error :  error: package androidx.appcompat.widget.SearchView does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnSuggestionListenerImplementor.java(8,39): javac.exe error : 		androidx.appcompat.widget.SearchView.OnSuggestionListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\SearchView_OnSuggestionListenerImplementor.java(8,39): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(8,48): javac.exe error :  error: package androidx.appcompat.widget.ShareActionProvider does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(8,48): javac.exe error : 		androidx.appcompat.widget.ShareActionProvider.OnShareTargetSelectedListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(8,48): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(28,65): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(28,65): javac.exe error : 	public boolean onShareTargetSelected (androidx.appcompat.widget.ShareActionProvider p0, android.content.Intent p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(28,65): javac.exe error :   symbol:   class ShareActionProvider [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(28,65): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(28,65): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(33,75): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(33,75): javac.exe error : 	private native boolean n_onShareTargetSelected (androidx.appcompat.widget.ShareActionProvider p0, android.content.Intent p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(33,75): javac.exe error :   symbol:   class ShareActionProvider [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(33,75): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java(33,75): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\Toolbar_OnMenuItemClickListenerImplementor.java(8,36): javac.exe error :  error: package androidx.appcompat.widget.Toolbar does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\Toolbar_OnMenuItemClickListenerImplementor.java(8,36): javac.exe error : 		androidx.appcompat.widget.Toolbar.OnMenuItemClickListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\Toolbar_OnMenuItemClickListenerImplementor.java(8,36): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(8,43): javac.exe error :  error: package androidx.appcompat.widget.ViewStubCompat does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(8,43): javac.exe error : 		androidx.appcompat.widget.ViewStubCompat.OnInflateListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(8,43): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(28,50): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(28,50): javac.exe error : 	public void onInflate (androidx.appcompat.widget.ViewStubCompat p0, android.view.View p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(28,50): javac.exe error :   symbol:   class ViewStubCompat [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(28,50): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(28,50): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(33,60): javac.exe error :  error: cannot find symbol [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(33,60): javac.exe error : 	private native void n_onInflate (androidx.appcompat.widget.ViewStubCompat p0, android.view.View p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(33,60): javac.exe error :   symbol:   class ViewStubCompat [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(33,60): javac.exe error :   location: package androidx.appcompat.widget [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\appcompat\widget\ViewStubCompat_OnInflateListenerImplementor.java(33,60): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\asynclayoutinflater\view\AsyncLayoutInflater_OnInflateFinishedListenerImplementor.java(8,56): javac.exe error :  error: package androidx.asynclayoutinflater.view.AsyncLayoutInflater does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\asynclayoutinflater\view\AsyncLayoutInflater_OnInflateFinishedListenerImplementor.java(8,56): javac.exe error : 		androidx.asynclayoutinflater.view.AsyncLayoutInflater.OnInflateFinishedListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\asynclayoutinflater\view\AsyncLayoutInflater_OnInflateFinishedListenerImplementor.java(8,56): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\browser\browseractions\BrowserActionsIntent_BrowserActionsFallDialogListenerImplementor.java(8,55): javac.exe error :  error: package androidx.browser.browseractions.BrowserActionsIntent does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\browser\browseractions\BrowserActionsIntent_BrowserActionsFallDialogListenerImplementor.java(8,55): javac.exe error : 		androidx.browser.browseractions.BrowserActionsIntent.BrowserActionsFallDialogListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\browser\browseractions\BrowserActionsIntent_BrowserActionsFallDialogListenerImplementor.java(8,55): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java(8,42): javac.exe error :  error: package androidx.core.app.SharedElementCallback does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java(8,42): javac.exe error : 		androidx.core.app.SharedElementCallback.OnSharedElementsReadyListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java(8,42): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\os\CancellationSignal_OnCancelListenerImplementor.java(8,38): javac.exe error :  error: package androidx.core.os.CancellationSignal does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\os\CancellationSignal_OnCancelListenerImplementor.java(8,38): javac.exe error : 		androidx.core.os.CancellationSignal.OnCancelListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\os\CancellationSignal_OnCancelListenerImplementor.java(8,38): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_SubUiVisibilityListenerImplementor.java(8,36): javac.exe error :  error: package androidx.core.view.ActionProvider does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_SubUiVisibilityListenerImplementor.java(8,36): javac.exe error : 		androidx.core.view.ActionProvider.SubUiVisibilityListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_SubUiVisibilityListenerImplementor.java(8,36): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_VisibilityListenerImplementor.java(8,36): javac.exe error :  error: package androidx.core.view.ActionProvider does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_VisibilityListenerImplementor.java(8,36): javac.exe error : 		androidx.core.view.ActionProvider.VisibilityListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ActionProvider_VisibilityListenerImplementor.java(8,36): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(8,37): javac.exe error :  error: package androidx.core.view.DragStartHelper does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(8,37): javac.exe error : 		androidx.core.view.DragStartHelper.OnDragStartListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(8,37): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(28,70): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(28,70): javac.exe error : 	public boolean onDragStart (android.view.View p0, androidx.core.view.DragStartHelper p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(28,70): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(33,80): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(33,80): javac.exe error : 	private native boolean n_onDragStart (android.view.View p0, androidx.core.view.DragStartHelper p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\DragStartHelper_OnDragStartListenerImplementor.java(33,80): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\MenuItemCompat_OnActionExpandListenerImplementor.java(8,36): javac.exe error :  error: package androidx.core.view.MenuItemCompat does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\MenuItemCompat_OnActionExpandListenerImplementor.java(8,36): javac.exe error : 		androidx.core.view.MenuItemCompat.OnActionExpandListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\MenuItemCompat_OnActionExpandListenerImplementor.java(8,36): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(8,21): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(8,21): javac.exe error : 		androidx.core.view.OnApplyWindowInsetsListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(8,21): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(28,108): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(28,108): javac.exe error : 	public androidx.core.view.WindowInsetsCompat onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(28,108): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(28,27): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(28,27): javac.exe error : 	public androidx.core.view.WindowInsetsCompat onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(28,27): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(33,118): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(33,118): javac.exe error : 	private native androidx.core.view.WindowInsetsCompat n_onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(33,118): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(33,35): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(33,35): javac.exe error : 	private native androidx.core.view.WindowInsetsCompat n_onApplyWindowInsets (android.view.View p0, androidx.core.view.WindowInsetsCompat p1); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\OnApplyWindowInsetsListenerImplementor.java(33,35): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorListenerImplementor.java(8,21): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorListenerImplementor.java(8,21): javac.exe error : 		androidx.core.view.ViewPropertyAnimatorListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorListenerImplementor.java(8,21): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorUpdateListenerImplementor.java(8,21): javac.exe error :  error: package androidx.core.view does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorUpdateListenerImplementor.java(8,21): javac.exe error : 		androidx.core.view.ViewPropertyAnimatorUpdateListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\ViewPropertyAnimatorUpdateListenerImplementor.java(8,21): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.java(8,62): javac.exe error :  error: package androidx.core.view.accessibility.AccessibilityManagerCompat does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.java(8,62): javac.exe error : 		androidx.core.view.accessibility.AccessibilityManagerCompat.AccessibilityStateChangeListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.java(8,62): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.java(8,62): javac.exe error :  error: package androidx.core.view.accessibility.AccessibilityManagerCompat does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.java(8,62): javac.exe error : 		androidx.core.view.accessibility.AccessibilityManagerCompat.TouchExplorationStateChangeListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\accessibility\AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.java(8,62): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(8,55): javac.exe error :  error: package androidx.core.view.inputmethod.InputConnectionCompat does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(8,55): javac.exe error : 		androidx.core.view.inputmethod.InputConnectionCompat.OnCommitContentListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(8,55): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(28,64): javac.exe error :  error: package androidx.core.view.inputmethod does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(28,64): javac.exe error : 	public boolean onCommitContent (androidx.core.view.inputmethod.InputContentInfoCompat p0, int p1, android.os.Bundle p2) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(28,64): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(33,74): javac.exe error :  error: package androidx.core.view.inputmethod does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(33,74): javac.exe error : 	private native boolean n_onCommitContent (androidx.core.view.inputmethod.InputContentInfoCompat p0, int p1, android.os.Bundle p2); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java(33,74): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(8,40): javac.exe error :  error: package androidx.core.widget.NestedScrollView does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(8,40): javac.exe error : 		androidx.core.widget.NestedScrollView.OnScrollChangeListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(8,40): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(28,50): javac.exe error :  error: package androidx.core.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(28,50): javac.exe error : 	public void onScrollChange (androidx.core.widget.NestedScrollView p0, int p1, int p2, int p3, int p4) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(28,50): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(33,60): javac.exe error :  error: package androidx.core.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(33,60): javac.exe error : 	private native void n_onScrollChange (androidx.core.widget.NestedScrollView p0, int p1, int p2, int p3, int p4); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\core\widget\NestedScrollView_OnScrollChangeListenerImplementor.java(33,60): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\drawerlayout\widget\DrawerLayout_DrawerListenerImplementor.java(8,44): javac.exe error :  error: package androidx.drawerlayout.widget.DrawerLayout does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\drawerlayout\widget\DrawerLayout_DrawerListenerImplementor.java(8,44): javac.exe error : 		androidx.drawerlayout.widget.DrawerLayout.DrawerListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\drawerlayout\widget\DrawerLayout_DrawerListenerImplementor.java(8,44): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(8,55): javac.exe error :  error: package androidx.dynamicanimation.animation.DynamicAnimation does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(8,55): javac.exe error : 		androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationEndListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(8,55): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(28,65): javac.exe error :  error: package androidx.dynamicanimation.animation does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(28,65): javac.exe error : 	public void onAnimationEnd (androidx.dynamicanimation.animation.DynamicAnimation p0, boolean p1, float p2, float p3) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(28,65): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(33,75): javac.exe error :  error: package androidx.dynamicanimation.animation does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(33,75): javac.exe error : 	private native void n_onAnimationEnd (androidx.dynamicanimation.animation.DynamicAnimation p0, boolean p1, float p2, float p3); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationEndListenerImplementor.java(33,75): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(8,55): javac.exe error :  error: package androidx.dynamicanimation.animation.DynamicAnimation does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(8,55): javac.exe error : 		androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationUpdateListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(8,55): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(28,68): javac.exe error :  error: package androidx.dynamicanimation.animation does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(28,68): javac.exe error : 	public void onAnimationUpdate (androidx.dynamicanimation.animation.DynamicAnimation p0, float p1, float p2) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(28,68): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(33,78): javac.exe error :  error: package androidx.dynamicanimation.animation does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(33,78): javac.exe error : 	private native void n_onAnimationUpdate (androidx.dynamicanimation.animation.DynamicAnimation p0, float p1, float p2); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\dynamicanimation\animation\DynamicAnimation_OnAnimationUpdateListenerImplementor.java(33,78): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\fragment\app\FragmentManager_OnBackStackChangedListenerImplementor.java(8,40): javac.exe error :  error: package androidx.fragment.app.FragmentManager does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\fragment\app\FragmentManager_OnBackStackChangedListenerImplementor.java(8,40): javac.exe error : 		androidx.fragment.app.FragmentManager.OnBackStackChangedListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\fragment\app\FragmentManager_OnBackStackChangedListenerImplementor.java(8,40): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\fragment\app\Fragment_OnStartEnterTransitionListenerImplementor.java(8,33): javac.exe error :  error: package androidx.fragment.app.Fragment does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\fragment\app\Fragment_OnStartEnterTransitionListenerImplementor.java(8,33): javac.exe error : 		androidx.fragment.app.Fragment.OnStartEnterTransitionListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\fragment\app\Fragment_OnStartEnterTransitionListenerImplementor.java(8,33): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(8,79): javac.exe error :  error: package androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(8,79): javac.exe error : 		androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(8,79): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(28,92): javac.exe error :  error: package androidx.leanback.preference.LeanbackListPreferenceDialogFragment does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(28,92): javac.exe error : 	public void onItemClick (androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder p0) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(28,92): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(33,102): javac.exe error :  error: package androidx.leanback.preference.LeanbackListPreferenceDialogFragment does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(33,102): javac.exe error : 	private native void n_onItemClick (androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder p0); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\preference\LeanbackListPreferenceDialogFragment_ViewHolder_OnItemClickListenerImplementor.java(33,102): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(8,27): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(8,27): javac.exe error : 		androidx.leanback.widget.BaseOnItemViewClickedListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(8,27): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(28,63): javac.exe error :  error: package androidx.leanback.widget.Presenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(28,63): javac.exe error : 	public void onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(28,63): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(28,137): javac.exe error :  error: package androidx.leanback.widget.RowPresenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(28,137): javac.exe error : 	public void onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(28,137): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(33,73): javac.exe error :  error: package androidx.leanback.widget.Presenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(33,73): javac.exe error : 	private native void n_onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(33,73): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(33,147): javac.exe error :  error: package androidx.leanback.widget.RowPresenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(33,147): javac.exe error : 	private native void n_onItemClicked (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewClickedListenerImplementor.java(33,147): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(8,27): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(8,27): javac.exe error : 		androidx.leanback.widget.BaseOnItemViewSelectedListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(8,27): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(28,64): javac.exe error :  error: package androidx.leanback.widget.Presenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(28,64): javac.exe error : 	public void onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(28,64): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(28,138): javac.exe error :  error: package androidx.leanback.widget.RowPresenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(28,138): javac.exe error : 	public void onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(28,138): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(33,74): javac.exe error :  error: package androidx.leanback.widget.Presenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(33,74): javac.exe error : 	private native void n_onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(33,74): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(33,148): javac.exe error :  error: package androidx.leanback.widget.RowPresenter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(33,148): javac.exe error : 	private native void n_onItemSelected (androidx.leanback.widget.Presenter.ViewHolder p0, java.lang.Object p1, androidx.leanback.widget.RowPresenter.ViewHolder p2, java.lang.Object p3); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BaseOnItemViewSelectedListenerImplementor.java(33,148): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnChildFocusListenerImplementor.java(8,45): javac.exe error :  error: package androidx.leanback.widget.BrowseFrameLayout does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnChildFocusListenerImplementor.java(8,45): javac.exe error : 		androidx.leanback.widget.BrowseFrameLayout.OnChildFocusListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnChildFocusListenerImplementor.java(8,45): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnFocusSearchListenerImplementor.java(8,45): javac.exe error :  error: package androidx.leanback.widget.BrowseFrameLayout does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnFocusSearchListenerImplementor.java(8,45): javac.exe error : 		androidx.leanback.widget.BrowseFrameLayout.OnFocusSearchListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\BrowseFrameLayout_OnFocusSearchListenerImplementor.java(8,45): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(8,47): javac.exe error :  error: package androidx.leanback.widget.GuidedActionAdapter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(8,47): javac.exe error : 		androidx.leanback.widget.GuidedActionAdapter.ClickListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(8,47): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(28,61): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(28,61): javac.exe error : 	public void onGuidedActionClicked (androidx.leanback.widget.GuidedAction p0) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(28,61): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(33,71): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(33,71): javac.exe error : 	private native void n_onGuidedActionClicked (androidx.leanback.widget.GuidedAction p0); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_ClickListenerImplementor.java(33,71): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(8,47): javac.exe error :  error: package androidx.leanback.widget.GuidedActionAdapter does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(8,47): javac.exe error : 		androidx.leanback.widget.GuidedActionAdapter.EditListener [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(8,47): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(31,66): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(31,66): javac.exe error : 	public void onGuidedActionEditCanceled (androidx.leanback.widget.GuidedAction p0) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(31,66): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(36,76): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(36,76): javac.exe error : 	private native void n_onGuidedActionEditCanceled (androidx.leanback.widget.GuidedAction p0); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(36,76): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(39,70): javac.exe error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(39,70): javac.exe error : 	public long onGuidedActionEditedAndProceed (androidx.leanback.widget.GuidedAction p0) [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(39,70): javac.exe error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(44,80): error :  error: package androidx.leanback.widget does not exist [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(44,80): error : 	private native long n_onGuidedActionEditedAndProceed (androidx.leanback.widget.GuidedAction p0); [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]
+obj\Debug\90\android\src\mono\androidx\leanback\widget\GuidedActionAdapter_EditListenerImplementor.java(44,80): error :  [C:\Projects\AndroidX\samples\BuildAll\BuildAll\BuildAll.csproj]

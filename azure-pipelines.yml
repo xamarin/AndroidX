@@ -28,37 +28,10 @@ jobs:
         displayName: 'Build NuGets'
       # Publish the artifacts
       - task: PublishBuildArtifacts@1
-        displayName: 'Publish thin NuGets'
+        displayName: 'Publish Unsigned NuGets'
         inputs:
           pathToPublish: '$(Build.SourcesDirectory)/output'
-          artifactName: 'output'
-
-  - job: build_fat
-    displayName: 'Build Fat NuGets (macOS)'
-    dependsOn: build
-    pool:
-      vmImage: macos-10.13
-    steps:
-      # Make sure to select the correct Xamarin and mono
-      - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
-        displayName: 'Switch to the latest Xamarin SDK'
-      - bash: echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_$(XCODE_VERSION).app;sudo xcode-select --switch /Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer
-        displayName: 'Switch to the latest Xcode'
-      # Download the "thin" artifacts
-      - task: DownloadBuildArtifacts@0
-        displayName: 'Download thin NuGets'
-        inputs:
-          downloadPath: '$(Build.SourcesDirectory)/output'
-          artifactName: 'output'
-      # Build the libraries and packages
-      - bash: sh build.sh --target=ci-fat --settings_skipverification=true --verbosity=$(VERBOSITY)
-        displayName: 'Build fat NuGets'
-      # Publish the artifacts
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish unsigned fat NuGets'
-        inputs:
-          pathToPublish: '$(Build.SourcesDirectory)/output'
-          artifactName: nuget
+          artifactName: 'nuget'
 
   - job: build_windows
     displayName: 'Build Libraries & NuGets (Windows)'
@@ -73,7 +46,7 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - job: signing
       displayName: Signing NuGets
-      dependsOn: build_fat
+      dependsOn: build
       pool:
         name: VSEng-XamarinCustom
         demands:

@@ -20,7 +20,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\proguard.txt" />
+    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\proguard\proguard.txt" />
       }
     }
   </ItemGroup>
@@ -29,7 +29,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
-    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(art.MavenArtifactId).aar" />
+    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\aar\@(art.MavenArtifactId).aar" />
       }
     }   
   </ItemGroup>

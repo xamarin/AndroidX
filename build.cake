@@ -10,6 +10,10 @@
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
 
+using System.Text.RegularExpressions;
+using System.Xml;
+using System.Xml.Linq;
+
 // From Cake.Xamarin.Build, dumps out versions of things
 //LogSystemInfo ();
 
@@ -101,7 +105,7 @@ Task("libs")
 	.Does(() =>
 {
 	MSBuild("./generated/AndroidX.sln", c => {
-		c.Configuration = "Release";
+		c.Configuration = BUILD_CONFIG;
 		c.Restore = true;
 		c.MaxCpuCount = 0;
 		c.Verbosity = VERBOSITY;
@@ -115,13 +119,50 @@ Task("nuget")
 	.Does(() =>
 {
 	MSBuild ("./generated/AndroidX.sln", c => {
-		c.Configuration = "Release";
+		c.Configuration = BUILD_CONFIG;
 		c.MaxCpuCount = 0;
 		c.Verbosity = VERBOSITY;
 		c.Targets.Clear();
 		c.Targets.Add("Pack");
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+	});
+
+	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+	var itemGroup = new XElement(xmlns + "ItemGroup");
+	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+		var filename = nupkg.GetFilenameWithoutExtension();
+		var match = Regex.Match(filename.ToString(), @"(.+?)\.([\.\d+]+)");
+		itemGroup.Add(new XElement(xmlns + "PackageReference",
+			new XAttribute("Include", match.Groups[1]),
+			new XAttribute("Version", match.Groups[2])));
+	}
+	var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+	xdoc.Save("./output/AllPackages.targets");
+});
+
+Task("samples")
+	.IsDependentOn("nuget")
+	.Does(() =>
+{
+	// TODO: make this actually work with more than just this sample
+
+	// clear the packages folder so we always use the latest
+	var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
+	EnsureDirectoryExists(packagesPath);
+	CleanDirectories(packagesPath);
+
+	// build the sample
+	MSBuild (
+		"./samples/BuildAll/BuildAll.sln", c => {
+		c.Configuration = BUILD_CONFIG;
+		c.MaxCpuCount = 0;
+		c.Verbosity = VERBOSITY;
+		c.Restore = true;
+		c.Properties.Add("RestoreNoCache", new [] { "true" });
+		c.Properties.Add("RestorePackagesPath", new [] { packagesPath });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 	});
@@ -250,7 +291,7 @@ Task ("merge")
 	if (FileExists ("./output/AndroidSupport.Merged.dll"))
 		DeleteFile ("./output/AndroidSupport.Merged.dll");
 
-	var allDlls = GetFiles ("./generated/**/bin/Release/" + TF_MONIKER + "/*.dll");
+	var allDlls = GetFiles ("./generated/**/bin/" + BUILD_CONFIG + "/" + TF_MONIKER + "/*.dll");
 
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
@@ -309,16 +350,17 @@ Task ("clean")
 	CleanDirectories ("./**/packages");
 });
 
-Task ("ci-fat")
-	.IsDependentOn ("ci-setup")
-	.IsDependentOn ("nuget-fat")
-	.IsDependentOn ("nuget-validation");
+Task ("full-run")
+	.IsDependentOn ("binderate")
+	.IsDependentOn ("nuget")
+	.IsDependentOn ("samples");
 
 Task ("ci")
 	.IsDependentOn ("ci-setup")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("nuget-validation")
-	.IsDependentOn ("diff");
+	.IsDependentOn ("diff")
+	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
