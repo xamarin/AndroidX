@@ -35,6 +35,7 @@ jobs:
 
   - job: build_fat
     displayName: 'Build Fat NuGets (macOS)'
+    dependsOn: build
     pool:
       vmImage: macos-10.13
     steps:
