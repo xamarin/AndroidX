@@ -62,7 +62,7 @@ jobs:
       vmImage: vs2017-win2016
     steps:
       # Build the libraries and packages
-      - powershell: build.ps1 --target=ci --settings_skipverification=true --verbosity=normal
+      - powershell: .\build.ps1 --target=ci --settings_skipverification=true --verbosity=normal
         displayName: 'Build everything'
       # make sure we are following the rules
       - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
