@@ -127,9 +127,43 @@ Task("nuget")
 	});
 });
 
-Task("nuget-validation")
+Task("nuget-fat")
 	.IsDependentOn("nuget")
-	.Does(()=>
+	.Does(() =>
+{
+	// Make a temp folder to move the created nugets to before we fat package them
+	EnsureDirectoryExists("./tmp");
+	CleanDirectories("./tmp");
+	EnsureDirectoryExists("./tmp/nuget");
+	EnsureDirectoryExists("./tmp/output");
+
+	// Move all of the nupkg files from output into the temp folder we just created
+	MoveFiles("./output/*.nupkg", "./tmp/nuget");
+
+	// Move the remaining output bits to a temp location so they don't get overwritten
+	MoveFiles("./output/*", "./tmp/output");
+
+	// Run the fat NuGet script
+	CakeExecuteScript("nuget.cake", new CakeSettings {
+		Arguments = new Dictionary<string, string> {
+			{ "localSource", "./tmp/nuget" },
+			{ "packagesPath", "./tmp/pkgs" },
+			{ "workingPath", "./tmp/working" },
+			{ "outputPath", "./output" },
+			{ "incrementVersion", "false" },
+			{ "packLatestOnly", "true" },
+			{ "useExplicitVersion", "true" },
+			{ "verbosity", VERBOSITY.ToString() },
+		}
+	});
+
+	// Move the other output bits back to the original output folder
+	MoveFiles("./tmp/output/*", "./output");
+});
+
+Task("nuget-validation")
+	.IsDependentOn("nuget-fat")
+	.Does(() =>
 {
 	//setup validation options
 	var options = new Xamarin.Nuget.Validator.NugetValidatorOptions()

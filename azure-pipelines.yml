@@ -26,25 +26,6 @@ jobs:
       # Build the libraries and packages
       - bash: sh build.sh --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
         displayName: 'Build everything'
-      - bash: |
-          # Make a temp folder to move the created nugets to before we fat package them
-          mkdir -p $(Build.SourcesDirectory)/tmp/nuget
-          mkdir -p $(Build.SourcesDirectory)/tmp/output
-          # Move all of the nupkg files from output into the temp folder we just created
-          mv $(Build.SourcesDirectory)/output/*.nupkg $(Build.SourcesDirectory)/tmp/nuget
-          # Move the remaining output bits to a temp location so they don't get overwritten
-          mv $(Build.SourcesDirectory)/output/* $(Build.SourcesDirectory)/tmp/output
-          sh build.sh --script nuget.cake \
-            --localSource=$(Build.SourcesDirectory)/tmp/nuget \
-            --packagesPath=$(Build.SourcesDirectory)/tmp/pkgs \
-            --workingPath=$(Build.SourcesDirectory)/tmp/working \
-            --outputPath=$(Build.SourcesDirectory)/output \
-            --incrementVersion=False \
-            --packLatestOnly=True \
-            --useExplicitVersion=True
-          # Move the other output bits back to the original output folder
-          mv $(Build.SourcesDirectory)/tmp/output/* $(Build.SourcesDirectory)/output
-        displayName: 'Create FAT NuGets'
       # Publish the artifacts
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Unsigned NuGets'

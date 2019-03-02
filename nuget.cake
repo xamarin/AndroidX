@@ -49,8 +49,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #addin nuget:?package=Cake.FileHelpers&version=3.0.0
-#addin nuget:?package=NuGet.Packaging&version=4.7.0&loaddependencies=true
-#addin nuget:?package=NuGet.Protocol&version=4.7.0&loaddependencies=true
+#addin nuget:?package=NuGet.Common&version=4.7.0
+#addin nuget:?package=NuGet.Configuration&version=4.7.0
+#addin nuget:?package=NuGet.Frameworks&version=4.7.0
+#addin nuget:?package=NuGet.Packaging&version=4.7.0
+#addin nuget:?package=NuGet.Packaging.Core&version=4.7.0
+#addin nuget:?package=NuGet.Protocol&version=4.7.0
+#addin nuget:?package=NuGet.Versioning&version=4.7.0
 
 using System.Linq;
 using System.Xml;
