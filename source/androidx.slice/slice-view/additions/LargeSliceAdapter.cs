@@ -10,12 +10,12 @@ namespace AndroidX.Slice.Widget
         //    this.OnBindViewHolder((global::Java.Lang.Object)holder, position);
         //}
 
-        public override void OnBindViewHolder (Java.Lang.Object holder, int position)
-        {
-            this.OnBindViewHolder((global::Android.Views.ViewGroup)holder, position);
+        // public override void OnBindViewHolder (Java.Lang.Object holder, int position)
+        // {
+        //     this.OnBindViewHolder((global::Android.Views.ViewGroup)holder, position);
 
-            return;
-        }
+        //     return;
+        // }
 
         public Java.Lang.Object OnCreateViewHolder (Java.Lang.Object holder, int position)
         {

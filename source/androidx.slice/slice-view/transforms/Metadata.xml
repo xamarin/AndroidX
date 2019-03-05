@@ -10,12 +10,12 @@
     -->
     
     
-    <attr
+    <!-- <attr
         path="/api/package[@name='androidx.slice.widget']/class[@name='LargeSliceAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='androidx.slice.widget.LargeSliceAdapter.SliceViewHolder'] and parameter[2][@type='int']]/parameter[1]"
         name="managedType"
         >
         Android.Views.ViewGroup
-    </attr>
+    </attr> -->
 
     <attr
         path="/api/package[@name='androidx.slice.widget']/class[@name='LargeSliceAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
@@ -24,7 +24,6 @@
         Java.Lang.Object
     </attr>
 
-
-
+    <remove-node path="/api/package[@name='androidx.slice.widget']/interface[@name='SliceActionView.SliceActionLoadingListener']" />
 
 </metadata>
