@@ -294,5 +294,9 @@
         Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget
     </attr>
     
+
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
+
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
     
 </metadata>
