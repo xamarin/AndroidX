@@ -1,12 +1,7 @@
 ﻿<metadata>
-	<!--
-  This sample removes the class: 4.content.AsyncTaskLoader.LoadTask:
-  <remove-node path="/api/package[@name='androidx.loader.content']/class[@name='AsyncTaskLoader.LoadTask']" />
-  
-  This sample removes the method: 4.content.CursorLoader.loadInBackground:
-  <remove-node path="/api/package[@name='androidx.loader.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
-  -->
-    
+    <remove-node path="/api/package[@name='androidx.browser.browseractions']/interface[@name='BrowserActionsIntent.BrowserActionsFallDialogListener']" />
+    <remove-node path="/api/package[@name='androidx.browser.browseractions']/interface[@name='BrowserActionsFallbackMenuUi.BrowserActionsFallMenuUiListener']" />
+
     <attr
         path="/api/package[@name='androidx.browser.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='android.support.customtabs.CustomTabsClient']]/parameter[1]"
         name="managedName"
