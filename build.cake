@@ -211,7 +211,7 @@ Task ("diff")
 		MONODROID_PATH,
 	};
 
-	MonoApiInfo ("./output/AndroidXt.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
+	MonoApiInfo ("./output/AndroidX.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
 		SearchPaths = SEARCH_DIRS
 	});
 
