@@ -229,14 +229,14 @@
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-core-ui",
 			"version" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Legacy.Core.UI",
+			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.UI",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-core-utils",
 			"version" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Legacy.Core.Utils",
+			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
 			"dependencyOnly" : false
 		}
 		,{
