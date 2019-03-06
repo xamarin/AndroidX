@@ -122,6 +122,9 @@ Task("nuget")
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
 	var itemGroup = new XElement(xmlns + "ItemGroup");
 	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+		// Skip Wear as it has special implications requiring more packages to be used properly in an app
+		if (nupkg.FullPath.Contains(".Wear."))
+			continue;
 		var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.([\.\d+]+)");
 		itemGroup.Add(new XElement(xmlns + "PackageReference",
@@ -157,38 +160,7 @@ Task("samples")
 	});
 });
 
-Task("nuget-fat")
-	.Does(() =>
-{
-	// Make a temp folder to move the created nugets to before we fat package them
-	EnsureDirectoryExists("./tmp");
-	CleanDirectories("./tmp");
-	EnsureDirectoryExists("./tmp/nuget");
-	EnsureDirectoryExists("./tmp/output");
-
-	// Move all of the nupkg files from output into the temp folder we just created
-	MoveFiles("./output/*.nupkg", "./tmp/nuget");
-
-	// Move the remaining output bits to a temp location so they don't get overwritten
-	MoveFiles("./output/*", "./tmp/output");
-
-	// Run the fat NuGet script
-	CakeExecuteScript("nuget.cake", new CakeSettings {
-		Arguments = new Dictionary<string, string> {
-			{ "localSource", "./tmp/nuget" },
-			{ "packagesPath", "./tmp/pkgs" },
-			{ "workingPath", "./tmp/working" },
-			{ "outputPath", "./output" },
-			{ "incrementVersion", "false" },
-			{ "packLatestOnly", "true" },
-			{ "useExplicitVersion", "true" },
-			{ "verbosity", VERBOSITY.ToString() },
-		}
-	});
-
-	// Move the other output bits back to the original output folder
-	MoveFiles("./tmp/output/*", "./output");
-});
+Task("nuget-fat");
 
 Task("nuget-validation")
 	.Does(() =>
@@ -239,7 +211,7 @@ Task ("diff")
 		MONODROID_PATH,
 	};
 
-	MonoApiInfo ("./output/AndroidSupport.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
+	MonoApiInfo ("./output/AndroidXt.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
 		SearchPaths = SEARCH_DIRS
 	});
 
@@ -259,8 +231,8 @@ Task ("merge")
 {
 	EnsureDirectoryExists("./output/");
 
-	if (FileExists ("./output/AndroidSupport.Merged.dll"))
-		DeleteFile ("./output/AndroidSupport.Merged.dll");
+	if (FileExists ("./output/AndroidX.Merged.dll"))
+		DeleteFile ("./output/AndroidX.Merged.dll");
 
 	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.AndroidX.*.dll");
 
@@ -271,7 +243,7 @@ Task ("merge")
 
 	Information("Merging: \n - {0}", string.Join("\n - ", mergeDlls));
 
-	ILRepack ("./output/AndroidSupport.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
+	ILRepack ("./output/AndroidX.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
 		CopyAttrs = true,
 		AllowMultiple = true,
 		//TargetKind = ILRepack.TargetKind.Dll,
