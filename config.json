@@ -33,7 +33,7 @@
 			"groupId" : "androidx.appcompat",
 			"artifactId" : "appcompat",
 			"version" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Appcompat.Appcompat",
+			"nugetId" : "Xamarin.AndroidX.AppCompat.AppCompat",
 			"dependencyOnly" : false
 		}
 		,{
@@ -481,7 +481,7 @@
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
 			"version" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Material.Material",
+			"nugetId" : "Xamarin.Google.Android.Material",
 			"dependencyOnly" : false
 		}
 
