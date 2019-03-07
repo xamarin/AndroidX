@@ -18,12 +18,27 @@
     <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='MatrixEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Matrix'] and parameter[3][@type='android.graphics.Matrix']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo'] and parameter[3][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2 and parameter[1][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[2][@type='int']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-    <!--
-    duplicate event names
-    -->
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <!-- Google added a new leve in between, so we call that 2 :( -->
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']" name="managedName">IOnTabSelectedListener</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.OnTabSelectedListener']" name="managedName">IOnTabSelectedListener2</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="type">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="type">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="type">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <!-- Remove some non-public interfaces that the generator tries to bind -->
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='Snackbar.SnackbarLayout.OnAttachStateChangeListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
     <!--
     multiple EventArgs properties
     ????
