@@ -1,15 +1,15 @@
 <enum-method-mappings>
-	<mapping jni-class="androidx/core/app/Fragment$SavedState">
+	<mapping jni-class="androidx/fragment/app/Fragment$SavedState">
 		<method jni-name="writeToParcel" parameter="flags" clr-enum-type="Android.OS.ParcelableWriteFlags" />
 	</mapping>
-	<mapping jni-interface="androidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback">
+	<mapping jni-interface="androidx/fragment/app/ActivityCompat$OnRequestPermissionsResultCallback">
 		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
 	</mapping>
 	<!-- Manually did JNI for this as it's not generated properly, but maybe in the future? -->
-	<mapping jni-class="androidx/core/app/FragmentActivity">
+	<mapping jni-class="androidx/fragment/app/FragmentActivity">
 		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
 	</mapping>
-	<mapping jni-class="androidx/core/app/Fragment">
+	<mapping jni-class="androidx/fragment/app/Fragment">
 		<method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
 	</mapping>
 
