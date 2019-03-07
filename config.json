@@ -387,6 +387,20 @@
 			"dependencyOnly" : false
 		}
 		,{
+			"groupId" : "androidx.room",
+			"artifactId" : "room-runtime",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.room",
+			"artifactId" : "room-common",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Room.Common",
+			"dependencyOnly" : false
+		}
+		,{
 			"groupId" : "androidx.slice",
 			"artifactId" : "slice-builders",
 			"version" : "1.0.0",
@@ -412,6 +426,20 @@
 			"artifactId" : "slidingpanelayout",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.SlidingPaneLayout",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.sqlite",
+			"artifactId" : "sqlite",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Sqlite",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.sqlite",
+			"artifactId" : "sqlite-framework",
+			"version" : "2.0.0",
+			"nugetId" : "Xamarin.AndroidX.Sqlite.Framework",
 			"dependencyOnly" : false
 		}
 		,{
