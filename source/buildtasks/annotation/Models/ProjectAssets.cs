@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Xamarin.Android.Support.BuildTasks.Models
+namespace Xamarin.AndroidX.Annotation.BuildTasks.Models
 {
 	[DataContract]
 	[Serializable]

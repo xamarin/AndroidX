@@ -16,6 +16,8 @@ namespace Xamarin.AndroidX.Annotation.BuildTasks
 {
 	public class VerifyVersionsTask : Task
 	{
+		public const string AndroidXPackagePrefix = "xamarin.androidx";
+
 		public readonly static string[] ExcludedAndroidXPackages = { };
 		public readonly static string[] ExcludedAndroidSupportPackages = { };
 
@@ -64,8 +66,8 @@ namespace Xamarin.AndroidX.Annotation.BuildTasks
 				NugetPackages.GatherProjectJsonVersions("xamarin.android.support.", ProjectExtensionsPath.ItemSpec, ExcludedAndroidSupportPackages, frameworkVersion, androidSupportPackages, Log);
 			}
 
-			foreach (var pkgId in packageVersions.Keys)
-				Log.LogMessage("Referenced AndroidX Package: {0} ({1})", pkgId, packageVersions[pkgId]);
+			foreach (var pair in androidxPackages)
+				Log.LogMessage("Referenced AndroidX Package: {0} ({1})", pair.Key, pair.Value);
 
 			/* 
 			 * In the future we may add some logic to detect if certain Android Support packages

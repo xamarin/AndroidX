@@ -35,13 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>..\..\..\..\..\..\Library\Frameworks\Mono.framework\Versions\5.12.0\lib\mono\4.5-api\System.Runtime.Serialization.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Web.Extensions">
-      <HintPath>..\..\..\..\..\..\Library\Frameworks\Mono.framework\Versions\5.12.0\lib\mono\4.5-api\System.Web.Extensions.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +53,7 @@
     <Folder Include="TestData\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\annotations\Annotation-BuildTasks.csproj">
+    <ProjectReference Include="..\annotation\Annotation-BuildTasks.csproj">
       <Project>{21CE9566-FE09-4FEA-BE0F-4864083CD9D1}</Project>
       <Name>Annotation-BuildTasks</Name>
     </ProjectReference>

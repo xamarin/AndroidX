@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Xunit;
 
-namespace Xamarin.Android.Support.BuildTasks.Tests
+namespace Xamarin.AndroidX.Annotation.BuildTasks.Tests
 {
 	public class Tests
 	{
@@ -17,9 +17,9 @@ namespace Xamarin.Android.Support.BuildTasks.Tests
 
 			var packageVersions = new Dictionary<string, string>();
 			NugetPackages.GatherProjectJsonVersions(
-				VerifyVersionsTask.PACKAGE_ID_PREFIX,
+				VerifyVersionsTask.AndroidXPackagePrefix,
 				path,
-				VerifyVersionsTask.ExcludedPackages,
+				VerifyVersionsTask.ExcludedAndroidXPackages,
 				new Version(8, 1),
 				packageVersions);
 
@@ -33,15 +33,15 @@ namespace Xamarin.Android.Support.BuildTasks.Tests
 
 			var packageVersions = new Dictionary<string, string>();
 			NugetPackages.GatherProjectJsonVersions(
-				VerifyVersionsTask.PACKAGE_ID_PREFIX,
+				VerifyVersionsTask.AndroidXPackagePrefix,
 				path,
-				VerifyVersionsTask.ExcludedPackages,
+				VerifyVersionsTask.ExcludedAndroidXPackages,
 				new Version(8, 1),
 				packageVersions);
 
 			Assert.NotEmpty(packageVersions);
 
-			var distinctVersions = NugetPackages.GetDistinctVersions(VerifyVersionsTask.PACKAGE_ID_PREFIX, VerifyVersionsTask.ExcludedPackages, packageVersions);
+			var distinctVersions = NugetPackages.GetDistinctVersions(VerifyVersionsTask.AndroidXPackagePrefix, VerifyVersionsTask.ExcludedAndroidXPackages, packageVersions);
 
 			Assert.True(distinctVersions > 1);
 		}
