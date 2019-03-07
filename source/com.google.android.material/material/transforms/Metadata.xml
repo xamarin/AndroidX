@@ -28,13 +28,10 @@
     multiple EventArgs properties
     ????
     -->
-    <remove-node path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/implements[@name='com.google.android.material.tabs.TabLayout.OnTabSelectedListener']"></remove-node>
-    <remove-node path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout']/interface[@name='TabLayout.OnTabSelectedListener']/implements[@name='com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener']"></remove-node>
     <attr path="//parameter[@type='V']" name="type">android.view.View</attr>
     <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderBehavior']" name="visibility">public</attr>
     <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='ViewOffsetBehavior']" name="visibility">public</attr>
     <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.BaseBehavior']" name="visibility">public</attr>
-    <remove-node path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']"></remove-node>
     <!--
     in Additions
     <add-node
@@ -76,6 +73,4 @@
     <!--    
     -->
     <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget</attr>
-    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
-    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
 </metadata>
