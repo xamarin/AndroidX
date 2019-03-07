@@ -20,10 +20,10 @@
 
   <PropertyGroup>
     <PackageId>@(Model.NuGetPackageId)</PackageId>
-    <Title>Xamarin AndroidX Library - @(Model.Name)</Title>
-    <Summary>Xamarin.AndroidX bindings for AndroidX Library - @(Model.Name)</Summary>
-    <Description>Xamarin.AndroidX bindings for AndroidX Library - @(Model.Name)</Description>
-    <PackageTags>Xamarin AndroidX Xamarin.AndroidX Library</PackageTags>
+    <Title>Xamarin AndroidX - @(Model.Name)</Title>
+    <Summary>Xamarin.Android bindings for AndroidX - @(Model.Name)</Summary>
+    <Description>Xamarin.Android bindings for AndroidX - @(Model.Name)</Description>
+    <PackageTags>Xamarin AndroidX Xamarin.AndroidX Support Google @(Model.Name)</PackageTags>
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
@@ -128,7 +128,7 @@
       }
     }
     <!-- some additional fixes -->
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition.Transition") 
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition") 
     {
         <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
     }
@@ -144,53 +144,19 @@
     }
   </ItemGroup>
 
-  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation.Annotation")
+  @if (1==2 && @Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
+    // Disabled as this build task doesn't really do anything anymore but we may use it again in the future
     <ItemGroup>
-      <None Include="..\..\source\buildtasks\support-annotations\bin\$(Configuration)\Xamarin.Android.Support.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+      <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
     </ItemGroup>
   }
 
-  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable.VectorDrawable")
+  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable")
   {
     <ItemGroup>
-      <None Include="..\..\source\buildtasks\support-vector-drawable\bin\$(Configuration)\Xamarin.Android.Support.Tasks.VectorDrawable.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+      <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
     </ItemGroup>
-  }
-
-  @if (@Model.NuGetPackageId == "Xamarin.Android.Support.v4") 
-  {
-    <Target Name="AndroidSupportLibrariesTypeForwardersGenerationWithGenAPI">
-      <Message Text="AndroidSupportLibrariesTypeForwardersGenerationWithGenAPI" ></Message>
-      <PropertyGroup>
-        <GenAPIPath>$(MSBuildProjectDirectory)/../../tools/microsoft.dotnet.buildtools.genapi.1.0.0-beta-00081/Microsoft.DotNet.BuildTools.GenAPI/tools/GenAPI.exe</GenAPIPath>
-      </PropertyGroup>
- 
-      <ItemGroup>
-        @foreach (var dep in @Model.NuGetDependencies) 
-        {
-            if (dep.IsProjectReference) 
-            {
-              <GenAPIItemBase 
-                Include="../../generated/@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)/"
-                >
-                <GenAPIAssembly>"$(IntermediateOutputPath)/@(dep.NuGetPackageId).dll"</GenAPIAssembly>
-                <GenAPICSCode>./Additions/@(dep.NuGetPackageId).cs</GenAPICSCode>
-              </GenAPIItemBase>
-            }
-        }
-      </ItemGroup>
-
-      <Message Text="    GenAPIItemBase  = %(GenAPIItemBase.Identity) %0A        %(GenAPIItemBase.GenAPICSCode) %0A        %(GenAPIItemBase.GenAPIAssembly)"></Message>
-      <!--
-      // For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
-      // GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
-      -->
-      <MakeDir Directories="./Additions" />         
-      <Exec
-        Command="mono $(GenAPIPath) -libPath:$(MONOANDROID) -out:%(GenAPIItemBase.GenAPICSCode) -w:TypeForwards %(GenAPIItemBase.Identity)/%(GenAPIItemBase.GenAPIAssembly) " 
-        />
-    </Target>
   }
 
   <ItemGroup>

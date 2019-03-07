@@ -3,9 +3,9 @@
 	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": 
 	[
-		"source/buildtasks/support-annotations/Support-Annotations-BuildTasks.csproj",
-		"source/buildtasks/support-annotations-tests/Support-Annotations-BuildTasks-Tests.csproj",
-		"source/buildtasks/support-vector-drawable/Support-Vector-Drawable-BuildTasks.csproj"
+		"source/buildtasks/annotation/Annotation-BuildTasks.csproj",
+		"source/buildtasks/annotation-tests/Annotation-BuildTasks-Tests.csproj",
+		"source/buildtasks/vectordrawable/VectorDrawable-BuildTasks.csproj"
 	],
 	"templates" : [
 		{

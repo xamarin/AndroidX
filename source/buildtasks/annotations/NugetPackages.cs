@@ -12,7 +12,7 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using Microsoft.Build.Utilities;
 
-namespace Xamarin.Android.Support.BuildTasks
+namespace Xamarin.AndroidX.Annotation.BuildTasks
 {
 	public static class NugetPackages
 	{
