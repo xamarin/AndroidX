@@ -6,7 +6,7 @@
     * 
   -->
   <PropertyGroup>
-    <VectorDrawableCheckBuildToolsVersionTaskFilename Condition=" '$(VectorDrawableCheckBuildToolsVersionTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.Android.Support.Tasks.VectorDrawable.dll</VectorDrawableCheckBuildToolsVersionTaskFilename>
+    <VectorDrawableCheckBuildToolsVersionTaskFilename Condition=" '$(VectorDrawableCheckBuildToolsVersionTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.AndroidX.VectorDrawable.BuildTasks.dll</VectorDrawableCheckBuildToolsVersionTaskFilename>
   </PropertyGroup>
 
   <!-- set some defaults -->
@@ -22,7 +22,7 @@
   <!-- include the task assembly -->
   <UsingTask 
       AssemblyFile="$(VectorDrawableCheckBuildToolsVersionTaskFilename)" 
-      TaskName="Xamarin.Android.Support.Tasks.VectorDrawableCheckBuildToolsVersionTask" />
+      TaskName="Xamarin.AndroidX.VectorDrawable.BuildTasks.VectorDrawableCheckBuildToolsVersionTask" />
 
   <!-- the build tasks -->
   <Target

@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <UsingTask 
-      AssemblyFile="Xamarin.Android.Support.BuildTasks.dll" 
-      TaskName="Xamarin.Android.Support.BuildTasks.VerifyVersionsTask" />
+  <!-- This task doesn't do anything really right now, but we might use it again in the future -->
+  <!-- <UsingTask 
+      AssemblyFile="Xamarin.AndroidX.Annotation.BuildTasks.dll" 
+      TaskName="Xamarin.AndroidX.Annotation.BuildTasks.VerifyVersionsTask" />
 
   <Target
-    Name="_VerifyXamarinAndroidSupportVersions"
+    Name="_VerifyXamarinAndroidXVersions"
     AfterTargets="ResolveAssemblyReferences">
 
     <VerifyVersionsTask
@@ -18,6 +19,6 @@
         >
     </VerifyVersionsTask>
 
-  </Target>
+  </Target> -->
     
 </Project>

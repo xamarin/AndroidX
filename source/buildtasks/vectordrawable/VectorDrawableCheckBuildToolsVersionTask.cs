@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Xamarin.Android.Support.Tasks
+namespace Xamarin.AndroidX.VectorDrawable.BuildTasks
 {
     public class VectorDrawableCheckBuildToolsVersionTask : Task
     {

@@ -1,0 +1,202 @@
+﻿@using System.Linq
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>MonoAndroid90</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+    @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
+    <AssemblyName>@(Model.AssemblyName)</AssemblyName>
+    } else {
+    <AssemblyName>@(Model.NuGetPackageId)</AssemblyName>
+    }
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <RootNamespace>@(Model.NuGetPackageId.Replace("Xamarin.", ""))</RootNamespace>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidEnableDesugar>true</AndroidEnableDesugar>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>@(Model.NuGetPackageId)</PackageId>
+    <Title>Xamarin AndroidX Library - @(Model.Name)</Title>
+    <Summary>Xamarin.AndroidX bindings for AndroidX Library - @(Model.Name)</Summary>
+    <Description>Xamarin.AndroidX bindings for AndroidX Library - @(Model.Name)</Description>
+    <PackageTags>Xamarin AndroidX Xamarin.AndroidX Library</PackageTags>
+    <Authors>Microsoft</Authors>
+    <Owners>Microsoft</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865352</PackageProjectUrl>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865381</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/@(Model.Name)_128x128.png</PackageIconUrl>
+    <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+      @foreach (var art in @Model.MavenArtifacts) {
+      <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
+      }
+  </ItemGroup>
+
+  @*<ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')" />
+    }   
+  </ItemGroup>*@
+
+    
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+    <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
+    }
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework)" />
+  </ItemGroup>
+
+  @if (@Model.MavenArtifacts.Count > 0) {
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.ProguardFile != null) {
+    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard\" />
+      }
+    }
+  </ItemGroup>
+  }
+
+  <ItemGroup>
+    <Folder Include="Additions\" />
+    <Folder Include="Jars\" />
+    <Folder Include="Transforms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\source\AssemblyInfo.cs" />
+    <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\additions\*.cs">
+        <Link>Additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <TransformFile Include="..\..\source\Metadata.common.xml" >
+      <Link>Transforms/Metadata.common.xml</Link>
+    </TransformFile>
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\transforms\*.xml">
+        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </TransformFile>
+  </ItemGroup>
+
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.MavenArtifactPackaging == "aar") {
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\" />
+      }
+    }   
+  </ItemGroup>
+
+
+  @if (@Model.MavenArtifacts.Count > 0) {
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.MavenArtifactPackaging == "aar") {
+    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
+    <!-- For those artifacts with lib/ folder -->
+    <InputJar 
+      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
+      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
+      />
+      } else {
+    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
+      }
+    }
+  </ItemGroup>
+  }
+
+  <ItemGroup>
+    <!-- ProjectReference -->
+    @foreach (var dep in @Model.NuGetDependencies) {
+      if (dep.IsProjectReference) {
+        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
+
+      }
+    }
+    <!-- some additional fixes -->
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition") 
+    {
+        <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
+    }
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <!-- PackageReference -->
+    @foreach (var dep in @Model.NuGetDependencies) {
+      if (!dep.IsProjectReference) {
+      <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+      }
+    }
+  </ItemGroup>
+
+  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
+  {
+    <ItemGroup>
+      <None Include="..\..\source\buildtasks\support-annotations\bin\$(Configuration)\Xamarin.Android.Support.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+    </ItemGroup>
+  }
+
+  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable")
+  {
+    <ItemGroup>
+      <None Include="..\..\source\buildtasks\support-vector-drawable\bin\$(Configuration)\Xamarin.Android.Support.Tasks.VectorDrawable.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+    </ItemGroup>
+  }
+
+  @if (@Model.NuGetPackageId == "Xamarin.Android.Support.v4") 
+  {
+    <Target Name="AndroidSupportLibrariesTypeForwardersGenerationWithGenAPI">
+      <Message Text="AndroidSupportLibrariesTypeForwardersGenerationWithGenAPI" ></Message>
+      <PropertyGroup>
+        <GenAPIPath>$(MSBuildProjectDirectory)/../../tools/microsoft.dotnet.buildtools.genapi.1.0.0-beta-00081/Microsoft.DotNet.BuildTools.GenAPI/tools/GenAPI.exe</GenAPIPath>
+      </PropertyGroup>
+ 
+      <ItemGroup>
+        @foreach (var dep in @Model.NuGetDependencies) 
+        {
+            if (dep.IsProjectReference) 
+            {
+              <GenAPIItemBase 
+                Include="../../generated/@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)/"
+                >
+                <GenAPIAssembly>"$(IntermediateOutputPath)/@(dep.NuGetPackageId).dll"</GenAPIAssembly>
+                <GenAPICSCode>./Additions/@(dep.NuGetPackageId).cs</GenAPICSCode>
+              </GenAPIItemBase>
+            }
+        }
+      </ItemGroup>
+
+      <Message Text="    GenAPIItemBase  = %(GenAPIItemBase.Identity) %0A        %(GenAPIItemBase.GenAPICSCode) %0A        %(GenAPIItemBase.GenAPIAssembly)"></Message>
+      <!--
+      // For some reason GenAPI.exe can't handle absolute paths on mac/unix properly, so always make them relative
+      // GenAPI.exe -libPath:$(MONOANDROID) -out:Some.generated.cs -w:TypeForwards ./relative/path/to/Assembly.dll
+      -->
+      <MakeDir Directories="./Additions" />         
+      <Exec
+        Command="mono $(GenAPIPath) -libPath:$(MONOANDROID) -out:%(GenAPIItemBase.GenAPICSCode) -w:TypeForwards %(GenAPIItemBase.Identity)/%(GenAPIItemBase.GenAPIAssembly) " 
+        />
+    </Target>
+  }
+
+  <ItemGroup>
+    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.4.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+  
+</Project>
