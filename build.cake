@@ -234,7 +234,7 @@ Task ("merge")
 	if (FileExists ("./output/AndroidX.Merged.dll"))
 		DeleteFile ("./output/AndroidX.Merged.dll");
 
-	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.AndroidX.*.dll");
+	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.*.dll");
 
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
