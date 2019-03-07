@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.dynamicanimation.animation']" 
-        name="managedName"
-        >
-        AndroidX.DynamicAnimation.Animation
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.dynamicanimation.animation']" name="managedName">AndroidX.DynamicAnimation.Animation</attr>
 </metadata>

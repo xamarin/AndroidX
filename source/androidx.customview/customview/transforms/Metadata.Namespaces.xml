@@ -7,18 +7,6 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.customview.view']" 
-        name="managedName"
-        >
-        AndroidX.CustomView.View
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.customview.widget']" 
-        name="managedName"
-        >
-        AndroidX.CustomView.Widget
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.customview.view']" name="managedName">AndroidX.CustomView.View</attr>
+    <attr path="/api/package[@name='androidx.customview.widget']" name="managedName">AndroidX.CustomView.Widget</attr>
 </metadata>

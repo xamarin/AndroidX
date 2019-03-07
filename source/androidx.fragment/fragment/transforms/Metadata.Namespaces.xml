@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.fragment.app']" 
-        name="managedName"
-        >
-        AndroidX.Fragment.App
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.fragment.app']" name="managedName">AndroidX.Fragment.App</attr>
 </metadata>

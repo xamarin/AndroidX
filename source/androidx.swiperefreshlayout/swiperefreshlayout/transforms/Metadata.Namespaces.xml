@@ -7,12 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.swiperefreshlayout.widget']" 
-        name="managedName"
-        >
-        AndroidX.SwipeRefreshLayout.Widget
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.swiperefreshlayout.widget']" name="managedName">AndroidX.SwipeRefreshLayout.Widget</attr>
 </metadata>

@@ -7,25 +7,7 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.slice']" 
-        name="managedName"
-        >
-        AndroidX.Slice
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.slice.compat']" 
-        name="managedName"
-        >
-        AndroidX.Slice.Compat
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.slice.core']" 
-        name="managedName"
-        >
-        AndroidX.Slice.Core
-    </attr>
-    
-    
-    
+    <attr path="/api/package[@name='androidx.slice']" name="managedName">AndroidX.Slice</attr>
+    <attr path="/api/package[@name='androidx.slice.compat']" name="managedName">AndroidX.Slice.Compat</attr>
+    <attr path="/api/package[@name='androidx.slice.core']" name="managedName">AndroidX.Slice.Core</attr>
 </metadata>

@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.legacy.content']" 
-        name="managedName"
-        >
-        AndroidX.Legacy.Content
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.legacy.content']" name="managedName">AndroidX.Legacy.Content</attr>
 </metadata>

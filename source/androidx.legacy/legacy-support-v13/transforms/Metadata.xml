@@ -1,47 +1,12 @@
-<metadata>
-
-  <remove-node path="/api/*/class[substring(@name, string-length(@name) - 3) = 'Impl']" />
-  <remove-node path="/api/*/class[substring(@name, string-length(@name) - 7) = 'ImplBase']" />
-  <remove-node path="/api/*/interface[substring(@name, string-length(@name) - 3) = 'Impl']" />
-  <remove-node path="/api/*/interface[substring(@name, string-length(@name) - 7) = 'ImplBase']" />
-
-  <remove-node path="/api/package[@name='androidx.legacy.view']/class[@name='ViewCompat']" />
-    
-    
-    <attr
-        path="/api/package[@name='androidx.legacy.app']/interface[@name='FragmentCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[1]"
-        name="managedName"
-        >
-        requestCode
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.legacy.app']/interface[@name='FragmentCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[2]"
-        name="managedName"
-        >
-        permissions
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.legacy.app']/interface[@name='FragmentCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[3]"
-        name="managedName"
-        >
-        grantResults
-    </attr>
-    
-
-    <attr
-        path="/api/package[@name='androidx.legacy.app']/class[@name='FragmentPagerAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        position
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.legacy.app']/class[@name='FragmentStatePagerAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        position
-    </attr>
-    
+﻿<metadata>
+    <remove-node path="/api/*/class[substring(@name, string-length(@name) - 3) = 'Impl']" />
+    <remove-node path="/api/*/class[substring(@name, string-length(@name) - 7) = 'ImplBase']" />
+    <remove-node path="/api/*/interface[substring(@name, string-length(@name) - 3) = 'Impl']" />
+    <remove-node path="/api/*/interface[substring(@name, string-length(@name) - 7) = 'ImplBase']" />
+    <remove-node path="/api/package[@name='androidx.legacy.view']/class[@name='ViewCompat']" />
+    <attr path="/api/package[@name='androidx.legacy.app']/interface[@name='FragmentCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[1]" name="managedName">requestCode</attr>
+    <attr path="/api/package[@name='androidx.legacy.app']/interface[@name='FragmentCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[2]" name="managedName">permissions</attr>
+    <attr path="/api/package[@name='androidx.legacy.app']/interface[@name='FragmentCompat.OnRequestPermissionsResultCallback']/method[@name='onRequestPermissionsResult' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='java.lang.String[]'] and parameter[3][@type='int[]']]/parameter[3]" name="managedName">grantResults</attr>
+    <attr path="/api/package[@name='androidx.legacy.app']/class[@name='FragmentPagerAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.legacy.app']/class[@name='FragmentStatePagerAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">position</attr>
 </metadata>

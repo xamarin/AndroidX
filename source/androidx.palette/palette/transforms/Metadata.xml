@@ -1,26 +1,5 @@
 ﻿<metadata>
-
-    <attr
-        path="/api/package[@name='androidx.palette.graphics']/interface[@name='Palette.Filter']/method[@name='isAllowed' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='float[]']]/parameter[1]"    
-        name="managedName"
-        >
-        rgb
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.palette.graphics']/interface[@name='Palette.Filter']/method[@name='isAllowed' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='float[]']]/parameter[2]"    
-        name="managedName"
-        >
-        hsl
-    </attr>
-
-    
-    <attr
-        path="/api/package[@name='androidx.palette.graphics']/interface[@name='Palette.PaletteAsyncListener']/method[@name='onGenerated' and count(parameter)=1 and parameter[1][@type='7.graphics.Palette']]/parameter[1]"    
-        name="managedName"
-        >
-        palette
-    </attr>
-    
-    
-    
+    <attr path="/api/package[@name='androidx.palette.graphics']/interface[@name='Palette.Filter']/method[@name='isAllowed' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='float[]']]/parameter[1]" name="managedName">rgb</attr>
+    <attr path="/api/package[@name='androidx.palette.graphics']/interface[@name='Palette.Filter']/method[@name='isAllowed' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='float[]']]/parameter[2]" name="managedName">hsl</attr>
+    <attr path="/api/package[@name='androidx.palette.graphics']/interface[@name='Palette.PaletteAsyncListener']/method[@name='onGenerated' and count(parameter)=1 and parameter[1][@type='androidx.palette.graphics.Palette']]/parameter[1]" name="managedName">palette</attr>
 </metadata>

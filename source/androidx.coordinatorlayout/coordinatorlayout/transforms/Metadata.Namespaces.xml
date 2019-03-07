@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.coordinatorlayout.widget']" 
-        name="managedName"
-        >
-        AndroidX.CoordinatorLayout.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']" name="managedName">AndroidX.CoordinatorLayout.Widget</attr>
 </metadata>

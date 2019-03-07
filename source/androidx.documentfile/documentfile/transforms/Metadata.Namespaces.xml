@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.documentfile.provider']" 
-        name="managedName"
-        >
-        AndroidX.DocumentFile.Provider
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.documentfile.provider']" name="managedName">AndroidX.DocumentFile.Provider</attr>
 </metadata>

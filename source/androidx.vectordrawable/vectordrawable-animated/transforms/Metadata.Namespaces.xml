@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.vectordrawable.graphics.drawable']" 
-        name="managedName"
-        >
-        AndroidX.VectorDrawable.Graphics.Drawable
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.vectordrawable.graphics.drawable']" name="managedName">AndroidX.VectorDrawable.Graphics.Drawable</attr>
 </metadata>

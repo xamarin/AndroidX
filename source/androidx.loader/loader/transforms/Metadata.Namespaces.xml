@@ -7,18 +7,6 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.loader.app']" 
-        name="managedName"
-        >
-        AndroidX.Loader.App
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.loader.content']" 
-        name="managedName"
-        >
-        AndroidX.Loader.Content
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.loader.app']" name="managedName">AndroidX.Loader.App</attr>
+    <attr path="/api/package[@name='androidx.loader.content']" name="managedName">AndroidX.Loader.Content</attr>
 </metadata>

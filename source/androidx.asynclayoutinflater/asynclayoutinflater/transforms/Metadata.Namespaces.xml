@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.asynclayoutinflater.view']" 
-        name="managedName"
-        >
-        AndroidX.AsyncLayoutInflater.View
-    </attr>
-        
+    <attr path="/api/package[@name='androidx.asynclayoutinflater.view']" name="managedName">AndroidX.AsyncLayoutInflater.View</attr>
 </metadata>

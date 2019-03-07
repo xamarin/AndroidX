@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.palette.graphics']" 
-        name="managedName"
-        >
-        AndroidX.Palette.Graphics
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.palette.graphics']" name="managedName">AndroidX.Palette.Graphics</attr>
 </metadata>

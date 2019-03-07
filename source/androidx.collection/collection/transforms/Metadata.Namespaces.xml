@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.collection']" 
-        name="managedName"
-        >
-        AndroidX.Collection
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.collection']" name="managedName">AndroidX.Collection</attr>
 </metadata>

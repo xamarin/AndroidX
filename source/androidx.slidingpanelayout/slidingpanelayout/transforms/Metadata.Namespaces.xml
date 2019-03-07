@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.slidingpanelayout.widget']" 
-        name="managedName"
-        >
-        AndroidX.SlidingPaneLayout.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.slidingpanelayout.widget']" name="managedName">AndroidX.SlidingPaneLayout.Widget</attr>
 </metadata>

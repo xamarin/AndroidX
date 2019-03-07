@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.transition']" 
-        name="managedName"
-        >
-        AndroidX.Transition
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.transition']" name="managedName">AndroidX.Transition</attr>
 </metadata>

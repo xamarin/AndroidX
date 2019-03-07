@@ -7,47 +7,11 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.appcompat.app']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.App
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.content.res']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.Content.Res
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.graphics.drawable']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.Graphics.Drawable
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.text']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.Text
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.view']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.View
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.view.menu']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.View.Menu
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.widget']" 
-        name="managedName"
-        >
-        AndroidX.AppCompat.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.appcompat.app']" name="managedName">AndroidX.AppCompat.App</attr>
+    <attr path="/api/package[@name='androidx.appcompat.content.res']" name="managedName">AndroidX.AppCompat.Content.Res</attr>
+    <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']" name="managedName">AndroidX.AppCompat.Graphics.Drawable</attr>
+    <attr path="/api/package[@name='androidx.appcompat.text']" name="managedName">AndroidX.AppCompat.Text</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']" name="managedName">AndroidX.AppCompat.View</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view.menu']" name="managedName">AndroidX.AppCompat.View.Menu</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']" name="managedName">AndroidX.AppCompat.Widget</attr>
 </metadata>

@@ -7,18 +7,6 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.mediarouter.app']" 
-        name="managedName"
-        >
-        AndroidX.MediaRouter.App
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.mediarouter.media']" 
-        name="managedName"
-        >
-        AndroidX.MediaRouter.Media
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.mediarouter.app']" name="managedName">AndroidX.MediaRouter.App</attr>
+    <attr path="/api/package[@name='androidx.mediarouter.media']" name="managedName">AndroidX.MediaRouter.Media</attr>
 </metadata>

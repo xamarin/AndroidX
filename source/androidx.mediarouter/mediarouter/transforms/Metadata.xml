@@ -1,55 +1,14 @@
 ﻿<metadata>
-	<!--
-  This sample removes the class: 4.content.AsyncTaskLoader.LoadTask:
-  <remove-node path="/api/package[@name='androidx.loader.content']/class[@name='AsyncTaskLoader.LoadTask']" />
-  
-  This sample removes the method: 4.content.CursorLoader.loadInBackground:
-  <remove-node path="/api/package[@name='androidx.loader.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
-  -->
-
-	<attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='RemoteControlClientCompat']" name="visibility">public</attr>
-	<attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='RegisteredMediaRouteProviderWatcher']" name="visibility">public</attr>
-	<attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='SystemMediaRouteProvider']" name="visibility">public</attr>
-	
-	<attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteChooserDialog.RouteComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.mediarouter.media.RouteInfo'] and parameter[2][@type='androidx.mediarouter.media.RouteInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-	<attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteChooserDialog.RouteComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.mediarouter.media.RouteInfo'] and parameter[2][@type='androidx.mediarouter.media.RouteInfo']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-	
-	<remove-node path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']" />
-	
-	<!--<attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="visibility">protected override</attr>
+    <attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='RemoteControlClientCompat']" name="visibility">public</attr>
+    <attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='RegisteredMediaRouteProviderWatcher']" name="visibility">public</attr>
+    <attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='SystemMediaRouteProvider']" name="visibility">public</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteChooserDialog.RouteComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.mediarouter.media.RouteInfo'] and parameter[2][@type='androidx.mediarouter.media.RouteInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteChooserDialog.RouteComparator']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.mediarouter.media.RouteInfo'] and parameter[2][@type='androidx.mediarouter.media.RouteInfo']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <remove-node path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']" />
+    <!--<attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="visibility">protected override</attr>
 	<attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]" name="managedReturn">Java.Lang.Object</attr>
 	<attr path="/api/package[@name='androidx.appcompat.app']/class[@name='MediaRouteControllerDialog.FetchArtTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]" name="managedType">params Java.Lang.Object[]</attr>-->
-
-    <attr 
-        path="/api/package[@name='androidx.mediarouter.media']/class[@name='SystemMediaRouteProvider']"
-        name="visibility"
-        >
-        public
-    </attr>
+    <attr path="/api/package[@name='androidx.mediarouter.media']/class[@name='SystemMediaRouteProvider']" name="visibility">public</attr>
     <remove-node path="/api/package[@name='androidx.mediarouter.media']/class[@name='SystemMediaRouteProvider.JellybeanImpl']" />
     <remove-node path="/api/package[@name='androidx.mediarouter.media']/class[@name='RemoteControlClientCompat.JellybeanImpl']" />
-
-    
-    <!--
-    mc++ AndroidX
-    -->
-    <attr 
-        path="/api/package[@name='androidx.mediarouter']" 
-        name="managedName"
-        >
-        AndroidX.MediaRouter
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.mediarouter.media']" 
-        name="managedName"
-        >
-        AndroidX.MediaRouter.Media
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.mediarouter.app']" 
-        name="managedName"
-        >
-        AndroidX.MediaRouter.App
-    </attr>
-
 </metadata>

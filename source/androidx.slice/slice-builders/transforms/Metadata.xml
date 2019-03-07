@@ -1,8 +1,6 @@
-<metadata>
+﻿<metadata>
     <attr path="/api/package[@name='androidx.slice.builders']" name="managedName">AndroidX.Slice.Builders</attr>
-
     <remove-node path="/api/package[@name='androidx.slice.builders.impl']" />
-
     <attr path="/api/package[@name='androidx.slice.builders']/class[@name='SliceAction']/method[@name='setChecked' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">AndroidX.Slice.Core.ISliceAction</attr>
     <attr path="/api/package[@name='androidx.slice.builders']/class[@name='SliceAction']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" name="managedReturn">AndroidX.Slice.Core.ISliceAction</attr>
     <attr path="/api/package[@name='androidx.slice.builders']/class[@name='SliceAction']/method[@name='setPriority' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">AndroidX.Slice.Core.ISliceAction</attr>

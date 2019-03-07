@@ -7,12 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.cardview.widget']" 
-        name="managedName"
-        >
-        AndroidX.CardView.Widget
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.cardview.widget']" name="managedName">AndroidX.CardView.Widget</attr>
 </metadata>

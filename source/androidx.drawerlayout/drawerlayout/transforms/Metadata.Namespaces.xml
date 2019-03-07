@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.drawerlayout.widget']" 
-        name="managedName"
-        >
-        AndroidX.DrawerLayout.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.drawerlayout.widget']" name="managedName">AndroidX.DrawerLayout.Widget</attr>
 </metadata>

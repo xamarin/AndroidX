@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.localbroadcastmanager.content']" 
-        name="managedName"
-        >
-        AndroidX.LocalBroadcastManager.Content
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.localbroadcastmanager.content']" name="managedName">AndroidX.LocalBroadcastManager.Content</attr>
 </metadata>

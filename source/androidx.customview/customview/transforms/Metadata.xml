@@ -1,17 +1,4 @@
-<metadata>
-
-    <attr 
-        path="/api/package[@name='androidx.customview.widget']/class[@name='ViewDragHelper.Callback']/method[@name='tryCaptureView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[1]"    
-        name="managedName"
-        >
-        child
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.customview.widget']/class[@name='ViewDragHelper.Callback']/method[@name='tryCaptureView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[2]"    
-        name="managedName"
-        >
-        pointerId
-    </attr>
-    
-    
+﻿<metadata>
+    <attr path="/api/package[@name='androidx.customview.widget']/class[@name='ViewDragHelper.Callback']/method[@name='tryCaptureView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[1]" name="managedName">child</attr>
+    <attr path="/api/package[@name='androidx.customview.widget']/class[@name='ViewDragHelper.Callback']/method[@name='tryCaptureView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='int']]/parameter[2]" name="managedName">pointerId</attr>
 </metadata>

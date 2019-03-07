@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.tvprovider.media.tv']" 
-        name="managedName"
-        >
-        AndroidX.TvProvider.Media.Tv
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.tvprovider.media.tv']" name="managedName">AndroidX.TvProvider.Media.Tv</attr>
 </metadata>

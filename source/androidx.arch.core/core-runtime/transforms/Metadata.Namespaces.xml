@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.arch.core.executor']" 
-        name="managedName"
-        >
-        AndroidX.Arch.Core.Executor
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.arch.core.executor']" name="managedName">AndroidX.Arch.Core.Executor</attr>
 </metadata>

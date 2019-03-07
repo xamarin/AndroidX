@@ -1,78 +1,44 @@
 ﻿<metadata>
-
-    <attr path="/api/package[@name='androidx.appcompat']" name="managedName">AndroidX.AppCompat.AppCompat</attr>
-    <attr path="/api/package[@name='androidx.appcompat.view']" name="managedName">AndroidX.AppCompat.View</attr>
-    <attr path="/api/package[@name='androidx.appcompat.view.menu']" name="managedName">AndroidX.AppCompat.View.Menu</attr>
-    <attr path="/api/package[@name='androidx.appcompat.widget']" name="managedName">AndroidX.AppCompat.Widget</attr>
-    <attr path="/api/package[@name='androidx.appcompat.text']" name="managedName">AndroidX.AppCompat.Text</attr>
-    <attr path="/api/package[@name='androidx.appcompat.app']" name="managedName">AndroidX.AppCompat.App</attr>
-    <attr path="/api/package[@name='androidx.appcompat.content.res']" name="managedName">AndroidX.AppCompat.Content.Res</attr>
-    <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']" name="managedName">AndroidX.AppCompat.Text</attr>
-    
-    
-    
-    
-    
-    
-    
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionMenuPresenter']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='DropDownListView']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/interface[@name='MenuHelper']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopup']" name="visibility">public</attr>
-
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='SubMenuBuilder']/method[@name='getActionViewStatesKey' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionBarContainer']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]" name="visibility">protected</attr>
-
     <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuItemWrapperICS']" />
-
     <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='AppCompatDrawableManager.InflateDelegate']" name="visibility">internal</attr>
-
-
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='ListMenuPresenter.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='Menu.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
-
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" name="propertyName">Visibility</attr>
-
     <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getConstantState' and count(parameter)=0]" name="propertyName"></attr>
-
     <attr path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='getTitle']" name="propertyName"></attr>
-
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.PersistHistoryAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Object...']]" name="visibility">protected override</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.PersistHistoryAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Object...']]" name="managedReturn">Java.Lang.Object</attr>
-    
     <!-- Manually implement -->
     <remove-node path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='getTitle' and count(parameter)=0]" />
     <remove-node path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" />
     <remove-node path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='getSubtitle' and count(parameter)=0]" />
     <remove-node path="/api/package[@name='androidx.appcompat.view']/class[@name='SupportActionModeWrapper']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" />
-
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionBarContainer']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='AppCompatSpinner']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.SpinnerAdapter']]" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='ListViewCompat']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='ScrollingTabContainerView.TabView']/method[@name='setSelected' and count(parameter)=1 and parameter[1][@type='boolean']]" />
-
-
-
     <!-- Fix covariant return types -->
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='ActionMenuItem']/method[@name='setActionView' and count(parameter)=1 and parameter[1][@type='android.view.View']]" name="managedReturn">Android.Views.IMenuItem</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='ActionMenuItem']/method[@name='setActionView' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Android.Views.IMenuItem</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='ActionMenuItem']/method[@name='setShowAsActionFlags' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Android.Views.IMenuItem</attr>
-
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuItemImpl']/method[@name='setActionView' and count(parameter)=1 and parameter[1][@type='android.view.View']]" name="managedReturn">Android.Views.IMenuItem</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuItemImpl']/method[@name='setActionView' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Android.Views.IMenuItem</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuItemImpl']/method[@name='setShowAsActionFlags' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Android.Views.IMenuItem</attr>
-
-
-    <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='7.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-
+    <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActivityChooserModel.OnChooseActivityListener']" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActivityChooserModel.ActivitySorter']" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActivityChooserModel.ActivityChooserModelClient']" />
-  <!--
+    <!--
 
 
 
@@ -131,885 +97,119 @@
   <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='SubMenuBuilder']" />
 
   <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']/field[@name='mActionMenuPresenter']" />-->
-
-
-  <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='MenuPopupWindow.MenuDropDownListView']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" ></remove-node> 
-
-  <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" />
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']"
-        name="visibility"
-        >
-        protected
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']/method[@name='getConstantState' and count(parameter)=0]"
-        name="propertyName"
-        >        
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getConstantState' and count(parameter)=0]"
-        name="propertyName"
-        >        
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        isVisible
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
-        name="managedName"
-        >
-        itemPosition
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
-        name="managedName"
-        >
-        itemId
-    </attr>
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabReselected' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='4.app.FragmentTransaction']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabReselected' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='4.app.FragmentTransaction']]/parameter[2]"
-        name="managedName"
-        >
-        ft
-    </attr>
-
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabSelected' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='4.app.FragmentTransaction']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabSelected' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='4.app.FragmentTransaction']]/parameter[2]"
-        name="managedName"
-        >
-        ft
-    </attr>
-
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabUnselected' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='4.app.FragmentTransaction']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabUnselected' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='4.app.FragmentTransaction']]/parameter[2]"
-        name="managedName"
-        >
-        ft
-    </attr>
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActionMenuView.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
-        name="managedName"
-        >
-        item
-    </attr>
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='PopupMenu.OnDismissListener']/method[@name='onDismiss' and count(parameter)=1 and parameter[1][@type='7.widget.PopupMenu']]/parameter[1]"    
-        name="managedName"
-        >
-        menu
-    </attr>
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='PopupMenu.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
-        name="managedName"
-        >
-        item
-    </attr>
-
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnQueryTextListener']/method[@name='onQueryTextChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"    
-        name="managedName"
-        >
-        newText
-    </attr>
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnQueryTextListener']/method[@name='onQueryTextSubmit' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"   
-        name="managedName"
-        >
-        newText
-    </attr>
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnSuggestionListener']/method[@name='onSuggestionClick' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        position
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnSuggestionListener']/method[@name='onSuggestionSelect' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        position
-    </attr>
-
-
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ShareActionProvider.OnShareTargetSelectedListener']/method[@name='onShareTargetSelected' and count(parameter)=2 and parameter[1][@type='7.widget.ShareActionProvider'] and parameter[2][@type='android.content.Intent']]/parameter[1]"
-        name="managedName"
-        >
-        source
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ShareActionProvider.OnShareTargetSelectedListener']/method[@name='onShareTargetSelected' and count(parameter)=2 and parameter[1][@type='7.widget.ShareActionProvider'] and parameter[2][@type='android.content.Intent']]/parameter[2]"
-        name="managedName"
-        >
-        intent
-    </attr>
-    
-
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/interface[@name='Toolbar.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"    
-        name="managedName"
-        >
-        item
-    </attr>
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        isVisible
-    </attr>
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]"
-        name="managedName"
-        >
-        itemPosition
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[2]"
-        name="managedName"
-        >
-        itemId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addOnMenuVisibilityListener' and count(parameter)=1 and parameter[1][@type='7.app.ActionBar.OnMenuVisibilityListener']]/parameter[1]"
-        name="managedName"
-        >
-        listener
-    </attr>
-
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=1 and parameter[1][@type='7.app.ActionBar.Tab']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='boolean']]/parameter[2]"
-        name="managedName"
-        >
-        setSelected
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='int']]/parameter[2]"
-        name="managedName"
-        >
-        position
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[2]"
-        name="managedName"
-        >
-        position
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='7.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[3]"
-        name="managedName"
-        >
-        setSelected
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='getTabAt' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        index
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='removeOnMenuVisibilityListener' and count(parameter)=1 and parameter[1][@type='7.app.ActionBar.OnMenuVisibilityListener']]/parameter[1]"
-        name="managedName"
-        >
-        listener
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='removeTab' and count(parameter)=1 and parameter[1][@type='7.app.ActionBar.Tab']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='removeTabAt' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        position
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='selectTab' and count(parameter)=1 and parameter[1][@type='7.app.ActionBar.Tab']]/parameter[1]"
-        name="managedName"
-        >
-        tab
-    </attr>
-  
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setBackgroundDrawable' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
-        name="managedName"
-        >
-        d
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='7.app.ActionBar.LayoutParams']]/parameter[1]"
-        name="managedName"
-        >
-        view
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='7.app.ActionBar.LayoutParams']]/parameter[2]"
-        name="managedName"
-        >
-        layoutParams
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayHomeAsUpEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        showHomeAsUp
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayOptions' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        options
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayOptions' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
-        name="managedName"
-        >
-        mask
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayShowCustomEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        showCustom
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayShowHomeEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        showHome
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayShowTitleEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        showTitle
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayUseLogoEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
-        name="managedName"
-        >
-        useLogo
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
-        name="managedName"
-        >
-        icon
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setListNavigationCallbacks' and count(parameter)=2 and parameter[1][@type='android.widget.SpinnerAdapter'] and parameter[2][@type='7.app.ActionBar.OnNavigationListener']]/parameter[1]"
-        name="managedName"
-        >
-        adapter
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setListNavigationCallbacks' and count(parameter)=2 and parameter[1][@type='android.widget.SpinnerAdapter'] and parameter[2][@type='7.app.ActionBar.OnNavigationListener']]/parameter[2]"
-        name="managedName"
-        >
-        callback
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setLogo' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
-        name="managedName"
-        >
-        logo
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setLogo' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setSelectedNavigationItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        position
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
-        name="managedName"
-        >
-        contentDesc
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
-        name="managedName"
-        >
-        contentDesc
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
-        name="managedName"
-        >
-        view
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        layoutResId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]"
-        name="managedName"
-        >
-        icon
-    </attr>
-    
-    
-  
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setTabListener' and count(parameter)=1 and parameter[1][@type='7.app.ActionBar.TabListener']]/parameter[1]"
-        name="managedName"
-        >
-        listener
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setTag' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]"
-        name="managedName"
-        >
-        obj
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setText' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setText' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
-        name="managedName"
-        >
-        text
-    </attr>
-    
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarDescription' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        contentDescRes
-    </attr>        
-
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        upDrawable
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[2]"
-        name="managedName"
-        >
-        contentDescRes
-    </attr>        
-       
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='addContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[1]"
-        name="managedName"
-        >
-        v
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='addContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[2]"
-        name="managedName"
-        >
-        lp
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[1]"
-        name="managedName"
-        >
-        parent
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[2]"
-        name="managedName"
-        >
-        name
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[3]"
-        name="managedName"
-        >
-        context
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[4]"
-        name="managedName"
-        >
-        attrs
-    </attr>        
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='findViewById' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        id
-    </attr>        
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='hasWindowFeature' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        featureId
-    </attr>        
-    
-
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onConfigurationChanged' and count(parameter)=1 and parameter[1][@type='android.content.res.Configuration']]/parameter[1]"
-        name="managedName"
-        >
-        newConfig
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
-        name="managedName"
-        >
-        savedInstanceState
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onPostCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
-        name="managedName"
-        >
-        savedInstanceState
-    </attr>        
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]"
-        name="managedName"
-        >
-        outState
-    </attr>        
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='requestWindowFeature' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        featureId
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]"
-        name="managedName"
-        >
-        v
-    </attr>        
-    
-    
-
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>        
-
-    
-    
-     <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[1]"
-        name="managedName"
-        >
-        v
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[2]"
-        name="managedName"
-        >
-        lp        
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setSupportActionBar' and count(parameter)=1 and parameter[1][@type='7.widget.Toolbar']]/parameter[1]"
-        name="managedName"
-        >
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setLocalNightMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        mode
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setSupportActionBar' and count(parameter)=1 and parameter[1][@type='7.widget.Toolbar']]/parameter[1]"
-        name="managedName"
-        >
-        toolbar
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]"
-        name="managedName"
-        >
-        title
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='startSupportActionMode' and count(parameter)=1 and parameter[1][@type='7.view.ActionMode.Callback']]/parameter[1]"
-        name="managedName"
-        >
-        callback
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='AppCompatCallback']/method[@name='onSupportActionModeFinished' and count(parameter)=1 and parameter[1][@type='7.view.ActionMode']]/parameter[1]"
-        name="managedName"
-        >
-        mode
-    </attr>        
-    
-        
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='AppCompatCallback']/method[@name='onSupportActionModeStarted' and count(parameter)=1 and parameter[1][@type='7.view.ActionMode']]/parameter[1]"
-        name="managedName"
-        >
-        mode
-    </attr>        
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.app']/interface[@name='AppCompatCallback']/method[@name='onWindowStartingSupportActionMode' and count(parameter)=1 and parameter[1][@type='7.view.ActionMode.Callback']]/parameter[1]"
-        name="managedName"
-        >
-        callback
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/class[@name='ActionMode']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>        
-    
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/class[@name='ActionMode']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        resId
-    </attr>        
-    
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onActionItemClicked' and count(parameter)=2 and parameter[1][@type='7.view.ActionMode'] and parameter[2][@type='android.view.MenuItem']]/parameter[1]"
-        name="managedName"
-        >
-        mode 
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onActionItemClicked' and count(parameter)=2 and parameter[1][@type='7.view.ActionMode'] and parameter[2][@type='android.view.MenuItem']]/parameter[2]"
-        name="managedName"
-        >
-        item
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onCreateActionMode' and count(parameter)=2 and parameter[1][@type='7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[1]"
-        name="managedName"
-        >
-        mode
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onCreateActionMode' and count(parameter)=2 and parameter[1][@type='7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[2]"
-        name="managedName"
-        >
-        menu
-    </attr>        
-
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onDestroyActionMode' and count(parameter)=1 and parameter[1][@type='7.view.ActionMode']]/parameter[1]"
-        name="managedName"
-        >
-        mode
-    </attr>        
-    
-    
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onPrepareActionMode' and count(parameter)=2 and parameter[1][@type='7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[1]"
-        name="managedName"
-        >
-        mode 
-    </attr>        
-    <attr
-        path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onPrepareActionMode' and count(parameter)=2 and parameter[1][@type='7.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[2]"
-        name="managedName"
-        >
-        menu
-    </attr>        
-    
-    
-    
-    
+    <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='MenuPopupWindow.MenuDropDownListView']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"></remove-node>
+    <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" />
+    <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']/method[@name='getConstantState' and count(parameter)=0]" name="propertyName"></attr>
+    <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getConstantState' and count(parameter)=0]" name="propertyName"></attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">isVisible</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]" name="managedName">itemPosition</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]" name="managedName">itemId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabReselected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='androidx.core.app.FragmentTransaction']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabReselected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='androidx.core.app.FragmentTransaction']]/parameter[2]" name="managedName">ft</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabSelected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='androidx.core.app.FragmentTransaction']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabSelected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='androidx.core.app.FragmentTransaction']]/parameter[2]" name="managedName">ft</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabUnselected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='androidx.core.app.FragmentTransaction']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.TabListener']/method[@name='onTabUnselected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='androidx.core.app.FragmentTransaction']]/parameter[2]" name="managedName">ft</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActionMenuView.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]" name="managedName">item</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='PopupMenu.OnDismissListener']/method[@name='onDismiss' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.PopupMenu']]/parameter[1]" name="managedName">menu</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='PopupMenu.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]" name="managedName">item</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnQueryTextListener']/method[@name='onQueryTextChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]" name="managedName">newText</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnQueryTextListener']/method[@name='onQueryTextSubmit' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]" name="managedName">newText</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnSuggestionListener']/method[@name='onSuggestionClick' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='SearchView.OnSuggestionListener']/method[@name='onSuggestionSelect' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ShareActionProvider.OnShareTargetSelectedListener']/method[@name='onShareTargetSelected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.widget.ShareActionProvider'] and parameter[2][@type='android.content.Intent']]/parameter[1]" name="managedName">source</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ShareActionProvider.OnShareTargetSelectedListener']/method[@name='onShareTargetSelected' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.widget.ShareActionProvider'] and parameter[2][@type='android.content.Intent']]/parameter[2]" name="managedName">intent</attr>
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='Toolbar.OnMenuItemClickListener']/method[@name='onMenuItemClick' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]" name="managedName">item</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnMenuVisibilityListener']/method[@name='onMenuVisibilityChanged' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">isVisible</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[1]" name="managedName">itemPosition</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBar.OnNavigationListener']/method[@name='onNavigationItemSelected' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]/parameter[2]" name="managedName">itemId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addOnMenuVisibilityListener' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.app.ActionBar.OnMenuVisibilityListener']]/parameter[1]" name="managedName">listener</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='boolean']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='boolean']]/parameter[2]" name="managedName">setSelected</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='int']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='int']]/parameter[2]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[2]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='addTab' and count(parameter)=3 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[3]" name="managedName">setSelected</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='getTabAt' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">index</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='removeOnMenuVisibilityListener' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.app.ActionBar.OnMenuVisibilityListener']]/parameter[1]" name="managedName">listener</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='removeTab' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='removeTabAt' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='selectTab' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.app.ActionBar.Tab']]/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setBackgroundDrawable' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]" name="managedName">d</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='androidx.appcompat.app.ActionBar.LayoutParams']]/parameter[1]" name="managedName">view</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='androidx.appcompat.app.ActionBar.LayoutParams']]/parameter[2]" name="managedName">layoutParams</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayHomeAsUpEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">showHomeAsUp</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayOptions' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]" name="managedName">options</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayOptions' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]" name="managedName">mask</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayShowCustomEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">showCustom</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayShowHomeEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">showHome</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayShowTitleEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">showTitle</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setDisplayUseLogoEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">useLogo</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]" name="managedName">icon</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setListNavigationCallbacks' and count(parameter)=2 and parameter[1][@type='android.widget.SpinnerAdapter'] and parameter[2][@type='androidx.appcompat.app.ActionBar.OnNavigationListener']]/parameter[1]" name="managedName">adapter</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setListNavigationCallbacks' and count(parameter)=2 and parameter[1][@type='android.widget.SpinnerAdapter'] and parameter[2][@type='androidx.appcompat.app.ActionBar.OnNavigationListener']]/parameter[2]" name="managedName">callback</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setLogo' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]" name="managedName">logo</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setLogo' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setSelectedNavigationItem' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">position</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]" name="managedName">contentDesc</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setContentDescription' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]" name="managedName">contentDesc</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedName">view</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setCustomView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">layoutResId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]" name="managedName">icon</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setIcon' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setTabListener' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.app.ActionBar.TabListener']]/parameter[1]" name="managedName">listener</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setTag' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]" name="managedName">obj</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setText' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='ActionBar.Tab']/method[@name='setText' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]" name="managedName">text</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarDescription' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">contentDescRes</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[1]" name="managedName">upDrawable</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[2]" name="managedName">contentDescRes</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='addContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[1]" name="managedName">v</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='addContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[2]" name="managedName">lp</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[2]" name="managedName">name</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[3]" name="managedName">context</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='createView' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='android.content.Context'] and parameter[4][@type='android.util.AttributeSet']]/parameter[4]" name="managedName">attrs</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='findViewById' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">id</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='hasWindowFeature' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">featureId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onConfigurationChanged' and count(parameter)=1 and parameter[1][@type='android.content.res.Configuration']]/parameter[1]" name="managedName">newConfig</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]" name="managedName">savedInstanceState</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onPostCreate' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]" name="managedName">savedInstanceState</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='onSaveInstanceState' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]/parameter[1]" name="managedName">outState</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='requestWindowFeature' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">featureId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedName">v</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[1]" name="managedName">v</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setContentView' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.ViewGroup.LayoutParams']]/parameter[2]" name="managedName">lp</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setSupportActionBar' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.Toolbar']]/parameter[1]" name="managedName"></attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setLocalNightMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setSupportActionBar' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.Toolbar']]/parameter[1]" name="managedName">toolbar</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]/parameter[1]" name="managedName">title</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/class[@name='AppCompatDelegate']/method[@name='startSupportActionMode' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.view.ActionMode.Callback']]/parameter[1]" name="managedName">callback</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='AppCompatCallback']/method[@name='onSupportActionModeFinished' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.view.ActionMode']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='AppCompatCallback']/method[@name='onSupportActionModeStarted' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.view.ActionMode']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.app']/interface[@name='AppCompatCallback']/method[@name='onWindowStartingSupportActionMode' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.view.ActionMode.Callback']]/parameter[1]" name="managedName">callback</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/class[@name='ActionMode']/method[@name='setSubtitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/class[@name='ActionMode']/method[@name='setTitle' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">resId</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onActionItemClicked' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.view.ActionMode'] and parameter[2][@type='android.view.MenuItem']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onActionItemClicked' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.view.ActionMode'] and parameter[2][@type='android.view.MenuItem']]/parameter[2]" name="managedName">item</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onCreateActionMode' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onCreateActionMode' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[2]" name="managedName">menu</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onDestroyActionMode' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.view.ActionMode']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onPrepareActionMode' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[1]" name="managedName">mode</attr>
+    <attr path="/api/package[@name='androidx.appcompat.view']/interface[@name='ActionMode.Callback']/method[@name='onPrepareActionMode' and count(parameter)=2 and parameter[1][@type='androidx.appcompat.view.ActionMode'] and parameter[2][@type='android.view.Menu']]/parameter[2]" name="managedName">menu</attr>
     <!--
     mc++ AndroidX
     -->
-    <attr
-        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]"
-        name="managedReturn"
-        >
-        Android.Content.PM.ConfigChanges
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]" name="managedReturn">Android.Content.PM.ConfigChanges</attr>
     <!--
     <add-node 
         path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']"
@@ -1024,12 +224,5 @@
         </method>
     </add-node>
     -->
-    
-    <attr
-        path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]"
-        name="managedType"
-        >
-        Java.Lang.Object
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 </metadata>

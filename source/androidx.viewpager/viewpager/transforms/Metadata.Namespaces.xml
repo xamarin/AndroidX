@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.viewpager.widget']" 
-        name="managedName"
-        >
-        AndroidX.ViewPager.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.viewpager.widget']" name="managedName">AndroidX.ViewPager.Widget</attr>
 </metadata>

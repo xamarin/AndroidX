@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.emoji.bundled']" 
-        name="managedName"
-        >
-        AndroidX.Emoji.Bundled
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.emoji.bundled']" name="managedName">AndroidX.Emoji.Bundled</attr>
 </metadata>

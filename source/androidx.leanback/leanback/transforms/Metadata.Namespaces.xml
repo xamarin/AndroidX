@@ -7,66 +7,14 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.leanback.animation']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Animation
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.app']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.App
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.database']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Database
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.graphics']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Graphics
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.media']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Media
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.system']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.System
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.transition']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Transition
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.util']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Util
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.widget']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Widget
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.leanback.widget.picker']" 
-        name="managedName"
-        >
-        AndroidX.Leanback.Widget.Picker
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.leanback.animation']" name="managedName">AndroidX.Leanback.Animation</attr>
+    <attr path="/api/package[@name='androidx.leanback.app']" name="managedName">AndroidX.Leanback.App</attr>
+    <attr path="/api/package[@name='androidx.leanback.database']" name="managedName">AndroidX.Leanback.Database</attr>
+    <attr path="/api/package[@name='androidx.leanback.graphics']" name="managedName">AndroidX.Leanback.Graphics</attr>
+    <attr path="/api/package[@name='androidx.leanback.media']" name="managedName">AndroidX.Leanback.Media</attr>
+    <attr path="/api/package[@name='androidx.leanback.system']" name="managedName">AndroidX.Leanback.System</attr>
+    <attr path="/api/package[@name='androidx.leanback.transition']" name="managedName">AndroidX.Leanback.Transition</attr>
+    <attr path="/api/package[@name='androidx.leanback.util']" name="managedName">AndroidX.Leanback.Util</attr>
+    <attr path="/api/package[@name='androidx.leanback.widget']" name="managedName">AndroidX.Leanback.Widget</attr>
+    <attr path="/api/package[@name='androidx.leanback.widget.picker']" name="managedName">AndroidX.Leanback.Widget.Picker</attr>
 </metadata>

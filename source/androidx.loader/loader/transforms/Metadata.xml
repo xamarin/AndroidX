@@ -1,157 +1,23 @@
 ﻿<metadata>
-	<attr path="/api/package[@name='androidx.loader.content']/class[@name='CursorLoader']/method[@name='loadInBackground' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
-
-
-    <attr 
-        path="/api/package[@name='androidx.loader.content']/interface[@name='Loader.OnLoadCanceledListener']/method[@name='onLoadCanceled' and count(parameter)=1 and parameter[1][@type='4.content.Loader&lt;D&gt;']]/parameter[1]"
-        name="managedName"
-        >
-        loader
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.loader.content']/interface[@name='Loader.OnLoadCompleteListener']/method[@name='onLoadComplete' and count(parameter)=2 and parameter[1][@type='4.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[1]"
-        name="managedName"
-        >
-        loader
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.loader.content']/interface[@name='Loader.OnLoadCompleteListener']/method[@name='onLoadComplete' and count(parameter)=2 and parameter[1][@type='4.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[2]"
-        name="managedName"
-        >
-        data
-    </attr>
-    
-    
-    
-
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='destroyLoader' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"    
-        name="managedName"
-        >
-        id
-    </attr>
-    
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[1]"
-        name="managedName"
-        >
-        prefix
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[2]"
-        name="managedName"
-        >
-        fd
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[3]"
-        name="managedName"
-        >
-        writer
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[4]"
-        name="managedName"
-        >
-        args
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='getLoader' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
-        name="managedName"
-        >
-        id
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='initLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='4.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[1]"
-        name="managedName"
-        >
-        id
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='initLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='4.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[2]"
-        name="managedName"
-        >
-        args
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='initLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='4.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[3]"
-        name="managedName"
-        >
-        callback
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='restartLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='4.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[1]"
-        name="managedName"
-        >
-        id
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='restartLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='4.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[2]"
-        name="managedName"
-        >
-        args
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='restartLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='4.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[3]"
-        name="managedName"
-        >
-        callback
-    </attr>
-    
-
-    
-    
-    
-    
-    
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onCreateLoader' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]/parameter[1]"
-        name="managedName"
-        >
-        id
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onCreateLoader' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]/parameter[2]"
-        name="managedName"
-        >
-        args
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onLoadFinished' and count(parameter)=2 and parameter[1][@type='4.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[1]"
-        name="managedName"
-        >
-        loader
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onLoadFinished' and count(parameter)=2 and parameter[1][@type='4.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[2]"
-        name="managedName"
-        >
-        data
-    </attr>
-    
-    
-    <attr 
-        path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onLoaderReset' and count(parameter)=1 and parameter[1][@type='4.content.Loader&lt;D&gt;']]/parameter[1]"
-        name="managedName"
-        >
-        loader
-    </attr>
-    
-    
-        
-    
+    <attr path="/api/package[@name='androidx.loader.content']/class[@name='CursorLoader']/method[@name='loadInBackground' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='androidx.loader.content']/interface[@name='Loader.OnLoadCanceledListener']/method[@name='onLoadCanceled' and count(parameter)=1 and parameter[1][@type='androidx.loader.content.Loader&lt;D&gt;']]/parameter[1]" name="managedName">loader</attr>
+    <attr path="/api/package[@name='androidx.loader.content']/interface[@name='Loader.OnLoadCompleteListener']/method[@name='onLoadComplete' and count(parameter)=2 and parameter[1][@type='androidx.loader.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[1]" name="managedName">loader</attr>
+    <attr path="/api/package[@name='androidx.loader.content']/interface[@name='Loader.OnLoadCompleteListener']/method[@name='onLoadComplete' and count(parameter)=2 and parameter[1][@type='androidx.loader.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[2]" name="managedName">data</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='destroyLoader' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">id</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[1]" name="managedName">prefix</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[2]" name="managedName">fd</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[3]" name="managedName">writer</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='dump' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.io.FileDescriptor'] and parameter[3][@type='java.io.PrintWriter'] and parameter[4][@type='java.lang.String[]']]/parameter[4]" name="managedName">args</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='getLoader' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">id</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='initLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.core.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[1]" name="managedName">id</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='initLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.core.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[2]" name="managedName">args</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='initLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.core.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[3]" name="managedName">callback</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='restartLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.core.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[1]" name="managedName">id</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='restartLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.core.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[2]" name="managedName">args</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='LoaderManager']/method[@name='restartLoader' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.core.app.LoaderManager.LoaderCallbacks&lt;D&gt;']]/parameter[3]" name="managedName">callback</attr>
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onCreateLoader' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">id</attr>
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onCreateLoader' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">args</attr>
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onLoadFinished' and count(parameter)=2 and parameter[1][@type='androidx.loader.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[1]" name="managedName">loader</attr>
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onLoadFinished' and count(parameter)=2 and parameter[1][@type='androidx.loader.content.Loader&lt;D&gt;'] and parameter[2][@type='D']]/parameter[2]" name="managedName">data</attr>
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='LoaderManager.LoaderCallbacks']/method[@name='onLoaderReset' and count(parameter)=1 and parameter[1][@type='androidx.loader.content.Loader&lt;D&gt;']]/parameter[1]" name="managedName">loader</attr>
 </metadata>

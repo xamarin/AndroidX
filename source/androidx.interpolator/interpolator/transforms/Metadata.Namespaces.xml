@@ -7,12 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.interpolator.view.animation']" 
-        name="managedName"
-        >
-        AndroidX.Interpolator.View.Animation
-    </attr>
-    
-
+    <attr path="/api/package[@name='androidx.interpolator.view.animation']" name="managedName">AndroidX.Interpolator.View.Animation</attr>
 </metadata>

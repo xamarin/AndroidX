@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.contentpager.content']" 
-        name="managedName"
-        >
-        AndroidX.ContentPager.Content
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.contentpager.content']" name="managedName">AndroidX.ContentPager.Content</attr>
 </metadata>

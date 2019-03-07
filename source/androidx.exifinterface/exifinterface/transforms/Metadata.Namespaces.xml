@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.exifinterface.media']" 
-        name="managedName"
-        >
-        AndroidX.ExifInterface.Media
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.exifinterface.media']" name="managedName">AndroidX.ExifInterface.Media</attr>
 </metadata>

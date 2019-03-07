@@ -7,18 +7,6 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.legacy.app']" 
-        name="managedName"
-        >
-        AndroidX.Legacy.App
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.legacy.view']" 
-        name="managedName"
-        >
-        AndroidX.Legacy.View
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.legacy.app']" name="managedName">AndroidX.Legacy.App</attr>
+    <attr path="/api/package[@name='androidx.legacy.view']" name="managedName">AndroidX.Legacy.View</attr>
 </metadata>

@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.recyclerview.selection']" 
-        name="managedName"
-        >
-        AndroidX.RecyclerView.Selection
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.recyclerview.selection']" name="managedName">AndroidX.RecyclerView.Selection</attr>
 </metadata>

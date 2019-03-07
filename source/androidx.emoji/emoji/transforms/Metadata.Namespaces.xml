@@ -7,25 +7,7 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.emoji.text']" 
-        name="managedName"
-        >
-        AndroidX.Emoji.Text
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.emoji.widget']" 
-        name="managedName"
-        >
-        AndroidX.Emoji.Widget
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.text.emoji.flatbuffer']" 
-        name="managedName"
-        >
-        AndroidX.Text.Emoji.FlatBuffer
-    </attr>
-    
-    
-    
+    <attr path="/api/package[@name='androidx.emoji.text']" name="managedName">AndroidX.Emoji.Text</attr>
+    <attr path="/api/package[@name='androidx.emoji.widget']" name="managedName">AndroidX.Emoji.Widget</attr>
+    <attr path="/api/package[@name='androidx.text.emoji.flatbuffer']" name="managedName">AndroidX.Text.Emoji.FlatBuffer</attr>
 </metadata>

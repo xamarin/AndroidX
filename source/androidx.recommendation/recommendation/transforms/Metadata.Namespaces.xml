@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.recommendation.app']" 
-        name="managedName"
-        >
-        AndroidX.Recommendation.App
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.recommendation.app']" name="managedName">AndroidX.Recommendation.App</attr>
 </metadata>

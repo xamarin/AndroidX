@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.cursoradapter.widget']" 
-        name="managedName"
-        >
-        AndroidX.CursorAdapter.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.cursoradapter.widget']" name="managedName">AndroidX.CursorAdapter.Widget</attr>
 </metadata>

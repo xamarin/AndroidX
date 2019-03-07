@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.print']" 
-        name="managedName"
-        >
-        AndroidX.Print
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.print']" name="managedName">AndroidX.Print</attr>
 </metadata>

@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.recyclerview.widget']" 
-        name="managedName"
-        >
-        AndroidX.RecyclerView.Widget
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.recyclerview.widget']" name="managedName">AndroidX.RecyclerView.Widget</attr>
 </metadata>

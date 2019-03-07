@@ -7,11 +7,5 @@
         Package
     </attr>
     -->
-    <attr 
-        path="/api/package[@name='androidx.heifwriter']" 
-        name="managedName"
-        >
-        AndroidX.Heifwriter
-    </attr>
-    
+    <attr path="/api/package[@name='androidx.heifwriter']" name="managedName">AndroidX.Heifwriter</attr>
 </metadata>

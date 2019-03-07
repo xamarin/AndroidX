@@ -1,32 +1,5 @@
-<metadata>
-
-	<attr path="/api/package[@name='android.support.emoji']" name="managedName">Android.Support.Emoji</attr>
-	<attr path="/api/package[@name='android.support.emoji.flatbuffer']" name="managedName">Android.Support.Emoji.FlatBuffer</attr>
-
-    <attr path="/api/package[@name='androidx.text.emoji.flatbuffer']" name="managedName">AndroidX.Text.Emoji.FlatBuffer</attr>
-    
-    <attr
-        path="/api/package[@name='androidx.emoji']/interface[@name='EmojiCompat.MetadataRepoLoader']/method[@name='load' and count(parameter)=1 and parameter[1][@type='android.support.text.emoji.EmojiCompat.MetadataRepoLoaderCallback']]/parameter[1]"
-        name="managedName"
-        >
-        loaderCallback
-    </attr>
-
-    <attr
-        path="/api/package[@name='androidx.emoji']/class[@name='EmojiCompat.MetadataRepoLoaderCallback']/method[@name='onFailed' and count(parameter)=1 and parameter[1][@type='java.lang.Throwable']]/parameter[1]"
-        name="managedName"
-        >
-        throwable
-    </attr>
-    
-    <attr
-        path="/api/package[@name='androidx.emoji']/class[@name='EmojiCompat.MetadataRepoLoaderCallback']/method[@name='onLoaded' and count(parameter)=1 and parameter[1][@type='android.support.text.emoji.MetadataRepo']]/parameter[1]"
-        name="managedName"
-        >
-        metadataRepo
-    </attr>
-    
-    
-    
-    
+﻿<metadata>
+    <attr path="/api/package[@name='androidx.emoji']/interface[@name='EmojiCompat.MetadataRepoLoader']/method[@name='load' and count(parameter)=1 and parameter[1][@type='androidx.emoji.EmojiCompat.MetadataRepoLoaderCallback']]/parameter[1]" name="managedName">loaderCallback</attr>
+    <attr path="/api/package[@name='androidx.emoji']/class[@name='EmojiCompat.MetadataRepoLoaderCallback']/method[@name='onFailed' and count(parameter)=1 and parameter[1][@type='java.lang.Throwable']]/parameter[1]" name="managedName">throwable</attr>
+    <attr path="/api/package[@name='androidx.emoji']/class[@name='EmojiCompat.MetadataRepoLoaderCallback']/method[@name='onLoaded' and count(parameter)=1 and parameter[1][@type='androidx.emoji.MetadataRepo']]/parameter[1]" name="managedName">metadataRepo</attr>
 </metadata>
