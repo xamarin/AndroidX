@@ -1,3 +1,6 @@
 ﻿<metadata>
     <attr path="/api/package[@name='androidx.room']" name="managedName">AndroidX.Room</attr>
+    <attr path="/api/package[@name='androidx.room.migration']" name="managedName">AndroidX.Room.Migration</attr>
+    <attr path="/api/package[@name='androidx.room.paging']" name="managedName">AndroidX.Room.Paging</attr>
+    <attr path="/api/package[@name='androidx.room.util']" name="managedName">AndroidX.Room.Util</attr>
 </metadata>
