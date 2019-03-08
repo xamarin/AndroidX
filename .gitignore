@@ -9,6 +9,7 @@ docs/
 generated/
 **/scriptcs_packages/
 tmp/
+util/binderator/
 
 *.xam
 *.DS_Store
@@ -33,5 +34,3 @@ Details.md
 *.commit
 cake.sh
 **/.mfractor/**
-
-util/

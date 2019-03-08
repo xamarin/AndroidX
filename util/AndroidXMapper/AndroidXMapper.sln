@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidXMapper", "AndroidXMapper\AndroidXMapper.csproj", "{FC5A597E-B645-4F7A-994B-639787F92FA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC5A597E-B645-4F7A-994B-639787F92FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5A597E-B645-4F7A-994B-639787F92FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5A597E-B645-4F7A-994B-639787F92FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5A597E-B645-4F7A-994B-639787F92FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B1166B4-0102-495F-B720-E755FA917EC8}
+	EndGlobalSection
+EndGlobal
