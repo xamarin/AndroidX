@@ -222,6 +222,7 @@ Task ("diff")
 		MONODROID_PATH,
 	};
 
+	EnsureDirectoryExists("./output/");
 	MonoApiInfo ("./output/AndroidX.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
 		SearchPaths = SEARCH_DIRS
 	});
@@ -239,17 +240,21 @@ Task ("diff")
 Task ("generate-mapping")
 	.IsDependentOn ("androidxmapper")
 	.IsDependentOn ("merge")
+	.IsDependentOn ("diff")
 	.Does (() =>
 {
+	EnsureDirectoryExists("./output/");
 	DownloadFile (BASE_API_INFO_URL, "./output/api-info.previous.xml");
 
-	StartProcess(ANDROIDX_MAPPER_EXE,
+	var result = StartProcess(ANDROIDX_MAPPER_EXE,
 		$"generate -v " +
 		$" -s " + MakeAbsolute((FilePath)"./output/api-info.previous.xml") +
 		$" -x " + MakeAbsolute((FilePath)"./output/api-info.xml") +
 		$" -j " + MakeAbsolute((FilePath)"./util/AndroidXMapper/Resources/androidx-class-mapping.csv") +
 		$" -m " + MakeAbsolute((FilePath)"./util/AndroidXMapper/Resources/override-mapping.csv") +
 		$" -o " + MakeAbsolute((FilePath)"./output/androidx-mapping.csv"));
+	if (result != 0)
+		throw new Exception($"The androidxmapper failed with error code {result}.");
 });
 
 Task ("merge")
@@ -257,21 +262,21 @@ Task ("merge")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	EnsureDirectoryExists("./output/");
-
 	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.*.dll");
-
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
 		.ToList();
 
-	StartProcess(ANDROIDX_MAPPER_EXE,
+	EnsureDirectoryExists("./output/");
+	var result = StartProcess(ANDROIDX_MAPPER_EXE,
 		$"merge" +
 		$" -a {string.Join(" -a ", mergeDlls)} " +
 		$" -o " + MakeAbsolute((FilePath)"./output/AndroidX.Merged.dll") +
 		$" -s \"{MONODROID_PATH}\" " +
 		$" --inject-assemblyname");
+	if (result != 0)
+		throw new Exception($"The androidxmapper failed with error code {result}.");
 });
 
 Task ("ci-setup")
