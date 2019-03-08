@@ -245,11 +245,11 @@ Task ("generate-mapping")
 
 	StartProcess(ANDROIDX_MAPPER_EXE,
 		$"generate -v " +
-		$" -s output/api-info.previous.xml " +
-		$" -x output/api-info.xml " +
-		$" -j util/AndroidXMapper/Resources/androidx-class-mapping.csv " +
-		$" -m util/AndroidXMapper/Resources/override-mapping.csv " +
-		$" -o output/androidx-mapping.csv");
+		$" -s " + MakeAbsolute((FilePath)"./output/api-info.previous.xml") +
+		$" -x " + MakeAbsolute((FilePath)"./output/api-info.xml") +
+		$" -j " + MakeAbsolute((FilePath)"./util/AndroidXMapper/Resources/androidx-class-mapping.csv") +
+		$" -m " + MakeAbsolute((FilePath)"./util/AndroidXMapper/Resources/override-mapping.csv") +
+		$" -o " + MakeAbsolute((FilePath)"./output/androidx-mapping.csv"));
 });
 
 Task ("merge")
@@ -269,7 +269,7 @@ Task ("merge")
 	StartProcess(ANDROIDX_MAPPER_EXE,
 		$"merge" +
 		$" -a {string.Join(" -a ", mergeDlls)} " +
-		$" -o output/AndroidX.Merged.dll " +
+		$" -o " + MakeAbsolute((FilePath)"./output/AndroidX.Merged.dll") +
 		$" -s \"{MONODROID_PATH}\" " +
 		$" --inject-assemblyname");
 });
