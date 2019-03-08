@@ -8,19 +8,6 @@ using System.Linq;
 
 namespace AndroidXMapper
 {
-	public class TestAttribute : Attribute
-	{
-		private readonly string assemblyName;
-
-		public TestAttribute(string assemblyName)
-		{
-			this.assemblyName = assemblyName;
-		}
-
-		public string AssemblyName => assemblyName;
-	}
-
-	[TestAttribute("the anme")]
 	public class AssemblyMerger
 	{
 		private const string InjectedAttributeNamespace = "Xamarin.AndroidX.Internal";
