@@ -44,10 +44,11 @@ if (IsRunningOnWindows ()) {
 }
 var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
 
-var ANDROIDX_MAPPER_EXE = $"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe";
+var ANDROIDX_MAPPER_EXE = MakeAbsolute ((FilePath)$"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe");
 
 Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
 Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
+Information ("ANDROIDX_MAPPER_EXE: {0}", ANDROIDX_MAPPER_EXE);
 
 // You shouldn't have to configure anything below here
 // ######################################################
