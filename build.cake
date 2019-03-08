@@ -1,7 +1,5 @@
 // Tools needed by cake addins
-#tool nuget:?package=ILRepack&version=2.0.13
 #tool nuget:?package=Cake.MonoApiTools&version=3.0.1
-//#tool nuget:?package=Microsoft.DotNet.BuildTools.GenAPI&version=1.0.0-beta-00081
 #tool nuget:?package=vswhere
 
 // Cake Addins
@@ -45,6 +43,8 @@ if (IsRunningOnWindows ()) {
 	MONODROID_BASE_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/");
 }
 var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
+
+var ANDROIDX_MAPPER_EXE = $"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe";
 
 Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
 Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
@@ -160,8 +160,6 @@ Task("samples")
 	});
 });
 
-Task("nuget-fat");
-
 Task("nuget-validation")
 	.Does(() =>
 {
@@ -202,6 +200,18 @@ Task("nuget-validation")
 
 });
 
+Task ("androidxmapper")
+	.Does (() =>
+{
+	MSBuild (
+		"./util/AndroidXMapper/AndroidXMapper.sln", c => {
+		c.Configuration = BUILD_CONFIG;
+		c.MaxCpuCount = 0;
+		c.Verbosity = VERBOSITY;
+		c.Restore = true;
+	});
+});
+
 Task ("diff")
 	.IsDependentOn ("merge")
 	.Does (() =>
@@ -225,14 +235,28 @@ Task ("diff")
 	MonoApiMarkdown ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.md");
 });
 
+Task ("generate-mapping")
+	.IsDependentOn ("androidxmapper")
+	.IsDependentOn ("merge")
+	.Does (() =>
+{
+	DownloadFile (BASE_API_INFO_URL, "./output/api-info.previous.xml");
+
+	StartProcess(ANDROIDX_MAPPER_EXE,
+		$"generate -v " +
+		$" -s output/api-info.previous.xml " +
+		$" -x output/api-info.xml " +
+		$" -j util/AndroidXMapper/Resources/androidx-class-mapping.csv " +
+		$" -m util/AndroidXMapper/Resources/override-mapping.csv " +
+		$" -o output/androidx-mapping.csv");
+});
+
 Task ("merge")
+	.IsDependentOn ("androidxmapper")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
 	EnsureDirectoryExists("./output/");
-
-	if (FileExists ("./output/AndroidX.Merged.dll"))
-		DeleteFile ("./output/AndroidX.Merged.dll");
 
 	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.*.dll");
 
@@ -241,16 +265,12 @@ Task ("merge")
 		.Select(g => g.FirstOrDefault())
 		.ToList();
 
-	Information("Merging: \n - {0}", string.Join("\n - ", mergeDlls));
-
-	ILRepack ("./output/AndroidX.Merged.dll", mergeDlls.First(), mergeDlls.Skip(1), new ILRepackSettings {
-		CopyAttrs = true,
-		AllowMultiple = true,
-		//TargetKind = ILRepack.TargetKind.Dll,
-		Libs = new List<DirectoryPath> {
-			MONODROID_PATH
-		},
-	});
+	StartProcess(ANDROIDX_MAPPER_EXE,
+		$"merge" +
+		$" -a {string.Join(" -a ", mergeDlls)} " +
+		$" -o output/AndroidX.Merged.dll " +
+		$" -s \"{MONODROID_PATH}\" " +
+		$" --inject-assemblyname");
 });
 
 Task ("ci-setup")
@@ -301,6 +321,7 @@ Task ("ci")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("nuget-validation")
+	.IsDependentOn ("generate-mapping")
 	.IsDependentOn ("diff")
 	.IsDependentOn ("samples");
 
