@@ -33,18 +33,14 @@ namespace AndroidXMapper
 			var overrideMappings = LoadMapping(OverridesPath);
 			var javaMappings = LoadMapping(JavaMappingPath);
 
-			const string Prefix = ",,,,,,,,,";
-
-			writer.WriteLine(
-				"Support .NET namespace," +
-				"Support .NET type name," +
-				"AndroidX .NET namespace," +
-				"AndroidX .NET type name," +
-				"AndroidX .NET assembly," +
-				"Support Java package," +
-				"Support Java class," +
-				"AndroidX Java package," +
-				"AndroidX Java class," +
+			WriteRecord(
+				writer,
+				new BindingType(
+					new FullType("Support .NET namespace", "Support .NET type name"),
+					new FullType("Support Java package", "Support Java class")),
+				new BindingType(
+					new FullType("AndroidX .NET assembly", "AndroidX .NET namespace", "AndroidX .NET type name"),
+					new FullType("AndroidX Java package", "AndroidX Java class")),
 				"Messages");
 
 			foreach (var supportType in supportTypes)
@@ -61,12 +57,12 @@ namespace AndroidXMapper
 					else if (matched.Count > 1)
 					{
 						if (includeWarnings)
-							writer.WriteLine($"{Prefix}WARNING: Too many override types found for type {overrideType}: {string.Join(", ", matched)}.");
+							WriteRecord(writer, $"WARNING: Too many override types found for type {overrideType}: {string.Join(", ", matched)}.");
 					}
 					else
 					{
 						if (includeWarnings)
-							writer.WriteLine($"{Prefix}WARNING: Unable to find override type for type {overrideType}.");
+							WriteRecord(writer, $"WARNING: Unable to find override type for type {overrideType}.");
 					}
 				}
 				else if (TryGetExactMatch(xTypes, supportType, out var exactMatch))
@@ -91,18 +87,18 @@ namespace AndroidXMapper
 					else if (matched.Count > 1)
 					{
 						if (includeWarnings)
-							writer.WriteLine($"{Prefix}WARNING: Too many AndroidX types found for Java type {androidx}: {string.Join(", ", matched)}.");
+							WriteRecord(writer, $"WARNING: Too many AndroidX types found for Java type {androidx}: {string.Join(", ", matched)}.");
 					}
 					else
 					{
 						if (includeWarnings)
-							writer.WriteLine($"{Prefix}WARNING: Unable to find AndroidX type for Java type {androidx}.");
+							WriteRecord(writer, $"WARNING: Unable to find AndroidX type for Java type {androidx}.");
 					}
 				}
 				else
 				{
 					if (includeWarnings && useJavaType)
-						writer.WriteLine($"{Prefix}WARNING: Unable to find a Java mapping for {supportType}. Trying managed mapping...");
+						WriteRecord(writer, $"WARNING: Unable to find a Java mapping for {supportType}. Trying managed mapping...");
 
 					var matched = xTypes.Where(xt => xt.NetType.Name == supportType.NetType.Name).ToList();
 					if (matched.Count == 1)
@@ -110,34 +106,67 @@ namespace AndroidXMapper
 						typeMappings[supportType] = matched[0];
 
 						if (includeWarnings && useJavaType)
-							writer.WriteLine($"{Prefix}WARNING:   Found a type that appears to match {matched[0]}.");
+							WriteRecord(writer, $"WARNING:   Found a type that appears to match {matched[0]}.");
 					}
 					else if (matched.Count > 1)
 					{
 						if (includeWarnings)
-							writer.WriteLine($"{Prefix}WARNING: Too many AndroidX types found for .NET type {supportType.NetType}: {string.Join(", ", matched)}.");
+							WriteRecord(writer, $"WARNING: Too many AndroidX types found for .NET type {supportType.NetType}: {string.Join(", ", matched)}.");
 					}
 					else
 					{
 						if (includeWarnings)
-							writer.WriteLine($"{Prefix}WARNING: Unable to find AndroidX type for .NET type {supportType.NetType}.");
+							WriteRecord(writer, $"WARNING: Unable to find AndroidX type for .NET type {supportType.NetType}.");
 					}
 				}
 
 				if (typeMappings.TryGetValue(supportType, out var androidXType))
-				{
-					writer.WriteLine(
-						$"{supportType.NetType.Namespace}," +
-						$"{supportType.NetType.Name}," +
-						$"{androidXType.NetType.Namespace}," +
-						$"{androidXType.NetType.Name}," +
-						$"{androidXType.NetType.Container}," +
-						$"{supportType.JavaType.Namespace}," +
-						$"{supportType.JavaType.Name}," +
-						$"{androidXType.JavaType.Namespace}," +
-						$"{androidXType.JavaType.Name},");
-				}
+					WriteRecord(writer, supportType, androidXType);
 			}
+
+			foreach (var mapping in javaMappings.Skip(1))
+			{
+				var mapped = typeMappings.Keys.FirstOrDefault(k => k.JavaType.FullName == mapping.Key);
+				if (!mapped.JavaType.IsEmpty)
+					continue;
+
+				WriteRecord(
+					writer,
+					new BindingType(FullType.Empty, GetJavaFullType(mapping.Key)),
+					new BindingType(FullType.Empty, GetJavaFullType(mapping.Value)),
+					$"WARNING: The .NET assemblies did not use the Java type {mapping.Key} => {mapping.Value}.");
+			}
+		}
+
+		private static FullType GetJavaFullType(string javaFullName)
+		{
+			for (var i = 1; i < javaFullName.Length; i++)
+			{
+				if (char.IsUpper(javaFullName, i) && javaFullName[i - 1] == '.')
+					return new FullType(
+						javaFullName.Substring(0, i - 1),
+						javaFullName.Substring(i));
+			}
+
+			return FullType.Empty;
+		}
+
+		private static void WriteRecord(TextWriter writer, string message) =>
+			WriteRecord(writer, BindingType.Empty, BindingType.Empty, message);
+
+		private static void WriteRecord(TextWriter writer, BindingType supportType, BindingType androidXType, string message = "")
+		{
+			writer.WriteLine(
+				$"{supportType.NetType.Namespace}," +
+				$"{supportType.NetType.Name}," +
+				$"{androidXType.NetType.Namespace}," +
+				$"{androidXType.NetType.Name}," +
+				$"{androidXType.NetType.Container}," +
+				$"{supportType.JavaType.Namespace}," +
+				$"{supportType.JavaType.Name}," +
+				$"{androidXType.JavaType.Namespace}," +
+				$"{androidXType.JavaType.Name}," +
+				message);
 		}
 
 		private bool TryGetExactMatch(IEnumerable<BindingType> xTypes, BindingType supportType, out BindingType exactMatch)
