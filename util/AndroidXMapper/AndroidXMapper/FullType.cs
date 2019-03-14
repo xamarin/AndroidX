@@ -26,7 +26,7 @@
 			$"{Namespace}.{Name}";
 
 		public bool IsEmpty =>
-			Namespace == string.Empty || Name == string.Empty;
+			string.IsNullOrEmpty(Namespace) || string.IsNullOrEmpty(Name);
 
 		public override bool Equals(object obj) =>
 			obj is FullType other && Container == other.Container && Namespace == other.Namespace && Name == other.Name;

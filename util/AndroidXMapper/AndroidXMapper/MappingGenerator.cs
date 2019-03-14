@@ -43,88 +43,88 @@ namespace AndroidXMapper
 					new FullType("AndroidX Java package", "AndroidX Java class")),
 				"Messages");
 
-			//foreach (var supportType in supportTypes)
-			//{
-			//	var useJavaType = !supportType.JavaType.IsEmpty && javaMappings.Count > 0;
+			foreach (var supportType in supportTypes)
+			{
+				var useJavaType = !supportType.JavaType.IsEmpty && javaMappings.Count > 0;
 
-			//	if (TryGetMapping(overrideMappings, supportType.NetType, out var overrideType))
-			//	{
-			//		var matched = xTypes.Where(t => t.NetType.FullName == overrideType).ToList();
-			//		if (matched.Count == 1)
-			//		{
-			//			typeMappings[supportType] = matched[0];
-			//		}
-			//		else if (matched.Count > 1)
-			//		{
-			//			if (includeWarnings)
-			//				WriteRecord(writer, $"WARNING: Too many override types found for type {overrideType}: {string.Join(", ", matched)}.");
-			//		}
-			//		else
-			//		{
-			//			if (includeWarnings)
-			//				WriteRecord(writer, $"WARNING: Unable to find override type for type {overrideType}.");
-			//		}
-			//	}
-			//	else if (TryGetExactMatch(xTypes, supportType, out var exactMatch))
-			//	{
-			//		typeMappings[supportType] = exactMatch;
-			//	}
-			//	else if (useJavaType && TryGetMapping(javaMappings, supportType.JavaType, out var androidx))
-			//	{
-			//		var matched = xTypes.Where(t => t.JavaType.FullName == androidx).ToList();
+				if (TryGetMapping(overrideMappings, supportType.NetType, out var overrideType))
+				{
+					var matched = xTypes.Where(t => t.NetType.FullName == overrideType).ToList();
+					if (matched.Count == 1)
+					{
+						typeMappings[supportType] = matched[0];
+					}
+					else if (matched.Count > 1)
+					{
+						if (includeWarnings)
+							WriteRecord(writer, $"WARNING: Too many override types found for type {overrideType}: {string.Join(", ", matched)}.");
+					}
+					else
+					{
+						if (includeWarnings)
+							WriteRecord(writer, $"WARNING: Unable to find override type for type {overrideType}.");
+					}
+				}
+				else if (TryGetExactMatch(xTypes, supportType, out var exactMatch))
+				{
+					typeMappings[supportType] = exactMatch;
+				}
+				else if (useJavaType && TryGetMapping(javaMappings, supportType.JavaType, out var androidx))
+				{
+					var matched = xTypes.Where(t => t.JavaType.FullName == androidx).ToList();
 
-			//		// a special case for the XxxConsts types
-			//		const string ConstsSuffix = "Consts";
-			//		if (matched.Count == 2 && matched.Any(m => m.NetType.Name.EndsWith(ConstsSuffix)))
-			//		{
-			//			matched.RemoveAll(m => m.NetType.Name.EndsWith(ConstsSuffix) != supportType.NetType.Name.EndsWith(ConstsSuffix));
-			//		}
+					// a special case for the XxxConsts types
+					const string ConstsSuffix = "Consts";
+					if (matched.Count == 2 && matched.Any(m => m.NetType.Name.EndsWith(ConstsSuffix)))
+					{
+						matched.RemoveAll(m => m.NetType.Name.EndsWith(ConstsSuffix) != supportType.NetType.Name.EndsWith(ConstsSuffix));
+					}
 
-			//		if (matched.Count == 1)
-			//		{
-			//			typeMappings[supportType] = matched[0];
-			//		}
-			//		else if (matched.Count > 1)
-			//		{
-			//			if (includeWarnings)
-			//				WriteRecord(writer, $"WARNING: Too many AndroidX types found for Java type {androidx}: {string.Join(", ", matched)}.");
-			//		}
-			//		else
-			//		{
-			//			if (includeWarnings)
-			//				WriteRecord(writer, $"WARNING: Unable to find AndroidX type for Java type {androidx}.");
-			//		}
-			//	}
-			//	else
-			//	{
-			//		if (includeWarnings && useJavaType)
-			//			WriteRecord(writer, $"WARNING: Unable to find a Java mapping for {supportType}. Trying managed mapping...");
+					if (matched.Count == 1)
+					{
+						typeMappings[supportType] = matched[0];
+					}
+					else if (matched.Count > 1)
+					{
+						if (includeWarnings)
+							WriteRecord(writer, $"WARNING: Too many AndroidX types found for Java type {androidx}: {string.Join(", ", matched)}.");
+					}
+					else
+					{
+						if (includeWarnings)
+							WriteRecord(writer, $"WARNING: Unable to find AndroidX type for Java type {androidx}.");
+					}
+				}
+				else
+				{
+					if (includeWarnings && useJavaType)
+						WriteRecord(writer, $"WARNING: Unable to find a Java mapping for {supportType}. Trying managed mapping...");
 
-			//		var matched = xTypes.Where(xt => xt.NetType.Name == supportType.NetType.Name).ToList();
-			//		if (matched.Count == 1)
-			//		{
-			//			typeMappings[supportType] = matched[0];
+					var matched = xTypes.Where(xt => xt.NetType.Name == supportType.NetType.Name).ToList();
+					if (matched.Count == 1)
+					{
+						typeMappings[supportType] = matched[0];
 
-			//			if (includeWarnings && useJavaType)
-			//				WriteRecord(writer, $"WARNING:   Found a type that appears to match {matched[0]}.");
-			//		}
-			//		else if (matched.Count > 1)
-			//		{
-			//			if (includeWarnings)
-			//				WriteRecord(writer, $"WARNING: Too many AndroidX types found for .NET type {supportType.NetType}: {string.Join(", ", matched)}.");
-			//		}
-			//		else
-			//		{
-			//			if (includeWarnings)
-			//				WriteRecord(writer, $"WARNING: Unable to find AndroidX type for .NET type {supportType.NetType}.");
-			//		}
-			//	}
+						if (includeWarnings && useJavaType)
+							WriteRecord(writer, $"WARNING:   Found a type that appears to match {matched[0]}.");
+					}
+					else if (matched.Count > 1)
+					{
+						if (includeWarnings)
+							WriteRecord(writer, $"WARNING: Too many AndroidX types found for .NET type {supportType.NetType}: {string.Join(", ", matched)}.");
+					}
+					else
+					{
+						if (includeWarnings)
+							WriteRecord(writer, $"WARNING: Unable to find AndroidX type for .NET type {supportType.NetType}.");
+					}
+				}
 
-			//	if (typeMappings.TryGetValue(supportType, out var androidXType))
-			//		WriteRecord(writer, supportType, androidXType);
-			//}
+				if (typeMappings.TryGetValue(supportType, out var androidXType))
+					WriteRecord(writer, supportType, androidXType);
+			}
 
-			foreach (var mapping in javaMappings)
+			foreach (var mapping in javaMappings.Skip(1))
 			{
 				var mapped = typeMappings.Keys.FirstOrDefault(k => k.JavaType.FullName == mapping.Key);
 				if (!mapped.JavaType.IsEmpty)
