@@ -126,7 +126,7 @@ Task("nuget")
 		if (nupkg.FullPath.Contains(".Wear."))
 			continue;
 		var filename = nupkg.GetFilenameWithoutExtension();
-		var match = Regex.Match(filename.ToString(), @"(.+?)\.([\.\d+]+)");
+		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
 		itemGroup.Add(new XElement(xmlns + "PackageReference",
 			new XAttribute("Include", match.Groups[1]),
 			new XAttribute("Version", match.Groups[2])));
