@@ -506,34 +506,41 @@
 			"dependencyOnly" : false
 		}
 		,{
+			"groupId" : "androidx.work",
+			"artifactId" : "work-runtime",
+			"version" : "2.0.0-rc01",
+			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
+			"dependencyOnly" : false
+		}
+		,{
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.Google.Android.Material",
 			"dependencyOnly" : false
-		}
+		},
 
-
-		
-
-		,{
-			"groupId" : "org.reactivestreams",
-			"artifactId" : "reactive-streams",
-			"version" : "1.0.0",
-			"dependencyOnly" : true
-		}
-		,{
-			"groupId" : "io.reactivex.rxjava2",
-			"artifactId" : "rxjava",
-			"version" : "2.0.6",
-			"dependencyOnly" : true
-		}
-		,{
+		{
 			"groupId" : "com.google.guava",
 			"artifactId" : "guava",
-			"version" : "23.6",
+			"version" : "27.1.0",
+			"nugetId" : "Xamarin.Google.Guava",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.guava",
+			"artifactId" : "failureaccess",
+			"version" : "1.0.1",
+			"nugetId" : "Xamarin.Google.Guava.FailureAccess",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.guava",
+			"artifactId" : "listenablefuture",
+			"version" : "1.0",
+			"nugetId" : "Xamarin.Google.Guava.ListenableFuture",
+			"nugetVersion" : "1.0",
 			"dependencyOnly" : true
 		}
-
 	]
 }]
