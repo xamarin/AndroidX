@@ -1,76 +1,86 @@
-﻿using System;
+﻿using Mono.Cecil;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Xml.Linq;
 
 namespace AndroidXMapper
 {
 	public class MappingGenerator
 	{
-		private readonly Dictionary<BindingType, BindingType> typeMappings = new Dictionary<BindingType, BindingType>();
+		private readonly List<TypeMapping> typeMappings = new List<TypeMapping>();
 
-		public string SupportApiPath { get; }
+		public string SupportAssemblyPath { get; }
 
-		public string AndroidXApiPath { get; }
+		public string AndroidXAssemblyPath { get; }
 
 		public string OverridesPath { get; }
 
 		public string JavaMappingPath { get; }
 
-		public MappingGenerator(string supportApiPath, string androidXApiPath, string overridesPath, string javaMappingPath)
+		public MappingGenerator(string supportAssemblyPath, string androidXAssemblyPath, string overridesPath, string javaMappingPath)
 		{
-			SupportApiPath = supportApiPath ?? throw new ArgumentNullException(nameof(supportApiPath));
-			AndroidXApiPath = androidXApiPath ?? throw new ArgumentNullException(nameof(androidXApiPath));
+			SupportAssemblyPath = supportAssemblyPath ?? throw new ArgumentNullException(nameof(supportAssemblyPath));
+			AndroidXAssemblyPath = androidXAssemblyPath ?? throw new ArgumentNullException(nameof(androidXAssemblyPath));
 			OverridesPath = overridesPath;
 			JavaMappingPath = javaMappingPath;
 		}
 
 		public void Generate(TextWriter writer, bool includeWarnings)
 		{
-			var supportTypes = GetAllTypes(SupportApiPath);
-			var xTypes = GetAllTypes(AndroidXApiPath);
+			// load all the types and mappings
+			var supportTypes = GetAllTypes(SupportAssemblyPath);
+			var xTypes = GetAllTypes(AndroidXAssemblyPath);
 			var overrideMappings = LoadMapping(OverridesPath);
 			var javaMappings = LoadMapping(JavaMappingPath);
 
 			WriteRecord(
 				writer,
 				new BindingType(
-					new FullType("Support .NET namespace", "Support .NET type name"),
+					new FullType("Support .NET assembly", "Support .NET namespace", "Support .NET type name"),
 					new FullType("Support Java package", "Support Java class")),
 				new BindingType(
 					new FullType("AndroidX .NET assembly", "AndroidX .NET namespace", "AndroidX .NET type name"),
 					new FullType("AndroidX Java package", "AndroidX Java class")),
 				"Messages");
 
+			// PART A: Go through all the types in the Support assembly and
+			//         try and find a matching AndroidX type.
 			foreach (var supportType in supportTypes)
 			{
 				var useJavaType = !supportType.JavaType.IsEmpty && javaMappings.Count > 0;
 
 				if (TryGetMapping(overrideMappings, supportType.NetType, out var overrideType))
 				{
+					// 1. First check the specific/manual overrides provided.
+
 					var matched = xTypes.Where(t => t.NetType.FullName == overrideType).ToList();
-					if (matched.Count == 1)
-					{
-						typeMappings[supportType] = matched[0];
-					}
-					else if (matched.Count > 1)
-					{
-						if (includeWarnings)
-							WriteRecord(writer, $"WARNING: Too many override types found for type {overrideType}: {string.Join(", ", matched)}.");
-					}
-					else
+					if (matched.Count == 0)
 					{
 						if (includeWarnings)
 							WriteRecord(writer, $"WARNING: Unable to find override type for type {overrideType}.");
 					}
+					else
+					{
+						foreach (var m in matched)
+						{
+							typeMappings.Add(new TypeMapping(supportType, m));
+							WriteRecord(writer, supportType, m);
+						}
+					}
 				}
 				else if (TryGetExactMatch(xTypes, supportType, out var exactMatch))
 				{
-					typeMappings[supportType] = exactMatch;
+					// 2. Then, check to see if there is an exact match for the
+					//    full name of the .NET or Java type.
+
+					typeMappings.Add(new TypeMapping(supportType, exactMatch));
+					WriteRecord(writer, supportType, exactMatch);
 				}
 				else if (useJavaType && TryGetMapping(javaMappings, supportType.JavaType, out var androidx))
 				{
+					// 3. If not, then do a look up based on the Java types.
+
 					var matched = xTypes.Where(t => t.JavaType.FullName == androidx).ToList();
 
 					// a special case for the XxxConsts types
@@ -80,61 +90,67 @@ namespace AndroidXMapper
 						matched.RemoveAll(m => m.NetType.Name.EndsWith(ConstsSuffix) != supportType.NetType.Name.EndsWith(ConstsSuffix));
 					}
 
-					if (matched.Count == 1)
-					{
-						typeMappings[supportType] = matched[0];
-					}
-					else if (matched.Count > 1)
-					{
-						if (includeWarnings)
-							WriteRecord(writer, $"WARNING: Too many AndroidX types found for Java type {androidx}: {string.Join(", ", matched)}.");
-					}
-					else
+					if (matched.Count == 0)
 					{
 						if (includeWarnings)
 							WriteRecord(writer, $"WARNING: Unable to find AndroidX type for Java type {androidx}.");
 					}
+					else
+					{
+						// if we have an exact name match, then use that
+						var exact = matched.Where(m => m.NetType.Name == supportType.NetType.Name).ToList();
+						if (exact.Count == 1)
+							matched = exact;
+
+						foreach (var m in matched)
+						{
+							typeMappings.Add(new TypeMapping(supportType, m));
+							WriteRecord(writer, supportType, m);
+						}
+					}
 				}
 				else
 				{
-					if (includeWarnings && useJavaType)
-						WriteRecord(writer, $"WARNING: Unable to find a Java mapping for {supportType}. Trying managed mapping...");
+					// 4. As a last resort, use the .NET class name and try
+					//    and find a match using just the name.
 
 					var matched = xTypes.Where(xt => xt.NetType.Name == supportType.NetType.Name).ToList();
-					if (matched.Count == 1)
-					{
-						typeMappings[supportType] = matched[0];
-
-						if (includeWarnings && useJavaType)
-							WriteRecord(writer, $"WARNING:   Found a type that appears to match {matched[0]}.");
-					}
-					else if (matched.Count > 1)
-					{
-						if (includeWarnings)
-							WriteRecord(writer, $"WARNING: Too many AndroidX types found for .NET type {supportType.NetType}: {string.Join(", ", matched)}.");
-					}
-					else
+					if (matched.Count == 0)
 					{
 						if (includeWarnings)
 							WriteRecord(writer, $"WARNING: Unable to find AndroidX type for .NET type {supportType.NetType}.");
 					}
-				}
+					else
+					{
+						foreach (var m in matched)
+						{
+							var msg = string.Empty;
+							if (includeWarnings && useJavaType)
+							{
+								msg = $"WARNING: Unable to find a Java mapping, so took a guess.";
+								if (matched.Count > 1)
+									msg += $" Found more than 1 item: " + string.Join(", ", matched);
+							}
 
-				if (typeMappings.TryGetValue(supportType, out var androidXType))
-					WriteRecord(writer, supportType, androidXType);
+							typeMappings.Add(new TypeMapping(supportType, m));
+							WriteRecord(writer, supportType, m, msg);
+						}
+					}
+				}
 			}
 
+			// PART B: Make sure all the Java mappings exist in the final CSV.
 			foreach (var mapping in javaMappings.Skip(1))
 			{
-				var mapped = typeMappings.Keys.FirstOrDefault(k => k.JavaType.FullName == mapping.Key);
-				if (!mapped.JavaType.IsEmpty)
+				var mapped = typeMappings.FirstOrDefault(k => k.SupportType.JavaType.FullName == mapping.Key);
+				if (!mapped.SupportType.JavaType.IsEmpty)
 					continue;
 
 				WriteRecord(
 					writer,
 					new BindingType(FullType.Empty, GetJavaFullType(mapping.Key)),
 					new BindingType(FullType.Empty, GetJavaFullType(mapping.Value)),
-					$"WARNING: The .NET assemblies did not use the Java type {mapping.Key} => {mapping.Value}.");
+					$"WARNING: No .NET types found.");
 			}
 		}
 
@@ -161,6 +177,7 @@ namespace AndroidXMapper
 				$"{supportType.NetType.Name}," +
 				$"{androidXType.NetType.Namespace}," +
 				$"{androidXType.NetType.Name}," +
+				$"{supportType.NetType.Container}," +
 				$"{androidXType.NetType.Container}," +
 				$"{supportType.JavaType.Namespace}," +
 				$"{supportType.JavaType.Name}," +
@@ -227,63 +244,68 @@ namespace AndroidXMapper
 			return dic;
 		}
 
-		private List<BindingType> GetAllTypes(string api)
+		private List<BindingType> GetAllTypes(string assemblyPath)
 		{
-			if (string.IsNullOrWhiteSpace(api))
-				throw new ArgumentException($"Invalid api.xml path: {api}", nameof(api));
-			if (!File.Exists(api))
-				throw new FileNotFoundException($"The api.xml does not exist: {api}");
+			if (string.IsNullOrWhiteSpace(assemblyPath))
+				throw new ArgumentException($"Invalid assembly path: {assemblyPath}", nameof(assemblyPath));
+			if (!File.Exists(assemblyPath))
+				throw new FileNotFoundException($"The assembly does not exist: {assemblyPath}");
 
-			var xdoc = XDocument.Load(api);
-			var classes = xdoc.Descendants("class");
-			return classes.Select(GetFullType).ToList();
+			using (var assembly = AssemblyDefinition.ReadAssembly(assemblyPath))
+			{
+				var types = assembly.MainModule.GetTypes();
+				return types.Where(IsValidType).Select(GetFullType).ToList();
+			}
 		}
 
-		private BindingType GetFullType(XElement element)
+		private bool IsValidType(TypeDefinition typeDefinition)
 		{
-			var assembly = GetAttributeValue(element, "Xamarin.AndroidX.Internal.InjectedAssemblyNameAttribute", "AssemblyName");
-			var ns = "";
-			var name = element.Attribute("name").Value;
-			var java = GetJavaType(element);
+			if (typeDefinition.Namespace == "Java.Interop" && typeDefinition.Name.EndsWith("__TypeRegistrations"))
+				return false;
 
-			var parent = element.Parent?.Parent;
+			if (typeDefinition.Name == "<Module>" || typeDefinition.Name.StartsWith("<>c__DisplayClass"))
+				return false;
+
+			return true;
+		}
+
+		private BindingType GetFullType(TypeDefinition typeDefinition)
+		{
+			var assembly = GetAttributeValue(typeDefinition, "Xamarin.AndroidX.Internal.InjectedAssemblyNameAttribute");
+			var ns = typeDefinition.Namespace;
+			var name = typeDefinition.Name;
+			var java = GetJavaType(typeDefinition);
+
+			var parent = typeDefinition.DeclaringType;
 			while (parent != null)
 			{
-				if (parent.Name == "class")
-				{
-					name = parent.Attribute("name").Value + "." + name;
-					assembly = GetAttributeValue(parent, "Xamarin.AndroidX.Internal.InjectedAssemblyNameAttribute", "AssemblyName");
-				}
-				else if (parent.Name == "namespace")
-				{
-					ns = parent.Attribute("name").Value;
-				}
-
-				parent = parent.Parent?.Parent;
+				assembly = GetAttributeValue(parent, "Xamarin.AndroidX.Internal.InjectedAssemblyNameAttribute");
+				ns = parent.Namespace;
+				name = parent.Name + "." + name;
+				parent = parent.DeclaringType;
 			}
 
 			return new BindingType(new FullType(assembly, ns, name), java);
 		}
 
-		private static string GetAttributeValue(XElement element, string attributeType, string propertyName)
+		private static string GetAttributeValue(TypeDefinition typeDefinition, string attributeType, int index = 0)
 		{
-			var attributeElement = element
-				?.Element("attributes")
-				?.Elements("attribute")
-				?.FirstOrDefault(e => e.Attribute("name")?.Value == attributeType);
+			var attribute = typeDefinition
+				?.CustomAttributes
+				?.FirstOrDefault(a => a.AttributeType.FullName == attributeType);
 
-			var value = attributeElement
-				?.Element("properties")
-				?.Elements("property")
-				?.FirstOrDefault(e => e.Attribute("name")?.Value == propertyName)
-				?.Attribute("value")?.Value ?? string.Empty;
+			var value = attribute
+				?.ConstructorArguments
+				?.Skip(index)
+				?.FirstOrDefault()
+				.Value as string ?? string.Empty;
 
 			return value;
 		}
 
-		private FullType GetJavaType(XElement element)
+		private FullType GetJavaType(TypeDefinition typeDefinition)
 		{
-			var javaType = GetAttributeValue(element, "Android.Runtime.RegisterAttribute", "Name");
+			var javaType = GetAttributeValue(typeDefinition, "Android.Runtime.RegisterAttribute");
 			var parts = javaType?.Split('/');
 			var type = parts?.LastOrDefault()?.Split('$');
 			if (parts?.Length > 0 && type?.Length > 0)
