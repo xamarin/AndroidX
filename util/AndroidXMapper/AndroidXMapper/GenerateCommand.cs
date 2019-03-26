@@ -16,8 +16,8 @@ namespace AndroidXMapper
 				"",
 				Help,
 				"",
-				{ "s|support=", "The path to the merged Android.Support api-info.xml", v => AndroidSupportApi = v },
-				{ "x|androidx=", "The path to the merged AndroidX api-info.xml", v => AndroidXApi = v },
+				{ "s|support=", "The path to the merged Android.Support assembly", v => AndroidSupportAssembly = v },
+				{ "x|androidx=", "The path to the merged AndroidX assembly", v => AndroidXAssembly = v },
 				{ "j|java=", "The path to the Java mapping csv", v => JavaTypeMapping = v },
 				{ "m|override=", "The path to the mapping overides csv", v => OverrideMapping = v },
 				{ "o|output=", "The output path to use for the generated mapping", v => SetOutputPath(v) },
@@ -45,9 +45,9 @@ namespace AndroidXMapper
 
 		public bool ExcludeWarnings { get; private set; }
 
-		public string AndroidSupportApi { get; private set; }
+		public string AndroidSupportAssembly { get; private set; }
 
-		public string AndroidXApi { get; private set; }
+		public string AndroidXAssembly { get; private set; }
 
 		public string JavaTypeMapping { get; private set; }
 
@@ -76,7 +76,7 @@ namespace AndroidXMapper
 					? Console.Out
 					: (writer = new StreamWriter(OutputPath));
 
-				var generator = new MappingGenerator(AndroidSupportApi, AndroidXApi, OverrideMapping, JavaTypeMapping);
+				var generator = new MappingGenerator(AndroidSupportAssembly, AndroidXAssembly, OverrideMapping, JavaTypeMapping);
 				generator.Generate(outputWriter, !ExcludeWarnings);
 
 				return 0;
@@ -98,25 +98,25 @@ namespace AndroidXMapper
 		{
 			var hasError = false;
 
-			if (string.IsNullOrEmpty(AndroidSupportApi))
+			if (string.IsNullOrEmpty(AndroidSupportAssembly))
 			{
 				Console.Error.WriteLine($"{Program.Name}: Missing required argument `--support=PATH`.");
 				hasError = true;
 			}
-			else if (!File.Exists(AndroidSupportApi))
+			else if (!File.Exists(AndroidSupportAssembly))
 			{
-				Console.Error.WriteLine($"{Program.Name}: File does not exist: `{AndroidSupportApi}`.");
+				Console.Error.WriteLine($"{Program.Name}: File does not exist: `{AndroidSupportAssembly}`.");
 				hasError = true;
 			}
 
-			if (string.IsNullOrEmpty(AndroidXApi))
+			if (string.IsNullOrEmpty(AndroidXAssembly))
 			{
 				Console.Error.WriteLine($"{Program.Name}: Missing required argument `--androidx=PATH`.");
 				hasError = true;
 			}
-			else if (!File.Exists(AndroidXApi))
+			else if (!File.Exists(AndroidXAssembly))
 			{
-				Console.Error.WriteLine($"{Program.Name}: File does not exist: `{AndroidXApi}`.");
+				Console.Error.WriteLine($"{Program.Name}: File does not exist: `{AndroidXAssembly}`.");
 				hasError = true;
 			}
 
