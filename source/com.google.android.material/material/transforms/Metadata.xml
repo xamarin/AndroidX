@@ -88,4 +88,14 @@
     <!--    
     -->
     <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget</attr>
+
+    <attr 
+        path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" 
+        name="managedType"
+        >
+        
+    </attr>
+
+
+
 </metadata>

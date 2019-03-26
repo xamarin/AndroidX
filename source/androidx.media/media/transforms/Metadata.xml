@@ -58,4 +58,18 @@
     <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRepeatMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">repeatMode</attr>
     <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setShuffleMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">shuffleMode</attr>
     <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='skipToQueueItem' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]" name="managedName">id</attr>
+    
+    <attr 
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" 
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr 
+        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" 
+        name="visibility"
+        >
+        public
+    </attr>
+    
 </metadata>

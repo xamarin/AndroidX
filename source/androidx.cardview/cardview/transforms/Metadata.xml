@@ -1,4 +1,10 @@
 ﻿<metadata>
     <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='CardViewDelegate']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='RoundRectDrawableWithShadow']" name="visibility">public</attr>
+    
+    <attr path="/api/package[@name='androidx.cardview.widget']/class[@name='RoundRectDrawableWithShadow']" name="visibility">public</attr>
+    <attr path="/api/package[@name='androidx.cardview.widget']/interface[@name='CardViewDelegate']" name="visibility">public</attr>
+    <attr path="/api/package[@name='androidx.cardview.widget']/interface[@name='RoundRectDrawableWithShadow.RoundRectHelper']" name="visibility">public</attr>
+    
+    
 </metadata>
