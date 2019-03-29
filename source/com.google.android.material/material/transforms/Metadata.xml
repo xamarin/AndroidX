@@ -91,9 +91,9 @@
 
     <attr 
         path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" 
-        name="managedType"
+        name="visibility"
         >
-        
+        public
     </attr>
 
 

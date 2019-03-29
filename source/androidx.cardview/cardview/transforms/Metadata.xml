@@ -6,5 +6,9 @@
     <attr path="/api/package[@name='androidx.cardview.widget']/interface[@name='CardViewDelegate']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.cardview.widget']/interface[@name='RoundRectDrawableWithShadow.RoundRectHelper']" name="visibility">public</attr>
     
-    
+    <attr
+        path="androidx.cardview.widget"
+        >
+        
+    </attr>
 </metadata>
