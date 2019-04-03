@@ -326,6 +326,10 @@ Task ("clean")
 	CleanDirectories ("./**/packages");
 });
 
+Task ("packages")
+	.IsDependentOn ("binderate")
+	.IsDependentOn ("nuget");
+
 Task ("full-run")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
