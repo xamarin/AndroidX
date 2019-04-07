@@ -22,18 +22,18 @@
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']" name="managedName">IOnTabSelectedListener</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.OnTabSelectedListener']" name="managedName">IOnTabSelectedListener2</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="type">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="type">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="type">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedName">tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedName">tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedName">tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Xamarin.Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <!-- Remove some non-public interfaces that the generator tries to bind -->
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='Snackbar.SnackbarLayout.OnAttachStateChangeListener']" />
@@ -87,7 +87,7 @@
     -->
     <!--    
     -->
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget</attr>
+    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Google.Android.Material.CircularReveal.ICircularRevealWidget</attr>
 
     <attr 
         path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" 

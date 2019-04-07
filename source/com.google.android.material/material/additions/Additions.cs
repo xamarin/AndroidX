@@ -16,7 +16,7 @@ namespace AndroidX.Material
 
 }
 
-namespace Xamarin.Google.Android.Material.AppBar
+namespace Google.Android.Material.AppBar
 {
 
     //public partial class AppBarLayout
@@ -55,7 +55,7 @@ namespace Xamarin.Google.Android.Material.AppBar
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Xamarin.Google.Android.Material.AppBar.CollapsingToolbarLayout __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.AppBar.CollapsingToolbarLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Google.Android.Material.AppBar.CollapsingToolbarLayout __this = global::Java.Lang.Object.GetObject<global::Google.Android.Material.AppBar.CollapsingToolbarLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
@@ -82,7 +82,7 @@ namespace Xamarin.Google.Android.Material.AppBar
     }
 }
 
-namespace Xamarin.Google.Android.Material.Snackbar
+namespace Google.Android.Material.Snackbar
 {
     public partial class Snackbar
     {
@@ -115,7 +115,7 @@ namespace Xamarin.Google.Android.Material.Snackbar
     }
 }
 
-namespace Xamarin.Google.Android.Material.Internal
+namespace Google.Android.Material.Internal
 {
     public partial class VisibilityAwareImageButton
     {
@@ -135,7 +135,7 @@ namespace Xamarin.Google.Android.Material.Internal
 
         static void n_SetVisibility_I (IntPtr jnienv, IntPtr native__this, int native_visibility)
         {
-            global::Xamarin.Google.Android.Material.Internal.VisibilityAwareImageButton __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.Internal.VisibilityAwareImageButton> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Google.Android.Material.Internal.VisibilityAwareImageButton __this = global::Java.Lang.Object.GetObject<global::Google.Android.Material.Internal.VisibilityAwareImageButton> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             global::Android.Views.ViewStates visibility = (global::Android.Views.ViewStates)native_visibility;
             __this.SetVisibility (visibility);
         }
@@ -207,7 +207,7 @@ namespace Xamarin.Google.Android.Material.Internal
     //}
 }
 
-namespace Xamarin.Google.Android.Material.Tabs
+namespace Google.Android.Material.Tabs
 {
     public partial class TabLayout
     {
@@ -234,7 +234,7 @@ namespace Xamarin.Google.Android.Material.Tabs
             static void n_SetSelected_Z (IntPtr jnienv, IntPtr native__this, bool selected)
             {
 
-                global::Xamarin.Google.Android.Material.Tabs.TabLayout.TabView __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.Tabs.TabLayout.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+                global::Google.Android.Material.Tabs.TabLayout.TabView __this = global::Java.Lang.Object.GetObject<global::Google.Android.Material.Tabs.TabLayout.TabView> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
                 __this.SetSelected (selected);
             }
 #pragma warning restore 0169
@@ -261,7 +261,7 @@ namespace Xamarin.Google.Android.Material.Tabs
     }
 }
 
-namespace Xamarin.Google.Android.Material.TextField 
+namespace Google.Android.Material.TextField 
 {
 
     public partial class TextInputLayout
@@ -286,7 +286,7 @@ namespace Xamarin.Google.Android.Material.TextField
 
         static void n_SetEnabled_Z (IntPtr jnienv, IntPtr native__this, bool enabled)
         {
-            global::Xamarin.Google.Android.Material.TextField.TextInputLayout __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.TextField.TextInputLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Google.Android.Material.TextField.TextInputLayout __this = global::Java.Lang.Object.GetObject<global::Google.Android.Material.TextField.TextInputLayout> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetEnabled (enabled);
         }
 #pragma warning restore 0169
@@ -313,7 +313,7 @@ namespace Xamarin.Google.Android.Material.TextField
 }
 
 
-// namespace Xamarin.Google.Android.Material.Animation
+// namespace Google.Android.Material.Animation
 // {
 
 // 	public partial class ArgbEvaluatorCompat
@@ -333,7 +333,7 @@ namespace Xamarin.Google.Android.Material.TextField
 // 	}
 // }
 
-// namespace Xamarin.Google.Android.Material.CircularReveal
+// namespace Google.Android.Material.CircularReveal
 // {
 // 	public partial class CircularRevealWidgetCircularRevealEvaluator
 // 	{
@@ -345,7 +345,7 @@ namespace Xamarin.Google.Android.Material.TextField
 // }
 
 
-namespace Xamarin.Google.Android.Material.BottomNavigation
+namespace Google.Android.Material.BottomNavigation
 {
 
     // Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.material.bottomnavigation']/class[@name='BottomNavigationItemView']"
@@ -376,7 +376,7 @@ namespace Xamarin.Google.Android.Material.BottomNavigation
 
                 static void n_SetEnabled_Z(IntPtr jnienv, IntPtr native__this, bool enabled)
                 {
-                    global::Xamarin.Google.Android.Material.BottomNavigation.BottomNavigationItemView __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.BottomNavigation.BottomNavigationItemView>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+                    global::Google.Android.Material.BottomNavigation.BottomNavigationItemView __this = global::Java.Lang.Object.GetObject<global::Google.Android.Material.BottomNavigation.BottomNavigationItemView>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
                     __this.SetEnabled(enabled);
                 }
         #pragma warning restore 0169
@@ -399,12 +399,12 @@ namespace Xamarin.Google.Android.Material.BottomNavigation
     }
 }
 
-namespace Xamarin.Google.Android.Material.Internal
+namespace Google.Android.Material.Internal
 {
 
     // Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.material.internal']/class[@name='NavigationMenuItemView']"
     //[global::Android.Runtime.Register("com/google/android/material/internal/NavigationMenuItemView", DoNotGenerateAcw = true)]
-    public partial class NavigationMenuItemView : global::Xamarin.Google.Android.Material.Internal.ForegroundLinearLayout, global::AndroidX.AppCompat.View.Menu.IMenuViewItemView
+    public partial class NavigationMenuItemView : global::Google.Android.Material.Internal.ForegroundLinearLayout, global::AndroidX.AppCompat.View.Menu.IMenuViewItemView
     {
         bool enabled;
         public bool Enabled
@@ -431,7 +431,7 @@ namespace Xamarin.Google.Android.Material.Internal
 
         static void n_SetEnabled_Z(IntPtr jnienv, IntPtr native__this, bool enabled)
         {
-            global::Xamarin.Google.Android.Material.Internal.NavigationMenuItemView __this = global::Java.Lang.Object.GetObject<global::Xamarin.Google.Android.Material.Internal.NavigationMenuItemView>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+            global::Google.Android.Material.Internal.NavigationMenuItemView __this = global::Java.Lang.Object.GetObject<global::Google.Android.Material.Internal.NavigationMenuItemView>(jnienv, native__this, JniHandleOwnership.DoNotTransfer);
             __this.SetEnabled(enabled);
         }
 #pragma warning restore 0169
@@ -454,7 +454,7 @@ namespace Xamarin.Google.Android.Material.Internal
     }
 }
 
-namespace Xamarin.Google.Android.Material.CircularReveal
+namespace Google.Android.Material.CircularReveal
 {
     // Metadata.xml XPath class reference: path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']"
     //[global::Android.Runtime.Register("com/google/android/material/circularreveal/CircularRevealWidget$CircularRevealProperty", DoNotGenerateAcw = true)]
@@ -463,7 +463,7 @@ namespace Xamarin.Google.Android.Material.CircularReveal
         public override Java.Lang.Object Get(Java.Lang.Object @object)
         {
 
-            return this.Get(@object as Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget);
+            return this.Get(@object as Google.Android.Material.CircularReveal.ICircularRevealWidget);
         }
     }
 
@@ -472,7 +472,7 @@ namespace Xamarin.Google.Android.Material.CircularReveal
         public override Java.Lang.Object Get(Java.Lang.Object @object)
         {
 
-            return this.Get(@object as Xamarin.Google.Android.Material.CircularReveal.ICircularRevealWidget);
+            return this.Get(@object as Google.Android.Material.CircularReveal.ICircularRevealWidget);
         }
     }
 }
