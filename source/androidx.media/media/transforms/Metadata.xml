@@ -72,4 +72,12 @@
         public
     </attr>
     
+    <attr 
+        path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" 
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    
 </metadata>

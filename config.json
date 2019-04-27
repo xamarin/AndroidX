@@ -25,28 +25,28 @@
 		{
 			"groupId" : "androidx.annotation",
 			"artifactId" : "annotation",
-			"version" : "1.0.0",
+			"version" : "1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Annotation",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.appcompat",
 			"artifactId" : "appcompat",
-			"version" : "1.0.0",
+			"version" : "1.0.2",
 			"nugetId" : "Xamarin.AndroidX.AppCompat",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.arch.core",
 			"artifactId" : "core-common",
-			"version" : "2.0.0",
+			"version" : "2.0.1",
 			"nugetId" : "Xamarin.AndroidX.Arch.Core.Common",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.arch.core",
 			"artifactId" : "core-runtime",
-			"version" : "2.0.0",
+			"version" : "2.0.1",
 			"nugetId" : "Xamarin.AndroidX.Arch.Core.Runtime",
 			"dependencyOnly" : false
 		}
@@ -62,6 +62,13 @@
 			"artifactId" : "browser",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Browser",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.core",
+			"artifactId" : "core",
+			"version" : "1.0.1",
+			"nugetId" : "Xamarin.AndroidX.Core",
 			"dependencyOnly" : false
 		}
 		,{
@@ -107,13 +114,6 @@
 			"dependencyOnly" : false
 		}
 		,{
-			"groupId" : "androidx.core",
-			"artifactId" : "core",
-			"version" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Core",
-			"dependencyOnly" : false
-		}
-		,{
 			"groupId" : "androidx.cursoradapter",
 			"artifactId" : "cursoradapter",
 			"version" : "1.0.0",
@@ -130,7 +130,7 @@
 		,{
 			"groupId" : "androidx.documentfile",
 			"artifactId" : "documentfile",
-			"version" : "1.0.0",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.DocumentFile",
 			"dependencyOnly" : false
 		}
@@ -326,7 +326,7 @@
 		,{
 			"groupId" : "androidx.media",
 			"artifactId" : "media",
-			"version" : "1.0.0",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Media",
 			"dependencyOnly" : false
 		}
@@ -431,14 +431,14 @@
 		,{
 			"groupId" : "androidx.sqlite",
 			"artifactId" : "sqlite",
-			"version" : "2.0.0",
+			"version" : "2.0.1",
 			"nugetId" : "Xamarin.AndroidX.Sqlite",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.sqlite",
 			"artifactId" : "sqlite-framework",
-			"version" : "2.0.0",
+			"version" : "2.0.1",
 			"nugetId" : "Xamarin.AndroidX.Sqlite.Framework",
 			"dependencyOnly" : false
 		}
@@ -452,7 +452,7 @@
 		,{
 			"groupId" : "androidx.transition",
 			"artifactId" : "transition",
-			"version" : "1.0.0",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Transition",
 			"dependencyOnly" : false
 		}
@@ -466,7 +466,7 @@
 		,{
 			"groupId" : "androidx.vectordrawable",
 			"artifactId" : "vectordrawable",
-			"version" : "1.0.0",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.VectorDrawable",
 			"dependencyOnly" : false
 		}
@@ -508,7 +508,7 @@
 		,{
 			"groupId" : "androidx.work",
 			"artifactId" : "work-runtime",
-			"version" : "2.0.0-rc01",
+			"version" : "2.0.1",
 			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
 			"dependencyOnly" : false
 		}
