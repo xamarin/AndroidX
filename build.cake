@@ -37,8 +37,7 @@ var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-
 var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.1/api-info.xml";
 
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
-var SUPPORT_MERGED_DLL_BUILD_ID = EnvironmentVariable("SUPPORT_MERGED_DLL_BUILD_ID") ?? "2701136";
-var SUPPORT_MERGED_DLL_ZIP_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_ZIP_URL") ?? $"https://devdiv.visualstudio.com/0bdbc590-a062-4c3f-b0f6-9383f67865ee/_apis/build/builds/{SUPPORT_MERGED_DLL_BUILD_ID}/artifacts?artifactName=NuGet&api-version=5.1-preview.5&%24format=zip";	
+var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.Merged.dll";	
 
 var MONODROID_BASE_PATH = (DirectoryPath)"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/";
 if (IsRunningOnWindows ()) {
@@ -247,12 +246,8 @@ Task ("generate-mapping")
 {
 	// download the AndroidSupport.Merged.dll from a past build
 	if (!FileExists ("./output/AndroidSupport.Merged.dll")) {
-		EnsureDirectoryExists ("./output/temp/");
-		CleanDirectories ("./output/temp");
-		DownloadFile (SUPPORT_MERGED_DLL_ZIP_URL, "./output/temp/AndroidSupport.NuGet.zip");
-		Unzip ("./output/temp/AndroidSupport.NuGet.zip", "./output/temp/");
-		CopyFileToDirectory ("./output/temp/nuget/AndroidSupport.Merged.dll", "./output/");
-		DeleteDirectory ("./output/temp", true);
+		EnsureDirectoryExists ("./output/");
+		DownloadFile (SUPPORT_MERGED_DLL_URL, "./output/AndroidSupport.Merged.dll");
 	}
 
 	var result = StartProcess(ANDROIDX_MAPPER_EXE,
