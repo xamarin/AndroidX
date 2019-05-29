@@ -96,7 +96,9 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\" />
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar" />
+      } else {
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" />
       }
     }   
   </ItemGroup>
@@ -113,7 +115,7 @@
       Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
       />
       } else {
-    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
+    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }
     }
   </ItemGroup>
