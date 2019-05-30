@@ -30,7 +30,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865352</PackageProjectUrl>
     <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865381</PackageLicenseUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/icons/@(Model.Name)_128x128.png</PackageIconUrl>
-    <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+    <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 

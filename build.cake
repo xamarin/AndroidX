@@ -48,9 +48,15 @@ var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
 
 var ANDROIDX_MAPPER_EXE = MakeAbsolute ((FilePath)$"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe");
 
+var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "";
+if (string.IsNullOrEmpty(BUILD_NUMBER)) {
+    BUILD_NUMBER = "0";
+}
+
 Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
 Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
 Information ("ANDROIDX_MAPPER_EXE: {0}", ANDROIDX_MAPPER_EXE);
+Information ("BUILD_NUMBER:        {0}", BUILD_NUMBER);
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -110,6 +116,7 @@ Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
+	// package the stable release
 	MSBuild ("./generated/AndroidX.sln", c => {
 		c.Configuration = BUILD_CONFIG;
 		c.MaxCpuCount = 0;
@@ -120,6 +127,19 @@ Task("nuget")
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+	});
+	// package the preview release
+	MSBuild ("./generated/AndroidX.sln", c => {
+		c.Configuration = BUILD_CONFIG;
+		c.MaxCpuCount = 0;
+		c.Verbosity = VERBOSITY;
+		c.Targets.Clear();
+		c.Targets.Add("Pack");
+		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
+		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
+		c.Properties.Add("DesignTimeBuild", new [] { "false" });
+		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
+		c.Properties.Add("PackageVersionSuffix", new [] { "-preview-" + BUILD_NUMBER });
 	});
 
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
