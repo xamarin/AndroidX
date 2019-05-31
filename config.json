@@ -338,6 +338,13 @@
 			"dependencyOnly" : false
 		}
 		,{
+			"groupId" : "androidx.multidex",
+			"artifactId" : "multidex",
+			"version" : "2.0.1",
+			"nugetId" : "Xamarin.AndroidX.MultiDex",
+			"dependencyOnly" : false
+		}
+		,{
 			"groupId" : "androidx.palette",
 			"artifactId" : "palette",
 			"version" : "1.0.0",
