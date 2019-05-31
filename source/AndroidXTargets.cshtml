@@ -31,6 +31,11 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
+      if ($"{art.MavenGroupId}.{art.MavenArtifactId}" == "androidx.multidex.multidex") {
+        // multidex is a special case that only includes the aar conditionally
+        continue;
+      }
+
       if (art.MavenArtifactPackaging == "aar") {
     <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
