@@ -1,12 +1,12 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[1]" name="managedName">parent</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[2]" name="managedName">child</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[3]" name="managedName">parentWidthMeasureSpec</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[4]" name="managedName">widthUsed</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[5]" name="managedName">parentHeightMeasureSpec</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[6]" name="managedName">heightUsed</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]" name="managedName">visibility</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1]/parameter[1]" name="managedName">menuItem</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[1]" name="managedName">appBarLayout</attr>
-    <attr path="/api/package[@name='androidx.coordinatorlayout.widget']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[2]" name="managedName">verticalOffset</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[2]" name="managedName">child</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[3]" name="managedName">parentWidthMeasureSpec</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[4]" name="managedName">widthUsed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[5]" name="managedName">parentHeightMeasureSpec</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[6]" name="managedName">heightUsed</attr>
+    <attr path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='com.google.android.material.floatingactionbutton.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]" name="managedName">listener</attr>
+    <attr path="/api/package[@name='com.google.android.material.navigation']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1]/parameter[1]" name="managedName">menuItem</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[1]" name="managedName">appBarLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[2]" name="managedName">verticalOffset</attr>
 </metadata>

@@ -17,7 +17,16 @@
     <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='MatrixEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Matrix'] and parameter[3][@type='android.graphics.Matrix']]/parameter[3]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='MatrixEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Matrix'] and parameter[3][@type='android.graphics.Matrix']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo'] and parameter[3][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2 and parameter[1][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[2][@type='int']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+    <!--
+      OnOffsetChangedListener now implements BaseOnOffsetChangedListener with just the same method
+      This causes some inheritance problems in .NET so we're going to hide this base interface and make sure everywhere that uses it is patched up and uses OnOffsetChangedListener instead
+      Luckily for now any methods that take BaseOnOffsetChangedListener also have an overload for OnOffsetChangedListener
+     -->
+    <remove-node path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.BaseOnOffsetChangedListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/implements[@name='com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener']" />
+    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="type">com.google.android.material.appbar.AppBarLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="managedType">Google.Android.Material.AppBar.AppBarLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="managedName">appBarLayout</attr>
     <!-- Google added a new leve in between, so we call that 2 :( -->
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']" name="managedName">IOnTabSelectedListener</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.OnTabSelectedListener']" name="managedName">IOnTabSelectedListener2</attr>
@@ -35,8 +44,6 @@
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <!-- Remove some non-public interfaces that the generator tries to bind -->
-    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='Snackbar.SnackbarLayout.OnLayoutChangeListener']" />
-    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='Snackbar.SnackbarLayout.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
     <!--
@@ -89,13 +96,6 @@
     -->
     <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Google.Android.Material.CircularReveal.ICircularRevealWidget</attr>
 
-    <attr 
-        path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" 
-        name="visibility"
-        >
-        public
-    </attr>
-
-
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" name="visibility">public</attr>
 
 </metadata>
