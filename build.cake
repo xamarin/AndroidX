@@ -139,7 +139,7 @@ Task("nuget")
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-		c.Properties.Add("PackageVersionSuffix", new [] { "-preview-" + BUILD_NUMBER });
+		c.Properties.Add("PackageVersionSuffix", new [] { "-preview." + BUILD_NUMBER });
 	});
 
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
