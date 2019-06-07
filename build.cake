@@ -48,6 +48,7 @@ var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
 
 var ANDROIDX_MAPPER_EXE = MakeAbsolute ((FilePath)$"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe");
 
+var PREVIEW_LABEL = EnvironmentVariable("PREVIEW_LABEL") ?? "preview";
 var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "";
 if (string.IsNullOrEmpty(BUILD_NUMBER)) {
     BUILD_NUMBER = "0";
@@ -139,7 +140,7 @@ Task("nuget")
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-		c.Properties.Add("PackageVersionSuffix", new [] { "-preview." + BUILD_NUMBER });
+		c.Properties.Add("PackageVersionSuffix", new [] { "-" + PREVIEW_LABEL + "." + BUILD_NUMBER });
 	});
 
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
