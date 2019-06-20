@@ -1,12 +1,67 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[1]" name="managedName">parent</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[2]" name="managedName">child</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[3]" name="managedName">parentWidthMeasureSpec</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[4]" name="managedName">widthUsed</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[5]" name="managedName">parentHeightMeasureSpec</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[6]" name="managedName">heightUsed</attr>
-    <attr path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='com.google.android.material.floatingactionbutton.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]" name="managedName">listener</attr>
-    <attr path="/api/package[@name='com.google.android.material.navigation']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1]/parameter[1]" name="managedName">menuItem</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='onMeasureChild' and count(parameter)=6]/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='onMeasureChild' and count(parameter)=6]/parameter[2]" name="managedName">child</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='onMeasureChild' and count(parameter)=6]/parameter[3]" name="managedName">parentWidthMeasureSpec</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='onMeasureChild' and count(parameter)=6]/parameter[4]" name="managedName">widthUsed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='onMeasureChild' and count(parameter)=6]/parameter[5]" name="managedName">parentHeightMeasureSpec</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='onMeasureChild' and count(parameter)=6]/parameter[6]" name="managedName">heightUsed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='setLeftAndRightOffset' and count(parameter)=1]/parameter[1]" name="managedName">offset</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[contains(@name,'Behavior')]/method[@name='setTopAndBottomOffset' and count(parameter)=1]/parameter[1]" name="managedName">offset</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.BaseBehavior.BaseDragCallback']/method[@name='canDrag' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]" name="managedName">@object</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='setDragCallback' and count(parameter)=1]/parameter[1]" name="managedName">callback</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4]/parameter[1]" name="managedName">coordinatorLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4]/parameter[2]" name="managedName">abl</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4]/parameter[3]" name="managedName">target</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4]/parameter[4]" name="managedName">type</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6]/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6]/parameter[2]" name="managedName">child</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6]/parameter[3]" name="managedName">directTargetChild</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6]/parameter[4]" name="managedName">target</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6]/parameter[5]" name="managedName">nestedScrollAxes</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6]/parameter[6]" name="managedName">type</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState' and count(parameter)=2]/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState' and count(parameter)=2]/parameter[2]" name="managedName">abl</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3]/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3]/parameter[2]" name="managedName">appBarLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3]/parameter[3]" name="managedName">state</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[1]" name="managedName">coordinatorLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[2]" name="managedName">child</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[3]" name="managedName">target</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[4]" name="managedName">dxConsumed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[5]" name="managedName">dyConsumed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[6]" name="managedName">dxUnconsumed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[7]" name="managedName">dyUnconsumed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8]/parameter[8]" name="managedName">type</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[1]" name="managedName">coordinatorLayout</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[2]" name="managedName">child</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[3]" name="managedName">target</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[4]" name="managedName">dx</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[5]" name="managedName">dy</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[6]" name="managedName">consumed</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7]/parameter[7]" name="managedName">type</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3]/parameter[1]" name="managedName">parent</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3]/parameter[2]" name="managedName">abl</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3]/parameter[3]" name="managedName">layoutDirection</attr>
+
     <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[1]" name="managedName">appBarLayout</attr>
     <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged' and count(parameter)=2]/parameter[2]" name="managedName">verticalOffset</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.behavior']/interface[@name='SwipeDismissBehavior.OnDismissListener']/method[@name='onDismiss' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedName">view</attr>
+    <attr path="/api/package[@name='com.google.android.material.behavior']/interface[@name='SwipeDismissBehavior.OnDismissListener']/method[@name='onDragStateChanged' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">state</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.bottomnavigation']/interface[@name='BottomNavigationView.OnNavigationItemReselectedListener']/method[@name='onNavigationItemReselected' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]" name="managedName">item</attr>
+    <attr path="/api/package[@name='com.google.android.material.bottomnavigation']/interface[@name='BottomNavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]" name="managedName">item</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.bottomsheet']/class[@name='BottomSheetBehavior.BottomSheetCallback']/method[@name='onSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[1]" name="managedName">bottomSheet</attr>
+    <attr path="/api/package[@name='com.google.android.material.bottomsheet']/class[@name='BottomSheetBehavior.BottomSheetCallback']/method[@name='onSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[2]" name="managedName">newState</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='com.google.android.material.floatingactionbutton.FloatingActionButton.OnVisibilityChangedListener']]/parameter[1]" name="managedName">listener</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.navigation']/interface[@name='NavigationView.OnNavigationItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1]/parameter[1]" name="managedName">menuItem</attr>
+
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedName">tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedName">tab</attr>
 </metadata>

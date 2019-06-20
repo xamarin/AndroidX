@@ -1,3 +1,3 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.leanback.preference.leanback']/interface[@name='LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener']/method[@name='onItemClick']/parameter[1]" name="managedName">viewHolder</attr>
+    <attr path="/api/package[@name='androidx.leanback.preference']/interface[@name='LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener']/method[@name='onItemClick' and count(parameter)=1 and parameter[1][@type='androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder']]/parameter[1]" name="managedName">viewHolder</attr>
 </metadata>

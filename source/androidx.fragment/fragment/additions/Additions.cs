@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using Android.Runtime;
 
-namespace AndroidX.Fragment.Fragment
+namespace AndroidX.Fragment.App
 {
-    public partial class FragmentActivity
-    {
-    }
+	public partial class FragmentActivity
+	{
+		public override AndroidX.Lifecycle.Lifecycle Lifecycle => base.Lifecycle;
+	}
 }

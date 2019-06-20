@@ -1,5 +1,1 @@
-﻿<metadata>
-    <attr path="/api/package[@name='androidx.customview.view']/interface[@name='AsyncLayoutInflater.OnInflateFinishedListener']/method[@name='onInflateFinished' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='int'] and parameter[3][@type='android.view.ViewGroup']]/parameter[1]" name="managedName">view</attr>
-    <attr path="/api/package[@name='androidx.customview.view']/interface[@name='AsyncLayoutInflater.OnInflateFinishedListener']/method[@name='onInflateFinished' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='int'] and parameter[3][@type='android.view.ViewGroup']]/parameter[2]" name="managedName">resid</attr>
-    <attr path="/api/package[@name='androidx.customview.view']/interface[@name='AsyncLayoutInflater.OnInflateFinishedListener']/method[@name='onInflateFinished' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='int'] and parameter[3][@type='android.view.ViewGroup']]/parameter[3]" name="managedName">parent</attr>
-</metadata>
+﻿<metadata></metadata>

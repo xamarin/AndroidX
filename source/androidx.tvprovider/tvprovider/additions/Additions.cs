@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace AndroidX.TvProvider.Media.TV
+namespace AndroidX.TvProvider.Media.Tv
 {
 	public partial class Program
 	{
-		//public int CompareTo(global::AndroidX.TvProvider.Media.TV.Program other)
-		//{
-		//	return CompareTo((global::Java.Lang.Object)other);
-		//}
-
+		public int CompareTo(AndroidX.TvProvider.Media.Tv.Program other)
+		{
+			return CompareTo((Java.Lang.Object)other);
+		}
 	}
 }

@@ -1,83 +1,10 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaSessionCompat.MediaSessionImplBase.Command']/field[@name='command']" name="managedName">CommandValue</attr>
+    <attr path="/api/package[@name='android.support.v4.media.session']/class[@name='MediaSessionCompat.MediaSessionImplBase.Command']/field[@name='command']" name="managedName">CommandValue</attr>
+
     <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserServiceCompat.ServiceCallbacks']" name="visibility">internal</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
-    <remove-node path="/api/package[@name='androidx.media']/class[@name='MediaBrowserCompat.MediaBrowserImplApi21']" />
-    <remove-node path="/api/package[@name='androidx.media']/class[@name='MediaBrowserCompat.MediaBrowserImplApi23']" />
-    <remove-node path="/api/package[@name='androidx.media']/class[@name='MediaBrowserCompat.MediaBrowserImplApi26']" />
-    <remove-node path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat.MediaBrowserServiceImplApi21']" />
-    <remove-node path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat.MediaBrowserServiceImplApi23']" />
-    <remove-node path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat.MediaBrowserServiceImplApi26']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.MediaControllerImplApi21']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.MediaControllerImplApi23']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.MediaControllerImplApi24']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControlsApi21']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControlsApi23']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControlsApi24']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaSessionCompat.MediaSessionImplApi18']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaSessionCompat.MediaSessionImplApi19']" />
-    <remove-node path="/api/package[@name='androidx.media.session']/class[@name='MediaSessionCompat.MediaSessionImplApi21']" />
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onConnectionFailed' and count(parameter)=1 and parameter[1][@type='android.os.Messenger']]/parameter[1]" name="managedName">callback</attr>
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[1]" name="managedName">callback</attr>
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[2]" name="managedName">parentId</attr>
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[3]" name="managedName">list</attr>
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[4]" name="managedName">options</attr>
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[5]" name="managedName">notifyChildrenChangedOptionsA</attr>
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserCompat.MediaBrowserServiceCallbackImpl']/method[@name='onLoadChildren' and count(parameter)=5 and parameter[1][@type='android.os.Messenger'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.util.List'] and parameter[4][@type='android.os.Bundle'] and parameter[5][@type='android.os.Bundle']]/parameter[1]" name="managedName">notifyChildrenChangedOptionsB</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onGetRoot' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[1]" name="managedName">clientPackageName</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onGetRoot' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[2]" name="managedName">clientUid</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onGetRoot' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='android.os.Bundle']]/parameter[3]" name="managedName">rootHints</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='VolumeProviderCompat.Callback']/method[@name='onVolumeChanged' and count(parameter)=1 and parameter[1][@type='androidx.media.VolumeProviderCompat']]/parameter[1]" name="managedName">volumeProvider</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onLoadChildren' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='androidx.media.MediaBrowserServiceCompat.Result&lt;java.util.List&lt;androidx.media.MediaBrowserCompat.MediaItem&gt;&gt;']]/parameter[1]" name="managedName">parentId</attr>
-    <attr path="/api/package[@name='androidx.media']/class[@name='MediaBrowserServiceCompat']/method[@name='onLoadChildren' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='androidx.media.MediaBrowserServiceCompat.Result&lt;java.util.List&lt;androidx.media.MediaBrowserCompat.MediaItem&gt;&gt;']]/parameter[2]" name="managedName">result</attr>
-    <attr path="/api/package[@name='androidx.media.session']/interface[@name='IMediaSession']/method[@name='sendCommand' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.media.session.MediaSessionCompat.ResultReceiverWrapper']]/parameter[1]" name="managedName">command</attr>
-    <attr path="/api/package[@name='androidx.media.session']/interface[@name='IMediaSession']/method[@name='sendCommand' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.media.session.MediaSessionCompat.ResultReceiverWrapper']]/parameter[2]" name="managedName">bundle</attr>
-    <attr path="/api/package[@name='androidx.media.session']/interface[@name='IMediaSession']/method[@name='sendCommand' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.media.session.MediaSessionCompat.ResultReceiverWrapper']]/parameter[3]" name="managedName">wrapper</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">mediaId</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">query</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">uri</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='playFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">mediaId</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromMediaId' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">query</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromSearch' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">uri</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='prepareFromUri' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='seekTo' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]" name="managedName">pos</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='androidx.media.session.PlaybackStateCompat.CustomAction'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">customAction</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='androidx.media.session.PlaybackStateCompat.CustomAction'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">args</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">action</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='sendCustomAction' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">args</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setCaptioningEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]" name="managedName">enabled</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRating' and count(parameter)=1 and parameter[1][@type='androidx.media.RatingCompat']]/parameter[1]" name="managedName">rating</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRating' and count(parameter)=2 and parameter[1][@type='androidx.media.RatingCompat'] and parameter[2][@type='android.os.Bundle']]/parameter[1]" name="managedName">rating</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRating' and count(parameter)=2 and parameter[1][@type='androidx.media.RatingCompat'] and parameter[2][@type='android.os.Bundle']]/parameter[2]" name="managedName">extras</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setRepeatMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">repeatMode</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='setShuffleMode' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">shuffleMode</attr>
-    <attr path="/api/package[@name='androidx.media.session']/class[@name='MediaControllerCompat.TransportControls']/method[@name='skipToQueueItem' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]" name="managedName">id</attr>
-    
-    <attr 
-        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" 
-        name="visibility"
-        >
-        public
-    </attr>
-    <attr 
-        path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" 
-        name="visibility"
-        >
-        public
-    </attr>
-    
-    <attr 
-        path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" 
-        name="visibility"
-        >
-        public
-    </attr>
-    
-    
+    <attr path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" name="visibility">public</attr>
+    <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
+    <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
+    <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
+    <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
 </metadata>

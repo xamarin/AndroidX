@@ -7,6 +7,29 @@
         Package
     </attr>
     -->
-    <attr path="/api/package[@name='androidx.arch.core.internal']" name="managedName">AndroidX.Arch.Core.Internal</attr>
-    <attr path="/api/package[@name='androidx.arch.core.util']" name="managedName">AndroidX.Arch.Core.Util</attr>
+    <attr path="/api/package[@name='androidx.core.accessibilityservice']" name="managedName">AndroidX.Core.AccessibilityService</attr>
+    <attr path="/api/package[@name='androidx.core.app']" name="managedName">AndroidX.Core.App</attr>
+    <attr path="/api/package[@name='androidx.core.content']" name="managedName">AndroidX.Core.Content</attr>
+    <attr path="/api/package[@name='androidx.core.content.pm']" name="managedName">AndroidX.Core.Content.PM</attr>
+    <attr path="/api/package[@name='androidx.core.content.res']" name="managedName">AndroidX.Core.Content.Resources</attr>
+    <attr path="/api/package[@name='androidx.core.database']" name="managedName">AndroidX.Core.Database</attr>
+    <attr path="/api/package[@name='androidx.core.database.sqlite']" name="managedName">AndroidX.Core.Database.SqlLite</attr>
+    <attr path="/api/package[@name='androidx.core.graphics']" name="managedName">AndroidX.Core.Graphics</attr>
+    <attr path="/api/package[@name='androidx.core.graphics.drawable']" name="managedName">AndroidX.Core.Graphics.Drawable</attr>
+    <attr path="/api/package[@name='androidx.core.hardware.display']" name="managedName">AndroidX.Core.Hardware.Display</attr>
+    <attr path="/api/package[@name='androidx.core.hardware.fingerprint']" name="managedName">AndroidX.Core.Hardware.Fingerprint</attr>
+    <attr path="/api/package[@name='androidx.core.internal']" name="managedName">AndroidX.Core.Internal</attr>
+    <attr path="/api/package[@name='androidx.core.internal.view']" name="managedName">AndroidX.Core.Internal.View</attr>
+    <attr path="/api/package[@name='androidx.core.math']" name="managedName">AndroidX.Core.Math</attr>
+    <attr path="/api/package[@name='androidx.core.net']" name="managedName">AndroidX.Core.Net</attr>
+    <attr path="/api/package[@name='androidx.core.os']" name="managedName">AndroidX.Core.OS</attr>
+    <attr path="/api/package[@name='androidx.core.provider']" name="managedName">AndroidX.Core.Provider</attr>
+    <attr path="/api/package[@name='androidx.core.text']" name="managedName">AndroidX.Core.Text</attr>
+    <attr path="/api/package[@name='androidx.core.text.util']" name="managedName">AndroidX.Core.Text.Util</attr>
+    <attr path="/api/package[@name='androidx.core.util']" name="managedName">AndroidX.Core.Util</attr>
+    <attr path="/api/package[@name='androidx.core.view']" name="managedName">AndroidX.Core.View</attr>
+    <attr path="/api/package[@name='androidx.core.view.accessibility']" name="managedName">AndroidX.Core.View.Accessibiity</attr>
+    <attr path="/api/package[@name='androidx.core.view.animation']" name="managedName">AndroidX.Core.View.Animation</attr>
+    <attr path="/api/package[@name='androidx.core.view.inputmethod']" name="managedName">AndroidX.Core.View.InputMethod</attr>
+    <attr path="/api/package[@name='androidx.core.widget']" name="managedName">AndroidX.Core.Widget</attr>
 </metadata>

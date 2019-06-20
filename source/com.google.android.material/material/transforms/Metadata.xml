@@ -1,22 +1,37 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo'] and parameter[3][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo'] and parameter[3][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo']]/parameter[3]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ArgbEvaluatorCompat']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='java.lang.Integer'] and parameter[3][@type='java.lang.Integer']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ArgbEvaluatorCompat']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='java.lang.Integer'] and parameter[3][@type='java.lang.Integer']]/parameter[3]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ArgbEvaluatorCompat']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='java.lang.Integer'] and parameter[3][@type='java.lang.Integer']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ChildrenAlphaProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.view.ViewGroup']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ChildrenAlphaProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.view.ViewGroup']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='DrawableAlphaProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='DrawableAlphaProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='DrawableAlphaProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ImageMatrixProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.widget.ImageView']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='ImageMatrixProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.widget.ImageView']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='MatrixEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Matrix'] and parameter[3][@type='android.graphics.Matrix']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='MatrixEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Matrix'] and parameter[3][@type='android.graphics.Matrix']]/parameter[3]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.animation']/class[@name='MatrixEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Matrix'] and parameter[3][@type='android.graphics.Matrix']]" name="managedReturn">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo'] and parameter[3][@type='com.google.android.material.circularreveal.CircularRevealWidget.RevealInfo']]" name="managedReturn">Java.Lang.Object</attr>
+    <!--
+        Sad, but for backwards compatibility, we need to use Object
+        We could create a generic (like java) and then derive from the Object one, but for now just use Object
+        <attr path="//parameter[@type='V']" name="type">android.view.View</attr>
+    -->
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']/method[@name='layoutChild']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.snackbar']/class[@name='BaseTransientBottomBar.Behavior']/method[@name='onInterceptTouchEvent']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+
+    <!-- fix up inheritance as a result of generics -->
+    <add-node path="/api/package[@name='com.google.android.material.appbar']/class[@name='ViewOffsetBehavior']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="onMeasureChild" jni-signature="(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IIII)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="parent" type="androidx.coordinatorlayout.widget.CoordinatorLayout" jni-type="Landroidx/coordinatorlayout/widget/CoordinatorLayout;"></parameter>
+            <parameter name="child" type="android.view.View" jni-type="Landroid/view/View;" />
+            <parameter name="parentWidthMeasureSpec" type="int" jni-type="I" />
+            <parameter name="widthUsed" type="int" jni-type="I" />
+            <parameter name="parentHeightMeasureSpec" type="int" jni-type="I" />
+            <parameter name="heightUsed" type="int" jni-type="I" />
+        </method>
+    </add-node>
+
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderBehavior']" name="visibility">public</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='ViewOffsetBehavior']" name="visibility">public</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.BaseBehavior']" name="visibility">public</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" name="visibility">public</attr>
+
     <!--
       OnOffsetChangedListener now implements BaseOnOffsetChangedListener with just the same method
       This causes some inheritance problems in .NET so we're going to hide this base interface and make sure everywhere that uses it is patched up and uses OnOffsetChangedListener instead
@@ -25,77 +40,23 @@
     <remove-node path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.BaseOnOffsetChangedListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/implements[@name='com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener']" />
     <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="type">com.google.android.material.appbar.AppBarLayout</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="managedType">Google.Android.Material.AppBar.AppBarLayout</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="managedName">appBarLayout</attr>
-    <!-- Google added a new leve in between, so we call that 2 :( -->
+
+    <!-- Google added a new level in between, so we call that 2 :( -->
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']" name="managedName">IOnTabSelectedListener</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.OnTabSelectedListener']" name="managedName">IOnTabSelectedListener2</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
+
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedName">tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedName">tab</attr>
-    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedName">tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+
     <!-- Remove some non-public interfaces that the generator tries to bind -->
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
-    <!--
-    multiple EventArgs properties
-    ????
-    -->
-    <attr path="//parameter[@type='V']" name="type">android.view.View</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderBehavior']" name="visibility">public</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='ViewOffsetBehavior']" name="visibility">public</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.BaseBehavior']" name="visibility">public</attr>
-    <!--
-    in Additions
-    <add-node
-        path="/api/package[@name='com.google.android.material.bottomnavigation']/class[@name='BottomNavigationItemView']"
-        >
-        <method 
-            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" virtual="true"
-            jni-return="V" jni-signature="(Z)V" 
-            visibility="public" static="false" abstract="false" return="void" name="setEnabled" 
-            >
-            <parameter type="boolean" name="enabled" jni-type="Z">
-            </parameter>
-        </method>
-    </add-node>
-    -->
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild' and count(parameter)=6 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild' and count(parameter)=3 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll' and count(parameter)=7 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int[]'] and parameter[7][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll' and count(parameter)=8 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int'] and parameter[5][@type='int'] and parameter[6][@type='int'] and parameter[7][@type='int'] and parameter[8][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState' and count(parameter)=3 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='android.os.Parcelable']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState' and count(parameter)=2 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll' and count(parameter)=6 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='android.view.View'] and parameter[5][@type='int'] and parameter[6][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll' and count(parameter)=4 and parameter[1][@type='androidx.coordinatorlayout.widget.CoordinatorLayout'] and parameter[2][@type='com.google.android.material.appbar.AppBarLayout'] and parameter[3][@type='android.view.View'] and parameter[4][@type='int']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
-    <!--
-    in Additions
-    <add-node
-        path="/api/package[@name='com.google.android.material.internal']/class[@name='NavigationMenuItemView']"
-        >
-        <method 
-            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" virtual="true"
-            jni-return="V" jni-signature="(Z)V" 
-            visibility="public" static="false" abstract="false" return="void" name="setEnabled" 
-            >
-            <parameter type="boolean" name="enabled" jni-type="Z">
-            </parameter>
-        </method>
-    </add-node>
-    -->
-    <!--    
-    -->
-    <attr path="/api/package[@name='com.google.android.material.circularreveal']/class[@name='CircularRevealWidget.CircularRevealProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='com.google.android.material.circularreveal.CircularRevealWidget']]/parameter[1]" name="managedType">Google.Android.Material.CircularReveal.ICircularRevealWidget</attr>
-
-    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" name="visibility">public</attr>
-
 </metadata>

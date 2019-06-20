@@ -1,15 +1,6 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.leanback.preference']" name="managedName">AndroidX.Leanback.Preference</attr>
-    <attr path="/api/package[@name='androidx.leanback.preference.internal']" name="managedName">AndroidX.Leanback.Preference.Internal</attr>
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onCreateViewHolder']" name="return">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onBindViewHolder']/parameter[1]" name="type">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onCreateViewHolder']" name="return">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onBindViewHolder']/parameter[1]" name="type">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
-    <!-- <remove-node path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onBindViewHolder']" />
-	<remove-node path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onCreateViewHolder']" />
-	<remove-node path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onBindViewHolder']" />
-	<remove-node path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onCreateViewHolder']" /> -->
-    <remove-node path="/api/package[@name='androidx.leanback.preference.internal']/class[@name='OutlineOnlyWithChildrenFrameLayout']/method[@name='setOutlineProvider' and count(parameter)=1 and parameter[1][@type='android.view.ViewOutlineProvider']]" />
-    <remove-node path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackPreferenceFragmentTransitionHelperApi21']" />
-    <attr path="/api/package[@name='androidx.leanback.preference']/interface[@name='LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener']/method[@name='onItemClick' and count(parameter)=1 and parameter[1][@type='androidx.leanback.preference.leanbackListPreferenceDialogFragment.ViewHolder']]/parameter[1]" name="managedName">viewHolder</attr>
 </metadata>
