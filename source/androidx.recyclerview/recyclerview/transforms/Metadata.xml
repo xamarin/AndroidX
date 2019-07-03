@@ -3,4 +3,5 @@
     <attr path="/api/package[@name='androidx.recyclerview.widget']/class[@name='RecyclerView.Adapter']/method[@name='bindViewHolder']/parameter[1]" name="type">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.recyclerview.widget']/class[@name='RecyclerView.Adapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.recyclerview.widget']/class[@name='RecyclerView.Adapter']/method[@name='onCreateViewHolder']" name="return">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
+    <remove-node path="/api/package[@name='androidx.recyclerview.widget']/interface[@name='RecyclerView.ItemAnimator.ItemAnimatorListener']" />
 </metadata>
