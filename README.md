@@ -36,6 +36,9 @@ If your app's code (C#, Resources, Manifest, etc) has not been migrated from And
 
 We will provide a migration assistant to help convert your C# code, xml resources, and AndroidManifest to use the new AndroidX API's which you can optionally use to perform a one time migration of your project.
 
+## Migration Tools / Tasks Source Code
+
+The source code for the `Xamarin.AndroidX.Migration` package and other migration tools and utilities are available in: [xamarin/XamarinAndroidXMigration](https://github.com/xamarin/XamarinAndroidXMigration)
 
 ## License
 
