@@ -34,7 +34,7 @@ var TF_MONIKER = "monoandroid90";
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/androidx.zip";
 
 // We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.1/api-info.xml";
+var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.api-info.xml";
 
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
 var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.Merged.dll";	
