@@ -4,8 +4,6 @@ variables:
   XCODE_VERSION: 10.2.1
   VERBOSITY: minimal
   BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
-  PREVIEW_LABEL: 'preview'
-  PRERELEASE_OVERRIDE: ''
 
 resources:
   repositories:
