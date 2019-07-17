@@ -143,7 +143,7 @@ Task("nuget")
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 		var pre = string.IsNullOrEmpty(PRERELEASE_OVERRIDE)
 			? $"{PREVIEW_LABEL}.{BUILD_NUMBER}"
-			: $"{PRERELEASE_OVERRIDE}"
+			: $"{PRERELEASE_OVERRIDE}";
 		c.Properties.Add("PackageVersionSuffix", new [] { "-" + pre });
 	});
 
