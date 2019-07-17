@@ -1,7 +1,7 @@
 
 variables:
-  MONO_VERSION: 5_16_0
-  XCODE_VERSION: 10.1
+  MONO_VERSION: 5_18_1
+  XCODE_VERSION: 10.2.1
   VERBOSITY: minimal
   BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
   PREVIEW_LABEL: 'preview'
@@ -19,7 +19,7 @@ jobs:
   - job: build
     displayName: 'Build Libraries & NuGets (macOS)'
     pool:
-      vmImage: macos-10.13
+      vmImage: macos-10.14
     steps:
       # Make sure to select the correct Xamarin and mono
       - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
