@@ -53,6 +53,7 @@ var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "";
 if (string.IsNullOrEmpty(BUILD_NUMBER)) {
     BUILD_NUMBER = "0";
 }
+var PRERELEASE_OVERRIDE = EnvironmentVariable("PRERELEASE_OVERRIDE") ?? "";
 
 Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
 Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
@@ -140,7 +141,10 @@ Task("nuget")
 		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-		c.Properties.Add("PackageVersionSuffix", new [] { "-" + PREVIEW_LABEL + "." + BUILD_NUMBER });
+		var pre = string.IsNullOrEmpty(PRERELEASE_OVERRIDE)
+			? $"{PREVIEW_LABEL}.{BUILD_NUMBER}"
+			: $"{PRERELEASE_OVERRIDE}"
+		c.Properties.Add("PackageVersionSuffix", new [] { "-" + pre });
 	});
 
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
