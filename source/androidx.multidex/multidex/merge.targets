@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(AndroidEnableMultiDex)' == 'true'">
-    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\aar\androidx.multidex.multidex.aar">
+    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\androidx.multidex.multidex.aar">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </AndroidAarLibrary>
   </ItemGroup>

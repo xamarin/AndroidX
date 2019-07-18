@@ -99,6 +99,14 @@ Task("binderate")
 
 	StartProcess("dotnet", "./util/binderator/android-binderator.dll --config=\""
 		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
+
+	// format the targets file so they are pretty in the package
+	var targetsFiles = GetFiles("generated/**/*.targets");
+	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+	foreach (var targets in targetsFiles) {
+		var xdoc = XDocument.Load(targets.FullPath);
+		xdoc.Save(targets.FullPath);
+	}
 });
 
 Task("libs")

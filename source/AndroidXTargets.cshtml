@@ -21,7 +21,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\proguard\proguard.txt">
+    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\proguard.txt">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </ProguardConfiguration>
       }
@@ -37,11 +37,11 @@
       }
 
       if (art.MavenArtifactPackaging == "aar") {
-    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar">
+    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </AndroidAarLibrary>
       } else {
-    <AndroidJavaLibrary Include="$(MSBuildThisFileDirectory)..\jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar">
+    <AndroidJavaLibrary Include="$(MSBuildThisFileDirectory)..\..\jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </AndroidJavaLibrary>
       }
