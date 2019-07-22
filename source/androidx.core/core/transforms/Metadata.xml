@@ -37,4 +37,6 @@
         </method>
     </add-node>
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onNestedScrollAccepted' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
+
+    <remove-node path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']" />
 </metadata>

@@ -25,7 +25,7 @@
 		{
 			"groupId" : "androidx.annotation",
 			"artifactId" : "annotation",
-			"version" : "1.0.2",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.Annotation",
 			"dependencyOnly" : false
 		}
@@ -67,8 +67,22 @@
 		,{
 			"groupId" : "androidx.core",
 			"artifactId" : "core",
-			"version" : "1.0.1",
+			"version" : "1.1.0-rc02",
 			"nugetId" : "Xamarin.AndroidX.Core",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.camera",
+			"artifactId" : "camera-camera2",
+			"version" : "1.0.0-alpha03",
+			"nugetId" : "Xamarin.AndroidX.Camera.Camera2",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.camera",
+			"artifactId" : "camera-core",
+			"version" : "1.0.0-alpha03",
+			"nugetId" : "Xamarin.AndroidX.Camera.Core",
 			"dependencyOnly" : false
 		}
 		,{
@@ -83,6 +97,13 @@
 			"artifactId" : "collection",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Collection",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.concurrent",
+			"artifactId" : "concurrent-futures",
+			"version" : "1.0.0-alpha03",
+			"nugetId" : "Xamarin.AndroidX.Concurrent.Futures",
 			"dependencyOnly" : false
 		}
 		,{
@@ -487,7 +508,7 @@
 		,{
 			"groupId" : "androidx.versionedparcelable",
 			"artifactId" : "versionedparcelable",
-			"version" : "1.0.0",
+			"version" : "1.1.0-rc01",
 			"nugetId" : "Xamarin.AndroidX.VersionedParcelable",
 			"dependencyOnly" : false
 		}
@@ -547,6 +568,13 @@
 			"version" : "1.0",
 			"nugetId" : "Xamarin.Google.Guava.ListenableFuture",
 			"nugetVersion" : "1.0",
+			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "com.google.auto.value",
+			"artifactId" : "auto-value-annotations",
+			"version" : "1.6.5",
+			"nugetId" : "Xamarin.Google.AutoValue.Annotations",
 			"dependencyOnly" : true
 		}
 	]
