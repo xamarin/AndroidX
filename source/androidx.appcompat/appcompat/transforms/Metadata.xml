@@ -225,4 +225,5 @@
     </add-node>
     -->
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+    <remove-node path="/api/package/class/implements[@name='androidx.core.internal.view.SupportMenuItem']" />
 </metadata>
