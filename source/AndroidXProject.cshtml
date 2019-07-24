@@ -83,23 +83,23 @@
   }
 
   <ItemGroup>
-    <Folder Include="Additions\" />
-    <Folder Include="Jars\" />
-    <Folder Include="Transforms\" />
+    <Folder Include="additions\" />
+    <Folder Include="jars\" />
+    <Folder Include="transforms\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\source\AssemblyInfo.cs" />
     <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\additions\*.cs">
-        <Link>Additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+        <Link>additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <TransformFile Include="..\..\source\Metadata.common.xml" >
-      <Link>Transforms/Metadata.common.xml</Link>
+      <Link>transforms/Metadata.common.xml</Link>
     </TransformFile>
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\transforms\*.xml">
-        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+        <Link>transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
   </ItemGroup>
 
