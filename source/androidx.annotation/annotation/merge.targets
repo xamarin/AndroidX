@@ -20,5 +20,23 @@
     </VerifyVersionsTask>
 
   </Target> -->
-    
+
+    <!--
+    ***************************************************************************
+    * GET EXTRA LIBRARY LOCATIONS FOR DESIGNER
+    * This target will make sure that the included .jar files are available to
+    * the designer. 
+    * TODO: REMOVE THIS AFTER THE PR IS MERGED
+    *       https://github.com/xamarin/xamarin-android/pull/3418
+    ***************************************************************************
+    -->
+    <Target Name="_AndroidXGetExtraLibraryLocationsForDesigner"
+            AfterTargets="GetExtraLibraryLocationsForDesigner">
+        <ItemGroup>
+            <ExtraJarLocation Include="@(AndroidJavaLibrary)">
+                <Source>AndroidJavaLibrary</Source>
+            </ExtraJarLocation>
+        </ItemGroup>
+    </Target>
+
 </Project>
