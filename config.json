@@ -25,7 +25,7 @@
 		{
 			"groupId" : "androidx.annotation",
 			"artifactId" : "annotation",
-			"version" : "1.0.2",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.Annotation",
 			"dependencyOnly" : false
 		}
@@ -81,7 +81,7 @@
 		,{
 			"groupId" : "androidx.collection",
 			"artifactId" : "collection",
-			"version" : "1.0.0",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.Collection",
 			"dependencyOnly" : false
 		}
@@ -396,14 +396,14 @@
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-runtime",
-			"version" : "2.0.0",
+			"version" : "2.1.0",
 			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-common",
-			"version" : "2.0.0",
+			"version" : "2.1.0",
 			"nugetId" : "Xamarin.AndroidX.Room.Common",
 			"dependencyOnly" : false
 		}
@@ -459,7 +459,7 @@
 		,{
 			"groupId" : "androidx.transition",
 			"artifactId" : "transition",
-			"version" : "1.0.1",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.Transition",
 			"dependencyOnly" : false
 		}
@@ -515,7 +515,7 @@
 		,{
 			"groupId" : "androidx.work",
 			"artifactId" : "work-runtime",
-			"version" : "2.0.1",
+			"version" : "2.1.0",
 			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
 			"dependencyOnly" : false
 		}
