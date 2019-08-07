@@ -48,12 +48,10 @@ var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
 
 var ANDROIDX_MAPPER_EXE = MakeAbsolute ((FilePath)$"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe");
 
-var PREVIEW_LABEL = EnvironmentVariable("PREVIEW_LABEL") ?? "preview";
 var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "";
 if (string.IsNullOrEmpty(BUILD_NUMBER)) {
     BUILD_NUMBER = "0";
 }
-var PRERELEASE_OVERRIDE = EnvironmentVariable("PRERELEASE_OVERRIDE") ?? "";
 
 Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
 Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
@@ -112,49 +110,29 @@ Task("binderate")
 Task("libs")
 	.Does(() =>
 {
-	MSBuild("./generated/AndroidX.sln", c => {
+	// build and pack in one go
+	MSBuild ("./generated/AndroidX.sln", c => {
 		c.Configuration = BUILD_CONFIG;
-		c.Restore = true;
 		c.MaxCpuCount = 0;
 		c.Verbosity = VERBOSITY;
+		c.Targets.Clear();
+		c.Targets.Add("Pack");
+		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
+		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
 	});
 });
 
 Task("nuget")
-	.IsDependentOn("libs")
+	.IsDependentOn("libs");
+
+Task("samples")
+	.IsDependentOn("nuget")
 	.Does(() =>
 {
-	// package the stable release
-	MSBuild ("./generated/AndroidX.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Targets.Clear();
-		c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
-		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-	});
-	// package the preview release
-	MSBuild ("./generated/AndroidX.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Targets.Clear();
-		c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
-		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-		var pre = string.IsNullOrEmpty(PRERELEASE_OVERRIDE)
-			? $"{PREVIEW_LABEL}.{BUILD_NUMBER}"
-			: $"{PRERELEASE_OVERRIDE}";
-		c.Properties.Add("PackageVersionSuffix", new [] { "-" + pre });
-	});
-
+	// TODO: make this actually work with more than just this sample
+	
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
 	var itemGroup = new XElement(xmlns + "ItemGroup");
 	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
@@ -169,14 +147,7 @@ Task("nuget")
 	}
 	var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
 	xdoc.Save("./output/AllPackages.targets");
-});
-
-Task("samples")
-	.IsDependentOn("nuget")
-	.Does(() =>
-{
-	// TODO: make this actually work with more than just this sample
-
+	
 	// clear the packages folder so we always use the latest
 	var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
 	EnsureDirectoryExists(packagesPath);
