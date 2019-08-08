@@ -145,18 +145,30 @@ Task("libs")
 		.SetMaxCpuCount(0)
 		.WithRestore()
 		.WithProperty("PackageVersionSuffix", PACKAGE_VERSION_SUFFIX)
+		.WithProperty("DesignTimeBuild", "false")
+		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+
+	MSBuild("./generated/AndroidX.sln", settings);
+});
+
+Task("nuget")
+	.IsDependentOn("libs")
+	.Does(() =>
+{
+	var settings = new MSBuildSettings()
+		.SetConfiguration(BUILD_CONFIG)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.WithRestore()
+		.WithProperty("PackageVersionSuffix", PACKAGE_VERSION_SUFFIX)
 		.WithProperty("PackageRequireLicenseAcceptance", "true")
 		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
 		.WithTarget("Pack");
 
-	// build and pack in one go
 	MSBuild("./generated/AndroidX.sln", settings);
 });
-
-Task("nuget")
-	.IsDependentOn("libs");
 
 Task("samples")
 	.IsDependentOn("nuget")
