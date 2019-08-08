@@ -6,6 +6,7 @@ variables:
   XCODE_VERSION: 10.2.1
   API_TOOLS_VERSION: 1.0.2-preview.5
   BINDERATOR_VERSION: 0.2.0
+  ANDROIDX_TOOL_VERSION: 1.0.0-preview01
   DOTNET_CORE_VERSION: 2.2.x
   # PACKAGE_VERSION_SUFFIX: <string>
   # XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
@@ -51,7 +52,7 @@ jobs:
         displayName: 'Install api-tools'
       - powershell: dotnet tool install -g xamarin.androidbinderator.tool --version $(BINDERATOR_VERSION)
         displayName: 'Install xamarin-android-binderator'
-      - powershell: dotnet tool install -g xamarin.androidx.migration.tool --version $(BINDERATOR_VERSION)
+      - powershell: dotnet tool install -g xamarin.androidx.migration.tool --version $(ANDROIDX_TOOL_VERSION)
         displayName: 'Install androidx-migrator'
       # run the main build
       - powershell: .\build.ps1 --target=ci --verbosity=$(VERBOSITY)
