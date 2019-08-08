@@ -245,7 +245,7 @@ Task ("diff")
 	.Does (() =>
 {
 	RunProcess("api-tools",
-		"nuget-diff output --latest --group-ids --output output/api-diff --cache externals/package_cache");
+		"nuget-diff output --latest --prerelease --group-ids --ignore-unchanged --output output/api-diff --cache externals/package_cache");
 });
 
 Task ("generate-mapping")
@@ -263,8 +263,6 @@ Task ("generate-mapping")
 		$"generate -v " +
 		$"  --support ./output/AndroidSupport.Merged.dll" +
 		$"  --androidx ./output/AndroidX.Merged.dll" +
-		$"  --java ./util/AndroidXMapper/Resources/androidx-class-mapping.csv" +
-		$"  --override ./util/AndroidXMapper/Resources/override-mapping.csv" +
 		$"  --output ./output/androidx-mapping.csv");
 });
 
