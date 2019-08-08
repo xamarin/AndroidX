@@ -1,4 +1,9 @@
 
+trigger:
+  - master
+  - AndroidX
+  - refs/tags/*
+
 variables:
   VERBOSITY: normal
   BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
