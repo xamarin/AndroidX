@@ -3,7 +3,7 @@ variables:
   VERBOSITY: normal
   BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
   MONO_VERSION: 5_18_1
-  XCODE_VERSION: 10.3
+  XCODE_VERSION: 10.2.1
   API_TOOLS_VERSION: 1.0.2-preview.5
   BINDERATOR_VERSION: 0.2.0
   DOTNET_CORE_VERSION: 2.2.x
@@ -24,7 +24,7 @@ jobs:
     strategy:
       matrix:
         macos:
-          imageName: 'Hosted Mac'
+          imageName: 'Hosted Mac Internal Mojave'
         windows:
           imageName: 'Hosted Windows 2019 with VS2019'
     displayName: 'Build'
