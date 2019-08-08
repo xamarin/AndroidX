@@ -27,7 +27,7 @@ jobs:
           imageName: vs2017-win2016
     displayName: 'Build'
     pool:
-      name: $(imageName)
+      name: test-$(imageName)
     steps:
       - powershell: echo "Hello World!"
 
