@@ -213,8 +213,7 @@ Task("samples")
 		.WithProperty("RestoreNoCache", "true")
 		.WithProperty("RestorePackagesPath", packagesPath)
 		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
-		.WithTarget("Pack");
+		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
 
 	if (!string.IsNullOrEmpty (JAVA_HOME))
 		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
