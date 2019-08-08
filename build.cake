@@ -17,6 +17,7 @@ var BUILD_CONFIG = Argument ("config", "Release");
 var VERBOSITY = (Verbosity) Enum.Parse (typeof(Verbosity), Argument ("v", Argument ("verbosity", "Normal")), true);
 var PACKAGE_VERSION_SUFFIX = EnvironmentVariable ("PACKAGE_VERSION_SUFFIX");
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
+var JAVA_HOME = EnvironmentVariable ("JAVA_HOME");
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -148,6 +149,9 @@ Task("libs")
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
 
+	if (!string.IsNullOrEmpty (JAVA_HOME))
+		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
+
 	MSBuild("./generated/AndroidX.sln", settings);
 });
 
@@ -166,6 +170,9 @@ Task("nuget")
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
 		.WithTarget("Pack");
+
+	if (!string.IsNullOrEmpty (JAVA_HOME))
+		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
 
 	MSBuild("./generated/AndroidX.sln", settings);
 });
@@ -197,18 +204,22 @@ Task("samples")
 	EnsureDirectoryExists(packagesPath);
 	CleanDirectories(packagesPath);
 
-	// build the sample
-	MSBuild (
-		"./samples/BuildAll/BuildAll.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Restore = true;
-		c.Properties.Add("RestoreNoCache", new [] { "true" });
-		c.Properties.Add("RestorePackagesPath", new [] { packagesPath });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-	});
+	// build the samples
+	var settings = new MSBuildSettings()
+		.SetConfiguration(BUILD_CONFIG)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.WithRestore()
+		.WithProperty("RestoreNoCache", "true")
+		.WithProperty("RestorePackagesPath", packagesPath)
+		.WithProperty("DesignTimeBuild", "false")
+		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
+		.WithTarget("Pack");
+
+	if (!string.IsNullOrEmpty (JAVA_HOME))
+		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
+
+	MSBuild("./samples/BuildAll/BuildAll.sln", settings);
 });
 
 Task("nuget-validation")
