@@ -53,12 +53,11 @@ jobs:
         condition: eq(variables['System.JobName'], 'macos')
         inputs:
           version: $(DOTNET_CORE_VERSION)
-      - powershell: dotnet tool install -g api-tools --version $(API_TOOLS_VERSION)
-        displayName: 'Install api-tools'
-      - powershell: dotnet tool install -g xamarin.androidbinderator.tool --version $(BINDERATOR_VERSION)
-        displayName: 'Install xamarin-android-binderator'
-      - powershell: dotnet tool install -g xamarin.androidx.migration.tool --version $(ANDROIDX_TOOL_VERSION)
-        displayName: 'Install androidx-migrator'
+      - powershell: |
+          dotnet tool install -g api-tools --version $(API_TOOLS_VERSION)
+          dotnet tool install -g xamarin.androidbinderator.tool --version $(BINDERATOR_VERSION)
+          dotnet tool install -g xamarin.androidx.migration.tool --version $(ANDROIDX_TOOL_VERSION)
+        displayName: 'Install dotnet tools'
       # run the main build
       - powershell: .\build.ps1 --target=ci --verbosity=$(VERBOSITY)
         displayName: 'Run build'
