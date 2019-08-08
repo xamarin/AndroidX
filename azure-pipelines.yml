@@ -81,7 +81,7 @@ jobs:
         name: VSEng-XamarinCustom
         demands:
           - corpnet
-      condition: and(succeeded(), or(startsWith(variables['Build.SourceBranch'], 'refs/tags/'), eq(variables['CodeSign'], 'true')))
+      condition: and(succeeded(), or(eq(variables['CodeSign'], 'true'), startsWith(variables['Build.SourceBranch'], 'refs/tags/'), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/AndroidX')))
       steps:
         # don't checkout code and sign the packages
         - checkout: none
