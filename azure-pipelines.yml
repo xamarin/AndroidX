@@ -50,7 +50,6 @@ jobs:
         condition: eq(variables['System.JobName'], 'macos')
       - task: UseDotNet@2
         displayName: 'Use the correct version of the .NET Core SDK'
-        condition: eq(variables['System.JobName'], 'macos')
         inputs:
           version: $(DOTNET_CORE_VERSION)
       - powershell: |
