@@ -1,67 +1,90 @@
 // Tools needed by cake addins
-#tool nuget:?package=Cake.MonoApiTools&version=3.0.1
-#tool nuget:?package=vswhere
+#tool nuget:?package=vswhere&version=2.7.1
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.1.0
-#addin nuget:?package=Cake.Compression&version=0.1.6
-#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
+#addin nuget:?package=Cake.FileHelpers&version=3.2.0
+#addin nuget:?package=Cake.Compression&version=0.2.3
 #addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
 
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
+using Xamarin.Nuget.Validator;
 
-// From Cake.Xamarin.Build, dumps out versions of things
-//LogSystemInfo ();
-
+// The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var BUILD_CONFIG = Argument ("config", "Release");
 var VERBOSITY = (Verbosity) Enum.Parse (typeof(Verbosity), Argument ("v", Argument ("verbosity", "Normal")), true);
+var PACKAGE_VERSION_SUFFIX = EnvironmentVariable ("PACKAGE_VERSION_SUFFIX");
+var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
+var JAVA_HOME = EnvironmentVariable ("JAVA_HOME");
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
-var NUGET_PRE = "";
-
-// FROM: https://dl.google.com/android/repository/addon2-1.xml
-var BUILD_TOOLS_URL = "https://dl-ssl.google.com/android/repository/build-tools_r28-macosx.zip";
-var ANDROID_SDK_VERSION = "v9.0";
-var TF_MONIKER = "monoandroid90";
-
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/androidx.zip";
 
-// We grab the previous release's api-info.xml to use as a comparison for this build's generated info to make an api-diff
-var BASE_API_INFO_URL = EnvironmentVariable("MONO_API_INFO_XML_URL") ?? "https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.api-info.xml";
-
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
-var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.Merged.dll";	
+var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.Merged.dll";
 
-var MONODROID_BASE_PATH = (DirectoryPath)"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/";
-if (IsRunningOnWindows ()) {
-	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
-	MONODROID_BASE_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/");
+// Resolve Xamarin.Android installation
+var ANDROID_SDK_BASE_VERSION = "v1.0";
+var ANDROID_SDK_VERSION = "v9.0";
+if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
+	if (IsRunningOnWindows()) {
+		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+		XAMARIN_ANDROID_PATH = vsInstallPath.Combine("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid").FullPath;
+	} else {
+		if (DirectoryExists("/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid"))
+			XAMARIN_ANDROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid";
+		else
+			XAMARIN_ANDROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid";
+	}
 }
-var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
+if (!DirectoryExists($"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}"))
+	throw new Exception($"Unable to find Xamarin.Android {ANDROID_SDK_VERSION} at {XAMARIN_ANDROID_PATH}.");
 
-var ANDROIDX_MAPPER_EXE = MakeAbsolute ((FilePath)$"util/AndroidXMapper/AndroidXMapper/bin/{BUILD_CONFIG}/net47/AndroidXMapper.exe");
+// Load all the git variables
+var BUILD_COMMIT = EnvironmentVariable("BUILD_SOURCEVERSION") ?? "DEV";
+var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "DEBUG";
+var BUILD_TIMESTAMP = DateTime.UtcNow.ToString();
 
-var PREVIEW_LABEL = EnvironmentVariable("PREVIEW_LABEL") ?? "preview";
-var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "";
-if (string.IsNullOrEmpty(BUILD_NUMBER)) {
-    BUILD_NUMBER = "0";
-}
-var PRERELEASE_OVERRIDE = EnvironmentVariable("PRERELEASE_OVERRIDE") ?? "";
+var REQUIRED_DOTNET_TOOLS = new [] {
+	"xamarin-android-binderator",
+	"api-tools",
+	"xamarin.androidx.migration.tool"
+};
 
-Information ("MONODROID_BASE_PATH: {0}", MONODROID_BASE_PATH);
-Information ("MONODROID_PATH:      {0}", MONODROID_PATH);
-Information ("ANDROIDX_MAPPER_EXE: {0}", ANDROIDX_MAPPER_EXE);
-Information ("BUILD_NUMBER:        {0}", BUILD_NUMBER);
+// Log some variables
+Information ("XAMARIN_ANDROID_PATH: {0}", XAMARIN_ANDROID_PATH);
+Information ("ANDROID_SDK_VERSION:  {0}", ANDROID_SDK_VERSION);
+Information ("BUILD_COMMIT:         {0}", BUILD_COMMIT);
+Information ("BUILD_NUMBER:         {0}", BUILD_NUMBER);
+Information ("BUILD_TIMESTAMP:      {0}", BUILD_TIMESTAMP);
 
 // You shouldn't have to configure anything below here
 // ######################################################
+
+void RunProcess(FilePath fileName, string processArguments)
+{
+	var exitCode = StartProcess(fileName, processArguments);
+	if (exitCode != 0)
+		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
+}
+
+string[] RunProcessWithOutput(FilePath fileName, string processArguments)
+{
+	var exitCode = StartProcess(fileName, new ProcessSettings {
+		Arguments = processArguments,
+		RedirectStandardOutput = true,
+		RedirectStandardError = true
+	}, out var procOut);
+	if (exitCode != 0)
+		throw new Exception ($"Process {fileName} exited with code {exitCode}.");
+	return procOut.ToArray();;
+}
 
 Task("javadocs")
 	.Does(() =>
@@ -80,25 +103,30 @@ Task("javadocs")
 		var outTxtPath = srcJarPath.Replace("-sources.jar", "-paramnames.txt");
 		var outXmlPath = srcJarPath.Replace("-sources.jar", "-paramnames.xml");
 
-		StartProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
-		StartProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
+		RunProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
+		RunProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
 	}
 });
 
-Task("binderate")
+Task("check-tools")
 	.Does(() =>
 {
-	if (!DirectoryExists("./util/binderator"))
-	{
-		EnsureDirectoryExists("./util/binderator");
-		Unzip ("./util/binderator.zip", "./util/binderator");
+	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
+	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
+		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
+			throw new Exception ($"Missing dotnet tool: {toolName}");
 	}
+});
 
-	var configFile = new FilePath("./config.json");
-	var basePath = new DirectoryPath ("./");
+Task ("binderate")
+	.Does (() =>
+{
+	var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
+	var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
-	StartProcess("dotnet", "./util/binderator/android-binderator.dll --config=\""
-		+ MakeAbsolute(configFile).FullPath + "\" --basepath=\"" + MakeAbsolute(basePath).FullPath + "\"");
+	// Run the dotnet tool for binderator
+	RunProcess("xamarin-android-binderator",
+		$"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 
 	// format the targets file so they are pretty in the package
 	var targetsFiles = GetFiles("generated/**/*.targets");
@@ -112,49 +140,50 @@ Task("binderate")
 Task("libs")
 	.Does(() =>
 {
-	MSBuild("./generated/AndroidX.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.Restore = true;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-	});
+	var settings = new MSBuildSettings()
+		.SetConfiguration(BUILD_CONFIG)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.WithRestore()
+		.WithProperty("PackageVersionSuffix", PACKAGE_VERSION_SUFFIX)
+		.WithProperty("DesignTimeBuild", "false")
+		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+
+	if (!string.IsNullOrEmpty (JAVA_HOME))
+		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
+
+	MSBuild("./generated/AndroidX.sln", settings);
 });
 
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	// package the stable release
-	MSBuild ("./generated/AndroidX.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Targets.Clear();
-		c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
-		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-	});
-	// package the preview release
-	MSBuild ("./generated/AndroidX.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Targets.Clear();
-		c.Targets.Add("Pack");
-		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
-		c.Properties.Add("PackageRequireLicenseAcceptance", new [] { "true" });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-		var pre = string.IsNullOrEmpty(PRERELEASE_OVERRIDE)
-			? $"{PREVIEW_LABEL}.{BUILD_NUMBER}"
-			: $"{PRERELEASE_OVERRIDE}";
-		c.Properties.Add("PackageVersionSuffix", new [] { "-" + pre });
-	});
+	var settings = new MSBuildSettings()
+		.SetConfiguration(BUILD_CONFIG)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.WithRestore()
+		.WithProperty("PackageVersionSuffix", PACKAGE_VERSION_SUFFIX)
+		.WithProperty("PackageRequireLicenseAcceptance", "true")
+		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
+		.WithProperty("DesignTimeBuild", "false")
+		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
+		.WithTarget("Pack");
 
+	if (!string.IsNullOrEmpty (JAVA_HOME))
+		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
+
+	MSBuild("./generated/AndroidX.sln", settings);
+});
+
+Task("samples")
+	.IsDependentOn("nuget")
+	.Does(() =>
+{
+	// TODO: make this actually work with more than just this sample
+
+	// make a big .targets file that pulls in everything
 	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
 	var itemGroup = new XElement(xmlns + "ItemGroup");
 	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
@@ -169,39 +198,33 @@ Task("nuget")
 	}
 	var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
 	xdoc.Save("./output/AllPackages.targets");
-});
-
-Task("samples")
-	.IsDependentOn("nuget")
-	.Does(() =>
-{
-	// TODO: make this actually work with more than just this sample
 
 	// clear the packages folder so we always use the latest
 	var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
 	EnsureDirectoryExists(packagesPath);
 	CleanDirectories(packagesPath);
 
-	// build the sample
-	MSBuild (
-		"./samples/BuildAll/BuildAll.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Restore = true;
-		c.Properties.Add("RestoreNoCache", new [] { "true" });
-		c.Properties.Add("RestorePackagesPath", new [] { packagesPath });
-		c.Properties.Add("DesignTimeBuild", new [] { "false" });
-		c.Properties.Add("AndroidSdkBuildToolsVersion", new [] { "28.0.3" });
-	});
+	// build the samples
+	var settings = new MSBuildSettings()
+		.SetConfiguration(BUILD_CONFIG)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.WithRestore()
+		.WithProperty("RestoreNoCache", "true")
+		.WithProperty("RestorePackagesPath", packagesPath)
+		.WithProperty("DesignTimeBuild", "false")
+		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+
+	if (!string.IsNullOrEmpty (JAVA_HOME))
+		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
+
+	MSBuild("./samples/BuildAll/BuildAll.sln", settings);
 });
 
 Task("nuget-validation")
 	.Does(() =>
 {
-	//setup validation options
-	var options = new Xamarin.Nuget.Validator.NugetValidatorOptions()
-	{
+	var options = new NugetValidatorOptions {
 		Copyright = "© Microsoft Corporation. All rights reserved.",
 		Author = "Microsoft",
 		Owner = "Microsoft",
@@ -211,69 +234,31 @@ Task("nuget-validation")
 		ValidPackageNamespace = new [] { "Xamarin" },
 	};
 
-	var nupkgFiles = GetFiles ("./output/*.nupkg");
+	var nupkgFiles = GetFiles("./output/*.nupkg");
+	Information("Found {0} NuGet packages to validate.", nupkgFiles.Count());
 
-	Information ("Found ({0}) Nuget's to validate", nupkgFiles.Count ());
-
-	foreach (var nupkgFile in nupkgFiles)
-	{
-		Information ("Verifiying Metadata of {0}", nupkgFile.GetFilename ());
-
-		var result = Xamarin.Nuget.Validator.NugetValidator.Validate(MakeAbsolute(nupkgFile).FullPath, options);
-
-		if (!result.Success)
-		{
-			Information ("Metadata validation failed for: {0} \n\n", nupkgFile.GetFilename ());
-			Information (string.Join("\n    ", result.ErrorMessages));
-			throw new Exception ($"Invalid Metadata for: {nupkgFile.GetFilename ()}");
-
-		}
-		else
-		{
-			Information ("Metadata validation passed for: {0}", nupkgFile.GetFilename ());
+	foreach (var nupkgFile in nupkgFiles) {
+		var fname = nupkgFile.GetFilename();
+		Information($"Verifiying metadata of {fname}...");
+		var result = NugetValidator.Validate(MakeAbsolute(nupkgFile).FullPath, options);
+		if (!result.Success) {
+			Error($"Metadata validation failed for: {fname} ");
+			Error(string.Join("\n    ", result.ErrorMessages));
+			throw new Exception($"Invalid Metadata for: {fname}");
+		} else {
+			Information($"Metadata validation passed for: {fname}");
 		}
 	}
-
-});
-
-Task ("androidxmapper")
-	.Does (() =>
-{
-	MSBuild (
-		"./util/AndroidXMapper/AndroidXMapper.sln", c => {
-		c.Configuration = BUILD_CONFIG;
-		c.MaxCpuCount = 0;
-		c.Verbosity = VERBOSITY;
-		c.Restore = true;
-	});
 });
 
 Task ("diff")
-	.IsDependentOn ("merge")
 	.Does (() =>
 {
-	var SEARCH_DIRS = new DirectoryPath [] {
-		MONODROID_BASE_PATH.Combine("v1.0"),
-		MONODROID_PATH,
-	};
-
-	EnsureDirectoryExists("./output/");
-	MonoApiInfo ("./output/AndroidX.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
-		SearchPaths = SEARCH_DIRS
-	});
-
-	DownloadFile (BASE_API_INFO_URL, "./output/api-info.previous.xml");
-
-	// Now diff against current released api info
-	MonoApiDiff ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.xml");
-
-	// Now let's make pretty files
-	MonoApiHtml ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.html");
-	MonoApiMarkdown ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.md");
+	RunProcess("api-tools",
+		"nuget-diff output --latest --prerelease --group-ids --ignore-unchanged --output output/api-diff --cache externals/package_cache");
 });
 
 Task ("generate-mapping")
-	.IsDependentOn ("androidxmapper")
 	.IsDependentOn ("merge")
 	.Does (() =>
 {
@@ -283,60 +268,45 @@ Task ("generate-mapping")
 		DownloadFile (SUPPORT_MERGED_DLL_URL, "./output/AndroidSupport.Merged.dll");
 	}
 
-	var result = StartProcess(ANDROIDX_MAPPER_EXE,
+	// generate the mapping
+	RunProcess("androidx-migrator",
 		$"generate -v " +
-		$" -s " + MakeAbsolute((FilePath)"./output/AndroidSupport.Merged.dll") +
-		$" -x " + MakeAbsolute((FilePath)"./output/AndroidX.Merged.dll") +
-		$" -j " + MakeAbsolute((FilePath)"./util/AndroidXMapper/Resources/androidx-class-mapping.csv") +
-		$" -m " + MakeAbsolute((FilePath)"./util/AndroidXMapper/Resources/override-mapping.csv") +
-		$" -o " + MakeAbsolute((FilePath)"./output/androidx-mapping.csv"));
-	if (result != 0)
-		throw new Exception($"The androidxmapper failed with error code {result}.");
+		$"  --support ./output/AndroidSupport.Merged.dll" +
+		$"  --androidx ./output/AndroidX.Merged.dll" +
+		$"  --output ./output/androidx-mapping.csv");
 });
 
 Task ("merge")
-	.IsDependentOn ("androidxmapper")
 	.IsDependentOn ("libs")
 	.Does (() =>
 {
-	var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.*.dll");
+	// find all the dlls
+	var allDlls = GetFiles($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.*.dll");
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
 		.ToList();
 
+	// merge them all
 	EnsureDirectoryExists("./output/");
-	var result = StartProcess(ANDROIDX_MAPPER_EXE,
+	RunProcess("androidx-migrator",
 		$"merge" +
-		$" -a {string.Join(" -a ", mergeDlls)} " +
-		$" -o " + MakeAbsolute((FilePath)"./output/AndroidX.Merged.dll") +
-		$" -s \"{MONODROID_PATH}\" " +
-		$" --inject-assemblyname");
-	if (result != 0)
-		throw new Exception($"The androidxmapper failed with error code {result}.");
+		$"  --assembly " + string.Join(" --assembly ", mergeDlls) +
+		$"  --output ./output/AndroidX.Merged.dll" +
+		$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}\" " +
+		$"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_BASE_VERSION}\" " +
+		$"  --inject-assemblyname");
 });
 
-Task ("ci-setup")
-	.WithCriteria (!BuildSystem.IsLocalBuild)
-	.Does (() => 
+Task("inject-variables")
+	.WithCriteria(!BuildSystem.IsLocalBuild)
+	.Does(() =>
 {
-	var buildCommit = "DEV";
-	var buildNumber = "DEBUG";
-	var buildTimestamp = DateTime.UtcNow.ToString ();
-
-	if (BuildSystem.IsRunningOnJenkins) {
-		buildNumber = BuildSystem.Jenkins.Environment.Build.BuildTag;
-		buildCommit = EnvironmentVariable("GIT_COMMIT") ?? buildCommit;
-	} else if (BuildSystem.IsRunningOnVSTS) {
-		buildNumber = BuildSystem.TFBuild.Environment.Build.Number;
-		buildCommit = BuildSystem.TFBuild.Environment.Repository.SourceVersion;
-	}
-
 	var glob = "./source/AssemblyInfo.cs";
 
-	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", buildCommit);
-	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", buildNumber);
-	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", buildTimestamp);
+	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", BUILD_COMMIT);
+	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
+	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
 });
 
 Task ("clean")
@@ -347,9 +317,6 @@ Task ("clean")
 
 	if (DirectoryExists ("./generated"))
 		DeleteDirectory ("./generated", true);
-
-	if (DirectoryExists ("./util/binderator"))
-		DeleteDirectory ("./util/binderator", true);
 
 	CleanDirectories ("./**/packages");
 });
@@ -363,8 +330,17 @@ Task ("full-run")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("samples");
 
+Task ("Default")
+	.IsDependentOn ("binderate")
+	.IsDependentOn ("nuget")
+	.IsDependentOn ("nuget-validation")
+	.IsDependentOn ("generate-mapping")
+	.IsDependentOn ("diff")
+	.IsDependentOn ("samples");
+
 Task ("ci")
-	.IsDependentOn ("ci-setup")
+	.IsDependentOn ("check-tools")
+	.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("nuget-validation")

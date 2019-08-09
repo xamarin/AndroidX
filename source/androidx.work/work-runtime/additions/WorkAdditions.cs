@@ -72,6 +72,13 @@ namespace AndroidX.Work
 
             public Builder SetScheduleRequestedAt(TimeSpan scheduleRequestedAt)
                 => base.SetPeriodStartTime((long)scheduleRequestedAt.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+            
+            public new Builder SetInitialDelay(long duration, Java.Util.Concurrent.TimeUnit timeUnit)
+                => base.SetInitialDelay(duration, timeUnit).JavaCast<Builder>();
+            
+            public new Builder SetInitialDelay(TimeSpan initialDelay)
+                => base.SetInitialDelay(((long)initialDelay.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+            
             #endregion
         }
     }

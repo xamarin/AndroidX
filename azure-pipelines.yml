@@ -1,9 +1,21 @@
 
+trigger:
+  - master
+  - AndroidX
+  - refs/tags/*
+
 variables:
+  VERBOSITY: normal
+  BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
   MONO_VERSION: 5_18_1
   XCODE_VERSION: 10.2.1
-  VERBOSITY: minimal
-  BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
+  CAKE_VERSION: 0.34.1
+  API_TOOLS_VERSION: 1.0.2-preview.13
+  BINDERATOR_VERSION: 0.2.0
+  ANDROIDX_TOOL_VERSION: 1.0.0-preview03
+  DOTNET_CORE_VERSION: 2.2.x
+  # PACKAGE_VERSION_SUFFIX: <string>
+  # XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
 resources:
   repositories:
@@ -14,63 +26,68 @@ resources:
 
 jobs:
 
+  # run the build
   - job: build
-    displayName: 'Build Libraries & NuGets (macOS)'
+    strategy:
+      matrix:
+        macos:
+          imageName: 'Hosted Mac Internal Mojave'
+        windows:
+          imageName: 'Hosted Windows 2019 with VS2019'
+    displayName: 'Build'
     pool:
-      vmImage: macos-10.14
+      name: $(imageName)
     steps:
-      # Make sure to select the correct Xamarin and mono
+      # install xamarin
       - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
         displayName: 'Switch to the latest Xamarin SDK'
+        condition: eq(variables['System.JobName'], 'macos')
       - bash: echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_$(XCODE_VERSION).app;sudo xcode-select --switch /Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer
         displayName: 'Switch to the latest Xcode'
-      # Build the libraries and packages
-      - bash: sh build.sh --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
-        displayName: 'Build NuGets'
-      # Publish the artifacts
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish unsigned artifacts'
+        condition: eq(variables['System.JobName'], 'macos')
+      # install dotnet and tools
+      - bash: echo '##vso[task.setvariable variable=PATH;]'$PATH:$HOME/.dotnet/tools
+        displayName: 'Add ~/.dotnet/tools to the PATH environment variable'
+        condition: eq(variables['System.JobName'], 'macos')
+      - task: UseDotNet@2
+        displayName: 'Use the correct version of the .NET Core SDK'
         inputs:
-          pathToPublish: '$(Build.SourcesDirectory)/output'
-          artifactName: 'nuget'
-
-  - job: build_windows
-    displayName: 'Build Libraries & NuGets (Windows)'
-    pool:
-      vmImage: vs2017-win2016
-    steps:
-      # Build the libraries and packages
-      - powershell: .\build.ps1 --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
-        displayName: 'Build everything'
-      # Publish the artifacts
+          version: $(DOTNET_CORE_VERSION)
+      - powershell: |
+          dotnet tool install -g cake.tool --version $(CAKE_VERSION)
+          dotnet tool install -g api-tools --version $(API_TOOLS_VERSION)
+          dotnet tool install -g xamarin.androidbinderator.tool --version $(BINDERATOR_VERSION)
+          dotnet tool install -g xamarin.androidx.migration.tool --version $(ANDROIDX_TOOL_VERSION)
+        displayName: 'Install dotnet tools'
+      # run the main build
+      - powershell: dotnet cake --target=ci --verbosity=$(VERBOSITY)
+        displayName: 'Run build'
+      # publish the nugets
       - task: PublishBuildArtifacts@1
-        displayName: 'Publish Windows artifacts'
+        condition: eq(variables['System.JobName'], 'macos')
+        displayName: 'Publish artifacts'
         inputs:
-          pathToPublish: '$(Build.SourcesDirectory)/output'
-          artifactName: 'windows_output'
-      # # Run some internal auditing
-      # - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-      #   - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-      #     displayName: Component Detection - Log
-      #     inputs:
-      #       scanType: LogOnly
-      #   - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-      #     displayName: Component Detection - Report
-      #   - task: securedevelopmentteam.vss-secure-development-tools.build-task-policheck.PoliCheck@1
-      #     displayName: 'PoliCheck'
-      #     inputs:
-      #       targetType: F
+          PathToPublish: output
+          ArtifactName: nuget
+      # publish the output with the os name
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish artifacts'
+        inputs:
+          PathToPublish: output
+          ArtifactName: 'output-$(System.JobName)'
 
   # only sign the packages when running on Windows, and using the private server which has the certificates
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - job: signing
       displayName: Signing NuGets
+      variables:
+        skipComponentGovernanceDetection: true
       dependsOn: build
       pool:
         name: VSEng-XamarinCustom
         demands:
           - corpnet
-      condition: and(succeeded(), or(startsWith(variables['Build.SourceBranch'], 'refs/tags/'), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/AndroidX')))
+      condition: and(succeeded(), or(eq(variables['CodeSign'], 'true'), startsWith(variables['Build.SourceBranch'], 'refs/tags/'), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/AndroidX')))
       steps:
         # don't checkout code and sign the packages
         - checkout: none
