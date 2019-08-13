@@ -77,7 +77,7 @@ namespace AndroidX.Work
                 => base.SetInitialDelay(duration, timeUnit).JavaCast<Builder>();
             
             public new Builder SetInitialDelay(TimeSpan initialDelay)
-                => base.SetInitialDelay(((long)initialDelay.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+                => base.SetInitialDelay((long)initialDelay.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
             
             #endregion
         }
