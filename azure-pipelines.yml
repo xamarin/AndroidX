@@ -23,6 +23,8 @@ resources:
 
 jobs:
   - template: .ci/prepare.yml@components
+    parameters:
+      masterBranchName: 'AndroidX'
   - template: .ci/build.yml@components
     parameters:
       tools:
