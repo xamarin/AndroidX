@@ -23,7 +23,7 @@ resources:
 
 jobs:
   - template: .ci/prepare.yml@components
-  - template: .ci/build-manifest.yml@components
+  - template: .ci/build.yml@components
     parameters:
       tools:
         'xamarin.androidbinderator.tool': '0.3.0'
