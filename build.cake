@@ -4,20 +4,15 @@
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.2.0
 #addin nuget:?package=Cake.Compression&version=0.2.3
-#addin nuget:?package=Xamarin.Nuget.Validator&version=1.1.1
 
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
-using Xamarin.Nuget.Validator;
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
-var BUILD_CONFIG = Argument ("config", "Release");
-var VERBOSITY = (Verbosity) Enum.Parse (typeof(Verbosity), Argument ("v", Argument ("verbosity", "Normal")), true);
-var PACKAGE_VERSION_SUFFIX = EnvironmentVariable ("PACKAGE_VERSION_SUFFIX");
-var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
-var JAVA_HOME = EnvironmentVariable ("JAVA_HOME");
+var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
+var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -30,6 +25,7 @@ var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-
 var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.2/AndroidSupport.Merged.dll";
 
 // Resolve Xamarin.Android installation
+var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
 var ANDROID_SDK_VERSION = "v9.0";
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
@@ -53,7 +49,6 @@ var BUILD_TIMESTAMP = DateTime.UtcNow.ToString();
 
 var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin-android-binderator",
-	"api-tools",
 	"xamarin.androidx.migration.tool"
 };
 
@@ -141,16 +136,12 @@ Task("libs")
 	.Does(() =>
 {
 	var settings = new MSBuildSettings()
-		.SetConfiguration(BUILD_CONFIG)
+		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
 		.WithRestore()
-		.WithProperty("PackageVersionSuffix", PACKAGE_VERSION_SUFFIX)
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
-
-	if (!string.IsNullOrEmpty (JAVA_HOME))
-		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
 
 	MSBuild("./generated/AndroidX.sln", settings);
 });
@@ -160,19 +151,15 @@ Task("nuget")
 	.Does(() =>
 {
 	var settings = new MSBuildSettings()
-		.SetConfiguration(BUILD_CONFIG)
+		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
 		.WithRestore()
-		.WithProperty("PackageVersionSuffix", PACKAGE_VERSION_SUFFIX)
 		.WithProperty("PackageRequireLicenseAcceptance", "true")
 		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
 		.WithTarget("Pack");
-
-	if (!string.IsNullOrEmpty (JAVA_HOME))
-		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
 
 	MSBuild("./generated/AndroidX.sln", settings);
 });
@@ -206,7 +193,7 @@ Task("samples")
 
 	// build the samples
 	var settings = new MSBuildSettings()
-		.SetConfiguration(BUILD_CONFIG)
+		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
 		.WithRestore()
@@ -215,47 +202,7 @@ Task("samples")
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
 
-	if (!string.IsNullOrEmpty (JAVA_HOME))
-		settings.WithProperty ("JavaSdkDirectory", JAVA_HOME);
-
 	MSBuild("./samples/BuildAll/BuildAll.sln", settings);
-});
-
-Task("nuget-validation")
-	.Does(() =>
-{
-	var options = new NugetValidatorOptions {
-		Copyright = "© Microsoft Corporation. All rights reserved.",
-		Author = "Microsoft",
-		Owner = "Microsoft",
-		NeedsProjectUrl = true,
-		NeedsLicenseUrl = true,
-		ValidateRequireLicenseAcceptance = true,
-		ValidPackageNamespace = new [] { "Xamarin" },
-	};
-
-	var nupkgFiles = GetFiles("./output/*.nupkg");
-	Information("Found {0} NuGet packages to validate.", nupkgFiles.Count());
-
-	foreach (var nupkgFile in nupkgFiles) {
-		var fname = nupkgFile.GetFilename();
-		Information($"Verifiying metadata of {fname}...");
-		var result = NugetValidator.Validate(MakeAbsolute(nupkgFile).FullPath, options);
-		if (!result.Success) {
-			Error($"Metadata validation failed for: {fname} ");
-			Error(string.Join("\n    ", result.ErrorMessages));
-			throw new Exception($"Invalid Metadata for: {fname}");
-		} else {
-			Information($"Metadata validation passed for: {fname}");
-		}
-	}
-});
-
-Task ("diff")
-	.Does (() =>
-{
-	RunProcess("api-tools",
-		"nuget-diff output --latest --prerelease --group-ids --ignore-unchanged --output output/api-diff --cache externals/package_cache");
 });
 
 Task ("generate-mapping")
@@ -281,7 +228,7 @@ Task ("merge")
 	.Does (() =>
 {
 	// find all the dlls
-	var allDlls = GetFiles($"./generated/*/bin/{BUILD_CONFIG}/monoandroid*/Xamarin.*.dll");
+	var allDlls = GetFiles($"./generated/*/bin/{CONFIGURATION}/monoandroid*/Xamarin.*.dll");
 	var mergeDlls = allDlls
 		.GroupBy(d => new FileInfo(d.FullPath).Name)
 		.Select(g => g.FirstOrDefault())
@@ -333,9 +280,7 @@ Task ("full-run")
 Task ("Default")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
-	.IsDependentOn ("nuget-validation")
 	.IsDependentOn ("generate-mapping")
-	.IsDependentOn ("diff")
 	.IsDependentOn ("samples");
 
 Task ("ci")
@@ -343,9 +288,7 @@ Task ("ci")
 	.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
-	.IsDependentOn ("nuget-validation")
 	.IsDependentOn ("generate-mapping")
-	.IsDependentOn ("diff")
 	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
