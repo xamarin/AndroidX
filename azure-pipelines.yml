@@ -27,6 +27,7 @@ jobs:
       masterBranchName: 'AndroidX'
   - template: .ci/build.yml@components
     parameters:
+      cakeTemplatesBranch: 'dev/templating'
       tools:
         - 'xamarin.androidbinderator.tool': '0.3.0'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview03'
