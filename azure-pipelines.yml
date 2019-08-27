@@ -24,6 +24,7 @@ resources:
 jobs:
   - template: .ci/prepare.yml@components
     parameters:
+      buildType: 'basic'
       masterBranchName: 'AndroidX'
   - template: .ci/build.yml@components
     parameters:
