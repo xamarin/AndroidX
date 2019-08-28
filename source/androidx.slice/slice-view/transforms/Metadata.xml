@@ -2,5 +2,5 @@
     <attr path="/api/package[@name='androidx.slice.widget']/class[@name='LargeSliceAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]" name="return">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.slice.widget']/class[@name='LargeSliceAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='androidx.slice.widget.LargeSliceAdapter.SliceViewHolder'] and parameter[2][@type='int']]/parameter[1]" name="type">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.slice.widget']/class[@name='SliceView']/method[@name='onChanged' and count(parameter)=1 and parameter[1][@type='androidx.slice.Slice']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-    <attr path="/api/package[@name='androidx.slice.widget']/interface[@name='SliceActionView.SliceActionLoadingListener']" name="visibility">public</attr>
+    <remove-node path="/api/package[@name='androidx.slice.widget']/interface[@name='SliceActionView.SliceActionLoadingListener']" />
 </metadata>
