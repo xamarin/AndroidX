@@ -4,7 +4,7 @@ trigger:
   - refs/tags/*
 
 variables:
-  BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
+  BUILD_NUMBER: $(Build.BuildNumber)
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 #   SUPPORT_MERGED_DLL_URL: <url to AndroidSupport.Merged.dll>
 

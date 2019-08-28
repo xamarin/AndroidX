@@ -3,7 +3,6 @@
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.2.0
-#addin nuget:?package=Cake.Compression&version=0.2.3
 
 using System.Text.RegularExpressions;
 using System.Xml;
