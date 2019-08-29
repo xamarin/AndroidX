@@ -14,7 +14,6 @@ resources:
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
-      ref: refs/heads/dev/signing-job
     - repository: components
       type: github
       name: xamarin/XamarinComponents
@@ -24,7 +23,6 @@ resources:
 jobs:
   - template: .ci/prepare.yml@components
     parameters:
-      buildType: 'basic'
       masterBranchName: 'AndroidX'
   - template: .ci/build.yml@components
     parameters:
