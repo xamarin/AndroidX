@@ -42,7 +42,7 @@ if (!DirectoryExists($"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}"))
 	throw new Exception($"Unable to find Xamarin.Android {ANDROID_SDK_VERSION} at {XAMARIN_ANDROID_PATH}.");
 
 // Load all the git variables
-var BUILD_COMMIT = EnvironmentVariable("BUILD_SOURCEVERSION") ?? "DEV";
+var BUILD_COMMIT = EnvironmentVariable("BUILD_COMMIT") ?? "DEV";
 var BUILD_NUMBER = EnvironmentVariable("BUILD_NUMBER") ?? "DEBUG";
 var BUILD_TIMESTAMP = DateTime.UtcNow.ToString();
 

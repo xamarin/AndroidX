@@ -5,8 +5,8 @@ trigger:
 
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
+  BUILD_COMMIT: $(Build.SourceVersion)
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
-#   SUPPORT_MERGED_DLL_URL: <url to AndroidSupport.Merged.dll>
 
 resources:
   repositories:
@@ -14,21 +14,15 @@ resources:
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
-      ref: refs/heads/dev/signing-job
     - repository: components
       type: github
       name: xamarin/XamarinComponents
       endpoint: xamarin
-      ref: refs/heads/dev/templating
 
 jobs:
-  - template: .ci/prepare.yml@components
-    parameters:
-      buildType: 'basic'
-      masterBranchName: 'AndroidX'
   - template: .ci/build.yml@components
     parameters:
-      cakeTemplatesBranch: 'dev/templating'
+      masterBranchName: 'AndroidX'
       tools:
         - 'xamarin.androidbinderator.tool': '0.3.0'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview03'
