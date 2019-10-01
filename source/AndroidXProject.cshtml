@@ -1,5 +1,5 @@
 ﻿@using System.Linq
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
   <PropertyGroup>
     <TargetFramework>MonoAndroid90</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
@@ -170,11 +170,5 @@
       <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
     </ItemGroup>
   }
-
-  <ItemGroup>
-    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.6.68" PrivateAssets="All" />
-  </ItemGroup>
-
-  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
 </Project>
