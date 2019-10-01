@@ -533,6 +533,7 @@
 			"artifactId" : "guava",
 			"version" : "27.1.0",
 			"nugetId" : "Xamarin.Google.Guava",
+			"nugetVersion" : "27.1.0.2",
 			"dependencyOnly" : true
 		},
 		{
@@ -540,6 +541,7 @@
 			"artifactId" : "failureaccess",
 			"version" : "1.0.1",
 			"nugetId" : "Xamarin.Google.Guava.FailureAccess",
+			"nugetVersion" : "1.0.1.1",
 			"dependencyOnly" : true
 		},
 		{
@@ -547,7 +549,7 @@
 			"artifactId" : "listenablefuture",
 			"version" : "1.0",
 			"nugetId" : "Xamarin.Google.Guava.ListenableFuture",
-			"nugetVersion" : "1.0",
+			"nugetVersion" : "1.0.0.1",
 			"dependencyOnly" : true
 		}
 	]
