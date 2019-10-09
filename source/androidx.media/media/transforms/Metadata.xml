@@ -7,4 +7,31 @@
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
+    
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setContentType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setFlags' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setLegacyStreamType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setUsage' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media.IAudioAttributesImplBuilder
+    </attr>
+
+
 </metadata>

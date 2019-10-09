@@ -1,0 +1,16 @@
+﻿<metadata>
+    
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='ActivityNavigator']/method[@name='createDestination' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='ActivityNavigator']/method[@name='navigate' and count(parameter)=4 and parameter[1][@type='androidx.navigation.ActivityNavigator.Destination'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.navigation.NavOptions'] and parameter[4][@type='androidx.navigation.Navigator.Extras']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    
+</metadata>

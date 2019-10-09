@@ -1,0 +1,22 @@
+﻿<metadata>
+    
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='DataSource']"
+        />
+
+    <!--    
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='PositionalDataSource']/method[@name='map' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;T, V&gt;']]"
+        name="managedReturn"
+        >
+        AndroidX.Paging.DataSource.Factory
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='ItemKeyedDataSource']/method[@name='map' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;Value, ToValue&gt;']]"
+        name="managedReturn"
+        >
+        AndroidX.Paging.DataSource.Factory
+    </attr>
+    -->
+    
+</metadata>

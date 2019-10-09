@@ -37,4 +37,26 @@
         </method>
     </add-node>
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onNestedScrollAccepted' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
+
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='addShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>    
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='removeShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.String&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='removeAllShortcuts' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+    
 </metadata>

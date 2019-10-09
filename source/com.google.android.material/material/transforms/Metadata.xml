@@ -59,4 +59,9 @@
     <!-- Remove some non-public interfaces that the generator tries to bind -->
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.material.behavior']/interface[@name='SwipeDismissBehavior.OnDismissListener']"
+        />
+    
 </metadata>
