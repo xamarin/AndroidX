@@ -8,9 +8,9 @@
     </attr>
     -->
     <attr 
-        path="/api/package[@name='']" 
+        path="/api/package[@name='androidx.navigation.fragment']"
         name="managedName"
         >
-        AndroidX.
+        AndroidX.Navigation.Fragment
         </attr>
 </metadata>

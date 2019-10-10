@@ -8,7 +8,7 @@
     </attr>
     -->
     <attr 
-        path="/api/package[@name='']" 
+        path="/api/package[@name='androidx.room.guava']" 
         name="managedName"
         >
         AndroidX.Room.Guava

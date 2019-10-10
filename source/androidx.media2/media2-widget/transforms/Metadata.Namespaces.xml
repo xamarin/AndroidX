@@ -8,8 +8,9 @@
     </attr>
     -->
     <attr 
-        path="/api/package[@name='']" 
-        name="managedName">AndroidX.
+        path="/api/package[@name='androidx.media2.widget']" 
+        name="managedName"
         >
+        AndroidX.Media2.Widget
         </attr>
 </metadata>

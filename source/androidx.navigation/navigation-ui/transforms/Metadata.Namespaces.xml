@@ -8,10 +8,10 @@
     </attr>
     -->
     <attr 
-        path="/api/package[@name='']" 
+        path="/api/package[@name='androidx.navigation.ui']"
         name="managedName"
         >
-        AndroidX.
+        AndroidX.Navigation.UI
     </attr>
     
 </metadata>
