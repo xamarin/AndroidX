@@ -134,20 +134,20 @@ Task ("binderate")
 Task("libs")
 	.Does(() =>
 {
-	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
+	// if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
 		
-		var restoreSettings = new MSBuildSettings()
-			.SetConfiguration(CONFIGURATION)
-			.SetVerbosity(VERBOSITY)
-			.SetMaxCpuCount(0)
-			.WithProperty("DesignTimeBuild", "false")
-			.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
-			.WithTarget("Restore");
+	// 	var restoreSettings = new MSBuildSettings()
+	// 		.SetConfiguration(CONFIGURATION)
+	// 		.SetVerbosity(VERBOSITY)
+	// 		.SetMaxCpuCount(0)
+	// 		.WithProperty("DesignTimeBuild", "false")
+	// 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
+	// 		.WithTarget("Restore");
 
-		foreach (var csproj in GetFiles("./generated/**/*.csproj")) {
-			MSBuild(csproj, restoreSettings);
-		}
-	}
+	// 	foreach (var csproj in GetFiles("./generated/**/*.csproj")) {
+	// 		MSBuild(csproj, restoreSettings);
+	// 	}
+	// }
 
 	var settings = new MSBuildSettings()
 		.SetConfiguration(CONFIGURATION)
