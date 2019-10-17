@@ -135,7 +135,6 @@ Task("libs")
 	.Does(() =>
 {
 	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
-		
 		var restoreSettings = new MSBuildSettings()
 			.SetConfiguration(CONFIGURATION)
 			.SetVerbosity(VERBOSITY)
