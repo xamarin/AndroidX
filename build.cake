@@ -142,6 +142,12 @@ Task("libs")
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
 
+	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
+		foreach (var csproj in GetFiles("./generated/**/*.csproj")) {
+			MSBuild(csproj, settings.SetVerbosity(Verbosity.Minimal).WithTarget("Restore"));
+		}
+	}
+
 	MSBuild("./generated/AndroidX.sln", settings);
 });
 
@@ -153,11 +159,9 @@ Task("nuget")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.WithRestore()
+		.WithProperty("NoBuild", "true")
 		.WithProperty("PackageRequireLicenseAcceptance", "true")
 		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
-		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
 		.WithTarget("Pack");
 
 	MSBuild("./generated/AndroidX.sln", settings);
