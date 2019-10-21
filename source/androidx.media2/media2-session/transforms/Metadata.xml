@@ -56,5 +56,8 @@
     <remove-node
         path="/api/package[@name='androidx.media2.session']/class[@name='RemoteSessionPlayer']"
         />        
-
+        
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaBrowser']"    
+        />        
 </metadata>
