@@ -306,3 +306,7 @@ Task ("ci")
 	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
+
+// CakeExecuteScript("./nuget-diff.cake");
+// CakeExecuteScript("./api-diff.cake");
+
