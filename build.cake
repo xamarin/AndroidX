@@ -153,6 +153,7 @@ Task("libs")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
+		.EnableBinaryLogger("./output/libs.binlog")
 		.WithRestore()
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
@@ -208,6 +209,7 @@ Task("samples")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
+		.EnableBinaryLogger("./output/samples.binlog")
 		.WithRestore()
 		.WithProperty("RestoreNoCache", "true")
 		.WithProperty("RestorePackagesPath", packagesPath)
@@ -304,3 +306,7 @@ Task ("ci")
 	.IsDependentOn ("samples");
 
 RunTarget (TARGET);
+
+// CakeExecuteScript("./nuget-diff.cake");
+// CakeExecuteScript("./api-diff.cake");
+
