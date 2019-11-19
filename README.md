@@ -1,13 +1,39 @@
 # AndroidX for Xamarin.Android
 
-Xamarin creates and maintains Xamarin.Android bindings for the Google Android Support Libraries and AndroidX.
+Xamarin creates and maintains Xamarin.Android bindings for AndroidX.
 
 ## Building
 
-Building nuget packages from source requires calling the cake script:
+### Prerequisites
 
+Before building the libraries and samples in this repository, you will need to install [.NET Core](https://dotnet.microsoft.com/download) and the [Cake .NET Core Tool](http://cakebuild.net):
+
+```sh
+dotnet tool install -g cake.tool
 ```
-.\build.ps1 --target=packages
+
+When building on macOS, you may also need to install [CocoaPods](https://cocoapods.org/):
+
+```sh
+# Homebrew
+brew install cocoapods
+
+# Ruby Gems
+gem install cocoapods
+```
+
+### Compiling
+
+You can now build all the packages by running:
+
+```sh
+dotnet cake
+```
+
+If you are going to make changes to the `config.json`, then you can run the `packages` target to re-generate all the necessary files:
+
+```sh
+dotnet cake --target=packages
 ```
 
 ## Android Support -> AndroidX Roadmap

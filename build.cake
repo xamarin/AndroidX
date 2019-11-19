@@ -291,12 +291,6 @@ Task ("full-run")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("samples");
 
-Task ("Default")
-	.IsDependentOn ("binderate")
-	.IsDependentOn ("nuget")
-	.IsDependentOn ("generate-mapping")
-	.IsDependentOn ("samples");
-
 Task ("ci")
 	.IsDependentOn ("check-tools")
 	.IsDependentOn ("inject-variables")
@@ -305,8 +299,14 @@ Task ("ci")
 	.IsDependentOn ("generate-mapping")
 	.IsDependentOn ("samples");
 
+// for local builds, conditionally do the first binderate
+if (FileExists ("./generated/AndroidX.sln")) {
+	Task ("Default")
+		.IsDependentOn ("nuget");
+} else {
+	Task ("Default")
+		.IsDependentOn ("binderate")
+		.IsDependentOn ("nuget");
+}
+
 RunTarget (TARGET);
-
-// CakeExecuteScript("./nuget-diff.cake");
-// CakeExecuteScript("./api-diff.cake");
-
