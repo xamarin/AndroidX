@@ -1,6 +1,5 @@
 trigger:
   - master
-  - AndroidX
   - refs/tags/*
 
 variables:
@@ -23,7 +22,7 @@ resources:
 jobs:
   - template: .ci/build.yml@components
     parameters:
-      masterBranchName: 'AndroidX'
+      timeoutInMinutes: 120
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview05'
@@ -31,5 +30,3 @@ jobs:
     - template: sign-artifacts/jobs/v1.yml@internal-templates
       parameters:
         dependsOn: [ 'build' ]
-- job: Build macos
-  timeoutInMinutes: 90
