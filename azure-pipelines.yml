@@ -31,7 +31,5 @@ jobs:
     - template: sign-artifacts/jobs/v1.yml@internal-templates
       parameters:
         dependsOn: [ 'build' ]
-
-jobs:
 - job: Build macos
   timeoutInMinutes: 90
