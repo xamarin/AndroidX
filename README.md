@@ -2,7 +2,7 @@
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/xamarin/AndroidX/blob/master/LICENSE)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/xamarin/AndroidX/issues)
-[![GitHub contributors](https://img.shields.io/github/contributors/xamarin/AndroidX.svg)](https://github.com/xamarin/AndroidX/graphs/contributors)
+[![GitHub contributors](https://img.shields.io/github/contributors/xamarin/AndroidX.svg)](https://github.com/xamarin/AndroidX/graphs/contributors)  [![Build Status](https://dev.azure.com/devdiv/DevDiv/_apis/build/status/Xamarin/Components/AndroidX?branchName=master)](https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=12322&branchName=master)
 
 Xamarin creates and maintains Xamarin.Android bindings for AndroidX.
 
