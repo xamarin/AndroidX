@@ -1,0 +1,16 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.savedstate']"
+        name="managedName"
+        >
+        AndroidX.SavedState
+        </attr>
+</metadata>

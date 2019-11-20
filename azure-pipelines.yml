@@ -1,85 +1,32 @@
+trigger:
+  - master
+  - refs/tags/*
 
 variables:
-  MONO_VERSION: 5_18_1
-  XCODE_VERSION: 10.2.1
-  VERBOSITY: minimal
-  BUILD_NUMBER: $[counter('$(Build.SourceBranchName)_counter', 1)]
+  BUILD_NUMBER: $(Build.BuildNumber)
+  BUILD_COMMIT: $(Build.SourceVersion)
+  PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
+#   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
 resources:
   repositories:
-    - repository: xamarin-templates
+    - repository: internal-templates
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
+    - repository: components
+      type: github
+      name: xamarin/XamarinComponents
+      endpoint: xamarin
 
 jobs:
-
-  - job: build
-    displayName: 'Build Libraries & NuGets (macOS)'
-    pool:
-      vmImage: macos-10.14
-    steps:
-      # Make sure to select the correct Xamarin and mono
-      - bash: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(MONO_VERSION)
-        displayName: 'Switch to the latest Xamarin SDK'
-      - bash: echo '##vso[task.setvariable variable=MD_APPLE_SDK_ROOT;]'/Applications/Xcode_$(XCODE_VERSION).app;sudo xcode-select --switch /Applications/Xcode_$(XCODE_VERSION).app/Contents/Developer
-        displayName: 'Switch to the latest Xcode'
-      # Build the libraries and packages
-      - bash: sh build.sh --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
-        displayName: 'Build NuGets'
-      # Publish the artifacts
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish unsigned artifacts'
-        inputs:
-          pathToPublish: '$(Build.SourcesDirectory)/output'
-          artifactName: 'nuget'
-
-  - job: build_windows
-    displayName: 'Build Libraries & NuGets (Windows)'
-    pool:
-      vmImage: vs2017-win2016
-    steps:
-      # Build the libraries and packages
-      - powershell: .\build.ps1 --target=ci --settings_skipverification=true --verbosity=$(VERBOSITY)
-        displayName: 'Build everything'
-      # Publish the artifacts
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish Windows artifacts'
-        inputs:
-          pathToPublish: '$(Build.SourcesDirectory)/output'
-          artifactName: 'windows_output'
-      # # Run some internal auditing
-      # - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-      #   - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-      #     displayName: Component Detection - Log
-      #     inputs:
-      #       scanType: LogOnly
-      #   - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
-      #     displayName: Component Detection - Report
-      #   - task: securedevelopmentteam.vss-secure-development-tools.build-task-policheck.PoliCheck@1
-      #     displayName: 'PoliCheck'
-      #     inputs:
-      #       targetType: F
-
-  # only sign the packages when running on Windows, and using the private server which has the certificates
+  - template: .ci/build.yml@components
+    parameters:
+      timeoutInMinutes: 120
+      tools:
+        - 'xamarin.androidbinderator.tool': '0.4.1'
+        - 'xamarin.androidx.migration.tool': '1.0.0-preview05'
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-    - job: signing
-      displayName: Signing NuGets
-      dependsOn: build
-      pool:
-        name: VSEng-XamarinCustom
-        demands:
-          - corpnet
-      condition: and(succeeded(), or(startsWith(variables['Build.SourceBranch'], 'refs/tags/'), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/AndroidX')))
-      steps:
-        # don't checkout code and sign the packages
-        - checkout: none
-        - template: sign-artifacts.yml@xamarin-templates
-          parameters:
-            targetFolder: '$(Build.ArtifactStagingDirectory)/signed'
-        # publish the signed packages
-        - task: PublishBuildArtifacts@1
-          displayName: 'Publish Signed NuGets'
-          inputs:
-            artifactName: nuget-signed
-            pathToPublish: '$(Build.ArtifactStagingDirectory)/signed'
+    - template: sign-artifacts/jobs/v1.yml@internal-templates
+      parameters:
+        dependsOn: [ 'build' ]

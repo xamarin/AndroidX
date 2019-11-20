@@ -1,13 +1,65 @@
 # AndroidX for Xamarin.Android
 
-Xamarin creates and maintains Xamarin.Android bindings for the Google Android Support Libraries and AndroidX.
+[![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/xamarin/AndroidX/blob/master/LICENSE)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/xamarin/AndroidX/issues)
+[![GitHub contributors](https://img.shields.io/github/contributors/xamarin/AndroidX.svg)](https://github.com/xamarin/AndroidX/graphs/contributors)  [![Build Status](https://dev.azure.com/devdiv/DevDiv/_apis/build/status/Xamarin/Components/AndroidX?branchName=master)](https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=12322&branchName=master)
+
+Xamarin creates and maintains Xamarin.Android bindings for AndroidX.
+
+ - [What's New in AndroidX](#whats-new-in-androidx)
+ - [Building](#building)
+    - [Prerequisites](#prerequisites)
+    - [Compiling](#compiling)
+ - [Android Support -> AndroidX Roadmap](#android-support---androidx-roadmap)
+    - [Goal](#goal)
+    - [Phases](#phases)
+ - [Migration Tools / Tasks Source Code](#migration-tools--tasks-source-code)
+ - [License](#license)
+ - [Contribution Guidelines](#contribution-guidelines)
+ - [.NET Foundation](#net-foundation)
+
+## What's New in AndroidX
+
+AndroidX is a major improvement to the original [Android Support Library](https://github.com/xamarin/AndroidSupportComponents). AndroidX packages fully replace the Android Support Library by providing feature parity and new libraries.
+
+In addition, AndroidX includes the following features:
+
+* All namespaces in AndroidX live in a consistent namespace starting with AndroidX. The Android Support Library namespaces have been mapped into corresponding AndroidX.* namespaces. For a full mapping of all the old classes and build artifacts to the new ones, see the Package Refactoring page.
+* Unlike the Android Support Library, AndroidX namespaces are separately maintained and updated. The AndroidX packages use strict Semantic Versioning, starting with version 1.0.0. You can update AndroidX libraries in your project independently.
+* Version 28.0.0 is the last release of the Android Support Library. There will be no more Android Support library releases. All new feature development will be in the AndroidX namespace.
 
 ## Building
 
-Building nuget packages from source requires calling the cake script:
+### Prerequisites
 
+Before building the libraries and samples in this repository, you will need to install [.NET Core](https://dotnet.microsoft.com/download) and the [Cake .NET Core Tool](http://cakebuild.net):
+
+```sh
+dotnet tool install -g cake.tool
 ```
-.\build.ps1 --target=packages
+
+When building on macOS, you may also need to install [CocoaPods](https://cocoapods.org/):
+
+```sh
+# Homebrew
+brew install cocoapods
+
+# Ruby Gems
+gem install cocoapods
+```
+
+### Compiling
+
+You can now build all the packages by running:
+
+```sh
+dotnet cake
+```
+
+If you are going to make changes to the `config.json`, then you can run the `packages` target to re-generate all the necessary files:
+
+```sh
+dotnet cake --target=packages
 ```
 
 ## Android Support -> AndroidX Roadmap
@@ -42,13 +94,12 @@ The source code for the `Xamarin.AndroidX.Migration` package and other migration
 
 ## License
 
-The license for this repository is specified in
-[LICENSE.md](LICENSE.md)
-
-The `externals` build task downloads some external dependencies from Google which are licensed under and subject to the terms of [Android Software Development Kit License Agreement](http://developer.android.com/sdk/terms.html)
+The license for this repository is specified in [LICENSE.md](LICENSE.md)
 
 ## Contribution Guidelines
+
 The Contribution Guidelines for this repository are listed in [CONTRIBUTING.md](.github/CONTRIBUTING.md)
 
 ## .NET Foundation
+
 This project is part of the [.NET Foundation](http://www.dotnetfoundation.org/projects)

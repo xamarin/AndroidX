@@ -32,4 +32,17 @@
     <attr path="/api/package[@name='androidx.core.view.animation']" name="managedName">AndroidX.Core.View.Animation</attr>
     <attr path="/api/package[@name='androidx.core.view.inputmethod']" name="managedName">AndroidX.Core.View.InputMethod</attr>
     <attr path="/api/package[@name='androidx.core.widget']" name="managedName">AndroidX.Core.Widget</attr>
+    <attr
+        path="/api/package[@name='androidx.core.telephony.mbms']"
+        name="managedName"
+        >
+        AndroidX.Core.Telephony.Mbms
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.location']"
+        name="managedName"
+        >
+        AndroidX.Core.Location
+    </attr>
+    
 </metadata>

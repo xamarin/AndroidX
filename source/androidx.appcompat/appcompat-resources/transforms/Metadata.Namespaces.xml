@@ -1,0 +1,31 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.appcompat.content.res']" 
+        name="managedName"
+        >
+        AndroidX.AppCompat.Content.Res
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']" 
+        name="managedName"
+        >
+        AndroidX.AppCompat.Graphics.Drawable
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.appcompat.widget']" 
+        name="managedName"
+        >
+        AndroidX.AppCompat.Widget
+    </attr>
+    
+    
+        
+</metadata>

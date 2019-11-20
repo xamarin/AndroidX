@@ -53,7 +53,8 @@
     <!--
     mc++ AndroidX
     -->
-    <!-- <add-node
+    <!-- 
+    <add-node
         path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']"
         >
         <method 
@@ -77,5 +78,9 @@
             </parameter>
         </method>
         
-    </add-node> -->
+    </add-node> 
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.preference']/interface[@name='Preference.SummaryProvider']"
+        />    
 </metadata>

@@ -1,0 +1,26 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Content.PM.ConfigChanges
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']/method[@name='getConstantState' and count(parameter)=0]"
+        name="propertyName"></attr>
+    <attr
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']/method[@name='getConstantState' and count(parameter)=0]"
+        name="managedName"
+        >
+        GetConstantState
+    </attr>
+    <!--
+    -->
+    <attr
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+</metadata>

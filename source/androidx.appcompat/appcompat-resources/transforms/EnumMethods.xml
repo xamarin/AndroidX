@@ -1,0 +1,7 @@
+﻿<enum-method-mappings>
+
+    <mapping jni-class="androidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat">
+        <method jni-name="getChangingConfigurations" parameter="return" clr-enum-type="Android.Content.PM.ConfigChanges" />
+    </mapping>    
+DrawableContainer
+</enum-method-mappings>

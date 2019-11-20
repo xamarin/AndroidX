@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <RepositoryUrl>https://github.com/xamarin/AndroidX.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
+    <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
+  </PropertyGroup>
+</Project>
