@@ -406,16 +406,30 @@ Task("api-diff")
 			MonoApiHtmlColorized(API_INFO_OLD_MIGRATED, API_INFO_NEW, "./output/api-info-diff.html");
 			string[] lines_html = FileReadLines("./output/api-info-diff.html");
 			List<string> lines_html_new = new List<string>();
+			List<string> removed_types = new List<string>();
 			foreach(string line in lines_html)
 			{
 				if (line.Contains(@"Java.Interop.IJavaPeerable"))
 				{
 					continue;
 				}
+				if (line.Contains("<h3>Removed Type <span class='breaking' data-is-breaking>"))
+				{
+					string type = line.Replace("<h3>Removed Type <span class='breaking' data-is-breaking>", "");
+					type = type.Replace("</span></h3>",",");
+					type = Regex.Replace(type, ",</div> <!-- (.*?) -->", "");
+					type = Regex.Replace(type, ",<div> <!-- (.*?) -->", "");
+					Information($"{type}");
+					string[] types = type.Split( new string[] { "," }, StringSplitOptions.RemoveEmptyEntries );
+					removed_types.AddRange(types); 
+				}
 
 				lines_html_new.Add(line);
 			}
+
 			FileWriteLines("./output/api-info-diff.cleaned.html", lines_html_new.ToArray());
+			FileWriteLines("./output/removed-types.txt", removed_types.ToArray());
+
 			return;
 		}
 	);
