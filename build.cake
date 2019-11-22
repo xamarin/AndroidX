@@ -3,6 +3,7 @@
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.2.0
+#addin nuget:?package=Cake.MonoApiTools
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -269,6 +270,180 @@ Task("inject-variables")
 	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
 	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
 });
+
+
+
+var TF_MONIKER = "monoandroid90";
+var BUILD_CONFIG = Argument ("config", "Release");
+string SUPPORT_MERGED_DLL = "./output/AndroidSupport.Merged.dll";
+string ANDROIDX_MERGED_DLL = "./output/AndroidX.Merged.dll";
+string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/XamarinAndroidXMigration/master/mappings/androidx-mapping.csv";
+string MAPPING_LOCAL = "./output/androidx-mapping.csv";
+string API_INFO_OLD = "./output/AndroidSupport.Merged.api-info.xml";
+string API_INFO_OLD_MIGRATED = "./output/AndroidSupport.Merged.Migrated.api-info.xml";
+string API_INFO_NEW = "./output/AndroidX.Merged.api-info.xml";
+
+
+var MONODROID_BASE_PATH = (DirectoryPath)"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/";
+if (IsRunningOnWindows ()) {
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+	MONODROID_BASE_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/");
+}
+var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
+
+
+Task("api-info-migrate")
+	.Does
+	(
+		() =>
+		{
+			EnsureDirectoryExists ("./output/");
+
+			DownloadFile (SUPPORT_MERGED_DLL_URL, SUPPORT_MERGED_DLL);
+
+			var result1 = StartProcess($"api-tools", $"api-info {SUPPORT_MERGED_DLL}");
+			if (result1 != 0)
+				throw new Exception($"The androidxmapper failed with error code {result1}.");
+
+
+			DownloadFile (MAPPING_URL, MAPPING_LOCAL);
+			string[] lines_mapping_local = FileReadLines(MAPPING_LOCAL);
+			List<(string, string)> mapping = new List<(string, string)>();
+			lines_mapping_local.ToList()
+							.ForEach( x => { var r = x.Split(new char[] {','}); mapping.Add( (r[0], r[2]) ); } );
+			mapping.GroupBy(g => new Tuple<string, string>(g.Item1, g.Item2))
+				.Select(g => g.First())
+				.ToList()
+				.ForEach( x => { Console.WriteLine(x); } );
+
+
+			string[] lines_api_info = FileReadLines(API_INFO_OLD);
+			// lines_api_info.ToList()
+			//                .ForEach( x => { Console.WriteLine(x); } );
+			List<string> lines_api_info_migrated =  new List<string>();
+			int i = 0;
+			foreach(string l in lines_api_info)
+			{
+				string line_new = null;
+
+				foreach((string, string) m in mapping)
+				{
+					if (string.IsNullOrEmpty(m.Item1))
+					{
+						continue;
+					}
+					if( l.Contains(m.Item1) )
+					{
+						line_new = l.Replace(m.Item1, m.Item2);
+						break;
+					}
+					else
+					{
+						line_new = l;
+					}
+				}
+				lines_api_info_migrated.Add(line_new);
+			}
+
+			FileWriteLines(API_INFO_OLD_MIGRATED, lines_api_info_migrated.ToArray());
+		}
+	);
+
+
+Task("merge-fresh")
+	.Does
+	(
+		() =>
+		{
+			var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.AndroidX.*.dll");
+			var mergeDlls = allDlls
+								.GroupBy(d => new FileInfo(d.FullPath).Name)
+								.Select(g => g.FirstOrDefault())
+								.ToList();
+			mergeDlls.ForEach( x => { Console.WriteLine(x); });
+			var result2 = StartProcess
+							(
+								"api-tools", 
+								"merge -n Xamarin.AndroidX.Merged" +
+								$" {string.Join(" ", mergeDlls)} " +
+								$" -s /Library/Frameworks/Xamarin.Android.framework/Versions/9.1.0-17/lib/xamarin.android/xbuild-frameworks/MonoAndroid/v9.0/" +
+								$" -s /Library/Frameworks/Xamarin.Android.framework/Versions/10.1.0.29/lib/xamarin.android/xbuild-frameworks/MonoAndroid/v1.0/" +
+								$" -o " + MakeAbsolute((FilePath)"./output/AndroidX.Merged.dll") +
+								$" --inject-assemblyname"
+							);
+			var result1 = StartProcess($"api-tools", $"api-info {ANDROIDX_MERGED_DLL}");
+			if (result1 != 0)
+				throw new Exception($"The androidxmapper failed with error code {result1}.");
+				
+			return;
+		}
+	);
+
+
+Task("api-diff")
+	.IsDependentOn ("api-info-migrate")
+	.IsDependentOn ("merge-fresh")
+	.Does
+	(
+		() =>
+		{
+			// https://github.com/Redth/Cake.MonoApiTools/
+			MonoApiDiff(API_INFO_OLD_MIGRATED, API_INFO_NEW, "./output/api-info-diff.xml");
+			string[] lines_xml = FileReadLines("./output/api-info-diff.xml");
+			List<string> lines_xml_new = new List<string>();
+			foreach(string line in lines_xml)
+			{
+				if (line.Contains(@"Java.Interop.IJavaPeerable"))
+				{
+					continue;
+				}
+
+				lines_xml_new.Add(line);
+			}
+			FileWriteLines("./output/api-info-diff.cleaned.xml", lines_xml_new.ToArray());
+
+
+			MonoApiHtmlColorized(API_INFO_OLD_MIGRATED, API_INFO_NEW, "./output/api-info-diff.html");
+			string[] lines_html = FileReadLines("./output/api-info-diff.html");
+			List<string> lines_html_new = new List<string>();
+			foreach(string line in lines_html)
+			{
+				if (line.Contains(@"Java.Interop.IJavaPeerable"))
+				{
+					continue;
+				}
+
+				lines_html_new.Add(line);
+			}
+			FileWriteLines("./output/api-info-diff.cleaned.html", lines_html_new.ToArray());
+			return;
+		}
+	);
+
+Task ("diff")
+	.IsDependentOn ("merge")
+	.Does (() =>
+{
+	var SEARCH_DIRS = new DirectoryPath [] {
+		MONODROID_BASE_PATH.Combine("v1.0"),
+		MONODROID_PATH,
+	};
+
+	EnsureDirectoryExists("./output/");
+	MonoApiInfo ("./output/AndroidX.Merged.dll", "./output/api-info.xml", new MonoApiInfoToolSettings {
+		SearchPaths = SEARCH_DIRS
+	});
+
+	//DownloadFile (BASE_API_INFO_URL, "./output/api-info.previous.xml");
+
+	// Now diff against current released api info
+	MonoApiDiff ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.xml");
+
+	// Now let's make pretty files
+	MonoApiHtml ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.html");
+	MonoApiMarkdown ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.md");
+});
+
 
 Task ("clean")
 	.Does (() =>
