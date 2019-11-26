@@ -1,3 +1,18 @@
 ﻿<metadata>
     <remove-node path="/api/package[@name='androidx.lifecycle']/*[@name='OnLifecycleEvent']" />
+
+    <attr 
+        path="/api/package[@name='androidx.lifecycle']/class[@name='SingleGeneratedAdapterObserver']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.lifecycle']/class[@name='CompositeGeneratedAdaptersObserver']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    
 </metadata>

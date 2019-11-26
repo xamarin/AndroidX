@@ -1,2 +1,10 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.activity']/class[@name='ComponentActivity.NonConfigurationInstances']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+
 </metadata>

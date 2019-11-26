@@ -23,4 +23,23 @@
         public
     </attr>
     
+    <attr
+        path="/api/package[@name='androidx.appcompat.widget']/class[@name='ResourceManagerInternal.AsldcInflateDelegate']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.appcompat.widget']/class[@name='ResourceManagerInternal.InflateDelegate']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.appcompat.widget']/class[@name='ResourceManagerInternal.InflateDelegate']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
 </metadata>
