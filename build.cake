@@ -231,11 +231,19 @@ Task ("generate-mapping")
 	}
 
 	// generate the mapping
+	Information("Generating the androidx-mapping.csv file...");
 	RunProcess("androidx-migrator",
 		$"generate -v " +
 		$"  --support ./output/AndroidSupport.Merged.dll" +
 		$"  --androidx ./output/AndroidX.Merged.dll" +
 		$"  --output ./output/androidx-mapping.csv");
+
+	// generate the dependency tree
+	Information("Generating the dependencies.json file...");
+	RunProcess("androidx-migrator",
+		$"deptree -v " +
+		$"  --directory ./output/" +
+		$"  --output ./output/dependencies.json");
 });
 
 Task ("merge")
