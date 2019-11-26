@@ -407,6 +407,7 @@ Task("api-diff")
 			string[] lines_html = FileReadLines("./output/api-info-diff.html");
 			List<string> lines_html_new = new List<string>();
 			List<string> removed_types = new List<string>();
+			List<string> new_types = new List<string>();
 			foreach(string line in lines_html)
 			{
 				if (line.Contains(@"Java.Interop.IJavaPeerable"))
@@ -419,16 +420,23 @@ Task("api-diff")
 					type = type.Replace("</span></h3>",",");
 					type = Regex.Replace(type, ",</div> <!-- (.*?) -->", "");
 					type = Regex.Replace(type, ",<div> <!-- (.*?) -->", "");
-					Information($"{type}");
 					string[] types = type.Split( new string[] { "," }, StringSplitOptions.RemoveEmptyEntries );
 					removed_types.AddRange(types); 
 				}
-
+				if (line.Contains("<h3>New Type "))
+				{
+					string type = line.Replace("<h3>New Type ", "");
+					type = type.Replace("</h3>", "");
+					Information($"{type}");
+					new_types.Add(type);
+				}
 				lines_html_new.Add(line);
 			}
 
+
 			FileWriteLines("./output/api-info-diff.cleaned.html", lines_html_new.ToArray());
 			FileWriteLines("./output/removed-types.txt", removed_types.ToArray());
+			FileWriteLines("./output/new-types.txt", new_types.ToArray());
 
 			return;
 		}
