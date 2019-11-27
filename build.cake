@@ -3,11 +3,13 @@
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=3.2.0
-#addin nuget:?package=Cake.MonoApiTools
+#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
+#addin nuget:?package=Newtonsoft.Json&version=12.0.3
 
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
+using Newtonsoft.Json.Linq;
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
@@ -62,6 +64,9 @@ Information ("BUILD_TIMESTAMP:      {0}", BUILD_TIMESTAMP);
 // You shouldn't have to configure anything below here
 // ######################################################
 
+var MIGRATION_PACKAGE_VERSION = GetNuGetVersion("Xamarin.AndroidX.Migration");
+var MULTIDEX_PACKAGE_VERSION = GetNuGetVersion("Xamarin.AndroidX.MultiDex");
+
 void RunProcess(FilePath fileName, string processArguments)
 {
 	var exitCode = StartProcess(fileName, processArguments);
@@ -81,9 +86,65 @@ string[] RunProcessWithOutput(FilePath fileName, string processArguments)
 	return procOut.ToArray();;
 }
 
+void RunGradle(DirectoryPath root, string target)
+{
+	root = MakeAbsolute(root);
+	var proc = IsRunningOnWindows()
+		? root.CombineWithFilePath("gradlew.bat").FullPath
+		: "bash";
+	var args = IsRunningOnWindows()
+		? ""
+		: root.CombineWithFilePath("gradlew").FullPath;
+	args += $" {target} -p {root}";
+
+	var exitCode = StartProcess(proc, args);
+	if (exitCode != 0)
+		throw new Exception($"Gradle exited with code {exitCode}.");
+}
+
+string GetNuGetVersion(string nugetId)
+{
+	var json = JToken.Parse(FileReadText("./config.json"));
+
+	if (json.Type == JTokenType.Array)
+		json = ((JArray)json)[0];
+
+	var artifacts = json["artifacts"];
+	var artifact = artifacts.FirstOrDefault(j => (string)j["nugetId"] == nugetId);
+
+	return (string)(artifact["nugetVersion"] ?? artifact["version"]);
+}
+
+// Preparation
+
+Task("inject-variables")
+	.WithCriteria(!BuildSystem.IsLocalBuild)
+	.Does(() =>
+{
+	var glob = "./source/AssemblyInfo.cs";
+
+	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", BUILD_COMMIT);
+	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
+	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
+});
+
+Task("check-tools")
+	.Does(() =>
+{
+	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
+	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
+		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
+			throw new Exception ($"Missing dotnet tool: {toolName}");
+	}
+});
+
+// Android X
+
 Task("javadocs")
 	.Does(() =>
 {
+	EnsureDirectoryExists("./externals/");
+
 	if (!FileExists("./externals/docs.zip"))
 		DownloadFile(REF_DOCS_URL, "./externals/docs.zip");
 
@@ -100,16 +161,6 @@ Task("javadocs")
 
 		RunProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
 		RunProcess("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
-	}
-});
-
-Task("check-tools")
-	.Does(() =>
-{
-	var installedTools = RunProcessWithOutput("dotnet", "tool list -g");
-	foreach (var toolName in REQUIRED_DOTNET_TOOLS) {
-		if (installedTools.All(l => l.IndexOf(toolName, StringComparison.OrdinalIgnoreCase) == -1))
-			throw new Exception ($"Missing dotnet tool: {toolName}");
 	}
 });
 
@@ -136,7 +187,6 @@ Task("libs")
 	.Does(() =>
 {
 	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
-		
 		var restoreSettings = new MSBuildSettings()
 			.SetConfiguration(CONFIGURATION)
 			.SetVerbosity(VERBOSITY)
@@ -156,6 +206,7 @@ Task("libs")
 		.SetMaxCpuCount(0)
 		.EnableBinaryLogger("./output/libs.binlog")
 		.WithRestore()
+		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
 
@@ -170,6 +221,7 @@ Task("nuget")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
+		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
 		.WithProperty("NoBuild", "true")
 		.WithProperty("PackageRequireLicenseAcceptance", "true")
 		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
@@ -212,13 +264,14 @@ Task("samples")
 		.SetMaxCpuCount(0)
 		.EnableBinaryLogger("./output/samples.binlog")
 		.WithRestore()
-		.WithProperty("RestoreNoCache", "true")
 		.WithProperty("RestorePackagesPath", packagesPath)
 		.WithProperty("DesignTimeBuild", "false")
 		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
 
 	MSBuild("./samples/BuildAll/BuildAll.sln", settings);
 });
+
+// Migration Preparation
 
 Task ("generate-mapping")
 	.IsDependentOn ("merge")
@@ -236,14 +289,16 @@ Task ("generate-mapping")
 		$"generate -v " +
 		$"  --support ./output/AndroidSupport.Merged.dll" +
 		$"  --androidx ./output/AndroidX.Merged.dll" +
-		$"  --output ./output/androidx-mapping.csv");
+		$"  --output ./output/mappings/androidx-mapping.csv");
+	CopyFileToDirectory("./output/mappings/androidx-mapping.csv", "./mappings/");
 
 	// generate the dependency tree
 	Information("Generating the dependencies.json file...");
 	RunProcess("androidx-migrator",
 		$"deptree -v " +
 		$"  --directory ./output/" +
-		$"  --output ./output/dependencies.json");
+		$"  --output ./output/mappings/dependencies.json");
+	CopyFileToDirectory("./output/mappings/dependencies.json", "./mappings/");
 });
 
 Task ("merge")
@@ -268,15 +323,58 @@ Task ("merge")
 		$"  --inject-assemblyname");
 });
 
-Task("inject-variables")
-	.WithCriteria(!BuildSystem.IsLocalBuild)
+// Migration External Assets
+
+Task("jetifier-wrapper")
 	.Does(() =>
 {
-	var glob = "./source/AssemblyInfo.cs";
+	var root = "./source/migration/jetifierWrapper/";
 
-	ReplaceTextInFiles(glob, "{BUILD_COMMIT}", BUILD_COMMIT);
-	ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
-	ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
+	RunGradle(root, "jar");
+
+	var outputDir = MakeAbsolute((DirectoryPath)"./output/JetifierWrapper");
+	EnsureDirectoryExists(outputDir);
+
+	CopyFileToDirectory($"{root}build/libs/jetifierWrapper-1.0.jar", outputDir);
+});
+
+// Migration
+
+Task("migration-libs")
+	.IsDependentOn("jetifier-wrapper")
+	.IsDependentOn("merge")
+	.IsDependentOn("generate-mapping")
+	.Does(() =>
+{
+	var settings = new MSBuildSettings()
+		.SetConfiguration(CONFIGURATION)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.EnableBinaryLogger("./output/migration-libs.binlog")
+		.WithRestore()
+		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
+
+	MSBuild("./source/migration/Xamarin.AndroidX.Migration.sln", settings);
+});
+
+Task("migration-nuget")
+	.IsDependentOn("migration-libs")
+	.Does(() =>
+{
+	var settings = new MSBuildSettings()
+		.SetConfiguration(CONFIGURATION)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.WithProperty("NoBuild", "true")
+		.WithRestore()
+		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
+		.WithProperty("MultiDexVersion", MULTIDEX_PACKAGE_VERSION)
+		.WithProperty("PackageRequireLicenseAcceptance", "true")
+		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
+		.WithTarget("Pack");
+
+	MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
+	MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
 });
 
 
@@ -502,6 +600,7 @@ Task ("ci")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
 	.IsDependentOn ("generate-mapping")
+	.IsDependentOn ("migration-nuget")
 	.IsDependentOn ("samples");
 
 // for local builds, conditionally do the first binderate

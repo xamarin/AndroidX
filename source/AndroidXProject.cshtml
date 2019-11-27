@@ -167,7 +167,7 @@
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
     <ItemGroup>
-      <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.0-preview06"/>
+      <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" />
     </ItemGroup>
   }
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable")

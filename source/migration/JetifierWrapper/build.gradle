@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id "de.undercouch.download" version "4.0.0"
+}
+
+group 'com.xamarin.androidx'
+version '1.0'
+
+def jetifierVersion = '1.0.0-beta06'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: "$buildDir/jetifier-standalone/lib", include: ['*.jar'])
+}
+
+task downloadZipFile(type: Download) {
+    src "https://dl.google.com/dl/android/studio/jetifier-zips/$jetifierVersion/jetifier-standalone.zip"
+    dest new File(buildDir, 'jetifier-standalone.zip')
+    onlyIfModified true
+}
+
+task downloadAndUnzipFile(dependsOn: downloadZipFile, type: Copy) {
+    from zipTree(downloadZipFile.dest)
+    into buildDir
+}
+
+compileJava {
+    dependsOn downloadAndUnzipFile
+}
+
+jar {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
