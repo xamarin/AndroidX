@@ -308,7 +308,8 @@ Task ("merge")
 	// find all the dlls
 	var allDlls = GetFiles($"./generated/*/bin/{CONFIGURATION}/monoandroid*/Xamarin.*.dll");
 	var mergeDlls = allDlls
-		.GroupBy(d => new FileInfo(d.FullPath).Name)
+		.GroupBy(d => d.GetFilename().FullPath)
+		.Where(g => g.Key != "Xamarin.AndroidX.Migration.Dummy.dll")
 		.Select(g => g.FirstOrDefault())
 		.ToList();
 
