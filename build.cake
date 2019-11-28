@@ -26,6 +26,8 @@ var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
 var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.3/AndroidSupport.Merged.dll";
 
+var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-4.zip";
+
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
@@ -277,11 +279,11 @@ Task ("generate-mapping")
 	.IsDependentOn ("merge")
 	.Does (() =>
 {
+	EnsureDirectoryExists ("./output/");
+
 	// download the AndroidSupport.Merged.dll from a past build
-	if (!FileExists ("./output/AndroidSupport.Merged.dll")) {
-		EnsureDirectoryExists ("./output/");
+	if (!FileExists ("./output/AndroidSupport.Merged.dll"))
 		DownloadFile (SUPPORT_MERGED_DLL_URL, "./output/AndroidSupport.Merged.dll");
-	}
 
 	// generate the mapping
 	Information("Generating the androidx-mapping.csv file...");
@@ -341,10 +343,27 @@ Task("jetifier-wrapper")
 
 // Migration
 
+Task("migration-externals")
+	.IsDependentOn("jetifier-wrapper")
+	.IsDependentOn("merge")
+	.IsDependentOn("generate-mapping")
+	.Does(() =>
+{
+	var interop = "./externals/java.interop";
+
+	EnsureDirectoryExists(interop);
+	if (!FileExists(interop + "/source.zip")) {
+		DownloadFile(JAVA_INTEROP_ZIP_URL, interop + "/source.zip");
+		Unzip(interop + "/source.zip", interop);
+		MoveDirectory(interop + "/java.interop-" + System.IO.Path.GetFileNameWithoutExtension(JAVA_INTEROP_ZIP_URL), interop + "/java.interop");
+	}
+});
+
 Task("migration-libs")
 	.IsDependentOn("jetifier-wrapper")
 	.IsDependentOn("merge")
 	.IsDependentOn("generate-mapping")
+	.IsDependentOn("migration-externals")
 	.Does(() =>
 {
 	var settings = new MSBuildSettings()

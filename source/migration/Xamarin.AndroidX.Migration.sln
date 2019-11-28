@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JetifierWrapper", "Jetifier
 		JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\Main.java = JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\Main.java
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Android.Tools.Bytecode", "Java.Interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj", "{51B18B14-0AE6-45EE-A62E-92A199C5A73C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Android.Tools.Bytecode", "..\..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj", "{51B18B14-0AE6-45EE-A62E-92A199C5A73C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

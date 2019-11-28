@@ -36,7 +36,6 @@ This package provides a set of tools and MSBuild tasks to aid in the migration f
     <file src="bin\Release\netstandard2.0\Mono.*.dll" target="build\monoandroid90" />
     <file src="bin\Release\netstandard2.0\Xamarin.*.dll" target="build\monoandroid90" />
     <file src="bin\Release\netstandard2.0\ILRepack.dll" target="build\monoandroid90" />
-    <file src="bin\Release\netstandard2.0\protobuf-net.dll" target="build\monoandroid90" />
     <file src="Xamarin.AndroidX.Migration.props" target="build\monoandroid90" />
     <file src="Xamarin.AndroidX.Migration.targets" target="build\monoandroid90" />
 
