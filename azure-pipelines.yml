@@ -23,6 +23,7 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
+      submodules: true
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview05'
