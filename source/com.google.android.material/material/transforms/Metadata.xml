@@ -63,17 +63,12 @@
     <remove-node
         path="/api/package[@name='com.google.android.material.behavior']/interface[@name='SwipeDismissBehavior.OnDismissListener']"
         />
-    <attr path="/api/package[@name='com.google.android.material.checkbox']" name="managedName">Google.Android.Material.Checkbox</attr>    
-    <attr path="/api/package[@name='com.google.android.material.color']" name="managedName">Google.Android.Material.Color</attr>    
-    <attr path="/api/package[@name='com.google.android.material.dialog']" name="managedName">Google.Android.Material.Dialog</attr>    
-    <attr path="/api/package[@name='com.google.android.material.elevation']" name="managedName">Google.Android.Material.Elevation</attr> 
-    <attr path="/api/package[@name='com.google.android.material.picker']" name="managedName">Google.Android.Material.Picker</attr>    
-    <attr path="/api/package[@name='com.google.android.material.radiobutton']" name="managedName">Google.Android.Material.RadioButton</attr>    
-    <attr path="/api/package[@name='com.google.android.material.switchmaterial']" name="managedName">Google.Android.Material.SwitchMaterial</attr>    
-
     <attr path="/api/package[@name='com.google.android.material.picker']/class[@name='MonthInYearAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedName">GetCalendarItem</attr>    
     <attr path="/api/package[@name='com.google.android.material.picker']/class[@name='DaysHeaderAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedName">GetIntegerItem</attr>
     
     <attr path="/api/package[@name='com.google.android.material.shape']/class[@name='CornerTreatment']/field[@name='cornerSize']" name="managedName">_cornerSize</attr>
     <attr path="/api/package[@name='com.google.android.material.snackbar']/class[@name='BaseTransientBottomBar']/field[@name='view']" name="managedName">_view</attr>
+
+    <remove-node path="/api/package[@name='com.google.android.material.button']/interface[@name='MaterialButton.OnPressedChangeListener']"/>
+    <remove-node path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" />
 </metadata>
