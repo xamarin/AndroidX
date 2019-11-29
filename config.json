@@ -145,9 +145,9 @@
 		,{
 			"groupId" : "androidx.coordinatorlayout",
 			"artifactId" : "coordinatorlayout",
-			"version" : "1.0.0",
+			"version" : "1.1.0-alpha01",
 			"nugetId" : "Xamarin.AndroidX.CoordinatorLayout",
-			"nugetVersion" : "1.0.0-preview06",
+			"nugetVersion" : "1.1.0.1-preview06",
 			"dependencyOnly" : false
 		}
 		,{
@@ -537,9 +537,9 @@
 		,{
 			"groupId" : "androidx.recyclerview",
 			"artifactId" : "recyclerview",
-			"version" : "1.0.0",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.RecyclerView",
-			"nugetVersion" : "1.0.0-preview06",
+			"nugetVersion" : "1.1.0-preview06",
 			"dependencyOnly" : false
 		}
 		,{
@@ -713,9 +713,9 @@
 		,{
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
-			"version" : "1.0.0",
+			"version" : "1.1.0-alpha05",
 			"nugetId" : "Xamarin.Google.Android.Material",
-			"nugetVersion" : "1.1.0-preview06",
+			"nugetVersion" : "1.1.0.5-preview06",
 			"dependencyOnly" : false
 		},
 

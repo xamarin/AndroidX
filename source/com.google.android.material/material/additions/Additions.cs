@@ -173,3 +173,44 @@ namespace Google.Android.Material.TextField
             Enabled = enabled;
     }
 }
+
+namespace Google.Android.Material.Picker
+{
+    partial class MonthInYearAdapter 
+    {
+        public override unsafe global::Java.Lang.Object GetItem (int position) => GetCalendarItem(position);
+    } 
+
+    partial class DaysHeaderAdapter 
+    {
+        public override unsafe global::Java.Lang.Object GetItem (int position) => GetIntegerItem(position);
+    } 
+
+    partial class MaterialDateRangePickerDialog 
+    {
+        protected override global::Google.Android.Material.Picker.MaterialCalendarView RawMaterialCalendarView => MaterialCalendarView;
+    }
+
+    partial class MaterialDatePickerView 
+    {
+        protected override global::Java.Lang.Object RawSelection => Selection;
+    }
+    partial class MaterialDatePickerDialog 
+    {
+        protected override global::Google.Android.Material.Picker.MaterialCalendarView RawMaterialCalendarView => MaterialCalendarView;
+    }
+    
+    partial class MaterialDateRangePickerView
+    {
+        protected override global::Java.Lang.Object RawSelection => Selection;
+    }
+}
+
+
+namespace Google.Android.Material.FloatingActionButton
+{
+    partial class ExtendedFloatingActionButton
+    {
+        public virtual unsafe global::AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior GetBehavior() => Behavior;
+    } 
+}
