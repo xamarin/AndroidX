@@ -246,7 +246,7 @@ Task("samples")
 		if (nupkg.FullPath.Contains(".Wear."))
 			continue;
 		// Skip the migration packages as that is not meant forto be used here
-		if (nupkg.FullPath.StartsWith("Xamarin.AndroidX.Migration"))
+		if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
 			continue;
 		var filename = nupkg.GetFilenameWithoutExtension();
 		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
