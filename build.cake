@@ -513,6 +513,7 @@ Task("merge-fresh")
 
 
 Task("api-diff")
+	.IsDependentOn ("merge")
 	.IsDependentOn ("api-info-migrate")
 	.IsDependentOn ("merge-fresh")
 	.Does
