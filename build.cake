@@ -316,6 +316,9 @@ Task("generate-mapping")
 		$"  --support ./output/AndroidSupport.Merged.dll" +
 		$"  --androidx ./output/AndroidX.Merged.dll" +
 		$"  --output ./output/mappings/androidx-mapping.csv");
+	var mappingLines = FileReadLines("./output/mappings/androidx-mapping.csv");
+	mappingLines = mappingLines.Where(l => !l.Contains("InjectedAssemblyNameAttribute")).ToArray();
+	FileWriteLines("./output/mappings/androidx-mapping.csv", mappingLines);
 	CopyFileToDirectory("./output/mappings/androidx-mapping.csv", "./mappings/");
 
 	// generate the dependency tree
