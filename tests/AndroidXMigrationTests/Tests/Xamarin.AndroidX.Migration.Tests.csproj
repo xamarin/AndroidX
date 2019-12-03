@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="Mono.Cecil" Version="0.10.3" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+    <PackageReference Include="XunitXml.TestLogger" Version="2.1.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj" />
+    <ProjectReference Include="..\..\..\source\migration\Migration\Xamarin.AndroidX.Migration.Core.csproj" />
+  </ItemGroup>
+
+  <!-- Jetifier test assets -->
+  <ItemGroup>
+    <Content Include="..\Aarxersise.Java.AndroidX\app\build\outputs\aar\app-debug.aar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>aarxersise.java.androidx.aar</Link>
+    </Content>
+    <Content Include="..\Aarxersise.Java.Support\app\build\outputs\aar\app-debug.aar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>aarxersise.java.support.aar</Link>
+    </Content>
+    <Content Include="..\..\..\externals\test-assets\merged-dlls\AndroidSupport.Merged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>AndroidSupport.Merged.dll</Link>
+    </Content>
+    <Content Include="..\..\..\externals\test-assets\merged-dlls\AndroidX.Merged.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>AndroidX.Merged.dll</Link>
+    </Content>
+    <Content Include="..\..\..\externals\test-assets\facebook-sdk\facebook-android-sdk.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>facebook-android-sdk.zip</Link>
+    </Content>
+  </ItemGroup>
+
+  <!-- Cecilfier test assets -->
+  <ItemGroup>
+    <ProjectReference Include="..\Aarxercise.Binding.AndroidX\Aarxercise.Binding.AndroidX.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Binding.Support\Aarxercise.Binding.Support.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Managed.AndroidX\Aarxercise.Managed.AndroidX.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Managed.Support\Aarxercise.Managed.Support.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Old.AndroidX\Aarxercise.Old.AndroidX.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Old.Support\Aarxercise.Old.Support.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Reference.Support\Aarxercise.Reference.Support.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\Aarxercise.Reference.AndroidX\Aarxercise.Reference.AndroidX.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>

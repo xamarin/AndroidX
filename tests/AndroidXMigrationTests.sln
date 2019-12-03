@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.BuildTasks", "..\source\migration\BuildTasks\Xamarin.AndroidX.Migration.BuildTasks.csproj", "{450BD878-668D-4739-91F6-87BBCEB55FDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration", "..\source\migration\Migration\Xamarin.AndroidX.Migration.Core.csproj", "{CF645037-0F6E-43D9-A603-A15A4DBE1906}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.Tool", "..\source\migration\Tool\Xamarin.AndroidX.Migration.Tool.csproj", "{06820168-947C-425E-8E5F-E768935B2CDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Android.Tools.Bytecode", "..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj", "{51B18B14-0AE6-45EE-A62E-92A199C5A73C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{7E423CD0-40F0-4964-8B22-F95E29694080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Binding.AndroidX", "AndroidXMigrationTests\Aarxercise.Binding.AndroidX\Aarxercise.Binding.AndroidX.csproj", "{A387F7E5-9BD1-40F7-A748-96BF84702F3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Binding.Support", "AndroidXMigrationTests\Aarxercise.Binding.Support\Aarxercise.Binding.Support.csproj", "{2E8C42AD-1DF4-489A-96E3-9671432D1AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Managed.AndroidX", "AndroidXMigrationTests\Aarxercise.Managed.AndroidX\Aarxercise.Managed.AndroidX.csproj", "{575ABA0A-7B38-4E3A-B3DA-E245164887BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Managed.Support", "AndroidXMigrationTests\Aarxercise.Managed.Support\Aarxercise.Managed.Support.csproj", "{3EE93671-9B98-4B5B-925F-4629D3946100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Old.AndroidX", "AndroidXMigrationTests\Aarxercise.Old.AndroidX\Aarxercise.Old.AndroidX.csproj", "{1E4E7879-779A-4D16-8A5C-4AAE3ED612F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Old.Support", "AndroidXMigrationTests\Aarxercise.Old.Support\Aarxercise.Old.Support.csproj", "{9E99019A-1523-44D3-885D-A37AC79A8F3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Reference.AndroidX", "AndroidXMigrationTests\Aarxercise.Reference.AndroidX\Aarxercise.Reference.AndroidX.csproj", "{A387F7E5-9BD1-40F7-A748-96BF84702BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Reference.Support", "AndroidXMigrationTests\Aarxercise.Reference.Support\Aarxercise.Reference.Support.csproj", "{2E8C42AD-1DF4-489A-96E3-9671432D1AAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.Tests", "AndroidXMigrationTests\Tests\Xamarin.AndroidX.Migration.Tests.csproj", "{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575ABA0A-7B38-4E3A-B3DA-E245164887BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575ABA0A-7B38-4E3A-B3DA-E245164887BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575ABA0A-7B38-4E3A-B3DA-E245164887BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575ABA0A-7B38-4E3A-B3DA-E245164887BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE93671-9B98-4B5B-925F-4629D3946100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE93671-9B98-4B5B-925F-4629D3946100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE93671-9B98-4B5B-925F-4629D3946100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE93671-9B98-4B5B-925F-4629D3946100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E4E7879-779A-4D16-8A5C-4AAE3ED612F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4E7879-779A-4D16-8A5C-4AAE3ED612F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4E7879-779A-4D16-8A5C-4AAE3ED612F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4E7879-779A-4D16-8A5C-4AAE3ED612F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E99019A-1523-44D3-885D-A37AC79A8F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E99019A-1523-44D3-885D-A37AC79A8F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E99019A-1523-44D3-885D-A37AC79A8F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E99019A-1523-44D3-885D-A37AC79A8F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A387F7E5-9BD1-40F7-A748-96BF84702BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8C42AD-1DF4-489A-96E3-9671432D1AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{450BD878-668D-4739-91F6-87BBCEB55FDF} = {7E423CD0-40F0-4964-8B22-F95E29694080}
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906} = {7E423CD0-40F0-4964-8B22-F95E29694080}
+		{06820168-947C-425E-8E5F-E768935B2CDC} = {7E423CD0-40F0-4964-8B22-F95E29694080}
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C} = {7E423CD0-40F0-4964-8B22-F95E29694080}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2FF59CE-8753-4D7E-A4FD-172D29AD4496}
+	EndGlobalSection
+EndGlobal
