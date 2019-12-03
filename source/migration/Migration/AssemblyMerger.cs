@@ -46,9 +46,9 @@ namespace Xamarin.AndroidX.Migration
 
 				for (int i = 0; i < assembliesToMerge.Count; i++)
 				{
-					var ass = assembliesToMerge[i];
+					var atm = assembliesToMerge[i];
 					var temp = Path.Combine(tempRoot, Guid.NewGuid().ToString() + ".dll");
-					InjectAssemblyName(assemblyResolver, ass, temp);
+					InjectAssemblyName(assemblyResolver, atm, temp);
 					assembliesToMerge[i] = temp;
 				}
 
