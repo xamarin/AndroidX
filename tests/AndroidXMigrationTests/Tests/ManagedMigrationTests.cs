@@ -1,4 +1,5 @@
 ﻿using Mono.Cecil;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
@@ -56,6 +57,17 @@ namespace Xamarin.AndroidX.Migration.Tests
 				Assert.Equal(supportTypes.Length, androidxTypes.Length);
 				CecilAssert.NotEqual(supportTypes, androidxTypes);
 			}
+		}
+
+		[Theory]
+		[InlineData(ActiveDirectoryDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts)]
+		public void CanRunMigrationOnNonPortablePdbs(string assembly, CecilMigrationResult expectedResult)
+		{
+			Assert.False(IsPortablePdb(Path.ChangeExtension(assembly, "pdb")));
+
+			var output = RunMigration(assembly, expectedResult);
+
+			Assert.True(IsPortablePdb(Path.ChangeExtension(output, "pdb")), output);
 		}
 
 		[Theory]

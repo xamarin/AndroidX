@@ -412,9 +412,6 @@ Task("jetifier-wrapper")
 // Migration
 
 Task("migration-externals")
-	.IsDependentOn("jetifier-wrapper")
-	.IsDependentOn("merge")
-	.IsDependentOn("generate-mapping")
 	.Does(() =>
 {
 	var interop = "./externals/java.interop";
@@ -429,7 +426,6 @@ Task("migration-externals")
 
 Task("migration-libs")
 	.IsDependentOn("jetifier-wrapper")
-	.IsDependentOn("merge")
 	.IsDependentOn("generate-mapping")
 	.IsDependentOn("migration-externals")
 	.Does(() =>
@@ -466,6 +462,73 @@ Task("migration-nuget")
 	MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
 });
 
+// Migration Tests
+
+Task("migration-tests-externals")
+	.Does(() =>
+{
+	// download the facebook sdk to test with
+	{
+		var sdkRoot = "./externals/test-assets/facebook-sdk/";
+		var facebookFilename = "facebook-android-sdk";
+		var facebookVersion = "4.40.0";
+		var facebookFullName = $"{facebookFilename}-{facebookVersion}";
+		var facebookTestUrl = $"https://origincache.facebook.com/developers/resources/?id={facebookFullName}.zip";
+		var zipName = $"{sdkRoot}{facebookFilename}.zip";
+		EnsureDirectoryExists(sdkRoot);
+		if (!FileExists(zipName)) {
+			DownloadFile(facebookTestUrl, zipName);
+			Unzip(zipName, sdkRoot);
+		}
+	}
+
+	// downlaod some dodgy dlls
+	{
+		var sdkRoot = "./externals/test-assets/active-directory/";
+		var adUrl = "https://www.nuget.org/api/v2/package/Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.4";
+		var zipName = $"{sdkRoot}/ad.zip";
+		EnsureDirectoryExists(sdkRoot);
+		if (!FileExists(zipName)) {
+			DownloadFile(adUrl, zipName);
+			Unzip(zipName, sdkRoot);
+		}
+	}
+
+	// build the special test projects
+	{
+		var nativeProjects = new [] {
+			"./tests/AndroidXMigrationTests/Aarxersise.Java.AndroidX/",
+			"./tests/AndroidXMigrationTests/Aarxersise.Java.Support/",
+		};
+		foreach (var native in nativeProjects) {
+			RunGradle (native, "assembleDebug");
+		}
+	}
+});
+
+Task("migration-tests")
+	.IsDependentOn("migration-tests-externals")
+	.IsDependentOn("migration-libs")
+	.Does(() =>
+{
+	// build
+	var settings = new MSBuildSettings()
+		.SetConfiguration(CONFIGURATION)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.EnableBinaryLogger("./output/migration-tests.binlog")
+		.WithRestore();
+	MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+
+	// test
+	DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+		Configuration = CONFIGURATION,
+		NoBuild = true,
+		Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
+		WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
+		ResultsDirectory = "./output/test-results/",
+	});
+});
 
 
 var TF_MONIKER = "monoandroid90";
