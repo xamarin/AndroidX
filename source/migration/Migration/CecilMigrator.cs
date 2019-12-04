@@ -105,11 +105,11 @@ namespace Xamarin.AndroidX.Migration
 					if (requiresSave)
 					{
 						Stream symbolStream = null;
-						PdbWriterProvider symbolWriter = null;
+						ISymbolWriterProvider symbolWriter = null;
 						if (hasPdb)
 						{
 							symbolStream = File.Create(tempPdbPath);
-							symbolWriter = new PdbWriterProvider();
+							symbolWriter = new PortablePdbWriterProvider();
 						}
 
 						try
