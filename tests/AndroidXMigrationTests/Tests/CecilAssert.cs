@@ -84,7 +84,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 		{
 			var value = gp.FullName;
 			if (gp.HasConstraints)
-				value += "=" + string.Join(",", gp.Constraints.Select(c => c.FullName));
+				value += "=" + string.Join(",", gp.Constraints.Select(c => c.ConstraintType.FullName));
 			return value;
 		}
 	}

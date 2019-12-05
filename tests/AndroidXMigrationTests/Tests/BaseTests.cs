@@ -7,8 +7,11 @@ namespace Xamarin.AndroidX.Migration.Tests
 {
 	public class BaseTests
 	{
+		public const uint PortablePdbSignature = 0x424a5342;
+
 		public const string MergedSupportDll = "AndroidSupport.Merged.dll";
 		public const string MergedAndroidXDll = "AndroidX.Merged.dll";
+		public const string ActiveDirectoryDll = "Microsoft.IdentityModel.Clients.ActiveDirectory.dll";
 
 		public const string ManagedSupportDll = "Aarxercise.Managed.Support.dll";
 		public const string ManagedAndroidXDll = "Aarxercise.Managed.AndroidX.dll";
@@ -89,7 +92,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 
 		public static string RunMigration(string supportDll, CecilMigrationResult expectedResult)
 		{
-			var migratedDll = Utils.GetTempFilename();
+			var migratedDll = Utils.GetTempFilename() + ".dll";
 
 			var migrator = new CecilMigrator();
 			var result = migrator.Migrate(supportDll, migratedDll);
@@ -97,6 +100,14 @@ namespace Xamarin.AndroidX.Migration.Tests
 			Assert.Equal(expectedResult, result);
 
 			return migratedDll;
+		}
+
+		public static bool IsPortablePdb(string filename)
+		{
+			using var fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
+			using var br = new BinaryReader(fs);
+			
+			return br.ReadUInt32() == PortablePdbSignature;
 		}
 	}
 }
