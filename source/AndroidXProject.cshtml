@@ -70,6 +70,7 @@
 
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
   </ItemGroup>
 
   @if (@Model.MavenArtifacts.Count > 0) {
@@ -161,6 +162,7 @@
     // Disabled as this build task doesn't really do anything anymore but we may use it again in the future
     <ItemGroup>
       <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+      <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
     </ItemGroup>
   }
 
@@ -174,6 +176,7 @@
   {
     <ItemGroup>
       <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
+      <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
     </ItemGroup>
   }
 
