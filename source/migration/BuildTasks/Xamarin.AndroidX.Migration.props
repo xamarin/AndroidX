@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
     <PropertyGroup>
         <AndroidXIsUsingAndroidXLibraries>true</AndroidXIsUsingAndroidXLibraries>
     </PropertyGroup>
-
     <PropertyGroup>
         <_BeforeLinkAssemblies>
             $(_BeforeLinkAssemblies);
@@ -28,7 +26,6 @@
             _AndroidXJetifyProguardRules;
         </_BeforeCompileDex>
     </PropertyGroup>
-
     <!-- all the Android Support assemblies -->
     <ItemGroup>
         <_AndroidXSupportAssembly Include="Xamarin.Android.Arch.Core.Common" />
@@ -71,6 +68,7 @@
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Loader" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.LocalBroadcastManager" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Media.Compat" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.MultiDex" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Percent" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Print" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Recommendation" />
@@ -80,13 +78,8 @@
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Slices.View" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.SlidingPaneLayout" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.SwipeRefreshLayout" />
-        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.TV.Provider" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Transition" />
-        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Vector.Drawable" />
-        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.VersionedParcelable" />
-        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.ViewPager" />
-        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Wear" />
-        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.WebKit" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.TV.Provider" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.v13" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.v17.Leanback" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.v17.Preference.Leanback" />
@@ -98,12 +91,17 @@
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.v7.Palette" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.v7.Preference" />
         <_AndroidXSupportAssembly Include="Xamarin.Android.Support.v7.RecyclerView" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Vector.Drawable" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.VersionedParcelable" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.ViewPager" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.Wear" />
+        <_AndroidXSupportAssembly Include="Xamarin.Android.Support.WebKit" />
     </ItemGroup>
-
     <!-- all the AndroidX assemblies -->
     <ItemGroup>
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat.Resources" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Common" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Runtime" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AsyncLayoutInflater" />
@@ -131,8 +129,8 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Leanback.Preference" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Legacy.Support.Core.UI" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" />
-        <_AndroidXAssembly Include="Xamarin.AndroidX.Legacy.Support.V4" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Legacy.Support.V13" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.Legacy.Support.V4" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Lifecycle.Common" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Lifecycle.Extensions" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Lifecycle.LiveData" />
@@ -173,22 +171,25 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Work.Runtime" />
         <_AndroidXAssembly Include="Xamarin.Google.Android.Material" />
     </ItemGroup>
-
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
+        <_AndroidXMavenArtifact Include="androidx.activity.activity" />
         <_AndroidXMavenArtifact Include="androidx.annotation.annotation" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat" />
+        <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat-resources" />
         <_AndroidXMavenArtifact Include="androidx.arch.core.core-common" />
         <_AndroidXMavenArtifact Include="androidx.arch.core.core-runtime" />
         <_AndroidXMavenArtifact Include="androidx.asynclayoutinflater.asynclayoutinflater" />
+        <_AndroidXMavenArtifact Include="androidx.biometric.biometric" />
         <_AndroidXMavenArtifact Include="androidx.browser.browser" />
-        <_AndroidXMavenArtifact Include="androidx.core.core" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection" />
+        <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-solver" />
         <_AndroidXMavenArtifact Include="androidx.contentpager.contentpager" />
         <_AndroidXMavenArtifact Include="androidx.coordinatorlayout.coordinatorlayout" />
+        <_AndroidXMavenArtifact Include="androidx.core.core" />
         <_AndroidXMavenArtifact Include="androidx.cursoradapter.cursoradapter" />
         <_AndroidXMavenArtifact Include="androidx.customview.customview" />
         <_AndroidXMavenArtifact Include="androidx.documentfile.documentfile" />
@@ -220,8 +221,17 @@
         <_AndroidXMavenArtifact Include="androidx.loader.loader" />
         <_AndroidXMavenArtifact Include="androidx.localbroadcastmanager.localbroadcastmanager" />
         <_AndroidXMavenArtifact Include="androidx.media.media" />
+        <_AndroidXMavenArtifact Include="androidx.media2.media2-common" />
+        <_AndroidXMavenArtifact Include="androidx.media2.media2-session" />
+        <_AndroidXMavenArtifact Include="androidx.media2.media2-widget" />
         <_AndroidXMavenArtifact Include="androidx.mediarouter.mediarouter" />
         <_AndroidXMavenArtifact Include="androidx.multidex.multidex" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-common" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-fragment" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-ui" />
+        <_AndroidXMavenArtifact Include="androidx.paging.paging-common" />
+        <_AndroidXMavenArtifact Include="androidx.paging.paging-runtime" />
         <_AndroidXMavenArtifact Include="androidx.palette.palette" />
         <_AndroidXMavenArtifact Include="androidx.percentlayout.percentlayout" />
         <_AndroidXMavenArtifact Include="androidx.preference.preference" />
@@ -229,8 +239,10 @@
         <_AndroidXMavenArtifact Include="androidx.recommendation.recommendation" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview-selection" />
-        <_AndroidXMavenArtifact Include="androidx.room.room-runtime" />
         <_AndroidXMavenArtifact Include="androidx.room.room-common" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-guava" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-builders" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-core" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-view" />
@@ -248,9 +260,9 @@
         <_AndroidXMavenArtifact Include="androidx.webkit.webkit" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
-        <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
+        <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
+        <_AndroidXMavenArtifact Include="com.xamarin.anroidx.migration" />
     </ItemGroup>
-
 </Project>

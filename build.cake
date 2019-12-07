@@ -10,6 +10,7 @@
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CsvHelper;
 
@@ -133,7 +134,23 @@ string GetNuGetId(string assemblyName, string configJson = "./config.json")
 		artifacts.FirstOrDefault(j => (string)j["assemblyName"] == assemblyName) ??
 		artifacts.FirstOrDefault(j => (string)j["nugetId"] == assemblyName);
 
+	if (artifact == null)
+		return assemblyName;
+
 	return (string)artifact["nugetId"];
+}
+
+IEnumerable<string> GetArtifacts(string configJson = "./config.json")
+{
+	var json = JToken.Parse(FileReadText(configJson));
+
+	if (json.Type == JTokenType.Array)
+		json = ((JArray)json)[0];
+
+	var artifacts = json["artifacts"];
+	foreach (var artifact in artifacts) {
+		yield return $"{artifact["groupId"]}.{artifact["artifactId"]}";
+	}
 }
 
 // Preparation
@@ -327,6 +344,12 @@ Task("generate-mapping")
 		$"deptree -v " +
 		$"  --directory ./output/" +
 		$"  --output ./output/mappings/dependencies.json");
+	using (var jsonReader = System.IO.File.OpenText("./output/mappings/dependencies.json")) {
+		var o = (JObject)JToken.ReadFrom(new JsonTextReader(jsonReader));
+		var j = o.ToString();
+		jsonReader.Dispose();
+		FileWriteText("./output/mappings/dependencies.json", j);
+	}
 	CopyFileToDirectory("./output/mappings/dependencies.json", "./mappings/");
 
 	// generate the nuget mappings
@@ -337,11 +360,16 @@ Task("generate-mapping")
 	if (!FileExists(supportJson))
 		DownloadFile(SUPPORT_CONFIG_URL, supportJson);
 
-	var reader = new StreamReader("./mappings/androidx-mapping.csv");
-	var csv = new CsvReader(reader);
+	// read the newly generated mapping file
+	var csvReader = new StreamReader("./mappings/androidx-mapping.csv");
+	var csv = new CsvReader(csvReader);
 	var records = csv.GetRecords<dynamic>()
 		.Cast<IDictionary<string, object>>()
 		.Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")
+		.Union(new [] {
+			"Xamarin.Android.Support.v4|Xamarin.AndroidX.Legacy.Support.V4",
+			"Xamarin.Android.Support.MultiDex|Xamarin.AndroidX.MultiDex",
+		})
 		.Distinct()
 		.Select(r => new {
 			Support = r.Split("|")[0],
@@ -349,7 +377,8 @@ Task("generate-mapping")
 		})
 		.Where(r => !string.IsNullOrEmpty(r.Support))
 		.OrderBy(r => r.AndroidX)
-		.OrderBy(r => r.Support);
+		.OrderBy(r => r.Support)
+		.ToArray();
 
 	var lines = new List<string> {
 		"Support .NET assembly," +
@@ -369,6 +398,40 @@ Task("generate-mapping")
 	}
 	FileWriteLines("./output/mappings/androidx-assemblies.csv", lines.ToArray());
 	CopyFileToDirectory("./output/mappings/androidx-assemblies.csv", "./mappings/");
+
+	// update the .props
+	Information("Generating the Xamarin.AndroidX.Migration.props file...");
+	var propsPath = "./source/migration/BuildTasks/Xamarin.AndroidX.Migration.props";
+	var xprops = XDocument.Load(propsPath);
+	var xmlns = xprops.Root.Name.Namespace;
+	var xitems = xprops.Descendants(xmlns + "_AndroidXSupportAssembly");
+	var xparent = xitems.FirstOrDefault().Parent;
+	xitems.Remove();
+	xparent.Add(records.OrderBy(r => r.Support).Select(r => r.Support).Distinct().Select(r => 
+		new XElement(xmlns + "_AndroidXSupportAssembly", 
+			new XAttribute("Include", r))));
+	xitems = xprops.Descendants(xmlns + "_AndroidXAssembly");
+	xparent = xitems.FirstOrDefault().Parent;
+	xitems.Remove();
+	xparent.Add(records.OrderBy(r => r.AndroidX).Select(r => r.AndroidX).Distinct().Select(r => 
+		new XElement(xmlns + "_AndroidXAssembly", 
+			new XAttribute("Include", r))));
+	xitems = xprops.Descendants(xmlns + "_AndroidXMavenArtifact");
+	xparent = xitems.FirstOrDefault().Parent;
+	xitems.Remove();
+	xparent.Add(GetArtifacts().OrderBy(r => r).Select(r => r).Distinct().Select(r => 
+		new XElement(xmlns + "_AndroidXMavenArtifact", 
+			new XAttribute("Include", r))));
+	var xmlSettings = new XmlWriterSettings {
+		Encoding = new UTF8Encoding(),
+		Indent = true,
+		IndentChars = "    ",
+		NewLineChars = "\n",
+	};
+	using (var xmlWriter = XmlWriter.Create(propsPath, xmlSettings)) {
+		xprops.Save(xmlWriter);
+	}
+	FileAppendText(propsPath, "\n");
 });
 
 Task ("merge")
