@@ -5,4 +5,8 @@
     <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
   </PropertyGroup>
+    
+  <PropertyGroup>
+    <_EnableInterfaceMembers>True</_EnableInterfaceMembers>
+  </PropertyGroup>
 </Project>
