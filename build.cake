@@ -222,7 +222,8 @@ Task ("binderate")
 	}
 });
 
-string nuget_version_template = "x.y.z-preview06";
+string version_suffix = "-preview07";
+string nuget_version_template = $"x.y.z{version_suffix}";
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
@@ -257,10 +258,13 @@ Task("binderate-config-verify")
 				string x = version_parts[0];
 				string y = version_parts[1];
 				string z = version_parts[2];
-				version = version.Replace("x", x);
-				version = version.Replace("y", y);
-				version = version.Replace("z", z);
-				if( string.Equals(version, nuget_version))
+
+				string nuget_version_new = nuget_version_template;
+				nuget_version_new = nuget_version_new.Replace("x", x);
+				nuget_version_new = nuget_version_new.Replace("y", y);
+				nuget_version_new = nuget_version_new.Replace("z", z);
+
+				if( !string.Equals(nuget_version_new, nuget_version) )
 				{
 					Error("check config.json for nuget id");
 					Error  ($"		groupId       = {jo["groupId"]}");
