@@ -642,7 +642,6 @@ Task("api-info-migrate")
 			// lines_api_info.ToList()
 			//                .ForEach( x => { Console.WriteLine(x); } );
 			List<string> lines_api_info_migrated =  new List<string>();
-			int i = 0;
 			foreach(string l in lines_api_info)
 			{
 				string line_new = null;
@@ -727,9 +726,11 @@ Task("api-diff")
 
 			MonoApiHtmlColorized(API_INFO_OLD_MIGRATED, API_INFO_NEW, "./output/api-info-diff.html");
 			string[] lines_html = FileReadLines("./output/api-info-diff.html");
+
 			List<string> lines_html_new = new List<string>();
-			List<string> removed_types = new List<string>();
-			List<string> new_types = new List<string>();
+			List<(string Class, string ClassFullyQualified)> removed_types = new List<(string Class, string ClassFullyQualified)>();
+			List<(string Class, string ClassFullyQualified)> new_types = new List<(string Class, string ClassFullyQualified)>();
+
 			foreach(string line in lines_html)
 			{
 				if (line.Contains(@"Java.Interop.IJavaPeerable"))
@@ -738,27 +739,77 @@ Task("api-diff")
 				}
 				if (line.Contains("<h3>Removed Type <span class='breaking' data-is-breaking>"))
 				{
-					string type = line.Replace("<h3>Removed Type <span class='breaking' data-is-breaking>", "");
-					type = type.Replace("</span></h3>",",");
-					type = Regex.Replace(type, ",</div> <!-- (.*?) -->", "");
-					type = Regex.Replace(type, ",<div> <!-- (.*?) -->", "");
-					string[] types = type.Split( new string[] { "," }, StringSplitOptions.RemoveEmptyEntries );
-					removed_types.AddRange(types); 
+					string t = line.Replace("<h3>Removed Type <span class='breaking' data-is-breaking>", "");
+					t = t.Replace("</span></h3>",",");
+					t = Regex.Replace(t, ",</div> <!-- (.*?) -->", "");
+					t = Regex.Replace(t, ",<div> <!-- (.*?) -->", "");
+					string[] types = t.Split( new string[] { "," }, StringSplitOptions.RemoveEmptyEntries );
+					foreach(string t1 in types)
+					{
+						string c  = t1.Substring(t1.LastIndexOf(".") + 1);
+						removed_types.Add((Class: c, ClassFullyQualified: t1)); 
+					}
 				}
 				if (line.Contains("<h3>New Type "))
 				{
-					string type = line.Replace("<h3>New Type ", "");
-					type = type.Replace("</h3>", "");
-					Information($"{type}");
-					new_types.Add(type);
+					string t = line.Replace("<h3>New Type ", "");
+					t = t.Replace("</h3>", "");
+					Information($"{t}");
+					string c  = t.Substring(t.LastIndexOf(".") + 1);
+					new_types.Add((Class: c, ClassFullyQualified:t)); 
 				}
 				lines_html_new.Add(line);
 			}
 
-
 			FileWriteLines("./output/api-info-diff.cleaned.html", lines_html_new.ToArray());
-			FileWriteLines("./output/removed-types.txt", removed_types.ToArray());
-			FileWriteLines("./output/new-types.txt", new_types.ToArray());
+			FileWriteLines("./output/removed-types.csv", removed_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+			FileWriteLines("./output/new-types.csv", new_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+
+			List<int> indices_new = new List<int>();
+			List<int> indices_removed = new List<int>();
+			List<string> moved_types = new List<string>();
+			moved_types.Add($"# Class,ClassFullyQualified Removed, ClassFullyQualified New");
+
+			for( int idx1 = 0; idx1 < removed_types.Count; idx1++)
+			{
+				(string Class, string ClassFullyQualified) tr = removed_types[idx1];
+				int idx2 = new_types.FindIndex(tn => tn.Class == tr.Class);
+				// if(idx2 >=0)
+				// {
+				// 	Information($"Found");
+				// 	Information($"	new 	= {idx2}");
+				// 	Information($"	new 	= {new_types[idx2].Class}");
+				// 	Information($"	new 	= {new_types[idx2].ClassFullyQualified}");
+				// 	Information($"	removed = {idx1}");
+				// 	Information($"	removed = {removed_types[idx1].Class}");
+				// 	Information($"	removed = {removed_types[idx1].ClassFullyQualified}");
+				// }
+				if (idx2 < 0)
+				{
+					continue;
+				}
+				indices_removed.Add(idx1);
+				indices_new.Add(idx2);
+				string c = removed_types[idx1].Class;
+				string cr_fq = removed_types[idx1].ClassFullyQualified;
+				string cn_fq = new_types[idx2].ClassFullyQualified;
+				moved_types.Add($"{c},{cr_fq},{cn_fq}");
+			}
+			
+			var indices_new_sorted = indices_new.OrderByDescending(t => t);
+			for (int i = 0; i < indices_new_sorted.Count(); i++)
+			{
+				new_types.RemoveAt(indices_new_sorted.ElementAt(i));
+			}
+			var indices_removed_sorted = indices_removed.OrderByDescending(t => t);
+			for (int i = 0; i < indices_removed_sorted.Count(); i++)
+			{
+				removed_types.RemoveAt(indices_removed_sorted.ElementAt(i));
+			}
+
+			FileWriteLines("./output/removed-types.final.csv", removed_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+			FileWriteLines("./output/new-types.final.csv", new_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+			FileWriteLines("./output/moved-types.final.csv", moved_types.ToArray());
 
 			return;
 		}

@@ -34,11 +34,5 @@
             <parameter type="java.lang.Object" name="rhs" />
         </method>
     </add-node>
-    
-    <attr
-        path="/api/package[@name='androidx.mediarouter.media']/interface[@name='MediaRouteProvider.DynamicGroupRouteController.OnDynamicRoutesChangedListener']"
-        name="visibility"
-        >
-        public
-    </attr>
+        
 </metadata>
