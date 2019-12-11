@@ -222,7 +222,7 @@ Task ("binderate")
 	}
 });
 
-string version_suffix = "-preview07";
+string version_suffix = "-rc1";
 string nuget_version_template = $"x.y.z{version_suffix}";
 JArray binderator_json_array = null;
 
