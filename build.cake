@@ -203,6 +203,7 @@ Task("javadocs")
 });
 
 Task ("binderate")
+	.IsDependentOn("binderate-config-verify")
 	.Does (() =>
 {
 	var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
@@ -220,6 +221,63 @@ Task ("binderate")
 		xdoc.Save(targets.FullPath);
 	}
 });
+
+string nuget_version_template = "x.y.z-preview06";
+JArray binderator_json_array = null;
+
+Task("binderate-config-verify")
+	.Does
+	(
+		() =>
+		{
+			using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+			{
+				JsonTextReader jtr = new JsonTextReader(reader);
+				binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+			}
+
+			Information("config.json verification...");
+			foreach(JObject jo in binderator_json_array[0]["artifacts"])
+			{
+				bool? dependency_only = (bool?) jo["dependencyOnly"];
+				if ( dependency_only == true)
+				{
+					continue;
+				}
+				string version        = (string) jo["version"];
+				string nuget_version  = (string) jo["nugetVersion"];
+
+				Information($"groupId       = {jo["groupId"]}");
+				Information($"artifactId    = {jo["artifactId"]}");
+				Information($"version       = {version}");
+				Information($"nuget_version = {nuget_version}");
+				Information($"nugetId       = {jo["nugetId"]}");
+
+				string[] version_parts = version.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
+				string x = version_parts[0];
+				string y = version_parts[1];
+				string z = version_parts[2];
+				version = version.Replace("x", x);
+				version = version.Replace("y", y);
+				version = version.Replace("z", z);
+				if( string.Equals(version, nuget_version))
+				{
+					Error("check config.json for nuget id");
+					Error  ($"		groupId       = {jo["groupId"]}");
+					Error  ($"		artifactId    = {jo["artifactId"]}");
+					Error  ($"		version       = {version}");
+					Error  ($"		nuget_version = {nuget_version}");
+					Error  ($"		nugetId       = {jo["nugetId"]}");
+					
+					Warning($"	expected : ");
+					Warning($"		nuget_version = {nuget_version}");
+					throw new Exception("check config.json for nuget id");
+				}
+			}
+
+			return;
+		}
+	);
 
 Task("libs")
 	.Does(() =>
