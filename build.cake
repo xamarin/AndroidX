@@ -432,6 +432,7 @@ Task("generate-mapping")
 		xprops.Save(xmlWriter);
 	}
 	FileAppendText(propsPath, "\n");
+	CopyFileToDirectory(propsPath, "./output/mappings/");
 });
 
 Task ("merge")
