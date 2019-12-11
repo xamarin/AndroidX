@@ -6,7 +6,7 @@ plugins {
 group 'com.xamarin.androidx'
 version '1.0'
 
-def jetifierVersion = '1.0.0-beta06'
+def jetifierVersion = '1.0.0-beta08'
 
 sourceCompatibility = 1.8
 
