@@ -71,7 +71,7 @@
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework)" />
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
-    <None Include="..\..\LICENSE" Pack="True" PackagePath="LICENSE.md" />
+    <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
   </ItemGroup>
 
   @if (@Model.MavenArtifacts.Count > 0) {
