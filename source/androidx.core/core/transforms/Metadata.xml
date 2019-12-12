@@ -7,9 +7,13 @@
     <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getResultKey' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getChoices' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getAllowedDataTypes' and count(parameter)=0]" name="visibility">protected</attr>
-    <attr path="/api/package[@name='androidx.core.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.core.text']/class[@name='TextDirectionHeuristicsCompat.TextDirectionHeuristicImpl']" name="visibility">internal</attr>
+    <!--
+    mc++    
+    prevent surfacing public interfaces
     <attr path="/api/package[@name='androidx.core.app']/interface[@name='NotificationManagerCompat.Task']" name="visibility">internal</attr>
+    <attr path="/api/package[@name='androidx.core.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
+    -->
     <!-- Needed to rename this so we can implement it in our own partial class to mark it as override -->
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs' and count(parameter)=0]" name="managedName">_GetRemoteInputs</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getDataOnlyRemoteInputs' and count(parameter)=0]" name="managedName">_GetDataOnlyRemoteInputs</attr>
@@ -21,11 +25,7 @@
     <!-- The generator binds both CharSequence and java.lang.String as System.String types so if we have overloads which only differ in java by CharSequence and String, we'll end up with duplicate .net binding overloads, so we remove the extra bindings -->
     <remove-node path="/api/package[@name='androidx.core.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
     <remove-node path="/api/package[@name='androidx.core.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']" />
-    <!--
-    <remove-node 
-        path="/api/package[@name='androidx.core.internal.view']/interface[@name='SupportMenuItem']" 
-        />      
-        -->
+    
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingChild']/method[@name='startNestedScroll' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedType">Android.Views.ScrollAxis</attr>
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onStartNestedScroll' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='getNestedScrollAxes' and count(parameter)=0]" name="managedReturn">Android.Views.ScrollAxis</attr>

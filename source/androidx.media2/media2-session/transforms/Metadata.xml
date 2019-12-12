@@ -1,11 +1,15 @@
 ﻿<metadata>
 
+    <!--
+    mc++    
+    prevent surfacing public interfaces        
     <attr
         path="/api/package[@name='androidx.media2.session']/interface[@name='RemoteResult']"
         name="visibility"
         >
         public
     </attr>
+    -->
     <attr
         path="/api/package[@name='androidx.media2.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media2.session.MediaSession.ControllerInfo']]"
         name="managedReturn"
