@@ -336,11 +336,28 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
 
 	foreach (System.Xml.XmlNode node in node_list)
 	{
-		string visibility = node.Value;
+		string name = node.Attributes["name"].Value;
+		string inner_text = node.InnerText;	//.Value;
 		string path = node.Attributes["path"].Value;
-		bool is_public = string.Equals(visibility, "public") ? true : false;
 
-		yield return (Path: path, IsPublic: is_public);
+		Information($"	path        = {path}");
+
+		if (path.Contains("MediaRouteProvider.DynamicGroupRouteController"))
+		{
+			Information($"		Found:");
+			Information($"			Name: {name}");
+			Information($"			Visibility: {inner_text}");
+			throw new Exception("MediaRouteProvider.DynamicGroupRouteController");
+		}
+		
+		if (string.Equals(name, "visibility") && inner_text.Contains("public"))
+		{
+			Information($"		Visibility  = {inner_text}");
+
+			bool is_public = inner_text.Contains("public") ? true : false;
+
+			yield return (Path: path, IsPublic: is_public);
+		}	
 	}
 }
 
@@ -398,6 +415,7 @@ Task("nuget")
 
 Task("samples")
 	.IsDependentOn("nuget")
+	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
 	// TODO: make this actually work with more than just this sample
