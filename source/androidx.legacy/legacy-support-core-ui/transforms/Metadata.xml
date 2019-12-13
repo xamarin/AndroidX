@@ -10,8 +10,14 @@
     <!--
     mc++    
     prevent surfacing public interfaces
+        
+    not found (most likely came in during Android.Support -> AndroidX)
     <attr path="/api/package[@name='androidx.core.widget']/interface[@name='DrawerLayoutImpl']" name="visibility">public</attr>
+    
+    not found (most likely came in during Android.Support -> AndroidX)
     <attr path="/api/package[@name='androidx.core.app']/interface[@name='ActionBarDrawerToggle.ActionBarDrawerToggleImpl']" name="visibility">internal</attr>
+
+    not found (most likely came in during Android.Support -> AndroidX)
     <attr path="/api/package[@name='androidx.core.widget']/class[@name='CursorAdapter.ChangeObserver']" name="visibility">public</attr>
     -->
     <!-- Remove so we can implement manaully to get rid of the override modifier -->

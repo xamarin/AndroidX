@@ -11,7 +11,11 @@
     <!--
     mc++    
     prevent surfacing public interfaces
+    
+    visibility="private    
     <attr path="/api/package[@name='androidx.core.app']/interface[@name='NotificationManagerCompat.Task']" name="visibility">internal</attr>
+        
+    visibility="private    
     <attr path="/api/package[@name='androidx.core.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
     -->
     <!-- Needed to rename this so we can implement it in our own partial class to mark it as override -->

@@ -3,6 +3,8 @@
     <!--
     mc++    
     prevent surfacing public interfaces    
+    
+    not found (most likely came in during Android.Support -> AndroidX)
     <attr path="/api/package[@name='androidx.drawerlayout.widget']/interface[@name='DrawerLayoutImpl']" name="visibility">public</attr>
     -->
     <attr path="/api/package[@name='androidx.drawerlayout.widget']/interface[@name='DrawerLayout.DrawerListener']/method[@name='onDrawerClosed' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedName">drawerView</attr>

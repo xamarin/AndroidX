@@ -4,7 +4,11 @@
     <!--
     mc++    
     prevent surfacing public interfaces    
+    
+    visibility="private"
     <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserServiceCompat.ServiceCallbacks']" name="visibility">internal</attr>
+    
+    visibility="" (default)
     <attr path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" name="visibility">public</attr>
     -->
     <remove-node

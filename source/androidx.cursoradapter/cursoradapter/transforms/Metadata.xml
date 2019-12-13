@@ -2,7 +2,9 @@
     <remove-node path="/api/package[@name='androidx.cursoradapter.widget']/class[@name='CursorAdapter']/field[@name='mCursorFilter']" />
     <!--
     mc++    
-    prevent surfacing public interfaces        
+    prevent surfacing public interfaces    
+
+    visibility="" (default)    
     <attr path="/api/package[@name='androidx.cursoradapter.widget']/interface[@name='CursorFilter.CursorFilterClient']" name="visibility">public</attr>
     -->
     <attr path="/api/package[@name='androidx.cursoradapter.widget']/class[@name='CursorFilter']" name="visibility">public</attr>
