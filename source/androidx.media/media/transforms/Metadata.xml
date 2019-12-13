@@ -6,17 +6,9 @@
     prevent surfacing public interfaces    
     
     visibility="private"
-    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserServiceCompat.ServiceCallbacks']" name="visibility">internal</attr>
-    
-    visibility="" (default)
-    <attr path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" name="visibility">public</attr>
+    <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserServiceCompat.ServiceCallbacks']" name="visibility">internal</attr>    
     -->
-    <remove-node
-        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesCompat']/field[@name='mImpl']"
-        />
+    <attr path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" name="visibility">public</attr>
     
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
