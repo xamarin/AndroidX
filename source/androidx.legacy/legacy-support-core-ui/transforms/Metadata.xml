@@ -7,6 +7,18 @@
     <attr path="/api/package[@name='androidx.core.widget']/class[@name='DrawerLayout']/method[@name='setDrawerListener']" name="eventName"></attr>
     <attr path="/api/package[@name='androidx.core.widget']/class[@name='CursorFilter']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.core.view.animation']/class[@name='LookupTableInterpolator']" name="visibility">public</attr>
+    <!--
+    mc++    
+    prevent surfacing public interfaces
+        
+    not found (most likely came in during Android.Support -> AndroidX)
+    <attr path="/api/package[@name='androidx.core.widget']/interface[@name='DrawerLayoutImpl']" name="visibility">public</attr>
+    
+    not found (most likely came in during Android.Support -> AndroidX)
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='ActionBarDrawerToggle.ActionBarDrawerToggleImpl']" name="visibility">internal</attr>
+    not found (most likely came in during Android.Support -> AndroidX)
+    <attr path="/api/package[@name='androidx.core.widget']/class[@name='CursorAdapter.ChangeObserver']" name="visibility">public</attr>
+    -->
     <!-- Remove so we can implement manaully to get rid of the override modifier -->
     <remove-node path="/api/package[@name='androidx.core.widget']/class[@name='SwipeRefreshLayout']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
     <remove-node path="/api/package[@name='androidx.customview.view']/class[@name='PagerTabStrip']/method[@name='setBackgroundColor' and count(parameter)=1 and parameter[1][@type='int']]" />

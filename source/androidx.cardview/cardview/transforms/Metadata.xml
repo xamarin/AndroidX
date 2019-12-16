@@ -3,7 +3,18 @@
     
     <attr path="/api/package[@name='androidx.cardview.widget']/class[@name='RoundRectDrawableWithShadow']" name="visibility">public</attr>
     
+    <!--
+    mc++    
+    prevent surfacing public interfaces
+    
+    
+    not found (most likely came in during Android.Support -> AndroidX)
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='CardViewDelegate']" name="visibility">public</attr>
+    
+    visibility="" (default) 
     <attr path="/api/package[@name='androidx.cardview.widget']/interface[@name='CardViewDelegate']" name="visibility">public</attr>
+    visibility="" (default) 
     <attr path="/api/package[@name='androidx.cardview.widget']/interface[@name='RoundRectDrawableWithShadow.RoundRectHelper']" name="visibility">public</attr>
-
+    -->    
+    
 </metadata>
