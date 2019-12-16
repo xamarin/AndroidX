@@ -364,7 +364,7 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
 
 
 Task("libs")
-	//.IsDependentOn("metadata-verify")
+	.IsDependentOn("metadata-verify")
 	.Does(() =>
 {
 	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
