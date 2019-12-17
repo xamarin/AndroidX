@@ -29,6 +29,8 @@ jobs:
             ls -l /Library/Frameworks/Xamarin.iOS.framework/Versions
             ls -l /Library/Frameworks/Xamarin.Android.framework/Versions
             ls -l /Library/Frameworks/Xamarin.Mac.framework/Versions
+            ls -l /Applications/
+          displayName: List all available versions of Xamarin
           condition: eq(variables['System.JobName'], 'macos')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
