@@ -15,6 +15,7 @@
     not found (most likely came in during Android.Support -> AndroidX)
     <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='AppCompatDrawableManager.InflateDelegate']" name="visibility">internal</attr>
     -->
+
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopup']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='SubMenuBuilder']/method[@name='getActionViewStatesKey' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionBarContainer']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]" name="visibility">protected</attr>
@@ -222,9 +223,8 @@
     <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]" name="managedReturn">Android.Content.PM.ConfigChanges</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 
-
     <remove-node
-        path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopupHelper']/implements[name='androidx.appcompat.view.menu.MenuHelper']"
+        path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopupHelper']/implements[@name='androidx.appcompat.view.menu.MenuHelper']"
         />    
-    
+        
 </metadata>

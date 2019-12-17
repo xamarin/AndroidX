@@ -64,4 +64,12 @@
     <remove-node
         path="/api/package[@name='androidx.media2.session']/class[@name='MediaBrowser']"    
         />        
+
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='SessionResult']/implements[@name='androidx.media2.session.RemoteResult']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='LibraryResult']/implements[@name='androidx.media2.session.RemoteResult']"
+        />
+
 </metadata>
