@@ -39,5 +39,42 @@
         AndroidX.Media.IAudioAttributesImplBuilder
     </attr>
 
-
+    <remove-node
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesCompat']/field[@name='mImpl']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media']/class[@name='*']/implements[@name='androidx.media.AudioAttributesImpl']"
+        />
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setContentType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setFlags' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setLegacyStreamType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase.Builder']/method[@name='setUsage' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
+    
 </metadata>
