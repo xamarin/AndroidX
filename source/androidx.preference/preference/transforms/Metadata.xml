@@ -83,47 +83,4 @@
     <remove-node
         path="/api/package[@name='androidx.preference']/interface[@name='Preference.SummaryProvider']"
         />    
-    
-    <attr 
-        path="/api/package[@name='androidx.preference']/interface[@name='DialogPreference.TargetFragment']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
-        name="managedType"
-        >
-        AndroidX.Preference.Preference
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.preference']/class[@name='Preference']/method[@name='findPreferenceInHierarchy' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-        name="managedType"
-        >
-        AndroidX.Preference.Preference
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
-        name="managedType"
-        >
-        AndroidX.Preference.Preference
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.preference']/class[@name='PreferenceFragment']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"        
-        name="managedType"
-        >
-        AndroidX.Preference.Preference
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.preference']/class[@name='PreferenceFragmentCompat']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
-        name="managedType"
-        >
-        AndroidX.Preference.Preference
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroup']/method[@name='findPreference' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]"
-        name="managedType"
-        >
-        AndroidX.Preference.Preference
-    </attr>
-    
-    
-    
-    
-    
-    
 </metadata>

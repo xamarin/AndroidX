@@ -3,22 +3,12 @@
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionMenuPresenter']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='DropDownListView']" name="visibility">public</attr>
-    
-    <!--
-    mc++    
-    prevent surfacing public interfaces        
-    prevent surfacing public interfaces      
-    
-    visibility="" (default) 
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/interface[@name='MenuHelper']" name="visibility">public</attr>
-    
-    not found (most likely came in during Android.Support -> AndroidX)
-    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='AppCompatDrawableManager.InflateDelegate']" name="visibility">internal</attr>
-    -->
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopup']" name="visibility">public</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='SubMenuBuilder']/method[@name='getActionViewStatesKey' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActionBarContainer']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]" name="visibility">protected</attr>
     <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuItemWrapperICS']" />
+    <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='AppCompatDrawableManager.InflateDelegate']" name="visibility">internal</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='ListMenuPresenter.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='Menu.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
@@ -48,8 +38,9 @@
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActivityChooserModel.OnChooseActivityListener']" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActivityChooserModel.ActivitySorter']" />
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ActivityChooserModel.ActivityChooserModelClient']" />
-
     <!--
+
+
 
   <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='SubMenuBuilder']/method[@name='getActionViewStatesKey' and count(parameter)=0]" name="visibility">protected</attr>
   <attr path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='ListMenuPresenter.MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
@@ -105,8 +96,7 @@
 
   <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='SubMenuBuilder']" />
 
-  <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']/field[@name='mActionMenuPresenter']" />
-    -->
+  <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='AbsActionBarView']/field[@name='mActionMenuPresenter']" />-->
     <remove-node path="/api/package[@name='androidx.appcompat.widget']/class[@name='MenuPopupWindow.MenuDropDownListView']/method[@name='setSelector' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"></remove-node>
     <remove-node path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" />
     <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainer']" name="visibility">protected</attr>
@@ -220,11 +210,19 @@
     mc++ AndroidX
     -->
     <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]" name="managedReturn">Android.Content.PM.ConfigChanges</attr>
+    <!--
+    <add-node 
+        path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']"
+        >
+        <method 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false"
+            jni-return="I" jni-signature="(Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;)I" 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            >
+            <parameter type="java.lang.Object" name="another" jni-type="Ljava/lang/Object;">
+            </parameter>
+        </method>
+    </add-node>
+    -->
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
-
-
-    <remove-node
-        path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopupHelper']/implements[name='androidx.appcompat.view.menu.MenuHelper']"
-        />    
-    
 </metadata>

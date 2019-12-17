@@ -13,12 +13,8 @@
     <attr path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FloatPropertyCompat']/method[@name='getValue' and count(parameter)=1 and parameter[1][@type='T']]/parameter[1]" name="managedName">@object</attr>
     <attr path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[1]" name="managedName">@object</attr>
     <attr path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FloatPropertyCompat']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='float']]/parameter[2]" name="managedName">@value</attr>
-    
     <!--
-    mc++    
-    prevent surfacing public interfaces    
-    
-    visibility="" (default)    
-    <attr path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='Force']" name="visibility">public</attr>
+    mc++ AndroidX
     -->
+    <attr path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='Force']" name="visibility">public</attr>
 </metadata>
