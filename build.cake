@@ -1,3 +1,5 @@
+return;
+
 // Tools needed by cake addins
 #tool nuget:?package=vswhere&version=2.7.1
 

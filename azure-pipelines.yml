@@ -23,6 +23,9 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
+      preBuildSteps:
+        - pwsh: |
+            cat $(Agent.HomeDirectory)/scripts/select-xamarin-sdk.sh
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview06'
