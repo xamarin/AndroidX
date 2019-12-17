@@ -24,8 +24,12 @@ jobs:
     parameters:
       timeoutInMinutes: 120
       preBuildSteps:
-        - pwsh: |
-            cat $(Agent.HomeDirectory)/scripts/select-xamarin-sdk.sh
+        - bash: |
+            ls -l /Library/Frameworks/Mono.framework/Versions
+            ls -l /Library/Frameworks/Xamarin.iOS.framework/Versions
+            ls -l /Library/Frameworks/Xamarin.Android.framework/Versions
+            ls -l /Library/Frameworks/Xamarin.Mac.framework/Versions
+          condition: eq(variables['System.JobName'], 'macos')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview06'
