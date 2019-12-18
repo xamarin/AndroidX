@@ -34,5 +34,8 @@
             <parameter type="java.lang.Object" name="rhs" />
         </method>
     </add-node>
-        
+    <remove-node
+        path="/api/package[@name='androidx.mediarouter.media']/interface[@name='MediaRouteProvider.DynamicGroupRouteController.OnDynamicRoutesChangedListener']"
+        />
+    
 </metadata>
