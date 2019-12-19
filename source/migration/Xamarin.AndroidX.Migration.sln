@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.BuildTasks", "BuildTasks\Xamarin.AndroidX.Migration.BuildTasks.csproj", "{450BD878-668D-4739-91F6-87BBCEB55FDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration", "Migration\Xamarin.AndroidX.Migration.Core.csproj", "{CF645037-0F6E-43D9-A603-A15A4DBE1906}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.Tool", "Tool\Xamarin.AndroidX.Migration.Tool.csproj", "{06820168-947C-425E-8E5F-E768935B2CDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JetifierWrapper", "JetifierWrapper", "{AAD3DF53-731A-4B5B-AEC0-0FB2260B58D6}"
+	ProjectSection(SolutionItems) = preProject
+		JetifierWrapper\build.gradle = JetifierWrapper\build.gradle
+		JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\JetifierCallable.java = JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\JetifierCallable.java
+		JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\JetifierData.java = JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\JetifierData.java
+		JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\Main.java = JetifierWrapper\src\main\java\com\xamarin\androidx\jetifierWrapper\Main.java
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Android.Tools.Bytecode", "..\..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj", "{51B18B14-0AE6-45EE-A62E-92A199C5A73C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450BD878-668D-4739-91F6-87BBCEB55FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF645037-0F6E-43D9-A603-A15A4DBE1906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06820168-947C-425E-8E5F-E768935B2CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2FF59CE-8753-4D7E-A4FD-172D29AD4496}
+	EndGlobalSection
+EndGlobal

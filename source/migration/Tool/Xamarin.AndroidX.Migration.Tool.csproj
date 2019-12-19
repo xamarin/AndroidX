@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp2.2;netcoreapp3.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>AndroidXMigrator</RootNamespace>
+    <AssemblyName>androidx-migrator</AssemblyName>
+    <ToolCommandName>androidx-migrator</ToolCommandName>
+    <PackAsTool>true</PackAsTool>
+
+    <PackageId>Xamarin.AndroidX.Migration.Tool</PackageId>
+    <Title>Migration Tools for Xamarin AndroidX</Title>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    <Description>This package provides a set of tools and MSBuild tasks to aid in the migration from Android Support to Android X.</Description>
+    <Summary>This package provides a set of tools and MSBuild tasks to aid in the migration from Android Support to Android X.</Summary>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2099353</PackageProjectUrl>
+    <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
+    <PackageTags>Xamarin.AndroidX Xamarin Android Support AndroidX Migration</PackageTags>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Authors>Microsoft</Authors>
+    <Owners>Microsoft</Owners>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mono.ApiTools" Version="5.14.0.2" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.1" />
+    <PackageReference Include="Mono.Options" Version="5.3.0.1" />
+    <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
+    <PackageReference Include="NuGet.Packaging" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj" />
+    <ProjectReference Include="..\Migration\Xamarin.AndroidX.Migration.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
+  </ItemGroup>
+
+</Project>
