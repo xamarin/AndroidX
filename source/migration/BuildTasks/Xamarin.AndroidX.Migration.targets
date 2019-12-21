@@ -236,6 +236,15 @@
 
     </Target>
 
+    <!-- HACK START -->
+    <!-- This is to get around the fact that _ValidateLinkMode is not run when pressing the green arrow in the IDE -->
+    <Target Name="_AndroidXCreatePropertiesCacheFixup"
+            Condition="'$(_AndroidXShouldRunMigration)' == 'true'"
+            DependsOnTargets="_ValidateLinkMode"
+            BeforeTargets="_CreatePropertiesCache">
+    </Target>
+    <!-- HACK END -->
+
     <!--
     ***************************************************************************
     * JETIFY MANIFEST
