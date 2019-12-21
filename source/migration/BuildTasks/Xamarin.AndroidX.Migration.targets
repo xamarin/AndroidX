@@ -192,6 +192,10 @@
             <ResolvedUserAssemblies Include="@(_AndroidXFileToCecilfy)" />
         </ItemGroup>
 
+        <ItemGroup>
+            <FileWrites Include="$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)" />
+        </ItemGroup>
+
     </Target>
 
     <Target Name="_AndroidXCecilfyNoShrinkFindFiles"
@@ -215,7 +219,7 @@
     </Target>
 
     <Target Name="_AndroidXCecilfy"
-            DependsOnTargets="_AndroidXCecilfyShrinkFindFiles;_AndroidXCecilfyShrinkCopyFiles;_AndroidXCecilfyNoShrinkFindFiles"
+            DependsOnTargets="_ValidateLinkMode;_AndroidXCecilfyShrinkFindFiles;_AndroidXCecilfyShrinkCopyFiles;_AndroidXCecilfyNoShrinkFindFiles"
             Inputs="@(_AndroidXFileToCecilfy);$(_AndroidStampDirectory)_CopyIntermediateAssemblies.stamp"
             Outputs="$(_AndroidStampDirectory)_AndroidXCecilfy.stamp"
             Condition="'$(_AndroidXShouldRunMigration)' == 'true'">
