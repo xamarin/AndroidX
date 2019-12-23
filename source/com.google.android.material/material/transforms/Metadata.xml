@@ -71,4 +71,16 @@
 
     <remove-node path="/api/package[@name='com.google.android.material.button']/interface[@name='MaterialButton.OnPressedChangeListener']"/>
     <remove-node path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton.ShowStrategy']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton.HideStrategy']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton.ChangeSizeStrategy']" />
+    <attr path="/api/package[@name='com.google.android.material.ripple']/class[@name='RippleDrawableCompat.RippleDrawableCompatState']/method[@name='newDrawable' and count(parameter)=0]" name="managedName">NewRippleDrawable</attr>
+
+    <!-- <attr path="/api/package[@name='com.google.android.material.datepicker']/class[@name='RangeDateSelector']/method[@name='getSelection' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.datepicker']/class[@name='SingleDateSelector']/method[@name='getSelection' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr> -->
+
+    <remove-node path="/api/package[@name='com.google.android.material.datepicker']/class[@name='RangeDateSelector']/implements[@name='com.google.android.material.datepicker.DateSelector']" />
+    <remove-node path="/api/package[@name='com.google.android.material.datepicker']/class[@name='SingleDateSelector']/implements[@name='com.google.android.material.datepicker.DateSelector']" />
+    <!-- <attr path="/api/package[@name='com.google.android.material.datepicker']/class[@name='RangeDateSelector']/method[@name='writeToParcel' and count(parameter)=2 and parameter[1][@type='android.os.Parcel'] and parameter[2][@type='int']]/parameter[2]" name="managedType">Android.OS.ParcelableWriteFlags</attr> -->
+    <!-- <remove-node path="/api/package[@name='com.google.android.material.datepicker']/class[@name='SingleDateSelector']/implements[@name='com.google.android.material.datepicker.DateSelector']" /> -->
 </metadata>

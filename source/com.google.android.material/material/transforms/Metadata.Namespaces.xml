@@ -43,4 +43,7 @@
     <attr path="/api/package[@name='com.google.android.material.picker']" name="managedName">Google.Android.Material.Picker</attr>    
     <attr path="/api/package[@name='com.google.android.material.radiobutton']" name="managedName">Google.Android.Material.RadioButton</attr>    
     <attr path="/api/package[@name='com.google.android.material.switchmaterial']" name="managedName">Google.Android.Material.SwitchMaterial</attr>    
+    <attr path="/api/package[@name='com.google.android.material.datepicker']" name="managedName">Google.Android.Material.DatePicker</attr>    
+    <attr path="/api/package[@name='com.google.android.material.textview']" name="managedName">Google.Android.Material.TextView</attr>        
+    <attr path="/api/package[@name='com.google.android.material.badge']" name="managedName">Google.Android.Material.Badge</attr>    
 </metadata>

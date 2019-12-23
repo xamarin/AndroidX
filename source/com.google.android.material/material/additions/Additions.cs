@@ -176,34 +176,34 @@ namespace Google.Android.Material.TextField
 
 namespace Google.Android.Material.Picker
 {
-    partial class MonthInYearAdapter 
-    {
-        public override unsafe global::Java.Lang.Object GetItem (int position) => GetCalendarItem(position);
-    } 
+    // partial class MonthInYearAdapter 
+    // {
+    //     public override unsafe global::Java.Lang.Object GetItem (int position) => GetCalendarItem(position);
+    // } 
 
-    partial class DaysHeaderAdapter 
-    {
-        public override unsafe global::Java.Lang.Object GetItem (int position) => GetIntegerItem(position);
-    } 
+    // partial class DaysHeaderAdapter 
+    // {
+    //     public override unsafe global::Java.Lang.Object GetItem (int position) => GetIntegerItem(position);
+    // } 
 
-    partial class MaterialDateRangePickerDialog 
-    {
-        protected override global::Google.Android.Material.Picker.MaterialCalendarView RawMaterialCalendarView => MaterialCalendarView;
-    }
+    // partial class MaterialDateRangePickerDialog 
+    // {
+    //     protected override global::Google.Android.Material.Picker.MaterialCalendarView RawMaterialCalendarView => MaterialCalendarView;
+    // }
 
-    partial class MaterialDatePickerView 
-    {
-        protected override global::Java.Lang.Object RawSelection => Selection;
-    }
-    partial class MaterialDatePickerDialog 
-    {
-        protected override global::Google.Android.Material.Picker.MaterialCalendarView RawMaterialCalendarView => MaterialCalendarView;
-    }
+    // partial class MaterialDatePickerView 
+    // {
+    //     protected override global::Java.Lang.Object RawSelection => Selection;
+    // }
+    // partial class MaterialDatePickerDialog 
+    // {
+    //     protected override global::Google.Android.Material.Picker.MaterialCalendarView RawMaterialCalendarView => MaterialCalendarView;
+    // }
     
-    partial class MaterialDateRangePickerView
-    {
-        protected override global::Java.Lang.Object RawSelection => Selection;
-    }
+    // partial class MaterialDateRangePickerView
+    // {
+    //     protected override global::Java.Lang.Object RawSelection => Selection;
+    // }
 }
 
 
@@ -213,4 +213,55 @@ namespace Google.Android.Material.FloatingActionButton
     {
         public virtual unsafe global::AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior GetBehavior() => Behavior;
     } 
+}
+
+namespace Google.Android.Material.DatePicker { 
+    partial class Month : global::Java.Lang.IComparable {
+        int global::Java.Lang.IComparable.CompareTo(global::Java.Lang.Object obj) {
+            return this.CompareTo(obj as Month);
+        }
+    }
+
+    partial class RangeDateSelector : IDateSelector {
+        global::Java.Lang.Object IDateSelector.Selection {
+            get => Selection;
+            set => Selection = value as global::AndroidX.Core.Util.Pair;
+        }
+
+        public void WriteToParcel(global::Android.OS.Parcel dest, global::Android.OS.ParcelableWriteFlags flags)
+        {
+            WriteToParcel(dest, (int)flags);
+        }
+    }
+
+    partial class SingleDateSelector : IDateSelector {
+        global::Java.Lang.Object IDateSelector.Selection {
+            get => Selection;
+            set => Selection = value as global::Java.Lang.Long;
+        }
+
+        public void WriteToParcel(global::Android.OS.Parcel dest, global::Android.OS.ParcelableWriteFlags flags)
+        {
+            WriteToParcel(dest, (int)flags);
+        }
+    }
+}
+
+
+namespace Google.Android.Material.BottomAppBar {
+    partial class BottomAppBar : AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.IAttachedBehavior {
+        AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.IAttachedBehavior.GetBehavior() {
+            return this.GetBehavior();
+        }
+    }
+}
+
+namespace Google.Android.Material.Ripple { 
+    partial class RippleDrawableCompat {
+        partial class RippleDrawableCompatState {
+            public override unsafe global::Android.Graphics.Drawables.Drawable NewDrawable () {
+                return NewRippleDrawable();
+            }
+        }
+    }
 }

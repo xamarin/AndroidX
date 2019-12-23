@@ -145,9 +145,9 @@
 		,{
 			"groupId" : "androidx.coordinatorlayout",
 			"artifactId" : "coordinatorlayout",
-			"version" : "1.1.0-alpha01",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.CoordinatorLayout",
-			"nugetVersion" : "1.1.0.1-preview06",
+			"nugetVersion" : "1.1.0.99-preview06",
 			"dependencyOnly" : false
 		}
 		,{
@@ -713,9 +713,9 @@
 		,{
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
-			"version" : "1.1.0-alpha05",
+			"version" : "1.1.0-alpha10",
 			"nugetId" : "Xamarin.Google.Android.Material",
-			"nugetVersion" : "1.1.0.5-preview06",
+			"nugetVersion" : "1.1.0.10-preview06",
 			"dependencyOnly" : false
 		},
 
@@ -742,6 +742,14 @@
 			"nugetId" : "Xamarin.Google.Guava.ListenableFuture",
 			"nugetVersion" : "1.0.0.1",
 			"dependencyOnly" : true
+		},
+		{
+			"groupId" : "androidx.viewpager2",
+			"artifactId" : "viewpager2",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.ViewPager2",
+			"nugetVersion" : "1.0.0-rc01",
+			"dependencyOnly" : false
 		}
 	]
 }]
