@@ -149,48 +149,63 @@
     -->
     <Target Name="_AndroidXCecilfyShrinkFindFiles"
             Condition="'$(_AndroidXShouldRunMigration)' == 'true' and '$(AndroidLinkMode)' != 'none'">
+
         <ItemGroup>
-            <_AndroidXResolvedUserAssemblies Condition="'%(ResolvedUserAssemblies.AndroidXSkipAndroidXMigration)' != 'true'"
-                                         Include="@(ResolvedUserAssemblies)" />
-            <_AndroidXFileToCecilfy Condition="'$(MonoAndroidLinkerInputDir)' != ''"
-                                    Include="@(_AndroidXResolvedUserAssemblies->'$(MonoAndroidLinkerInputDir)%(Filename)%(Extension)')" />
+            <_AndroidXResolvedUserAssemblies Include="@(ResolvedUserAssemblies)"
+                                             Condition="'%(ResolvedUserAssemblies.AndroidXSkipAndroidXMigration)' != 'true'" />
         </ItemGroup>
+
+        <!-- pre Xamarin.Android 10.1 uses 'linksrc' -->
+        <ItemGroup>
+            <_AndroidXFileToCecilfy Include="@(_AndroidXResolvedUserAssemblies->'$(MonoAndroidLinkerInputDir)%(Filename)%(Extension)')" 
+                                    Condition="'$(MonoAndroidLinkerInputDir)' != ''" />
+        </ItemGroup>
+
     </Target>
 
-    <!-- In Xamarin.Android 10.1, linksrc does not exist -->
+    <!-- Xamarin.Android 10.1 uses the originals, so copy to 'androidx\cecil' -->
     <Target Name="_AndroidXCecilfyShrinkCopyFiles"
             Condition="'$(_AndroidXShouldRunMigration)' == 'true' and '$(AndroidLinkMode)' != 'none' and '$(MonoAndroidLinkerInputDir)' == ''"
-            Inputs="@(ResolvedAssemblies)"
-            Outputs="@(ResolvedAssemblies->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')">
+            Inputs="@(_AndroidXResolvedUserAssemblies)"
+            Outputs="@(_AndroidXResolvedUserAssemblies->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')">
+
         <ItemGroup>
-            <_AndroidXResolvedPdbs Include="@(ResolvedAssemblies->'%(RootDir)%(Directory)%(Filename).pdb')" />
-            <_AndroidXResolvedMdbs Include="@(ResolvedAssemblies->'%(RootDir)%(Directory)%(Filename)%(Extension).mdb')" />
+            <_AndroidXResolvedPdbs Include="@(_AndroidXResolvedUserAssemblies->'%(RootDir)%(Directory)%(Filename).pdb')" />
+            <_AndroidXResolvedMdbs Include="@(_AndroidXResolvedUserAssemblies->'%(RootDir)%(Directory)%(Filename)%(Extension).mdb')" />
             <_AndroidXResolvedSymbols Condition="Exists(%(Identity))" Include="@(_AndroidXResolvedPdbs);@(_AndroidXResolvedMdbs)" />
         </ItemGroup>
-        <Copy
-            SourceFiles="@(ResolvedAssemblies)"
-            DestinationFiles="@(ResolvedAssemblies->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')"
-        />
-        <Copy
-            SourceFiles="@(_AndroidXResolvedSymbols)"
-            DestinationFiles="@(_AndroidXResolvedSymbols->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')"
-        />
+
+        <Copy SourceFiles="@(_AndroidXResolvedUserAssemblies)"
+              DestinationFiles="@(_AndroidXResolvedUserAssemblies->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')" />
+        <Copy SourceFiles="@(_AndroidXResolvedSymbols)"
+              DestinationFiles="@(_AndroidXResolvedSymbols->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')" />
+
         <ItemGroup>
             <_AndroidXFileToCecilfy Include="@(_AndroidXResolvedUserAssemblies->'$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)')" />
+        </ItemGroup>
+
+        <ItemGroup>
             <!--Fix up our existing item groups-->
             <ResolvedAssemblies Remove="@(_AndroidXResolvedUserAssemblies)" />
             <ResolvedAssemblies Include="@(_AndroidXFileToCecilfy)" />
             <ResolvedUserAssemblies Remove="@(_AndroidXResolvedUserAssemblies)" />
             <ResolvedUserAssemblies Include="@(_AndroidXFileToCecilfy)" />
         </ItemGroup>
+
+        <ItemGroup>
+            <FileWrites Include="$(IntermediateOutputPath)androidx\cecil\%(Filename)%(Extension)" />
+        </ItemGroup>
+
     </Target>
 
     <Target Name="_AndroidXCecilfyNoShrinkFindFiles"
             Condition="'$(_AndroidXShouldRunMigration)' == 'true' and '$(AndroidLinkMode)' == 'none'">
+
         <ItemGroup>
             <_AndroidXFileToCecilfy Include="@(ResolvedUserAssemblies->'$(MonoAndroidIntermediateAssetsDir)%(Filename)%(Extension)')" 
                                     Condition="('%(ResolvedUserAssemblies.TargetFrameworkIdentifier)' == 'MonoAndroid' or '%(ResolvedUserAssemblies.HasMonoAndroidReference)' == 'true') and ('%(ResolvedUserAssemblies.AndroidXSkipAndroidXMigration)' != 'true')" />
         </ItemGroup>
+
     </Target>
 
     <Target Name="_AndroidXCecilfyNoShrink"
@@ -204,7 +219,7 @@
     </Target>
 
     <Target Name="_AndroidXCecilfy"
-            DependsOnTargets="_AndroidXCecilfyShrinkFindFiles;_AndroidXCecilfyShrinkCopyFiles;_AndroidXCecilfyNoShrinkFindFiles"
+            DependsOnTargets="_ValidateLinkMode;_AndroidXCecilfyShrinkFindFiles;_AndroidXCecilfyShrinkCopyFiles;_AndroidXCecilfyNoShrinkFindFiles"
             Inputs="@(_AndroidXFileToCecilfy);$(_AndroidStampDirectory)_CopyIntermediateAssemblies.stamp"
             Outputs="$(_AndroidStampDirectory)_AndroidXCecilfy.stamp"
             Condition="'$(_AndroidXShouldRunMigration)' == 'true'">
@@ -220,6 +235,15 @@
         </ItemGroup>
 
     </Target>
+
+    <!-- HACK START -->
+    <!-- This is to get around the fact that _ValidateLinkMode is not run when pressing the green arrow in the IDE -->
+    <Target Name="_AndroidXCreatePropertiesCacheFixup"
+            Condition="'$(_AndroidXShouldRunMigration)' == 'true'"
+            DependsOnTargets="_ValidateLinkMode"
+            BeforeTargets="_CreatePropertiesCache">
+    </Target>
+    <!-- HACK END -->
 
     <!--
     ***************************************************************************
