@@ -36,17 +36,11 @@ Before building the libraries and samples in this repository, you will need to i
 
 ```sh
 dotnet tool install -g cake.tool
+dotnet tool install -g xamarin.androidbinderator.tool --version 0.4.1
+dotnet tool install -g xamarin.androidx.migration.tool --version 1.0.0-preview06
 ```
 
-When building on macOS, you may also need to install [CocoaPods](https://cocoapods.org/):
-
-```sh
-# Homebrew
-brew install cocoapods
-
-# Ruby Gems
-gem install cocoapods
-```
+> NOTE: If you previously installed any of these tools, be sure to update them to the latest versions.
 
 ### Compiling
 
@@ -84,7 +78,7 @@ Implement build tasks in the AndroidX packages to allow your application to util
 
 **3. Optional One Time Migration Tool**
 
-If your app's code (C#, Resources, Manifest, etc) has not been migrated from Android Support, your build times will be slightly longer.  
+If your app's code (C#, Resources, Manifest, etc) has not been migrated from Android Support, your build times will be slightly longer.
 
 We will provide a migration assistant to help convert your C# code, xml resources, and AndroidManifest to use the new AndroidX API's which you can optionally use to perform a one time migration of your project.
 
