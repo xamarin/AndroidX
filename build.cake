@@ -241,7 +241,7 @@ Task("binderate-config-verify")
 			foreach(JObject jo in binderator_json_array[0]["artifacts"])
 			{
 				bool? dependency_only = (bool?) jo["dependencyOnly"];
-				if ( dependency_only == true)
+				if (dependency_only == true || string.Equals((string)jo["artifactId"], "material"))
 				{
 					continue;
 				}
