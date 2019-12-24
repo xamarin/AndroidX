@@ -37,6 +37,8 @@ namespace Xamarin.AndroidX.Migration
 
 		public bool SkipEmbeddedResources { get; set; }
 
+		public List<string> References { get; set; }
+
 		public bool RenameTypes { get; set; }
 
 		public string JavaPath { get; set; } = "java";
@@ -73,21 +75,24 @@ namespace Xamarin.AndroidX.Migration
 			var hasPdb = File.Exists(pdbPath);
 			var result = CecilMigrationResult.Skipped;
 
-			using (var resolver = new DefaultAssemblyResolver())
+			var requiresSave = false;
+
+			using (var resolver = new AssemblyResolver())
 			{
-				resolver.AddSearchDirectory(Path.GetDirectoryName(source));
+				foreach (var reference in References)
+				{
+					resolver.AddAssembly(reference);
+				}
+
 				var readerParams = new ReaderParameters
 				{
 					ReadSymbols = hasPdb,
 					AssemblyResolver = resolver,
 				};
 
-				var requiresSave = false;
-
+				LogVerboseMessage($"Processing assembly '{source}'...");
 				using (var assembly = AssemblyDefinition.ReadAssembly(source, readerParams))
 				{
-					LogVerboseMessage($"Processing assembly '{source}'...");
-
 					if (!hasPdb)
 						LogVerboseMessage($"  No debug symbols found for the assembly.");
 
@@ -142,19 +147,19 @@ namespace Xamarin.AndroidX.Migration
 						}
 					}
 				}
+			}
 
-				if (requiresSave)
+			if (requiresSave)
+			{
+				if (File.Exists(tempDllPath))
 				{
-					if (File.Exists(tempDllPath))
-					{
-						File.Copy(tempDllPath, destination, true);
-						File.Delete(tempDllPath);
-					}
-					if (File.Exists(tempPdbPath))
-					{
-						File.Copy(tempPdbPath, destPdbPath, true);
-						File.Delete(tempPdbPath);
-					}
+					File.Copy(tempDllPath, destination, true);
+					File.Delete(tempDllPath);
+				}
+				if (File.Exists(tempPdbPath))
+				{
+					File.Copy(tempPdbPath, destPdbPath, true);
+					File.Delete(tempPdbPath);
 				}
 			}
 
@@ -577,6 +582,17 @@ namespace Xamarin.AndroidX.Migration
 				{
 					return null;
 				}
+			}
+		}
+
+		private sealed class AssemblyResolver : DefaultAssemblyResolver
+		{
+			public void AddAssembly(string assembly)
+			{
+				RegisterAssembly(AssemblyDefinition.ReadAssembly(assembly, new ReaderParameters
+				{
+					AssemblyResolver = this,
+				}));
 			}
 		}
 	}
