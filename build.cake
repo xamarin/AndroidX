@@ -667,6 +667,9 @@ Task("migration-nuget")
 		.WithTarget("Pack");
 
 	MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
+
+	settings.EnableBinaryLogger("./output/migration-tool-nuget.binlog");
+
 	MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
 });
 

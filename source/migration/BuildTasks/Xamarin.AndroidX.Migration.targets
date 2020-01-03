@@ -225,6 +225,7 @@
             Condition="'$(_AndroidXShouldRunMigration)' == 'true'">
 
         <CecilfyFiles Assemblies="@(_AndroidXFileToCecilfy)"
+                      References="@(ResolvedAssemblies)"
                       SkipEmbeddedResources="true"
                       Verbose="$(_AndroidXUseVerboseToolOutput)" />
 
