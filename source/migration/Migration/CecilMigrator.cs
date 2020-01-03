@@ -86,12 +86,15 @@ namespace Xamarin.AndroidX.Migration
 			var requiresSave = false;
 			using (var resolver = new AssemblyResolver())
 			{
-				var refs = References
-					.Where(r => Path.GetFileName(r) != Path.GetFileName(destination))
-					.ToList();
-				foreach (var reference in refs)
+				if (References?.Count > 0)
 				{
-					resolver.AddAssembly(reference);
+					var refs = References
+						.Where(r => Path.GetFileName(r) != Path.GetFileName(destination))
+						.ToList();
+					foreach (var reference in refs)
+					{
+						resolver.AddAssembly(reference);
+					}
 				}
 
 				var readerParams = new ReaderParameters
