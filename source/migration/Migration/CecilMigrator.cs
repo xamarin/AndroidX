@@ -104,7 +104,7 @@ namespace Xamarin.AndroidX.Migration
 				LogVerboseMessage($"Processing assembly '{source}'...");
 				using (var assembly = AssemblyDefinition.ReadAssembly(destination, readerParams))
 				{
-					if (!File.Exists(pdbPath) && !File.Exists(mdbPath))
+					if (!hasSymbols)
 						LogVerboseMessage($"  No debug symbols found for the assembly.");
 
 					result = MigrateAssembly(assembly);
