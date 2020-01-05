@@ -1,0 +1,18 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="final"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+    
+</metadata>

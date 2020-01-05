@@ -1,6 +1,24 @@
 ﻿<metadata>
+    <!--
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onCreateViewHolder']" name="return">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
+    -->
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onBindViewHolder']/parameter[1]" name="type">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
+    <!--
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onCreateViewHolder']" name="return">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
+    -->
     <attr path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onBindViewHolder']/parameter[1]" name="type">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr>
+
+
+    <attr 
+        path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterMulti']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.leanback.preference']/class[@name='LeanbackListPreferenceDialogFragment.AdapterSingle']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
 </metadata>

@@ -83,4 +83,11 @@
     <remove-node
         path="/api/package[@name='androidx.preference']/interface[@name='Preference.SummaryProvider']"
         />    
+    <attr
+        path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
 </metadata>
