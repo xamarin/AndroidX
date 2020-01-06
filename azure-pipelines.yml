@@ -23,6 +23,11 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
+      preBuildSteps:
+        - pwsh: |
+            dotnet tool install --global boots
+            boots https://aka.ms/xamarin-android-commercial-d16-4-macos
+          condition: eq(variables['System.JobName'], 'macos')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
         - 'xamarin.androidx.migration.tool': '1.0.0-preview06'
