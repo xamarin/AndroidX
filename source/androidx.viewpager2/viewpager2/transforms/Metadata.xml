@@ -1,4 +1,8 @@
 ﻿<metadata>
+    <!--
+    work around:
+    `cannot override inherited member`
+    -->
     <attr
         path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         name="final"
@@ -11,8 +15,16 @@
         >
         Java.Lang.Object
     </attr>
-    <remove-node
-        path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]"
-        />
-    
+    <attr
+        path="/api/package[@name='androidx.viewpager2.widget']/class[@name='ViewPager2.BasicAccessibilityProvider']"
+        name="visibility"
+        >
+        private
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.viewpager2.widget']/class[@name='ViewPager2.PageAwareAccessibilityProvider']"
+        name="visibility"
+        >
+        private
+    </attr>    
 </metadata>
