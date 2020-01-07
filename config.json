@@ -80,6 +80,14 @@
 			"dependencyOnly" : false
 		}
 		,{
+			"groupId" : "androidx.autofill",
+			"artifactId" : "autofill",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.AutoFill",
+			"nugetVersion" : "1.0.0-rc1",
+			"dependencyOnly" : false
+		}
+		,{
 			"groupId" : "androidx.biometric",
 			"artifactId" : "biometric",
 			"version" : "1.0.0",
@@ -146,9 +154,9 @@
 		,{
 			"groupId" : "androidx.coordinatorlayout",
 			"artifactId" : "coordinatorlayout",
-			"version" : "1.0.0",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.CoordinatorLayout",
-			"nugetVersion" : "1.0.0-rc1",
+			"nugetVersion" : "1.1.0-rc1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -538,9 +546,9 @@
 		,{
 			"groupId" : "androidx.recyclerview",
 			"artifactId" : "recyclerview",
-			"version" : "1.0.0",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.RecyclerView",
-			"nugetVersion" : "1.0.0-rc1",
+			"nugetVersion" : "1.1.0-rc1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -554,25 +562,25 @@
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-common",
-			"version" : "2.2.1",
+			"version" : "2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Room.Common",
-			"nugetVersion" : "2.2.1-rc1",
+			"nugetVersion" : "2.2.2-rc1",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-guava",
-			"version" : "2.2.1",
+			"version" : "2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Room.Guava",
-			"nugetVersion" : "2.2.1-rc1",
+			"nugetVersion" : "2.2.2-rc1",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-runtime",
-			"version" : "2.2.1",
+			"version" : "2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
-			"nugetVersion" : "2.2.1-rc1",
+			"nugetVersion" : "2.2.2-rc1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -684,6 +692,14 @@
 			"artifactId" : "viewpager",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.ViewPager",
+			"nugetVersion" : "1.0.0-rc1",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.viewpager2",
+			"artifactId" : "viewpager2",
+			"version" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.ViewPager2",
 			"nugetVersion" : "1.0.0-rc1",
 			"dependencyOnly" : false
 		}
