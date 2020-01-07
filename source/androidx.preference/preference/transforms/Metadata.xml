@@ -87,7 +87,7 @@
         path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         name="managedReturn"
         >
-        Java.Lang.Object
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
    
 </metadata>

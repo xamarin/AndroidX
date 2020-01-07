@@ -227,12 +227,12 @@
         path="/api/package[@name='androidx.leanback.widget']/class[@name='ItemBridgeAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         name="managedReturn"
         >
-        Java.Lang.Object
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
     <attr
         path="/api/package[@name='androidx.leanback.widget']/class[@name='GuidedActionAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         name="managedReturn"
         >
-        Java.Lang.Object
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
 </metadata>
