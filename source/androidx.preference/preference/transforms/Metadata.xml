@@ -13,7 +13,7 @@
     <!--<attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" name="return">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='bindViewHolder']/parameter[1]" name="type">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
     <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']/parameter[1]" name="type">androidx.recyclerview.widget.RecyclerView.ViewHolder</attr>
--->
+    -->
     <!-- <remove-node path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder']" />
     <remove-node path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder']" /> -->
     <!-- <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='androidx.preference.PreferenceViewHolder'] and parameter[2][@type='int']]/parameter[1]" name="managedType">AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder</attr> -->
@@ -50,44 +50,22 @@
     <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceContentsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]" name="managedName">p2</attr>
     <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[1]" name="managedName">p1</attr>
     <attr path="/api/package[@name='androidx.preference']/class[@name='PreferenceManager.PreferenceComparisonCallback']/method[@name='arePreferenceItemsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.preference.Preference'] and parameter[2][@type='androidx.preference.Preference']]/parameter[2]" name="managedName">p2</attr>
-    <!--
-    mc++ AndroidX
-    -->
-    <!-- 
-    <add-node
-        path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']"
-        >
-        <method 
-            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
-            jni-return="V" jni-signature="(Landroid/views/ViewHolder;I)V" 
-            visibility="public" static="false" abstract="false" return="void" name="onBindViewHolder" 
-            >
-            <parameter type="android.views.ViewHolder" name="holder" jni-type="Landroid/views/ViewHolder;">
-            </parameter>
-            <parameter type="int" name="position" jni-type="I">
-            </parameter>
-        </method>
-        <method 
-            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
-            jni-return="Ljava/lang/Object;" jni-signature="(Landroid/view/ViewGroup;I)Ljava/lang/Object;" 
-            visibility="public" static="false" abstract="false" return="java.lang.Object" name="onCreateViewHolder" 
-            >
-            <parameter type="android.view.ViewGroup" name="parent" jni-type="Landroid/view/ViewGroup;">
-            </parameter>
-            <parameter type="int" name="viewType" jni-type="I">
-            </parameter>
-        </method>
-        
-    </add-node> 
-    -->
+
     <remove-node
         path="/api/package[@name='androidx.preference']/interface[@name='Preference.SummaryProvider']"
-        />    
+        />
+
     <attr
         path="/api/package[@name='androidx.preference']/class[@name='PreferenceGroupAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
         name="managedReturn"
         >
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
-   
+
+    <attr
+        path="/api/package[@name='androidx.preference']/*/method[@return='T' and typeParameters/typeParameter[@name='T']/genericConstraints/genericConstraint[@type='androidx.preference.Preference']]"
+        name="return">
+        androidx.preference.Preference
+    </attr>
+
 </metadata>
