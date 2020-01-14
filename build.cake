@@ -264,14 +264,15 @@ Task("binderate-config-verify")
 				nuget_version_new = nuget_version_new.Replace("y", y);
 				nuget_version_new = nuget_version_new.Replace("z", z);
 
-				if( !string.Equals(nuget_version_new, nuget_version) )
+				if( ! nuget_version_new.StartsWith(nuget_version) )
 				{
 					Error("check config.json for nuget id");
-					Error  ($"		groupId       = {jo["groupId"]}");
-					Error  ($"		artifactId    = {jo["artifactId"]}");
-					Error  ($"		version       = {version}");
-					Error  ($"		nuget_version = {nuget_version}");
-					Error  ($"		nugetId       = {jo["nugetId"]}");
+					Error  ($"		groupId           = {jo["groupId"]}");
+					Error  ($"		artifactId        = {jo["artifactId"]}");
+					Error  ($"		version           = {version}");
+					Error  ($"		nuget_version     = {nuget_version}");
+					Error  ($"		nuget_version_new = {nuget_version_new}");
+					Error  ($"		nugetId           = {jo["nugetId"]}");
 					
 					Warning($"	expected : ");
 					Warning($"		nuget_version = {nuget_version}");
