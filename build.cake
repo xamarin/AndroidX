@@ -222,7 +222,7 @@ Task ("binderate")
 	}
 });
 
-string version_suffix = "-rc1";
+string version_suffix = "";
 string nuget_version_template = $"x.y.z{version_suffix}";
 JArray binderator_json_array = null;
 
@@ -264,7 +264,7 @@ Task("binderate-config-verify")
 				nuget_version_new = nuget_version_new.Replace("y", y);
 				nuget_version_new = nuget_version_new.Replace("z", z);
 
-				if( ! nuget_version_new.StartsWith(nuget_version) )
+				if( string.IsNullOrEmpty(version_suffix) && ! nuget_version.StartsWith(nuget_version_new) )
 				{
 					Error("check config.json for nuget id");
 					Error  ($"		groupId           = {jo["groupId"]}");
@@ -275,7 +275,7 @@ Task("binderate-config-verify")
 					Error  ($"		nugetId           = {jo["nugetId"]}");
 					
 					Warning($"	expected : ");
-					Warning($"		nuget_version = {nuget_version}");
+					Warning($"		nuget_version = {nuget_version_new}");
 					throw new Exception("check config.json for nuget id");
 				}
 			}
