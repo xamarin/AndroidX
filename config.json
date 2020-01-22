@@ -90,17 +90,17 @@
 		,{
 			"groupId" : "androidx.biometric",
 			"artifactId" : "biometric",
-			"version" : "1.0.0",
+			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Biometric",
-			"nugetVersion" : "1.0.0-rc1",
+			"nugetVersion" : "1.0.1-preview01",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.browser",
 			"artifactId" : "browser",
-			"version" : "1.0.0",
+			"version" : "1.2.0",
 			"nugetId" : "Xamarin.AndroidX.Browser",
-			"nugetVersion" : "1.0.0-rc1",
+			"nugetVersion" : "1.2.0-preview01",
 			"dependencyOnly" : false
 		}
 		,{
@@ -425,6 +425,22 @@
 		}
 		,{
 			"groupId" : "androidx.media2",
+			"artifactId" : "media2-exoplayer",
+			"version" : "1.0.1",
+			"nugetId" : "Xamarin.AndroidX.Media2.ExoPlayer",
+			"nugetVersion" : "1.0.1-rc1",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.media2",
+			"artifactId" : "media2-player",
+			"version" : "1.0.1",
+			"nugetId" : "Xamarin.AndroidX.Media2.Player",
+			"nugetVersion" : "1.0.1-rc1",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.media2",
 			"artifactId" : "media2-session",
 			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Media2.Session",
@@ -490,17 +506,17 @@
 		,{
 			"groupId" : "androidx.paging",
 			"artifactId" : "paging-common",
-			"version" : "2.1.0",
+			"version" : "2.1.1",
 			"nugetId" : "Xamarin.AndroidX.Paging.Common",
-			"nugetVersion" : "2.1.0-rc1",
+			"nugetVersion" : "2.1.1-preview01",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.paging",
 			"artifactId" : "paging-runtime",
-			"version" : "2.1.0",
+			"version" : "2.1.1",
 			"nugetId" : "Xamarin.AndroidX.Paging.Runtime",
-			"nugetVersion" : "2.1.0-rc1",
+			"nugetVersion" : "2.1.1-preview01",
 			"dependencyOnly" : false
 		}
 		,{
@@ -562,25 +578,25 @@
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-common",
-			"version" : "2.2.2",
+			"version" : "2.2.3",
 			"nugetId" : "Xamarin.AndroidX.Room.Common",
-			"nugetVersion" : "2.2.2-rc1",
+			"nugetVersion" : "2.2.3-preview01",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-guava",
-			"version" : "2.2.2",
+			"version" : "2.2.3",
 			"nugetId" : "Xamarin.AndroidX.Room.Guava",
-			"nugetVersion" : "2.2.2-rc1",
+			"nugetVersion" : "2.2.3-preview01",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-runtime",
-			"version" : "2.2.2",
+			"version" : "2.2.3",
 			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
-			"nugetVersion" : "2.2.2-rc1",
+			"nugetVersion" : "2.2.3-preview01",
 			"dependencyOnly" : false
 		}
 		,{
