@@ -47,8 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.0.2-preview02" />
-    <PackageReference Include="Xamarin.AndroidX.Media" Version="1.0.1-preview02" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0-rc1" />
+    <PackageReference Include="Xamarin.AndroidX.Media" Version="1.1.0-rc1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManagedAarxerciser.cs" />
