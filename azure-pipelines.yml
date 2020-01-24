@@ -26,7 +26,7 @@ jobs:
       preBuildSteps:
         - pwsh: |
             dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-5-macos
+            boots https://aka.ms/xamarin-android-commercial-d16-3-macos
           condition: eq(variables['System.JobName'], 'macos')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.1'
