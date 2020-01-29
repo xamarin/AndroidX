@@ -414,31 +414,41 @@ Task("nuget")
 	MSBuild("./generated/AndroidX.sln", settings);
 });
 
+Task("samples-generate-all-targets")
+	.Does
+	(
+		() =>
+		{
+			// make a big .targets file that pulls in everything
+			var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+			var itemGroup = new XElement(xmlns + "ItemGroup");
+			foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+				// Skip Wear as it has special implications requiring more packages to be used properly in an app
+				if (nupkg.FullPath.Contains(".Wear."))
+					continue;
+				// Skip the migration packages as that is not meant forto be used here
+				if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
+					continue;
+				var filename = nupkg.GetFilenameWithoutExtension();
+				var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+				itemGroup.Add(new XElement(xmlns + "PackageReference",
+					new XAttribute("Include", match.Groups[1]),
+					new XAttribute("Version", match.Groups[2])));
+			}
+			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+			xdoc.Save("./output/AllPackages.targets");
+
+			return;
+		}
+	);
+
 Task("samples")
+	.IsDependentOn("samples-generate-all-targets")
 	.IsDependentOn("nuget")
 	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
 	// TODO: make this actually work with more than just this sample
-
-	// make a big .targets file that pulls in everything
-	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-	var itemGroup = new XElement(xmlns + "ItemGroup");
-	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
-		// Skip Wear as it has special implications requiring more packages to be used properly in an app
-		if (nupkg.FullPath.Contains(".Wear."))
-			continue;
-		// Skip the migration packages as that is not meant forto be used here
-		if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
-			continue;
-		var filename = nupkg.GetFilenameWithoutExtension();
-		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-		itemGroup.Add(new XElement(xmlns + "PackageReference",
-			new XAttribute("Include", match.Groups[1]),
-			new XAttribute("Version", match.Groups[2])));
-	}
-	var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
-	xdoc.Save("./output/AllPackages.targets");
 
 	// clear the packages folder so we always use the latest
 	var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
