@@ -23,6 +23,7 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
+      areaPath: 'DevDiv\Xamarin SDK\Android'
       preBuildSteps:
         - pwsh: |
             dotnet tool install --global boots
