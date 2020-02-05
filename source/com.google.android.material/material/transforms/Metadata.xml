@@ -89,24 +89,14 @@
       Android.Graphics.Drawables.Drawable
     </attr>
 
-    <remove-node
-      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='getSelection' and count(parameter)=0]"
-      />
-    <remove-node
-      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='setSelection' and count(parameter)=1 and parameter[1][@type='S']]"
-      />
-
     <!--
-    <attr
-      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='getSelection' and count(parameter)=0]"
-      name="propertyName"
-      >
-    </attr>
-    <attr
-      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='setSelection' and count(parameter)=1 and parameter[1][@type='S']]"
-      name="propertyName"
-      >
-    </attr>
+    Fix for https://github.com/xamarin/java.interop/issues/565
     -->
+    <attr
+      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='setSelection' and count(parameter)=1 and parameter[1][@type='S']]/parameter[1]"
+      name="name"
+      >
+      value
+  </attr>
 
 </metadata>
