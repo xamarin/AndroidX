@@ -14,7 +14,11 @@
     <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <RootNamespace>@(Model.NuGetPackageId.Replace("Xamarin.", ""))</RootNamespace>
+    <EnableProguard>true</EnableProguard>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidEnableDesugar>true</AndroidEnableDesugar>
     <!--
       No warnings for:
