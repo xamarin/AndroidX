@@ -59,5 +59,19 @@
     <!-- Remove some non-public interfaces that the generator tries to bind -->
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
-        
+    
+    <remove-node path="/api/package[@name='com.google.android.material.behavior']/interface[@name='SwipeDismissBehavior.OnDismissListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.button']/interface[@name='MaterialButton.OnPressedChangeListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='MaterialCalendar.OnDayClickListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/interface[@name='ExtendedFloatingActionButton.Size']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton.ShowStrategy']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton.HideStrategy']" />
+    <remove-node path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton.ChangeSizeStrategy']" />
+    
+    <!-- Remove the implementation to manually implement it, because something strange happened to setter -->
+    <remove-node path="/api/package[@name='com.google.android.material.datepicker']/class[@name='RangeDateSelector']/implements[@name='com.google.android.material.datepicker.DateSelector']" />
+    <remove-node path="/api/package[@name='com.google.android.material.datepicker']/class[@name='SingleDateSelector']/implements[@name='com.google.android.material.datepicker.DateSelector']" />
+    
+    <attr path="/api/package[@name='com.google.android.material.ripple']/class[@name='RippleDrawableCompat.RippleDrawableCompatState']/method[@name='newDrawable' and count(parameter)=0]" name="managedName">NewRippleDrawable</attr>
 </metadata>

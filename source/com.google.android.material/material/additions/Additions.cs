@@ -60,6 +60,17 @@ namespace Google.Android.Material.AppBar
     }
 }
 
+namespace Google.Android.Material.BottomAppBar
+{
+    partial class BottomAppBar : AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.IAttachedBehavior
+    {
+        AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.IAttachedBehavior.GetBehavior()
+        {
+            return this.GetBehavior();
+        }
+    }
+}
+
 namespace Google.Android.Material.BottomNavigation
 {
     public partial class BottomNavigationItemView
@@ -94,6 +105,45 @@ namespace Google.Android.Material.CircularReveal
     }
 }
 
+namespace Google.Android.Material.DatePicker
+{
+    partial class RangeDateSelector : IDateSelector
+    {
+        Java.Lang.Object IDateSelector.Selection
+        {
+            get => Selection;
+            set => Selection = value as AndroidX.Core.Util.Pair;
+        }
+
+        public void WriteToParcel(global::Android.OS.Parcel dest, global::Android.OS.ParcelableWriteFlags flags)
+        {
+            WriteToParcel(dest, (int)flags);
+        }
+    }
+
+    partial class SingleDateSelector : IDateSelector
+    {
+        Java.Lang.Object IDateSelector.Selection
+        {
+            get => Selection;
+            set => Selection = value as Java.Lang.Long;
+        }
+
+        public void WriteToParcel(global::Android.OS.Parcel dest, global::Android.OS.ParcelableWriteFlags flags)
+        {
+            WriteToParcel(dest, (int)flags);
+        }
+    }
+}
+
+namespace Google.Android.Material.FloatingActionButton
+{
+    partial class ExtendedFloatingActionButton
+    {
+        public virtual unsafe AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior GetBehavior() => Behavior;
+    }
+}
+
 namespace Google.Android.Material.Internal
 {
     public partial class NavigationMenuItemView
@@ -112,6 +162,20 @@ namespace Google.Android.Material.Internal
 
         public void SetVisibility(ViewStates visibility) =>
             Visibility = visibility;
+    }
+}
+
+namespace Google.Android.Material.Ripple
+{
+    partial class RippleDrawableCompat
+    {
+        partial class RippleDrawableCompatState
+        {
+            public override unsafe global::Android.Graphics.Drawables.Drawable NewDrawable()
+            {
+                return NewRippleDrawable();
+            }
+        }
     }
 }
 
