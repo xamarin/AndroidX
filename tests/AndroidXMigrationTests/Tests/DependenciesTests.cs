@@ -296,6 +296,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.VersionedParcelable",
 				"Xamarin.AndroidX.ViewPager",
 				"Xamarin.Google.Android.Material",
+				"Xamarin.AndroidX.ViewPager2",
 			};
 
 			var tree = PackageDependencyTree.Load();
