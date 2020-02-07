@@ -33,10 +33,12 @@ var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
 
+
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
-var ANDROID_SDK_VERSION = "v9.0";
+var ANDROID_SDK_VERSION = "v10.0";
+string AndroidSdkBuildTools = $"29.0.2";
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
 		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
@@ -383,7 +385,7 @@ Task("libs")
 			.SetMaxCpuCount(0)
 			.EnableBinaryLogger("./output/restore.binlog")
 			.WithProperty("DesignTimeBuild", "false")
-			.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
+			.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
 			.WithTarget("Restore");
 		
 		if (! string.IsNullOrEmpty(ANDROID_HOME))
@@ -404,7 +406,7 @@ Task("libs")
 		.WithRestore()
 		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
 		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+		.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
 	if (! string.IsNullOrEmpty(ANDROID_HOME))
 	{
@@ -489,7 +491,7 @@ Task("samples")
 		.WithRestore()
 		.WithProperty("RestorePackagesPath", packagesPath)
 		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+		.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
 	if (! string.IsNullOrEmpty(ANDROID_HOME))
 	{
