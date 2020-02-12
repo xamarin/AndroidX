@@ -42,6 +42,8 @@
     <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
   <PropertyGroup>
