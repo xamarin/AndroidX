@@ -14,8 +14,11 @@
     <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <RootNamespace>@(Model.NuGetPackageId.Replace("Xamarin.", ""))</RootNamespace>
+    <EnableProguard>true</EnableProguard>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidEnableDesugar>true</AndroidEnableDesugar>
+    <AndroidLinkTool>r8</AndroidLinkTool>
     <!--
       No warnings for:
        - CS0618: 'member' is obsolete: 'text'
