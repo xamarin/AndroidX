@@ -59,5 +59,44 @@
     <!-- Remove some non-public interfaces that the generator tries to bind -->
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
-        
+
+    <attr
+      path="/api/package[@name='com.google.android.material.bottomappbar']/class[@name='BottomAppBar']/method[@name='getBehavior' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.bottomappbar']/class[@name='BottomAppBar']/method[@name='getBehavior' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton']/method[@name='getBehavior' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='BaseMotionStrategy']"
+      name="visibility"
+      >
+      public
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.ripple']/class[@name='RippleDrawableCompat.RippleDrawableCompatState']/method[@name='newDrawable' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Android.Graphics.Drawables.Drawable
+    </attr>
+
+    <!--
+    Fix for https://github.com/xamarin/java.interop/issues/565
+    -->
+    <attr
+      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='setSelection' and count(parameter)=1 and parameter[1][@type='S']]/parameter[1]"
+      name="name"
+      >
+      value
+  </attr>
+
 </metadata>
