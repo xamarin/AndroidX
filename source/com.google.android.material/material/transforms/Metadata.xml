@@ -99,4 +99,14 @@
       value
   </attr>
 
+  <remove-node 
+    path="/api/package[@name='com.google.android.material.button']/interface[@name='MaterialButton.OnPressedChangeListener']" 
+    /> 
+  <remove-node 
+    path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='MaterialCalendar.OnDayClickListener']" 
+    /> 
+  <remove-node 
+    path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" 
+    />
+
 </metadata>
