@@ -472,8 +472,8 @@ Task("samples-generate-all-targets")
 
 Task("samples")
 	.IsDependentOn("nuget")
-	.IsDependentOn("migration-nuget")
 	.IsDependentOn("samples-generate-all-targets")
+	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
 	// TODO: make this actually work with more than just this sample
