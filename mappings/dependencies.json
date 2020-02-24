@@ -165,7 +165,8 @@
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Interpolator",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI"
+        "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -192,6 +193,10 @@
       ]
     },
     {
+      "id": "Xamarin.Google.Guava.ListenableFuture",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.CardView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -203,10 +208,6 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
-    },
-    {
-      "id": "Xamarin.Google.Guava.ListenableFuture",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.ConstraintLayout",
@@ -577,7 +578,11 @@
         "Xamarin.AndroidX.Legacy.Support.Core.UI",
         "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "Xamarin.AndroidX.RecyclerView",
-        "Xamarin.AndroidX.Transition"
+        "Xamarin.AndroidX.Transition",
+        "Xamarin.AndroidX.CoordinatorLayout",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.VectorDrawable",
+        "Xamarin.AndroidX.ViewPager2"
       ]
     },
     {
