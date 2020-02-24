@@ -92,7 +92,7 @@
 			"artifactId" : "biometric",
 			"version" : "1.0.1",
 			"nugetId" : "Xamarin.AndroidX.Biometric",
-			"nugetVersion" : "1.0.1-preview01",
+			"nugetVersion" : "1.0.1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -100,7 +100,7 @@
 			"artifactId" : "browser",
 			"version" : "1.2.0",
 			"nugetId" : "Xamarin.AndroidX.Browser",
-			"nugetVersion" : "1.2.0-preview01",
+			"nugetVersion" : "1.2.0",
 			"dependencyOnly" : false
 		}
 		,{
@@ -492,7 +492,7 @@
 			"artifactId" : "paging-common",
 			"version" : "2.1.1",
 			"nugetId" : "Xamarin.AndroidX.Paging.Common",
-			"nugetVersion" : "2.1.1-preview01",
+			"nugetVersion" : "2.1.1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -500,7 +500,7 @@
 			"artifactId" : "paging-runtime",
 			"version" : "2.1.1",
 			"nugetId" : "Xamarin.AndroidX.Paging.Runtime",
-			"nugetVersion" : "2.1.1-preview01",
+			"nugetVersion" : "2.1.1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -524,7 +524,7 @@
 			"artifactId" : "preference",
 			"version" : "1.1.0",
 			"nugetId" : "Xamarin.AndroidX.Preference",
-			"nugetVersion" : "1.1.0-rc2",
+			"nugetVersion" : "1.1.0",
 			"dependencyOnly" : false
 		}
 		,{
@@ -564,7 +564,7 @@
 			"artifactId" : "room-common",
 			"version" : "2.2.3",
 			"nugetId" : "Xamarin.AndroidX.Room.Common",
-			"nugetVersion" : "2.2.3-preview01",
+			"nugetVersion" : "2.2.3",
 			"dependencyOnly" : false
 		}
 		,{
@@ -572,7 +572,7 @@
 			"artifactId" : "room-guava",
 			"version" : "2.2.3",
 			"nugetId" : "Xamarin.AndroidX.Room.Guava",
-			"nugetVersion" : "2.2.3-preview01",
+			"nugetVersion" : "2.2.3",
 			"dependencyOnly" : false
 		}
 		,{
@@ -580,7 +580,7 @@
 			"artifactId" : "room-runtime",
 			"version" : "2.2.3",
 			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
-			"nugetVersion" : "2.2.3-preview01",
+			"nugetVersion" : "2.2.3",
 			"dependencyOnly" : false
 		}
 		,{
@@ -730,9 +730,9 @@
 		,{
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
-			"version" : "1.0.0",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.Google.Android.Material",
-			"nugetVersion" : "1.0.0",
+			"nugetVersion" : "1.1.0-rc2",
 			"dependencyOnly" : false
 		},
 

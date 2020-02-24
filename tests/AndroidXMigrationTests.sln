@@ -5,11 +5,9 @@ VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.BuildTasks", "..\source\migration\BuildTasks\Xamarin.AndroidX.Migration.BuildTasks.csproj", "{450BD878-668D-4739-91F6-87BBCEB55FDF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration", "..\source\migration\Migration\Xamarin.AndroidX.Migration.Core.csproj", "{CF645037-0F6E-43D9-A603-A15A4DBE1906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.Core", "..\source\migration\Migration\Xamarin.AndroidX.Migration.Core.csproj", "{CF645037-0F6E-43D9-A603-A15A4DBE1906}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.Tool", "..\source\migration\Tool\Xamarin.AndroidX.Migration.Tool.csproj", "{06820168-947C-425E-8E5F-E768935B2CDC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Android.Tools.Bytecode", "..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj", "{51B18B14-0AE6-45EE-A62E-92A199C5A73C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{7E423CD0-40F0-4964-8B22-F95E29694080}"
 EndProject
@@ -31,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarxercise.Reference.Suppor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.AndroidX.Migration.Tests", "AndroidXMigrationTests\Tests\Xamarin.AndroidX.Migration.Tests.csproj", "{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Android.Tools.Bytecode", "..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj", "{AADCD21E-B54D-48B2-A842-6A6260847C73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,10 +49,6 @@ Global
 		{06820168-947C-425E-8E5F-E768935B2CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06820168-947C-425E-8E5F-E768935B2CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06820168-947C-425E-8E5F-E768935B2CDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51B18B14-0AE6-45EE-A62E-92A199C5A73C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A387F7E5-9BD1-40F7-A748-96BF84702F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -89,6 +85,10 @@ Global
 		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3699B030-1132-4C28-8EDC-6CD7BBCF5F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADCD21E-B54D-48B2-A842-6A6260847C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADCD21E-B54D-48B2-A842-6A6260847C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADCD21E-B54D-48B2-A842-6A6260847C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADCD21E-B54D-48B2-A842-6A6260847C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,7 +97,7 @@ Global
 		{450BD878-668D-4739-91F6-87BBCEB55FDF} = {7E423CD0-40F0-4964-8B22-F95E29694080}
 		{CF645037-0F6E-43D9-A603-A15A4DBE1906} = {7E423CD0-40F0-4964-8B22-F95E29694080}
 		{06820168-947C-425E-8E5F-E768935B2CDC} = {7E423CD0-40F0-4964-8B22-F95E29694080}
-		{51B18B14-0AE6-45EE-A62E-92A199C5A73C} = {7E423CD0-40F0-4964-8B22-F95E29694080}
+		{AADCD21E-B54D-48B2-A842-6A6260847C73} = {7E423CD0-40F0-4964-8B22-F95E29694080}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2FF59CE-8753-4D7E-A4FD-172D29AD4496}
