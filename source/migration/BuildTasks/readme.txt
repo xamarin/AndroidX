@@ -2,9 +2,9 @@ Xamarin AndroidX Migration
 ==========================
 
 If you are looking for the source code to the _Xamarin AndroidX bindings_,
-it is available in the "AndroidX" branch:
+it is available in the "AndroidX" repo:
 
-    https://github.com/xamarin/AndroidSupportComponents/tree/AndroidX
+    https://github.com/xamarin/AndroidX/
 
 The Migration package helps apps which are transitioning to AndroidX but haven't
 yet updated their own source code to the new AndroidX API's, or still depend on
