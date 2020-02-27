@@ -1,10 +1,10 @@
 // Tools needed by cake addins
-#tool nuget:?package=vswhere&version=2.7.1
+#tool nuget:?package=vswhere&version=2.8.4
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=3.2.0
-#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
+#addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=CsvHelper&version=12.2.1
 
 using System.Text.RegularExpressions;
@@ -16,7 +16,6 @@ using CsvHelper;
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
-var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
 var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
 
 // Lists all the artifacts and their versions for com.android.support.*
@@ -33,13 +32,16 @@ var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
 
+
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
-var ANDROID_SDK_VERSION = "v9.0";
+var ANDROID_SDK_VERSION = "v10.0";
+string AndroidSdkBuildTools = $"29.0.2";
+
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
-		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+		var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 		XAMARIN_ANDROID_PATH = vsInstallPath.Combine("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid").FullPath;
 	} else {
 		if (DirectoryExists("/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid"))
@@ -61,12 +63,27 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin.androidx.migration.tool"
 };
 
+string[] Configs = new []
+{
+	"Debug",
+	"Release"
+};
+
+
+string JAVA_HOME = EnvironmentVariable ("JAVA_HOME") ?? Argument ("java_home", "");
+string ANDROID_HOME = EnvironmentVariable ("ANDROID_HOME") ?? Argument ("android_home", "");
+string ANDROID_SDK_ROOT = EnvironmentVariable ("ANDROID_SDK_ROOT") ?? Argument ("android_sdk_root", "");
+
 // Log some variables
-Information ("XAMARIN_ANDROID_PATH: {0}", XAMARIN_ANDROID_PATH);
-Information ("ANDROID_SDK_VERSION:  {0}", ANDROID_SDK_VERSION);
-Information ("BUILD_COMMIT:         {0}", BUILD_COMMIT);
-Information ("BUILD_NUMBER:         {0}", BUILD_NUMBER);
-Information ("BUILD_TIMESTAMP:      {0}", BUILD_TIMESTAMP);
+Information ($"JAVA_HOME            : {JAVA_HOME}");
+Information ($"ANDROID_HOME         : {ANDROID_HOME}");
+Information ($"ANDROID_SDK_ROOT     : {ANDROID_SDK_ROOT}");
+Information ($"XAMARIN_ANDROID_PATH : {XAMARIN_ANDROID_PATH}");
+Information ($"ANDROID_SDK_VERSION  : {ANDROID_SDK_VERSION}");
+Information ($"BUILD_COMMIT         : {BUILD_COMMIT}");
+Information ($"BUILD_NUMBER         : {BUILD_NUMBER}");
+Information ($"BUILD_TIMESTAMP      : {BUILD_TIMESTAMP}");
+
 
 // You shouldn't have to configure anything below here
 // ######################################################
@@ -203,6 +220,7 @@ Task("javadocs")
 });
 
 Task ("binderate")
+	.IsDependentOn("binderate-config-verify")
 	.Does (() =>
 {
 	var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
@@ -221,97 +239,286 @@ Task ("binderate")
 	}
 });
 
+string version_suffix = "";
+string nuget_version_template = $"x.y.z{version_suffix}";
+JArray binderator_json_array = null;
+
+Task("binderate-config-verify")
+	.Does
+	(
+		() =>
+		{
+			using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+			{
+				JsonTextReader jtr = new JsonTextReader(reader);
+				binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+			}
+
+			Information("config.json verification...");
+			foreach(JObject jo in binderator_json_array[0]["artifacts"])
+			{
+				bool? dependency_only = (bool?) jo["dependencyOnly"];
+				if ( dependency_only == true)
+				{
+					continue;
+				}
+				string version        = (string) jo["version"];
+				string nuget_version  = (string) jo["nugetVersion"];
+
+				Information($"groupId       = {jo["groupId"]}");
+				Information($"artifactId    = {jo["artifactId"]}");
+				Information($"version       = {version}");
+				Information($"nuget_version = {nuget_version}");
+				Information($"nugetId       = {jo["nugetId"]}");
+
+				string[] version_parts = version.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
+				string x = version_parts[0];
+				string y = version_parts[1];
+				string z = version_parts[2];
+
+				string nuget_version_new = nuget_version_template;
+				nuget_version_new = nuget_version_new.Replace("x", x);
+				nuget_version_new = nuget_version_new.Replace("y", y);
+				nuget_version_new = nuget_version_new.Replace("z", z);
+
+				if( string.IsNullOrEmpty(version_suffix) && ! nuget_version.StartsWith(nuget_version_new) )
+				{
+					Error("check config.json for nuget id");
+					Error  ($"		groupId           = {jo["groupId"]}");
+					Error  ($"		artifactId        = {jo["artifactId"]}");
+					Error  ($"		version           = {version}");
+					Error  ($"		nuget_version     = {nuget_version}");
+					Error  ($"		nuget_version_new = {nuget_version_new}");
+					Error  ($"		nugetId           = {jo["nugetId"]}");
+					
+					Warning($"	expected : ");
+					Warning($"		nuget_version = {nuget_version_new}");
+					throw new Exception("check config.json for nuget id");
+				}
+			}
+
+			return;
+		}
+	);
+
+System.Xml.XmlDocument xmldoc = null;
+System.Xml.XmlNamespaceManager ns = null;
+
+Task("metadata-verify")
+	.Does
+	(
+		() =>
+		{
+			FilePathCollection metadata_files = null;
+
+			//  namespace is required, otherwise NRE
+			string xml_namespace_name = "ax"; // could be "apixml" but it is irrelevant, keeping it short
+
+			string xpath_expression_nodes_to_find = 
+						//$@"//attr[contains(@path,'interface') and contains(@name ,'visibility')]"
+						$@"//attr[contains(@path,'interface')]"
+						;
+
+			metadata_files = GetFiles($"./generated/**/Metadata*.xml");
+			foreach(FilePath fp in metadata_files)
+			{
+				Information($"Metadata = {fp}");
+				throw new Exception("Move this file to source");
+			}
+			metadata_files = GetFiles($"./source/**/Metadata*.xml");
+			foreach(FilePath fp in metadata_files)
+			{
+				Information($"Metadata = {fp}");
+				xmldoc = new System.Xml.XmlDocument();
+				xmldoc.Load(fp.ToString());
+				ns = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
+
+				List<(string Path, bool IsPublic)> result = GetXmlMetadata(xpath_expression_nodes_to_find, ns).ToList();
+				foreach((string Path, bool IsPublic) r in result)
+				{
+					Information($"		Found:");
+					Information($"			Path: {r.Path}");
+					Information($"			IsPublic: {r.IsPublic}");
+					if (r.IsPublic)
+					{
+						throw new Exception("Do not expose interfaces as public");
+					}
+				}
+			}
+		}
+	);
+
+private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, System.Xml.XmlNamespaceManager xml_namespace)
+{
+	System.Xml.XmlNodeList node_list = xmldoc.SelectNodes(xpath, xml_namespace);
+
+	foreach (System.Xml.XmlNode node in node_list)
+	{
+		string name = node.Attributes["name"].Value;
+		string inner_text = node.InnerText;	//.Value;
+		string path = node.Attributes["path"].Value;
+
+		Information($"	path        = {path}");
+
+		if (path.Contains("MediaRouteProvider.DynamicGroupRouteController"))
+		{
+			Information($"		Found:");
+			Information($"			Name: {name}");
+			Information($"			Visibility: {inner_text}");
+			throw new Exception("MediaRouteProvider.DynamicGroupRouteController");
+		}
+		
+		if (string.Equals(name, "visibility") && inner_text.Contains("public"))
+		{
+			Information($"		Visibility  = {inner_text}");
+
+			bool is_public = inner_text.Contains("public") ? true : false;
+
+			yield return (Path: path, IsPublic: is_public);
+		}	
+	}
+}
+
+
+
 Task("libs")
+	.IsDependentOn("metadata-verify")
 	.Does(() =>
 {
-	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) {
-		var restoreSettings = new MSBuildSettings()
-			.SetConfiguration(CONFIGURATION)
-			.SetVerbosity(VERBOSITY)
-			.SetMaxCpuCount(0)
-			.EnableBinaryLogger("./output/restore.binlog")
-			.WithProperty("DesignTimeBuild", "false")
-			.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3")
-			.WithTarget("Restore");
+	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) 
+	{
+		foreach(string config in Configs)
+		{
+			var restoreSettings = new MSBuildSettings()
+				.SetConfiguration(config)
+				.SetVerbosity(VERBOSITY)
+				.SetMaxCpuCount(0)
+				.EnableBinaryLogger("./output/restore.binlog")
+				.WithProperty("DesignTimeBuild", "false")
+				.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
+				.WithTarget("Restore");
+			
+			if (! string.IsNullOrEmpty(ANDROID_HOME))
+			{
+				restoreSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+			}
 
-		foreach (var csproj in GetFiles("./generated/**/*.csproj")) {
-			MSBuild(csproj, restoreSettings);
+			foreach (var csproj in GetFiles("./generated/**/*.csproj")) {
+				MSBuild(csproj, restoreSettings);
+			}
 		}
 	}
 
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/libs.binlog")
-		.WithRestore()
-		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/libs.binlog")
+			.WithRestore()
+			.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+			.WithProperty("DesignTimeBuild", "false")
+			.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
-	MSBuild("./generated/AndroidX.sln", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+
+		MSBuild("./generated/AndroidX.sln", settings);
+	}
 });
 
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/nuget.binlog")
-		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-		.WithProperty("NoBuild", "true")
-		.WithProperty("PackageRequireLicenseAcceptance", "true")
-		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
-		.WithTarget("Pack");
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/nuget.binlog")
+			.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+			.WithProperty("NoBuild", "true")
+			.WithProperty("PackageRequireLicenseAcceptance", "true")
+			.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
+			.WithTarget("Pack");
 
-	MSBuild("./generated/AndroidX.sln", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+
+		MSBuild("./generated/AndroidX.sln", settings);
+	}
 });
+
+Task("samples-generate-all-targets")
+	.Does
+	(
+		() =>
+		{
+			// make a big .targets file that pulls in everything
+			var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+			var itemGroup = new XElement(xmlns + "ItemGroup");
+			foreach (var nupkg in GetFiles("./output/*.nupkg")) 
+			{
+				Information($"NuGet package = {nupkg}");
+				// Skip Wear as it has special implications requiring more packages to be used properly in an app
+				if (nupkg.FullPath.Contains(".Wear."))
+					continue;
+				// Skip the migration packages as that is not meant forto be used here
+				if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
+					continue;
+				var filename = nupkg.GetFilenameWithoutExtension();
+				var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+				itemGroup.Add(new XElement(xmlns + "PackageReference",
+					new XAttribute("Include", match.Groups[1]),
+					new XAttribute("Version", match.Groups[2])));
+			}
+			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+			xdoc.Save("./output/AllPackages.targets");
+
+			return;
+		}
+	);
 
 Task("samples")
 	.IsDependentOn("nuget")
+	.IsDependentOn("samples-generate-all-targets")
+	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
 	// TODO: make this actually work with more than just this sample
-
-	// make a big .targets file that pulls in everything
-	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-	var itemGroup = new XElement(xmlns + "ItemGroup");
-	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
-		// Skip Wear as it has special implications requiring more packages to be used properly in an app
-		if (nupkg.FullPath.Contains(".Wear."))
-			continue;
-		// Skip the migration packages as that is not meant forto be used here
-		if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
-			continue;
-		var filename = nupkg.GetFilenameWithoutExtension();
-		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-		itemGroup.Add(new XElement(xmlns + "PackageReference",
-			new XAttribute("Include", match.Groups[1]),
-			new XAttribute("Version", match.Groups[2])));
-	}
-	var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
-	xdoc.Save("./output/AllPackages.targets");
 
 	// clear the packages folder so we always use the latest
 	var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
 	EnsureDirectoryExists(packagesPath);
 	CleanDirectories(packagesPath);
 
-	// build the samples
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/samples.binlog")
-		.WithRestore()
-		.WithProperty("RestorePackagesPath", packagesPath)
-		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", "28.0.3");
+	foreach(string config in Configs)
+	{
+		// build the samples
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/samples.binlog")
+			.WithRestore()
+			.WithProperty("RestorePackagesPath", packagesPath)
+			.WithProperty("DesignTimeBuild", "false")
+			.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
-	MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+
+		MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+	}
 });
 
 // Migration Preparation
@@ -432,6 +639,7 @@ Task("generate-mapping")
 		xprops.Save(xmlWriter);
 	}
 	FileAppendText(propsPath, "\n");
+	CopyFileToDirectory(propsPath, "./output/mappings/");
 });
 
 Task ("merge")
@@ -439,7 +647,7 @@ Task ("merge")
 	.Does (() =>
 {
 	// find all the dlls
-	var allDlls = GetFiles($"./generated/*/bin/{CONFIGURATION}/monoandroid*/Xamarin.*.dll");
+	var allDlls = GetFiles($"./generated/*/bin/Release/monoandroid*/Xamarin.*.dll");
 	var mergeDlls = allDlls
 		.GroupBy(d => d.GetFilename().FullPath)
 		.Where(g => !g.Key.Contains("Xamarin.AndroidX.Migration"))
@@ -493,36 +701,55 @@ Task("migration-libs")
 	.IsDependentOn("migration-externals")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-libs.binlog")
-		.WithRestore()
-		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-libs.binlog")
+			.WithRestore()
+			.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
 
-	MSBuild("./source/migration/Xamarin.AndroidX.Migration.sln", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+
+		MSBuild("./source/migration/Xamarin.AndroidX.Migration.sln", settings);
+	}
 });
 
 Task("migration-nuget")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-nuget.binlog")
-		.WithProperty("NoBuild", "true")
-		.WithRestore()
-		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
-		.WithProperty("MultiDexVersion", MULTIDEX_PACKAGE_VERSION)
-		.WithProperty("PackageRequireLicenseAcceptance", "true")
-		.WithProperty("PackageOutputPath", MakeAbsolute((DirectoryPath)"./output/").FullPath)
-		.WithTarget("Pack");
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-nuget.binlog")
+			.WithProperty("NoBuild", "true")
+			.WithRestore()
+			.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
+			.WithProperty("MultiDexVersion", MULTIDEX_PACKAGE_VERSION)
+			.WithProperty("PackageRequireLicenseAcceptance", "true")
+			.WithProperty("PackageOutputPath", MakeAbsolute((DirectoryPath)"./output/").FullPath)
+			.WithTarget("Pack");
 
-	MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
-	MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+
+		MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
+
+		settings.EnableBinaryLogger("./output/migration-tool-nuget.binlog");
+
+		MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
+	}
 });
 
 // Migration Tests
@@ -574,28 +801,36 @@ Task("migration-tests")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	// build
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-tests.binlog")
-		.WithRestore();
-	MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+	foreach(string config in Configs)
+	{
+		// build
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-tests.binlog")
+			.WithRestore();
 
-	// test
-	DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
-		Configuration = CONFIGURATION,
-		NoBuild = true,
-		Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
-		WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
-		ResultsDirectory = "./output/test-results/",
-	});
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+		
+		MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+
+		// test
+		DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+			Configuration = config,
+			NoBuild = true,
+			Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
+			WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
+			ResultsDirectory = "./output/test-results/",
+		});
+	}
 });
 
 
 var TF_MONIKER = "monoandroid90";
-var BUILD_CONFIG = Argument ("config", "Release");
 string SUPPORT_MERGED_DLL = "./output/AndroidSupport.Merged.dll";
 string ANDROIDX_MERGED_DLL = "./output/AndroidX.Merged.dll";
 string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/XamarinAndroidXMigration/master/mappings/androidx-mapping.csv";
@@ -607,7 +842,7 @@ string API_INFO_NEW = "./output/AndroidX.Merged.api-info.xml";
 
 var MONODROID_BASE_PATH = (DirectoryPath)"/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xbuild-frameworks/MonoAndroid/";
 if (IsRunningOnWindows ()) {
-	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin" });
+	var vsInstallPath = VSWhereLatest (new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
 	MONODROID_BASE_PATH = vsInstallPath.Combine ("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid/");
 }
 var MONODROID_PATH = MONODROID_BASE_PATH.Combine(ANDROID_SDK_VERSION);
@@ -642,7 +877,6 @@ Task("api-info-migrate")
 			// lines_api_info.ToList()
 			//                .ForEach( x => { Console.WriteLine(x); } );
 			List<string> lines_api_info_migrated =  new List<string>();
-			int i = 0;
 			foreach(string l in lines_api_info)
 			{
 				string line_new = null;
@@ -676,7 +910,7 @@ Task("merge-fresh")
 	(
 		() =>
 		{
-			var allDlls = GetFiles ($"./generated/*/bin/{BUILD_CONFIG}/{TF_MONIKER}/Xamarin.AndroidX.*.dll");
+			var allDlls = GetFiles ($"./generated/*/bin/Release/{TF_MONIKER}/Xamarin.AndroidX.*.dll");
 			var mergeDlls = allDlls
 								.GroupBy(d => new FileInfo(d.FullPath).Name)
 								.Select(g => g.FirstOrDefault())
@@ -727,9 +961,11 @@ Task("api-diff")
 
 			MonoApiHtmlColorized(API_INFO_OLD_MIGRATED, API_INFO_NEW, "./output/api-info-diff.html");
 			string[] lines_html = FileReadLines("./output/api-info-diff.html");
+
 			List<string> lines_html_new = new List<string>();
-			List<string> removed_types = new List<string>();
-			List<string> new_types = new List<string>();
+			List<(string Class, string ClassFullyQualified)> removed_types = new List<(string Class, string ClassFullyQualified)>();
+			List<(string Class, string ClassFullyQualified)> new_types = new List<(string Class, string ClassFullyQualified)>();
+
 			foreach(string line in lines_html)
 			{
 				if (line.Contains(@"Java.Interop.IJavaPeerable"))
@@ -738,27 +974,67 @@ Task("api-diff")
 				}
 				if (line.Contains("<h3>Removed Type <span class='breaking' data-is-breaking>"))
 				{
-					string type = line.Replace("<h3>Removed Type <span class='breaking' data-is-breaking>", "");
-					type = type.Replace("</span></h3>",",");
-					type = Regex.Replace(type, ",</div> <!-- (.*?) -->", "");
-					type = Regex.Replace(type, ",<div> <!-- (.*?) -->", "");
-					string[] types = type.Split( new string[] { "," }, StringSplitOptions.RemoveEmptyEntries );
-					removed_types.AddRange(types); 
+					string t = line.Replace("<h3>Removed Type <span class='breaking' data-is-breaking>", "");
+					t = t.Replace("</span></h3>",",");
+					t = Regex.Replace(t, ",</div> <!-- (.*?) -->", "");
+					t = Regex.Replace(t, ",<div> <!-- (.*?) -->", "");
+					string[] types = t.Split( new string[] { "," }, StringSplitOptions.RemoveEmptyEntries );
+					foreach(string t1 in types)
+					{
+						string c  = t1.Substring(t1.LastIndexOf(".") + 1);
+						removed_types.Add((Class: c, ClassFullyQualified: t1)); 
+					}
 				}
 				if (line.Contains("<h3>New Type "))
 				{
-					string type = line.Replace("<h3>New Type ", "");
-					type = type.Replace("</h3>", "");
-					Information($"{type}");
-					new_types.Add(type);
+					string t = line.Replace("<h3>New Type ", "");
+					t = t.Replace("</h3>", "");
+					Information($"{t}");
+					string c  = t.Substring(t.LastIndexOf(".") + 1);
+					new_types.Add((Class: c, ClassFullyQualified:t)); 
 				}
 				lines_html_new.Add(line);
 			}
 
-
 			FileWriteLines("./output/api-info-diff.cleaned.html", lines_html_new.ToArray());
-			FileWriteLines("./output/removed-types.txt", removed_types.ToArray());
-			FileWriteLines("./output/new-types.txt", new_types.ToArray());
+			FileWriteLines("./output/removed-types.csv", removed_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+			FileWriteLines("./output/new-types.csv", new_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+
+			List<int> indices_new = new List<int>();
+			List<int> indices_removed = new List<int>();
+			List<string> moved_types = new List<string>();
+			moved_types.Add($"# Class,ClassFullyQualified Removed, ClassFullyQualified New");
+
+			for( int idx1 = 0; idx1 < removed_types.Count; idx1++)
+			{
+				(string Class, string ClassFullyQualified) tr = removed_types[idx1];
+				int idx2 = new_types.FindIndex(tn => tn.Class == tr.Class);
+				if (idx2 < 0)
+				{
+					continue;
+				}
+				indices_removed.Add(idx1);
+				indices_new.Add(idx2);
+				string c = removed_types[idx1].Class;
+				string cr_fq = removed_types[idx1].ClassFullyQualified;
+				string cn_fq = new_types[idx2].ClassFullyQualified;
+				moved_types.Add($"{c},{cr_fq},{cn_fq}");
+			}
+			
+			var indices_new_sorted = indices_new.OrderByDescending(t => t);
+			for (int i = 0; i < indices_new_sorted.Count(); i++)
+			{
+				new_types.RemoveAt(indices_new_sorted.ElementAt(i));
+			}
+			var indices_removed_sorted = indices_removed.OrderByDescending(t => t);
+			for (int i = 0; i < indices_removed_sorted.Count(); i++)
+			{
+				removed_types.RemoveAt(indices_removed_sorted.ElementAt(i));
+			}
+
+			FileWriteLines("./output/removed-types.final.csv", removed_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+			FileWriteLines("./output/new-types.final.csv", new_types.Select(i => $"{i.Class},{i.ClassFullyQualified}").ToArray());
+			FileWriteLines("./output/moved-types.final.csv", moved_types.ToArray());
 
 			return;
 		}
@@ -793,10 +1069,10 @@ Task ("clean")
 	.Does (() =>
 {
 	if (DirectoryExists ("./externals"))
-		DeleteDirectory ("./externals", true);
+		DeleteDirectory ("./externals", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	if (DirectoryExists ("./generated"))
-		DeleteDirectory ("./generated", true);
+		DeleteDirectory ("./generated", new DeleteDirectorySettings { Recursive = true, Force = true });
 
 	CleanDirectories ("./**/packages");
 });

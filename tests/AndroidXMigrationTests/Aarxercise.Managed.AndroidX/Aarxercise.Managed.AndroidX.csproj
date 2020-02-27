@@ -15,7 +15,7 @@
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <!--
     <AndroidUseAapt2>True</AndroidUseAapt2>
     -->
@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.0.2-preview02" />
-    <PackageReference Include="Xamarin.AndroidX.Media" Version="1.0.1-preview02" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0-rc1" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI" Version="1.0.0-rc1" />
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0-rc1" />
+    <PackageReference Include="Xamarin.AndroidX.Media" Version="1.1.0-rc1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ManagedAarxerciser.cs" />

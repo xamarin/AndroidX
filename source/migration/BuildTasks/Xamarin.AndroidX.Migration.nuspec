@@ -17,7 +17,7 @@ This package provides a set of tools and MSBuild tasks to aid in the migration f
     <tags>Xamarin.AndroidX Xamarin Android Support AndroidX Migration</tags>
 
     <!-- legal -->
-    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=2099438</licenseUrl>
+    <license type="file">LICENSE.md</license>
     <authors>Microsoft</authors>
     <owners>Microsoft</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -38,12 +38,19 @@ This package provides a set of tools and MSBuild tasks to aid in the migration f
     <file src="bin\Release\netstandard2.0\ILRepack.dll" target="build\monoandroid90" />
     <file src="Xamarin.AndroidX.Migration.props" target="build\monoandroid90" />
     <file src="Xamarin.AndroidX.Migration.targets" target="build\monoandroid90" />
+    
+    <file src="bin\Release\netstandard2.0\Tools\**\*" target="buildTransitive\monoandroid90\Tools" />
+    <file src="bin\Release\netstandard2.0\Mono.*.dll" target="buildTransitive\monoandroid90" />
+    <file src="bin\Release\netstandard2.0\Xamarin.*.dll" target="buildTransitive\monoandroid90" />
+    <file src="bin\Release\netstandard2.0\ILRepack.dll" target="buildTransitive\monoandroid90" />
+    <file src="Xamarin.AndroidX.Migration.props" target="buildTransitive\monoandroid90" />
+    <file src="Xamarin.AndroidX.Migration.targets" target="buildTransitive\monoandroid90" />
 
     <file src="_._" target="lib\monoandroid90\_._" />
 
     <file src="readme.txt" target="readme.txt" />
 
-    <file src="..\..\..\LICENSE" target="LICENSE" />
+    <file src="..\..\..\LICENSE.md" target="LICENSE.md" />
     <file src="..\..\..\External-Dependency-Info.txt" target="THIRD-PARTY-NOTICES.txt" />
 
   </files>

@@ -100,7 +100,7 @@
 			"artifactId" : "browser",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Browser",
-			"nugetVersion" : "1.1.0",
+			"nugetVersion" : "1.0.0",
 			"dependencyOnly" : false
 		}
 		,{
@@ -620,7 +620,7 @@
 			"artifactId" : "slidingpanelayout",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.SlidingPaneLayout",
-			"nugetVersion" : "1.1.0",
+			"nugetVersion" : "1.0.0",
 			"dependencyOnly" : false
 		}
 		,{
@@ -660,7 +660,7 @@
 			"artifactId" : "tvprovider",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.TvProvider",
-			"nugetVersion" : "1.1.0",
+			"nugetVersion" : "1.0.0",
 			"dependencyOnly" : false
 		}
 		,{
@@ -708,7 +708,7 @@
 			"artifactId" : "wear",
 			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.Wear",
-			"nugetVersion" : "1.1.0",
+			"nugetVersion" : "1.0.0",
 			"dependencyOnly" : false
 		}
 		,{
@@ -730,9 +730,9 @@
 		,{
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
-			"version" : "1.0.0",
+			"version" : "1.1.0",
 			"nugetId" : "Xamarin.Google.Android.Material",
-			"nugetVersion" : "1.1.0",
+			"nugetVersion" : "1.1.0-rc2",
 			"dependencyOnly" : false
 		},
 
@@ -741,7 +741,7 @@
 			"artifactId" : "guava",
 			"version" : "27.1.0",
 			"nugetId" : "Xamarin.Google.Guava",
-			"nugetVersion" : "27.1.0.2",
+			"nugetVersion" : "27.1.0.3",
 			"dependencyOnly" : true
 		},
 		{
@@ -749,7 +749,7 @@
 			"artifactId" : "failureaccess",
 			"version" : "1.0.1",
 			"nugetId" : "Xamarin.Google.Guava.FailureAccess",
-			"nugetVersion" : "1.0.1.1",
+			"nugetVersion" : "1.0.1.2",
 			"dependencyOnly" : true
 		},
 		{
@@ -757,7 +757,7 @@
 			"artifactId" : "listenablefuture",
 			"version" : "1.0",
 			"nugetId" : "Xamarin.Google.Guava.ListenableFuture",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"dependencyOnly" : true
 		},
 		{

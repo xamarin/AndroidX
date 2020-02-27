@@ -1,4 +1,5 @@
-﻿<metadata>
+﻿<<<<<<< .mine
+<metadata>
     <!--
     <attr 
         path="/api/package[@name='package']" 
@@ -20,4 +21,28 @@
         AndroidX.ViewPager2.Widget
     </attr>
 
+=======
+<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.viewpager2.adapter']" 
+        name="managedName"
+        >
+        AndroidX.ViewPager2.Adapter
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.viewpager2.widget']" 
+        name="managedName"
+        >
+        AndroidX.ViewPager2.Widget
+    </attr>
+
+>>>>>>> .theirs
 </metadata>

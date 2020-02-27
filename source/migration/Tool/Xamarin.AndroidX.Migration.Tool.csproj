@@ -18,7 +18,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2099353</PackageProjectUrl>
     <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
     <PackageTags>Xamarin.AndroidX Xamarin Android Support AndroidX Migration</PackageTags>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=2099438</PackageLicenseUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -28,14 +28,18 @@
   <ItemGroup>
     <PackageReference Include="Mono.ApiTools" Version="5.14.0.2" />
     <PackageReference Include="Mono.Cecil" Version="0.11.1" />
-    <PackageReference Include="Mono.Options" Version="5.3.0.1" />
+    <PackageReference Include="Mono.Options" Version="6.6.0.161" />
     <PackageReference Include="Mono.Posix.NETStandard" Version="1.0.0" />
-    <PackageReference Include="NuGet.Packaging" Version="5.2.0" />
+    <PackageReference Include="NuGet.Packaging" Version="5.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\externals\java.interop\java.interop\src\Xamarin.Android.Tools.Bytecode\Xamarin.Android.Tools.Bytecode.csproj" />
     <ProjectReference Include="..\Migration\Xamarin.AndroidX.Migration.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
   </ItemGroup>
 
 </Project>

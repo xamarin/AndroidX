@@ -37,6 +37,8 @@ namespace Xamarin.AndroidX.Migration
 
 		public bool SkipEmbeddedResources { get; set; }
 
+		public List<string> References { get; set; }
+
 		public bool RenameTypes { get; set; }
 
 		public string JavaPath { get; set; } = "java";
@@ -65,30 +67,47 @@ namespace Xamarin.AndroidX.Migration
 			if (!File.Exists(source))
 				throw new FileNotFoundException($"Source assembly does not exist: '{source}'.", source);
 
-			var pdbPath = Path.ChangeExtension(source, "pdb");
-			var destPdbPath = Path.ChangeExtension(destination, "pdb");
-			var tempDllPath = Path.ChangeExtension(destination, "temp.dll");
-			var tempPdbPath = Path.ChangeExtension(destination, "temp.pdb");
+			var pdbPath = Path.ChangeExtension(destination, "pdb");
+			var mdbPath = destination + ".mdb";
 
-			var hasPdb = File.Exists(pdbPath);
-			var result = CecilMigrationResult.Skipped;
-
-			using (var resolver = new DefaultAssemblyResolver())
+			// copy the files to the dest to start off
+			if (CopyFile(source, destination))
 			{
-				resolver.AddSearchDirectory(Path.GetDirectoryName(source));
+				LogVerboseMessage($"Copying source assembly '{source}' to '{destination}'.");
+
+				CopyFile(Path.ChangeExtension(source, "pdb"), pdbPath);
+				CopyFile(source + ".mdb", mdbPath);
+			}
+
+			var hasSymbols = File.Exists(pdbPath) || File.Exists(mdbPath);
+
+			// start the migration
+			var result = CecilMigrationResult.Skipped;
+			var requiresSave = false;
+			using (var resolver = new AssemblyResolver())
+			{
+				if (References?.Count > 0)
+				{
+					var refs = References
+						.Where(r => Path.GetFileName(r) != Path.GetFileName(destination))
+						.ToList();
+					foreach (var reference in refs)
+					{
+						resolver.AddAssembly(reference);
+					}
+				}
+
 				var readerParams = new ReaderParameters
 				{
-					ReadSymbols = hasPdb,
+					ReadSymbols = hasSymbols,
+					ReadWrite = true,
 					AssemblyResolver = resolver,
 				};
 
-				var requiresSave = false;
-
-				using (var assembly = AssemblyDefinition.ReadAssembly(source, readerParams))
+				LogVerboseMessage($"Processing assembly '{source}'...");
+				using (var assembly = AssemblyDefinition.ReadAssembly(destination, readerParams))
 				{
-					LogVerboseMessage($"Processing assembly '{source}'...");
-
-					if (!hasPdb)
+					if (!hasSymbols)
 						LogVerboseMessage($"  No debug symbols found for the assembly.");
 
 					result = MigrateAssembly(assembly);
@@ -98,64 +117,28 @@ namespace Xamarin.AndroidX.Migration
 						result.HasFlag(CecilMigrationResult.ContainedJni) ||
 						result.HasFlag(CecilMigrationResult.ContainedJavaArtifacts);
 
-					var dir = Path.GetDirectoryName(destination);
-					if (!string.IsNullOrWhiteSpace(dir) && !Directory.Exists(dir))
-						Directory.CreateDirectory(dir);
-
 					if (requiresSave)
 					{
-						Stream symbolStream = null;
-						ISymbolWriterProvider symbolWriter = null;
-						if (hasPdb)
+						assembly.Write(new WriterParameters
 						{
-							symbolStream = File.Create(tempPdbPath);
-							symbolWriter = new PortablePdbWriterProvider();
-						}
-
-						try
-						{
-							assembly.Write(tempDllPath, new WriterParameters
-							{
-								WriteSymbols = hasPdb,
-								SymbolStream = symbolStream,
-								SymbolWriterProvider = symbolWriter
-							});
-						}
-						finally
-						{
-							symbolStream?.Dispose();
-						}
+							WriteSymbols = hasSymbols,
+							SymbolWriterProvider = hasSymbols ? new PortablePdbWriterProvider() : null,
+						});
 
 						LogMessage($"Migrated assembly to '{destination}'.");
 					}
 					else
 					{
 						LogVerboseMessage($"Skipped assembly '{source}' due to lack of support types.");
-
-						if (!source.Equals(destination, StringComparison.OrdinalIgnoreCase))
-						{
-							LogVerboseMessage($"Copying source assembly '{source}' to '{destination}'.");
-
-							File.Copy(source, destination, true);
-							if (hasPdb)
-								File.Copy(pdbPath, destPdbPath, true);
-						}
 					}
 				}
+			}
 
-				if (requiresSave)
-				{
-					if (File.Exists(tempDllPath))
-					{
-						File.Copy(tempDllPath, destination, true);
-						File.Delete(tempDllPath);
-					}
-					if (File.Exists(tempPdbPath))
-					{
-						File.Copy(tempPdbPath, destPdbPath, true);
-						File.Delete(tempPdbPath);
-					}
-				}
+			if (requiresSave)
+			{
+				// remove .dll.mdb as that is not supported
+				if (File.Exists(mdbPath))
+					File.Delete(mdbPath);
 			}
 
 			return result;
@@ -577,6 +560,36 @@ namespace Xamarin.AndroidX.Migration
 				{
 					return null;
 				}
+			}
+		}
+
+		private bool CopyFile(string src, string dst)
+		{
+			if (!File.Exists(src))
+				return false;
+
+			src = Path.GetFullPath(src);
+			dst = Path.GetFullPath(dst);
+			if (src.Equals(dst, StringComparison.OrdinalIgnoreCase))
+				return false;
+
+			var dir = Path.GetDirectoryName(dst);
+			if (!string.IsNullOrWhiteSpace(dir) && !Directory.Exists(dir))
+				Directory.CreateDirectory(dir);
+
+			File.Copy(src, dst, true);
+
+			return true;
+		}
+
+		private sealed class AssemblyResolver : DefaultAssemblyResolver
+		{
+			public void AddAssembly(string assembly)
+			{
+				RegisterAssembly(AssemblyDefinition.ReadAssembly(assembly, new ReaderParameters
+				{
+					AssemblyResolver = this,
+				}));
 			}
 		}
 	}
