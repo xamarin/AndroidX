@@ -222,4 +222,17 @@
     <attr path="/api/package[@name='androidx.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areContentsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.leanback.widget.GuidedAction'] and parameter[2][@type='androidx.leanback.widget.GuidedAction']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.leanback.widget.GuidedAction'] and parameter[2][@type='androidx.leanback.widget.GuidedAction']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.leanback.widget']/class[@name='GuidedActionDiffCallback']/method[@name='areItemsTheSame' and count(parameter)=2 and parameter[1][@type='androidx.leanback.widget.GuidedAction'] and parameter[2][@type='androidx.leanback.widget.GuidedAction']]/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    
+    <attr
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='ItemBridgeAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='GuidedActionAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
 </metadata>

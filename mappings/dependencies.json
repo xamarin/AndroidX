@@ -49,9 +49,7 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": [
-        "Xamarin.AndroidX.MultiDex"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.AppCompat",
@@ -144,6 +142,12 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.AutoFill",
+      "dependencies": [
+        "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Biometric",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -223,6 +227,7 @@
       "id": "Xamarin.AndroidX.CoordinatorLayout",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CustomView"
       ]
@@ -343,8 +348,9 @@
       "id": "Xamarin.AndroidX.RecyclerView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI"
+        "Xamarin.AndroidX.CustomView"
       ]
     },
     {
@@ -515,10 +521,6 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Migration.Tool",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -564,12 +566,14 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.CardView",
+        "Xamarin.AndroidX.CoordinatorLayout",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.RecyclerView",
-        "Xamarin.AndroidX.Transition"
+        "Xamarin.AndroidX.Transition",
+        "Xamarin.AndroidX.VectorDrawable",
+        "Xamarin.AndroidX.ViewPager2"
       ]
     },
     {
@@ -675,6 +679,16 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.ViewPager2",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Fragment",
+        "Xamarin.AndroidX.RecyclerView"
       ]
     },
     {

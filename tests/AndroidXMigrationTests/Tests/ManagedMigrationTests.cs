@@ -43,7 +43,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 		}
 
 		[Theory]
-		[InlineData(ManagedSupportDll, ManagedAndroidXDll, false)]
+		[InlineData(ManagedSupportDll, ManagedAndroidXDll, true)]
 		[InlineData(OldSupportDll, OldAndroidXDll, true)]
 		[InlineData(BindingSupportDll, BindingAndroidXDll, false)]
 		public void AssembliesHaveTheSameNumberOfTypes(string supportDll, string androidXDll, bool ignoreResourceType)
@@ -71,7 +71,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 		}
 
 		[Theory]
-		[InlineData(ManagedSupportDll, ManagedAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		[InlineData(ManagedSupportDll, ManagedAndroidXDll, true, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		[InlineData(OldSupportDll, OldAndroidXDll, true, CecilMigrationResult.ContainedSupport)]
 		[InlineData(BindingSupportDll, BindingAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		public void AssembliesHaveTheSameTypesAfterMigration(string supportDll, string androidXDll, bool ignoreResourceType, CecilMigrationResult expectedResult)
@@ -103,7 +103,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 		}
 
 		[Theory]
-		[InlineData(ManagedSupportDll, ManagedAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		[InlineData(ManagedSupportDll, ManagedAndroidXDll, true, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		[InlineData(OldSupportDll, OldAndroidXDll, true, CecilMigrationResult.ContainedSupport)]
 		[InlineData(BindingSupportDll, BindingAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		public void AllTypesHaveTheSameMembers(string supportDll, string androidXDll, bool ignoreResourceType, CecilMigrationResult expectedResult)

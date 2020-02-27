@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -29,7 +28,8 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
-    <NoWarn></NoWarn>
+    <NoWarn>
+    </NoWarn>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <PlatformTarget>anycpu</PlatformTarget>
   </PropertyGroup>
@@ -134,34 +134,34 @@
     <Reference Include="Xamarin.Android.Support.Vector.Drawable">
       <HintPath>..\..\output\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
     </Reference>
-		<Reference Include="Xamarin.Android.Arch.Core.Common">
-		  <HintPath>..\..\output\Xamarin.Android.Arch.Core.Common.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
-		  <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
-		  <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Android.Support.Emoji.AppCompat">
-		  <HintPath>..\..\output\Xamarin.Android.Support.Emoji.AppCompat.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Android.Support.Emoji.Bundled">
-		  <HintPath>..\..\output\Xamarin.Android.Support.Emoji.Bundled.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Android.Support.Emoji">
-		  <HintPath>..\..\output\Xamarin.Android.Support.Emoji.dll</HintPath>
-		</Reference>
-		<Reference Include="Xamarin.Android.Support.TV.Provider">
-		  <HintPath>..\..\output\Xamarin.Android.Support.TV.Provider.dll</HintPath>
-		</Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\..\output\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\..\output\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Emoji.AppCompat">
+      <HintPath>..\..\output\Xamarin.Android.Support.Emoji.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Emoji.Bundled">
+      <HintPath>..\..\output\Xamarin.Android.Support.Emoji.Bundled.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Emoji">
+      <HintPath>..\..\output\Xamarin.Android.Support.Emoji.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.TV.Provider">
+      <HintPath>..\..\output\Xamarin.Android.Support.TV.Provider.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="xunit.core" Version="2.3.1" />
-    <PackageReference Include="xunit.abstractions" Version="2.0.1" />
-    <PackageReference Include="xunit.assert" Version="2.3.1" />
-    <PackageReference Include="xunit.extensibility.execution" Version="2.3.1" />
-    <PackageReference Include="xunit.runner.utility" Version="2.3.1" />
+    <PackageReference Include="xunit.core" Version="2.4.1" />
+    <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+    <PackageReference Include="xunit.assert" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.execution" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.utility" Version="2.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

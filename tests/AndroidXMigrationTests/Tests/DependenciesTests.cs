@@ -295,6 +295,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.VectorDrawable.Animated",
 				"Xamarin.AndroidX.VersionedParcelable",
 				"Xamarin.AndroidX.ViewPager",
+				"Xamarin.AndroidX.ViewPager2",
 				"Xamarin.Google.Android.Material",
 			};
 
