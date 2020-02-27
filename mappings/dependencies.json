@@ -49,9 +49,7 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": [
-        "Xamarin.AndroidX.MultiDex"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.AppCompat",
@@ -165,7 +163,8 @@
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Interpolator",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI"
+        "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -192,6 +191,10 @@
       ]
     },
     {
+      "id": "Xamarin.Google.Guava.ListenableFuture",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.CardView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -203,10 +206,6 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
-    },
-    {
-      "id": "Xamarin.Google.Guava.ListenableFuture",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.ConstraintLayout",
@@ -523,10 +522,6 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Migration.Tool",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -572,12 +567,16 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.CardView",
+        "Xamarin.AndroidX.CoordinatorLayout",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.RecyclerView",
-        "Xamarin.AndroidX.Transition"
+        "Xamarin.AndroidX.Transition",
+        "Xamarin.AndroidX.CoordinatorLayout",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.VectorDrawable",
+        "Xamarin.AndroidX.ViewPager2"
       ]
     },
     {
