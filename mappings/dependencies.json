@@ -160,34 +160,8 @@
       "id": "Xamarin.AndroidX.Browser",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Interpolator",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI",
         "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Interpolator",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Legacy.Support.Core.UI",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AsyncLayoutInflater",
-        "Xamarin.AndroidX.CoordinatorLayout",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.CursorAdapter",
-        "Xamarin.AndroidX.CustomView",
-        "Xamarin.AndroidX.DrawerLayout",
-        "Xamarin.AndroidX.Interpolator",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-        "Xamarin.AndroidX.SlidingPaneLayout",
-        "Xamarin.AndroidX.SwipeRefreshLayout",
-        "Xamarin.AndroidX.ViewPager"
       ]
     },
     {
@@ -323,7 +297,30 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Legacy.Support.Core.UI",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.AsyncLayoutInflater",
+        "Xamarin.AndroidX.CoordinatorLayout",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.CursorAdapter",
+        "Xamarin.AndroidX.CustomView",
+        "Xamarin.AndroidX.DrawerLayout",
+        "Xamarin.AndroidX.Interpolator",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.SlidingPaneLayout",
+        "Xamarin.AndroidX.SwipeRefreshLayout",
+        "Xamarin.AndroidX.ViewPager"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.HeifWriter",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Interpolator",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
       ]
@@ -573,8 +570,6 @@
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Transition",
-        "Xamarin.AndroidX.CoordinatorLayout",
-        "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.VectorDrawable",
         "Xamarin.AndroidX.ViewPager2"
       ]
