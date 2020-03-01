@@ -572,7 +572,18 @@ Task("generate-mapping")
 	var csv = new CsvReader(csvReader);
 	var records = csv.GetRecords<dynamic>()
 		.Cast<IDictionary<string, object>>()
-		.Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")
+		.Select(r => 
+					{
+						if( ((IDictionary<String, object>)r).ContainsKey("Support .NET assembly"))
+						{
+							return $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}";
+						}
+						else
+						{
+							throw new Exception("Not found - column name: Support .NET assembly");
+						}
+					}
+				)
 		.Union(new [] {
 			"Xamarin.Android.Support.v4|Xamarin.AndroidX.Legacy.Support.V4",
 			"Xamarin.Android.Support.MultiDex|Xamarin.AndroidX.MultiDex",
