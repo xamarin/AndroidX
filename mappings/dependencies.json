@@ -49,7 +49,9 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.AppCompat",
@@ -518,6 +520,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
