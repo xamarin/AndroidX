@@ -1091,7 +1091,7 @@ Task ("ci")
 	.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
-	.IsDependentOn ("generate-mapping")
+	//.IsDependentOn ("generate-mapping")
 	.IsDependentOn ("migration-nuget")
 	.IsDependentOn ("migration-tests")
 	.IsDependentOn ("samples");
