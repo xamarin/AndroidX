@@ -26,10 +26,34 @@
         AndroidX.Work.Impl.Background
     </attr>
     <attr 
+        path="/api/package[@name='androidx.work.impl.background.greedy']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background.Greedy
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.background.systemjob']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background.SystemJob
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.background.systemalarm']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background.SystemAlarm
+    </attr>
+    <attr 
         path="/api/package[@name='androidx.work.impl.constraints']" 
         name="managedName"
         >
         AndroidX.Work.Impl.Constraints  
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Constraints.Controllers
     </attr>
     <attr 
         path="/api/package[@name='androidx.work.impl.constraints.trackers']" 
@@ -44,10 +68,28 @@
         AndroidX.Work.Impl.Utils
     </attr>
     <attr 
+        path="/api/package[@name='androidx.work.impl.utils.futures']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Utils.Futures
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.utils.taskexecutor']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Utils.TaskExecutor
+    </attr>
+    <attr 
         path="/api/package[@name='androidx.work.impl.model']" 
         name="managedName"
         >
         AndroidX.Work.Impl.Model
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.workers']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Workers
     </attr>
     
     <remove-node
