@@ -72,13 +72,10 @@ namespace AndroidX.Work
 
             public Builder SetScheduleRequestedAt(TimeSpan scheduleRequestedAt)
                 => base.SetPeriodStartTime((long)scheduleRequestedAt.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
-            
-            public new Builder SetInitialDelay(long duration, Java.Util.Concurrent.TimeUnit timeUnit)
-                => base.SetInitialDelay(duration, timeUnit).JavaCast<Builder>();
-            
+
             public new Builder SetInitialDelay(TimeSpan initialDelay)
                 => base.SetInitialDelay((long)initialDelay.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
-            
+
             #endregion
         }
     }
@@ -178,6 +175,53 @@ namespace AndroidX.Work
             public Builder SetTriggerContentUpdateDelay(TimeSpan duration)
                 => this.SetTriggerContentUpdateDelay((long)duration.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
 
+        }
+    }
+}
+
+namespace AndroidX.Work.Impl.Constraints.Trackers
+{
+    public partial class BatteryChargingTracker
+    {
+        protected override global::Java.Lang.Object RawInitialState
+        {
+            get
+            {
+                return this.InitialState;
+            }
+        }
+    }
+
+    public partial class NetworkStateTracker
+    {
+        protected override global::Java.Lang.Object RawInitialState
+        {
+            get
+            {
+                return this.InitialState;
+            }
+        }
+    }
+
+    public partial class BatteryNotLowTracker
+    {
+        protected override global::Java.Lang.Object RawInitialState
+        {
+            get
+            {
+                return this.InitialState;
+            }
+        }
+    }
+
+    public partial class StorageNotLowTracker
+    {
+        protected override global::Java.Lang.Object RawInitialState
+        {
+            get
+            {
+                return this.InitialState;
+            }
         }
     }
 }
