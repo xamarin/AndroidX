@@ -801,32 +801,30 @@ Task("migration-tests")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	foreach(string config in Configs)
+	string config = "Release";
+	// build
+	var settings = new MSBuildSettings()
+		.SetConfiguration(config)
+		.SetVerbosity(VERBOSITY)
+		.SetMaxCpuCount(0)
+		.EnableBinaryLogger("./output/migration-tests.binlog")
+		.WithRestore();
+
+	if (! string.IsNullOrEmpty(ANDROID_HOME))
 	{
-		// build
-		var settings = new MSBuildSettings()
-			.SetConfiguration(config)
-			.SetVerbosity(VERBOSITY)
-			.SetMaxCpuCount(0)
-			.EnableBinaryLogger("./output/migration-tests.binlog")
-			.WithRestore();
-
-		if (! string.IsNullOrEmpty(ANDROID_HOME))
-		{
-			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-		}
-		
-		MSBuild("./tests/AndroidXMigrationTests.sln", settings);
-
-		// test
-		DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
-			Configuration = config,
-			NoBuild = true,
-			Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
-			WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
-			ResultsDirectory = "./output/test-results/",
-		});
+		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 	}
+	
+	MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+
+	// test
+	DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+		Configuration = config,
+		NoBuild = true,
+		Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
+		WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
+		ResultsDirectory = "./output/test-results/",
+	});
 });
 
 
