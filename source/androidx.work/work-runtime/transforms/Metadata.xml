@@ -1,17 +1,181 @@
 
 <metadata>
     <attr path="/api/package[@name='androidx.work']" name="managedName">AndroidX.Work</attr>
+    
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='build']" name="managedReturn">AndroidX.Work.WorkRequest</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='addTag']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='keepResultsForAtLeast']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setBackoffCriteria']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setConstraints']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialRunAttemptCount']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialState']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInputData']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setPeriodStartTime']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setScheduleRequestedAt']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
 
-    <remove-node path="/api/package[contains(@name,'androidx.work.impl')]" />
+    <attr 
+        path="/api/package[@name='androidx.work.impl']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.background']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.background.greedy']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background.Greedy
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.background.systemjob']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background.SystemJob
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.background.systemalarm']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Background.SystemAlarm
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Constraints  
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Constraints.Controllers
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.trackers']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Constraints.Trackers  
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.utils']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Utils
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.utils.futures']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Utils.Futures
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.utils.taskexecutor']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Utils.TaskExecutor
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.model']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Model
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.workers']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Workers
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/typeParameters" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.work']/class[@name='BroadcastReceiverConstraintTracker']/typeParameters" 
+        />
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='addTag']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='build']"
+        name="return"
+        >
+        androidx.work.WorkRequest        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='keepResultsForAtLeast']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setBackoffCriteria']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setConstraints']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialRunAttemptCount']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialState']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInputData']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setPeriodStartTime']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder        
+    </attr>
+    
+    <add-node
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="androidx.work.WorkRequest.Builder" name="setInitialDelay" 
+            jni-return="Landroidx/work/WorkRequest$Builder;" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            jni-signature="(JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;" 
+            >
+            <parameter 
+                type="long" jni-type="J" name="duration" 
+                >
+            </parameter>
+            <parameter 
+               type="java.util.concurrent.TimeUnit" jni-type="Ljava/util/concurrent/TimeUnit;" name="timeUnit" 
+               >
+            </parameter>
+      </method>        
+    </add-node>
 
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='build']" name="return">androidx.work.WorkRequest</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='addTag']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='keepResultsForAtLeast']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setBackoffCriteria']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setConstraints']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialRunAttemptCount']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialState']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInputData']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setPeriodStartTime']" name="return">androidx.work.WorkRequest.Builder</attr>
-    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setScheduleRequestedAt']" name="return">androidx.work.WorkRequest.Builder</attr>
+    <remove-node
+        path="/api/package[@name='androidx.work.impl.background.systemalarm']/class[@name='SystemAlarmService']/implements"
+        name="visibilty"
+        />
+    
 </metadata>

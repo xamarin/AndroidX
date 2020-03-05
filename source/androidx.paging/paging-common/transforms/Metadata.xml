@@ -1,22 +1,61 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='ContiguousDataSource']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='DataSource.LoadCallbackHelper']"
+        name="visibility"
+        >
+        public
+    </attr>
     
     <remove-node
-        path="/api/package[@name='androidx.paging']/class[@name='DataSource']"
+        path="/api/package[@name='androidx.paging']/class[@name='DataSource.LoadCallbackHelper']/typeParameters"
         />
-
-    <!--    
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='PageKeyedDataSource']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='PageKeyedDataSource.LoadParams']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='ItemKeyedDataSource.LoadInitialParams']/typeParameters"
+        />
+    
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='DataSource']/method[@name='map' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;Value, ToValue&gt;']]"
+        name="abstract"
+        >
+        false
+    </attr>
+    
     <attr
         path="/api/package[@name='androidx.paging']/class[@name='PositionalDataSource']/method[@name='map' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;T, V&gt;']]"
         name="managedReturn"
         >
-        AndroidX.Paging.DataSource.Factory
+        AndroidX.Paging.DataSource
     </attr>
     <attr
         path="/api/package[@name='androidx.paging']/class[@name='ItemKeyedDataSource']/method[@name='map' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;Value, ToValue&gt;']]"
         name="managedReturn"
         >
-        AndroidX.Paging.DataSource.Factory
+        AndroidX.Paging.DataSource
     </attr>
-    -->
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='PageKeyedDataSource']/method[@name='map' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;Value, ToValue&gt;']]"
+        name="managedReturn"
+        >
+        AndroidX.Paging.DataSource
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='DataSource']/method[@name='mapByPage' and count(parameter)=1 and parameter[1][@type='androidx.arch.core.util.Function&lt;java.util.List&lt;Value&gt;, java.util.List&lt;ToValue&gt;&gt;']]"
+        name="abstract"
+        >
+        false
+    </attr>
     
 </metadata>

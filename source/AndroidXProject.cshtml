@@ -93,6 +93,7 @@
     <Folder Include="Additions\" />
     <Folder Include="Jars\" />
     <Folder Include="Transforms\" />
+    <Folder Include="Java\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\source\AssemblyInfo.cs" />
@@ -108,6 +109,9 @@
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\transforms\*.xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
+    <AndroidJavaSource Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java">
+        <Link>Java/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </AndroidJavaSource>
   </ItemGroup>
 
   <ItemGroup>

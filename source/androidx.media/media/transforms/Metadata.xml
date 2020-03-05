@@ -9,9 +9,11 @@
     <attr path="/api/package[@name='androidx.media']/interface[@name='MediaBrowserServiceCompat.ServiceCallbacks']" name="visibility">internal</attr>    
     <attr path="/api/package[@name='androidx.media']/interface[@name='AudioAttributesImpl']" name="visibility">public</attr>
     -->    
+    <!--
     <remove-node
         path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase']/implements[@name='androidx.media.AudioAttributesImpl']"
         />
+    -->
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.ServiceBinderWrapper']" name="visibility">public</attr>
     <attr path="/api/package[@name='android.support.v4.media']/class[@name='MediaBrowserCompat.CallbackHandler']" name="visibility">public</attr>
@@ -79,5 +81,12 @@
         Java.Lang.Object
     </attr>
     
+    
+    <attr
+        path="/api/package[@name='androidx.media']/class[@name='AudioAttributesImplBase']/method[@name='fromBundle' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedReturn"
+        >
+        AndroidX.VersionedParcelable.IVersionedParcelable
+    </attr>
     
 </metadata>

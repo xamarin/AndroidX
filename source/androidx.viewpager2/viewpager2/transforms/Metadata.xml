@@ -15,6 +15,9 @@
         >
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
+    <remove-node
+        path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
     <attr
         path="/api/package[@name='androidx.viewpager2.widget']/class[@name='ViewPager2.BasicAccessibilityProvider']"
         name="visibility"
