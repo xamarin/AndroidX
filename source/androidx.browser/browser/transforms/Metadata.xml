@@ -9,6 +9,6 @@
       path="/api/package[@name='androidx.browser.trusted']/class[@name='TrustedWebActivityServiceConnectionPool.BindToServiceAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]"
       name="managedReturn"
       >
-      Javal.Lang.Object
+      Java.Lang.Object
     </attr>
 </metadata>
