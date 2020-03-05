@@ -11,4 +11,10 @@
       >
       Java.Lang.Object
     </attr>
+  <attr
+    path="/api/package[@name='androidx.browser.trusted']/class[@name='TrustedWebActivityServiceConnectionPool.BindToServiceAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]"
+    name="managedType"
+      >
+    Java.Lang.Object[]
+  </attr>
 </metadata>
