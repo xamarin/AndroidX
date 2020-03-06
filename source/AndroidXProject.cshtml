@@ -135,6 +135,10 @@
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
       Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
       />
+    <InputJar 
+      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\lint.jar')"
+      Remove="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\lint.jar" 
+      />
       } else {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }

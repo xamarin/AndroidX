@@ -237,6 +237,15 @@ Task ("binderate")
 		var xdoc = XDocument.Load(targets.FullPath);
 		xdoc.Save(targets.FullPath);
 	}
+
+	// different lint.jar files in artifacts causing R8 errors
+	FilePathCollection files = GetFiles("./externals/**/lint.jar");
+	foreach(FilePath file in files)
+	{
+		Information($"Deleting: {file}");
+		DeleteFile(file);
+	}
+
 });
 
 string version_suffix = "";
