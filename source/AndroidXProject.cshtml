@@ -127,21 +127,23 @@
 
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-      if (art.MavenArtifactPackaging == "aar") {
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
+      if (art.MavenArtifactPackaging == "aar") 
+      {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
     <!-- For those artifacts with lib/ folder -->
     <InputJar 
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
       Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
       />
-    <InputJar 
-      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\lint.jar')"
-      Remove="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\lint.jar" 
-      />
-      } else {
+      } 
+      else 
+      {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }
+    <InputJar Remove="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\lint.jar" />
+    <InputJar Remove="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\**\lint.jar" />
     }
   </ItemGroup>
   }
