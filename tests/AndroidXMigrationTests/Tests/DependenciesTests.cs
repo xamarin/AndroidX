@@ -26,7 +26,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var flattened = tree.Flatten("Xamarin.AndroidX.Palette").ToArray();
 
 			Assert.Contains("Xamarin.AndroidX.Annotation", flattened);
-			//Assert.DoesNotContain(//"Xamarin.AndroidX.MultiDex", flattened);
+			//Assert.DoesNotContain("Xamarin.AndroidX.MultiDex", flattened);
 			Assert.Equal(flattened, flattened.Distinct().ToArray());
 		}
 
