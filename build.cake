@@ -32,6 +32,8 @@ var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
 
+// cleanup of lint.jar dependencies
+bool cleanup = true;
 
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
@@ -242,8 +244,11 @@ Task ("binderate")
 	FilePathCollection files = GetFiles("./externals/**/lint.jar");
 	foreach(FilePath file in files)
 	{
-		Information($"Deleting: {file}");
-		DeleteFile(file);
+		if (cleanup)
+		{
+			Information($"Deleting: {file}");
+			DeleteFile(file);
+		}
 	}
 
 });
