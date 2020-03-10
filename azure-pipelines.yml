@@ -2,6 +2,9 @@ trigger:
   - master
   - refs/tags/*
 
+pr:
+  - master
+  
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
