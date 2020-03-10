@@ -659,8 +659,8 @@
 			"groupId" : "androidx.swiperefreshlayout",
 			"artifactId" : "swiperefreshlayout",
 			"version" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.SwipeRefreshLayout",
 			"nugetVersion" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.SwipeRefreshLayout",
 			"dependencyOnly" : false
 		}
 		,{
@@ -763,32 +763,32 @@
 		{
 			"groupId" : "com.google.guava",
 			"artifactId" : "guava",
-			"version" : "27.1.0",
 			"nugetId" : "Xamarin.Google.Guava",
-			"nugetVersion" : "27.1.0.3",
+			"version" : "27.1.0",
+			"nugetVersion" : "27.1.0.4",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.google.guava",
 			"artifactId" : "failureaccess",
-			"version" : "1.0.1",
 			"nugetId" : "Xamarin.Google.Guava.FailureAccess",
+			"version" : "1.0.1",
 			"nugetVersion" : "1.0.1.2",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.google.guava",
 			"artifactId" : "listenablefuture",
-			"version" : "1.0",
 			"nugetId" : "Xamarin.Google.Guava.ListenableFuture",
+			"version" : "1.0",
 			"nugetVersion" : "1.0.0.2",
 			"dependencyOnly" : true
 		},
 		{
 			"groupId" : "com.xamarin.anroidx",
 			"artifactId" : "migration",
-			"version" : "1.0",
 			"nugetId" : "Xamarin.AndroidX.Migration",
+			"version" : "1.0",
 			"nugetVersion" : "1.0.0",
 			"dependencyOnly" : true
 		}

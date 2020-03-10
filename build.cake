@@ -448,6 +448,8 @@ Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
+	Configs = new string[] {"Release"};
+	
 	foreach(string config in Configs)
 	{
 		var settings = new MSBuildSettings()
@@ -749,6 +751,8 @@ Task("migration-nuget")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
+	Configs = new string[] {"Release"};
+
 	foreach(string config in Configs)
 	{
 		var settings = new MSBuildSettings()
@@ -826,7 +830,9 @@ Task("migration-tests")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	foreach(string config in Configs)
+	Configs = new string[] {"Release"};
+
+	foreach (string config in Configs)
 	{
 		// build
 		var settings = new MSBuildSettings()
@@ -1116,7 +1122,7 @@ Task ("ci")
 	.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
-	.IsDependentOn ("generate-mapping")
+	//.IsDependentOn ("generate-mapping")
 	.IsDependentOn ("migration-nuget")
 	.IsDependentOn ("migration-tests")
 	.IsDependentOn ("samples");
