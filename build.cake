@@ -434,6 +434,8 @@ Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
+	Configs = new string[] {"Release"};
+	
 	foreach(string config in Configs)
 	{
 		var settings = new MSBuildSettings()
@@ -473,12 +475,35 @@ Task("samples-generate-all-targets")
 				// Skip the migration packages as that is not meant forto be used here
 				if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
 					continue;
+
 				var filename = nupkg.GetFilenameWithoutExtension();
 				var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
 				itemGroup.Add(new XElement(xmlns + "PackageReference",
 					new XAttribute("Include", match.Groups[1]),
 					new XAttribute("Version", match.Groups[2])));
+
 			}
+			// R8 ACW  errors about missing classes
+			// could have been grabbed from config.json
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava"),
+							new XAttribute("Version", "27.1.0.3")
+							)
+						);	
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava.FailureAccess"),
+							new XAttribute("Version", "1.0.1.2")
+							)
+						);	
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava.ListenableFuture"),
+							new XAttribute("Version", "1.0.0.2")
+							)
+						);	
+							
 			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
 			xdoc.Save("./output/AllPackages.targets");
 
@@ -492,6 +517,8 @@ Task("samples")
 	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
+	Configs = new string[] {"Release", "Debug"};
+
 	// TODO: make this actually work with more than just this sample
 
 	// clear the packages folder so we always use the latest
@@ -517,7 +544,16 @@ Task("samples")
 			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 		}
 
-		MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		try
+		{
+			MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		}
+		catch (System.Exception exc)
+		{
+			Error($"samples error: 	{config} ./samples/BuildAll/BuildAll.sln");
+			Error($"				{exc.Message}");
+			throw;
+		}
 	}
 });
 
@@ -724,6 +760,8 @@ Task("migration-nuget")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
+	Configs = new string[] {"Release"};
+
 	foreach(string config in Configs)
 	{
 		var settings = new MSBuildSettings()
@@ -801,30 +839,34 @@ Task("migration-tests")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	string config = "Release";
-	// build
-	var settings = new MSBuildSettings()
-		.SetConfiguration(config)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-tests.binlog")
-		.WithRestore();
+	Configs = new string[] {"Release"};
 
-	if (! string.IsNullOrEmpty(ANDROID_HOME))
+	foreach (string config in Configs)
 	{
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-	}
-	
-	MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+		// build
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-tests.binlog")
+			.WithRestore();
 
-	// test
-	DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
-		Configuration = config,
-		NoBuild = true,
-		Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
-		WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
-		ResultsDirectory = "./output/test-results/",
-	});
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+		
+		MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+
+		// test
+		DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+			Configuration = config,
+			NoBuild = true,
+			Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
+			WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
+			ResultsDirectory = "./output/test-results/",
+		});
+	}
 });
 
 
