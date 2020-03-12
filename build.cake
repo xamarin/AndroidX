@@ -488,7 +488,7 @@ Task("samples-generate-all-targets")
 			itemGroup.Add
 						(new XElement(xmlns + "PackageReference",
 							new XAttribute("Include", "Xamarin.Google.Guava"),
-							new XAttribute("Version", "27.1.0.3")
+							new XAttribute("Version", "27.1.0.4")
 							)
 						);	
 			itemGroup.Add
