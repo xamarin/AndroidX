@@ -6,6 +6,7 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=CsvHelper&version=12.2.1
+#addin nuget:?package=SharpZipLib&version=1.2.0
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -240,18 +241,52 @@ Task ("binderate")
 		xdoc.Save(targets.FullPath);
 	}
 
+	RemoveLintJars();
+
+});
+
+public void RemoveLintJars()
+{
+
 	// different lint.jar files in artifacts causing R8 errors
 	FilePathCollection files = GetFiles("./externals/**/lint.jar");
+	ICSharpCode.SharpZipLib.Zip.ZipFile zipFile = null;
+
 	foreach(FilePath file in files)
 	{
 		if (cleanup)
 		{
 			Information($"Deleting: {file}");
 			DeleteFile(file);
-		}
-	}
 
-});
+			DirectoryPath directory = file.GetDirectory();			
+			FilePath aar = GetFiles($"{directory.ToString()}/../*.aar").FirstOrDefault();
+
+			Information($"Deleting: lint.jar from {aar.ToString()}");
+			
+			try
+			{
+				zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString());
+				zipFile.BeginUpdate();
+				var entry = zipFile.GetEntry("lint.jar");
+				if (entry != null) 
+				{
+					Information($"		Deleting lint.jar from {aar}");
+					zipFile.Delete(entry);
+				}
+				zipFile.CommitUpdate();
+			}
+			finally
+			{
+				if (zipFile != null)
+				{
+					zipFile.Close();
+				}
+			}
+		}
+
+	}
+}
 
 string version_suffix = "";
 string nuget_version_template = $"x.y.z{version_suffix}";
@@ -495,6 +530,27 @@ Task("samples-generate-all-targets")
 					new XAttribute("Include", match.Groups[1]),
 					new XAttribute("Version", match.Groups[2])));
 			}
+			// R8 ACW  errors about missing classes
+			// could have been grabbed from config.json
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava"),
+							new XAttribute("Version", "27.1.0.4")
+							)
+						);	
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava.FailureAccess"),
+							new XAttribute("Version", "1.0.1.2")
+							)
+						);	
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava.ListenableFuture"),
+							new XAttribute("Version", "1.0.0.2")
+							)
+						);	
+
 			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
 			xdoc.Save("./output/AllPackages.targets");
 

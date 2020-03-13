@@ -40,14 +40,6 @@
 			"dependencyOnly" : false
 		}
 		,{
-			"groupId" : "androidx.annotation",
-			"artifactId" : "annotation-experimental",
-			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Annotation.Experimental",
-			"dependencyOnly" : false
-		}
-		,{
 			"groupId" : "androidx.appcompat",
 			"artifactId" : "appcompat",
 			"version" : "1.1.0",
@@ -733,14 +725,6 @@
 			"version" : "1.2.0",
 			"nugetVersion" : "1.2.0",
 			"nugetId" : "Xamarin.AndroidX.WebKit",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.work",
-			"artifactId" : "work-gcm",
-			"version" : "2.3.3",
-			"nugetVersion" : "2.3.3",
-			"nugetId" : "Xamarin.AndroidX.Work.GCM",
 			"dependencyOnly" : false
 		}
 		,{

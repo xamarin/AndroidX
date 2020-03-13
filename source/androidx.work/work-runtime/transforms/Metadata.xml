@@ -174,8 +174,19 @@
     </add-node>
 
     <remove-node
+        path="/api/package[@name='androidx.work.impl.background.systemalarm']/class[@name='SystemAlarmDispatcher']"
+        />
+    <remove-node
         path="/api/package[@name='androidx.work.impl.background.systemalarm']/class[@name='SystemAlarmService']/implements"
-        name="visibilty"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.work.impl.background.systemalarm']/interface[@name='SystemAlarmDispatcher.CommandsCompletedListener']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.work.impl.background.systemalarm']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.work.impl']"
         />
     
 </metadata>
