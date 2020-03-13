@@ -524,11 +524,13 @@ Task("samples-generate-all-targets")
 				// Skip the migration packages as that is not meant forto be used here
 				if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
 					continue;
+
 				var filename = nupkg.GetFilenameWithoutExtension();
 				var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
 				itemGroup.Add(new XElement(xmlns + "PackageReference",
 					new XAttribute("Include", match.Groups[1]),
 					new XAttribute("Version", match.Groups[2])));
+
 			}
 			// R8 ACW  errors about missing classes
 			// could have been grabbed from config.json
@@ -551,7 +553,7 @@ Task("samples-generate-all-targets")
 							)
 						);	
 
-			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+      var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
 			xdoc.Save("./output/AllPackages.targets");
 
 			return;
@@ -564,6 +566,8 @@ Task("samples")
 	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
+	Configs = new string[] {"Release", "Debug"};
+
 	// TODO: make this actually work with more than just this sample
 
 	// clear the packages folder so we always use the latest
@@ -578,7 +582,7 @@ Task("samples")
 			.SetConfiguration(config)
 			.SetVerbosity(VERBOSITY)
 			.SetMaxCpuCount(0)
-			.EnableBinaryLogger("./output/samples.binlog")
+			.EnableBinaryLogger($"./output/samples.{config}.binlog")
 			.WithRestore()
 			.WithProperty("RestorePackagesPath", packagesPath)
 			.WithProperty("DesignTimeBuild", "false")
@@ -589,7 +593,16 @@ Task("samples")
 			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 		}
 
-		MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		try
+		{
+			MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		}
+		catch (System.Exception exc)
+		{
+			Error($"samples error: 	{config} ./samples/BuildAll/BuildAll.sln");
+			Error($"				{exc.Message}");
+			throw;
+		}
 	}
 });
 
