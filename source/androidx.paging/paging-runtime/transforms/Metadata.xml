@@ -1,9 +1,10 @@
 ﻿<metadata>
     <remove-node
-        path="/api/package[@name='androidx.paging']/class[@name='AsyncPagedListDiffer.PagedListListener']/typeParameters"
-        />        
+        path="/api/package[@name='androidx.paging']/class[@name='AsyncPagedListDiffer']/typeParameters"
+		/>
+
     <remove-node
         path="/api/package[@name='androidx.paging']/interface[@name='AsyncPagedListDiffer.PagedListListener']"
-        />        
+		/>
 
 </metadata>
