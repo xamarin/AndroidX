@@ -1,4 +1,4 @@
-﻿package com.google.material.tabs.appcompat.app;
+﻿package com.google.android.material.tabs.appcompat.app;
 
 public class AppCompatActivity extends androidx.appcompat.app.AppCompatActivity
     implements com.google.android.material.tabs.TabLayout.OnTabSelectedListener

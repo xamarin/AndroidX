@@ -93,7 +93,10 @@
     <Folder Include="Additions\" />
     <Folder Include="Jars\" />
     <Folder Include="Transforms\" />
+    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Material") 
+    {
     <Folder Include="Java\" />
+    }
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\source\AssemblyInfo.cs" />
@@ -109,8 +112,11 @@
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\transforms\*.xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
-    <AndroidJavaSource Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java">
-        <Link>Java/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    <AndroidJavaSource 
+      Condition="Exists('..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java')"
+      Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java"
+      >
+      <Link>Java/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </AndroidJavaSource>
   </ItemGroup>
 
