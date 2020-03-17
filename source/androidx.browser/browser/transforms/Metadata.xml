@@ -3,4 +3,18 @@
     <remove-node path="/api/package[@name='androidx.browser.browseractions']/interface[@name='BrowserActionsFallbackMenuUi.BrowserActionsFallMenuUiListener']" />
     <attr path="/api/package[@name='androidx.browser.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='androidx.browser.customtabs.CustomTabsClient']]/parameter[1]" name="managedName">name</attr>
     <attr path="/api/package[@name='androidx.browser.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='androidx.browser.customtabs.CustomTabsClient']]/parameter[2]" name="managedName">client</attr>
+
+
+    <attr
+      path="/api/package[@name='androidx.browser.trusted']/class[@name='TrustedWebActivityServiceConnectionPool.BindToServiceAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]"
+      name="managedReturn"
+      >
+      Java.Lang.Object
+    </attr>
+  <attr
+    path="/api/package[@name='androidx.browser.trusted']/class[@name='TrustedWebActivityServiceConnectionPool.BindToServiceAsyncTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.lang.Void...']]/parameter[1]"
+    name="managedType"
+      >
+    Java.Lang.Object[]
+  </attr>
 </metadata>

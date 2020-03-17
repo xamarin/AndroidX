@@ -6,6 +6,7 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=CsvHelper&version=12.2.1
+#addin nuget:?package=SharpZipLib&version=1.2.0
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -32,6 +33,8 @@ var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
 
+// cleanup of lint.jar dependencies
+bool cleanup = true;
 
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
@@ -237,7 +240,53 @@ Task ("binderate")
 		var xdoc = XDocument.Load(targets.FullPath);
 		xdoc.Save(targets.FullPath);
 	}
+
+	RemoveLintJars();
+
 });
+
+public void RemoveLintJars()
+{
+
+	// different lint.jar files in artifacts causing R8 errors
+	FilePathCollection files = GetFiles("./externals/**/lint.jar");
+	ICSharpCode.SharpZipLib.Zip.ZipFile zipFile = null;
+
+	foreach(FilePath file in files)
+	{
+		if (cleanup)
+		{
+			Information($"Deleting: {file}");
+			DeleteFile(file);
+
+			DirectoryPath directory = file.GetDirectory();			
+			FilePath aar = GetFiles($"{directory.ToString()}/../*.aar").FirstOrDefault();
+
+			Information($"Deleting: lint.jar from {aar.ToString()}");
+			
+			try
+			{
+				zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString());
+				zipFile.BeginUpdate();
+				var entry = zipFile.GetEntry("lint.jar");
+				if (entry != null) 
+				{
+					Information($"		Deleting lint.jar from {aar}");
+					zipFile.Delete(entry);
+				}
+				zipFile.CommitUpdate();
+			}
+			finally
+			{
+				if (zipFile != null)
+				{
+					zipFile.Close();
+				}
+			}
+		}
+
+	}
+}
 
 string version_suffix = "";
 string nuget_version_template = $"x.y.z{version_suffix}";
@@ -503,8 +552,8 @@ Task("samples-generate-all-targets")
 							new XAttribute("Version", "1.0.0.2")
 							)
 						);	
-							
-			var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+
+      var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
 			xdoc.Save("./output/AllPackages.targets");
 
 			return;
@@ -608,7 +657,18 @@ Task("generate-mapping")
 	var csv = new CsvReader(csvReader);
 	var records = csv.GetRecords<dynamic>()
 		.Cast<IDictionary<string, object>>()
-		.Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")
+		.Select(r => 
+					{
+						if( ((IDictionary<String, object>)r).ContainsKey("Support .NET assembly"))
+						{
+							return $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}";
+						}
+						else
+						{
+							throw new Exception("Not found - column name: Support .NET assembly");
+						}
+					}
+				)
 		.Union(new [] {
 			"Xamarin.Android.Support.v4|Xamarin.AndroidX.Legacy.Support.V4",
 			"Xamarin.Android.Support.MultiDex|Xamarin.AndroidX.MultiDex",
