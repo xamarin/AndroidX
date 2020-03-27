@@ -30,4 +30,26 @@
         >
         private
     </attr>    
+    
+    <add-node
+        path="/api/package[@name='androidx.viewpager2.adapter']/class[@name='FragmentStateAdapter']"
+        >
+        <method 
+            static="false" visibility="public" abstract="false" return="void" name="onBindViewHolder" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false"
+            jni-signature="(Landroidx/viewpager2/adapter/FragmentViewHolder;I)V" jni-return="V"
+            >
+            <parameter 
+                type="AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder" jni-type="Landroidx/recyclerview/widget/RecyclerView$ViewHolder;"
+                name="holder"
+                >
+            </parameter>
+            <parameter 
+                type="int" jni-type="I"
+                name="position" 
+                >
+            </parameter>
+      </method>
+        
+    </add-node>
 </metadata>
