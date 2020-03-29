@@ -40,6 +40,14 @@
 			"dependencyOnly" : false
 		}
 		,{
+			"groupId" : "androidx.annotation",
+			"artifactId" : "annotation-experimental",
+			"version" : "1.0.0",
+			"nugetVersion" : "1.0.0",
+			"nugetId" : "Xamarin.AndroidX.Annotation.Experimental",
+			"dependencyOnly" : false
+		}
+		,{
 			"groupId" : "androidx.appcompat",
 			"artifactId" : "appcompat",
 			"version" : "1.1.0",
@@ -242,8 +250,8 @@
 		,{
 			"groupId" : "androidx.fragment",
 			"artifactId" : "fragment",
-			"version" : "1.2.2",
-			"nugetVersion" : "1.2.2",
+			"version" : "1.2.3",
+			"nugetVersion" : "1.2.3",
 			"nugetId" : "Xamarin.AndroidX.Fragment",
 			"dependencyOnly" : false
 		}
@@ -498,16 +506,16 @@
 		,{
 			"groupId" : "androidx.paging",
 			"artifactId" : "paging-common",
-			"version" : "2.1.1",
-			"nugetVersion" : "2.1.1",
+			"version" : "2.1.2",
+			"nugetVersion" : "2.1.2",
 			"nugetId" : "Xamarin.AndroidX.Paging.Common",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.paging",
 			"artifactId" : "paging-runtime",
-			"version" : "2.1.1",
-			"nugetVersion" : "2.1.1",
+			"version" : "2.1.2",
+			"nugetVersion" : "2.1.2",
 			"nugetId" : "Xamarin.AndroidX.Paging.Runtime",
 			"dependencyOnly" : false
 		}
@@ -570,24 +578,24 @@
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-common",
-			"version" : "2.2.4",
-			"nugetVersion" : "2.2.4",
+			"version" : "2.2.5",
+			"nugetVersion" : "2.2.5",
 			"nugetId" : "Xamarin.AndroidX.Room.Common",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-guava",
-			"version" : "2.2.4",
-			"nugetVersion" : "2.2.4",
+			"version" : "2.2.5",
+			"nugetVersion" : "2.2.5",
 			"nugetId" : "Xamarin.AndroidX.Room.Guava",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.room",
 			"artifactId" : "room-runtime",
-			"version" : "2.2.4",
-			"nugetVersion" : "2.2.4",
+			"version" : "2.2.5",
+			"nugetVersion" : "2.2.5",
 			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
 			"dependencyOnly" : false
 		}
@@ -730,8 +738,8 @@
 		,{
 			"groupId" : "androidx.work",
 			"artifactId" : "work-runtime",
-			"version" : "2.3.3",
-			"nugetVersion" : "2.3.3",
+			"version" : "2.3.4",
+			"nugetVersion" : "2.3.4",
 			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
 			"dependencyOnly" : false
 		}
@@ -773,7 +781,7 @@
 			"artifactId" : "migration",
 			"nugetId" : "Xamarin.AndroidX.Migration",
 			"version" : "1.0",
-			"nugetVersion" : "1.0.1",
+			"nugetVersion" : "1.0.2",
 			"dependencyOnly" : true
 		}
 	]

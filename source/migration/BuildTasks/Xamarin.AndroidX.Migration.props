@@ -100,6 +100,7 @@
     <!-- all the AndroidX assemblies -->
     <ItemGroup>
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation.Experimental" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat.Resources" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Common" />
@@ -175,6 +176,7 @@
     <ItemGroup>
         <_AndroidXMavenArtifact Include="androidx.activity.activity" />
         <_AndroidXMavenArtifact Include="androidx.annotation.annotation" />
+        <_AndroidXMavenArtifact Include="androidx.annotation.annotation-experimental" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat-resources" />
         <_AndroidXMavenArtifact Include="androidx.arch.core.core-common" />
