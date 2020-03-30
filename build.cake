@@ -311,19 +311,24 @@ Task("binderate-config-verify")
 				{
 					continue;
 				}
-				string version        = (string) jo["version"];
-				string nuget_version  = (string) jo["nugetVersion"];
+				string artifact_version = (string) jo["version"];
+				string nuget_version  	= (string) jo["nugetVersion"];
 
-				Information($"groupId       = {jo["groupId"]}");
-				Information($"artifactId    = {jo["artifactId"]}");
-				Information($"version       = {version}");
-				Information($"nuget_version = {nuget_version}");
-				Information($"nugetId       = {jo["nugetId"]}");
+				string artifact_version_suffix  = (string) jo["version"];
+				string nuget_version_suffix  	= (string) jo["nugetVersion"];
 
-				string[] version_parts = version.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
-				string x = version_parts[0];
-				string y = version_parts[1];
-				string z = version_parts[2];
+				Information($"groupId                   = {jo["groupId"]}");
+				Information($"artifactId                = {jo["artifactId"]}");
+				Information($"artifact_version          = {artifact_version}");
+				Information($"nuget_version             = {nuget_version}");
+				Information($"artifact_version_suffix   = {artifact_version_suffix}");
+				Information($"nuget_version_suffix 	    = {nuget_version_suffix}");
+				Information($"nugetId                   = {jo["nugetId"]}");
+
+				string[] artifact_version_parts = artifact_version.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
+				string x = artifact_version_parts[0];
+				string y = artifact_version_parts[1];
+				string z = artifact_version_parts[2];
 
 				string nuget_version_new = nuget_version_template;
 				nuget_version_new = nuget_version_new.Replace("x", x);
@@ -335,7 +340,7 @@ Task("binderate-config-verify")
 					Error("check config.json for nuget id");
 					Error  ($"		groupId           = {jo["groupId"]}");
 					Error  ($"		artifactId        = {jo["artifactId"]}");
-					Error  ($"		version           = {version}");
+					Error  ($"		artifact_version  = {artifact_version}");
 					Error  ($"		nuget_version     = {nuget_version}");
 					Error  ($"		nuget_version_new = {nuget_version_new}");
 					Error  ($"		nugetId           = {jo["nugetId"]}");

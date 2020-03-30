@@ -44,129 +44,102 @@
         public
     </attr>
     
-    
-    
-    <!--
-    TODO: remove remove-mode DirtFixes
-    -->
     <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ExtractorMediaSource']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ClippingMediaPeriod']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.offline']/class[@name='StreamKey']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='DeferredMediaPeriod']"
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/class[@name='AnalyticsCollector']/implements"
         />
     
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultHttpDataSourceFactory']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text.webvtt']/class[@name='Mp4WebvttDecoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text.tx3g']/class[@name='Tx3gDecoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultHttpDataSource']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text.subrip']/class[@name='SubripDecoder']"
-        />
-    
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.video']/class[@name='VideoRendererEventListener.EventDispatcher']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external']/class[@name='SimpleExoPlayer']"
-        />
-    
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text.ttml']/class[@name='TtmlDecoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/class[@name='AnalyticsCollector']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='HttpDataSource.BaseFactory']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/interface[@name='HttpDataSource.Factory']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DummyDataSource']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultDataSourceFactory']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='BaseDataSource']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='PriorityDataSourceFactory']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text.pgs']/class[@name='PgsDecoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text.webvtt']/class[@name='WebvttDecoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.extractor']/class[@name='BinarySearchSeeker.BinarySearchSeekMap']/constructor[@name='BinarySearchSeeker.BinarySearchSeekMap' and count(parameter)=7 and parameter[1][@type='androidx.media2.exoplayer.external.extractor.BinarySearchSeeker.SeekTimestampConverter'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='long'] and parameter[5][@type='long'] and parameter[6][@type='long'] and parameter[7][@type='long']]"
-        />
-    
-    <remove-node
+    <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.text.dvb']/class[@name='DvbDecoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text']/class[@name='SimpleSubtitleDecoder']"
-        />
+        >
+        <method 
+            visibility="protected" static="false" abstract="false" return="E" name="createUnexpectedDecodeException" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="(Ljava/lang/Throwable;)Ljava/lang/Exception;" jni-return="TE;" 
+            synchronized="false" synthetic="false" 
+            >
+            <parameter 
+                type="java.lang.Throwable" name="error"  
+                jni-type="Ljava/lang/Throwable;"
+                >
+            </parameter>
+        </method>
+        <method 
+            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleInputBuffer" name="createInputBuffer" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" 
+            synchronized="false" synthetic="false" 
+            >
+        </method>
+        <method 
+            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleOutputBuffer" name="createOutputBuffer" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" 
+            synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.pgs']/class[@name='PgsDecoder']"
+        >
+        <method 
+            visibility="protected" static="false" abstract="true" return="E" name="createUnexpectedDecodeException" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="(Ljava/lang/Throwable;)Ljava/lang/Exception;" jni-return="TE;" 
+            synchronized="false" synthetic="false" 
+            >
+            <parameter 
+                type="java.lang.Throwable" name="error"  
+                jni-type="Ljava/lang/Throwable;"
+                >
+            </parameter>
+        </method>
+    </add-node>
     
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.text']/class[@name='SubtitleOutputBuffer']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ConcatenatingMediaSource']"
-        />
-    <remove-node
+    <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.drm']/class[@name='DrmInitData']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.source.hls.playlist']/class[@name='HlsMediaPlaylist']"
-        />
-        
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/class[@name='AdaptiveTrackSelection']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/class[@name='RandomTrackSelection']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/class[@name='BaseTrackSelection']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/class[@name='FixedTrackSelection']"
-        />
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="Compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
     
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.source.chunk']/class[@name='ChunkExtractorWrapper']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/interface[@name='AudioListener']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/class[@name='AudioSink.ConfigurationException']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/class[@name='AudioSink.InitializationException']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/interface[@name='AudioSink.Listener']"
-        />
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.offline']/class[@name='StreamKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false"  final="false" deprecated="not deprecated" 
+            >
+            <parameter name="p0" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ConcatenatingMediaSource']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source.hls.playlist']/class[@name='HlsMediaPlaylist.Segment']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
 
+    
     
 </metadata>

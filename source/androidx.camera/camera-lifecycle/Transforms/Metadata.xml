@@ -1,0 +1,5 @@
+<metadata>
+  <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" />
+  <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" />
+  <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" />
+</metadata>
