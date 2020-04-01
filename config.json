@@ -129,14 +129,6 @@
 		}
 		,{
 			"groupId" : "androidx.camera",
-			"artifactId" : "camera-extensions",
-			"version" : "1.0.0-alpha08",
-			"nugetVersion" : "1.0.0-alpha08",
-			"nugetId" : "Xamarin.AndroidX.Camera.Extensions",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.camera",
 			"artifactId" : "camera-lifecycle",
 			"version" : "1.0.0-beta01",
 			"nugetVersion" : "1.0.0-beta01",
@@ -477,22 +469,6 @@
 			"version" : "1.0.3",
 			"nugetVersion" : "1.0.3",
 			"nugetId" : "Xamarin.AndroidX.Media2.Common",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.media2",
-			"artifactId" : "media2-exoplayer",
-			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Media2.ExoPlayer",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.media2",
-			"artifactId" : "media2-player",
-			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0",
-			"nugetId" : "Xamarin.AndroidX.Media2.Player",
 			"dependencyOnly" : false
 		}
 		,{
