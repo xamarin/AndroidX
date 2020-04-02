@@ -167,6 +167,14 @@
     {
         <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Work.Runtime") 
+    {
+        <!--
+        Xamarin.AndroidX.Work.Runtime Should Reference Xamarin.AndroidX.Room.Runtime
+        https://github.com/xamarin/AndroidX/issues/86
+        -->
+        <ProjectReference Include="..\androidx.room.room-runtime\androidx.room.room-runtime.csproj" PrivateAssets="none" />
+    }
   </ItemGroup>
   
 
