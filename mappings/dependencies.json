@@ -58,9 +58,7 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": [
-        "Xamarin.AndroidX.MultiDex"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Annotation.Experimental",
@@ -569,10 +567,6 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Migration.Tool",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -767,6 +761,7 @@
       "id": "Xamarin.AndroidX.Work.Runtime",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
     }
