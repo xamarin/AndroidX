@@ -44,7 +44,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -67,7 +67,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -92,7 +92,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.CursorAdapter",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -116,7 +116,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -137,7 +137,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Migration",
-        "Xamarin.AndroidX.MultiDex",
+        //"Xamarin.AndroidX.MultiDex",
       };
 
 			var flattened = tree.Flatten(ids, false);
@@ -159,7 +159,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -182,7 +182,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -294,7 +294,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.LocalBroadcastManager",
 				"Xamarin.AndroidX.Media",
 				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
+				//"Xamarin.AndroidX.MultiDex",
 				"Xamarin.AndroidX.Print",
 				"Xamarin.AndroidX.RecyclerView",
 				"Xamarin.AndroidX.SavedState",
