@@ -761,6 +761,7 @@
       "id": "Xamarin.AndroidX.Work.Runtime",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.AndroidX.Lifecycle.Service",
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
