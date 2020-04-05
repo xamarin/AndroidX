@@ -26,4 +26,8 @@
         Java.Lang.Object
     </attr>
     
+    <remove-node
+        path="/api/package[@name='androidx.media2.player']/class[@name='MediaPlayer']/method[@name='setPlaylist' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media2.common.MediaItem&gt;'] and parameter[2][@type='androidx.media2.common.MediaMetadata']]"
+        />
+    
 </metadata>

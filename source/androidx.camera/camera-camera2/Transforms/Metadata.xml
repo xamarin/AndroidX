@@ -1,0 +1,21 @@
+<metadata>
+  <remove-node path="/api/package/class/implements[@name='androidx.camera.core.ConfigProvider']" />
+    
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='ImageAnalysisConfigProvider']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='VideoCaptureConfigProvider']/implements"
+        />
+    
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='ImageCaptureConfigProvider']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.impl']/class[@name='Camera2ImplConfig.Builder']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='PreviewConfigProvider']/implements"
+        />
+    
+</metadata>
