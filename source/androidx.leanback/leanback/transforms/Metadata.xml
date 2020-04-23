@@ -235,4 +235,12 @@
         >
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.leanback.app']/class[@name='BackgroundManager.BitmapDrawable']"
+        name="visibility"
+        >
+        public
+    </attr>
+        
 </metadata>
