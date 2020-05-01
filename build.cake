@@ -513,7 +513,7 @@ Task("generate-mapping")
 	.IsDependentOn("nuget")
 	.Does(() =>
 {
-	EnsureDirectoryExists("./output/");
+	EnsureDirectoryExists("./output/mappings/");
 
 	// download the AndroidSupport.Merged.dll from a past build
 	if (!FileExists("./output/AndroidSupport.Merged.dll"))
