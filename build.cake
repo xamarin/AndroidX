@@ -18,7 +18,6 @@ using CsvHelper;
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
-var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -33,6 +32,9 @@ var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"
 var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-4.zip";
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
+
+// cleanup of lint.jar dependencies
+bool cleanup = true;
 
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
@@ -63,6 +65,13 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 	"xamarin-android-binderator",
 	"xamarin.androidx.migration.tool"
 };
+
+string[] Configs = new []
+{
+	"Debug",
+	"Release"
+};
+
 
 string JAVA_HOME = EnvironmentVariable ("JAVA_HOME") ?? Argument ("java_home", "");
 string ANDROID_HOME = EnvironmentVariable ("ANDROID_HOME") ?? Argument ("android_home", "");
@@ -232,25 +241,52 @@ Task ("binderate")
 		xdoc.Save(targets.FullPath);
 	}
 
-	// different lint.jar files in artifacts causing R8 errors
-	foreach (var file in GetFiles("./externals/**/lint.jar")) {
-		Information($"Deleting: {file}");
-		DeleteFile(file);
+	RemoveLintJars();
 
-		foreach (var aar in GetFiles($"{file.GetDirectory()}/../*.aar")) {
-			Information($"Deleting: lint.jar from {aar}");
-			using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) {
+});
+
+public void RemoveLintJars()
+{
+
+	// different lint.jar files in artifacts causing R8 errors
+	FilePathCollection files = GetFiles("./externals/**/lint.jar");
+	ICSharpCode.SharpZipLib.Zip.ZipFile zipFile = null;
+
+	foreach(FilePath file in files)
+	{
+		if (cleanup)
+		{
+			Information($"Deleting: {file}");
+			DeleteFile(file);
+
+			DirectoryPath directory = file.GetDirectory();			
+			FilePath aar = GetFiles($"{directory.ToString()}/../*.aar").FirstOrDefault();
+
+			Information($"Deleting: lint.jar from {aar.ToString()}");
+			
+			try
+			{
+				zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString());
 				zipFile.BeginUpdate();
 				var entry = zipFile.GetEntry("lint.jar");
-				if (entry != null) {
+				if (entry != null) 
+				{
 					Information($"		Deleting lint.jar from {aar}");
 					zipFile.Delete(entry);
 				}
 				zipFile.CommitUpdate();
 			}
+			finally
+			{
+				if (zipFile != null)
+				{
+					zipFile.Close();
+				}
+			}
 		}
+
 	}
-});
+}
 
 string version_suffix = "";
 string nuget_version_template = $"x.y.z{version_suffix}";
@@ -397,86 +433,137 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
 	}
 }
 
+
+
 Task("libs")
 	.IsDependentOn("metadata-verify")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(config)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/libs.binlog")
-		.WithRestore()
-		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+	if (bool.TryParse(EnvironmentVariable("PRE_RESTORE_PROJECTS") ?? "false", out var restore) && restore) 
+	{
+		foreach(string config in Configs)
+		{
+			var restoreSettings = new MSBuildSettings()
+				.SetConfiguration(config)
+				.SetVerbosity(VERBOSITY)
+				.SetMaxCpuCount(0)
+				.EnableBinaryLogger("./output/restore.binlog")
+				.WithProperty("DesignTimeBuild", "false")
+				.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
+				.WithTarget("Restore");
+			
+			if (! string.IsNullOrEmpty(ANDROID_HOME))
+			{
+				restoreSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+			}
 
-	if (!string.IsNullOrEmpty(ANDROID_HOME))
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+			foreach (var csproj in GetFiles("./generated/**/*.csproj")) {
+				MSBuild(csproj, restoreSettings);
+			}
+		}
+	}
 
-	MSBuild("./generated/AndroidX.sln", settings);
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/libs.binlog")
+			.WithRestore()
+			.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+			.WithProperty("DesignTimeBuild", "false")
+			.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+
+		MSBuild("./generated/AndroidX.sln", settings);
+	}
 });
 
 Task("nuget")
 	.IsDependentOn("libs")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/nuget.binlog")
-		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-		.WithProperty("NoBuild", "true")
-		.WithProperty("PackageRequireLicenseAcceptance", "true")
-		.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
-		.WithTarget("Pack");
+	Configs = new string[] {"Release"};
+	
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/nuget.binlog")
+			.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+			.WithProperty("NoBuild", "true")
+			.WithProperty("PackageRequireLicenseAcceptance", "true")
+			.WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
+			.WithTarget("Pack");
 
-	if (!string.IsNullOrEmpty(ANDROID_HOME))
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
 
-	MSBuild("./generated/AndroidX.sln", settings);
+		MSBuild("./generated/AndroidX.sln", settings);
+	}
 });
 
 Task("samples-generate-all-targets")
-	.Does(() =>
-{
-	// make a big .targets file that pulls in everything
-	var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-	var itemGroup = new XElement(xmlns + "ItemGroup");
-	foreach (var nupkg in GetFiles("./output/*.nupkg")) {
-		Information($"NuGet package = {nupkg}");
+	.Does
+	(
+		() =>
+		{
+			// make a big .targets file that pulls in everything
+			var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
+			var itemGroup = new XElement(xmlns + "ItemGroup");
+			foreach (var nupkg in GetFiles("./output/*.nupkg")) 
+			{
+				Information($"NuGet package = {nupkg}");
+				// Skip Wear as it has special implications requiring more packages to be used properly in an app
+				if (nupkg.FullPath.Contains(".Wear."))
+					continue;
+				// Skip the migration packages as that is not meant forto be used here
+				if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
+					continue;
 
-		// Skip Wear as it has special implications requiring more packages to be used properly in an app
-		if (nupkg.FullPath.Contains(".Wear."))
-			continue;
-		// Skip the migration packages as that is not meant forto be used here
-		if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
-			continue;
+				var filename = nupkg.GetFilenameWithoutExtension();
+				var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+				itemGroup.Add(new XElement(xmlns + "PackageReference",
+					new XAttribute("Include", match.Groups[1]),
+					new XAttribute("Version", match.Groups[2])));
 
-		var filename = nupkg.GetFilenameWithoutExtension();
-		var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-		itemGroup.Add(new XElement(xmlns + "PackageReference",
-			new XAttribute("Include", match.Groups[1]),
-			new XAttribute("Version", match.Groups[2])));
+			}
+			// R8 ACW  errors about missing classes
+			// could have been grabbed from config.json
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava"),
+							new XAttribute("Version", "27.1.0.4")
+							)
+						);	
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava.FailureAccess"),
+							new XAttribute("Version", "1.0.1.2")
+							)
+						);	
+			itemGroup.Add
+						(new XElement(xmlns + "PackageReference",
+							new XAttribute("Include", "Xamarin.Google.Guava.ListenableFuture"),
+							new XAttribute("Version", "1.0.0.2")
+							)
+						);	
 
-	}
+      var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
+			xdoc.Save("./output/AllPackages.targets");
 
-	// R8 ACW errors about missing classes
-	// TODO: could have been grabbed from config.json
-	itemGroup.Add(new XElement(xmlns + "PackageReference",
-		new XAttribute("Include", "Xamarin.Google.Guava"),
-		new XAttribute("Version", "27.1.0.4")));
-	itemGroup.Add(new XElement(xmlns + "PackageReference",
-		new XAttribute("Include", "Xamarin.Google.Guava.FailureAccess"),
-		new XAttribute("Version", "1.0.1.2")));
-	itemGroup.Add(new XElement(xmlns + "PackageReference",
-		new XAttribute("Include", "Xamarin.Google.Guava.ListenableFuture"),
-		new XAttribute("Version", "1.0.0.2")));
-
-	var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
-	xdoc.Save("./output/AllPackages.targets");
-});
+			return;
+		}
+	);
 
 Task("samples")
 	.IsDependentOn("nuget")
@@ -484,33 +571,50 @@ Task("samples")
 	.IsDependentOn("migration-nuget")
 	.Does(() =>
 {
+	Configs = new string[] {"Release", "Debug"};
+
+	// TODO: make this actually work with more than just this sample
+
 	// clear the packages folder so we always use the latest
 	var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
 	EnsureDirectoryExists(packagesPath);
 	CleanDirectories(packagesPath);
 
-	// build the samples
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger($"./output/samples.{config}.binlog")
-		.WithRestore()
-		.WithProperty("RestorePackagesPath", packagesPath)
-		.WithProperty("DesignTimeBuild", "false")
-		.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+	foreach(string config in Configs)
+	{
+		// build the samples
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger($"./output/samples.{config}.binlog")
+			.WithRestore()
+			.WithProperty("RestorePackagesPath", packagesPath)
+			.WithProperty("DesignTimeBuild", "false")
+			.WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
-	if (!string.IsNullOrEmpty(ANDROID_HOME))
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
 
-	MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		try
+		{
+			MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+		}
+		catch (System.Exception exc)
+		{
+			Error($"samples error: 	{config} ./samples/BuildAll/BuildAll.sln");
+			Error($"				{exc.Message}");
+			throw;
+		}
+	}
 });
 
 // Migration Preparation
 
 Task("generate-mapping")
 	.IsDependentOn("merge")
-	.IsDependentOn("nuget")
 	.Does(() =>
 {
 	EnsureDirectoryExists("./output/");
@@ -518,9 +622,6 @@ Task("generate-mapping")
 	// download the AndroidSupport.Merged.dll from a past build
 	if (!FileExists("./output/AndroidSupport.Merged.dll"))
 		DownloadFile(SUPPORT_MERGED_DLL_URL, "./output/AndroidSupport.Merged.dll");
-
-	// copy the overrides
-	CopyFileToDirectory("./mappings/override-mapping.csv", "./output/mappings/");
 
 	// generate the mapping
 	Information("Generating the androidx-mapping.csv file...");
@@ -561,7 +662,18 @@ Task("generate-mapping")
 	var csv = new CsvReader(csvReader);
 	var records = csv.GetRecords<dynamic>()
 		.Cast<IDictionary<string, object>>()
-		.Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")
+		.Select(r => 
+					{
+						if( ((IDictionary<String, object>)r).ContainsKey("Support .NET assembly"))
+						{
+							return $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}";
+						}
+						else
+						{
+							throw new Exception("Not found - column name: Support .NET assembly");
+						}
+					}
+				)
 		.Union(new [] {
 			"Xamarin.Android.Support.v4|Xamarin.AndroidX.Legacy.Support.V4",
 			"Xamarin.Android.Support.MultiDex|Xamarin.AndroidX.MultiDex",
@@ -690,45 +802,57 @@ Task("migration-libs")
 	.IsDependentOn("migration-externals")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-libs.binlog")
-		.WithRestore()
-		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-libs.binlog")
+			.WithRestore()
+			.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
 
-	if (!string.IsNullOrEmpty(ANDROID_HOME))
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
 
-	MSBuild("./source/migration/Xamarin.AndroidX.Migration.sln", settings);
+		MSBuild("./source/migration/Xamarin.AndroidX.Migration.sln", settings);
+	}
 });
 
 Task("migration-nuget")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	var settings = new MSBuildSettings()
-		.SetConfiguration(CONFIGURATION)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-nuget.binlog")
-		.WithProperty("NoBuild", "true")
-		.WithRestore()
-		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
-		.WithProperty("MultiDexVersion", MULTIDEX_PACKAGE_VERSION)
-		.WithProperty("PackageRequireLicenseAcceptance", "true")
-		.WithProperty("PackageOutputPath", MakeAbsolute((DirectoryPath)"./output/").FullPath)
-		.WithTarget("Pack");
+	Configs = new string[] {"Release"};
 
-	if (!string.IsNullOrEmpty(ANDROID_HOME))
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+	foreach(string config in Configs)
+	{
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-nuget.binlog")
+			.WithProperty("NoBuild", "true")
+			.WithRestore()
+			.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
+			.WithProperty("MultiDexVersion", MULTIDEX_PACKAGE_VERSION)
+			.WithProperty("PackageRequireLicenseAcceptance", "true")
+			.WithProperty("PackageOutputPath", MakeAbsolute((DirectoryPath)"./output/").FullPath)
+			.WithTarget("Pack");
 
-	MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
 
-	settings.EnableBinaryLogger("./output/migration-tool-nuget.binlog");
+		MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
 
-	MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
+		settings.EnableBinaryLogger("./output/migration-tool-nuget.binlog");
+
+		MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
+	}
 });
 
 // Migration Tests
@@ -780,27 +904,34 @@ Task("migration-tests")
 	.IsDependentOn("migration-libs")
 	.Does(() =>
 {
-	// build
-	var settings = new MSBuildSettings()
-		.SetConfiguration(config)
-		.SetVerbosity(VERBOSITY)
-		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-tests.binlog")
-		.WithRestore();
+	Configs = new string[] {"Release"};
 
-	if (!string.IsNullOrEmpty(ANDROID_HOME))
-		settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+	foreach (string config in Configs)
+	{
+		// build
+		var settings = new MSBuildSettings()
+			.SetConfiguration(config)
+			.SetVerbosity(VERBOSITY)
+			.SetMaxCpuCount(0)
+			.EnableBinaryLogger("./output/migration-tests.binlog")
+			.WithRestore();
 
-	MSBuild("./tests/AndroidXMigrationTests.sln", settings);
+		if (! string.IsNullOrEmpty(ANDROID_HOME))
+		{
+			settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+		}
+		
+		MSBuild("./tests/AndroidXMigrationTests.sln", settings);
 
-	// test
-	DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
-		Configuration = config,
-		NoBuild = true,
-		Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
-		WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
-		ResultsDirectory = "./output/test-results/",
-	});
+		// test
+		DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+			Configuration = config,
+			NoBuild = true,
+			Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
+			WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
+			ResultsDirectory = "./output/test-results/",
+		});
+	}
 });
 
 
@@ -1065,7 +1196,7 @@ Task ("ci")
 	.IsDependentOn ("inject-variables")
 	.IsDependentOn ("binderate")
 	.IsDependentOn ("nuget")
-	.IsDependentOn ("generate-mapping")
+	//.IsDependentOn ("generate-mapping")
 	.IsDependentOn ("migration-nuget")
 	.IsDependentOn ("migration-tests")
 	.IsDependentOn ("samples");
