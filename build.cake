@@ -17,8 +17,8 @@ using CsvHelper;
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
-var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
 var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
+var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -38,7 +38,7 @@ var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSuppo
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
 var ANDROID_SDK_VERSION = "v10.0";
-string AndroidSdkBuildTools = $"29.0.2";
+var AndroidSdkBuildTools = $"29.0.2";
 
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
 	if (IsRunningOnWindows()) {
