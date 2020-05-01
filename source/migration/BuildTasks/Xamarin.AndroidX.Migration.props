@@ -107,6 +107,7 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Runtime" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AsyncLayoutInflater" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Browser" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.Camera.Extensions" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.CardView" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Collection" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.ConstraintLayout" />
@@ -187,6 +188,7 @@
         <_AndroidXMavenArtifact Include="androidx.browser.browser" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-camera2" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-core" />
+        <_AndroidXMavenArtifact Include="androidx.camera.camera-extensions" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-lifecycle" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-view" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
