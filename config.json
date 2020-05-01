@@ -114,40 +114,32 @@
 		,{
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-camera2",
-			"version" : "1.0.0-beta03",
-			"nugetVersion" : "1.0.0-beta03",
+			"version" : "1.0.0-beta01",
+			"nugetVersion" : "1.0.0-beta01",
 			"nugetId" : "Xamarin.AndroidX.Camera.Camera2",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-core",
-			"version" : "1.0.0-beta03",
-			"nugetVersion" : "1.0.0-beta03",
+			"version" : "1.0.0-beta01",
+			"nugetVersion" : "1.0.0-beta01",
 			"nugetId" : "Xamarin.AndroidX.Camera.Core",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.camera",
-			"artifactId" : "camera-extensions",
-			"version" : "1.0.0-alpha10",
-			"nugetVersion" : "1.0.0-alpha10",
-			"nugetId" : "Xamarin.AndroidX.Camera.Extensions",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.camera",
 			"artifactId" : "camera-lifecycle",
-			"version" : "1.0.0-beta03",
-			"nugetVersion" : "1.0.0-beta03",
+			"version" : "1.0.0-beta01",
+			"nugetVersion" : "1.0.0-beta01",
 			"nugetId" : "Xamarin.AndroidX.Camera.Lifecycle",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-view",
-			"version" : "1.0.0-alpha10",
-			"nugetVersion" : "1.0.0-alpha10",
+			"version" : "1.0.0-alpha08",
+			"nugetVersion" : "1.0.0-alpha08",
 			"nugetId" : "Xamarin.AndroidX.Camera.View",
 			"dependencyOnly" : false
 		}
@@ -821,7 +813,7 @@
 			"artifactId" : "migration",
 			"nugetId" : "Xamarin.AndroidX.Migration",
 			"version" : "1.0",
-			"nugetVersion" : "1.0.6",
+			"nugetVersion" : "1.0.5",
 			"dependencyOnly" : true
 		}
 	]
