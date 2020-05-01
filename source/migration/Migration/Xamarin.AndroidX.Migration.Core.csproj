@@ -15,6 +15,7 @@
     <Content Include="..\..\..\mappings\androidx-class-mapping.csv" Link="Tools\Mappings\androidx-class-mapping.csv" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\..\output\mappings\androidx-mapping.csv" Link="Tools\Mappings\androidx-mapping.csv" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\..\output\mappings\dependencies.json" Link="Tools\Mappings\dependencies.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\..\output\mappings\override-mapping.csv" Link="Tools\Mappings\override-mapping.csv" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\..\output\JetifierWrapper\jetifierWrapper-1.0.jar" Link="Tools\JetifierWrapper\jetifierWrapper-1.0.jar" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
