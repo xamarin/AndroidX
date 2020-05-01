@@ -402,10 +402,10 @@ Task("libs")
 	.Does(() =>
 {
 	var settings = new MSBuildSettings()
-		.SetConfiguration(config)
+		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/libs.binlog")
+		.EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
 		.WithRestore()
 		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
 		.WithProperty("DesignTimeBuild", "false")
@@ -425,7 +425,7 @@ Task("nuget")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/nuget.binlog")
+		.EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
 		.WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
 		.WithProperty("NoBuild", "true")
 		.WithProperty("PackageRequireLicenseAcceptance", "true")
@@ -494,7 +494,7 @@ Task("samples")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.EnableBinaryLogger($"./output/samples.{config}.binlog")
+		.EnableBinaryLogger($"./output/samples.{CONFIGURATION}.binlog")
 		.WithRestore()
 		.WithProperty("RestorePackagesPath", packagesPath)
 		.WithProperty("DesignTimeBuild", "false")
@@ -694,7 +694,7 @@ Task("migration-libs")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-libs.binlog")
+		.EnableBinaryLogger($"./output/migration-libs.{CONFIGURATION}.binlog")
 		.WithRestore()
 		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
 
@@ -712,7 +712,7 @@ Task("migration-nuget")
 		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-nuget.binlog")
+		.EnableBinaryLogger($"./output/migration-nuget.{CONFIGURATION}.binlog")
 		.WithProperty("NoBuild", "true")
 		.WithRestore()
 		.WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
@@ -726,7 +726,7 @@ Task("migration-nuget")
 
 	MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
 
-	settings.EnableBinaryLogger("./output/migration-tool-nuget.binlog");
+	settings.EnableBinaryLogger($"./output/migration-tool-nuget.{CONFIGURATION}.binlog");
 
 	MSBuild("./source/migration/Tool/Xamarin.AndroidX.Migration.Tool.csproj", settings);
 });
@@ -782,10 +782,10 @@ Task("migration-tests")
 {
 	// build
 	var settings = new MSBuildSettings()
-		.SetConfiguration(config)
+		.SetConfiguration(CONFIGURATION)
 		.SetVerbosity(VERBOSITY)
 		.SetMaxCpuCount(0)
-		.EnableBinaryLogger("./output/migration-tests.binlog")
+		.EnableBinaryLogger($"./output/migration-tests.{CONFIGURATION}.binlog")
 		.WithRestore();
 
 	if (!string.IsNullOrEmpty(ANDROID_HOME))
@@ -795,7 +795,7 @@ Task("migration-tests")
 
 	// test
 	DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
-		Configuration = config,
+		Configuration = CONFIGURATION,
 		NoBuild = true,
 		Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
 		WorkingDirectory = "./tests/AndroidXMigrationTests/Tests/",
