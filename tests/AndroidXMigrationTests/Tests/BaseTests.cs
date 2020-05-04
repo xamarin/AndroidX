@@ -12,6 +12,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 		public const string MergedSupportDll = "AndroidSupport.Merged.dll";
 		public const string MergedAndroidXDll = "AndroidX.Merged.dll";
 		public const string ActiveDirectoryDll = "Microsoft.IdentityModel.Clients.ActiveDirectory.dll";
+		public const string ActiveDirectoryPdb = "Microsoft.IdentityModel.Clients.ActiveDirectory.pdb";
 
 		public const string ManagedSupportDll = "Aarxercise.Managed.Support.dll";
 		public const string ManagedAndroidXDll = "Aarxercise.Managed.AndroidX.dll";
@@ -90,11 +91,26 @@ namespace Xamarin.AndroidX.Migration.Tests
 			return destFile;
 		}
 
-		public static string RunMigration(string supportDll, CecilMigrationResult expectedResult)
+		public static string RunMigration(string supportDll, CecilMigrationResult expectedResult, string logPath = null)
 		{
 			var migratedDll = Utils.GetTempFilename() + ".dll";
 
 			var migrator = new CecilMigrator();
+
+			if (!string.IsNullOrWhiteSpace(logPath))
+			{
+				migrator.MessageLogged += (sender, e) =>
+				{
+					var log = string.Empty;
+					if (e.IsError)
+						log += "ERROR: ";
+					if (e.IsVerbose)
+						log += "VERBOSE: ";
+					log += e.Message;
+					File.AppendAllLines(logPath, new [] { log });
+				};
+			}
+
 			var result = migrator.Migrate(supportDll, migratedDll);
 
 			Assert.Equal(expectedResult, result);
