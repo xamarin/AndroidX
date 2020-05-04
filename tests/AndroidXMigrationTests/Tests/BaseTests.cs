@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using Mono.Cecil;
 using Xunit;
 
 namespace Xamarin.AndroidX.Migration.Tests
@@ -124,6 +126,18 @@ namespace Xamarin.AndroidX.Migration.Tests
 			using var br = new BinaryReader(fs);
 			
 			return br.ReadUInt32() == PortablePdbSignature;
+		}
+
+		public static void AssertHasSupportTypes(IEnumerable<TypeReference> types)
+		{
+			Assert.NotEmpty(types.Where(t => t.FullName.StartsWith("Android.Support.") || t.FullName.StartsWith("Android.Arch.")));
+		}
+
+		public static void AssertNoSupportTypes(IEnumerable<TypeReference> types)
+		{
+			Assert.Empty(types.Where(t => 
+				(t.FullName.StartsWith("Android.Support.") || t.FullName.StartsWith("Android.Arch.")) &&
+				(t.FullName != "Android.Support.V4.Media.Session.MediaSessionCompat")));
 		}
 	}
 }

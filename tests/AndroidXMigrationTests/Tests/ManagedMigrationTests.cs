@@ -19,11 +19,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 			using (var support = AssemblyDefinition.ReadAssembly(assembly))
 			{
 				var types = support.MainModule.GetTypeReferences();
-				var supportReferences = types.Where(t => t.FullName.StartsWith("Android.Support.") || t.FullName.StartsWith("Android.Arch."));
 				if (hasSupportReference)
-					Assert.NotEmpty(supportReferences);
+					AssertHasSupportTypes(types);
 				else
-					Assert.Empty(supportReferences);
+					AssertNoSupportTypes(types);
 			}
 		}
 
@@ -161,9 +160,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			using (var def = AssemblyDefinition.ReadAssembly(migratedDll))
 			{
 				var types = def.MainModule.GetTypeReferences();
-				Assert.Empty(types.Where(t => 
-					(t.FullName.StartsWith("Android.Support.") || t.FullName.StartsWith("Android.Arch.")) &&
-					(t.FullName != "Android.Support.V4.Media.Session.MediaSessionCompat")));
+				AssertNoSupportTypes(types);
 			}
 			Assert.True(IsPortablePdb(Path.ChangeExtension(migratedDll, "pdb")), migratedDll);
 		}
