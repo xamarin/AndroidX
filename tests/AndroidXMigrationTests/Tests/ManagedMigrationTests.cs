@@ -12,17 +12,17 @@ namespace Xamarin.AndroidX.Migration.Tests
 		[InlineData(ManagedSupportDll, true)]
 		[InlineData(OldSupportDll, true)]
 		[InlineData(BindingSupportDll, true)]
+		[InlineData(ActiveDirectoryDll, true)]
 		[InlineData(MergedSupportDll, false)]
 		public void AssembliesHaveSupportReferences(string assembly, bool hasSupportReference)
 		{
 			using (var support = AssemblyDefinition.ReadAssembly(assembly))
 			{
 				var types = support.MainModule.GetTypeReferences();
-				var supportReferences = types.Where(t => t.FullName.StartsWith("Android.Support.") || t.FullName.StartsWith("Android.Arch."));
 				if (hasSupportReference)
-					Assert.NotEmpty(supportReferences);
+					AssertHasSupportTypes(types);
 				else
-					Assert.Empty(supportReferences);
+					AssertNoSupportTypes(types);
 			}
 		}
 
@@ -142,6 +142,27 @@ namespace Xamarin.AndroidX.Migration.Tests
 						XDocument.Load(migratedLayout).Root.Elements().FirstOrDefault().Name.LocalName);
 				}
 			}
+		}
+
+		[Theory]
+		[InlineData(ActiveDirectoryDll, ActiveDirectoryPdb, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts)]
+		[InlineData(ManagedSupportDll, ActiveDirectoryPdb, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		[InlineData(ManagedSupportDll, ManagedSupportDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		public void CanRunMigrationOnCorruptedPdbs(string assembly, string symbols, CecilMigrationResult expectedResult)
+		{
+			var dll = Utils.GetTempFilename(Path.GetFileName(assembly));
+			var pdb = Path.ChangeExtension(dll, "pdb");
+			File.Copy(assembly, dll, true);
+			File.Copy(symbols, pdb, true);
+			
+			var migratedDll = RunMigration(dll, expectedResult);
+
+			using (var def = AssemblyDefinition.ReadAssembly(migratedDll))
+			{
+				var types = def.MainModule.GetTypeReferences();
+				AssertNoSupportTypes(types);
+			}
+			Assert.True(IsPortablePdb(Path.ChangeExtension(migratedDll, "pdb")), migratedDll);
 		}
 	}
 }
