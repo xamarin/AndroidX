@@ -58,7 +58,9 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Annotation.Experimental",
@@ -206,6 +208,13 @@
         "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Camera.Extensions",
+      "dependencies": [
+        "Xamarin.AndroidX.Camera.Core",
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -564,6 +573,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
