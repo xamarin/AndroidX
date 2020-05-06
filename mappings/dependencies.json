@@ -211,13 +211,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Camera.Extensions",
-      "dependencies": [
-        "Xamarin.AndroidX.Camera.Core",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Camera.Lifecycle",
       "dependencies": [
         "Xamarin.AndroidX.Camera.Core",
