@@ -202,12 +202,5 @@
       <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" />
     </ItemGroup>
   }
-  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable")
-  {
-    <ItemGroup>
-      <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
-      <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
-    </ItemGroup>
-  }
   
 </Project>
