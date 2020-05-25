@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CsvHelper;
 
+
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
@@ -186,6 +187,30 @@ Task("check-tools")
 			throw new Exception ($"Missing dotnet tool: {toolName}");
 	}
 });
+
+
+Task("tools-update")
+	.Does
+	(
+		() =>
+		{
+			/*
+			dotnet tool uninstall   -g Cake.Tool
+			dotnet tool install     -g Cake.Tool
+			dotnet tool uninstall   -g xamarin.androidbinderator.tool
+			dotnet tool install     -g xamarin.androidbinderator.tool
+			dotnet tool uninstall   -g xamarin.androidx.migration.tool
+			dotnet tool install     -g xamarin.androidx.migration.tool
+
+			StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
+			StartProcess("dotnet", "tool install     -g Cake.Tool");
+			*/
+			StartProcess("dotnet", "tool uninstall   -g xamarin.androidbinderator.tool");
+			StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
+			StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
+			StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
+		}
+	);
 
 // Android X
 
