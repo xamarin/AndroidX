@@ -1,6 +1,5 @@
 ﻿using Mono.Cecil;
 using Mono.Cecil.Cil;
-using Mono.Cecil.Pdb;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -97,19 +96,9 @@ namespace Xamarin.AndroidX.Migration
 					}
 				}
 
-				var readerParams = new ReaderParameters
-				{
-					ReadSymbols = hasSymbols,
-					ReadWrite = true,
-					AssemblyResolver = resolver,
-				};
-
 				LogVerboseMessage($"Processing assembly '{source}'...");
-				using (var assembly = AssemblyDefinition.ReadAssembly(destination, readerParams))
+				using (var assembly = ReadAssembly(resolver, destination))
 				{
-					if (!hasSymbols)
-						LogVerboseMessage($"  No debug symbols found for the assembly.");
-
 					result = MigrateAssembly(assembly);
 
 					requiresSave =
@@ -580,6 +569,41 @@ namespace Xamarin.AndroidX.Migration
 			File.Copy(src, dst, true);
 
 			return true;
+		}
+
+		private AssemblyDefinition ReadAssembly(AssemblyResolver resolver, string path)
+		{
+			var readerParams = new ReaderParameters
+			{
+				ReadSymbols = true,
+				ReadWrite = true,
+				AssemblyResolver = resolver,
+			};
+
+			var pdbPath = Path.ChangeExtension(path, "pdb");
+			var mdbPath = path + ".mdb";
+
+			if (File.Exists(pdbPath) || File.Exists(mdbPath))
+			{
+				// if there are symbols, then try using them
+				try
+				{
+					return AssemblyDefinition.ReadAssembly(path, readerParams);
+				}
+				catch (Exception ex)
+				{
+					// do nothing
+					LogMessage($"  Debug symbols were found for the assembly, but they couldn't be used: " + ex.Message);
+				}
+			}
+			else
+			{
+				LogVerboseMessage($"  No debug symbols found for the assembly.");
+			}
+
+			// just ignore all symbols, there is nothing that can be done about bad symbols
+			readerParams.ReadSymbols = false;
+			return AssemblyDefinition.ReadAssembly(path, readerParams);
 		}
 
 		private sealed class AssemblyResolver : DefaultAssemblyResolver
