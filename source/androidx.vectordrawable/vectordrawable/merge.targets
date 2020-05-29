@@ -1,39 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!-- 
-    * 
-    * Xamarin Android Support Vector Drawable MSBuild Tasks
-    * 
-  -->
-  <PropertyGroup>
-    <VectorDrawableCheckBuildToolsVersionTaskFilename Condition=" '$(VectorDrawableCheckBuildToolsVersionTaskFilename)' == '' ">$(MSBuildThisFileDirectory)Xamarin.AndroidX.VectorDrawable.BuildTasks.dll</VectorDrawableCheckBuildToolsVersionTaskFilename>
-  </PropertyGroup>
-
-  <!-- set some defaults -->
-  <PropertyGroup>
-    <VectorDrawableCheckBuildToolsVersionTaskDependsOn>
-       _ResolveMonoAndroidSdks;$(VectorDrawableCheckBuildToolsVersionTaskDependsOn);
-    </VectorDrawableCheckBuildToolsVersionTaskDependsOn>
-    <VectorDrawableCheckBuildToolsVersionTaskBeforeTargets>
-      _UpdateAndroidResgen;$(VectorDrawableCheckBuildToolsVersionTaskBeforeTargets);
-    </VectorDrawableCheckBuildToolsVersionTaskBeforeTargets>
-  </PropertyGroup>
-
-  <!-- include the task assembly -->
-  <UsingTask 
-      AssemblyFile="$(VectorDrawableCheckBuildToolsVersionTaskFilename)" 
-      TaskName="Xamarin.AndroidX.VectorDrawable.BuildTasks.VectorDrawableCheckBuildToolsVersionTask" />
-
-  <!-- the build tasks -->
-  <Target
-    Name="VectorDrawableCheckBuildToolsVersionTask" 
-    Condition=""
-    BeforeTargets="$(VectorDrawableCheckBuildToolsVersionTaskBeforeTargets)">
-
-    <VectorDrawableCheckBuildToolsVersionTask
-      AndroidSdkBuildToolsPath="$(AndroidSdkBuildToolsPath)">
-    </VectorDrawableCheckBuildToolsVersionTask>
-  </Target>
 
   <Target 
     Name="_XamarinAndroidSupportVectorDrawableArgs"
