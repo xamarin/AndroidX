@@ -187,15 +187,6 @@
     }
   </ItemGroup>
 
-  @if (false && @Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
-  {
-    // Disabled as this build task doesn't really do anything anymore but we may use it again in the future
-    <ItemGroup>
-      <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
-      <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
-    </ItemGroup>
-  }
-
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
     <ItemGroup>

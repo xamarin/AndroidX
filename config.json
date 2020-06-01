@@ -3,8 +3,6 @@
 	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": 
 	[
-		"source/buildtasks/annotation/Annotation-BuildTasks.csproj",
-		"source/buildtasks/annotation-tests/Annotation-BuildTasks-Tests.csproj",
 		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj"
 	],
 	"templates" : [
