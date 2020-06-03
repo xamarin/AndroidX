@@ -4,11 +4,10 @@ trigger:
 
 pr:
   - master
-  
+
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
-  PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
 resources:

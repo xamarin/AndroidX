@@ -52,6 +52,7 @@
   <PropertyGroup>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+    <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -186,26 +187,10 @@
     }
   </ItemGroup>
 
-  @if (false && @Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
-  {
-    // Disabled as this build task doesn't really do anything anymore but we may use it again in the future
-    <ItemGroup>
-      <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
-      <None Include="..\..\source\buildtasks\annotation\bin\$(Configuration)\Xamarin.AndroidX.Annotation.BuildTasks.dll" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
-    </ItemGroup>
-  }
-
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
     <ItemGroup>
       <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" />
-    </ItemGroup>
-  }
-  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.VectorDrawable")
-  {
-    <ItemGroup>
-      <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="build\$(TargetFramework)" />
-      <None Include="..\..\source\buildtasks\vectordrawable\bin\$(Configuration)\Xamarin.AndroidX.VectorDrawable.BuildTasks.dll" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
     </ItemGroup>
   }
   
