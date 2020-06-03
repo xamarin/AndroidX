@@ -3,10 +3,7 @@
 	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": 
 	[
-		"source/buildtasks/annotation/Annotation-BuildTasks.csproj",
-		"source/buildtasks/annotation-tests/Annotation-BuildTasks-Tests.csproj",
-		"source/buildtasks/vectordrawable/VectorDrawable-BuildTasks.csproj",
-		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
+		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj"
 		"source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
 	],
 	"templates" : [
