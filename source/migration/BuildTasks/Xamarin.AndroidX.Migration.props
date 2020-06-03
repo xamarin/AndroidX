@@ -100,7 +100,6 @@
     <!-- all the AndroidX assemblies -->
     <ItemGroup>
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
-        <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation.Experimental" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat.AppCompatResources" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Common" />
@@ -176,7 +175,6 @@
     <ItemGroup>
         <_AndroidXMavenArtifact Include="androidx.activity.activity" />
         <_AndroidXMavenArtifact Include="androidx.annotation.annotation" />
-        <_AndroidXMavenArtifact Include="androidx.annotation.annotation-experimental" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat-resources" />
         <_AndroidXMavenArtifact Include="androidx.arch.core.core-common" />
@@ -185,10 +183,6 @@
         <_AndroidXMavenArtifact Include="androidx.autofill.autofill" />
         <_AndroidXMavenArtifact Include="androidx.biometric.biometric" />
         <_AndroidXMavenArtifact Include="androidx.browser.browser" />
-        <_AndroidXMavenArtifact Include="androidx.camera.camera-camera2" />
-        <_AndroidXMavenArtifact Include="androidx.camera.camera-core" />
-        <_AndroidXMavenArtifact Include="androidx.camera.camera-lifecycle" />
-        <_AndroidXMavenArtifact Include="androidx.camera.camera-view" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection" />
         <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
@@ -225,7 +219,6 @@
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-runtime" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-service" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel" />
-        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel-savedstate" />
         <_AndroidXMavenArtifact Include="androidx.loader.loader" />
         <_AndroidXMavenArtifact Include="androidx.localbroadcastmanager.localbroadcastmanager" />
         <_AndroidXMavenArtifact Include="androidx.media.media" />
