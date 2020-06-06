@@ -55,22 +55,15 @@
       "id": "Xamarin.AndroidX.AppCompat",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CursorAdapter",
-        "Xamarin.AndroidX.DrawerLayout",
-        "Xamarin.AndroidX.Fragment"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.AppCompat.AppCompatResources",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Fragment",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "Xamarin.AndroidX.VectorDrawable.Animated",
-        "Xamarin.AndroidX.VectorDrawable"
+        "Xamarin.AndroidX.VectorDrawable",
+        "Xamarin.AndroidX.AppCompat.AppCompatResources",
+        "Xamarin.AndroidX.DrawerLayout"
       ]
     },
     {
@@ -86,39 +79,63 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.DrawerLayout",
+      "id": "Xamarin.AndroidX.Fragment",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.CustomView"
+        "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.Loader",
+        "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.ViewPager"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Fragment",
+      "id": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
       "dependencies": [
-        "Xamarin.AndroidX.Activity",
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.DocumentFile",
         "Xamarin.AndroidX.Loader",
-        "Xamarin.AndroidX.ViewPager"
+        "Xamarin.AndroidX.LocalBroadcastManager",
+        "Xamarin.AndroidX.Print"
       ]
     },
     {
       "id": "Xamarin.AndroidX.VectorDrawable.Animated",
       "dependencies": [
+        "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "Xamarin.AndroidX.VectorDrawable",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Interpolator",
-        "Xamarin.AndroidX.VectorDrawable"
+        "Xamarin.AndroidX.Interpolator"
       ]
     },
     {
       "id": "Xamarin.AndroidX.VectorDrawable",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Collection"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.AppCompat.AppCompatResources",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.VectorDrawable.Animated",
+        "Xamarin.AndroidX.VectorDrawable"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.DrawerLayout",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.CustomView"
       ]
     },
     {
@@ -233,9 +250,9 @@
       "id": "Xamarin.AndroidX.CoordinatorLayout",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.CustomView"
+        "Xamarin.AndroidX.CustomView",
+        "Xamarin.AndroidX.Collection"
       ]
     },
     {
@@ -267,17 +284,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.DocumentFile",
-        "Xamarin.AndroidX.Loader",
-        "Xamarin.AndroidX.LocalBroadcastManager",
-        "Xamarin.AndroidX.Print"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Emoji",
       "dependencies": [
         "Xamarin.AndroidX.Core"
@@ -306,10 +312,11 @@
       "id": "Xamarin.AndroidX.Loader",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Lifecycle.LiveData.Core",
-        "Xamarin.AndroidX.Lifecycle.ViewModel"
+        "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Lifecycle.LiveData.Core"
       ]
     },
     {
@@ -346,16 +353,19 @@
     {
       "id": "Xamarin.AndroidX.Media",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.VersionedParcelable",
+        "Xamarin.AndroidX.Collection"
       ]
     },
     {
       "id": "Xamarin.AndroidX.RecyclerView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.CustomView"
       ]
     },
@@ -379,12 +389,12 @@
     {
       "id": "Xamarin.AndroidX.Preference",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.RecyclerView"
+        "Xamarin.AndroidX.RecyclerView",
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -529,9 +539,9 @@
     {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -544,26 +554,18 @@
     {
       "id": "Xamarin.AndroidX.Navigation.Runtime",
       "dependencies": [
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Navigation.Common",
         "Xamarin.AndroidX.Activity",
-        "Xamarin.AndroidX.Lifecycle.ViewModel",
-        "Xamarin.AndroidX.Navigation.Common"
+        "Xamarin.AndroidX.Lifecycle.ViewModel"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Navigation.UI",
       "dependencies": [
         "Xamarin.AndroidX.Navigation.Runtime",
-        "Xamarin.AndroidX.Transition",
-        "Xamarin.Google.Android.Material"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Transition",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Fragment"
+        "Xamarin.Google.Android.Material",
+        "Xamarin.AndroidX.Transition"
       ]
     },
     {
@@ -578,6 +580,15 @@
         "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Transition"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Transition",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Fragment",
+        "Xamarin.AndroidX.Collection"
       ]
     },
     {
@@ -628,19 +639,25 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Arch.Core.Runtime",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Room.Common",
-        "Xamarin.AndroidX.Room.Runtime"
+        "Xamarin.AndroidX.Room.Runtime",
+        "Xamarin.Google.Guava",
+        "Xamarin.AndroidX.Concurrent.Futures"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Room.Runtime",
       "dependencies": [
         "Xamarin.AndroidX.Arch.Core.Runtime",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "Xamarin.AndroidX.Room.Common",
         "Xamarin.AndroidX.Sqlite.Framework",
         "Xamarin.AndroidX.Sqlite"
       ]
+    },
+    {
+      "id": "Xamarin.Google.Guava",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Sqlite.Framework",
@@ -715,11 +732,12 @@
     {
       "id": "Xamarin.AndroidX.Work.Runtime",
       "dependencies": [
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.AndroidX.Lifecycle.Extensions",
         "Xamarin.AndroidX.Lifecycle.Service",
         "Xamarin.AndroidX.Room.Runtime",
-        "Xamarin.Google.Guava.ListenableFuture"
+        "Xamarin.Google.Guava.ListenableFuture",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Lifecycle.LiveData"
       ]
     }
   ]
