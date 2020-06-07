@@ -263,10 +263,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 
 			var expected = new[]
 			{
-				//"Xamarin.AndroidX.Activity",
+				"Xamarin.AndroidX.Activity",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.AppCompat",
-				//"Xamarin.AndroidX.AppCompat.AppCompatResources",
+				"Xamarin.AndroidX.AppCompat.AppCompatResources",
 				"Xamarin.AndroidX.Arch.Core.Common",
 				"Xamarin.AndroidX.Arch.Core.Runtime",
 				"Xamarin.AndroidX.AsyncLayoutInflater",
@@ -285,11 +285,11 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.Core.Utils",
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
-				"Xamarin.AndroidX.Lifecycle.LiveData",
+				//"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
-				//"Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
+				"Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
 				"Xamarin.AndroidX.Loader",
 				"Xamarin.AndroidX.LocalBroadcastManager",
 				"Xamarin.AndroidX.Media",
@@ -297,7 +297,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				//"Xamarin.AndroidX.MultiDex",
 				"Xamarin.AndroidX.Print",
 				"Xamarin.AndroidX.RecyclerView",
-				//"Xamarin.AndroidX.SavedState",
+				"Xamarin.AndroidX.SavedState",
 				"Xamarin.AndroidX.SlidingPaneLayout",
 				"Xamarin.AndroidX.SwipeRefreshLayout",
 				"Xamarin.AndroidX.Transition",
@@ -305,9 +305,9 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.VectorDrawable.Animated",
 				"Xamarin.AndroidX.VersionedParcelable",
 				"Xamarin.AndroidX.ViewPager",
-				//"Xamarin.AndroidX.ViewPager2",
+				"Xamarin.AndroidX.ViewPager2",
 				"Xamarin.Google.Android.Material",
-				//"Xamarin.Google.Guava.ListenableFuture",
+				"Xamarin.Google.Guava.ListenableFuture",
 			};
 
 			var tree = PackageDependencyTree.Load();
@@ -368,7 +368,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Browser",
 				"Xamarin.AndroidX.Legacy.Support.V4",
-				//"Xamarin.AndroidX.Lifecycle.LiveData",
+				"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.MediaRouter",
 				"Xamarin.Google.Android.Material",
 			};
