@@ -685,7 +685,7 @@ Task ("merge")
 Task("jetifier-wrapper")
     .Does(() =>
 {
-    var root = "./source/migration/jetifierWrapper/";
+    var root = "./source/migration/JetifierWrapper/";
 
     RunGradle(root, "jar");
 
