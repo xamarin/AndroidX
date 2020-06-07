@@ -101,6 +101,7 @@
     <ItemGroup>
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat.AppCompatResources" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Common" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Runtime" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AsyncLayoutInflater" />
@@ -172,14 +173,19 @@
     </ItemGroup>
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
+        <_AndroidXMavenArtifact Include="androidx.activity.activity" />
         <_AndroidXMavenArtifact Include="androidx.annotation.annotation" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat" />
+        <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat-resources" />
         <_AndroidXMavenArtifact Include="androidx.arch.core.core-common" />
         <_AndroidXMavenArtifact Include="androidx.arch.core.core-runtime" />
         <_AndroidXMavenArtifact Include="androidx.asynclayoutinflater.asynclayoutinflater" />
+        <_AndroidXMavenArtifact Include="androidx.autofill.autofill" />
+        <_AndroidXMavenArtifact Include="androidx.biometric.biometric" />
         <_AndroidXMavenArtifact Include="androidx.browser.browser" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection" />
+        <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-solver" />
         <_AndroidXMavenArtifact Include="androidx.contentpager.contentpager" />
@@ -213,9 +219,13 @@
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-runtime" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-service" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel-savedstate" />
         <_AndroidXMavenArtifact Include="androidx.loader.loader" />
         <_AndroidXMavenArtifact Include="androidx.localbroadcastmanager.localbroadcastmanager" />
         <_AndroidXMavenArtifact Include="androidx.media.media" />
+        <_AndroidXMavenArtifact Include="androidx.media2.media2-common" />
+        <_AndroidXMavenArtifact Include="androidx.media2.media2-session" />
+        <_AndroidXMavenArtifact Include="androidx.media2.media2-widget" />
         <_AndroidXMavenArtifact Include="androidx.mediarouter.mediarouter" />
         <_AndroidXMavenArtifact Include="androidx.multidex.multidex" />
         <_AndroidXMavenArtifact Include="androidx.navigation.navigation-common" />
@@ -234,6 +244,7 @@
         <_AndroidXMavenArtifact Include="androidx.room.room-common" />
         <_AndroidXMavenArtifact Include="androidx.room.room-guava" />
         <_AndroidXMavenArtifact Include="androidx.room.room-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-builders" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-core" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-view" />
@@ -247,6 +258,7 @@
         <_AndroidXMavenArtifact Include="androidx.vectordrawable.vectordrawable-animated" />
         <_AndroidXMavenArtifact Include="androidx.versionedparcelable.versionedparcelable" />
         <_AndroidXMavenArtifact Include="androidx.viewpager.viewpager" />
+        <_AndroidXMavenArtifact Include="androidx.viewpager2.viewpager2" />
         <_AndroidXMavenArtifact Include="androidx.wear.wear" />
         <_AndroidXMavenArtifact Include="androidx.webkit.webkit" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
