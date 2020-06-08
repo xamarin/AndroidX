@@ -110,6 +110,38 @@
 			"dependencyOnly" : false
 		}
 		,{
+			"groupId" : "androidx.camera",
+			"artifactId" : "camera-camera2",
+			"version" : "1.0.0-beta01",
+			"nugetVersion" : "1.0.0-beta01.1",
+			"nugetId" : "Xamarin.AndroidX.Camera.Camera2",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.camera",
+			"artifactId" : "camera-core",
+			"version" : "1.0.0-beta01",
+			"nugetVersion" : "1.0.0-beta01.1",
+			"nugetId" : "Xamarin.AndroidX.Camera.Core",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.camera",
+			"artifactId" : "camera-lifecycle",
+			"version" : "1.0.0-beta01",
+			"nugetVersion" : "1.0.0-beta01.1",
+			"nugetId" : "Xamarin.AndroidX.Camera.Lifecycle",
+			"dependencyOnly" : false
+		}
+		,{
+			"groupId" : "androidx.camera",
+			"artifactId" : "camera-view",
+			"version" : "1.0.0-alpha08",
+			"nugetVersion" : "1.0.0-alpha08.1",
+			"nugetId" : "Xamarin.AndroidX.Camera.View",
+			"dependencyOnly" : false
+		}
+		,{
 			"groupId" : "androidx.cardview",
 			"artifactId" : "cardview",
 			"version" : "1.0.0",
@@ -713,7 +745,7 @@
 			"groupId" : "androidx.viewpager2",
 			"artifactId" : "viewpager2",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.3",
 			"nugetId" : "Xamarin.AndroidX.ViewPager2",
 			"dependencyOnly" : false
 		}
@@ -737,7 +769,7 @@
 			"groupId" : "androidx.work",
 			"artifactId" : "work-runtime",
 			"version" : "2.3.4",
-			"nugetVersion" : "2.3.4.2",
+			"nugetVersion" : "2.3.4.3",
 			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
 			"dependencyOnly" : false
 		}
@@ -779,7 +811,7 @@
 			"artifactId" : "migration",
 			"nugetId" : "Xamarin.AndroidX.Migration",
 			"version" : "1.0",
-			"nugetVersion" : "1.0.3.1",
+			"nugetVersion" : "1.0.4.1",
 			"dependencyOnly" : true
 		}
 	]

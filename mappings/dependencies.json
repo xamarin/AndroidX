@@ -190,6 +190,53 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Camera.Camera2",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation.Experimental",
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Camera.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Camera.Core",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation.Experimental",
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.LiveData",
+      "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Common",
+        "Xamarin.AndroidX.Arch.Core.Runtime",
+        "Xamarin.AndroidX.Lifecycle.LiveData.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Camera.Lifecycle",
+      "dependencies": [
+        "Xamarin.AndroidX.Camera.Core",
+        "Xamarin.AndroidX.Lifecycle.Common",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.Common",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Camera.View",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Camera.Core",
+        "Xamarin.AndroidX.Lifecycle.Common"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.CardView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -453,12 +500,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Lifecycle.Common",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Lifecycle.Extensions",
       "dependencies": [
         "Xamarin.AndroidX.Arch.Core.Common",
@@ -470,14 +511,6 @@
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Lifecycle.Service",
         "Xamarin.AndroidX.Lifecycle.ViewModel"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Lifecycle.LiveData",
-      "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
-        "Xamarin.AndroidX.Arch.Core.Runtime",
-        "Xamarin.AndroidX.Lifecycle.LiveData.Core"
       ]
     },
     {
