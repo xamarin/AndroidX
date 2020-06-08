@@ -112,7 +112,7 @@
 		,{
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-camera2",
-			"version" : "1.0.0-beta01",
+			"version" : "1.0.0-beta01.1",
 			"nugetVersion" : "1.0.0-beta01.1",
 			"nugetId" : "Xamarin.AndroidX.Camera.Camera2",
 			"dependencyOnly" : false
@@ -136,7 +136,7 @@
 		,{
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-view",
-			"version" : "1.0.0-alpha08",
+			"version" : "1.0.0-alpha08.1",
 			"nugetVersion" : "1.0.0-alpha08.1",
 			"nugetId" : "Xamarin.AndroidX.Camera.View",
 			"dependencyOnly" : false
@@ -280,8 +280,8 @@
 		,{
 			"groupId" : "androidx.fragment",
 			"artifactId" : "fragment",
-			"version" : "1.2.3",
-			"nugetVersion" : "1.2.3.1",
+			"version" : "1.2.4",
+			"nugetVersion" : "1.2.4.1",
 			"nugetId" : "Xamarin.AndroidX.Fragment",
 			"dependencyOnly" : false
 		}
@@ -504,32 +504,32 @@
 		,{
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-common",
-			"version" : "2.2.1",
-			"nugetVersion" : "2.2.1.1",
+			"version" : "2.2.2",
+			"nugetVersion" : "2.2.2.1",
 			"nugetId" : "Xamarin.AndroidX.Navigation.Common",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-fragment",
-			"version" : "2.2.1",
-			"nugetVersion" : "2.2.1.1",
+			"version" : "2.2.2",
+			"nugetVersion" : "2.2.2.1",
 			"nugetId" : "Xamarin.AndroidX.Navigation.Fragment",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-runtime",
-			"version" : "2.2.1",
-			"nugetVersion" : "2.2.1.1",
+			"version" : "2.2.2",
+			"nugetVersion" : "2.2.2.1",
 			"nugetId" : "Xamarin.AndroidX.Navigation.Runtime",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-ui",
-			"version" : "2.2.1",
-			"nugetVersion" : "2.2.1.1",
+			"version" : "2.2.2",
+			"nugetVersion" : "2.2.2.1",
 			"nugetId" : "Xamarin.AndroidX.Navigation.UI",
 			"dependencyOnly" : false
 		}
@@ -568,8 +568,8 @@
 		,{
 			"groupId" : "androidx.preference",
 			"artifactId" : "preference",
-			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"version" : "1.1.1",
+			"nugetVersion" : "1.1.1.1",
 			"nugetId" : "Xamarin.AndroidX.Preference",
 			"dependencyOnly" : false
 		}
@@ -728,8 +728,8 @@
 		,{
 			"groupId" : "androidx.versionedparcelable",
 			"artifactId" : "versionedparcelable",
-			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"version" : "1.1.1",
+			"nugetVersion" : "1.1.1.1",
 			"nugetId" : "Xamarin.AndroidX.VersionedParcelable",
 			"dependencyOnly" : false
 		}
@@ -745,7 +745,7 @@
 			"groupId" : "androidx.viewpager2",
 			"artifactId" : "viewpager2",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.3",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.ViewPager2",
 			"dependencyOnly" : false
 		}
@@ -769,7 +769,7 @@
 			"groupId" : "androidx.work",
 			"artifactId" : "work-runtime",
 			"version" : "2.3.4",
-			"nugetVersion" : "2.3.4.3",
+			"nugetVersion" : "2.3.4.2",
 			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
 			"dependencyOnly" : false
 		}
@@ -811,7 +811,7 @@
 			"artifactId" : "migration",
 			"nugetId" : "Xamarin.AndroidX.Migration",
 			"version" : "1.0",
-			"nugetVersion" : "1.0.4.1",
+			"nugetVersion" : "1.0.5.1",
 			"dependencyOnly" : true
 		}
 	]
