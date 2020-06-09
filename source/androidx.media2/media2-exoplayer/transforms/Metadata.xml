@@ -140,6 +140,74 @@
         </method>
     </add-node>
 
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/interface[@name='AudioListener']/method[@name='onAudioSessionId' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        OnAudioListenerAudioSessionId
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/interface[@name='AudioRendererEventListener']/method[@name='onAudioSessionId' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        OnAudioRendererEventListenerAudioSessionId
+    </attr>
     
+    
+    
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultHttpDataSourceFactory']/method[@name='createDataSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.HttpDataSource.RequestProperties']]"
+        name="managedReturn"
+        >
+        AndroidX.Media2.ExoPlayer.External.UpStream.IHttpDataSource        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultHttpDataSourceFactory']/method[@name='createDataSource' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media2.ExoPlayer.External.UpStream.IDataSource        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultDataSourceFactory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media2.ExoPlayer.External.UpStream.IDataSource        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='BaseDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IDictionary &lt; string, System.Collections.Generic.IList &lt; string &gt; &gt; 
+    </attr>
+    
+    
+<!--    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultHttpDataSourceFactory']"
+        >
+          <method abstract="false" deprecated="not deprecated" final="false" name="createDataSource" jni-signature="(I)Landroidx/media2/exoplayer/external/upstream/DataSource;" bridge="false" native="false" return="androidx.media2.exoplayer.external.upstream.DataSource" jni-return="Landroidx/media2/exoplayer/external/upstream/DataSource;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="dataType" type="int" jni-type="I">
+        </parameter>
+      </method>
+    </add-node>
+-->    
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.extractor']/class[@name='BinarySearchSeeker.BinarySearchSeekMap']/constructor[@name='BinarySearchSeeker.BinarySearchSeekMap' and count(parameter)=7 and parameter[1][@type='androidx.media2.exoplayer.external.extractor.BinarySearchSeeker.SeekTimestampConverter'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='long'] and parameter[5][@type='long'] and parameter[6][@type='long'] and parameter[7][@type='long']]"
+        name="visibility"
+        >
+        private
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.webvtt']/class[@name='Mp4WebvttSubtitle']"
+        name="visibility"
+        >
+        protected
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/class[@name='BaseTrackSelection']/method[@name='updateSelectedTrack' and count(parameter)=5 and parameter[1][@type='long'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.util.List'] and parameter[5][@type='androidx.media2.exoplayer.external.source.chunk.MediaChunkIterator[]']]/parameter[4]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Source.Chunk.MediaChunk &gt;
+    </attr>
     
 </metadata>
