@@ -22,4 +22,9 @@
         >
         protected
     </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/interface[@name='Config']"
+        />    
+
 </metadata>
