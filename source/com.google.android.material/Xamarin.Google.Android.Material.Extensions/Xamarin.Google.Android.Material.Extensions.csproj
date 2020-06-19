@@ -1,0 +1,100 @@
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+  <PropertyGroup>
+    <TargetFramework>MonoAndroid90</TargetFramework>
+    <IsBindingProject>true</IsBindingProject>
+    <AssemblyName>Xamarin.Google.Android.Material.Extensions</AssemblyName>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <RootNamespace>Google.Android.Material</RootNamespace>
+    <EnableProguard>true</EnableProguard>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <!--
+      No warnings for:
+       - CS0618: 'member' is obsolete: 'text'
+       - CS0109: The member 'member' does not hide an inherited member. The new keyword is not required
+       - CS0114: 'function1' hides inherited member 'function2'. To make the current method override that implementation, add the override keyword. Otherwise add the new keyword.
+       - CS0628: 'member' : new protected member declared in sealed class
+       - CS0108: 'member1' hides inherited member 'member2'. Use the new keyword if hiding was intended.
+       - CS0809: Obsolete member 'member' overrides non-obsolete member 'member'
+    -->
+    <NoWarn>0618;0109;0114;0628;0108;0809</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Xamarin.Google.Android.Material</PackageId>
+    <Title>Xamarin AndroidX - material</Title>
+    <Summary>Xamarin.Android bindings for AndroidX - material</Summary>
+    <Description>Xamarin.Android bindings for AndroidX - material extensions</Description>
+    <PackageTags>Xamarin AndroidX Xamarin.AndroidX Support Google material extensions</PackageTags>
+    <Authors>Microsoft</Authors>
+    <Owners>Microsoft</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
+    <PackageVersion>1.1.0-rc3$(PackageVersionSuffix)</PackageVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+    <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType>
+  </PropertyGroup>
+
+    
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Additions\" />
+    <Folder Include="Jars\" />
+    <Folder Include="Transforms\" />
+    <Folder Include="Java\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\source\AssemblyInfo.cs" />
+    <Compile Include="..\..\..\source\com.google.android.material\Xamarin.Google.Android.Material.Extensions\additions\*.cs">
+        <Link>Additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <TransformFile Include="..\..\..\source\com.google.android.material\Xamarin.Google.Android.Material.Extensions\transforms\*.xml">
+        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </TransformFile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\externals\extensions-aar-release.aar" Pack="True" PackagePath="aar\extensions-aar-release.aar" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <InputJar Include="..\..\..\externals\extensions-aar\classes.jar" />
+    <!-- For those artifacts with lib/ folder -->
+    <InputJar 
+      Condition="Exists('..\..\..\externals\extensions-aar\libs\')"
+      Include="..\..\..\externals\extensions-aar\libs\*.jar" 
+      />
+  </ItemGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <!-- PackageReference -->
+  </ItemGroup>
+
+  
+</Project>

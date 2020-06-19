@@ -1,0 +1,38 @@
+﻿<enum-method-mappings>
+    <!--path="/api/package[@name='android.support.design.internal']/class[@name='ForegroundLinearLayout']/method[@name='getForegroundGravity' and count(parameter)=0]"-->
+    <!--
+	<mapping jni-class="android/support/design/internal/ForegroundLinearLayout">
+		<method jni-name="getForegroundGravity" parameter="return" clr-enum-type="Android.Views.GravityFlags" />
+	</mapping>
+    -->
+    <!--path="/api/package[@name='android.support.design.widget']/class[@name='CollapsingToolbarLayout']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"-->
+    <!--
+	<mapping jni-class="androidx/coordinatorlayout/widget/CollapsingToolbarLayout">
+		<method jni-name="setVisibility" parameter="visibility" clr-enum-type="Android.Views.ViewStates" />
+	</mapping>
+    -->
+    <!--path="/api/package[@name='android.support.design.widget']/class[@name='VisibilityAwareImageButton']/method[@name='setVisibility' and count(parameter)=1 and parameter[1][@type='int']]"-->
+    <!--
+    <mapping jni-class="androidx/coordinatorlayout/widget/VisibilityAwareImageButton">
+		<method jni-name="setVisibility" parameter="visibility" clr-enum-type="Android.Views.ViewStates" />
+	</mapping>
+    -->
+    <!--path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener']]"-->
+    <!--
+	<mapping jni-class="androidx/coordinatorlayout/widget/FloatingActionButton">
+		<method jni-name="setVisibility" parameter="p0" clr-enum-type="Android.Views.ViewStates" />
+	</mapping>
+    -->
+    <!--path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='show' and count(parameter)=1 and parameter[1][@type='android.support.design.widget.FloatingActionButton.OnVisibilityChangedListener']]"-->
+    <!--
+    <mapping jni-class="androidx/coordinatorlayout/widget/FloatingActionButton">
+        <method jni-name="setVisibility" parameter="visibility " clr-enum-type="Android.Views.ViewStates" />
+    </mapping>
+    -->
+    <!--path="/api/package[@name='android.support.design.widget']/class[@name='FloatingActionButton']/method[@name='setBackgroundColor' and count(parameter)=1 and parameter[1][@type='int']]"-->
+    <!--
+	<mapping jni-class="androidx/coordinatorlayout/widget/FloatingActionButton">
+		<method jni-name="setBackgroundColor" parameter="color" clr-enum-type="Android.Graphics.Color" />
+	</mapping>
+    -->
+</enum-method-mappings>

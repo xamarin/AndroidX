@@ -3,7 +3,8 @@
 	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": 
 	[
-		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj"
+		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
+		"source/com.google.android.material/Xamarin.Google.Android.Material.Extensions/Xamarin.Google.Android.Material.Extensions.csproj"
 	],
 	"templates" : [
 		{
