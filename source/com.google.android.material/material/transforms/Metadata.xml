@@ -117,5 +117,17 @@
     >
     private
   </attr>
-
+  <attr 
+    path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" 
+    name="visibility"
+    >
+    private
+  </attr>
+  <attr 
+    path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.TabView']"
+    name="visibility"
+    >
+    public
+  </attr>
+    
 </metadata>
