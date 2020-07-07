@@ -22,9 +22,11 @@
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs' and count(parameter)=0]" name="managedName">_GetRemoteInputs</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getDataOnlyRemoteInputs' and count(parameter)=0]" name="managedName">_GetDataOnlyRemoteInputs</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">public</attr>
+    <!--
     <remove-node path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=1 and parameter[1][@type='T']]" />
     <remove-node path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.Object']]" />
     <remove-node path="/api/package[@name='androidx.core.os']/class[@name='LocaleListCompat.LocaleListCompatBaseImpl']" />
+    -->
     <remove-node path="/api/package[@name='androidx.core.app']/class[@name='JobIntentService.CommandProcessor']" />
     <!-- The generator binds both CharSequence and java.lang.String as System.String types so if we have overloads which only differ in java by CharSequence and String, we'll end up with duplicate .net binding overloads, so we remove the extra bindings -->
     <remove-node path="/api/package[@name='androidx.core.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
@@ -61,6 +63,23 @@
         Java.Lang.Object
     </attr>
 
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/field[@name='actionIntent']"
+        name="managedName"
+        >
+        ActionIntentData
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/field[@name='icon']"
+        name="managedName"
+        >
+        IconData
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/field[@name='title']"
+        name="managedName"
+        >
+        TitleData
+    </attr>
 
-    
 </metadata>

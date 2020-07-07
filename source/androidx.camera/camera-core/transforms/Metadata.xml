@@ -1,8 +1,22 @@
 <metadata>
-    <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" />
-    <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" />
-    <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" />
     
+    <attr
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImmediateSurface']/method[@name='provideSurface' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    
+    
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" 
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" 
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" 
+        />
     <remove-node
         path="/api/package[@name='androidx.camera.core']/class[@name='Preview.Builder']/implements"
         />
@@ -16,10 +30,20 @@
         path="/api/package[@name='androidx.camera.core.impl']/class[@name='VideoCaptureConfig.Builder']"
 
         />
-    <attr
-        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImmediateSurface']/method[@name='provideSurface' and count(parameter)=0]"
-        name="visibility"
-        >
-        protected
-    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.camera.core']/class[@name='CameraXConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImageAnalysisConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImageCaptureConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='VideoCaptureConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='PreviewConfig']/implements"
+        />
+    
 </metadata>

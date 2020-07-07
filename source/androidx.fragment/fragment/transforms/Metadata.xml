@@ -3,11 +3,29 @@
     <remove-node path="/api/package[@name='androidx.fragment.app']/interface[@name='Fragment.OnStartEnterTransitionListener']" />
 
 
-  <attr
-    path="/api/package[@name='androidx.fragment.app']/class[@name='BackStackRecord']"
-    name="visibility"
-    >
-    public
+    <attr
+        path="/api/package[@name='androidx.fragment.app']/class[@name='BackStackRecord']"
+        name="visibility"
+        >
+        public
     </attr>
 
+    <remove-node
+        path="/api/package[@name='androidx.fragment.app']/class[@name='Fragment']/implements"
+        >
+    </remove-node>
+    
+    <remove-node
+        path="/api/package[@name='androidx.fragment.app']/class[@name='FragmentManager.StartEnterTransitionListener']/implements[name='androidx.fragment.app.Fragment.OnStartEnterTransitionListener']"
+        >
+    </remove-node>
+    <attr
+        path="/api/package[@name='androidx.fragment.app']/class[@name='FragmentManager.StartEnterTransitionListener']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    
+    
 </metadata>

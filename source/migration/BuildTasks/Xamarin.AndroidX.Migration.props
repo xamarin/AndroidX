@@ -102,7 +102,7 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation.Experimental" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
-        <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat.Resources" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat.AppCompatResources" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Common" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Arch.Core.Runtime" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AsyncLayoutInflater" />
@@ -175,6 +175,9 @@
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
         <_AndroidXMavenArtifact Include="androidx.activity.activity" />
+        <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier" />
+        <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier-common" />
+        <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier-provider" />
         <_AndroidXMavenArtifact Include="androidx.annotation.annotation" />
         <_AndroidXMavenArtifact Include="androidx.annotation.annotation-experimental" />
         <_AndroidXMavenArtifact Include="androidx.appcompat.appcompat" />
@@ -189,14 +192,21 @@
         <_AndroidXMavenArtifact Include="androidx.camera.camera-core" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-lifecycle" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-view" />
+        <_AndroidXMavenArtifact Include="androidx.car.car" />
+        <_AndroidXMavenArtifact Include="androidx.car.car-cluster" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection" />
         <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
+        <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-listenablefuture" />
+        <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-listenablefuture-callback" />
+        <_AndroidXMavenArtifact Include="androidx.concurrent.futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-solver" />
         <_AndroidXMavenArtifact Include="androidx.contentpager.contentpager" />
         <_AndroidXMavenArtifact Include="androidx.coordinatorlayout.coordinatorlayout" />
         <_AndroidXMavenArtifact Include="androidx.core.core" />
+        <_AndroidXMavenArtifact Include="androidx.core.core-animation" />
+        <_AndroidXMavenArtifact Include="androidx.core.core-role" />
         <_AndroidXMavenArtifact Include="androidx.cursoradapter.cursoradapter" />
         <_AndroidXMavenArtifact Include="androidx.customview.customview" />
         <_AndroidXMavenArtifact Include="androidx.documentfile.documentfile" />
