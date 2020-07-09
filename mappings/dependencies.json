@@ -55,7 +55,7 @@
       "id": "Xamarin.AndroidX.AppCompat",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AppCompat.Resources",
+        "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CursorAdapter",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.AppCompat.Resources",
+      "id": "Xamarin.AndroidX.AppCompat.AppCompatResources",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
@@ -119,6 +119,17 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.AppCompat.Resources",
+      "dependencies": [
+        "Xamarin.AndroidX.AppCompat.AppCompatResources",
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.VectorDrawable.Animated",
+        "Xamarin.AndroidX.VectorDrawable"
       ]
     },
     {
