@@ -79,7 +79,9 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Annotation.Experimental",
@@ -148,6 +150,12 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.AppCompat.Resources",
+      "dependencies": [
+        "Xamarin.AndroidX.AppCompat.AppCompatResources"
       ]
     },
     {
@@ -645,6 +653,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
