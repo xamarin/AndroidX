@@ -259,7 +259,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Activity",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.AppCompat",
-				"Xamarin.AndroidX.AppCompat.Resources",
+				"Xamarin.AndroidX.AppCompat.AppCompatResources",
 				"Xamarin.AndroidX.Arch.Core.Common",
 				"Xamarin.AndroidX.Arch.Core.Runtime",
 				"Xamarin.AndroidX.AsyncLayoutInflater",
@@ -297,6 +297,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.ViewPager",
 				"Xamarin.AndroidX.ViewPager2",
 				"Xamarin.Google.Android.Material",
+				"Xamarin.Google.Guava.ListenableFuture",
 			};
 
 			var tree = PackageDependencyTree.Load();
