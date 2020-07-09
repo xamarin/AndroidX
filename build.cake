@@ -7,7 +7,9 @@
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=CsvHelper&version=12.2.1
 #addin nuget:?package=SharpZipLib&version=1.2.0
-
+#addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
+#addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
+#addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -15,7 +17,6 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CsvHelper;
-
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
@@ -378,13 +379,13 @@ Task("binderate-fix")
                 if ( ! DirectoryExists(dir_group) )
                 {
                     Warning($"  Creating {dir_group}");
-                    //CreateDirectory(dir_group);
+                    CreateDirectory(dir_group);
                 }
                 string dir_artifact = $"{dir_group}/artifactId";
                 if ( ! DirectoryExists(dir_group) )
                 {
                     Warning($"      Creating artifact folder : {dir_artifact}");
-                    //CreateDirectory(dir_group);
+                    CreateDirectory(dir_group);
                 }
 
             }
@@ -392,6 +393,64 @@ Task("binderate-fix")
             return;
         }
     );
+
+// using System.Threading;
+// using Microsoft.Extensions.Logging;
+// using Microsoft.Extensions.Logging.Abstractions;
+
+// using NuGet.Protocol.Core.Types;
+// using NuGet.Versioning;
+// using NuGet.Protocol.Core.Types;
+
+Task("binderate-nuget-check")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            Warning("config.json fixing missing folder strucutre ...");
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                string groupId      = (string) jo["groupId"];
+                string artifactId   = (string) jo["artifactId"];
+                string nugetId      = (string) jo["nugetId"];
+                string nugetVersion = (string) jo["nugetVersion"];
+
+                Information($"  Verifying nuget                 :");
+                Information($"            nugetId               : {nugetId}");
+                Information($"            config.json veriosn   : {nugetVersion}");
+
+                // ILogger logger = NullLogger.Instance;
+                // CancellationToken cancellationToken = CancellationToken.None;
+
+                // SourceCacheContext cache = new SourceCacheContext();
+                // SourceRepository repository = Repository.Factory.GetCoreV3("https://api.nuget.org/v3/index.json");
+                // FindPackageByIdResource resource = await repository.GetResourceAsync<FindPackageByIdResource>().Result;
+
+                // IEnumerable<NuGetVersion> versions = resource.GetAllVersionsAsync
+                //                                                         (
+                //                                                             nugetId,
+                //                                                             cache,
+                //                                                             logger,
+                //                                                             cancellationToken
+                //                                                         ).Result;
+
+                // foreach (NuGetVersion version in versions)
+                // {
+                //     Information($"              Found version {version}");
+                // }
+
+            }
+
+            return;
+        }
+    );
+
 
 System.Xml.XmlDocument xmldoc = null;
 System.Xml.XmlNamespaceManager ns = null;
