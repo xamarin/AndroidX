@@ -7,9 +7,10 @@
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.1
 #addin nuget:?package=CsvHelper&version=12.2.1
 #addin nuget:?package=SharpZipLib&version=1.2.0
-#addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
-#addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
-#addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
+
+// #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
+// #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
+// #addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
 
 using System.Text.RegularExpressions;
 using System.Xml;
