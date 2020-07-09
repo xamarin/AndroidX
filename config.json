@@ -25,7 +25,7 @@
 			"groupId" : "androidx.activity",
 			"artifactId" : "activity",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Activity",
 			"dependencyOnly" : false
 		}
@@ -33,7 +33,7 @@
 			"groupId" : "androidx.annotation",
 			"artifactId" : "annotation",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Annotation",
 			"dependencyOnly" : false
 		}
@@ -41,7 +41,7 @@
 			"groupId" : "androidx.annotation",
 			"artifactId" : "annotation-experimental",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Annotation.Experimental",
 			"dependencyOnly" : false
 		}
@@ -49,7 +49,7 @@
 			"groupId" : "androidx.appcompat",
 			"artifactId" : "appcompat",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.AppCompat",
 			"dependencyOnly" : false
 		}
@@ -57,7 +57,7 @@
 			"groupId" : "androidx.appcompat",
 			"artifactId" : "appcompat-resources",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.AppCompat.AppCompatResources",
 			"dependencyOnly" : false
 		}
@@ -65,7 +65,7 @@
 			"groupId" : "androidx.arch.core",
 			"artifactId" : "core-common",
 			"version" : "2.1.0",
-			"nugetVersion" : "2.1.0.1",
+			"nugetVersion" : "2.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Arch.Core.Common",
 			"dependencyOnly" : false
 		}
@@ -73,7 +73,7 @@
 			"groupId" : "androidx.arch.core",
 			"artifactId" : "core-runtime",
 			"version" : "2.1.0",
-			"nugetVersion" : "2.1.0.1",
+			"nugetVersion" : "2.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Arch.Core.Runtime",
 			"dependencyOnly" : false
 		}
@@ -81,7 +81,7 @@
 			"groupId" : "androidx.asynclayoutinflater",
 			"artifactId" : "asynclayoutinflater",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.AsyncLayoutInflater",
 			"dependencyOnly" : false
 		}
@@ -89,7 +89,7 @@
 			"groupId" : "androidx.autofill",
 			"artifactId" : "autofill",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.AutoFill",
 			"dependencyOnly" : false
 		}
@@ -97,7 +97,7 @@
 			"groupId" : "androidx.biometric",
 			"artifactId" : "biometric",
 			"version" : "1.0.1",
-			"nugetVersion" : "1.0.1.1",
+			"nugetVersion" : "1.0.1.2",
 			"nugetId" : "Xamarin.AndroidX.Biometric",
 			"dependencyOnly" : false
 		}
@@ -105,7 +105,7 @@
 			"groupId" : "androidx.browser",
 			"artifactId" : "browser",
 			"version" : "1.2.0",
-			"nugetVersion" : "1.2.0.1",
+			"nugetVersion" : "1.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Browser",
 			"dependencyOnly" : false
 		}
@@ -113,7 +113,7 @@
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-camera2",
 			"version" : "1.0.0-beta01",
-			"nugetVersion" : "1.0.0-beta01.1",
+			"nugetVersion" : "1.0.0-beta01.2",
 			"nugetId" : "Xamarin.AndroidX.Camera.Camera2",
 			"dependencyOnly" : false
 		}
@@ -121,7 +121,7 @@
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-core",
 			"version" : "1.0.0-beta01",
-			"nugetVersion" : "1.0.0-beta01.1",
+			"nugetVersion" : "1.0.0-beta01.2",
 			"nugetId" : "Xamarin.AndroidX.Camera.Core",
 			"dependencyOnly" : false
 		}
@@ -129,7 +129,7 @@
 			"groupId" : "androidx.camera",
 			"artifactId" : "camera-lifecycle",
 			"version" : "1.0.0-beta01",
-			"nugetVersion" : "1.0.0-beta01.1",
+			"nugetVersion" : "1.0.0-beta01.2",
 			"nugetId" : "Xamarin.AndroidX.Camera.Lifecycle",
 			"dependencyOnly" : false
 		}
@@ -145,7 +145,7 @@
 			"groupId" : "androidx.cardview",
 			"artifactId" : "cardview",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.CardView",
 			"dependencyOnly" : false
 		}
@@ -153,7 +153,7 @@
 			"groupId" : "androidx.collection",
 			"artifactId" : "collection",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Collection",
 			"dependencyOnly" : false
 		}
@@ -161,7 +161,7 @@
 			"groupId" : "androidx.concurrent",
 			"artifactId" : "concurrent-futures",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Concurrent.Futures",
 			"dependencyOnly" : false
 		}
@@ -169,7 +169,7 @@
 			"groupId" : "androidx.constraintlayout",
 			"artifactId" : "constraintlayout",
 			"version" : "1.1.3",
-			"nugetVersion" : "1.1.3.1",
+			"nugetVersion" : "1.1.3.2",
 			"nugetId" : "Xamarin.AndroidX.ConstraintLayout",
 			"dependencyOnly" : false
 		}
@@ -177,7 +177,7 @@
 			"groupId" : "androidx.constraintlayout",
 			"artifactId" : "constraintlayout-solver",
 			"version" : "1.1.3",
-			"nugetVersion" : "1.1.3.1",
+			"nugetVersion" : "1.1.3.2",
 			"nugetId" : "Xamarin.AndroidX.ConstraintLayout.Solver",
 			"dependencyOnly" : false
 		}
@@ -185,7 +185,7 @@
 			"groupId" : "androidx.contentpager",
 			"artifactId" : "contentpager",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.ContentPager",
 			"dependencyOnly" : false
 		}
@@ -193,7 +193,7 @@
 			"groupId" : "androidx.coordinatorlayout",
 			"artifactId" : "coordinatorlayout",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.CoordinatorLayout",
 			"dependencyOnly" : false
 		}
@@ -201,7 +201,7 @@
 			"groupId" : "androidx.core",
 			"artifactId" : "core",
 			"version" : "1.2.0",
-			"nugetVersion" : "1.2.0.1",
+			"nugetVersion" : "1.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Core",
 			"dependencyOnly" : false
 		}
@@ -209,7 +209,7 @@
 			"groupId" : "androidx.cursoradapter",
 			"artifactId" : "cursoradapter",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.CursorAdapter",
 			"dependencyOnly" : false
 		}
@@ -217,7 +217,7 @@
 			"groupId" : "androidx.customview",
 			"artifactId" : "customview",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.CustomView",
 			"dependencyOnly" : false
 		}
@@ -225,7 +225,7 @@
 			"groupId" : "androidx.documentfile",
 			"artifactId" : "documentfile",
 			"version" : "1.0.1",
-			"nugetVersion" : "1.0.1.1",
+			"nugetVersion" : "1.0.1.2",
 			"nugetId" : "Xamarin.AndroidX.DocumentFile",
 			"dependencyOnly" : false
 		}
@@ -233,7 +233,7 @@
 			"groupId" : "androidx.drawerlayout",
 			"artifactId" : "drawerlayout",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.DrawerLayout",
 			"dependencyOnly" : false
 		}
@@ -241,7 +241,7 @@
 			"groupId" : "androidx.dynamicanimation",
 			"artifactId" : "dynamicanimation",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.DynamicAnimation",
 			"dependencyOnly" : false
 		}
@@ -249,7 +249,7 @@
 			"groupId" : "androidx.emoji",
 			"artifactId" : "emoji",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Emoji",
 			"dependencyOnly" : false
 		}
@@ -257,7 +257,7 @@
 			"groupId" : "androidx.emoji",
 			"artifactId" : "emoji-appcompat",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Emoji.AppCompat",
 			"dependencyOnly" : false
 		}
@@ -265,7 +265,7 @@
 			"groupId" : "androidx.emoji",
 			"artifactId" : "emoji-bundled",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Emoji.Bundled",
 			"dependencyOnly" : false
 		}
@@ -273,7 +273,7 @@
 			"groupId" : "androidx.exifinterface",
 			"artifactId" : "exifinterface",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.ExifInterface",
 			"dependencyOnly" : false
 		}
@@ -281,7 +281,7 @@
 			"groupId" : "androidx.fragment",
 			"artifactId" : "fragment",
 			"version" : "1.2.4",
-			"nugetVersion" : "1.2.4.1",
+			"nugetVersion" : "1.2.4.2",
 			"nugetId" : "Xamarin.AndroidX.Fragment",
 			"dependencyOnly" : false
 		}
@@ -289,7 +289,7 @@
 			"groupId" : "androidx.gridlayout",
 			"artifactId" : "gridlayout",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.GridLayout",
 			"dependencyOnly" : false
 		}
@@ -297,7 +297,7 @@
 			"groupId" : "androidx.heifwriter",
 			"artifactId" : "heifwriter",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.HeifWriter",
 			"dependencyOnly" : false
 		}
@@ -305,7 +305,7 @@
 			"groupId" : "androidx.interpolator",
 			"artifactId" : "interpolator",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Interpolator",
 			"dependencyOnly" : false
 		}
@@ -313,7 +313,7 @@
 			"groupId" : "androidx.leanback",
 			"artifactId" : "leanback",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Leanback",
 			"dependencyOnly" : false
 		}
@@ -321,7 +321,7 @@
 			"groupId" : "androidx.leanback",
 			"artifactId" : "leanback-preference",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Leanback.Preference",
 			"dependencyOnly" : false
 		}
@@ -329,7 +329,7 @@
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-preference-v14",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Preference.V14",
 			"dependencyOnly" : false
 		}
@@ -337,7 +337,7 @@
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-core-ui",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.UI",
 			"dependencyOnly" : false
 		}
@@ -345,7 +345,7 @@
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-core-utils",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.Core.Utils",
 			"dependencyOnly" : false
 		}
@@ -353,7 +353,7 @@
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-v13",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.V13",
 			"dependencyOnly" : false
 		}
@@ -361,7 +361,7 @@
 			"groupId" : "androidx.legacy",
 			"artifactId" : "legacy-support-v4",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Legacy.Support.V4",
 			"dependencyOnly" : false
 		}
@@ -369,7 +369,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-common",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Common",
 			"dependencyOnly" : false
 		}
@@ -377,7 +377,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-extensions",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Extensions",
 			"dependencyOnly" : false
 		}
@@ -385,7 +385,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-livedata",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.LiveData",
 			"dependencyOnly" : false
 		}
@@ -393,7 +393,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-livedata-core",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.LiveData.Core",
 			"dependencyOnly" : false
 		}
@@ -401,7 +401,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-process",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Process",
 			"dependencyOnly" : false
 		}
@@ -409,7 +409,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-runtime",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Runtime",
 			"dependencyOnly" : false
 		}
@@ -417,7 +417,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-service",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.Service",
 			"dependencyOnly" : false
 		}
@@ -425,7 +425,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-viewmodel",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.ViewModel",
 			"dependencyOnly" : false
 		}
@@ -433,7 +433,7 @@
 			"groupId" : "androidx.lifecycle",
 			"artifactId" : "lifecycle-viewmodel-savedstate",
 			"version" : "2.2.0",
-			"nugetVersion" : "2.2.0.1",
+			"nugetVersion" : "2.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
 			"dependencyOnly" : false
 		}
@@ -441,7 +441,7 @@
 			"groupId" : "androidx.loader",
 			"artifactId" : "loader",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Loader",
 			"dependencyOnly" : false
 		}
@@ -449,7 +449,7 @@
 			"groupId" : "androidx.localbroadcastmanager",
 			"artifactId" : "localbroadcastmanager",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.LocalBroadcastManager",
 			"dependencyOnly" : false
 		}
@@ -457,7 +457,7 @@
 			"groupId" : "androidx.media",
 			"artifactId" : "media",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Media",
 			"dependencyOnly" : false
 		}
@@ -465,7 +465,7 @@
 			"groupId" : "androidx.media2",
 			"artifactId" : "media2-common",
 			"version" : "1.0.3",
-			"nugetVersion" : "1.0.3.1",
+			"nugetVersion" : "1.0.3.2",
 			"nugetId" : "Xamarin.AndroidX.Media2.Common",
 			"dependencyOnly" : false
 		}
@@ -473,7 +473,7 @@
 			"groupId" : "androidx.media2",
 			"artifactId" : "media2-session",
 			"version" : "1.0.3",
-			"nugetVersion" : "1.0.3.1",
+			"nugetVersion" : "1.0.3.2",
 			"nugetId" : "Xamarin.AndroidX.Media2.Session",
 			"dependencyOnly" : false
 		}
@@ -481,7 +481,7 @@
 			"groupId" : "androidx.media2",
 			"artifactId" : "media2-widget",
 			"version" : "1.0.3",
-			"nugetVersion" : "1.0.3.1",
+			"nugetVersion" : "1.0.3.2",
 			"nugetId" : "Xamarin.AndroidX.Media2.Widget",
 			"dependencyOnly" : false
 		}
@@ -489,7 +489,7 @@
 			"groupId" : "androidx.mediarouter",
 			"artifactId" : "mediarouter",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.MediaRouter",
 			"dependencyOnly" : false
 		}
@@ -497,7 +497,7 @@
 			"groupId" : "androidx.multidex",
 			"artifactId" : "multidex",
 			"version" : "2.0.1",
-			"nugetVersion" : "2.0.1.1",
+			"nugetVersion" : "2.0.1.2",
 			"nugetId" : "Xamarin.AndroidX.MultiDex",
 			"dependencyOnly" : false
 		}
@@ -505,7 +505,7 @@
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-common",
 			"version" : "2.2.2",
-			"nugetVersion" : "2.2.2.1",
+			"nugetVersion" : "2.2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Navigation.Common",
 			"dependencyOnly" : false
 		}
@@ -513,7 +513,7 @@
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-fragment",
 			"version" : "2.2.2",
-			"nugetVersion" : "2.2.2.1",
+			"nugetVersion" : "2.2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Navigation.Fragment",
 			"dependencyOnly" : false
 		}
@@ -521,7 +521,7 @@
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-runtime",
 			"version" : "2.2.2",
-			"nugetVersion" : "2.2.2.1",
+			"nugetVersion" : "2.2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Navigation.Runtime",
 			"dependencyOnly" : false
 		}
@@ -529,7 +529,7 @@
 			"groupId" : "androidx.navigation",
 			"artifactId" : "navigation-ui",
 			"version" : "2.2.2",
-			"nugetVersion" : "2.2.2.1",
+			"nugetVersion" : "2.2.2.2",
 			"nugetId" : "Xamarin.AndroidX.Navigation.UI",
 			"dependencyOnly" : false
 		}
@@ -537,7 +537,7 @@
 			"groupId" : "androidx.paging",
 			"artifactId" : "paging-common",
 			"version" : "2.1.2",
-			"nugetVersion" : "2.1.2.1",
+			"nugetVersion" : "2.1.2.2",
 			"nugetId" : "Xamarin.AndroidX.Paging.Common",
 			"dependencyOnly" : false
 		}
@@ -545,7 +545,7 @@
 			"groupId" : "androidx.paging",
 			"artifactId" : "paging-runtime",
 			"version" : "2.1.2",
-			"nugetVersion" : "2.1.2.1",
+			"nugetVersion" : "2.1.2.2",
 			"nugetId" : "Xamarin.AndroidX.Paging.Runtime",
 			"dependencyOnly" : false
 		}
@@ -553,7 +553,7 @@
 			"groupId" : "androidx.palette",
 			"artifactId" : "palette",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Palette",
 			"dependencyOnly" : false
 		}
@@ -561,7 +561,7 @@
 			"groupId" : "androidx.percentlayout",
 			"artifactId" : "percentlayout",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.PercentLayout",
 			"dependencyOnly" : false
 		}
@@ -569,7 +569,7 @@
 			"groupId" : "androidx.preference",
 			"artifactId" : "preference",
 			"version" : "1.1.1",
-			"nugetVersion" : "1.1.1.1",
+			"nugetVersion" : "1.1.1.2",
 			"nugetId" : "Xamarin.AndroidX.Preference",
 			"dependencyOnly" : false
 		}
@@ -577,7 +577,7 @@
 			"groupId" : "androidx.print",
 			"artifactId" : "print",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Print",
 			"dependencyOnly" : false
 		}
@@ -585,7 +585,7 @@
 			"groupId" : "androidx.recommendation",
 			"artifactId" : "recommendation",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Recommendation",
 			"dependencyOnly" : false
 		}
@@ -593,7 +593,7 @@
 			"groupId" : "androidx.recyclerview",
 			"artifactId" : "recyclerview",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.RecyclerView",
 			"dependencyOnly" : false
 		}
@@ -601,7 +601,7 @@
 			"groupId" : "androidx.recyclerview",
 			"artifactId" : "recyclerview-selection",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.RecyclerView.Selection",
 			"dependencyOnly" : false
 		}
@@ -609,7 +609,7 @@
 			"groupId" : "androidx.room",
 			"artifactId" : "room-common",
 			"version" : "2.2.5",
-			"nugetVersion" : "2.2.5.1",
+			"nugetVersion" : "2.2.5.2",
 			"nugetId" : "Xamarin.AndroidX.Room.Common",
 			"dependencyOnly" : false
 		}
@@ -617,7 +617,7 @@
 			"groupId" : "androidx.room",
 			"artifactId" : "room-guava",
 			"version" : "2.2.5",
-			"nugetVersion" : "2.2.5.1",
+			"nugetVersion" : "2.2.5.2",
 			"nugetId" : "Xamarin.AndroidX.Room.Guava",
 			"dependencyOnly" : false
 		}
@@ -625,7 +625,7 @@
 			"groupId" : "androidx.room",
 			"artifactId" : "room-runtime",
 			"version" : "2.2.5",
-			"nugetVersion" : "2.2.5",
+			"nugetVersion" : "2.2.5.2",
 			"nugetId" : "Xamarin.AndroidX.Room.Runtime",
 			"dependencyOnly" : false
 		}
@@ -633,7 +633,7 @@
 			"groupId" : "androidx.savedstate",
 			"artifactId" : "savedstate",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.SavedState",
 			"dependencyOnly" : false
 		}
@@ -641,7 +641,7 @@
 			"groupId" : "androidx.slice",
 			"artifactId" : "slice-builders",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Slice.Builders",
 			"dependencyOnly" : false
 		}
@@ -649,7 +649,7 @@
 			"groupId" : "androidx.slice",
 			"artifactId" : "slice-core",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Slice.Core",
 			"dependencyOnly" : false
 		}
@@ -657,7 +657,7 @@
 			"groupId" : "androidx.slice",
 			"artifactId" : "slice-view",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Slice.View",
 			"dependencyOnly" : false
 		}
@@ -665,7 +665,7 @@
 			"groupId" : "androidx.slidingpanelayout",
 			"artifactId" : "slidingpanelayout",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.SlidingPaneLayout",
 			"dependencyOnly" : false
 		}
@@ -673,7 +673,7 @@
 			"groupId" : "androidx.sqlite",
 			"artifactId" : "sqlite",
 			"version" : "2.1.0",
-			"nugetVersion" : "2.1.0.1",
+			"nugetVersion" : "2.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Sqlite",
 			"dependencyOnly" : false
 		}
@@ -681,7 +681,7 @@
 			"groupId" : "androidx.sqlite",
 			"artifactId" : "sqlite-framework",
 			"version" : "2.1.0",
-			"nugetVersion" : "2.1.0.1",
+			"nugetVersion" : "2.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.Sqlite.Framework",
 			"dependencyOnly" : false
 		}
@@ -689,7 +689,7 @@
 			"groupId" : "androidx.swiperefreshlayout",
 			"artifactId" : "swiperefreshlayout",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.SwipeRefreshLayout",
 			"dependencyOnly" : false
 		}
@@ -698,14 +698,14 @@
 			"artifactId" : "transition",
 			"version" : "1.3.1",
 			"nugetId" : "Xamarin.AndroidX.Transition",
-			"nugetVersion" : "1.3.1.1",
+			"nugetVersion" : "1.3.1.2",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.tvprovider",
 			"artifactId" : "tvprovider",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.TvProvider",
 			"dependencyOnly" : false
 		}
@@ -713,7 +713,7 @@
 			"groupId" : "androidx.vectordrawable",
 			"artifactId" : "vectordrawable",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.VectorDrawable",
 			"dependencyOnly" : false
 		}
@@ -721,7 +721,7 @@
 			"groupId" : "androidx.vectordrawable",
 			"artifactId" : "vectordrawable-animated",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1",
+			"nugetVersion" : "1.1.0.2",
 			"nugetId" : "Xamarin.AndroidX.VectorDrawable.Animated",
 			"dependencyOnly" : false
 		}
@@ -729,7 +729,7 @@
 			"groupId" : "androidx.versionedparcelable",
 			"artifactId" : "versionedparcelable",
 			"version" : "1.1.1",
-			"nugetVersion" : "1.1.1.1",
+			"nugetVersion" : "1.1.1.2",
 			"nugetId" : "Xamarin.AndroidX.VersionedParcelable",
 			"dependencyOnly" : false
 		}
@@ -737,7 +737,7 @@
 			"groupId" : "androidx.viewpager",
 			"artifactId" : "viewpager",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.ViewPager",
 			"dependencyOnly" : false
 		}
@@ -745,7 +745,7 @@
 			"groupId" : "androidx.viewpager2",
 			"artifactId" : "viewpager2",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.2",
+			"nugetVersion" : "1.0.0.3",
 			"nugetId" : "Xamarin.AndroidX.ViewPager2",
 			"dependencyOnly" : false
 		}
@@ -753,7 +753,7 @@
 			"groupId" : "androidx.wear",
 			"artifactId" : "wear",
 			"version" : "1.0.0",
-			"nugetVersion" : "1.0.0.1",
+			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Wear",
 			"dependencyOnly" : false
 		}
@@ -761,7 +761,7 @@
 			"groupId" : "androidx.webkit",
 			"artifactId" : "webkit",
 			"version" : "1.2.0",
-			"nugetVersion" : "1.2.0.1",
+			"nugetVersion" : "1.2.0.2",
 			"nugetId" : "Xamarin.AndroidX.WebKit",
 			"dependencyOnly" : false
 		}
@@ -769,7 +769,7 @@
 			"groupId" : "androidx.work",
 			"artifactId" : "work-runtime",
 			"version" : "2.3.4",
-			"nugetVersion" : "2.3.4.2",
+			"nugetVersion" : "2.3.4.3",
 			"nugetId" : "Xamarin.AndroidX.Work.Runtime",
 			"dependencyOnly" : false
 		}
@@ -777,7 +777,7 @@
 			"groupId" : "com.google.android.material",
 			"artifactId" : "material",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0.1-rc3",
+			"nugetVersion" : "1.1.0.2-rc3",
 			"nugetId" : "Xamarin.Google.Android.Material",
 			"dependencyOnly" : false
 		},
