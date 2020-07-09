@@ -28,10 +28,12 @@ jobs:
       areaPath: 'DevDiv\Xamarin SDK\Android'
       preBuildSteps:
         - pwsh: |
+            dotnet tool install --global Cake.Tool
             dotnet tool install --global boots
             boots https://aka.ms/xamarin-android-commercial-d16-6-macos
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
+            dotnet tool install --global Cake.Tool
             dotnet tool install --global boots
             boots https://aka.ms/xamarin-android-commercial-d16-6-windows
           condition: eq(variables['System.JobName'], 'windows')
