@@ -4,7 +4,7 @@
 // Cake Addins
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
-#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
+#addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=12.2.1
 #addin nuget:?package=SharpZipLib&version=1.2.0
 
@@ -191,27 +191,27 @@ Task("check-tools")
 
 
 Task("tools-update")
-    .Does
-    (
-        () =>
-        {
-            /*
-            dotnet tool uninstall   -g Cake.Tool
-            dotnet tool install     -g Cake.Tool
-            dotnet tool uninstall   -g xamarin.androidbinderator.tool
-            dotnet tool install     -g xamarin.androidbinderator.tool
-            dotnet tool uninstall   -g xamarin.androidx.migration.tool
-            dotnet tool install     -g xamarin.androidx.migration.tool
+	.Does
+	(
+		() =>
+		{
+			/*
+			dotnet tool uninstall   -g Cake.Tool
+			dotnet tool install     -g Cake.Tool
+			dotnet tool uninstall   -g xamarin.androidbinderator.tool
+			dotnet tool install     -g xamarin.androidbinderator.tool
+			dotnet tool uninstall   -g xamarin.androidx.migration.tool
+			dotnet tool install     -g xamarin.androidx.migration.tool
 
-            StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
-            StartProcess("dotnet", "tool install     -g Cake.Tool");
-            */
-            StartProcess("dotnet", "tool uninstall   -g xamarin.androidbinderator.tool");
-            StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
-            StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
-            StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
-        }
-    );
+			StartProcess("dotnet", "tool uninstall   -g Cake.Tool");
+			StartProcess("dotnet", "tool install     -g Cake.Tool");
+			*/
+			StartProcess("dotnet", "tool uninstall   -g xamarin.androidbinderator.tool");
+			StartProcess("dotnet", "tool install     -g xamarin.androidbinderator.tool");
+			StartProcess("dotnet", "tool uninstall   -g xamarin.androidx.migration.tool");
+			StartProcess("dotnet", "tool install     -g xamarin.androidx.migration.tool");
+		}
+	);
 
 // Android X
 
@@ -700,7 +700,7 @@ Task ("merge")
 Task("jetifier-wrapper")
     .Does(() =>
 {
-    var root = "./source/migration/jetifierWrapper/";
+    var root = "./source/migration/JetifierWrapper/";
 
     RunGradle(root, "jar");
 
