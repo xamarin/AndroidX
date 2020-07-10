@@ -84,13 +84,11 @@
     <!-- For those artifacts with lib/ folder -->
     <InputJar Condition="Exists('..\..\..\externals\extensions-aar\libs\')" Include="..\..\..\externals\extensions-aar\libs\*.jar" />
   </ItemGroup>
-
-  <ItemGroup>
-  </ItemGroup>
   
 
-  <ItemGroup>
-    <!-- PackageReference -->
+  <ItemGroup><!-- PackageReference -->
+  
+    <ProjectReference Include="..\..\..\generated\com.google.android.material.material\com.google.android.material.material.csproj" />
   </ItemGroup>
 
   
