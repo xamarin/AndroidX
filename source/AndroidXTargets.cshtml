@@ -29,6 +29,13 @@
   </ItemGroup>
   }
 
+  <PropertyGroup>
+    <AndroidManifestMerger Condition=" '$(AndroidManifestMerger)' == '' ">manifestmerger.jar</AndroidManifestMerger>
+  </PropertyGroup>  
+  <PropertyGroup>
+      <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType> 
+  </PropertyGroup>
+  
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if ($"{art.MavenGroupId}.{art.MavenArtifactId}" == "androidx.multidex.multidex") {
