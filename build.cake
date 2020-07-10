@@ -4,7 +4,7 @@
 // Cake Addins
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
-#addin nuget:?package=Cake.MonoApiTools&version=3.0.1
+#addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=12.2.1
 
 using System.Text.RegularExpressions;
