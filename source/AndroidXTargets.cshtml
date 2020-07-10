@@ -30,7 +30,7 @@
   }
 
   <PropertyGroup>
-    <AndroidManifestMerger>manifestmerger.jar</AndroidManifestMerger>
+    <AndroidManifestMerger Condition=" '$(AndroidManifestMerger)' == '' ">manifestmerger.jar</AndroidManifestMerger>
   </PropertyGroup>  
   <PropertyGroup>
       <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType> 
