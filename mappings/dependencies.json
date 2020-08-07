@@ -780,7 +780,9 @@
     },
     {
       "id": "Xamarin.Google.Android.Material.Extensions",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Google.Android.Material"
+      ]
     }
   ]
 }
