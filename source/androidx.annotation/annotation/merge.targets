@@ -1,26 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <!-- This task doesn't do anything really right now, but we might use it again in the future -->
-  <!-- <UsingTask 
-      AssemblyFile="Xamarin.AndroidX.Annotation.BuildTasks.dll" 
-      TaskName="Xamarin.AndroidX.Annotation.BuildTasks.VerifyVersionsTask" />
-
-  <Target
-    Name="_VerifyXamarinAndroidXVersions"
-    AfterTargets="ResolveAssemblyReferences">
-
-    <VerifyVersionsTask
-        TargetFrameworkVersion="$(TargetFrameworkVersion)"
-        TargetApiLevel="$(_AndroidApiLevel)"
-        AndroidSdkBuildToolsVersion="$(AndroidSdkBuildToolsVersion)"
-        ProjectExtensionsPath="$(MSBuildProjectExtensionsPath)"
-        ProjectPath="$(MSBuildProjectDirectory)"
-        >
-    </VerifyVersionsTask>
-
-  </Target> -->
-
     <!--
     ***************************************************************************
     * GET EXTRA LIBRARY LOCATIONS FOR DESIGNER
