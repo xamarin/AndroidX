@@ -152,7 +152,7 @@ public class Main {
     }
 
     private static void loadIntermediateFile(String intermediatePath, List<String> inputs, List<String> outputs) throws FileNotFoundException {
-        Scanner sc = new Scanner(new File(intermediatePath));
+        Scanner sc = new Scanner(new File(intermediatePath), "UTF-8");
         List<String> lines = new ArrayList<String>();
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
