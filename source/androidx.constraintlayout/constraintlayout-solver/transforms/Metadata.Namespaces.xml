@@ -9,4 +9,31 @@
     -->
     <attr path="/api/package[@name='androidx.constraintlayout.solver']" name="managedName">AndroidX.ConstraintLayout.Solver</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']" name="managedName">AndroidX.ConstraintLayout.Solver.Widgets</attr>
+
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.solver.widgets']" 
+        name="managedName"
+        >
+        AndroidX.ConstraintLayout.Solver.Widgets
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.solver.widgets.analyzer']" 
+        name="managedName"
+        >
+        AndroidX.ConstraintLayout.Solver.Widgets.Analyzer
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.solver.state']" 
+        name="managedName"
+        >
+        AndroidX.ConstraintLayout.Solver.State
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.solver.state.helpers']" 
+        name="managedName"
+        >
+        AndroidX.ConstraintLayout.Solver.State.Helpers
+    </attr>
+    
+    
 </metadata>

@@ -1,0 +1,51 @@
+﻿<metadata>
+
+    <attr
+        path="/api/package[@name='androidx.core.animation']/class[@name='AnimationHandler']"
+        name="visibility"
+        >        
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.animation']/class[@name='AnimationHandler.AnimationCallbackData']"
+        name="visibility"
+        >        
+        public
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.core.animation']/class[@name='Animator']/method[@name='setDuration' and count(parameter)=1]"
+        name="propertyName"
+        >        
+        Duration
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.animation']/class[@name='Animator']/method[@name='setDuration' and count(parameter)=1]"
+        name="return"
+        >        
+        void
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.animation']/class[@name='AnimatorSet']/method[@name='setDuration' and count(parameter)=1]"
+        name="return"
+        >        
+        void
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.animation']/class[@name='ValueAnimator']/method[@name='setDuration' and count(parameter)=1]"
+        name="return"
+        >        
+        void
+    </attr>
+    
+    
+    <remove-node
+        path="/api/package[@name='androidx.core.animation']/class[@name='IntArrayEvaluator']/implements"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='androidx.core.animation']/class[@name='FloatArrayEvaluator']/implements"
+        >        
+    </remove-node>
+    
+</metadata>

@@ -26,6 +26,12 @@
         AndroidX.Work.Impl.Background
     </attr>
     <attr 
+        path="/api/package[@name='androidx.work.impl.foreground']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Foreground
+    </attr>
+    <attr 
         path="/api/package[@name='androidx.work.impl.background.greedy']" 
         name="managedName"
         >
