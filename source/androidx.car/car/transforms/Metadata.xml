@@ -1,0 +1,67 @@
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.car.drawer']/class[@name='CarDrawerAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.car.drawer']/class[@name='CarDrawerAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="final"
+        >
+        false
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.car.widget']/class[@name='ListItem']/typeParameters"
+        >
+    </remove-node>
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='ListItem']/method[@name='onBind']/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.Car.Widget.ListItem.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='ActionListItem']/method[@name='onBind' and count(parameter)=1 and parameter[1][@type='androidx.car.widget.ActionListItem.ViewHolder']]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.Car.Widget.ListItem.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='PagedListView']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='PagedScrollBarView']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='ListItemAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    
+    
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='ListItemAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='androidx.car.widget.ListItem.ViewHolder'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.car.widget']/class[@name='ListItemAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='androidx.car.widget.ListItem.ViewHolder'] and parameter[2][@type='int']]"
+        name="final"
+        >
+        true
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.car.widget']/class[@name='ListItemAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='androidx.car.widget.ListItem.ViewHolder'] and parameter[2][@type='int']]"
+        />
+    
+</metadata>

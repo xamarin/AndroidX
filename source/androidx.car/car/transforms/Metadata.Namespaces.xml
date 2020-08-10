@@ -1,0 +1,54 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.car.app']" 
+        name="managedName"
+        >
+        AndroidX.Car.App
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.car.drawer']" 
+        name="managedName"
+        >
+        AndroidX.Car.Drawer
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.car.navigation.utils']" 
+        name="managedName"
+        >
+        AndroidX.Car.Navigation.Utils
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.car.util']" 
+        name="managedName"
+        >
+        AndroidX.Car.Util
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.car.uxrestrictions']" 
+        name="managedName"
+        >
+        AndroidX.Car.UXRestrictions
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.car.widget']" 
+        name="managedName"
+        >
+        AndroidX.Car.Widget
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.car.widget.itemdecorators']" 
+        name="managedName"
+        >
+        AndroidX.Car.Widget.ItemDecorators
+    </attr>    
+    
+    
+</metadata>

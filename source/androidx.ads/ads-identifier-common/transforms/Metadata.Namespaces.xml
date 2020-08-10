@@ -1,0 +1,24 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='androidx.ads.identifier']" 
+        name="managedName"
+        >
+        AndroidX.Ads.Identifier
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.ads.identifier.provider']" 
+        name="managedName"
+        >
+        AndroidX.Ads.Identifier.Provider
+    </attr>    
+    
+    
+</metadata>

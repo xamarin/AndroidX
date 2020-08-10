@@ -17,7 +17,13 @@
         path="/api/package[@name='androidx.camera.view.preview.transform']" 
         name="managedName"
         >
-        AndroidX.Camera.View.Preview
+        AndroidX.Camera.View.Preview.Transform
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.camera.view.preview.transform.transformation']" 
+        name="managedName"
+        >
+        AndroidX.Camera.View.Preview.Transform.Transformation
     </attr>
     
     

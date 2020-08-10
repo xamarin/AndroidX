@@ -12,5 +12,19 @@
         name="managedName"
         >
         AndroidX.Activity
-        </attr>
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.activity.result']" 
+        name="managedName"
+        >
+        AndroidX.Activity.Result
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.activity.result.contract']" 
+        name="managedName"
+        >
+        AndroidX.Activity.Result.Contract
+    </attr>
+    
+    
 </metadata>

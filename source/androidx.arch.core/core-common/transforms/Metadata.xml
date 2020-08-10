@@ -6,4 +6,27 @@
         public
     </attr>
     
+    <attr
+        path="/api/package[@name='androidx.arch.core.internal']/class[@name='SafeIterableMap.ListIterator']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.arch.core.internal']/class[@name='SafeIterableMap.ListIterator']/typeParameters"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='androidx.arch.core.internal']/class[@name='SafeIterableMap.ListIterator']/implements[@name='androidx.arch.core.internal.SafeIterableMap.SupportRemove']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='androidx.arch.core.internal']/class[@name='SafeIterableMap.ListIterator']/implements"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='androidx.arch.core.internal']/interface[@name='SafeIterableMap.SupportRemove']/typeParameters"
+        >        
+    </remove-node>
+    
 </metadata>
