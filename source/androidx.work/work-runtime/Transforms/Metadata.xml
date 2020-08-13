@@ -188,5 +188,12 @@
     <remove-node
         path="/api/package[@name='androidx.work.impl']"
         />
+    
+    <attr 
+        path="/api/package[@name='androidx.work.impl.foreground']" 
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Foreground
+    </attr>
         
 </metadata>
