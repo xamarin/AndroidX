@@ -79,9 +79,7 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": [
-        "Xamarin.AndroidX.MultiDex"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Annotation.Experimental",
@@ -633,10 +631,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
