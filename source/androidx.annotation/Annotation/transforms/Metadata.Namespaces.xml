@@ -1,0 +1,11 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr path="/api/package[@name='androidx.annotation']" name="managedName">AndroidX.Annotations</attr>
+</metadata>
