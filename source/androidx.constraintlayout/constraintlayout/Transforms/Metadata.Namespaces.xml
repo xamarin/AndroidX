@@ -10,7 +10,7 @@
     <attr path="/api/package[@name='androidx.constraintlayout.widget']" name="managedName">AndroidX.ConstraintLayout.Widget</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.solver']" name="managedName">AndroidX.ConstraintLayout.Solver</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']" name="managedName">AndroidX.ConstraintLayout.Solver.Widgets</attr>
-    
+
     <attr 
         path="/api/package[@name='androidx.constraintlayout.helper.widget']" 
         name="managedName"
@@ -41,10 +41,5 @@
         >
         AndroidX.ConstraintLayout.Widget
     </attr>
-    
-    
-    
-        
-    
-    
+   
 </metadata>

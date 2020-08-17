@@ -17,6 +17,11 @@
     <remove-node 
         path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" 
         />
+
+    <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" />
+    <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" />
+    <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" />
+    
     <remove-node
         path="/api/package[@name='androidx.camera.core']/class[@name='Preview.Builder']/implements"
         />
@@ -28,7 +33,6 @@
         />
     <remove-node
         path="/api/package[@name='androidx.camera.core.impl']/class[@name='VideoCaptureConfig.Builder']"
-
         />
 
   <remove-node
