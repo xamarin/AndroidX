@@ -49,7 +49,14 @@
                 name="position" 
                 >
             </parameter>
-      </method>
-        
+      </method>        
     </add-node>
+    
+    <attr
+        path="/api/package[@name='androidx.viewpager2.widget']/class[@name='ViewPager2']"
+        name="final"
+        >
+        false
+    </attr>
+    
 </metadata>
