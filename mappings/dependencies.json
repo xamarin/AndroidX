@@ -352,26 +352,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Concurrent.FutureX",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Concurrent.ListenableFuture",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Concurrent.ListenableFutureCallback",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Concurrent.ListenableFuture"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.ConstraintLayout.Solver",
       "dependencies": []
     },

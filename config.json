@@ -201,37 +201,12 @@
 
 
 
-
 		,{
 			"groupId" : "androidx.concurrent",
 			"artifactId" : "concurrent-futures",
 			"version" : "1.0.0",
 			"nugetVersion" : "1.0.0.2",
 			"nugetId" : "Xamarin.AndroidX.Concurrent.Futures",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.concurrent",
-			"artifactId" : "concurrent-listenablefuture",
-			"version" : "1.0.0-beta01",
-			"nugetVersion" : "1.0.0-beta01",
-			"nugetId" : "Xamarin.AndroidX.Concurrent.ListenableFuture",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.concurrent",
-			"artifactId" : "concurrent-listenablefuture-callback",
-			"version" : "1.0.0-beta01",
-			"nugetVersion" : "1.0.0-beta01",
-			"nugetId" : "Xamarin.AndroidX.Concurrent.ListenableFutureCallback",
-			"dependencyOnly" : false
-		}
-		,{
-			"groupId" : "androidx.concurrent",
-			"artifactId" : "futures",
-			"version" : "1.0.0-alpha01",
-			"nugetVersion" : "1.0.0-alpha01",
-			"nugetId" : "Xamarin.AndroidX.Concurrent.FutureX",
 			"dependencyOnly" : false
 		}
 		,{
