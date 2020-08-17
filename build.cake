@@ -1216,7 +1216,7 @@ Task ("ci")
     .IsDependentOn ("nuget")
     .IsDependentOn ("generate-mapping")
     .IsDependentOn ("migration-nuget")
-    .IsDependentOn ("migration-tests")
+    //.IsDependentOn ("migration-tests")
     .IsDependentOn ("samples");
 
 // for local builds, conditionally do the first binderate
