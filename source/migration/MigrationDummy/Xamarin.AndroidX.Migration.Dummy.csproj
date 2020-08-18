@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MultiDexDummy\Xamarin.AndroidX.MultiDex.Dummy.csproj" PrivateAssets="none" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\MultiDexDummy\Xamarin.AndroidX.MultiDex.Dummy.csproj" PrivateAssets="none" />
   </ItemGroup>
 
 </Project>
