@@ -49,14 +49,25 @@
                 name="position" 
                 >
             </parameter>
-      </method>        
+      </method>
     </add-node>
     
+    <!--
+    https://github.com/xamarin/AndroidX/issues/133
+    
+    Playground.Droid\obj\Debug\100\android\src\mvvmcross\droidx\viewpager2\MvxViewPager2.java(5,36): 
+    javac.exe error JAVAC0000:  error: cannot inherit from final ViewPager2
+    Playground.Droid\obj\Debug\100\android\src\mvvmcross\droidx\viewpager2\MvxViewPager2.java(5,36): 
+    javac.exe error JAVAC0000:  extends androidx.viewpager2.widget.ViewPager2
+    Playground.Droid\obj\Debug\100\android\src\mvvmcross\droidx\viewpager2\MvxViewPager2.java(5,36): 
+    javac.exe error JAVAC0000: 
+
     <attr
         path="/api/package[@name='androidx.viewpager2.widget']/class[@name='ViewPager2']"
         name="final"
         >
         false
     </attr>
+    -->
     
 </metadata>

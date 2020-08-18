@@ -18,4 +18,14 @@
         path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='PreviewConfigProvider']/implements"
         />
     
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.impl']/class[@name='Camera2ImplConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='MeteringRepeatingConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='MeteringRepeatingConfig.Builder']/implements"
+        />
+    
 </metadata>

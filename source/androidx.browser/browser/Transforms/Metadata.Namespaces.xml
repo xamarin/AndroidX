@@ -5,23 +5,22 @@
     <attr path="/api/package[@name='androidx.browser.customtabs']" name="managedName">AndroidX.Browser.CustomTabs</attr>
 
     <attr 
-        path="/api/package[@name='androidx.browser.trusted']" 
+        path="/api/package[@name='androidx.browser.trusted']"
         name="managedName"
         >
         AndroidX.Browser.Trusted
     </attr>
     <attr 
-        path="/api/package[@name='androidx.browser.trusted.splashscreens']" 
-        name="managedName"
-        >
-        AndroidX.Browser.Trusted.Splashscreens
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.browser.trusted.sharing']" 
+        path="/api/package[@name='androidx.browser.trusted.sharing']"
         name="managedName"
         >
         AndroidX.Browser.Trusted.Sharing
     </attr>
-
+    <attr 
+        path="/api/package[@name='androidx.browser.trusted.splashscreens']"
+        name="managedName"
+        >
+        AndroidX.Browser.Trusted.Splashscreens
+    </attr>
     
 </metadata>

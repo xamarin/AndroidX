@@ -533,6 +533,7 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
 
 Task("libs")
     .IsDependentOn("metadata-verify")
+    .IsDependentOn("libs-native")
     .Does(() =>
 {
     var settings = new MSBuildSettings()
@@ -549,6 +550,20 @@ Task("libs")
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     MSBuild("./generated/AndroidX.sln", settings);
+});
+
+Task("libs-native")
+    .Does(() =>
+{
+    string root = "./source/com.google.android.material/material.extensions/";
+
+    RunGradle(root, "build");
+
+    DirectoryPath outputDir = MakeAbsolute((DirectoryPath)"./externals/");
+    EnsureDirectoryExists(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", $"{outputDir}/extensions-aar");
 });
 
 Task("nuget")
@@ -1201,7 +1216,7 @@ Task ("ci")
     .IsDependentOn ("nuget")
     .IsDependentOn ("generate-mapping")
     .IsDependentOn ("migration-nuget")
-    .IsDependentOn ("migration-tests")
+    //.IsDependentOn ("migration-tests")
     .IsDependentOn ("samples");
 
 // for local builds, conditionally do the first binderate
