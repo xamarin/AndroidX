@@ -26,7 +26,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var flattened = tree.Flatten("Xamarin.AndroidX.Palette").ToArray();
 
 			Assert.Contains("Xamarin.AndroidX.Annotation", flattened);
-			//Assert.Contains(//"Xamarin.AndroidX.MultiDex", flattened);
+			Assert.Contains("Xamarin.AndroidX.MultiDex", flattened);
 			Assert.Equal(flattened, flattened.Distinct().ToArray());
 		}
 
@@ -44,7 +44,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -67,7 +67,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -92,7 +92,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.CursorAdapter",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -116,7 +116,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -137,8 +137,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
-      };
+				"Xamarin.AndroidX.MultiDex",
+			};
 
 			var flattened = tree.Flatten(ids, false);
 
@@ -159,7 +159,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -182,7 +182,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -285,7 +285,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.Core.Utils",
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
-				//"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
@@ -294,7 +293,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.LocalBroadcastManager",
 				"Xamarin.AndroidX.Media",
 				"Xamarin.AndroidX.Migration",
-				//"Xamarin.AndroidX.MultiDex",
+				"Xamarin.AndroidX.MultiDex",
 				"Xamarin.AndroidX.Print",
 				"Xamarin.AndroidX.RecyclerView",
 				"Xamarin.AndroidX.SavedState",

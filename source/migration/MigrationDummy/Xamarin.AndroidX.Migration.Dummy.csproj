@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Xamarin.AndroidX.Migration</PackageId>
+    <IsPackable>false</IsPackable>
+    <PackageVersion>$(MigrationPackageVersion)</PackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultiDexDummy\Xamarin.AndroidX.MultiDex.Dummy.csproj" PrivateAssets="none" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>
