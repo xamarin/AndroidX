@@ -34,9 +34,13 @@ var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
 var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.3/AndroidSupport.Merged.dll";
 
-var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-4.zip";
+var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-7.zip";
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
+
+var VISUAL_STUDIO_ROOT = EnvironmentVariable ("VISUAL_STUDIO_ROOT") ?? Argument ("vs", "");
+if (IsRunningOnWindows() && string.IsNullOrEmpty(VISUAL_STUDIO_ROOT))
+    VISUAL_STUDIO_ROOT = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true }).FullPath;
 
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
@@ -46,8 +50,7 @@ var AndroidSdkBuildTools = $"29.0.2";
 
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
     if (IsRunningOnWindows()) {
-        var vsInstallPath = VSWhereLatest(new VSWhereLatestSettings { Requires = "Component.Xamarin", IncludePrerelease = true });
-        XAMARIN_ANDROID_PATH = vsInstallPath.Combine("Common7/IDE/ReferenceAssemblies/Microsoft/Framework/MonoAndroid").FullPath;
+        XAMARIN_ANDROID_PATH = VISUAL_STUDIO_ROOT + @"\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid";
     } else {
         if (DirectoryExists("/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid"))
             XAMARIN_ANDROID_PATH = "/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/xamarin.android/xbuild-frameworks/MonoAndroid";
@@ -71,12 +74,17 @@ var REQUIRED_DOTNET_TOOLS = new [] {
 string JAVA_HOME = EnvironmentVariable ("JAVA_HOME") ?? Argument ("java_home", "");
 string ANDROID_HOME = EnvironmentVariable ("ANDROID_HOME") ?? Argument ("android_home", "");
 string ANDROID_SDK_ROOT = EnvironmentVariable ("ANDROID_SDK_ROOT") ?? Argument ("android_sdk_root", "");
+string MSBUILD_PATH = IsRunningOnWindows() && !string.IsNullOrEmpty(VISUAL_STUDIO_ROOT)
+    ? VISUAL_STUDIO_ROOT + @"\MSBuild\Current\Bin\MSBuild.exe"
+    : null;
 
 // Log some variables
 Information ($"JAVA_HOME            : {JAVA_HOME}");
 Information ($"ANDROID_HOME         : {ANDROID_HOME}");
 Information ($"ANDROID_SDK_ROOT     : {ANDROID_SDK_ROOT}");
+Information ($"VISUAL_STUDIO_ROOT   : {VISUAL_STUDIO_ROOT}");
 Information ($"XAMARIN_ANDROID_PATH : {XAMARIN_ANDROID_PATH}");
+Information ($"MSBUILD_PATH         : {MSBUILD_PATH}");
 Information ($"ANDROID_SDK_VERSION  : {ANDROID_SDK_VERSION}");
 Information ($"BUILD_COMMIT         : {BUILD_COMMIT}");
 Information ($"BUILD_NUMBER         : {BUILD_NUMBER}");
@@ -543,12 +551,14 @@ Task("libs")
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
         .WithRestore()
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-        .WithProperty("MultiDexPackageVersion", MULTIDEX_PACKAGE_VERSION)
         .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings.ToolPath = MSBUILD_PATH;
 
     MSBuild("./generated/AndroidX.sln", settings);
 });
@@ -560,11 +570,12 @@ Task("libs-native")
 
     RunGradle(root, "build");
 
-    DirectoryPath outputDir = MakeAbsolute((DirectoryPath)"./externals/");
+    string outputDir = "./externals/com.xamarin.google.android.material.extensions/";
     EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
 
     CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
-    Unzip($"{outputDir}/extensions-aar-release.aar", $"{outputDir}/extensions-aar");
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
 });
 
 Task("nuget")
@@ -577,7 +588,6 @@ Task("nuget")
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-        .WithProperty("MultiDexPackageVersion", MULTIDEX_PACKAGE_VERSION)
         .WithProperty("NoBuild", "true")
         .WithProperty("PackageRequireLicenseAcceptance", "true")
         .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
@@ -585,6 +595,9 @@ Task("nuget")
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings.ToolPath = MSBUILD_PATH;
 
     MSBuild("./generated/AndroidX.sln", settings);
 });
@@ -654,6 +667,9 @@ Task("samples")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings.ToolPath = MSBUILD_PATH;
+
     MSBuild("./samples/BuildAll/BuildAll.sln", settings);
 });
 
@@ -693,6 +709,14 @@ Task("generate-mapping")
         $"  --output ./output/mappings/dependencies.json");
     using (var jsonReader = System.IO.File.OpenText("./output/mappings/dependencies.json")) {
         var o = (JObject)JToken.ReadFrom(new JsonTextReader(jsonReader));
+        // special case for the fact that we can't actually read the real nuget package yet
+        foreach (var p in o["packages"]) {
+            if (p["id"].Value<string>() == "Xamarin.AndroidX.Migration") {
+                p["dependencies"] = new JArray(new [] {
+                    "Xamarin.AndroidX.MultiDex"
+                });
+            }
+        }
         var j = o.ToString();
         jsonReader.Dispose();
         FileWriteText("./output/mappings/dependencies.json", j);
@@ -790,7 +814,7 @@ Task ("merge")
     var allDlls = GetFiles($"./generated/*/bin/Release/monoandroid*/Xamarin.*.dll");
     var mergeDlls = allDlls
         .GroupBy(d => d.GetFilename().FullPath)
-        .Where(g => !g.Key.Contains("Xamarin.AndroidX.Migration"))
+        .Where(g => !g.Key.Contains("Xamarin.AndroidX.Migration") && !g.Key.Contains("Xamarin.AndroidX.MultiDex")) // skip the 2 dummy
         .Select(g => g.FirstOrDefault())
         .ToList();
 
@@ -852,6 +876,9 @@ Task("migration-libs")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings.ToolPath = MSBUILD_PATH;
+
     MSBuild("./source/migration/Xamarin.AndroidX.Migration.sln", settings);
 });
 
@@ -874,6 +901,9 @@ Task("migration-nuget")
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings.ToolPath = MSBUILD_PATH;
 
     MSBuild("./source/migration/BuildTasks/Xamarin.AndroidX.Migration.BuildTasks.csproj", settings);
 
@@ -941,6 +971,9 @@ Task("migration-tests")
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings.ToolPath = MSBUILD_PATH;
 
     MSBuild("./tests/AndroidXMigrationTests.sln", settings);
 

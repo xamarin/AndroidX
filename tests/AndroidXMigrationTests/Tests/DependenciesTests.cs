@@ -268,7 +268,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.AppCompat",
 				"Xamarin.AndroidX.AppCompat.AppCompatResources",
 				"Xamarin.AndroidX.Arch.Core.Common",
-				"Xamarin.AndroidX.Arch.Core.Runtime",
 				"Xamarin.AndroidX.AsyncLayoutInflater",
 				"Xamarin.AndroidX.Browser",
 				"Xamarin.AndroidX.CardView",

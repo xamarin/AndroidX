@@ -75,14 +75,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\externals\extensions-aar-release.aar" Pack="True" PackagePath="aar\extensions-aar-release.aar" />
+    <None Include="..\..\..\externals\com.xamarin.google.android.material.extensions\extensions-aar-release.aar" Pack="True" PackagePath="aar\extensions-aar-release.aar" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <InputJar Include="..\..\..\externals\extensions-aar\classes.jar" />
+    <InputJar Include="..\..\..\externals\com.xamarin.google.android.material.extensions\extensions-aar\classes.jar" />
     <!-- For those artifacts with lib/ folder -->
-    <InputJar Condition="Exists('..\..\..\externals\extensions-aar\libs\')" Include="..\..\..\externals\extensions-aar\libs\*.jar" />
+    <InputJar Condition="Exists('..\..\..\externals\com.xamarin.google.android.material.extensions\extensions-aar\libs\')" Include="..\..\..\externals\com.xamarin.google.android.material.extensions\extensions-aar\libs\*.jar" />
   </ItemGroup>
 
   <ItemGroup>

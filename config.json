@@ -3,8 +3,7 @@
 	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": 
 	[
-		"source/migration/MigrationDummy/Xamarin.AndroidX.Migration.Dummy.csproj",
-		"source/migration/MultiDexDummy/Xamarin.AndroidX.MultiDex.Dummy.csproj",
+		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
 		"source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
 	],
 	"templates" : [

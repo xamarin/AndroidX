@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Xamarin.AndroidX.MultiDex</PackageId>
+    <PackageId>Xamarin.AndroidX.Migration</PackageId>
     <IsPackable>false</IsPackable>
-    <PackageVersion>$(MultiDexPackageVersion)</PackageVersion>
+    <PackageVersion>$(MigrationPackageVersion)</PackageVersion>
   </PropertyGroup>
 
 </Project>
