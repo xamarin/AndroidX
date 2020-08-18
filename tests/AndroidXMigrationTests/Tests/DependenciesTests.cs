@@ -26,7 +26,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var flattened = tree.Flatten("Xamarin.AndroidX.Palette").ToArray();
 
 			Assert.Contains("Xamarin.AndroidX.Annotation", flattened);
-			//Assert.Contains("Xamarin.AndroidX.MultiDex", flattened);
+			Assert.Contains("Xamarin.AndroidX.MultiDex", flattened);
 			Assert.Equal(flattened, flattened.Distinct().ToArray());
 		}
 
@@ -137,8 +137,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Migration",
-        "Xamarin.AndroidX.MultiDex",
-      };
+				"Xamarin.AndroidX.MultiDex",
+			};
 
 			var flattened = tree.Flatten(ids, false);
 
@@ -268,7 +268,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.AppCompat",
 				"Xamarin.AndroidX.AppCompat.AppCompatResources",
 				"Xamarin.AndroidX.Arch.Core.Common",
-				//"Xamarin.AndroidX.Arch.Core.Runtime",
+				"Xamarin.AndroidX.Arch.Core.Runtime",
 				"Xamarin.AndroidX.AsyncLayoutInflater",
 				"Xamarin.AndroidX.Browser",
 				"Xamarin.AndroidX.CardView",
@@ -285,7 +285,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.Core.Utils",
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
-				//"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",

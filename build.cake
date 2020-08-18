@@ -543,6 +543,7 @@ Task("libs")
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
         .WithRestore()
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("MultiDexPackageVersion", MULTIDEX_PACKAGE_VERSION)
         .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
@@ -576,6 +577,7 @@ Task("nuget")
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("MultiDexPackageVersion", MULTIDEX_PACKAGE_VERSION)
         .WithProperty("NoBuild", "true")
         .WithProperty("PackageRequireLicenseAcceptance", "true")
         .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
@@ -1209,6 +1211,12 @@ Task ("full-run")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples");
 
+Task ("nuget-and-migration")
+    .IsDependentOn ("nuget")
+    .IsDependentOn ("generate-mapping")
+    .IsDependentOn ("migration-nuget")
+    .IsDependentOn ("migration-tests");
+
 Task ("ci")
     .IsDependentOn ("check-tools")
     .IsDependentOn ("inject-variables")
@@ -1216,7 +1224,7 @@ Task ("ci")
     .IsDependentOn ("nuget")
     .IsDependentOn ("generate-mapping")
     .IsDependentOn ("migration-nuget")
-    //.IsDependentOn ("migration-tests")
+    .IsDependentOn ("migration-tests")
     .IsDependentOn ("samples");
 
 // for local builds, conditionally do the first binderate
