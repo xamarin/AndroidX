@@ -814,7 +814,7 @@ Task ("merge")
     var allDlls = GetFiles($"./generated/*/bin/Release/monoandroid*/Xamarin.*.dll");
     var mergeDlls = allDlls
         .GroupBy(d => d.GetFilename().FullPath)
-        .Where(g => !g.Key.Contains("Xamarin.AndroidX.Migration") && !g.Key.Contains("Xamarin.AndroidX.MultiDex")) // skip the 2 dummy
+        .Where(g => !g.Key.Contains("Xamarin.AndroidX.Migration"))
         .Select(g => g.FirstOrDefault())
         .ToList();
 
