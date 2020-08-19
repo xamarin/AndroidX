@@ -51,7 +51,8 @@
     {
       "id": "Xamarin.AndroidX.SavedState",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation"
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
     {
@@ -79,7 +80,9 @@
     },
     {
       "id": "Xamarin.AndroidX.Migration",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Annotation.Experimental",
@@ -631,6 +634,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
