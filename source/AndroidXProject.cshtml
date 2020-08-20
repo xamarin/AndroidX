@@ -179,6 +179,10 @@
     {
         <ProjectReference Include="..\androidx.savedstate.savedstate\androidx.savedstate.savedstate.csproj" PrivateAssets="none" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.SavedState") 
+    {
+        <ProjectReference Include="..\androidx.lifecycle.lifecycle-common\androidx.lifecycle.lifecycle-common.csproj" PrivateAssets="none" />
+    }
   </ItemGroup>
   
 

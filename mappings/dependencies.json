@@ -51,7 +51,8 @@
     {
       "id": "Xamarin.AndroidX.SavedState",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation"
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
     {
