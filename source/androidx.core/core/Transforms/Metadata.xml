@@ -1,0 +1,105 @@
+﻿<metadata>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs']" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getAllowFreeFormInput' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getLabel' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getResultKey' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getChoices' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getAllowedDataTypes' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.core.text']/class[@name='TextDirectionHeuristicsCompat.TextDirectionHeuristicImpl']" name="visibility">internal</attr>
+    <!--
+    mc++    
+    prevent surfacing public interfaces
+    
+    visibility="private"   
+    <attr path="/api/package[@name='androidx.core.app']/interface[@name='NotificationManagerCompat.Task']" name="visibility">internal</attr>
+        
+    visibility="private"    
+    <attr path="/api/package[@name='androidx.core.text']/interface[@name='TextDirectionHeuristicsCompat.TextDirectionAlgorithm']" name="visibility">public</attr>
+    -->
+    <!-- Needed to rename this so we can implement it in our own partial class to mark it as override -->
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs' and count(parameter)=0]" name="managedName">_GetRemoteInputs</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getDataOnlyRemoteInputs' and count(parameter)=0]" name="managedName">_GetDataOnlyRemoteInputs</attr>
+    <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">public</attr>
+    <!--
+    <remove-node path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=1 and parameter[1][@type='T']]" />
+    <remove-node path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.Object']]" />
+    <remove-node path="/api/package[@name='androidx.core.os']/class[@name='LocaleListCompat.LocaleListCompatBaseImpl']" />
+    -->
+    <remove-node path="/api/package[@name='androidx.core.app']/class[@name='JobIntentService.CommandProcessor']" />
+    <!-- The generator binds both CharSequence and java.lang.String as System.String types so if we have overloads which only differ in java by CharSequence and String, we'll end up with duplicate .net binding overloads, so we remove the extra bindings -->
+    <remove-node path="/api/package[@name='androidx.core.text']/class[@name='BidiFormatter']/method[@name='unicodeWrap' and parameter[1][@type='java.lang.String']]" />
+    <remove-node path="/api/package[@name='androidx.core.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']" />
+    
+    <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingChild']/method[@name='startNestedScroll' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedType">Android.Views.ScrollAxis</attr>
+    <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onStartNestedScroll' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
+    <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='getNestedScrollAxes' and count(parameter)=0]" name="managedReturn">Android.Views.ScrollAxis</attr>
+    <add-node path="/api/package[@name='androidx.core.widget']/class[@name='NestedScrollView']">
+        <method deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" jni-return="V" jni-signature="(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V" visibility="public" static="false" abstract="false" return="void" name="onNestedScrollAccepted">
+            <parameter type="android.view.View" name="p0" jni-type="Landroid/view/View;"></parameter>
+            <parameter type="android.view.View" name="p1" jni-type="Landroid/view/View;"></parameter>
+            <parameter type="Android.Views.ScrollAxis" name="p2" jni-type="I"></parameter>
+        </method>
+    </add-node>
+    <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onNestedScrollAccepted' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
+
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='addShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>    
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='removeShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.String&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='removeAllShortcuts' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/field[@name='actionIntent']"
+        name="managedName"
+        >
+        ActionIntentData
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/field[@name='icon']"
+        name="managedName"
+        >
+        IconData
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/field[@name='title']"
+        name="managedName"
+        >
+        TitleData
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver']/method[@name='addShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;']]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver']/method[@name='removeAllShortcuts' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver']/method[@name='removeShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.String&gt;']]"
+        name="abstract"
+        >
+        false
+    </attr>
+    
+</metadata>

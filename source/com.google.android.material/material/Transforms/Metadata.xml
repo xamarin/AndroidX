@@ -1,0 +1,155 @@
+﻿<metadata>
+    <!--
+        Sad, but for backwards compatibility, we need to use Object
+        We could create a generic (like java) and then derive from the Object one, but for now just use Object
+        <attr path="//parameter[@type='V']" name="type">android.view.View</attr>
+    -->
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onMeasureChild']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onLayoutChild']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedPreScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onNestedScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onRestoreInstanceState']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onSaveInstanceState']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStartNestedScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.Behavior']/method[@name='onStopNestedScroll']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']/method[@name='layoutChild']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.google.android.material.snackbar']/class[@name='BaseTransientBottomBar.Behavior']/method[@name='onInterceptTouchEvent']/parameter[2]" name="managedType">Java.Lang.Object</attr>
+
+    <!-- fix up inheritance as a result of generics -->
+    <add-node path="/api/package[@name='com.google.android.material.appbar']/class[@name='ViewOffsetBehavior']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="onMeasureChild" jni-signature="(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;IIII)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="parent" type="androidx.coordinatorlayout.widget.CoordinatorLayout" jni-type="Landroidx/coordinatorlayout/widget/CoordinatorLayout;"></parameter>
+            <parameter name="child" type="android.view.View" jni-type="Landroid/view/View;" />
+            <parameter name="parentWidthMeasureSpec" type="int" jni-type="I" />
+            <parameter name="widthUsed" type="int" jni-type="I" />
+            <parameter name="parentHeightMeasureSpec" type="int" jni-type="I" />
+            <parameter name="heightUsed" type="int" jni-type="I" />
+        </method>
+    </add-node>
+
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderBehavior']" name="visibility">public</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='ViewOffsetBehavior']" name="visibility">public</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='AppBarLayout.BaseBehavior']" name="visibility">public</attr>
+    <attr path="/api/package[@name='com.google.android.material.appbar']/class[@name='HeaderScrollingViewBehavior']" name="visibility">public</attr>
+
+    <!--
+      OnOffsetChangedListener now implements BaseOnOffsetChangedListener with just the same method
+      This causes some inheritance problems in .NET so we're going to hide this base interface and make sure everywhere that uses it is patched up and uses OnOffsetChangedListener instead
+      Luckily for now any methods that take BaseOnOffsetChangedListener also have an overload for OnOffsetChangedListener
+     -->
+    <remove-node path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.BaseOnOffsetChangedListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/implements[@name='com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener']" />
+    <attr path="/api/package[@name='com.google.android.material.appbar']/interface[@name='AppBarLayout.OnOffsetChangedListener']/method[@name='onOffsetChanged']/parameter[1]" name="type">com.google.android.material.appbar.AppBarLayout</attr>
+
+    <!-- Google added a new level in between, so we call that 2 :( -->
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']" name="managedName">IOnTabSelectedListener</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.OnTabSelectedListener']" name="managedName">IOnTabSelectedListener2</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout']/method[@name='setOnTabSelectedListener']" name="eventName"></attr>
+
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/interface[@name='TabLayout.BaseOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="type">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabSelected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabReselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+    <attr path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.ViewPagerOnTabSelectedListener']/method[@name='onTabUnselected']/parameter[1]" name="managedType">Google.Android.Material.Tabs.TabLayout.Tab</attr>
+
+    <!-- Remove some non-public interfaces that the generator tries to bind -->
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
+
+    <attr
+      path="/api/package[@name='com.google.android.material.bottomappbar']/class[@name='BottomAppBar']/method[@name='getBehavior' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      AndroidX.CoordinatorLayout.Widget.CoordinatorLayout.Behavior
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.bottomappbar']/class[@name='BottomAppBar']/method[@name='getBehavior' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='ExtendedFloatingActionButton']/method[@name='getBehavior' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.floatingactionbutton']/class[@name='BaseMotionStrategy']"
+      name="visibility"
+      >
+      public
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.ripple']/class[@name='RippleDrawableCompat.RippleDrawableCompatState']/method[@name='newDrawable' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Android.Graphics.Drawables.Drawable
+    </attr>
+
+    <!--
+    Fix for https://github.com/xamarin/java.interop/issues/565
+    -->
+    <attr
+      path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='DateSelector']/method[@name='setSelection' and count(parameter)=1 and parameter[1][@type='S']]/parameter[1]"
+      name="name"
+      >
+      value
+  </attr>
+
+  <attr 
+    path="/api/package[@name='com.google.android.material.button']/interface[@name='MaterialButton.OnPressedChangeListener']" 
+    name="visibility"
+    >
+    private
+  </attr>
+  <attr 
+    path="/api/package[@name='com.google.android.material.datepicker']/interface[@name='MaterialCalendar.OnDayClickListener']" 
+    name="visibility"
+    >
+    private
+  </attr>
+  <attr 
+    path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" 
+    name="visibility"
+    >
+    private
+  </attr>
+  <attr 
+    path="/api/package[@name='com.google.android.material.bottomappbar']/interface[@name='BottomAppBar.AnimationListener']" 
+    name="visibility"
+    >
+    private
+  </attr>
+  <attr 
+    path="/api/package[@name='com.google.android.material.tabs']/class[@name='TabLayout.TabView']"
+    name="visibility"
+    >
+    public
+  </attr>
+    
+    
+  <remove-node
+    path="/api/package[@name='com.google.android.material.slider']/class[@name='Slider']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+    />
+  <remove-node
+    path="/api/package[@name='com.google.android.material.slider']/class[@name='RangeSlider']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+    />
+  <remove-node
+    path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]"
+    />
+  <remove-node
+    path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setBackgroundTintList' and count(parameter)=1 and parameter[1][@type='android.content.res.ColorStateList']]"
+    />    
+  <remove-node
+    path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setBackgroundTintMode' and count(parameter)=1 and parameter[1][@type='android.graphics.PorterDuff.Mode']]"
+    />
+  <remove-node
+    path="/api/package[@name='com.google.android.material.textfield']/class[@name='MaterialAutoCompleteTextView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='T']]"
+    />
+    
+    
+    
+</metadata>

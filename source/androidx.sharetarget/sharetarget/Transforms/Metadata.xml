@@ -1,0 +1,41 @@
+﻿<metadata>
+
+    <!--
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']/method[@name='addShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;']]"
+        />
+        
+    <remove-node
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']/method[@name='removeAllShortcuts' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']/method[@name='removeShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.String&gt;']]"
+        />
+    
+    <!--    
+    <add-node
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']"
+        >
+        code from:
+        path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver']"
+    
+        <method 
+            abstract="false" deprecated="not deprecated" final="true" name="addShortcuts" bridge="false" native="false" return="java.lang.Object" 
+            static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="shortcuts" type="java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;" >
+            </parameter>
+        </method>
+        <method 
+            abstract="false" deprecated="not deprecated" final="true" name="removeAllShortcuts" jni-signature="()Ljava/lang/Object;" bridge="false" native="false" return="java.lang.Object"
+            static="false" synchronized="false" synthetic="false" visibility="public">
+        </method>
+        <method 
+            abstract="false" deprecated="not deprecated" final="true" name="removeShortcuts" bridge="false" native="false" return="java.lang.Object" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="shortcuts" type="java.util.List&lt;java.lang.String&gt;" >
+            </parameter>
+        </method>        
+    </add-node>
+    -->
+    
+</metadata>

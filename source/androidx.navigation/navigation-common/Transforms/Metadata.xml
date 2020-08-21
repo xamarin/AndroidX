@@ -1,0 +1,107 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.ParcelableArrayType']/method[@name='get' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]"
+        name="managedReturn"
+        >        
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavGraphNavigator']/method[@name='navigate' and count(parameter)=4 and parameter[1][@type='androidx.navigation.NavGraph'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.navigation.NavOptions'] and parameter[4][@type='androidx.navigation.Navigator.Extras']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavGraphNavigator']/method[@name='createDestination' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.ParcelableArrayType']/method[@name='parseValue' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"    
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableArrayType']/method[@name='parseValue' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"    
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableType']/method[@name='parseValue' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"    
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableArrayType']/method[@name='get' and count(parameter)=2 and parameter[1][@type='android.os.Bundle'] and parameter[2][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <!--
+    Not working???
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableType']/method[@name='put']/parameter[3]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.ParcelableArrayType']/method[@name='put']/parameter[3]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableArrayType']/method[@name='put']/parameter[3]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    --> 
+    <remove-node
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType']/method[@name='put']"
+        />
+
+    <!--    
+    <remove-node
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.ParcelableArrayType']/method[@name='put']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableArrayType']/method[@name='put']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.navigation']/class[@name='NavType.SerializableType']/method[@name='put']"
+        />
+    -->    
+    <add-node
+        path="/api/package[@name='androidx.navigation']/class[@name='NavDestination.DeepLinkMatch']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false"  final="false" deprecated="not deprecated" 
+            >
+            <parameter name="p0" type="java.lang.Object" />
+        </method>
+    </add-node>
+        
+    
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NoOpNavigator']/method[@name='createDestination' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.navigation']/class[@name='NoOpNavigator']/method[@name='navigate' and count(parameter)=4 and parameter[1][@type='androidx.navigation.NavDestination'] and parameter[2][@type='android.os.Bundle'] and parameter[3][@type='androidx.navigation.NavOptions'] and parameter[4][@type='androidx.navigation.Navigator.Extras']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    
+    
+</metadata>

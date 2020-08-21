@@ -1,0 +1,84 @@
+<metadata>
+    
+    <attr
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImmediateSurface']/method[@name='provideSurface' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    
+    
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" 
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" 
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core']/class[@name='Preview.Builder']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core']/class[@name='ImageAnalysis.Builder']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core']/class[@name='ImageCapture.Builder']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='VideoCaptureConfig.Builder']"
+
+        />
+
+  <remove-node
+        path="/api/package[@name='androidx.camera.core']/class[@name='CameraXConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImageAnalysisConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImageCaptureConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='VideoCaptureConfig']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='PreviewConfig']/implements"
+        />
+    
+    <attr
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImmediateSurface']/method[@name='provideSurface' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+  
+    
+    <attr
+        path="/api/package[@name='androidx.camera.core']/class[@name='VideoCapture.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core']/class[@name='VideoCapture.Builder']/method[@name='setTargetClass' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;androidx.camera.core.VideoCapture&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core']/class[@name='VideoCapture.Builder']/method[@name='setTargetName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core']/class[@name='VideoCapture.Builder']/method[@name='setUseCaseEventCallback' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.UseCase.EventCallback']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
+       
+</metadata>

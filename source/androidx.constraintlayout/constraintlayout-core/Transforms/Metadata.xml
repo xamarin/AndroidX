@@ -1,0 +1,44 @@
+﻿<metadata>
+
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.core.widgets.analyzer']/class[@name='WidgetRun.RunType']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='fixed' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        FixedInt
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='fixed' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedName"
+        >
+        FixedObject
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='percent' and count(parameter)=2 and parameter[1][@type='java.lang.Object'] and parameter[2][@type='float']]"
+        name="managedName"
+        >
+        PercentObject
+    </attr>
+    
+    
+    <attr 
+    path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='suggested' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        SuggestedInt
+    </attr>
+    
+    <attr 
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='suggested' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedName"
+        >
+        SuggestedObject
+    </attr>
+    
+    
+</metadata>
