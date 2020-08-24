@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
+import androidx.legacy.widget.Space;
 
 public class SimpleFragment extends Fragment {
 
@@ -17,7 +18,7 @@ public class SimpleFragment extends Fragment {
         return null;
     }
 
-    public Fragment getAnotherThing() {
+    public Space getAnotherThing() {
         return null;
     }
 

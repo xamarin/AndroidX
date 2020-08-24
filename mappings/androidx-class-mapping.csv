@@ -257,7 +257,7 @@ android.arch.persistence.room.Update,androidx.room.Update
 android.arch.persistence.room.util.StringUtil,androidx.room.util.StringUtil
 android.arch.persistence.room.util.TableInfo,androidx.room.util.TableInfo
 android.arch.persistence.room.verifier.ColumnInfo,androidx.room.verifier.ColumnInfo
-android.arch.persistence.room.verifier.DatabaseVerificaitonErrors,androidx.room.verifier.DatabaseVerificaitonErrors
+android.arch.persistence.room.verifier.DatabaseVerificationErrors,androidx.room.verifier.DatabaseVerificationErrors
 android.arch.persistence.room.verifier.DatabaseVerifier,androidx.room.verifier.DatabaseVerifier
 android.arch.persistence.room.verifier.QueryResultInfo,androidx.room.verifier.QueryResultInfo
 android.arch.persistence.room.vo.CallType,androidx.room.vo.CallType
