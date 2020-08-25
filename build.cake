@@ -289,7 +289,7 @@ Task ("binderate")
 });
 
 string version_suffix = "";
-string nuget_version_template = $"x.y.z{version_suffix}";
+string nuget_version_template = $"x.y.z.w{version_suffix}";
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
@@ -315,28 +315,65 @@ Task("binderate-config-verify")
                 string artifact_version = (string) jo["version"];
                 string nuget_version  	= (string) jo["nugetVersion"];
 
-                string artifact_version_suffix  = (string) jo["version"];
-                string nuget_version_suffix  	= (string) jo["nugetVersion"];
+                string[] artifact_version_parts = artifact_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] nuget_version_parts = nuget_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
+
+                string nuget_version_prefix  	= nuget_version_parts[0];
+                string artifact_version_prefix  = artifact_version_parts[0];
+                string nuget_version_suffix  	= null;
+                string artifact_version_suffix  = null;
+
+                if (nuget_version_parts.Length > 1)
+                {
+                    nuget_version_suffix  	= nuget_version_parts[1];
+                }
+                if (artifact_version_parts.Length > 1)
+                {
+                    artifact_version_suffix  = artifact_version_parts[1];
+                }
 
                 Information($"groupId                   = {jo["groupId"]}");
                 Information($"artifactId                = {jo["artifactId"]}");
                 Information($"artifact_version          = {artifact_version}");
-                Information($"nuget_version             = {nuget_version}");
+                Information($"artifact_version_prefix   = {artifact_version_prefix}");
                 Information($"artifact_version_suffix   = {artifact_version_suffix}");
-                Information($"nuget_version_suffix 	    = {nuget_version_suffix}");
+                Information($"nuget_version             = {nuget_version}");
+                Information($"nuget_version_prefix      = {nuget_version_prefix}");
+                Information($"nuget_version_suffix      = {nuget_version_suffix}");
                 Information($"nugetId                   = {jo["nugetId"]}");
 
-                string[] artifact_version_parts = artifact_version.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
-                string x = artifact_version_parts[0];
-                string y = artifact_version_parts[1];
-                string z = artifact_version_parts[2];
+                
+                string[] artifact_version_prefix_parts = artifact_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
+                string[] nuget_version_prefix_parts = nuget_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
+                string x = nuget_version_prefix_parts[0];
+                string y = nuget_version_prefix_parts[1];
+                string z = nuget_version_prefix_parts[2];
+
+                string w = null;
+                if (nuget_version_prefix_parts.Length > 3)
+                {
+                    w = nuget_version_prefix_parts[3];
+                }
 
                 string nuget_version_new = nuget_version_template;
                 nuget_version_new = nuget_version_new.Replace("x", x);
                 nuget_version_new = nuget_version_new.Replace("y", y);
                 nuget_version_new = nuget_version_new.Replace("z", z);
+                nuget_version_new = nuget_version_new.Replace("w", w);
 
-                if( string.IsNullOrEmpty(version_suffix) && ! nuget_version.StartsWith(nuget_version_new) )
+                if ( ! string.IsNullOrEmpty(nuget_version_suffix) )
+                {
+                    nuget_version_new    += $"-{nuget_version_suffix}";
+                }
+
+                Information($"nuget_version_new         = {nuget_version_new}");
+
+                if
+                    ( 
+                        ! nuget_version_new.StartsWith($"{artifact_version_prefix}") 
+                        &&
+                        ! nuget_version_new.EndsWith($"{artifact_version_suffix}") 
+                    )
                 {
                     Error("check config.json for nuget id");
                     Error  ($"		groupId           = {jo["groupId"]}");
