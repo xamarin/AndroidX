@@ -1260,6 +1260,26 @@ Task ("diff")
 });
 
 
+Task("bindings-verify")
+    .Does
+    (
+        () =>
+        {
+            List<string> classes_missing = new List<string>();
+
+            string[] lines = System.IO.File.ReadAllLines("./mappings/androidx-mapping.csv");
+            foreach(string line in lines)
+            {
+                if (line.StartsWith(",,,,,,,,,,WARNING: Unable to find "))
+                {
+                    classes_missing.Add(line);
+                }                
+            }
+
+            System.IO.File.WriteAllLines("./output/androidx-missing-classes.csv", classes_missing.ToArray());
+        }
+    );
+
 Task ("clean")
     .Does (() =>
 {
