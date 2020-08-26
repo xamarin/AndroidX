@@ -342,7 +342,7 @@ Task("binderate-config-verify")
                 Information($"nuget_version_suffix      = {nuget_version_suffix}");
                 Information($"nugetId                   = {jo["nugetId"]}");
 
-                
+
                 string[] artifact_version_prefix_parts = artifact_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
                 string[] nuget_version_prefix_parts = nuget_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
                 string x = nuget_version_prefix_parts[0];
@@ -369,10 +369,10 @@ Task("binderate-config-verify")
                 Information($"nuget_version_new         = {nuget_version_new}");
 
                 if
-                    ( 
-                        ! nuget_version_new.StartsWith($"{artifact_version_prefix}") 
+                    (
+                        ! nuget_version_new.StartsWith($"{artifact_version_prefix}")
                         &&
-                        ! nuget_version_new.EndsWith($"{artifact_version_suffix}") 
+                        ! nuget_version_new.EndsWith($"{artifact_version_suffix}")
                     )
                 {
                     Error("check config.json for nuget id");
@@ -382,7 +382,7 @@ Task("binderate-config-verify")
                     Error  ($"		nuget_version     = {nuget_version}");
                     Error  ($"		nuget_version_new = {nuget_version_new}");
                     Error  ($"		nugetId           = {jo["nugetId"]}");
-                    
+
                     Warning($"	expected : ");
                     Warning($"		nuget_version = {nuget_version_new}");
                     throw new Exception("check config.json for nuget id");
@@ -511,7 +511,7 @@ Task("metadata-verify")
             //  namespace is required, otherwise NRE
             string xml_namespace_name = "ax"; // could be "apixml" but it is irrelevant, keeping it short
 
-            string xpath_expression_nodes_to_find = 
+            string xpath_expression_nodes_to_find =
                         //$@"//attr[contains(@path,'interface') and contains(@name ,'visibility')]"
                         $@"//attr[contains(@path,'interface')]"
                         ;
@@ -564,7 +564,7 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
             Information($"			Visibility: {inner_text}");
             throw new Exception("MediaRouteProvider.DynamicGroupRouteController");
         }
-        
+
         if (string.Equals(name, "visibility") && inner_text.Contains("public"))
         {
             Information($"		Visibility  = {inner_text}");
@@ -572,7 +572,7 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
             bool is_public = inner_text.Contains("public") ? true : false;
 
             yield return (Path: path, IsPublic: is_public);
-        }	
+        }
     }
 }
 
@@ -815,20 +815,20 @@ Task("generate-mapping")
     var xitems = xprops.Descendants(xmlns + "_AndroidXSupportAssembly");
     var xparent = xitems.FirstOrDefault().Parent;
     xitems.Remove();
-    xparent.Add(records.OrderBy(r => r.Support).Select(r => r.Support).Distinct().Select(r => 
-        new XElement(xmlns + "_AndroidXSupportAssembly", 
+    xparent.Add(records.OrderBy(r => r.Support).Select(r => r.Support).Distinct().Select(r =>
+        new XElement(xmlns + "_AndroidXSupportAssembly",
             new XAttribute("Include", r))));
     xitems = xprops.Descendants(xmlns + "_AndroidXAssembly");
     xparent = xitems.FirstOrDefault().Parent;
     xitems.Remove();
-    xparent.Add(records.OrderBy(r => r.AndroidX).Select(r => r.AndroidX).Distinct().Select(r => 
-        new XElement(xmlns + "_AndroidXAssembly", 
+    xparent.Add(records.OrderBy(r => r.AndroidX).Select(r => r.AndroidX).Distinct().Select(r =>
+        new XElement(xmlns + "_AndroidXAssembly",
             new XAttribute("Include", r))));
     xitems = xprops.Descendants(xmlns + "_AndroidXMavenArtifact");
     xparent = xitems.FirstOrDefault().Parent;
     xitems.Remove();
-    xparent.Add(GetArtifacts().OrderBy(r => r).Select(r => r).Distinct().Select(r => 
-        new XElement(xmlns + "_AndroidXMavenArtifact", 
+    xparent.Add(GetArtifacts().OrderBy(r => r).Select(r => r).Distinct().Select(r =>
+        new XElement(xmlns + "_AndroidXMavenArtifact",
             new XAttribute("Include", r))));
     var xmlSettings = new XmlWriterSettings {
         Encoding = new UTF8Encoding(),
@@ -1113,7 +1113,7 @@ Task("merge-fresh")
             mergeDlls.ForEach( x => { Console.WriteLine(x); });
             var result2 = StartProcess
                             (
-                                "api-tools", 
+                                "api-tools",
                                 "merge -n Xamarin.AndroidX.Merged" +
                                 $" {string.Join(" ", mergeDlls)} " +
                                 $" -s /Library/Frameworks/Xamarin.Android.framework/Versions/9.1.0-17/lib/xamarin.android/xbuild-frameworks/MonoAndroid/v9.0/" +
@@ -1124,7 +1124,7 @@ Task("merge-fresh")
             var result1 = StartProcess($"api-tools", $"api-info {ANDROIDX_MERGED_DLL}");
             if (result1 != 0)
                 throw new Exception($"The androidxmapper failed with error code {result1}.");
-                
+
             return;
         }
     );
@@ -1134,6 +1134,7 @@ Task("api-diff")
     .IsDependentOn ("merge")
     .IsDependentOn ("api-info-migrate")
     .IsDependentOn ("merge-fresh")
+    .IsDependentOn ("bindings-verify")    
     .Does
     (
         () =>
@@ -1177,7 +1178,7 @@ Task("api-diff")
                     foreach(string t1 in types)
                     {
                         string c  = t1.Substring(t1.LastIndexOf(".") + 1);
-                        removed_types.Add((Class: c, ClassFullyQualified: t1)); 
+                        removed_types.Add((Class: c, ClassFullyQualified: t1));
                     }
                 }
                 if (line.Contains("<h3>New Type "))
@@ -1186,7 +1187,7 @@ Task("api-diff")
                     t = t.Replace("</h3>", "");
                     Information($"{t}");
                     string c  = t.Substring(t.LastIndexOf(".") + 1);
-                    new_types.Add((Class: c, ClassFullyQualified:t)); 
+                    new_types.Add((Class: c, ClassFullyQualified:t));
                 }
                 lines_html_new.Add(line);
             }
@@ -1215,7 +1216,7 @@ Task("api-diff")
                 string cn_fq = new_types[idx2].ClassFullyQualified;
                 moved_types.Add($"{c},{cr_fq},{cn_fq}");
             }
-            
+
             var indices_new_sorted = indices_new.OrderByDescending(t => t);
             for (int i = 0; i < indices_new_sorted.Count(); i++)
             {
@@ -1237,6 +1238,7 @@ Task("api-diff")
 
 Task ("diff")
     .IsDependentOn ("merge")
+    .IsDependentOn ("bindings-verify")    
     .Does (() =>
 {
     var SEARCH_DIRS = new DirectoryPath [] {
@@ -1273,7 +1275,7 @@ Task("bindings-verify")
                 if (line.StartsWith(",,,,,,,,,,WARNING: Unable to find "))
                 {
                     classes_missing.Add(line);
-                }                
+                }
             }
 
             System.IO.File.WriteAllLines("./output/androidx-missing-classes.csv", classes_missing.ToArray());
@@ -1315,6 +1317,7 @@ Task ("ci")
     .IsDependentOn ("generate-mapping")
     .IsDependentOn ("migration-nuget")
     .IsDependentOn ("migration-tests")
+    .IsDependentOn ("bindings-verify")
     .IsDependentOn ("samples");
 
 // for local builds, conditionally do the first binderate
