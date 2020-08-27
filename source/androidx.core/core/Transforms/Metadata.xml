@@ -83,5 +83,18 @@
         >
         TitleData
     </attr>
-
+    
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.core.app']/class[@name='JobIntentService.JobServiceEngineImpl']/method[@name='dequeueWork' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+        
 </metadata>
