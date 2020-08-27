@@ -1316,7 +1316,7 @@ Task ("ci")
     .IsDependentOn ("nuget")
     .IsDependentOn ("generate-mapping")
     .IsDependentOn ("migration-nuget")
-    //.IsDependentOn ("migration-tests")
+    .IsDependentOn ("migration-tests")
     .IsDependentOn ("bindings-verify")
     .IsDependentOn ("samples");
 
