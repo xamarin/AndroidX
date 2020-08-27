@@ -8,12 +8,4 @@
     <attr path="/api/package[@name='androidx.gridlayout.widget']/class[@name='GridLayout']/field[@name='RIGHT']" name="managedName">RightAlignment</attr>
     <attr path="/api/package[@name='androidx.gridlayout.widget']/class[@name='GridLayout']/field[@name='START']" name="managedName">StartAlignment</attr>
     <attr path="/api/package[@name='androidx.gridlayout.widget']/class[@name='GridLayout']/field[@name='TOP']" name="managedName">TopAlignment</attr>
-
-    <attr
-        path="//class[@visibility='']"
-        name="visibility"
-        >
-        public
-    </attr>
-
 </metadata>

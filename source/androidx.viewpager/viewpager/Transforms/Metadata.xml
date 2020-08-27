@@ -15,12 +15,4 @@
     <attr path="/api/package[@name='androidx.viewpager.widget']/interface[@name='ViewPager.PageTransformer']/method[@name='transformPage' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[2]" name="managedName">position</attr>
     <attr path="/api/package[@name='androidx.viewpager.widget']/class[@name='PagerAdapter']/method[@name='isViewFromObject' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.Object']]/parameter[1]" name="managedName">view</attr>
     <attr path="/api/package[@name='androidx.viewpager.widget']/class[@name='PagerAdapter']/method[@name='isViewFromObject' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='java.lang.Object']]/parameter[2]" name="managedName">@object</attr>
-
-    <attr
-        path="//class[@visibility='']"
-        name="visibility"
-        >
-        public
-    </attr>
-
 </metadata>

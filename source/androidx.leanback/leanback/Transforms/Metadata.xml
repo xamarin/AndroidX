@@ -242,16 +242,5 @@
         >
         public
     </attr>
-    
-    <!--
-    6 errors
-    TODO: try without globbing
-    <attr
-        path="//class[@visibility='']"
-        name="visibility"
-        >
-        public
-    </attr>
-    -->
-    
+        
 </metadata>

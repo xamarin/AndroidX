@@ -15,31 +15,4 @@
     <attr path="/api/package[@name='androidx.constraintlayout.motion.widget']/interface[@name='MotionLayout.TransitionListener']/method[@name='onTransitionTrigger' and count(parameter)=4 and parameter[1][@type='androidx.constraintlayout.motion.widget.MotionLayout'] and parameter[2][@type='int'] and parameter[3][@type='boolean'] and parameter[4][@type='float']]/parameter[2]" name="managedName">triggerId</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.motion.widget']/interface[@name='MotionLayout.TransitionListener']/method[@name='onTransitionTrigger' and count(parameter)=4 and parameter[1][@type='androidx.constraintlayout.motion.widget.MotionLayout'] and parameter[2][@type='int'] and parameter[3][@type='boolean'] and parameter[4][@type='float']]/parameter[3]" name="managedName">positive</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.motion.widget']/interface[@name='MotionLayout.TransitionListener']/method[@name='onTransitionTrigger' and count(parameter)=4 and parameter[1][@type='androidx.constraintlayout.motion.widget.MotionLayout'] and parameter[2][@type='int'] and parameter[3][@type='boolean'] and parameter[4][@type='float']]/parameter[4]" name="managedName">progress</attr>
-
-    <attr
-        path="//class[@visibility='']"
-        name="visibility"
-        >
-        public
-    </attr>
-    
-    <!--
-    above results in:    
-    2 errors:
-    
-    AndroidX.ConstraintLayout.Motion.Widget.MotionConstrainedPoint.cs(74,74): 
-    Error CS0535: 'MotionConstrainedPoint' does not implement interface member 'IComparable.CompareTo(Object)' 
-    
-    AndroidX.ConstraintLayout.Motion.Widget.MotionPaths.cs(63,63): 
-    Error CS0535: 'MotionPaths' does not implement interface member 'IComparable.CompareTo(Object)'
-    
-    TODO: add-node!
-    -->
-    <remove-node
-        path="/api/package[@name='androidx.constraintlayout.motion.widget']/class[@name='MotionConstrainedPoint']/implements"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.constraintlayout.motion.widget']/class[@name='MotionPaths']/implements"
-        />
-    
 </metadata>
