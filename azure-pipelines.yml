@@ -25,8 +25,7 @@ resources:
 parameters:
   - name: CodeSignOverride
     type: string
-    default: ''
-    values: ["", "true", "false"]
+    default: '' # set to true to force realsigning, false to force testsigning, keep blank to let the pipeline infer
 
 jobs:
   - template: .ci/build.yml@components
