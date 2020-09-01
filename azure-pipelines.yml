@@ -26,7 +26,7 @@ parameters:
   - name: CodeSignOverride
     type: string
     default: ''
-    values: ['', 'true', 'false']
+    values: ["", "true", "false"]
 
 jobs:
   - template: .ci/build.yml@components
