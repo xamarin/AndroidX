@@ -22,6 +22,12 @@ resources:
       name: xamarin/XamarinComponents
       endpoint: xamarin
 
+parameters:
+  - name: CodeSignOverride
+    type: string
+    default: ''
+    values: ['', 'true', 'false']
+
 jobs:
   - template: .ci/build.yml@components
     parameters:
@@ -46,4 +52,5 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v1.yml@internal-templates
       parameters:
+        CodeSignOverride: true # testing true case
         dependsOn: [ 'build' ]
