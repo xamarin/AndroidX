@@ -51,5 +51,5 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v1.yml@internal-templates
       parameters:
-        CodeSignOverride: true # testing true case
+        CodeSignOverride: false # testing true case
         dependsOn: [ 'build' ]
