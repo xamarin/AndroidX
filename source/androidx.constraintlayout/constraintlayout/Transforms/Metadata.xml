@@ -26,4 +26,6 @@
     <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='ConstraintLayout.LayoutParams']/method[@name='getConstraintTag' and count(parameter)=0]" name="managedName">GetConstraintTag</attr>
 
     <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='Constraints']/field[@name='TAG']" name="managedName">TAG</attr>
+
+    <remove-node path="/api/package[@name='androidx.constraintlayout.motion.widget']/class[@name='MotionLayout']/method[@name='addTransitionListener']" />
 </metadata>
