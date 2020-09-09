@@ -12,7 +12,7 @@ variables:
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
   SIGNING_VM_NAME: VSEng-MicroBuildVS2019
-  SIGNING_TYPE: None
+  SIGNING_TYPE: Test
   NUGET_BUILD_ID: 4050789
 
 resources:
@@ -49,7 +49,9 @@ jobs:
         - task: MicroBuildSigningPlugin@2
           inputs:
             signType: $(SIGNING_TYPE)
-        # TODO: SIGN            
+
+        # TODO: SIGN
+
         - task: MicroBuildCleanup@1
           env:
             TeamName: $(_TeamName)
