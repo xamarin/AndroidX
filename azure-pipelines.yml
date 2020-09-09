@@ -38,16 +38,16 @@ jobs:
    steps:
      - checkout: none
      - powershell: echo "Hello World!"
-     - task: DownloadBuildArtifacts@0
-       inputs:
-         buildType: 'specific'
-         project: '$(System.TeamProjectId)'
-         pipeline: '$(System.DefinitionId)'
-         buildVersionToDownload: 'specific'
-         buildId: $(NUGET_BUILD_ID)
-         downloadType: 'single'
-         artifactName: '$(SIGNING_ARTIFACT_NAME)'
-         downloadPath: '$(SIGNING_DOWNLOADED_DIRECTORY_PATH)'
+#      - task: DownloadBuildArtifacts@0
+#        inputs:
+#          buildType: 'specific'
+#          project: '$(System.TeamProjectId)'
+#          pipeline: '$(System.DefinitionId)'
+#          buildVersionToDownload: 'specific'
+#          buildId: $(NUGET_BUILD_ID)
+#          downloadType: 'single'
+#          artifactName: '$(SIGNING_ARTIFACT_NAME)'
+#          downloadPath: '$(SIGNING_DOWNLOADED_DIRECTORY_PATH)'
 
      - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
         - task: MicroBuildSigningPlugin@2
