@@ -53,6 +53,4 @@ jobs:
         # TODO: SIGN
 
         - task: MicroBuildCleanup@1
-          env:
-            TeamName: $(_TeamName)
 
