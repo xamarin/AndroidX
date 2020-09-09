@@ -58,7 +58,7 @@ jobs:
 
         # TODO: SIGN
         - powershell: |
-            gci env:* | sort-object name
+            dir $env:MicroBuildOverridePluginDirectory
 
         - task: MicroBuildCleanup@1
           env:
