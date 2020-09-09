@@ -11,6 +11,9 @@ variables:
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
+  SIGNING_VM_NAME: VSEng-MicroBuildVS2019
+  SIGNING_TYPE: Test
+
 resources:
   repositories:
     - repository: internal-templates
@@ -23,28 +26,29 @@ resources:
       endpoint: xamarin
 
 jobs:
-  - template: .ci/build.yml@components
-    parameters:
-      timeoutInMinutes: 120
-      areaPath: 'DevDiv\Xamarin SDK\Android'
-      preBuildSteps:
-        - pwsh: |
-            dotnet tool uninstall --global Cake.Tool
-            dotnet tool install --global Cake.Tool
-            dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-8-macos
-          condition: eq(variables['System.JobName'], 'macos')
-        - pwsh: |
-            dotnet tool uninstall --global Cake.Tool
-            dotnet tool install --global Cake.Tool
-            dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-8-windows
-          condition: eq(variables['System.JobName'], 'windows')
-      tools:
-        - 'xamarin.androidbinderator.tool': '0.4.2'
-        - 'xamarin.androidx.migration.tool': '1.0.6'
-  - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-    - template: sign-artifacts/jobs/v1.yml@internal-templates
-      parameters:
-        timeoutInMinutes: 120
-        dependsOn: [ 'build' ]
+ - job: test_sign
+   pool:
+     name: $(SIGNING_VM_NAME)
+     demands: msbuild
+   steps:
+     - checkout: none
+     - pwsh: echo "Hello World!"
+     
+     - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
+        - pwsh: echo "Hello DevDiv!"
+      
+#         - task: MicroBuildSigningPlugin@2
+#           inputs:
+#             signType: $(SIGNING_TYPE)
+#     - job
+#       - task: DownloadBuildArtifacts@0
+#         displayName: Download the pre-built ${{ parameters.name }} artifacts
+#         inputs:
+#           buildType: 'specific'
+#           project: '$(System.TeamProjectId)'
+#           pipeline: '$(System.DefinitionId)'
+#           buildVersionToDownload: 'specific'
+#           buildId: '${{ parameters.buildExternals }}'
+#           downloadType: 'single'
+#           artifactName: ${{ parameters.name }}
+#           downloadPath: 'download-temp'
