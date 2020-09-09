@@ -35,7 +35,7 @@ jobs:
      demands: msbuild
    steps:
      - checkout: none
-     - pwsh: echo "Hello World!"
+     - powershell: echo "Hello World!"
      - task: DownloadBuildArtifacts@0
        inputs:
          buildType: 'specific'
