@@ -11,9 +11,11 @@ variables:
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
+  NUGET_BUILD_ID: 4050789
+
   SIGNING_VM_NAME: VSEng-MicroBuildVS2019
   SIGNING_TYPE: Test
-  NUGET_BUILD_ID: 4050789
+  SIGNING_TEAM_NAME: Test
 
 resources:
   repositories:
@@ -49,8 +51,12 @@ jobs:
         - task: MicroBuildSigningPlugin@2
           inputs:
             signType: $(SIGNING_TYPE)
+          env:
+            TeamName: $(SIGNING_TEAM_NAME)
 
         # TODO: SIGN
 
         - task: MicroBuildCleanup@1
+          env:
+            TeamName: $(SIGNING_TEAM_NAME)
 
