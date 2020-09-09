@@ -15,7 +15,9 @@ variables:
 
   SIGNING_VM_NAME: VSEng-MicroBuildVS2019
   SIGNING_TYPE: Test
-  SIGNING_TEAM_NAME: Test
+  SIGNING_TEAM_NAME: Xamarin
+  SIGNING_ARTIFACT_NAME: nuget
+  SIGNING_UNSIGNED_DIRECTORY_PATH: unsigned
 
 resources:
   repositories:
@@ -44,19 +46,21 @@ jobs:
          buildVersionToDownload: 'specific'
          buildId: $(NUGET_BUILD_ID)
          downloadType: 'single'
-         artifactName: 'nuget'
-         downloadPath: 'downloaded'
+         artifactName: '$(SIGNING_ARTIFACT_NAME)'
+         downloadPath: '$(SIGNING_DOWNLOADED_DIRECTORY_PATH)'
 
      - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
         - task: MicroBuildSigningPlugin@2
           inputs:
-            signType: $(SIGNING_TYPE)
+            signType: '$(SIGNING_TYPE)'
           env:
-            TeamName: $(SIGNING_TEAM_NAME)
+            TeamName: '$(SIGNING_TEAM_NAME)'
 
         # TODO: SIGN
+        - powershell: |
+            gci env:* | sort-object name
 
         - task: MicroBuildCleanup@1
           env:
-            TeamName: $(SIGNING_TEAM_NAME)
+            TeamName: '$(SIGNING_TEAM_NAME)'
 
