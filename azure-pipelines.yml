@@ -12,7 +12,8 @@ variables:
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
   SIGNING_VM_NAME: VSEng-MicroBuildVS2019
-  SIGNING_TYPE: Test
+  SIGNING_TYPE: None
+  NUGET_BUILD_ID: 4050789
 
 resources:
   repositories:
@@ -33,22 +34,23 @@ jobs:
    steps:
      - checkout: none
      - pwsh: echo "Hello World!"
-     
+     - task: DownloadBuildArtifacts@0
+       inputs:
+         buildType: 'specific'
+         project: '$(System.TeamProjectId)'
+         pipeline: '$(System.DefinitionId)'
+         buildVersionToDownload: 'specific'
+         buildId: $(NUGET_BUILD_ID)
+         downloadType: 'single'
+         artifactName: 'nuget'
+         downloadPath: 'downloaded'
+
      - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-        - pwsh: echo "Hello DevDiv!"
-      
-#         - task: MicroBuildSigningPlugin@2
-#           inputs:
-#             signType: $(SIGNING_TYPE)
-#     - job
-#       - task: DownloadBuildArtifacts@0
-#         displayName: Download the pre-built ${{ parameters.name }} artifacts
-#         inputs:
-#           buildType: 'specific'
-#           project: '$(System.TeamProjectId)'
-#           pipeline: '$(System.DefinitionId)'
-#           buildVersionToDownload: 'specific'
-#           buildId: '${{ parameters.buildExternals }}'
-#           downloadType: 'single'
-#           artifactName: ${{ parameters.name }}
-#           downloadPath: 'download-temp'
+        - task: MicroBuildSigningPlugin@2
+          inputs:
+            signType: $(SIGNING_TYPE)
+        # TODO: SIGN            
+        - task: MicroBuildCleanup@1
+          env:
+            TeamName: $(_TeamName)
+
