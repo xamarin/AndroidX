@@ -34,6 +34,7 @@ steps:
       buildParameters: 'artifactName: testing, artifactsBuildId: 4053454'
       branchToUse: 'main'
       waitForQueuedBuildsToFinish: true
+      password: '$(System.AccessToken)'
 
 # jobs:
 #   # - template: .ci/build.yml@components
