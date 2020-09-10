@@ -46,40 +46,10 @@ jobs:
 #       tools:
 #         - 'xamarin.androidbinderator.tool': '0.4.2'
 #         - 'xamarin.androidx.migration.tool': '1.0.6'
-#   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-#     - template: sign-artifacts/jobs/v2.yml@internal-templates
-#       parameters:
-#         # dependsOn: [ 'build' ]
-#         artifactsBuildId: 4053454
-#         templateBranch: mattleibow/v2-sign-artifacts
-  - job: signing
-    pool:
-      vmImage: windows-latest
-    steps:
-        - task: TriggerBuild@3
-          inputs:
-            buildDefinition: 'Xamarin Signing MicroBuild'
-            password: '$(System.AccessToken)'
-            branchToUse: 'mattleibow/v2-sign-artifacts'
-            useSameBranch: false
-            waitForQueuedBuildsToFinish: true
-            downloadBuildArtifacts: true
-            buildParameters: |
-              {
-                "ARTIFACTS_PROJECT_ID": "$(System.TeamProjectId)",
-                "ARTIFACTS_PIPELINE_ID": "$(System.DefinitionId)",
-                "ARTIFACTS_BUILD_ID": "4053454",
-                "ARTIFACT_NAME": "nuget",
-                "SIGN_TYPE": "Test",
-                "TEAM_NAME": "Xamarin",
-              }
-            dropDirectory: 'TEMP\download-signed'
-        - task: ExtractFiles@1
-          inputs:
-            archiveFilePatterns: 'TEMP\download-signed\signed.zip'
-            destinationFolder: 'SIGNED'
-        - task: PublishBuildArtifacts@1
-          displayName: 'Publish the nuget-signed artifacts'
-          inputs:
-            artifactName: nuget-signed
-            pathToPublish: SIGNED
+  - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
+    - template: sign-artifacts/jobs/v2-request.yml@internal-templates
+      parameters:
+        # dependsOn: [ 'build' ]
+        artifactsBuildId: 4053454
+        templateBranch: mattleibow/v2-sign-artifacts
+        signType: Test
