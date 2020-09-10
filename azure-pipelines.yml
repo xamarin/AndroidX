@@ -46,10 +46,10 @@ jobs:
         - 'xamarin.androidx.migration.tool': '1.0.6'
 
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-    - template: sign-artifacts/jobs/v2-request.yml@internal-templates
+    - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
         dependsOn: [ 'build' ]
-        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+        # condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
         # TODO: Remove these parameters below
         templateBranch: mattleibow/v2-sign-artifacts
         signType: Test
