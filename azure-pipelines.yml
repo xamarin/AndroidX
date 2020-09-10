@@ -23,38 +23,7 @@ resources:
       name: xamarin/XamarinComponents
       endpoint: xamarin
 
-pool:
-  vmImage: windows-latest
-
-steps:
-
-  - task: TriggerBuild@3
-    inputs:
-      buildDefinition: 'Xamarin Signing MicroBuild'
-      password: '$(System.AccessToken)'
-      useSameBranch: false
-      branchToUse: 'mattleibow/v2-sign-artifacts'
-      waitForQueuedBuildsToFinish: true
-      downloadBuildArtifacts: true
-      buildParameters: |
-        {
-          "artifactName": "another hhhh",
-          "artifactsBuildId": "4053454"
-        }
-      dropDirectory: 'DROPDIR'
-
-  - task: ExtractFiles@1
-    inputs:
-      archiveFilePatterns: 'DROPDIR\signed.zip'
-      destinationFolder: '$(Build.ArtifactStagingDirectory)\signed'
-
-  - task: PublishBuildArtifacts@1
-    inputs:
-      artifactName: 'nuget-signed'
-      pathToPublish: '$(Build.ArtifactStagingDirectory)\signed'
-
-
-# jobs:
+jobs:
 #   # - template: .ci/build.yml@components
 #   #   parameters:
 #   #     timeoutInMinutes: 120
@@ -76,11 +45,8 @@ steps:
 #   #       - 'xamarin.androidbinderator.tool': '0.4.2'
 #   #       - 'xamarin.androidx.migration.tool': '1.0.6'
 
-#   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-#     - template: sign-artifacts/jobs/v2.yml@internal-templates
-#       parameters:
-#         # dependsOn: [ 'build' ]
-#         templateBranch: mattleibow/v2-sign-artifacts
-#         artifactsBuildId: 4053454
-#         additionalConditions: 'true'
-#         signType: 'Test'
+  - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
+    - template: sign-artifacts/jobs/v2.yml@internal-templates
+      parameters:
+        # dependsOn: [ 'build' ]
+        artifactsBuildId: 4053454
