@@ -37,7 +37,7 @@ steps:
           "artifactsBuildId": "4053454"
         }
       useSameBranch: false
-      branchToUse: 'main'
+      branchToUse: 'mattleibow/v2-sign-artifacts'
       waitForQueuedBuildsToFinish: true
       password: '$(System.AccessToken)'
       downloadBuildArtifacts: true
