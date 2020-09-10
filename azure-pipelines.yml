@@ -35,7 +35,6 @@ jobs:
      name: $(SIGNING_VM_NAME)
      demands: 
        - msbuild
-       - pwsh
    steps:
      - checkout: none
      - powershell: echo "Hello World!"
@@ -63,6 +62,9 @@ jobs:
             $downloader.DownloadFile(
               "https://raw.githubusercontent.com/xamarin/yaml-templates/mattleibow/v2-sign-artifacts/sign-artifacts/steps/v2-SignFiles.proj",
               "SignFiles.proj")
+            $downloader.DownloadFile(
+              "https://raw.githubusercontent.com/xamarin/yaml-templates/mattleibow/v2-sign-artifacts/sign-artifacts/steps/v2-SignFiles.ps1",
+              "SignFiles.ps1")
 
         - task: MicroBuildCleanup@1
           env:
