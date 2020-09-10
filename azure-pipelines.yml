@@ -68,7 +68,27 @@ jobs:
 
         - powershell: .\ExtractNupkgs.ps1 -UnsignedDir "unsigned" -WorkingDir "working\extracted"
 
+        - task: MSBuild@1
+          inputs:
+            solution: SignFiles.proj
+            msbuildArguments: /t:SignFiles /p:SignType="$(SIGNING_TYPE)" /p:WorkingDir="working\extracted" /bl:binlogs\sign-contents.binlog'
+
+        - task: NuGetCommand@2
+          inputs:
+            command: 'pack'
+            packagesToPack: 'working\extracted\*\*.nuspec'
+            packDestination: 'working\packed'
+
+        - task: MSBuild@1
+          inputs:
+            solution: SignFiles.proj
+            msbuildArguments: /t:SignFiles /p:SignType="$(SIGNING_TYPE)" /p:WorkingDir="working\packed" /bl:binlogs\sign-packages.binlog'
+
+        - task: CopyFiles@2
+          inputs:
+            sourceFolder: 'working\packed'
+            targetFolder: 'signed'
+
         - task: MicroBuildCleanup@1
           env:
             TeamName: '$(SIGNING_TEAM_NAME)'
-
