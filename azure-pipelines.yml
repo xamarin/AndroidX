@@ -11,11 +11,6 @@ variables:
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
-  SIGNING_VM_NAME: VSEng-MicroBuildVS2019
-  SIGNING_TYPE: Test
-  SIGNING_TEAM_NAME: Xamarin
-  SIGNING_ARTIFACT_NAME: nuget
-
 resources:
   repositories:
     - repository: internal-templates
@@ -31,7 +26,7 @@ resources:
 jobs:
   - job: test_sign
     pool:
-      name: $(SIGNING_VM_NAME)
+      name: VSEng-MicroBuildVS2019
       demands: 
         - msbuild
 
@@ -51,4 +46,4 @@ jobs:
           artifactName: 'nuget'
 
       - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-        - template: sign-artifacts/jobs/v2.yml@internal-templates
+        - template: sign-artifacts/steps/v2.yml@internal-templates
