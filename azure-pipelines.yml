@@ -65,7 +65,7 @@ jobs:
             downloadBuildArtifacts: true
             buildParameters: |
               {
-                "signType": "Test"
+                "signType": "Test",
                 "teamName": "Xamarin",
                 "artifactsProject": "$(System.TeamProjectId)",
                 "artifactsPipeline": "$(System.DefinitionId)",
