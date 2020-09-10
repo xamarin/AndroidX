@@ -31,7 +31,7 @@ steps:
   - task: TriggerBuild@3
     inputs:
       buildDefinition: '13618'
-      buildParameters: 'artifactName: testing'
+      buildParameters: 'artifactName: testing, artifactsBuildId: 4053454'
       branchToUse: 'main'
       waitForQueuedBuildsToFinish: true
 
