@@ -63,9 +63,10 @@ jobs:
               "https://raw.githubusercontent.com/xamarin/yaml-templates/mattleibow/v2-sign-artifacts/sign-artifacts/steps/v2-SignFiles.proj",
               "SignFiles.proj")
             $downloader.DownloadFile(
-              "https://raw.githubusercontent.com/xamarin/yaml-templates/mattleibow/v2-sign-artifacts/sign-artifacts/steps/v2-SignFiles.ps1",
-              "SignFiles.ps1")
-            .\SignFiles.ps1 -SignType $(SIGNING_TYPE)
+              "https://raw.githubusercontent.com/xamarin/yaml-templates/mattleibow/v2-sign-artifacts/sign-artifacts/steps/v2-ExtractNupkgs.ps1",
+              "ExtractNupkgs.ps1")
+
+        - powershell: .\ExtractNupkgs.ps1 -UnsignedDir "unsigned" -WorkingDir "working\extracted"
 
         - task: MicroBuildCleanup@1
           env:
