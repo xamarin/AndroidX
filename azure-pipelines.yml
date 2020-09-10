@@ -97,7 +97,7 @@ jobs:
           displayName: 'Verify NuGet Packages'
           inputs:
             command: 'custom'
-            arguments: 'verify -All *.nupkg working\packed\*.nupkg'
+            arguments: 'verify -All working\packed\*.nupkg'
 
         - task: CopyFiles@2
           displayName: 'Copy Signed Output'
