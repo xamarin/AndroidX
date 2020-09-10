@@ -23,31 +23,60 @@ resources:
       name: xamarin/XamarinComponents
       endpoint: xamarin
 
-jobs:
-#   # - template: .ci/build.yml@components
-#   #   parameters:
-#   #     timeoutInMinutes: 120
-#   #     areaPath: 'DevDiv\Xamarin SDK\Android'
-#   #     preBuildSteps:
-#   #       - pwsh: |
-#   #           dotnet tool uninstall --global Cake.Tool
-#   #           dotnet tool install --global Cake.Tool
-#   #           dotnet tool install --global boots
-#   #           boots https://aka.ms/xamarin-android-commercial-d16-8-macos
-#   #         condition: eq(variables['System.JobName'], 'macos')
-#   #       - pwsh: |
-#   #           dotnet tool uninstall --global Cake.Tool
-#   #           dotnet tool install --global Cake.Tool
-#   #           dotnet tool install --global boots
-#   #           boots https://aka.ms/xamarin-android-commercial-d16-8-windows
-#   #         condition: eq(variables['System.JobName'], 'windows')
-#   #     tools:
-#   #       - 'xamarin.androidbinderator.tool': '0.4.2'
-#   #       - 'xamarin.androidx.migration.tool': '1.0.6'
+# $(Build.BuildId)
 
-  - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-    - template: sign-artifacts/jobs/v2.yml@internal-templates
-      parameters:
-        # dependsOn: [ 'build' ]
-        artifactsBuildId: 4053454
-        templateBranch: mattleibow/v2-sign-artifacts
+steps:
+    - task: TriggerBuild@3
+      inputs:
+        buildDefinition: 'Xamarin Signing MicroBuild'
+        password: '$(System.AccessToken)'
+        useSameBranch: false
+        waitForQueuedBuildsToFinish: true
+        downloadBuildArtifacts: true
+        buildParameters: |
+          {
+            "signType": "Test"
+            "teamName": "Xamarin",
+            "artifactsProject": "$(System.TeamProjectId)",
+            "artifactsPipeline": "$(System.DefinitionId)",
+            "artifactsBuildId": "4053454",
+            "artifactName": "nuget",
+          }
+        dropDirectory: 'TEMP\download-signed'
+    - task: ExtractFiles@1
+      inputs:
+        archiveFilePatterns: 'TEMP\download-signed\signed.zip'
+        destinationFolder: 'SIGNED'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish the nuget-signed artifacts'
+      inputs:
+        artifactName: nuget-signed
+        pathToPublish: SIGNED
+
+# jobs:
+#   - template: .ci/build.yml@components
+#     parameters:
+#       timeoutInMinutes: 120
+#       areaPath: 'DevDiv\Xamarin SDK\Android'
+#       preBuildSteps:
+#         - pwsh: |
+#             dotnet tool uninstall --global Cake.Tool
+#             dotnet tool install --global Cake.Tool
+#             dotnet tool install --global boots
+#             boots https://aka.ms/xamarin-android-commercial-d16-8-macos
+#           condition: eq(variables['System.JobName'], 'macos')
+#         - pwsh: |
+#             dotnet tool uninstall --global Cake.Tool
+#             dotnet tool install --global Cake.Tool
+#             dotnet tool install --global boots
+#             boots https://aka.ms/xamarin-android-commercial-d16-8-windows
+#           condition: eq(variables['System.JobName'], 'windows')
+#       tools:
+#         - 'xamarin.androidbinderator.tool': '0.4.2'
+#         - 'xamarin.androidx.migration.tool': '1.0.6'
+#   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
+#     - template: sign-artifacts/jobs/v2.yml@internal-templates
+#       parameters:
+#         # dependsOn: [ 'build' ]
+#         artifactsBuildId: 4053454
+#         templateBranch: mattleibow/v2-sign-artifacts
