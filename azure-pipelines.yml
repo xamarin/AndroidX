@@ -30,12 +30,13 @@ steps:
 
   - task: TriggerBuild@3
     inputs:
-      buildDefinition: '13618'
+      buildDefinition: 'Xamarin Signing MicroBuild'
       buildParameters: 'artifactName: testing, artifactsBuildId: 4053454'
       useSameBranch: false
       branchToUse: 'main'
       waitForQueuedBuildsToFinish: true
       password: '$(System.AccessToken)'
+      downloadBuildArtifacts: true
 
 # jobs:
 #   # - template: .ci/build.yml@components
