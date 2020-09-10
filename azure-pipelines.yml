@@ -48,9 +48,9 @@ jobs:
 #         - 'xamarin.androidx.migration.tool': '1.0.6'
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2-request.yml@internal-templates
-      condition: eq('a', 'b')
       parameters:
         # dependsOn: [ 'build' ]
         artifactsBuildId: 4053454
         templateBranch: mattleibow/v2-sign-artifacts
         signType: Test
+        condition: eq('a', 'b')
