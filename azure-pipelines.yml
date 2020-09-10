@@ -41,6 +41,8 @@ steps:
           "artifactName": "another hhhh",
           "artifactsBuildId": "4053454"
         }
+      dropDirectory: 'DROP'
+
 
 # jobs:
 #   # - template: .ci/build.yml@components
