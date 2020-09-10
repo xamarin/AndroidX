@@ -56,7 +56,7 @@ jobs:
             TeamName: '$(SIGNING_TEAM_NAME)'
 
         - powershell: |
-            gci $env:*
+            gci env:* | sort-object name
             dir $env:MICROBUILDPLUGINDIRECTORY
             # <Import Project="$(MicroBuildPluginDirectory)\MicroBuild.Plugins.*\**\build\MicroBuild.Plugins.*.targets" />
 
