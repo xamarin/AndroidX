@@ -71,7 +71,7 @@ jobs:
               "ExtractNupkgs.ps1")
           displayName: 'Download Signing Scripts'
 
-        - powershell: .\ExtractNupkgs.ps1 -UnsignedDir "unsigned" -WorkingDir "working\extracted"
+        - powershell: .\ExtractNupkgs.ps1 -SourceDir "unsigned" -DestinationDir "working\extracted"
           displayName: 'Extract NuGet Packages'
 
         - task: MSBuild@1
