@@ -66,12 +66,12 @@ jobs:
             downloadBuildArtifacts: true
             buildParameters: |
               {
-                "signType": "Test",
-                "teamName": "Xamarin",
-                "artifactsProject": "$(System.TeamProjectId)",
-                "artifactsPipeline": "$(System.DefinitionId)",
-                "artifactsBuildId": "4053454",
-                "artifactName": "nuget"
+                "ARTIFACTS_PROJECT_ID": "$(System.TeamProjectId)",
+                "ARTIFACTS_PIPELINE_ID": "$(System.DefinitionId)",
+                "ARTIFACTS_BUILD_ID": "4053454",
+                "ARTIFACT_NAME": "nuget",
+                "SIGN_TYPE": "Test",
+                "TEAM_NAME": "Xamarin",
               }
             dropDirectory: 'TEMP\download-signed'
         - task: ExtractFiles@1
