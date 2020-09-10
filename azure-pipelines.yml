@@ -43,6 +43,16 @@ steps:
         }
       dropDirectory: 'DROPDIR'
 
+  - task: ExtractFiles@1
+    inputs:
+      archiveFilePatterns: 'DROPDIR\signed.zip'
+      destinationFolder: '$(Build.ArtifactStagingDirectory)\signed'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      artifactName: 'nuget-signed'
+      pathToPublish: '$(Build.ArtifactStagingDirectory)\signed'
+
 
 # jobs:
 #   # - template: .ci/build.yml@components
