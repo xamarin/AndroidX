@@ -38,7 +38,7 @@ steps:
       downloadBuildArtifacts: true
       buildParameters: |
         {
-          "artifactName": "testsss",
+          "artifactName": "another test",
           "artifactsBuildId": "4053454"
         }
 
