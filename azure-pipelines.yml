@@ -28,6 +28,7 @@ pool:
 
 steps:
 
+
   - task: TriggerBuild@3
     inputs:
       buildDefinition: 'Xamarin Signing MicroBuild'
