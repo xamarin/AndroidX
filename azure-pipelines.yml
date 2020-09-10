@@ -78,7 +78,7 @@ jobs:
           displayName: 'Sign Package Contents'
           inputs:
             solution: SignFiles.proj
-            msbuildArguments: /t:SignFiles /p:SignType=$(SIGNING_TYPE) /p:WorkingDir="working\extracted"
+            msbuildArguments: /t:SignFiles /p:SignType=$(SIGNING_TYPE) /p:MicroBuildPluginDirectory=$(MicroBuildOverridePluginDirectory) /p:WorkingDir="working\extracted"
 
         - task: NuGetCommand@2
           displayName: 'Repack NuGet Packages'
@@ -91,7 +91,7 @@ jobs:
           displayName: 'Sign NuGet Packages'
           inputs:
             solution: SignFiles.proj
-            msbuildArguments: /t:SignFiles /p:SignType=$(SIGNING_TYPE) /p:WorkingDir="working\packed"
+            msbuildArguments: /t:SignFiles /p:SignType=$(SIGNING_TYPE) /p:MicroBuildPluginDirectory=$(MicroBuildOverridePluginDirectory) /p:WorkingDir="working\packed"
 
         - task: NuGetCommand@2
           displayName: 'Verify NuGet Packages'
