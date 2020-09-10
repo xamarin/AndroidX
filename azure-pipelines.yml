@@ -70,7 +70,7 @@ jobs:
                 "artifactsProject": "$(System.TeamProjectId)",
                 "artifactsPipeline": "$(System.DefinitionId)",
                 "artifactsBuildId": "4053454",
-                "artifactName": "nuget",
+                "artifactName": "nuget"
               }
             dropDirectory: 'TEMP\download-signed'
         - task: ExtractFiles@1
