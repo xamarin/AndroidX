@@ -50,3 +50,4 @@ jobs:
       parameters:
         # dependsOn: [ 'build' ]
         artifactsBuildId: 4053454
+        templateBranch: mattleibow/v2-sign-artifacts
