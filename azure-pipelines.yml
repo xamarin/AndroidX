@@ -31,16 +31,16 @@ steps:
   - task: TriggerBuild@3
     inputs:
       buildDefinition: 'Xamarin Signing MicroBuild'
+      password: '$(System.AccessToken)'
+      useSameBranch: false
+      branchToUse: 'mattleibow/v2-sign-artifacts'
+      waitForQueuedBuildsToFinish: true
+      downloadBuildArtifacts: true
       buildParameters: |
         {
           "artifactName": "testing",
           "artifactsBuildId": "4053454"
         }
-      useSameBranch: false
-      branchToUse: 'mattleibow/v2-sign-artifacts'
-      waitForQueuedBuildsToFinish: true
-      password: '$(System.AccessToken)'
-      downloadBuildArtifacts: true
 
 # jobs:
 #   # - template: .ci/build.yml@components
