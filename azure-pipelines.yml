@@ -60,6 +60,7 @@ jobs:
           inputs:
             buildDefinition: 'Xamarin Signing MicroBuild'
             password: '$(System.AccessToken)'
+            branchToUse: 'mattleibow/v2-sign-artifacts'
             useSameBranch: false
             waitForQueuedBuildsToFinish: true
             downloadBuildArtifacts: true
