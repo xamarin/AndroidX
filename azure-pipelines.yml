@@ -25,35 +25,7 @@ resources:
 
 # $(Build.BuildId)
 
-steps:
-    - task: TriggerBuild@3
-      inputs:
-        buildDefinition: 'Xamarin Signing MicroBuild'
-        password: '$(System.AccessToken)'
-        useSameBranch: false
-        waitForQueuedBuildsToFinish: true
-        downloadBuildArtifacts: true
-        buildParameters: |
-          {
-            "signType": "Test"
-            "teamName": "Xamarin",
-            "artifactsProject": "$(System.TeamProjectId)",
-            "artifactsPipeline": "$(System.DefinitionId)",
-            "artifactsBuildId": "4053454",
-            "artifactName": "nuget",
-          }
-        dropDirectory: 'TEMP\download-signed'
-    - task: ExtractFiles@1
-      inputs:
-        archiveFilePatterns: 'TEMP\download-signed\signed.zip'
-        destinationFolder: 'SIGNED'
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish the nuget-signed artifacts'
-      inputs:
-        artifactName: nuget-signed
-        pathToPublish: SIGNED
-
-# jobs:
+jobs:
 #   - template: .ci/build.yml@components
 #     parameters:
 #       timeoutInMinutes: 120
@@ -80,3 +52,33 @@ steps:
 #         # dependsOn: [ 'build' ]
 #         artifactsBuildId: 4053454
 #         templateBranch: mattleibow/v2-sign-artifacts
+  - job: signing
+    pool:
+      vmImage: windows-latest
+    steps:
+        - task: TriggerBuild@3
+          inputs:
+            buildDefinition: 'Xamarin Signing MicroBuild'
+            password: '$(System.AccessToken)'
+            useSameBranch: false
+            waitForQueuedBuildsToFinish: true
+            downloadBuildArtifacts: true
+            buildParameters: |
+              {
+                "signType": "Test"
+                "teamName": "Xamarin",
+                "artifactsProject": "$(System.TeamProjectId)",
+                "artifactsPipeline": "$(System.DefinitionId)",
+                "artifactsBuildId": "4053454",
+                "artifactName": "nuget",
+              }
+            dropDirectory: 'TEMP\download-signed'
+        - task: ExtractFiles@1
+          inputs:
+            archiveFilePatterns: 'TEMP\download-signed\signed.zip'
+            destinationFolder: 'SIGNED'
+        - task: PublishBuildArtifacts@1
+          displayName: 'Publish the nuget-signed artifacts'
+          inputs:
+            artifactName: nuget-signed
+            pathToPublish: SIGNED
