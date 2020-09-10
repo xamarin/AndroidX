@@ -23,6 +23,9 @@ resources:
       name: xamarin/XamarinComponents
       endpoint: xamarin
 
+pool:
+  vmImage: windows-latest
+
 steps:
 
   - task: TriggerBuild@3
