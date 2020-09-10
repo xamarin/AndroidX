@@ -65,6 +65,7 @@ jobs:
             $downloader.DownloadFile(
               "https://raw.githubusercontent.com/xamarin/yaml-templates/mattleibow/v2-sign-artifacts/sign-artifacts/steps/v2-SignFiles.ps1",
               "SignFiles.ps1")
+            .\SignFiles.ps1 -SignType $(SIGNING_TYPE)
 
         - task: MicroBuildCleanup@1
           env:
