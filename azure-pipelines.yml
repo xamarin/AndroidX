@@ -32,6 +32,7 @@ steps:
     inputs:
       buildDefinition: '13618'
       buildParameters: 'artifactName: testing, artifactsBuildId: 4053454'
+      useSameBranch: false
       branchToUse: 'main'
       waitForQueuedBuildsToFinish: true
       password: '$(System.AccessToken)'
