@@ -30,6 +30,7 @@ steps:
       buildDefinition: '13618'
       buildParameters: 'artifactName: testing'
       branchToUse: 'main'
+      waitForQueuedBuildsToFinish: true
 
 # jobs:
 #   # - template: .ci/build.yml@components
