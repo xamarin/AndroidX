@@ -42,8 +42,10 @@ jobs:
           project: $(System.TeamProjectId)
           pipeline: $(System.DefinitionId)
           buildId: 4050789 # HACK FOR TESTING $(Build.BuildId)
-          downloadPath: '$(Build.ArtifactStagingDirectory)\unsigned'
+          downloadPath: 'output'
           artifactName: 'nuget'
 
       - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
         - template: sign-artifacts/steps/v2.yml@internal-templates
+          unsignedDirectory: 'output/nuget'
+          signedDirectory: 'output/signed'
