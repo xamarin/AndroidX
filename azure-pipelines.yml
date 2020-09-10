@@ -26,3 +26,6 @@ resources:
 jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
+      parameters:
+        templateBranch: mattleibow/v2-sign-artifacts
+        artifactsBuildId: 4050789 # HACK FOR TESTING 
