@@ -52,3 +52,4 @@ jobs:
         templateBranch: mattleibow/v2-sign-artifacts
         artifactsBuildId: 4053454
         additionalConditions: 'true'
+        signType: 'Test'
