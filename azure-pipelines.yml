@@ -25,6 +25,7 @@ resources:
       ref: refs/heads/mattleibow/signing
 
 jobs:
+
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
