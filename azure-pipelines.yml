@@ -52,4 +52,4 @@ jobs:
         # condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
         # TODO: Remove these parameters below
         templateBranch: mattleibow/v2-sign-artifacts
-        # signType: Test
+        signType: 'Real'
