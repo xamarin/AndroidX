@@ -1,0 +1,24 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <FirstParty Include="Xamarin.Android.*.dll" />
+    <FirstParty Include="Xamarin.AndroidX.*.dll" />
+    <FirstParty Include="Xamarin.Google.Android.Material.dll" />
+    <FirstParty Include="androidx-migrator.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ThirdParty Include="ILRepack.dll" />
+    <ThirdParty Include="protobuf-net.dll" />
+    <ThirdParty Include="Newtonsoft.Json.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Skip Include="System.*.dll" />
+    <Skip Include="NuGet.*.dll" />
+    <Skip Include="Mono.*.dll" />
+    <Skip Include="MonoPosixHelper.dll" />
+    <Skip Include="libMonoPosixHelper.dll" />
+  </ItemGroup>
+
+</Project>
