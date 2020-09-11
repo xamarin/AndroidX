@@ -25,7 +25,6 @@ resources:
       ref: refs/heads/mattleibow/signing
 
 jobs:
-
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
@@ -47,7 +46,6 @@ jobs:
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.2'
         - 'xamarin.androidx.migration.tool': '1.0.6'
-
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
