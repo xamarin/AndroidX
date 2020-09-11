@@ -4,7 +4,7 @@ trigger:
 
 pr:
   - master
-
+  
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
@@ -44,7 +44,6 @@ jobs:
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.2'
         - 'xamarin.androidx.migration.tool': '1.0.6'
-
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
