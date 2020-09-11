@@ -63,6 +63,7 @@ steps:
   - task: MicroBuildCodesignVerify@2
     inputs:
       TargetFolders: '$(Build.StagingDirectory)\extracted'
+      WhiteListPathForCerts: '*.xml,this is android res'
       ExcludeSNVerify: true
 
   - task: MicroBuildCleanup@1
