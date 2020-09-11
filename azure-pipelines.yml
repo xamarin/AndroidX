@@ -62,7 +62,8 @@ steps:
 
   - task: MicroBuildCodesignVerify@2
     inputs:
-      targetFolders: '$(Build.StagingDirectory)\extracted'
+      TargetFolders: '$(Build.StagingDirectory)'
+      ExcludeSNVerify: true
 
   - task: MicroBuildCleanup@1
     displayName: 'Clean Up Signing Tools'
