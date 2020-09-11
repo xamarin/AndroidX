@@ -17,7 +17,6 @@ resources:
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
-      ref: refs/heads/mattleibow/v2-sign-artifacts
     - repository: components
       type: github
       name: xamarin/XamarinComponents
@@ -51,6 +50,5 @@ jobs:
         # dependsOn: [ 'build' ]
         # condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
         # TODO: Remove these parameters below
-        templateBranch: mattleibow/v2-sign-artifacts
         signType: 'Real'
         artifactsBuildId: 4056168
