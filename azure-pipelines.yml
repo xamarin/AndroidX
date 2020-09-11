@@ -40,6 +40,19 @@ steps:
       buildType: specific
       buildVersionToDownload: specific
       downloadType: single
+
+  - task: MicroBuildSigningPlugin@2
+    displayName: 'Prepare Signing Tools'
+    inputs:
+      signType: 'Real'
+    env:
+      TeamName: 'Xamarin'
+
   - task: MicroBuildCodesignVerify@2
     inputs:
       TargetFolders: '$(Build.StagingDirectory)'
+
+  - task: MicroBuildCleanup@1
+    displayName: 'Clean Up Signing Tools'
+    env:
+      TeamName: 'Xamarin'
