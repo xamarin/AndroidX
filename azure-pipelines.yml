@@ -62,7 +62,7 @@ steps:
 
   - task: MicroBuildCodesignVerify@2
     inputs:
-      TargetFolders: '$(Build.StagingDirectory)'
+      TargetFolders: '$(Build.StagingDirectory)\extracted'
       ExcludeSNVerify: true
 
   - task: MicroBuildCleanup@1
