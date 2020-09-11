@@ -41,6 +41,18 @@ steps:
       buildVersionToDownload: specific
       downloadType: single
 
+  - powershell: |
+      New-Item "$(Build.StagingDirectory)" -ItemType Directory -Force | Out-Null
+      $downloader = New-Object System.Net.WebClient
+      $downloader.Headers["Authorization"] = 'token $(Github.Token)'
+      $downloader.DownloadFile(
+        "https://raw.githubusercontent.com/xamarin/yaml-templates/main/sign-artifacts/steps/v2-ExtractNupkgs.ps1",
+        "$(Build.StagingDirectory)\ExtractNupkgs.ps1")
+    displayName: 'Download Signing Scripts'
+  - powershell: '.\ExtractNupkgs.ps1 -SourceDir "$(Build.StagingDirectory)" -DestinationDir "$(Build.StagingDirectory)\extracted"'
+    workingDirectory: '$(Build.StagingDirectory)'
+    displayName: 'Extract NuGet Packages'
+
   - task: MicroBuildSigningPlugin@2
     displayName: 'Prepare Signing Tools'
     inputs:
@@ -50,7 +62,7 @@ steps:
 
   - task: MicroBuildCodesignVerify@2
     inputs:
-      TargetFolders: '$(Build.StagingDirectory)'
+      targetFolders: '$(Build.StagingDirectory)\extracted'
 
   - task: MicroBuildCleanup@1
     displayName: 'Clean Up Signing Tools'
