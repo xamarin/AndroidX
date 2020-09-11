@@ -28,6 +28,7 @@ jobs:
     parameters:
       timeoutInMinutes: 120
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      windowsImage: ''
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
