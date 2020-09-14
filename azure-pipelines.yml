@@ -17,19 +17,17 @@ resources:
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
-      ref: refs/heads/mattleibow/signing
+      ref: refs/heads/main
     - repository: components
       type: github
       name: xamarin/XamarinComponents
       endpoint: xamarin
-      ref: refs/heads/mattleibow/signing
 
 jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
       areaPath: 'DevDiv\Xamarin SDK\Android'
-      windowsImage: ''
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
@@ -50,5 +48,3 @@ jobs:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
         dependsOn: [ 'build' ]
-        templateBranch: mattleibow/signing
-        signType: Real
