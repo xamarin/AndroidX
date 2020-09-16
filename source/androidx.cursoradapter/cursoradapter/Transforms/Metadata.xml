@@ -18,4 +18,12 @@
     <attr path="/api/package[@name='androidx.cursoradapter.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[1]" name="managedName">view</attr>
     <attr path="/api/package[@name='androidx.cursoradapter.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[2]" name="managedName">cursor</attr>
     <attr path="/api/package[@name='androidx.cursoradapter.widget']/interface[@name='SimpleCursorAdapter.ViewBinder']/method[@name='setViewValue' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.database.Cursor'] and parameter[3][@type='int']]/parameter[3]" name="managedName">columnIndex</attr>
+    
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
 </metadata>

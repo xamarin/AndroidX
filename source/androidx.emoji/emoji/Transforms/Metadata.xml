@@ -2,4 +2,12 @@
     <attr path="/api/package[@name='androidx.emoji']/interface[@name='EmojiCompat.MetadataRepoLoader']/method[@name='load' and count(parameter)=1 and parameter[1][@type='androidx.emoji.EmojiCompat.MetadataRepoLoaderCallback']]/parameter[1]" name="managedName">loaderCallback</attr>
     <attr path="/api/package[@name='androidx.emoji']/class[@name='EmojiCompat.MetadataRepoLoaderCallback']/method[@name='onFailed' and count(parameter)=1 and parameter[1][@type='java.lang.Throwable']]/parameter[1]" name="managedName">throwable</attr>
     <attr path="/api/package[@name='androidx.emoji']/class[@name='EmojiCompat.MetadataRepoLoaderCallback']/method[@name='onLoaded' and count(parameter)=1 and parameter[1][@type='androidx.emoji.MetadataRepo']]/parameter[1]" name="managedName">metadataRepo</attr>
+
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+
 </metadata>
