@@ -1267,18 +1267,31 @@ Task("bindings-verify")
     (
         () =>
         {
-            List<string> classes_missing = new List<string>();
+            List<string> missing_java_type = new List<string>();
+            List<string> missing_dotnet_type = new List<string>();
+            List<string> missing_dotnet_override_type = new List<string>();
 
             string[] lines = System.IO.File.ReadAllLines("./mappings/androidx-mapping.csv");
             foreach(string line in lines)
             {
-                if (line.StartsWith(",,,,,,,,,,WARNING: Unable to find "))
+                if (line.StartsWith(",,,,,,,,,,WARNING: Unable to find AndroidX type for Java type "))
                 {
-                    classes_missing.Add(line);
+                    missing_java_type.Add(line);
+                }
+                else if (line.StartsWith(",,,,,,,,,,WARNING: Unable to find AndroidX type for .NET type "))
+                {
+                    missing_dotnet_type.Add(line);
+
+                }
+                else if (line.StartsWith(",,,,,,,,,,WARNING: Unable to find override type for type "))
+                {
+                    missing_dotnet_override_type.Add(line);
                 }
             }
 
-            System.IO.File.WriteAllLines("./output/androidx-missing-classes.csv", classes_missing.ToArray());
+            System.IO.File.WriteAllLines("./output/missing_java_type.csv", missing_java_type.ToArray());
+            System.IO.File.WriteAllLines("./output/missing_dotnet_type.csv", missing_dotnet_type.ToArray());
+            System.IO.File.WriteAllLines("./output/missing_dotnet_override_type.csv", missing_dotnet_override_type.ToArray());
         }
     );
 
