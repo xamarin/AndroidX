@@ -538,7 +538,7 @@ Task("metadata-verify")
                     Information($"			IsPublic: {r.IsPublic}");
                     if (r.IsPublic)
                     {
-                        throw new Exception("Do not expose interfaces as public");
+                        throw new Exception("Preventing exposing/surfacing interfaces with default package accessibility as public");
                     }
                 }
             }
@@ -1329,7 +1329,7 @@ Task ("ci")
     .IsDependentOn ("nuget")
     .IsDependentOn ("generate-mapping")
     .IsDependentOn ("migration-nuget")
-    .IsDependentOn ("migration-tests")
+    //.IsDependentOn ("migration-tests")
     .IsDependentOn ("bindings-verify")
     .IsDependentOn ("samples");
 

@@ -12,12 +12,4 @@
     <attr path="/api/package[@name='androidx.drawerlayout.widget']/interface[@name='DrawerLayout.DrawerListener']/method[@name='onDrawerSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[1]" name="managedName">drawerView</attr>
     <attr path="/api/package[@name='androidx.drawerlayout.widget']/interface[@name='DrawerLayout.DrawerListener']/method[@name='onDrawerSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[2]" name="managedName">slideOffset</attr>
     <attr path="/api/package[@name='androidx.drawerlayout.widget']/interface[@name='DrawerLayout.DrawerListener']/method[@name='onDrawerStateChanged' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedName">newState</attr>
-    
-    <attr
-        path="//class[@visibility='']"
-        name="visibility"
-        >
-        public
-    </attr>
-    
 </metadata>

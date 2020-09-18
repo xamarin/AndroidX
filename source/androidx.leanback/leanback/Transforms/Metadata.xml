@@ -242,7 +242,8 @@
         >
         public
     </attr>
-    
+   
+   
     <attr
         path="//class[@visibility='']"
         name="visibility"
@@ -279,4 +280,5 @@ k
     <remove-node
         path="/api/package[@name='androidx.leanback.widget']/class[@name='StaggeredGrid']"
         />
+
 </metadata>
