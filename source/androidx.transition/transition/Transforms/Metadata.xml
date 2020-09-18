@@ -40,5 +40,12 @@
         >
         public
     </attr>
-
+    
+    <attr
+        path="/api/package[@name='androidx.transition']/class[@name='PathProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='T']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
 </metadata>
