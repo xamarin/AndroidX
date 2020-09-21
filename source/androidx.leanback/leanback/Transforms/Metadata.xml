@@ -242,5 +242,43 @@
         >
         public
     </attr>
-        
+   
+   
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+k    
+    
+    <attr
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='ControlBarPresenter']/method[@name='getOnItemControlListener' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='ControlBarPresenter']/method[@name='getOnItemViewClickedListener' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='StaggeredGridDefault']/method[@name='findRowMax' and count(parameter)=3 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int[]']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='StaggeredGridDefault']/method[@name='findRowMin' and count(parameter)=3 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int[]']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='androidx.leanback.widget']/class[@name='StaggeredGrid']"
+        />
+
 </metadata>

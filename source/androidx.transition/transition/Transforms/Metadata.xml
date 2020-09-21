@@ -33,4 +33,19 @@
     <attr path="/api/package[@name='androidx.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='androidx.transition.Transition'] and parameter[3][@type='androidx.transition.TransitionValues'] and parameter[4][@type='androidx.transition.TransitionValues']]/parameter[2]" name="managedName">transition</attr>
     <attr path="/api/package[@name='androidx.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='androidx.transition.Transition'] and parameter[3][@type='androidx.transition.TransitionValues'] and parameter[4][@type='androidx.transition.TransitionValues']]/parameter[3]" name="managedName">startValues</attr>
     <attr path="/api/package[@name='androidx.transition']/class[@name='TransitionPropagation']/method[@name='getStartDelay' and count(parameter)=4 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='androidx.transition.Transition'] and parameter[3][@type='androidx.transition.TransitionValues'] and parameter[4][@type='androidx.transition.TransitionValues']]/parameter[4]" name="managedName">endValues</attr>
+
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.transition']/class[@name='PathProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='T']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
 </metadata>

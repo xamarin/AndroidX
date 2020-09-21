@@ -227,4 +227,11 @@
         path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopupHelper']/implements[@name='androidx.appcompat.view.menu.MenuHelper']"
         />    
         
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
 </metadata>

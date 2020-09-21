@@ -1,3 +1,11 @@
 ﻿<metadata>
     <attr path="/api/package[@name='androidx.tvprovider.media.tv']/class[@name='Program']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.tvprovider.media.tv.Program']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+
 </metadata>

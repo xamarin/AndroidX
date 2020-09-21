@@ -9,4 +9,14 @@
     <remove-node path="/api/package[@name='androidx.room.util']/class[@name='TableInfo.ForeignKeyWithSequence']/implements" />
 
     <attr path="/api/package[@name='androidx.room']/class[@name='RoomOpenHelper.Delegate']" name="managedName">HelperDelegate</attr>
+
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+
+
 </metadata>
