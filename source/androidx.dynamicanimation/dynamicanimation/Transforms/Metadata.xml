@@ -22,11 +22,13 @@
     <attr path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='Force']" name="visibility">public</attr>
     -->
     
+    <!--    
     <attr
         path="//class[@visibility='']"
         name="visibility"
         >
         public
     </attr>
+    -->
     
 </metadata>

@@ -6,11 +6,13 @@
 	<remove-node path="/api/package[@name='androidx.lifecycle']/interface[@name='ReportFragment.ActivityInitializationListener']" />
     -->
     
+    <!--    
     <attr
         path="//class[@visibility='']"
         name="visibility"
         >
         public
     </attr>
-
+    -->
+    
 </metadata>

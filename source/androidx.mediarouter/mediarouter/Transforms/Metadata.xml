@@ -38,11 +38,13 @@
         path="/api/package[@name='androidx.mediarouter.media']/interface[@name='MediaRouteProvider.DynamicGroupRouteController.OnDynamicRoutesChangedListener']"
         />
     
+    <!--    
     <attr
         path="//class[@visibility='']"
         name="visibility"
         >
         public
     </attr>
+    -->
     
 </metadata>

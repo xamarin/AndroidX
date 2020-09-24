@@ -35,12 +35,13 @@
     <attr path="/api/package[@name='androidx.core.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[1]" name="managedName">upDrawable</attr>
     <attr path="/api/package[@name='androidx.core.app']/interface[@name='ActionBarDrawerToggle.Delegate']/method[@name='setActionBarUpIndicator' and count(parameter)=2 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='int']]/parameter[2]" name="managedName">contentDescRes</attr>
 
+    <!--    
     <attr
         path="//class[@visibility='']"
         name="visibility"
         >
         public
     </attr>
-
+    -->
 
 </metadata>

@@ -10,13 +10,13 @@
 
     <attr path="/api/package[@name='androidx.room']/class[@name='RoomOpenHelper.Delegate']" name="managedName">HelperDelegate</attr>
 
+    <!--    
     <attr
         path="//class[@visibility='']"
         name="visibility"
         >
         public
     </attr>
-
-
+    -->
 
 </metadata>

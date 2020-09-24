@@ -244,13 +244,14 @@
     </attr>
    
    
+    <!--    
     <attr
         path="//class[@visibility='']"
         name="visibility"
         >
         public
     </attr>
-k    
+    -->    
     
     <attr
         path="/api/package[@name='androidx.leanback.widget']/class[@name='ControlBarPresenter']/method[@name='getOnItemControlListener' and count(parameter)=0]"
