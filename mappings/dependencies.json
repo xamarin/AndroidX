@@ -220,6 +220,7 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData",
       "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core"
       ]
@@ -435,6 +436,8 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
       "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Common",
+        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
