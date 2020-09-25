@@ -255,39 +255,5 @@
         Java.Lang.Object
     </attr>
     -->
-    
-    <remove-node
-        path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContract']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='I']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContract']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
-        />
-    
-    <!--
-    exists in api.xml.class-parse, but not generated
-    -->    
-    <add-node
-        path="/api/package[@name='androidx.activity']"
-        >
-        <class 
-            visibility="public" static="false" abstract="false" name="ComponentActivity" 
-            deprecated="not deprecated" final="false"
-            jni-extends="Landroidx/core/app/ComponentActivity;"
-            extends="androidx.core.app.ComponentActivity"
-            extends-generic-aware="androidx.core.app.ComponentActivity"
-            > 
-        </class>
-    </add-node>
-    <!--
-    <remove-node
-        path="/api/package[@name='androidx.activity']/class[@name='ComponentActivity']/implements"
-        />
-    -->    
-    <attr
-        path="/api/package[@name='androidx.activity']/class[@name='ComponentActivity.NonConfigurationInstances']"
-        name="visibility"
-        >
-        public
-    </attr>
-       
+
 </metadata>
