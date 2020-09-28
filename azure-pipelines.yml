@@ -43,7 +43,7 @@ jobs:
           condition: eq(variables['System.JobName'], 'windows')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.2'
-        - 'xamarin.androidx.migration.tool': '1.0.6'
+        - 'xamarin.androidx.migration.tool': '1.0.7.1'
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
