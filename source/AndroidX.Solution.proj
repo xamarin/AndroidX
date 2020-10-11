@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.Build.Traversal/2.1.1">
+    <ItemGroup>
+        <SolutionConfiguration Include="Debug"/>
+    </ItemGroup>  
+    <ItemGroup>
+        <!-- Build all projects recursively under the "src" folder -->
+        <ProjectReference Include=".\**\*.*proj" />
+    </ItemGroup>
+</Project>
