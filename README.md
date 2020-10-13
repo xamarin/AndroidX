@@ -36,11 +36,17 @@ Before building the libraries and samples in this repository, you will need to i
 
 ```sh
 dotnet tool install -g cake.tool
-dotnet tool install -g xamarin.androidbinderator.tool --version 0.4.2
-dotnet tool install -g xamarin.androidx.migration.tool --version 1.0.0-rc1
+dotnet tool install -g xamarin.androidbinderator.tool
+dotnet tool install -g xamarin.androidx.migration.tool
 ```
 
 > NOTE: If you previously installed any of these tools, be sure to update them to the latest versions.
+
+For API diffs install `api-tools`
+
+```
+dotnet tool install -g api-tools
+```
 
 ### Compiling
 
