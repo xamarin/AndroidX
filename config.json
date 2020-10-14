@@ -18,6 +18,10 @@
 		{
 			"templateFile": "source/AndroidXPom.cshtml",
 			"outputFileRule" : "generated/{groupid}.{artifactid}/dependencies.pom"
+		},
+		{
+			"templateFile": "source/AndroidXSolutionFilter.cshtml",
+			"outputFileRule" : "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
 		}
 	],
 	"artifacts" : [
