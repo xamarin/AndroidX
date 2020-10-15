@@ -15,4 +15,15 @@
     <attr path="/api/package[@name='androidx.constraintlayout.motion.widget']/interface[@name='MotionLayout.TransitionListener']/method[@name='onTransitionTrigger' and count(parameter)=4 and parameter[1][@type='androidx.constraintlayout.motion.widget.MotionLayout'] and parameter[2][@type='int'] and parameter[3][@type='boolean'] and parameter[4][@type='float']]/parameter[2]" name="managedName">triggerId</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.motion.widget']/interface[@name='MotionLayout.TransitionListener']/method[@name='onTransitionTrigger' and count(parameter)=4 and parameter[1][@type='androidx.constraintlayout.motion.widget.MotionLayout'] and parameter[2][@type='int'] and parameter[3][@type='boolean'] and parameter[4][@type='float']]/parameter[3]" name="managedName">positive</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.motion.widget']/interface[@name='MotionLayout.TransitionListener']/method[@name='onTransitionTrigger' and count(parameter)=4 and parameter[1][@type='androidx.constraintlayout.motion.widget.MotionLayout'] and parameter[2][@type='int'] and parameter[3][@type='boolean'] and parameter[4][@type='float']]/parameter[4]" name="managedName">progress</attr>
+
+    <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='Barrier']/field[@name='BOTTOM']" name="managedName">BOTTOM</attr>
+    <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='Barrier']/field[@name='TOP']" name="managedName">TOP</attr>
+    <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='Barrier']/field[@name='RIGHT']" name="managedName">RIGHT</attr>
+    <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='Barrier']/field[@name='LEFT']" name="managedName">LEFT</attr>
+
+    <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='ConstraintLayout.LayoutParams']/method[@name='getConstraintTag' and count(parameter)=0]" name="managedName">GetConstraintTag</attr>
+
+    <attr path="/api/package[@name='androidx.constraintlayout.widget']/class[@name='Constraints']/field[@name='TAG']" name="managedName">TAG</attr>
+
+    <remove-node path="/api/package[@name='androidx.constraintlayout.motion.widget']/class[@name='MotionLayout']/method[@name='addTransitionListener']" />
 </metadata>
