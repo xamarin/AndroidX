@@ -1,0 +1,16 @@
+@using System.Linq
+{
+  "solution": {
+    "path": "..\\AndroidX.sln",
+    "projects": [
+@foreach (var dep in @Model.NuGetDependencies)
+{
+    if (dep.IsProjectReference)
+    {
+        <text>"@($"{dep.MavenArtifact.MavenGroupId}.{dep.MavenArtifact.MavenArtifactId}\\\\{dep.MavenArtifact.MavenGroupId}.{dep.MavenArtifact.MavenArtifactId}.csproj")",</text>
+    }
+}
+"@($"{Model.MavenGroupId}.{Model.Name}\\\\{Model.MavenGroupId}.{Model.Name}.csproj")"
+    ]
+  }
+}
