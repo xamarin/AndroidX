@@ -8,7 +8,13 @@
     <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Guideline']/field[@name='RELATIVE_UNKNWON']" name="managedName">RELATIVE_UNKNOWN</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Guideline']/field[@name='VERTICAL']" name="managedName">VERTICAL</attr>
     <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Guideline']/field[@name='HORIZONTAL']" name="managedName">HORIZONTAL</attr>
-    
+    <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Barrier']/field[@name='BOTTOM']" name="managedName">BOTTOM</attr>
+    <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Barrier']/field[@name='TOP']" name="managedName">TOP</attr>
+    <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Barrier']/field[@name='RIGHT']" name="managedName">RIGHT</attr>
+    <attr path="/api/package[@name='androidx.constraintlayout.solver.widgets']/class[@name='Barrier']/field[@name='LEFT']" name="managedName">LEFT</attr>
+    <!-- Change parameter name from reserved keyword '@object' to 'obj -->
+    <attr path="/api/package[@name='androidx.constraintlayout.solver']/class[@name='LinearSystem']/method[@name='getObjectVariableValue' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]/parameter[1]" name="managedName">obj</attr>
+
     <attr
         path="/api/package[@name='androidx.constraintlayout.solver']/class[@name='PriorityGoalRow.RowVariable']"
         name="visibility"
