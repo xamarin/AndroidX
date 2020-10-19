@@ -36,7 +36,7 @@
 
     <!-- "private" properties -->
     <PropertyGroup>
-        <_AndroidXShouldRunMigration Condition="'$(_AndroidXShouldRunMigration)' == '' and '$(AndroidApplication)' == 'true' and '$(AndroidXIsUsingAndroidXLibraries)' == 'true' and '$(AndroidXSkipMigration)' != 'true'">true</_AndroidXShouldRunMigration>
+        <_AndroidXShouldRunMigration Condition="'$(_AndroidXShouldRunMigration)' == '' and ('$(AndroidApplication)' == 'true' or '$(OutputType)' == 'Exe') and '$(AndroidXIsUsingAndroidXLibraries)' == 'true' and '$(AndroidXSkipMigration)' != 'true'">true</_AndroidXShouldRunMigration>
         <_AndroidXIntermediateOutputPath>$(IntermediateOutputPath)androidx\</_AndroidXIntermediateOutputPath>
         <_AndroidXProguardIntermediateOutputPath>$(_AndroidXIntermediateOutputPath)proguard\</_AndroidXProguardIntermediateOutputPath>
         <_AndroidXJavaLibraryIntermediateOutputPath>$(_AndroidXIntermediateOutputPath)jl\</_AndroidXJavaLibraryIntermediateOutputPath>
