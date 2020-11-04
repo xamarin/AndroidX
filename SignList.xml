@@ -11,6 +11,8 @@
     <ThirdParty Include="ILRepack.dll" />
     <ThirdParty Include="protobuf-net.dll" />
     <ThirdParty Include="Newtonsoft.Json.dll" />
+    <ThirdParty Include="Mono.Cecil.dll" />
+    <ThirdParty Include="Mono.Cecil.*.dll" />
   </ItemGroup>
 
   <ItemGroup>
