@@ -212,16 +212,16 @@
 		,{
 			"groupId" : "androidx.constraintlayout",
 			"artifactId" : "constraintlayout",
-			"version" : "2.0.2",
-			"nugetVersion" : "2.0.2",
+			"version" : "2.0.4",
+			"nugetVersion" : "2.0.4",
 			"nugetId" : "Xamarin.AndroidX.ConstraintLayout",
 			"dependencyOnly" : false
 		}
 		,{
 			"groupId" : "androidx.constraintlayout",
 			"artifactId" : "constraintlayout-solver",
-			"version" : "2.0.2",
-			"nugetVersion" : "2.0.2",
+			"version" : "2.0.4",
+			"nugetVersion" : "2.0.4",
 			"nugetId" : "Xamarin.AndroidX.ConstraintLayout.Solver",
 			"dependencyOnly" : false
 		}
@@ -277,7 +277,7 @@
 			"groupId" : "androidx.customview",
 			"artifactId" : "customview",
 			"version" : "1.1.0",
-			"nugetVersion" : "1.1.0",
+			"nugetVersion" : "1.1.0.3",
 			"nugetId" : "Xamarin.AndroidX.CustomView",
 			"dependencyOnly" : false
 		}
