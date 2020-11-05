@@ -1,2 +1,15 @@
-﻿<metadata>
+<metadata>
+  <!-- Fix covariant return types -->
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='TextViewStyle.Builder']/method[@name='getThis']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='TextViewStyle.Builder']/method[@name='getThis']" name="propertyName">RawThis</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='ImageViewStyle.Builder']/method[@name='getThis']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='ImageViewStyle.Builder']/method[@name='getThis']" name="propertyName">RawThis</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='ViewStyle.Builder']/method[@name='getThis']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='ViewStyle.Builder']/method[@name='getThis']" name="propertyName">RawThis</attr>
+
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='ViewStyle.Builder']/method[@name='build']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='ImageViewStyle.Builder']/method[@name='build']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.common']/class[@name='TextViewStyle.Builder']/method[@name='build']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.v1']/class[@name='InlineSuggestionUi.Content.Builder']/method[@name='build']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='androidx.autofill.inline.v1']/class[@name='InlineSuggestionUi.Style.Builder']/method[@name='build']" name="managedReturn">Java.Lang.Object</attr>
 </metadata>
