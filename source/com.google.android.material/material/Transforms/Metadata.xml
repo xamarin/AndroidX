@@ -60,6 +60,15 @@
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnAttachStateChangeListener']" />
     <remove-node path="/api/package[@name='com.google.android.material.snackbar']/interface[@name='BaseTransientBottomBar.OnLayoutChangeListener']" />
 
+    <!-- These setters are overridden, but the getters are not. Generator doesn't support setter-only properties, so it's generating a method instead
+         of a property, that is trying to override a non-existant base method. We can remove them as we don't really *need* to bind overrides. -->
+    <remove-node path="/api/package[@name='com.google.android.material.slider']/class[@name='RangeSlider']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+    <remove-node path="/api/package[@name='com.google.android.material.slider']/class[@name='Slider']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setBackgroundTintList' and count(parameter)=1 and parameter[1][@type='android.content.res.ColorStateList']]" />
+    <remove-node path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setBackgroundTintMode' and count(parameter)=1 and parameter[1][@type='android.graphics.PorterDuff.Mode']]" />
+    <remove-node path="/api/package[@name='com.google.android.material.textfield']/class[@name='MaterialAutoCompleteTextView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='T']]" />
+
     <attr
       path="/api/package[@name='com.google.android.material.bottomappbar']/class[@name='BottomAppBar']/method[@name='getBehavior' and count(parameter)=0]"
       name="managedReturn"
