@@ -23,6 +23,7 @@
     <attr path="/api/package[@name='com.google.android.material.drawable']" name="managedName">Google.Android.Material.Drawable</attr>
     <attr path="/api/package[@name='com.google.android.material.expandable']" name="managedName">Google.Android.Material.Expandable</attr>
     <attr path="/api/package[@name='com.google.android.material.floatingactionbutton']" name="managedName">Google.Android.Material.FloatingActionButton</attr>
+    <attr path="/api/package[@name='com.google.android.material.imageview']" name="managedName">Google.Android.Material.ImageView</attr>
     <attr path="/api/package[@name='com.google.android.material.internal']" name="managedName">Google.Android.Material.Internal</attr>
     <attr path="/api/package[@name='com.google.android.material.math']" name="managedName">Google.Android.Material.Math</attr>
     <attr path="/api/package[@name='com.google.android.material.navigation']" name="managedName">Google.Android.Material.Navigation</attr>
@@ -30,12 +31,17 @@
     <attr path="/api/package[@name='com.google.android.material.ripple']" name="managedName">Google.Android.Material.Ripple</attr>
     <attr path="/api/package[@name='com.google.android.material.shadow']" name="managedName">Google.Android.Material.Shadow</attr>
     <attr path="/api/package[@name='com.google.android.material.shape']" name="managedName">Google.Android.Material.Shape</attr>
+    <attr path="/api/package[@name='com.google.android.material.slider']" name="managedName">Google.Android.Material.Slider</attr>
     <attr path="/api/package[@name='com.google.android.material.snackbar']" name="managedName">Google.Android.Material.Snackbar</attr>
     <attr path="/api/package[@name='com.google.android.material.stateful']" name="managedName">Google.Android.Material.Stateful</attr>
     <attr path="/api/package[@name='com.google.android.material.tabs']" name="managedName">Google.Android.Material.Tabs</attr>
     <attr path="/api/package[@name='com.google.android.material.textfield']" name="managedName">Google.Android.Material.TextField</attr>
     <attr path="/api/package[@name='com.google.android.material.theme']" name="managedName">Google.Android.Material.Theme</attr>
+    <attr path="/api/package[@name='com.google.android.material.theme.overlay']" name="managedName">Google.Android.Material.Theme.Overlay</attr>
+    <attr path="/api/package[@name='com.google.android.material.tooltip']" name="managedName">Google.Android.Material.Tooltip</attr>
     <attr path="/api/package[@name='com.google.android.material.transformation']" name="managedName">Google.Android.Material.Transformation</attr>
+    <attr path="/api/package[@name='com.google.android.material.transition']" name="managedName">Google.Android.Material.Transition</attr>
+    <attr path="/api/package[@name='com.google.android.material.transition.platform']" name="managedName">Google.Android.Material.Transition.Platform</attr>
 
   <attr
     path="/api/package[@name='com.google.android.material.badge']"

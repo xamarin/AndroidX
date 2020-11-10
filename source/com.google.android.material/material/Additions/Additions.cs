@@ -24,9 +24,9 @@ namespace Google.Android.Material.Animation
     public partial class ImageMatrixProperty
     {
         public override Java.Lang.Object Get(Java.Lang.Object @object) =>
-            Get((ImageView)@object);
+            Get((global::Android.Widget.ImageView)@object);
         public override void Set(Java.Lang.Object @object, Java.Lang.Object value) =>
-            Set((ImageView)@object, (Matrix)value);
+            Set((global::Android.Widget.ImageView)@object, (Matrix)value);
     }
 
     public partial class ArgbEvaluatorCompat
