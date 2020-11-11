@@ -13,6 +13,8 @@
     <ThirdParty Include="Newtonsoft.Json.dll" />
     <ThirdParty Include="Mono.Cecil.dll" />
     <ThirdParty Include="Mono.Cecil.*.dll" />
+    <ThirdParty Include="androidx*.jar" />
+    <ThirdParty Include="jetifierWrapper*.jar" />
   </ItemGroup>
 
   <ItemGroup>
