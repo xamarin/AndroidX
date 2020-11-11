@@ -1,0 +1,58 @@
+# This action runs every Monday morning, scanning Google's Maven repository for updated
+# stable packages, opening a PR to bind any new stable releases.
+name: Check for new stable releases
+
+# Runs every Monday at 06:00 UTC
+on:
+  schedule:
+    - cron: 0 6 * * 1
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+      with:
+        ref: master
+        
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+        
+    - name: Install dotnet-script
+      run: dotnet tool install -g dotnet-script
+      
+    - name: Run update-config script
+      run: >
+        dotnet
+        script 
+        ./build/scripts/update-config.csx 
+        --
+        config.json
+        update
+
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Weekly stable updates
+        branch-suffix: timestamp
+        delete-branch: true
+        title: 'Weekly stable updates'
+        body: |
+            Update to latest stable versions of components:
+            - androidx.example.example - 1.0.0 -> 1.1.0
+
+            Checklist
+            - [ ] Add any metadata needed to get PR to compile
+            - [ ] Locally generate diffs
+            - [ ] Review any breaking changes
+            - [ ] Verify any new namespaces are properly renamed
+            - [ ] Attach diffs to PR
+        assignees: jpobst
+        draft: true
