@@ -17,7 +17,7 @@ resources:
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
-      ref: refs/heads/main
+      ref: refs/heads/dev/sign-jar
     - repository: components
       type: github
       name: xamarin/XamarinComponents
@@ -48,3 +48,4 @@ jobs:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
         dependsOn: [ 'build' ]
+        templateBranch: dev/sign-jar
