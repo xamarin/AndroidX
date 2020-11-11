@@ -5,7 +5,6 @@
     <FirstParty Include="Xamarin.AndroidX.*.dll" />
     <FirstParty Include="Xamarin.Google.Android.Material.dll" />
     <FirstParty Include="androidx-migrator.dll" />
-    <FirstParty Include="androidx*.jar" />
     <FirstParty Include="jetifierWrapper*.jar" />
   </ItemGroup>
 
@@ -15,6 +14,7 @@
     <ThirdParty Include="Newtonsoft.Json.dll" />
     <ThirdParty Include="Mono.Cecil.dll" />
     <ThirdParty Include="Mono.Cecil.*.dll" />
+    <ThirdParty Include="androidx*.jar" />
   </ItemGroup>
 
   <ItemGroup>
