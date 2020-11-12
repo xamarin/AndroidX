@@ -49,4 +49,4 @@ jobs:
       parameters:
         dependsOn: [ 'build' ]
         templateBranch: dev/sign-jar
-        signType: Real
+        signType: Test
