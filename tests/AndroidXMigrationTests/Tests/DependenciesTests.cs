@@ -265,9 +265,11 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Activity",
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Annotation.Experimental",
 				"Xamarin.AndroidX.AppCompat",
 				"Xamarin.AndroidX.AppCompat.AppCompatResources",
 				"Xamarin.AndroidX.Arch.Core.Common",
+				"Xamarin.AndroidX.Arch.Core.Runtime",
 				"Xamarin.AndroidX.AsyncLayoutInflater",
 				"Xamarin.AndroidX.Browser",
 				"Xamarin.AndroidX.CardView",
@@ -368,6 +370,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.MediaRouter",
+				"Xamarin.AndroidX.Palette",
 				"Xamarin.Google.Android.Material",
 			};
 

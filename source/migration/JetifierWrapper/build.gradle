@@ -35,4 +35,5 @@ compileJava {
 
 jar {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

@@ -314,6 +314,7 @@
     {
       "id": "Xamarin.Google.Android.Material",
       "dependencies": [
+        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.CardView",
@@ -501,7 +502,6 @@
     {
       "id": "Xamarin.AndroidX.Media",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core"
       ]
     },
@@ -526,7 +526,6 @@
       "id": "Xamarin.AndroidX.SlidingPaneLayout",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CustomView"
       ]
     },
@@ -629,10 +628,8 @@
     {
       "id": "Xamarin.AndroidX.MediaRouter",
       "dependencies": [
-        "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.Media",
-        "Xamarin.AndroidX.Palette",
-        "Xamarin.AndroidX.RecyclerView"
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -646,9 +643,7 @@
     {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -671,19 +666,10 @@
     {
       "id": "Xamarin.AndroidX.Navigation.UI",
       "dependencies": [
+        "Xamarin.AndroidX.CustomView",
+        "Xamarin.AndroidX.DrawerLayout",
         "Xamarin.AndroidX.Navigation.Runtime",
-        "Xamarin.AndroidX.Transition",
         "Xamarin.Google.Android.Material"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Transition",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Lifecycle.Runtime"
       ]
     },
     {
@@ -785,6 +771,16 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Transition",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Fragment",
+        "Xamarin.AndroidX.Lifecycle.Runtime"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.TvProvider",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -806,9 +802,10 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.ConstraintLayout",
+        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Legacy.Support.Core.UI",
-        "Xamarin.AndroidX.RecyclerView"
+        "Xamarin.AndroidX.RecyclerView",
+        "Xamarin.AndroidX.SwipeRefreshLayout"
       ]
     },
     {
