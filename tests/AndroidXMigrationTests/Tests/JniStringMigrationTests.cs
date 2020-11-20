@@ -469,6 +469,9 @@ namespace Xamarin.AndroidX.Migration.Tests
 		[InlineData(
 			"(Landroid/support/wear/widget/drawer/WearableNavigationDrawerView;Landroid/support/wear/internal/widget/drawer/WearableNavigationDrawerPresenter;)V",
 			"(Landroidx/wear/widget/drawer/WearableNavigationDrawerView;Landroidx/wear/internal/widget/drawer/WearableNavigationDrawerPresenter;)V")]
+		[InlineData(
+			"com/test/test/test/a/b/ʹ$ʹ",
+			"com/test/test/test/a/b/ʹ$ʹ")]
 		public void JniStringAreCorrectlyMapped(string supportJni, string androidxJni)
 		{
 			var cecilMigrator = new CecilMigrator();
