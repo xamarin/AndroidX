@@ -468,8 +468,8 @@ namespace Xamarin.AndroidX.Migration
 			string nested = "";
 			while (javaClass.Contains("$"))
 			{
-				nested = javaClass.Substring(javaClass.LastIndexOf("$")) + nested;
-				javaClass = javaClass.Substring(0, javaClass.LastIndexOf("$"));
+				nested = javaClass.Substring(javaClass.LastIndexOf('$')) + nested;
+				javaClass = javaClass.Substring(0, javaClass.LastIndexOf('$'));
 
 				if (Mapping.TryGetAndroidXClass(javaClass, out newClass))
 				{
