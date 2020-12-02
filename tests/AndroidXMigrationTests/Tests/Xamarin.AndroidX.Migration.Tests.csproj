@@ -46,10 +46,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Link>Microsoft.IdentityModel.Clients.ActiveDirectory.pdb</Link>
     </Content>
-    <Content Include="..\..\..\externals\test-assets\facebook-sdk\facebook-android-sdk.zip">
+    <!--<Content Include="..\..\..\externals\test-assets\facebook-sdk\facebook-android-sdk.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Link>facebook-android-sdk.zip</Link>
-    </Content>
+    </Content>-->
   </ItemGroup>
 
   <!-- Cecilfier test assets -->

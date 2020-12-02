@@ -230,7 +230,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			Assert.Equal("androidx/fragment/app/Fragment", simpleFragment.SuperClass.Name.Value);
 		}
 
-		[Fact]
+		//[Fact]
 		public async Task JetifierWrapperMigratesFacebookAar()
 		{
 			var facebookFilename = "facebook-android-sdk";
