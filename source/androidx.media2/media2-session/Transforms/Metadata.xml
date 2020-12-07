@@ -72,4 +72,7 @@
         path="/api/package[@name='androidx.media2.session']/class[@name='LibraryResult']/implements[@name='androidx.media2.session.RemoteResult']"
         />
 
+    <!-- Same method as base class, except with a covariant return type -->
+    <remove-node path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setConnectionHints' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" />
+
 </metadata>
