@@ -955,19 +955,19 @@ Task("migration-tests-externals")
     .Does(() =>
 {
     // download the facebook sdk to test with
-    {
-        var sdkRoot = "./externals/test-assets/facebook-sdk/";
-        var facebookFilename = "facebook-android-sdk";
-        var facebookVersion = "4.40.0";
-        var facebookFullName = $"{facebookFilename}-{facebookVersion}";
-        var facebookTestUrl = $"https://origincache.facebook.com/developers/resources/?id={facebookFullName}.zip";
-        var zipName = $"{sdkRoot}{facebookFilename}.zip";
-        EnsureDirectoryExists(sdkRoot);
-        if (!FileExists(zipName)) {
-            DownloadFile(facebookTestUrl, zipName);
-            Unzip(zipName, sdkRoot);
-        }
-    }
+    //{
+    //    var sdkRoot = "./externals/test-assets/facebook-sdk/";
+    //    var facebookFilename = "facebook-android-sdk";
+    //    var facebookVersion = "4.40.0";
+    //    var facebookFullName = $"{facebookFilename}-{facebookVersion}";
+    //    var facebookTestUrl = $"https://origincache.facebook.com/developers/resources/?id={facebookFullName}.zip";
+    //    var zipName = $"{sdkRoot}{facebookFilename}.zip";
+    //    EnsureDirectoryExists(sdkRoot);
+    //    if (!FileExists(zipName)) {
+    //        DownloadFile(facebookTestUrl, zipName);
+    //        Unzip(zipName, sdkRoot);
+    //    }
+    //}
 
     // downlaod some dodgy dlls
     {
