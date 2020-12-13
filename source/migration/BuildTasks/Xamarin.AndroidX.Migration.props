@@ -274,11 +274,15 @@
         <_AndroidXMavenArtifact Include="androidx.viewpager2.viewpager2" />
         <_AndroidXMavenArtifact Include="androidx.wear.wear" />
         <_AndroidXMavenArtifact Include="androidx.webkit.webkit" />
+        <_AndroidXMavenArtifact Include="androidx.window.window" />
+        <_AndroidXMavenArtifact Include="androidx.window.window-extensions" />
+        <_AndroidXMavenArtifact Include="androidx.work.work-gcm" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
     </ItemGroup>
 </Project>

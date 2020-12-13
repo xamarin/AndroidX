@@ -594,7 +594,6 @@
     {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Media",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
@@ -602,8 +601,6 @@
     {
       "id": "Xamarin.AndroidX.Media2.Session",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.Media2.Common",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
@@ -611,18 +608,7 @@
     {
       "id": "Xamarin.AndroidX.Media2.Widget",
       "dependencies": [
-        "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.Media2.Common",
-        "Xamarin.AndroidX.Media2.Session",
-        "Xamarin.AndroidX.Palette",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Palette",
-      "dependencies": [
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils"
+        "Xamarin.AndroidX.Media2.Session"
       ]
     },
     {
@@ -634,10 +620,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -687,6 +669,13 @@
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Paging.Common",
         "Xamarin.AndroidX.RecyclerView"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Palette",
+      "dependencies": [
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils"
       ]
     },
     {
@@ -813,6 +802,20 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Window.Window",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Window.WindowExtensions",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Work.Gcm",
+      "dependencies": [
+        "Xamarin.AndroidX.Work.Runtime"
       ]
     },
     {
