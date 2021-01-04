@@ -49,6 +49,18 @@
         >
         AndroidX.Camera.Camera2.InterOp
     </attr>    
-    
+        <attr 
+        path="/api/package[@name='androidx.camera.camera2.internal.compat.quirk']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Camera2.Internal.Compat.Quirk
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.camera.camera2.internal.compat.workaround']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Camera2.Internal.Compat.Workaround
+    </attr>    
+
     
 </metadata>
