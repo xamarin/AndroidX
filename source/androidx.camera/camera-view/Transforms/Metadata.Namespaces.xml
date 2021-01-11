@@ -31,6 +31,12 @@
         >
         AndroidX.Camera.View.Preview.Transform.Transformation
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.camera.view.video']" 
+        name="managedName"
+        >
+        AndroidX.Camera.View.Video
+    </attr>
     
     
 </metadata>
