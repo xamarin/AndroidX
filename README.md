@@ -90,7 +90,7 @@ We will provide a migration assistant to help convert your C# code, xml resource
 
 ## Migration Tools / Tasks Source Code
 
-The source code for the `Xamarin.AndroidX.Migration` package and other migration tools and utilities are available in: [xamarin/XamarinAndroidXMigration](https://github.com/xamarin/XamarinAndroidXMigration)
+The source code for the `Xamarin.AndroidX.Migration` package and other migration tools and utilities are available in: [source/migration](https://github.com/xamarin/AndroidX/tree/master/source/migration)
 
 ## License
 
