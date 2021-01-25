@@ -282,6 +282,38 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.databinding",
+        "artifactId": "databinding-adapters",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.databinding",
+        "artifactId": "databinding-common",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.databinding",
+        "artifactId": "databinding-runtime",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.databinding",
+        "artifactId": "viewbinding",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.documentfile",
         "artifactId": "documentfile",
         "version": "1.0.1",
