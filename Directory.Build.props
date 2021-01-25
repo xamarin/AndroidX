@@ -4,5 +4,6 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
+    <PackageVersionSuffix>-net6preview01</PackageVersionSuffix>
   </PropertyGroup>
 </Project>

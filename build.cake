@@ -604,12 +604,9 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    var settings = new MSBuildSettings()
+    var settings = new DotNetCoreMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
-        .SetVerbosity(VERBOSITY)
         .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
-        .WithRestore()
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
         .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
@@ -617,10 +614,11 @@ Task("libs")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings.ToolPath = MSBUILD_PATH;
-
-    MSBuild("./generated/AndroidX.sln", settings);
+    DotNetCoreRestore("./generated/AndroidX.sln", new DotNetCoreRestoreSettings
+    {
+        MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
+    });
+    DotNetCoreMSBuild("./generated/AndroidX.sln", settings.EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog"));
 });
 
 Task("libs-native")
@@ -642,9 +640,8 @@ Task("nuget")
     .IsDependentOn("libs")
     .Does(() =>
 {
-    var settings = new MSBuildSettings()
+    var settings = new DotNetCoreMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
-        .SetVerbosity(VERBOSITY)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
@@ -656,10 +653,7 @@ Task("nuget")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings.ToolPath = MSBUILD_PATH;
-
-    MSBuild("./generated/AndroidX.sln", settings);
+    DotNetCoreMSBuild("./generated/AndroidX.sln", settings);
 });
 
 Task("samples-generate-all-targets")
