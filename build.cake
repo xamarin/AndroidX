@@ -7,6 +7,7 @@
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=12.2.1
 #addin nuget:?package=SharpZipLib&version=1.2.0
+#addin nuget:?package=WeCantSpell.Hunspell&version=3.0.1
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
@@ -293,6 +294,7 @@ string nuget_version_template = $"x.y.z.w{version_suffix}";
 JArray binderator_json_array = null;
 
 Task("binderate-config-verify")
+    .IsDependentOn("spell-check")
     .IsDependentOn("binderate-fix")
     .Does
     (
@@ -1292,6 +1294,20 @@ Task("bindings-verify")
             System.IO.File.WriteAllLines("./output/missing_java_type.csv", missing_java_type.ToArray());
             System.IO.File.WriteAllLines("./output/missing_dotnet_type.csv", missing_dotnet_type.ToArray());
             System.IO.File.WriteAllLines("./output/missing_dotnet_override_type.csv", missing_dotnet_override_type.ToArray());
+        }
+    );
+
+Task ("spell-check")
+    .Does 
+    (
+        () =>
+        {
+            var dictionary = WeCantSpell.Hunspell.WordList.CreateFromFiles(@"output/English (American).dic");
+            bool notOk = dictionary.Check("teh");
+            Information($" teh is correct = {notOk}");
+            var suggestions = dictionary.Suggest("teh");
+            bool ok = dictionary.Check("the");
+            Information($" the is correct = {ok}");
         }
     );
 
