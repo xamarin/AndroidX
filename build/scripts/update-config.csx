@@ -2,14 +2,16 @@
 
 #r "nuget: MavenNet, 2.2.0"
 #r "nuget: Newtonsoft.Json, 12.0.3"
-#r "nuget: NuGet.Versioning, 5.7.0"
+#r "nuget: NuGet.Versioning, 5.8.0"
 
 // Usage:
 //   dotnet tool install -g dotnet-script
-//   dotnet script update-config.csx -- ../../config.json <update>
+//   dotnet script update-config.csx -- ../../config.json <update|bump>
 // This script compares the versions of Java packages we are currently binding to the
 // stable versions available in Google's Maven repository.  The specified configuration
-// file can be automatically updated by including the "update" argument.
+// file can be automatically updated by including the "update" argument.  A revision bump
+// can be applied to all packages with the "bump" argument, which is mutually exclusive
+// with "update".
 using MavenNet;
 using MavenNet.Models;
 using Newtonsoft.Json;
@@ -26,6 +28,7 @@ if (string.IsNullOrWhiteSpace (config_file) || !File.Exists (config_file)) {
 var config_json = File.ReadAllText (config_file);
 var config = JsonConvert.DeserializeObject<List<MyArray>> (config_json);
 var should_update = Args.Count > 1 && Args[1].ToLowerInvariant () == "update";
+var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
 
 // Query Maven
 var repo = MavenRepository.FromGoogle ();
@@ -52,18 +55,49 @@ foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
 		if (should_update)
 		{
 			var new_version = GetLatestVersion (a)?.ToString ();
+			var prefix = art.NugetVersion.StartsWith ("1" + art.Version + ".") ? "1" : string.Empty;
+
 			art.Version = new_version;
-			art.NugetVersion = new_version;
+			art.NugetVersion = prefix + new_version;
 		}
+	}
+
+	// Bump the revision version of all NuGet versions
+	// If there isn't currently a revision version, make it ".1"
+	if (should_minor_bump)
+	{
+		string version = "";
+		string release = "";
+		int revision = 0;
+
+		var str = art.NugetVersion;
+
+		if (str.Contains ('-')) {
+			release = str.Substring (str.IndexOf ('-'));
+			str = str.Substring (0, str.LastIndexOf ('-'));
+		}
+
+		var period_count = str.Count (c => c == '.');
+
+		if (period_count == 2) {
+			version = str;
+			revision = 1;
+		} else if (period_count == 3) {
+			version = str.Substring (0, str.LastIndexOf ('.'));
+			revision = int.Parse (str.Substring (str.LastIndexOf ('.') + 1));
+			revision++;
+		}
+
+		art.NugetVersion = $"{version}.{revision}{release}";
 	}
 
 	Console.WriteLine ($"| {package_name.PadRight (60)} | {current_version.PadRight (15)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");
 
-	if (should_update)
+	if (should_update || should_minor_bump)
 	{
 		// Write update config.json back to disk
 		var output = JsonConvert.SerializeObject (config, Formatting.Indented);
-		File.WriteAllText (config_file, output);
+		File.WriteAllText (config_file, output + Environment.NewLine);
 	}
 }
 
