@@ -50,9 +50,10 @@ jobs:
 
             Checklist
             - [ ] Add any metadata needed to get PR to compile
+            - [ ] Verify any new namespaces are properly renamed
+            - [ ] Verify nuget/namespace spelling (spell-check.cake)           
             - [ ] Locally generate diffs
             - [ ] Review any breaking changes
-            - [ ] Verify any new namespaces are properly renamed
             - [ ] Attach diffs to PR
-        assignees: jpobst
+        assignees: moljac
         draft: true
