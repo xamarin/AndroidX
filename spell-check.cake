@@ -1,9 +1,15 @@
+/*
+     dotnet cake spell-check.cake
+    dotnet cake spell-check.cake -t=spell-check
+ */
 #addin nuget:?package=WeCantSpell.Hunspell&version=3.0.1
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
+var TARGET = Argument ("t", Argument ("target", "Default"));
 
 string file_spell_errors = "output/spell-errors.txt";
 List<string> spell_errors = null;
@@ -151,8 +157,11 @@ if (System.IO.File.Exists(file_spell_errors))
 {
     string separator = System.Environment.NewLine + "\t" + "\t";
     string msg = "Spell Errors:" + System.Environment.NewLine + "\t" + "\t"
-                    + string.Join(separator, spell_errors);
+                    + string.Join(separator, System.IO.File.ReadAllLines(file_spell_errors));
     throw new Exception(msg);
 }
 
-RunTarget ("spell-check");
+Task ("Default")
+    .IsDependentOn ("spell-check");
+
+RunTarget (TARGET);
