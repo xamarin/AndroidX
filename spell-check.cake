@@ -140,9 +140,6 @@ Task ("spell-check")
                         continue;
                     }
                     spell_errors.Add(nuget_id_part);
-                    // var suggestions = dictionary.Suggest("teh");
-                    // bool ok = dictionary.Check("the");
-                    // Information($" the is correct = {ok}");
                 }
             }
 
