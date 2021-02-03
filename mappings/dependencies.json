@@ -56,6 +56,17 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Ads.Identifier",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Guava.ListenableFuture",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Ads.IdentifierCommon",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -66,17 +77,6 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
       ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Ads.Idetifier",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.Google.Guava.ListenableFuture",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Migration",
@@ -385,6 +385,32 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
+      "dependencies": [
+        "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+        "Xamarin.AndroidX.DataBinding.DataBindingRuntime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+        "Xamarin.AndroidX.DataBinding.ViewBinding",
+        "Xamarin.AndroidX.Lifecycle.Runtime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.DataBinding.ViewBinding",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.DocumentFile",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -594,7 +620,6 @@
     {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Media",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
@@ -602,8 +627,6 @@
     {
       "id": "Xamarin.AndroidX.Media2.Session",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.Media2.Common",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
@@ -611,18 +634,7 @@
     {
       "id": "Xamarin.AndroidX.Media2.Widget",
       "dependencies": [
-        "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.Media2.Common",
-        "Xamarin.AndroidX.Media2.Session",
-        "Xamarin.AndroidX.Palette",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Palette",
-      "dependencies": [
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils"
+        "Xamarin.AndroidX.Media2.Session"
       ]
     },
     {
@@ -634,10 +646,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -687,6 +695,13 @@
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Paging.Common",
         "Xamarin.AndroidX.RecyclerView"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Palette",
+      "dependencies": [
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils"
       ]
     },
     {

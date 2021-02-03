@@ -1,0 +1,16 @@
+﻿<metadata>
+
+    <attr 
+        path="/api/package[@name='androidx.databinding']"
+        name="managedName"
+        >
+        AndroidX.DataBinding
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.databinding.library']"
+        name="managedName"
+        >
+        AndroidX.DataBinding.Library
+    </attr>
+
+</metadata>

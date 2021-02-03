@@ -115,6 +115,9 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Core" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.CursorAdapter" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.CustomView" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.DataBinding.DataBindingAdapters" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.DataBinding.DataBindingRuntime" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.DataBinding.ViewBinding" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.DocumentFile" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.DrawerLayout" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.DynamicAnimation" />
@@ -206,6 +209,10 @@
         <_AndroidXMavenArtifact Include="androidx.core.core-role" />
         <_AndroidXMavenArtifact Include="androidx.cursoradapter.cursoradapter" />
         <_AndroidXMavenArtifact Include="androidx.customview.customview" />
+        <_AndroidXMavenArtifact Include="androidx.databinding.databinding-adapters" />
+        <_AndroidXMavenArtifact Include="androidx.databinding.databinding-common" />
+        <_AndroidXMavenArtifact Include="androidx.databinding.databinding-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.databinding.viewbinding" />
         <_AndroidXMavenArtifact Include="androidx.documentfile.documentfile" />
         <_AndroidXMavenArtifact Include="androidx.drawerlayout.drawerlayout" />
         <_AndroidXMavenArtifact Include="androidx.dynamicanimation.dynamicanimation" />
