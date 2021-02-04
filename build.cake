@@ -1028,7 +1028,7 @@ Task("migration-tests")
 var TF_MONIKER = "monoandroid90";
 string SUPPORT_MERGED_DLL = "./output/AndroidSupport.Merged.dll";
 string ANDROIDX_MERGED_DLL = "./output/AndroidX.Merged.dll";
-string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/XamarinAndroidXMigration/master/mappings/androidx-mapping.csv";
+string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-mapping.csv";
 string MAPPING_LOCAL = "./output/androidx-mapping.csv";
 string API_INFO_OLD = "./output/AndroidSupport.Merged.api-info.xml";
 string API_INFO_OLD_MIGRATED = "./output/AndroidSupport.Merged.Migrated.api-info.xml";
