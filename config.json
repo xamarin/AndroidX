@@ -29,7 +29,7 @@
         "groupId": "androidx.activity",
         "artifactId": "activity",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.5",
+        "nugetVersion": "1.1.0.6",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
@@ -373,7 +373,7 @@
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
         "version": "1.2.5",
-        "nugetVersion": "1.2.5.4",
+        "nugetVersion": "1.2.5.5",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
@@ -525,7 +525,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-savedstate",
         "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "nugetVersion": "2.2.0.5",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "dependencyOnly": false
       },
@@ -724,8 +724,8 @@
       {
         "groupId": "androidx.savedstate",
         "artifactId": "savedstate",
-        "version": "1.1.0-alpha01",
-        "nugetVersion": "1.1.0.4-alpha01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.3",
         "nugetId": "Xamarin.AndroidX.SavedState",
         "dependencyOnly": false
       },
