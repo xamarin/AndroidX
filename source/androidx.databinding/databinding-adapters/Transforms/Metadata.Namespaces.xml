@@ -12,5 +12,10 @@
         >
         AndroidX.DataBinding.Library
     </attr>
-
+    <attr 
+        path="/api/package[@name='androidx.databinding.library.baseAdapters']"
+        name="managedName"
+        >
+        AndroidX.DataBinding.Library.BaseAdapters
+    </attr>
 </metadata>

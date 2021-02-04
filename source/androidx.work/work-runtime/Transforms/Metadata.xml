@@ -201,5 +201,11 @@
         >
         AndroidX.Work.Impl.Foreground
     </attr>
-        
+    <attr 
+        path="/api/package[@name='androidx.work.multiprocess']"
+        name="managedName"
+        >
+        AndroidX.Work.MultiProcess
+    </attr>
+    
 </metadata>
