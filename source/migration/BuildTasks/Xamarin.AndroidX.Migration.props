@@ -257,9 +257,7 @@
         <_AndroidXMavenArtifact Include="androidx.room.room-common" />
         <_AndroidXMavenArtifact Include="androidx.room.room-guava" />
         <_AndroidXMavenArtifact Include="androidx.room.room-runtime" />
-        <_AndroidXMavenArtifact Include="androidx.room.room-rxjava2" />
         <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate" />
-        <_AndroidXMavenArtifact Include="androidx.security.security-crypto" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-builders" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-core" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-view" />
@@ -278,19 +276,12 @@
         <_AndroidXMavenArtifact Include="androidx.webkit.webkit" />
         <_AndroidXMavenArtifact Include="androidx.window.window" />
         <_AndroidXMavenArtifact Include="androidx.window.window-extensions" />
-        <_AndroidXMavenArtifact Include="androidx.work.work-gcm" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
-        <_AndroidXMavenArtifact Include="androidx.work.work-rxjava2" />
-        <_AndroidXMavenArtifact Include="androidx.work.work-rxjava3" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
-        <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
-        <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
-        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
-        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
     </ItemGroup>
 </Project>
