@@ -690,14 +690,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "androidx.room",
-        "artifactId": "room-rxjava2",
-        "version": "2.2.5",
-        "nugetVersion": "2.2.5.0",
-        "nugetId": "Xamarin.AndroidX.Room.RxJava2",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "androidx.savedstate",
         "artifactId": "savedstate",
         "version": "1.1.0-alpha01",
@@ -842,52 +834,12 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "androidx.window",
-        "artifactId": "window",
-        "version": "1.0.0-alpha01",
-        "nugetVersion": "1.0.0.0-alpha01",
-        "nugetId": "Xamarin.AndroidX.Window.Window",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.window",
-        "artifactId": "window-extensions",
-        "version": "1.0.0-alpha01",
-        "nugetVersion": "1.0.0.0-alpha01",
-        "nugetId": "Xamarin.AndroidX.Window.WindowExtensions",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.4.0",
         "nugetVersion": "2.4.0.0",
         "nugetVersion": "2.4.0.1",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.work",
-        "artifactId": "work-rxjava2",
-        "version": "2.4.0",
-        "nugetVersion": "2.4.0.0",
-        "nugetId": "Xamarin.AndroidX.Work.RxJava2",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.work",
-        "artifactId": "work-rxjava3",
-        "version": "2.4.0",
-        "nugetVersion": "2.4.0.0",
-        "nugetId": "Xamarin.AndroidX.Work.RxJava3",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.work",
-        "artifactId": "work-gcm",
-        "version": "2.4.0",
-        "nugetVersion": "2.4.0",
-        "nugetId": "Xamarin.AndroidX.Work.Gcm",
         "dependencyOnly": false
       },
       {
@@ -928,38 +880,6 @@
         "version": "1.3.72",
         "nugetVersion": "1.3.72",
         "nugetId": "Xamarin.Kotlin.StdLib",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.reactivex.rxjava2",
-        "artifactId": "rxjava",
-        "version": "2.2.9",
-        "nugetVersion": "2.2.9",
-        "nugetId": "Xamarin.Android.ReactiveX.RxJava",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "io.reactivex.rxjava3",
-        "artifactId": "rxjava",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
-        "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "org.jetbrains.kotlinx",
-        "artifactId": "kotlinx-coroutines-android",
-        "version": "1.3.4",
-        "nugetVersion": "1.3.4",
-        "nugetId": "Xamarin.KotlinX.Coroutines.CoroutinesAndroid",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "org.jetbrains.kotlinx",
-        "artifactId": "kotlinx-coroutines-core",
-        "version": "1.3.4",
-        "nugetVersion": "1.3.4",
-        "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": true
       },
       {
