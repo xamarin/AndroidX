@@ -883,14 +883,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "org.jetbrains.kotlin",
-        "artifactId": "kotlin-stdlib",
-        "version": "1.3.72",
-        "nugetVersion": "1.3.72",
-        "nugetId": "Xamarin.Kotlin.StdLib",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "com.xamarin.androidx",
         "artifactId": "migration",
         "version": "1.0",
