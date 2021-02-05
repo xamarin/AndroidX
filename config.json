@@ -29,7 +29,7 @@
         "groupId": "androidx.activity",
         "artifactId": "activity",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.5",
+        "nugetVersion": "1.1.0.6",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
@@ -38,7 +38,7 @@
         "artifactId": "ads-identifier",
         "version": "1.0.0-alpha04",
         "nugetVersion": "1.0.0.4-alpha04",
-        "nugetId": "Xamarin.AndroidX.Ads.Idetifier",
+        "nugetId": "Xamarin.AndroidX.Ads.Identifier",
         "dependencyOnly": false
       },
       {
@@ -282,6 +282,38 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.databinding",
+        "artifactId": "databinding-adapters",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.databinding",
+        "artifactId": "databinding-common",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.databinding",
+        "artifactId": "databinding-runtime",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.databinding",
+        "artifactId": "viewbinding",
+        "version": "4.1.2",
+        "nugetVersion": "4.1.2",
+        "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.documentfile",
         "artifactId": "documentfile",
         "version": "1.0.1",
@@ -341,7 +373,7 @@
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
         "version": "1.2.5",
-        "nugetVersion": "1.2.5.4",
+        "nugetVersion": "1.2.5.5",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
@@ -493,7 +525,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-savedstate",
         "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "nugetVersion": "2.2.0.5",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "dependencyOnly": false
       },
@@ -548,8 +580,8 @@
       {
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": false
       },
@@ -692,8 +724,8 @@
       {
         "groupId": "androidx.savedstate",
         "artifactId": "savedstate",
-        "version": "1.1.0-alpha01",
-        "nugetVersion": "1.1.0.4-alpha01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.3",
         "nugetId": "Xamarin.AndroidX.SavedState",
         "dependencyOnly": false
       },
