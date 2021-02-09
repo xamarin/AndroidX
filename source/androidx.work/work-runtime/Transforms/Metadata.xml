@@ -207,5 +207,12 @@
         >
         AndroidX.Work.MultiProcess
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.diagnostics']"
+        name="managedName"
+        >
+        AndroidX.Work.Impl.Diagnostics
+    </attr>
     
+
 </metadata>
