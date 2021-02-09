@@ -27,6 +27,7 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
+      validPackagePrefixes: [ 'Xamarin' ]   
       areaPath: 'DevDiv\Xamarin SDK\Android'
       preBuildSteps:
         - pwsh: |
