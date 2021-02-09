@@ -52,6 +52,7 @@
       "id": "Xamarin.AndroidX.SavedState",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
@@ -76,6 +77,13 @@
       "id": "Xamarin.AndroidX.Ads.IdentifierProvider",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Ads.Idetifier",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -646,6 +654,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
