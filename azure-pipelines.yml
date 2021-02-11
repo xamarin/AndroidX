@@ -34,13 +34,13 @@ jobs:
             dotnet tool uninstall --global Cake.Tool
             dotnet tool install --global Cake.Tool
             dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-8-macos
+            boots https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4451481/master/05bb8e0eae11ae6a73838b13cf91ee2433169dff/xamarin.android-11.2.99.85.pkg
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
             dotnet tool install --global Cake.Tool
             dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-8-windows
+            boots https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4451481/master/05bb8e0eae11ae6a73838b13cf91ee2433169dff/signed/Xamarin.Android.Sdk-11.2.99.85.vsix
           condition: eq(variables['System.JobName'], 'windows')
       tools:
         - 'xamarin.androidbinderator.tool': '0.4.2'
