@@ -135,7 +135,8 @@
         "Xamarin.AndroidX.Lifecycle.ViewModel",
         "Xamarin.AndroidX.Loader",
         "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.ViewPager"
+        "Xamarin.AndroidX.ViewPager",
+        "Xamarin.AndroidX.Annotation.Experimental"
       ]
     },
     {
@@ -325,7 +326,9 @@
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Transition",
         "Xamarin.AndroidX.VectorDrawable",
-        "Xamarin.AndroidX.ViewPager2"
+        "Xamarin.AndroidX.ViewPager2",
+        "Xamarin.AndroidX.ConstraintLayout",
+        "Xamarin.AndroidX.DynamicAnimation"
       ]
     },
     {
