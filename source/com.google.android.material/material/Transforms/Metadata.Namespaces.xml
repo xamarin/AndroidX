@@ -105,7 +105,7 @@
     Google.Android.Material.ProgressIndicator    
   </attr>
   <attr
-    path="/api/package[@name='com.google.android.material.tinmepicker']"
+    path="/api/package[@name='com.google.android.material.timepicker']"
     name="managedName"
     >
     Google.Android.Material.TimePicker
