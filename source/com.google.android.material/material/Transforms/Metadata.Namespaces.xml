@@ -98,4 +98,17 @@
     Google.Android.Material.TextView
   </attr>
 
+  <attr
+    path="/api/package[@name='com.google.android.material.progressindicator']"
+    name="managedName"
+    >
+    Google.Android.Material.ProgressIndicator    
+  </attr>
+  <attr
+    path="/api/package[@name='com.google.android.material.tinmepicker']"
+    name="managedName"
+    >
+    Google.Android.Material.TimePicker
+  </attr>
+
 </metadata>
