@@ -254,6 +254,10 @@
         >
         Java.Lang.Object
     </attr>
+    <!--
+    TODO: must be removed
+    previous 3 metadata not working, so added remove-node to build
+    -->
     <remove-node
         path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.OpenMultipleDocuments']"
         />
@@ -277,6 +281,10 @@
         >
         Java.Lang.Object
     </attr>
+    <!--
+    TODO: must be removed
+    previous 3 metadata not working, so added remove-node to build
+    -->
     <remove-node
         path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.OpenDocument']"
         />
@@ -300,6 +308,10 @@
         >
         Java.Lang.Object
     </attr>
+    <!--
+    TODO: must be removed
+    previous 3 metadata not working, so added remove-node to build
+    -->
     <remove-node
         path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.RequestMultiplePermissions']"
         />
