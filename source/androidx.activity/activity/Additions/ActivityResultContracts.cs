@@ -5,6 +5,10 @@ using Java.Lang;
 
 namespace AndroidX.Activity.Result.Contract 
 {
+	/*
+	TODO: remove after virtual vs override support in metadata is added
+	must be removed after 16.9 is stable 20210302
+	*/
 	internal delegate IntPtr _JniMarshal_PPLL_L(IntPtr jnienv, IntPtr klass, IntPtr p0, IntPtr p1);
 
 	// Metadata.xml XPath class reference: path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts']"
