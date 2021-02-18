@@ -28,8 +28,8 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
@@ -260,8 +260,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core-role",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0.4-rc01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.4",
         "nugetId": "Xamarin.AndroidX.Core.Role",
         "dependencyOnly": false
       },
@@ -372,8 +372,8 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.2.5",
-        "nugetVersion": "1.2.5.5",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
@@ -460,8 +460,8 @@
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common",
         "dependencyOnly": false
       },
@@ -476,56 +476,56 @@
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-core",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-process",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Process",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-service",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Service",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.4",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-savedstate",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.5",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "dependencyOnly": false
       },
@@ -580,8 +580,8 @@
       {
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
-        "version": "1.2.1",
-        "nugetVersion": "1.2.1",
+        "version": "1.2.2",
+        "nugetVersion": "1.2.2",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": false
       },
@@ -724,8 +724,8 @@
       {
         "groupId": "androidx.savedstate",
         "artifactId": "savedstate",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.3",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.SavedState",
         "dependencyOnly": false
       },
@@ -868,8 +868,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.2.1",
-        "nugetVersion": "1.2.1.1",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
