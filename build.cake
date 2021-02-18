@@ -393,6 +393,29 @@ Task("binderate-config-verify")
         }
     );
 
+Task("binderate-diff")
+	.IsDependentOn("binderate")
+    .Does
+    (
+        () =>
+        {
+			EnsureDirectoryExists("./output/");
+
+			// "git diff master:config.json config.json" > ./output/config.json.diff-from-master.txt"
+			string process = "git";
+			string process_args = "diff master:config.json config.json";
+			IEnumerable<string> redirectedStandardOutput;
+			ProcessSettings process_settings = new ProcessSettings ()
+			{
+             Arguments = process_args,
+             RedirectStandardOutput = true
+         	};
+			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+			System.IO.File.WriteAllLines("./output/config.json.diff-from-master.txt", redirectedStandardOutput.ToArray());
+			Information("Exit code: {0}", exitCodeWithoutArguments);
+		}
+	);
+
 Task("binderate-fix")
     .Does
     (
