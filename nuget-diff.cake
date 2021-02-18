@@ -61,6 +61,8 @@ if (!diffs.Any()) {
 		var newPath = temp.CombineWithFilePath(newName);
 
 		CopyFile(diff, newPath);
+		// for github PR summary (markdown files are not accepted, so copy to text files)
+		CopyFile(diff, $"{diff}.txt");
 	}
 
 	var temps = GetFiles($"{temp}/**/*.md");
