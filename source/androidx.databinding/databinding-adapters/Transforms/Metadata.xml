@@ -1,0 +1,7 @@
+﻿<metadata>
+
+    <remove-node
+        path="/api/package[@name='androidx.databinding.adapters']/class[@name='AbsSpinnerBindingAdapter']/method[@name='setEntries' and count(parameter)=2 and parameter[1][@type='android.widget.AbsSpinner'] and parameter[2][@type='T[]']]"
+        />
+
+</metadata>

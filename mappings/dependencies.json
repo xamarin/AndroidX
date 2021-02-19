@@ -56,6 +56,17 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Ads.Identifier",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Guava.ListenableFuture",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Ads.IdentifierCommon",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -66,17 +77,6 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
       ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Ads.Idetifier",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.Google.Guava.ListenableFuture",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Migration",
@@ -126,6 +126,7 @@
       "id": "Xamarin.AndroidX.Fragment",
       "dependencies": [
         "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
@@ -187,7 +188,6 @@
       "id": "Xamarin.AndroidX.Biometric",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment"
       ]
@@ -220,7 +220,6 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core"
       ]
@@ -318,8 +317,10 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.CardView",
+        "Xamarin.AndroidX.ConstraintLayout",
         "Xamarin.AndroidX.CoordinatorLayout",
         "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.DynamicAnimation",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.RecyclerView",
@@ -385,6 +386,32 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
+      "dependencies": [
+        "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+        "Xamarin.AndroidX.DataBinding.DataBindingRuntime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+        "Xamarin.AndroidX.DataBinding.ViewBinding",
+        "Xamarin.AndroidX.Lifecycle.Runtime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.DataBinding.ViewBinding",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.DocumentFile",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -437,8 +464,6 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
-        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
@@ -595,6 +620,7 @@
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
         "Xamarin.AndroidX.Media",
+        "Xamarin.AndroidX.VersionedParcelable",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
@@ -620,10 +646,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -787,10 +809,8 @@
       "id": "Xamarin.AndroidX.Transition",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Lifecycle.Runtime"
+        "Xamarin.AndroidX.Fragment"
       ]
     },
     {
