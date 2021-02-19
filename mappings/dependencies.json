@@ -134,6 +134,7 @@
       "id": "Xamarin.AndroidX.Fragment",
       "dependencies": [
         "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
@@ -195,7 +196,6 @@
       "id": "Xamarin.AndroidX.Biometric",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment"
       ]
@@ -228,7 +228,6 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core"
       ]
@@ -326,8 +325,10 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.CardView",
+        "Xamarin.AndroidX.ConstraintLayout",
         "Xamarin.AndroidX.CoordinatorLayout",
         "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.DynamicAnimation",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.RecyclerView",
@@ -471,8 +472,6 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
-        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
@@ -629,6 +628,7 @@
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
         "Xamarin.AndroidX.Media",
+        "Xamarin.AndroidX.VersionedParcelable",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
@@ -821,10 +821,8 @@
       "id": "Xamarin.AndroidX.Transition",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Lifecycle.Runtime"
+        "Xamarin.AndroidX.Fragment"
       ]
     },
     {

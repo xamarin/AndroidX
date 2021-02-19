@@ -25,5 +25,11 @@
         >
         AndroidX.Activity.Result.Contract
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.activity.contextaware']" 
+        name="managedName"
+        >
+        AndroidX.Activity.ContextAware
+    </attr>
     
 </metadata>

@@ -3,4 +3,8 @@
     <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='StableIdKeyProvider']/method[@name='getPosition' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
     <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='StableIdKeyProvider']/method[@name='getKey' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
     <remove-node path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='getSelection' and count(parameter)=0]" />
+    <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='clearProvisionalSelection' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='extendProvisionalRange' and count(parameter)=1 and parameter[1][@type='int']]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='mergeProvisionalSelection' and count(parameter)=0]" name="visibility">protected</attr>
+    <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='setProvisionalSelection' and count(parameter)=1 and parameter[1][@type='java.util.Set&lt;K&gt;']]" name="visibility">protected</attr>
 </metadata>

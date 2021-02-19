@@ -393,6 +393,29 @@ Task("binderate-config-verify")
         }
     );
 
+Task("binderate-diff")
+	.IsDependentOn("binderate")
+    .Does
+    (
+        () =>
+        {
+			EnsureDirectoryExists("./output/");
+
+			// "git diff master:config.json config.json" > ./output/config.json.diff-from-master.txt"
+			string process = "git";
+			string process_args = "diff master:config.json config.json";
+			IEnumerable<string> redirectedStandardOutput;
+			ProcessSettings process_settings = new ProcessSettings ()
+			{
+             Arguments = process_args,
+             RedirectStandardOutput = true
+         	};
+			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+			System.IO.File.WriteAllLines("./output/config.json.diff-from-master.txt", redirectedStandardOutput.ToArray());
+			Information("Exit code: {0}", exitCodeWithoutArguments);
+		}
+	);
+
 Task("binderate-fix")
     .Does
     (
@@ -1028,7 +1051,7 @@ Task("migration-tests")
 var TF_MONIKER = "monoandroid90";
 string SUPPORT_MERGED_DLL = "./output/AndroidSupport.Merged.dll";
 string ANDROIDX_MERGED_DLL = "./output/AndroidX.Merged.dll";
-string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/XamarinAndroidXMigration/master/mappings/androidx-mapping.csv";
+string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-mapping.csv";
 string MAPPING_LOCAL = "./output/androidx-mapping.csv";
 string API_INFO_OLD = "./output/AndroidSupport.Merged.api-info.xml";
 string API_INFO_OLD_MIGRATED = "./output/AndroidSupport.Merged.Migrated.api-info.xml";

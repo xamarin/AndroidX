@@ -187,5 +187,9 @@
         >
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
-    
+
+    <remove-node
+        path="/api/package[@name='com.google.android.material.datepicker']/class[@name='OnSelectionChangedListener']/typeParameters"
+        />
+
 </metadata>
