@@ -36,7 +36,7 @@
       <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType> 
   </PropertyGroup>
   
-  <ItemGroup Condition=" '$(AndroidApplication)' == 'true' ">
+  <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if ($"{art.MavenGroupId}.{art.MavenArtifactId}" == "androidx.multidex.multidex") {
         // multidex is a special case that only includes the aar conditionally
@@ -48,7 +48,7 @@
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </AndroidAarLibrary>
       } else {
-    <AndroidJavaLibrary Include="$(MSBuildThisFileDirectory)..\..\jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar">
+    <AndroidJavaLibrary Condition=" '$(AndroidApplication)' == 'true' " Include="$(MSBuildThisFileDirectory)..\..\jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </AndroidJavaLibrary>
       }
