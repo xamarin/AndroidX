@@ -649,6 +649,10 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Migration.Tool",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -827,6 +831,10 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core"
       ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Window",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Window.Window",
