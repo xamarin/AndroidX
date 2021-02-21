@@ -11,13 +11,13 @@
         path="/api/package[@name='androidx.media2.common']" 
         name="managedName"
         >
-        AndroidX.Medai2.Common
+        AndroidX.Media2.Common
     </attr>
     <attr 
         path="/api/package[@name='androidx.media2.common.futures']" 
         name="managedName"
         >
-        AndroidX.Medai2.Common.Futures
+        AndroidX.Media2.Common.Futures
     </attr>
     
 </metadata>
