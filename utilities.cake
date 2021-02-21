@@ -150,6 +150,73 @@ Task ("spell-check")
         }
     );
 
+Task ("api-diff-markdown-info-pr")
+    .Does 
+    (
+        () =>
+        {
+            // TODO: api-diff markdown info based on diff from master
+
+            return;
+        }
+    );
+
+
+Task ("namespace-check")
+    .Does 
+    (
+        () =>
+        {
+            // Namespace Checks
+            FilePathCollection files = new FilePathCollection();
+            FilePathCollection files_com = GetFiles("./generated/**/Com.*.cs");
+            FilePathCollection files_org = GetFiles("./generated/**/Org.*.cs");
+            FilePathCollection files_io = GetFiles("./generated/**/Io.*.cs");
+
+            files = (FilePathCollection) files.Concat(files_com);
+            files = (FilePathCollection) files.Concat(files_org);
+            files = (FilePathCollection) files.Concat(files_io);
+
+            if (files.Any())
+            {
+                throw new Exception("Namespaces!!!");
+            }
+
+            return;
+        }
+    );
+
+Task("binderate-diff")
+	.IsDependentOn("binderate")
+    .Does
+    (
+        () =>
+        {
+			EnsureDirectoryExists("./output/");
+
+			// "git diff master:config.json config.json" > ./output/config.json.diff-from-master.txt"
+			string process = "git";
+			string process_args = "diff master:config.json config.json";
+			IEnumerable<string> redirectedStandardOutput;
+			ProcessSettings process_settings = new ProcessSettings ()
+			{
+             Arguments = process_args,
+             RedirectStandardOutput = true
+         	};
+			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+			System.IO.File.WriteAllLines("./output/config.json.diff-from-master.txt", redirectedStandardOutput.ToArray());
+			Information("Exit code: {0}", exitCodeWithoutArguments);
+		}
+	);
+
+
+Task ("Default")
+    .IsDependentOn ("namespace-check")
+    .IsDependentOn ("binderate-diff")
+    .IsDependentOn ("api-diff-markdown-info-pr")
+    .IsDependentOn ("spell-check")
+    ;
+
 if (System.IO.File.Exists(file_spell_errors))
 {
     string separator = System.Environment.NewLine + "\t" + "\t";
@@ -157,8 +224,5 @@ if (System.IO.File.Exists(file_spell_errors))
                     + string.Join(separator, System.IO.File.ReadAllLines(file_spell_errors));
     throw new Exception(msg);
 }
-
-Task ("Default")
-    .IsDependentOn ("spell-check");
 
 RunTarget (TARGET);
