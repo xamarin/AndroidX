@@ -168,14 +168,14 @@ Task ("namespace-check")
         () =>
         {
             // Namespace Checks
-            FilePathCollection files = new FilePathCollection();
-            FilePathCollection files_com = GetFiles("./generated/**/Com.*.cs");
-            FilePathCollection files_org = GetFiles("./generated/**/Org.*.cs");
-            FilePathCollection files_io = GetFiles("./generated/**/Io.*.cs");
+            FilePath[] files = new FilePath[]{};
+            FilePath[] files_com = GetFiles("./generated/**/Com.*.cs").ToArray();
+            FilePath[] files_org = GetFiles("./generated/**/Org.*.cs").ToArray();
+            FilePath[] files_io = GetFiles("./generated/**/Io.*.cs").ToArray();
 
-            files = (FilePathCollection) files.Concat(files_com);
-            files = (FilePathCollection) files.Concat(files_org);
-            files = (FilePathCollection) files.Concat(files_io);
+            files = files.Concat(files_com.ToArray()).ToArray();
+            files = files.Concat(files_org.ToArray()).ToArray();
+            files = files.Concat(files_io.ToArray()).ToArray();
 
             if (files.Any())
             {
@@ -187,7 +187,6 @@ Task ("namespace-check")
     );
 
 Task("binderate-diff")
-	.IsDependentOn("binderate")
     .Does
     (
         () =>
