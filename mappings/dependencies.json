@@ -763,26 +763,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Room.RxJava2",
-      "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Runtime",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-        "Xamarin.AndroidX.Room.Common",
-        "Xamarin.AndroidX.Room.Runtime",
-        "Xamarin.Android.ReactiveX.RxJava"
-      ]
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Security.SecurityCrypto",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Slice.Builders",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -857,12 +837,6 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Work.Gcm",
-      "dependencies": [
-        "Xamarin.AndroidX.Work.Runtime"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Work.Runtime",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.LiveData",
@@ -870,24 +844,6 @@
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Work.RxJava2",
-      "dependencies": [
-        "Xamarin.AndroidX.Work.Runtime",
-        "Xamarin.Android.ReactiveX.RxJava"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Work.Rxjava3",
-      "dependencies": [
-        "Xamarin.AndroidX.Work.Runtime",
-        "Xamarin.Android.ReactiveX.RxJava3.RxJava"
-      ]
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-      "dependencies": []
     }
   ]
 }
