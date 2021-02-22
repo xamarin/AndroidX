@@ -56,6 +56,17 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Ads.Identifier",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Guava.ListenableFuture",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Ads.IdentifierCommon",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -66,17 +77,6 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
       ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Ads.Idetifier",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.Google.Guava.ListenableFuture",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Migration",
@@ -126,6 +126,7 @@
       "id": "Xamarin.AndroidX.Fragment",
       "dependencies": [
         "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
@@ -187,7 +188,6 @@
       "id": "Xamarin.AndroidX.Biometric",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment"
       ]
@@ -220,7 +220,6 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core"
       ]
@@ -318,8 +317,10 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.CardView",
+        "Xamarin.AndroidX.ConstraintLayout",
         "Xamarin.AndroidX.CoordinatorLayout",
         "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.DynamicAnimation",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.RecyclerView",
@@ -463,8 +464,6 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Common",
-        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
@@ -620,16 +619,14 @@
     {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Media",
+        "Xamarin.AndroidX.VersionedParcelable",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Media2.Session",
       "dependencies": [
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.Media2.Common",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
@@ -637,18 +634,7 @@
     {
       "id": "Xamarin.AndroidX.Media2.Widget",
       "dependencies": [
-        "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.Media2.Common",
-        "Xamarin.AndroidX.Media2.Session",
-        "Xamarin.AndroidX.Palette",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Palette",
-      "dependencies": [
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils"
+        "Xamarin.AndroidX.Media2.Session"
       ]
     },
     {
@@ -660,10 +646,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -713,6 +695,13 @@
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Paging.Common",
         "Xamarin.AndroidX.RecyclerView"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Palette",
+      "dependencies": [
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils"
       ]
     },
     {
@@ -800,10 +789,8 @@
       "id": "Xamarin.AndroidX.Transition",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Fragment",
-        "Xamarin.AndroidX.Lifecycle.Runtime"
+        "Xamarin.AndroidX.Fragment"
       ]
     },
     {
