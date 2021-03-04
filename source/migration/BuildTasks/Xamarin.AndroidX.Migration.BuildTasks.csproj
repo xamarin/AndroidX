@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PackageVersion Condition=" '$(MigrationPackageVersion)' != '' ">$(MigrationPackageVersion)$(PackageVersionSuffix)</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup>

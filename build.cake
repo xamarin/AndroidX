@@ -925,7 +925,7 @@ Task("migration-libs")
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/migration-libs.{CONFIGURATION}.binlog")
         .WithRestore()
-        .WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION);
+        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION);
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
@@ -947,7 +947,7 @@ Task("migration-nuget")
         .EnableBinaryLogger($"./output/migration-nuget.{CONFIGURATION}.binlog")
         .WithProperty("NoBuild", "true")
         .WithRestore()
-        .WithProperty("PackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
         .WithProperty("MultiDexVersion", MULTIDEX_PACKAGE_VERSION)
         .WithProperty("PackageRequireLicenseAcceptance", "true")
         .WithProperty("PackageOutputPath", MakeAbsolute((DirectoryPath)"./output/").FullPath)
