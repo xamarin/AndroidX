@@ -37,7 +37,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
-    <PackageVersion>1.1.0.1</PackageVersion>
+    <PackageVersion>1.1.0.1$(PackageVersionSuffix)</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
