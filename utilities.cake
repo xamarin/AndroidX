@@ -103,6 +103,7 @@ Task ("spell-check")
 		        "ViewPager2",
 		        "WebKit",
                 "WindowExtensions",
+                "SecurityCrypto",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
