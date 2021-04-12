@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-string file_spell_errors = "output/spell-errors.txt";
+string file_spell_errors = "./output/spell-errors.txt";
 List<string> spell_errors = null;
 JArray binderator_json_array = null;
 
@@ -20,8 +20,10 @@ Task ("spell-check")
     (
         () =>
         {
-            IEnumerable<FilePath> files = GetFiles("./output/spell-errors.txt");
-            DeleteFiles(files);
+            if (FileExists(file_spell_errors))
+            {
+                DeleteFile(file_spell_errors);
+            }
             EnsureDirectoryExists("./externals/");
             string url = "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/";
 
