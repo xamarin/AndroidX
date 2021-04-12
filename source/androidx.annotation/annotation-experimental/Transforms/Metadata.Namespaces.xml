@@ -13,5 +13,11 @@
         >
         AndroidX.Annotations.Experimental
     </attr>
-   
+    <attr 
+        path="/api/package[@name='androidx.annotation']" 
+        name="managedName"
+        >
+        AndroidX.Annotations
+    </attr>
+
 </metadata>
