@@ -648,6 +648,10 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Migration.Tool",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -757,6 +761,12 @@
     },
     {
       "id": "Xamarin.AndroidX.Sqlite",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Security.SecurityCrypto",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
       ]

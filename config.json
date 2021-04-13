@@ -730,6 +730,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.security",
+        "artifactId": "security-crypto",
+        "version": "1.0.0-rc03",
+        "nugetVersion": "1.0.0-rc03",
+        "nugetId": "Xamarin.AndroidX.Security.SecurityCrypto",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.slice",
         "artifactId": "slice-builders",
         "version": "1.0.0",
@@ -892,8 +900,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "27.1.0",
-        "nugetVersion": "27.1.0.4",
+        "version": "28.2.0",
+        "nugetVersion": "28.2.0",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": true
       },
