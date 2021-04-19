@@ -1,0 +1,11 @@
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+
+  <PropertyGroup>
+    <TargetFramework>monoandroid90</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.3.0.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.7" />
+  </ItemGroup>
+</Project>
