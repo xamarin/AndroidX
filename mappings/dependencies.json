@@ -835,11 +835,17 @@
     },
     {
       "id": "Xamarin.AndroidX.Window",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Window.WindowExtensions",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Work.Runtime",
