@@ -30,6 +30,7 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Arch.Core.Common",
+        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
@@ -836,16 +837,12 @@
     {
       "id": "Xamarin.AndroidX.Window",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Window.WindowExtensions",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Work.Runtime",
