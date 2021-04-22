@@ -30,6 +30,7 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Arch.Core.Common",
+        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
@@ -305,7 +306,6 @@
       "id": "Xamarin.AndroidX.RecyclerView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CustomView"
       ]
@@ -763,6 +763,12 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Security.SecurityCrypto",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Slice.Builders",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -830,7 +836,9 @@
     },
     {
       "id": "Xamarin.AndroidX.Window",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.Core"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Window.WindowExtensions",

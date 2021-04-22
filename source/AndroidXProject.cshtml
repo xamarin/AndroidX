@@ -176,9 +176,13 @@
     {
         <ProjectReference Include="..\androidx.lifecycle.lifecycle-common\androidx.lifecycle.lifecycle-common.csproj" PrivateAssets="none" />
     }
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Window")
+    {
+        <ProjectReference Include="..\androidx.core.core\androidx.core.core.csproj" PrivateAssets="none" />
+    }
     @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Lifecycle.Runtime") 
     {
-        <ProjectReference Include="..\androidx.core.core-runtime\androidx.core.core-runtime.csproj" PrivateAssets="none" />
+        <ProjectReference Include="..\androidx.arch.core.core-runtime\androidx.arch.core.core-runtime.csproj" PrivateAssets="none" />
     }
   </ItemGroup>
   

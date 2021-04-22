@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
-string file_spell_errors = "output/spell-errors.txt";
+string file_spell_errors = "./output/spell-errors.txt";
 List<string> spell_errors = null;
 JArray binderator_json_array = null;
 
@@ -20,23 +20,27 @@ Task ("spell-check")
     (
         () =>
         {
+            if (FileExists(file_spell_errors))
+            {
+                DeleteFile(file_spell_errors);
+            }
             EnsureDirectoryExists("./externals/");
             string url = "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/";
 
-            string[] files = new[]
+            string[] files_dictionaries = new[]
             {
                 "English (American).dic",
                 "English (American).txt",
                 "English (American).aff",
             };
-            foreach(string file in files)
+            foreach(string file_dictionary in files_dictionaries)
             {
-                string url_full = url + System.Uri.EscapeDataString(file); 
+                string url_full = url + System.Uri.EscapeDataString(file_dictionary); 
                 Information($"Downloading ");
                 Information($"      {url_full}");
-                if (!FileExists($"./externals/{file}"))
+                if (!FileExists($"./externals/{file_dictionary}"))
                 {
-                    DownloadFile(url_full, $"./externals/{file}");
+                    DownloadFile(url_full, $"./externals/{file_dictionary}");
                 }
             }
 
@@ -100,6 +104,8 @@ Task ("spell-check")
 		        "ViewPager",
 		        "ViewPager2",
 		        "WebKit",
+                "WindowExtensions",
+                "SecurityCrypto",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -350,14 +356,40 @@ Task ("api-diff-markdown-info-pr")
         }
     );
 
-
-
-
-Task ("Default")
+Task ("read-analysis-files")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
     .IsDependentOn ("spell-check")
+    .Does 
+    (
+        () =>
+        {
+            string[] files = new[]
+            {
+                "./output/spell-errors.txt",
+                "./output/changelog.md",
+                "./output/config.json.diff-from-master.txt",
+                "./output/missing_dotnet_override_type.csv",
+                "./output/missing_dotnet_type.csv",
+                "./output/missing_java_type.csv",
+            };
+			string process = "code";
+			string process_args = $"-n {string.Join(" ", files)}";
+			IEnumerable<string> redirectedStandardOutput;
+			ProcessSettings process_settings = new ProcessSettings ()
+			{
+             Arguments = process_args,
+             RedirectStandardOutput = true
+         	};
+			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+			Information("Exit code: {0}", exitCodeWithoutArguments);
+        }
+    );
+
+
+Task ("Default")
+    .IsDependentOn ("read-analysis-files")
     ;
 
 if (System.IO.File.Exists(file_spell_errors))
