@@ -4,7 +4,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
-    <PackageVersionSuffix>-net6preview02</PackageVersionSuffix>
+    <PackageVersionSuffix>-net6preview03</PackageVersionSuffix>
     <PackageVersionSuffix Condition=" '$(BUILD_BUILDID)' != '' ">$(PackageVersionSuffix).$(BUILD_BUILDID)</PackageVersionSuffix>
   </PropertyGroup>
 </Project>
