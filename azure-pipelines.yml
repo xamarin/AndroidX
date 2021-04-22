@@ -10,11 +10,11 @@ variables:
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
   DotNetCoreVersion: 3.1.x
-  DotNet6Version: 6.0.100-preview.1.21103.13
-  DotNet6AndroidMsi:  https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/net6/4494116/master/d28ba53e1a6eff1a41e29ec50c60e3d45e6e3168/Microsoft.NET.Workload.Android.11.0.200.117.msi
-  DotNet6AndroidPkg:  https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/net6/4494116/master/d28ba53e1a6eff1a41e29ec50c60e3d45e6e3168/Microsoft.NET.Workload.Android-11.0.200-ci.d28ba53e1a6eff1a41e29ec50c60e3d45e6e3168.117.pkg
-  XamarinAndroidVsix: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4494116/master/d28ba53e1a6eff1a41e29ec50c60e3d45e6e3168/signed/Xamarin.Android.Sdk-11.2.99.117.vsix
-  XamarinAndroidPkg:  https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4494116/master/d28ba53e1a6eff1a41e29ec50c60e3d45e6e3168/xamarin.android-11.2.99.117.pkg
+  DotNet6Version: 6.0.100-preview.3.21202.5
+  DotNet6AndroidMsi:  https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/net6/4624420/6.0.1xx-preview3/7d6cd1cde4182d7db2cfc5d0b55364c972b6d34f/Microsoft.NET.Workload.Android.11.0.200.196.msi
+  DotNet6AndroidPkg:  https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/net6/4624420/6.0.1xx-preview3/7d6cd1cde4182d7db2cfc5d0b55364c972b6d34f/Microsoft.NET.Workload.Android-11.0.200-preview.3.196.pkg
+  XamarinAndroidVsix: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4624420/6.0.1xx-preview3/7d6cd1cde4182d7db2cfc5d0b55364c972b6d34f/signed/Xamarin.Android.Sdk-11.2.99.196.vsix
+  XamarinAndroidPkg:  https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4624420/6.0.1xx-preview3/7d6cd1cde4182d7db2cfc5d0b55364c972b6d34f/xamarin.android-11.2.99.196.pkg
   # TODO: remove before merging
   NugetSecurityAnalysisWarningLevel: warn
 #   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
