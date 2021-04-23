@@ -7,3 +7,4 @@ using Android.App;
 [assembly: AssemblyMetadata ("BUILD_TIMESTAMP", "{BUILD_TIMESTAMP}")]
 
 [assembly: Android.LinkerSafe]
+[assembly: AssemblyMetadata ("IsTrimmable", "True")]

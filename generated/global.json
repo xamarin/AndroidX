@@ -1,0 +1,11 @@
+{
+    "sdk": {
+        "version": "6.0.100-preview.3.21202.5",
+        "rollForward": "disable",
+        "allowPrerelease": true
+    },
+    "msbuild-sdks": {
+        "Microsoft.Build.Traversal": "2.1.1",
+        "Xamarin.Legacy.Sdk": "0.1.0-alpha2"
+    }
+}
