@@ -734,8 +734,6 @@
       "id": "Xamarin.AndroidX.Room.Guava",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Arch.Core.Runtime",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Room.Common",
         "Xamarin.AndroidX.Room.Runtime"
       ]
@@ -743,7 +741,6 @@
     {
       "id": "Xamarin.AndroidX.Room.Runtime",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Room.Common",
         "Xamarin.AndroidX.Sqlite.Framework",
         "Xamarin.AndroidX.Sqlite"
