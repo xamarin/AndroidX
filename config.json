@@ -186,6 +186,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.car.app",
+        "artifactId": "app",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Car.App",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.cardview",
         "artifactId": "cardview",
         "version": "1.0.0",
@@ -794,6 +802,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.tracing",
+        "artifactId": "tracing",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Tracing",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.transition",
         "artifactId": "transition",
         "version": "1.4.1",
@@ -868,8 +884,8 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window",
-        "version": "1.0.0-alpha05",
-        "nugetVersion": "1.0.0.1-alpha05",
+        "version": "1.0.0-alpha06",
+        "nugetVersion": "1.0.0.1-alpha06",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
