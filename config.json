@@ -28,8 +28,8 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.2.2",
-        "nugetVersion": "1.2.2",
+        "version": "1.2.3",
+        "nugetVersion": "1.2.3",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
@@ -140,24 +140,24 @@
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-camera2",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0.5-rc01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Camera.Camera2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-core",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0.5-rc01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Camera.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-lifecycle",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0.5-rc01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Camera.Lifecycle",
         "dependencyOnly": false
       },
@@ -284,32 +284,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "4.1.3",
-        "nugetVersion": "4.1.3",
+        "version": "4.2.0",
+        "nugetVersion": "4.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "4.1.3",
-        "nugetVersion": "4.1.3",
+        "version": "4.2.0",
+        "nugetVersion": "4.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "4.1.3",
-        "nugetVersion": "4.1.3",
+        "version": "4.2.0",
+        "nugetVersion": "4.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "4.1.3",
-        "nugetVersion": "4.1.3",
+        "version": "4.2.0",
+        "nugetVersion": "4.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -548,8 +548,8 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0",
+        "version": "1.3.1",
+        "nugetVersion": "1.3.1",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
@@ -580,8 +580,8 @@
       {
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
-        "version": "1.2.2",
-        "nugetVersion": "1.2.2.1",
+        "version": "1.2.3",
+        "nugetVersion": "1.2.3",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": false
       },
@@ -628,16 +628,16 @@
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common",
-        "version": "2.1.2",
-        "nugetVersion": "2.1.2.7",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.AndroidX.Paging.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime",
-        "version": "2.1.2",
-        "nugetVersion": "2.1.2.7",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime",
         "dependencyOnly": false
       },
