@@ -475,6 +475,14 @@
       },
       {
         "groupId": "androidx.lifecycle",
+        "artifactId": "lifecycle-common-java8",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0",
+        "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-extensions",
         "version": "2.2.0",
         "nugetVersion": "2.2.0.7",
@@ -885,7 +893,7 @@
         "groupId": "androidx.window",
         "artifactId": "window",
         "version": "1.0.0-alpha06",
-        "nugetVersion": "1.0.0.1-alpha06",
+        "nugetVersion": "1.0.0-alpha06",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
