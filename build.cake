@@ -1,4 +1,5 @@
 // Tools needed by cake addins
+#tool nuget:?package=Cake.CoreCLR
 #tool nuget:?package=vswhere&version=2.8.4
 
 // Cake Addins
@@ -141,6 +142,27 @@ string GetNuGetVersion(string nugetId, string configJson = "./config.json")
 
     var artifacts = json["artifacts"];
     var artifact = artifacts.FirstOrDefault(j => (string)j["nugetId"] == nugetId);
+
+    if (artifact == null)
+    {
+        /*
+        NEEDS INVESTIGATION
+        nugetID Xamarin.Jetbrains.Annotations was found as dependency, but it was not listed in config.json
+
+        buildTransitive might be the issue.
+        
+        workaround was to add following snippet to config.json:
+
+        {
+            "groupId": "org.jetbrains",
+            "artifactId": "annotations",
+            "version": "13.0",
+            "nugetVersion": "13.0.0.4",
+            "nugetId": "Xamarin.Jetbrains.Annotations",
+            "dependencyOnly": true
+        },
+        */
+    }
 
     return (string)(artifact["nugetVersion"] ?? artifact["version"]);
 }

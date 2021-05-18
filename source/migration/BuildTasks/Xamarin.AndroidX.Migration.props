@@ -174,6 +174,8 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.WebKit" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Work.Runtime" />
         <_AndroidXAssembly Include="Xamarin.Google.Android.Material" />
+        <_AndroidXAssembly Include="Xamarin.Jetbrains.Annotations" />
+        <_AndroidXAssembly Include="Xamarin.Kotlin.StdLib" />
     </ItemGroup>
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
@@ -195,6 +197,7 @@
         <_AndroidXMavenArtifact Include="androidx.camera.camera-core" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-lifecycle" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-view" />
+        <_AndroidXMavenArtifact Include="androidx.car.app.app" />
         <_AndroidXMavenArtifact Include="androidx.car.car" />
         <_AndroidXMavenArtifact Include="androidx.car.car-cluster" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
@@ -232,6 +235,7 @@
         <_AndroidXMavenArtifact Include="androidx.legacy.legacy-support-v13" />
         <_AndroidXMavenArtifact Include="androidx.legacy.legacy-support-v4" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-common" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-common-java8" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-extensions" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-livedata" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-livedata-core" />
@@ -273,6 +277,7 @@
         <_AndroidXMavenArtifact Include="androidx.sqlite.sqlite" />
         <_AndroidXMavenArtifact Include="androidx.sqlite.sqlite-framework" />
         <_AndroidXMavenArtifact Include="androidx.swiperefreshlayout.swiperefreshlayout" />
+        <_AndroidXMavenArtifact Include="androidx.tracing.tracing" />
         <_AndroidXMavenArtifact Include="androidx.transition.transition" />
         <_AndroidXMavenArtifact Include="androidx.tvprovider.tvprovider" />
         <_AndroidXMavenArtifact Include="androidx.vectordrawable.vectordrawable" />
@@ -290,5 +295,8 @@
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
     </ItemGroup>
 </Project>
