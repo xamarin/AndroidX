@@ -106,6 +106,7 @@ Task ("spell-check")
 		        "WebKit",
                 "WindowExtensions",
                 "SecurityCrypto",
+                "Java8",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

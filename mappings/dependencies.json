@@ -261,6 +261,12 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Car.App.App",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.Common.Java8"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Car.Car",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -807,6 +813,10 @@
     },
     {
       "id": "Xamarin.AndroidX.Tracing",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Tracing.Tracing",
       "dependencies": []
     },
     {
