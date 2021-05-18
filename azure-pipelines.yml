@@ -1,9 +1,9 @@
 trigger:
-  - master
+  - main
   - refs/tags/*
 
 pr:
-  - master
+  - main
   
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
