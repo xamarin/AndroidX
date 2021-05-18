@@ -248,6 +248,25 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Car.App",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.Common.Java8"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.Common.Java8",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Lifecycle.Common"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Car.App.App",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.Common.Java8"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Car.Car",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -649,6 +668,10 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Migration.Tool",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
@@ -789,6 +812,14 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Tracing",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Tracing.Tracing",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Transition",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -834,8 +865,18 @@
     {
       "id": "Xamarin.AndroidX.Window",
       "dependencies": [
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Core",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Android"
       ]
+    },
+    {
+      "id": "Xamarin.Kotlin.StdLib",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Android",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Window.WindowExtensions",

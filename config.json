@@ -186,6 +186,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.car.app",
+        "artifactId": "app",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Car.App.App",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.cardview",
         "artifactId": "cardview",
         "version": "1.0.0",
@@ -463,6 +471,14 @@
         "version": "2.3.1",
         "nugetVersion": "2.3.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.lifecycle",
+        "artifactId": "lifecycle-common-java8",
+        "version": "2.2.0",
+        "nugetVersion": "2.2.0",
+        "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
         "dependencyOnly": false
       },
       {
@@ -794,6 +810,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.tracing",
+        "artifactId": "tracing",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Tracing.Tracing",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.transition",
         "artifactId": "transition",
         "version": "1.4.1",
@@ -868,8 +892,8 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window",
-        "version": "1.0.0-alpha05",
-        "nugetVersion": "1.0.0.1-alpha05",
+        "version": "1.0.0-alpha06",
+        "nugetVersion": "1.0.0-alpha06",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
@@ -927,6 +951,30 @@
         "version": "1.0",
         "nugetVersion": "1.0.8",
         "nugetId": "Xamarin.AndroidX.Migration",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib",
+        "version": "1.4.32",
+        "nugetVersion": "1.4.32.1",
+        "nugetId": "Xamarin.Kotlin.StdLib",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains",
+        "artifactId": "annotations",
+        "version": "13.0",
+        "nugetVersion": "13.0.0.4",
+        "nugetId": "Xamarin.Jetbrains.Annotations",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-android",
+        "version": "1.4.3",
+        "nugetVersion": "1.4.3.1",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
       }
     ]

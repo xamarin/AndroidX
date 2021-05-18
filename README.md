@@ -67,6 +67,7 @@ dotnet cake --target=packages
 With the release of AndroidX, Android Support is now considered deprecated and will no longer receive new feature updates.  We are committed to helping our developers bring their applications into this new world with minimal effort.
 
 ### Goal
+
 Our goal is to allow developers to take an existing application using Android Support libraries, and reference, build, and run against AndroidX libraries without any code changes.
 
 ### Phases
