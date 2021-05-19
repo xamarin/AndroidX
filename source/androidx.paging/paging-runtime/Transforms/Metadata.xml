@@ -3,8 +3,71 @@
         path="/api/package[@name='androidx.paging']/class[@name='AsyncPagedListDiffer']/typeParameters"
 		/>
 
+    <!--
     <remove-node
         path="/api/package[@name='androidx.paging']/interface[@name='AsyncPagedListDiffer.PagedListListener']"
 		/>
+
+    -->
+
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='androidx.paging.LoadState']]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='androidx.paging.LoadState']]/parameter[2]"
+        name="managedType"
+        >
+        int
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='androidx.paging.LoadState']]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='androidx.paging.LoadState']]/parameter[2]"
+        name="managedType"
+        >
+        int
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='int']]/parameter[1]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedType"
+        >
+        int
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onBindViewHolder' and count(parameter)=2 and parameter[1][@type='VH'] and parameter[2][@type='androidx.paging.LoadState']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='PagingDataAdapter']/method[@name='setHasStableIds' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='androidx.paging.LoadState']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='LoadStateAdapter']/method[@name='onCreateViewHolder' and count(parameter)=2 and parameter[1][@type='android.view.ViewGroup'] and parameter[2][@type='int']]"
+        />
 
 </metadata>

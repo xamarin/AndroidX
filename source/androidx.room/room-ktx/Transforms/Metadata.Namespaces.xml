@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='androidx.room']" 
         name="managedName"
         >
-        Package
+        AndroidX.Room
     </attr>
-    -->
+
 </metadata>

@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='androidx.work']" 
         name="managedName"
         >
-        Package
+        AndroidX.Work
     </attr>
-    -->
+
 </metadata>

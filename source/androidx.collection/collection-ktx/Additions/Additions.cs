@@ -5,7 +5,7 @@ using Android.Graphics;
 
 namespace AndroidX
 {
-    // public partial class A
+    // public partial class Additions
     // {
     // }
 }

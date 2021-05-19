@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='androidx.navigation']"
         name="managedName"
         >
-        Package
+        AndroidX.Navigation
     </attr>
-    -->
+
 </metadata>

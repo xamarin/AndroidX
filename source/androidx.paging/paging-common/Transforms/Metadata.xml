@@ -57,5 +57,26 @@
         >
         false
     </attr>
-    
+
+
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='InvalidatingPagingSourceFactory']/method[@name='invoke' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='ItemSnapshotList']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"
+        />
+    <attr
+        path="/api/package[@name='androidx.paging']/class[@name='PagedList']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.paging']/class[@name='PagingSource.LoadParams']/method[@name='getKey' and count(parameter)=0]"
+        />
+
 </metadata>

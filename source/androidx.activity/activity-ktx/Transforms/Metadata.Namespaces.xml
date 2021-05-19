@@ -1,10 +1,22 @@
 ﻿<metadata>
-    <!--
+
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='androidx.activity']" 
         name="managedName"
         >
-        Package
+        AndroidX.Activity
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='androidx.activity.contextaware']" 
+        name="managedName"
+        >
+        AndroidX.Activity.ContextAware
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.activity.result']" 
+        name="managedName"
+        >
+        AndroidX.Activity.Result
+    </attr>
+
 </metadata>
