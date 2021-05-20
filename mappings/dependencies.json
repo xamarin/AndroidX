@@ -57,6 +57,53 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Activity.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
+        "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+        "Xamarin.AndroidX.SavedState.SavedState.Ktx",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Core.Core.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Android"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Android"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.SavedState.SavedState.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.SavedState",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.Kotlin.StdLib",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Ads.Identifier",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -240,15 +287,7 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Camera.View",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Camera.Core",
-        "Xamarin.AndroidX.Lifecycle.Common"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Car.App",
+      "id": "Xamarin.AndroidX.Car.App.App",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.Common.Java8"
       ]
@@ -258,12 +297,6 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Lifecycle.Common"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Car.App.App",
-      "dependencies": [
-        "Xamarin.AndroidX.Lifecycle.Common.Java8"
       ]
     },
     {
@@ -367,6 +400,13 @@
       "id": "Xamarin.AndroidX.Collection",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Collection.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.Kotlin.StdLib"
       ]
     },
     {
@@ -505,6 +545,26 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Fragment.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Activity.Ktx",
+        "Xamarin.AndroidX.Collection.Ktx",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.Fragment",
+        "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
+        "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+        "Xamarin.AndroidX.SavedState.SavedState.Ktx",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.LiveData.Core",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Legacy.Support.Core.UI",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -636,6 +696,41 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
+        "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Core",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Arch.Core.Common",
+        "Xamarin.AndroidX.Lifecycle.Common",
+        "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.KotlinX.Coroutines.Android"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Android",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
         "Xamarin.AndroidX.Media",
@@ -678,6 +773,13 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Navigation.Common.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Navigation.Common",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Fragment",
       "dependencies": [
         "Xamarin.AndroidX.Fragment",
@@ -695,6 +797,26 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Fragment.Ktx",
+        "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+        "Xamarin.AndroidX.Navigation.Fragment",
+        "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Activity.Ktx",
+        "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+        "Xamarin.AndroidX.Navigation.Common.Ktx",
+        "Xamarin.AndroidX.Navigation.Runtime",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.UI",
       "dependencies": [
         "Xamarin.AndroidX.CustomView",
@@ -704,20 +826,68 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Navigation.UI.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+        "Xamarin.AndroidX.Navigation.UI",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Paging.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Arch.Core.Common"
+        "Xamarin.AndroidX.Arch.Core.Common",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Paging.Common.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Paging.Common"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Paging.Runtime",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Runtime",
-        "Xamarin.AndroidX.Lifecycle.LiveData",
-        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
+        "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
+        "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+        "Xamarin.AndroidX.Paging.Common.Ktx",
         "Xamarin.AndroidX.Paging.Common",
-        "Xamarin.AndroidX.RecyclerView"
+        "Xamarin.AndroidX.RecyclerView",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Android"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Paging.Runtime.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Paging.Runtime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Paging.RxJava2",
+      "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Runtime",
+        "Xamarin.AndroidX.Paging.Common",
+        "Xamarin.Android.ReactiveX.RxJava"
+      ]
+    },
+    {
+      "id": "Xamarin.Android.ReactiveX.RxJava",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Paging.Common.Ktx",
+        "Xamarin.AndroidX.Paging.RxJava2"
       ]
     },
     {
@@ -728,9 +898,25 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Palette.Palette.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Palette",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.PercentLayout",
       "dependencies": [
         "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Preference.Preference.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.Fragment.Ktx",
+        "Xamarin.AndroidX.Preference",
+        "Xamarin.Kotlin.StdLib"
       ]
     },
     {
@@ -768,6 +954,37 @@
         "Xamarin.AndroidX.Sqlite.Framework",
         "Xamarin.AndroidX.Sqlite"
       ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Room.Room.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Room.Common",
+        "Xamarin.AndroidX.Room.Runtime",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Android"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Room.Room.RxJava2",
+      "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Runtime",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Room.Common",
+        "Xamarin.AndroidX.Room.Runtime",
+        "Xamarin.Android.ReactiveX.RxJava"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Room.Room.RxJava3",
+      "dependencies": [
+        "Xamarin.AndroidX.Room.Common",
+        "Xamarin.AndroidX.Room.Runtime",
+        "Xamarin.Android.ReactiveX.RxJava3.RxJava"
+      ]
+    },
+    {
+      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Sqlite.Framework",
@@ -810,10 +1027,6 @@
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Slice.Core"
       ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Tracing",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Tracing.Tracing",
@@ -871,14 +1084,6 @@
       ]
     },
     {
-      "id": "Xamarin.Kotlin.StdLib",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.KotlinX.Coroutines.Android",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Window.WindowExtensions",
       "dependencies": []
     },
@@ -889,6 +1094,14 @@
         "Xamarin.AndroidX.Lifecycle.Service",
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
+      "dependencies": [
+        "Xamarin.AndroidX.Work.Runtime",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Android"
       ]
     }
   ]

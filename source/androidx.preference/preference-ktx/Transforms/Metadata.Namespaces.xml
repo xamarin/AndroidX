@@ -1,0 +1,12 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.preference']" 
+        name="managedName">
+        AndroidX.Preference
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.preference.internal']" 
+        name="managedName">
+        AndroidX.Preference.Internal
+    </attr>
+</metadata>

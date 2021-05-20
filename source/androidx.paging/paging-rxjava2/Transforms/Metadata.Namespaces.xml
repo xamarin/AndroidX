@@ -1,0 +1,15 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.paging']" 
+        name="managedName"
+        >
+        AndroidX.Paging
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.paging.rxjava2']" 
+        name="managedName"
+        >
+        AndroidX.Paging.RxJava2
+    </attr>
+    
+</metadata>

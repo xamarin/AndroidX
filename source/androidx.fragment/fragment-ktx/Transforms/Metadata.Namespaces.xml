@@ -1,0 +1,14 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.fragment']" 
+        name="managedName"
+        >
+        AndroidX.Fragment
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.fragment.app']" 
+        name="managedName"
+        >
+        AndroidX.Fragment.App
+    </attr>
+</metadata>

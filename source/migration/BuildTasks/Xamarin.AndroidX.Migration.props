@@ -99,6 +99,7 @@
     </ItemGroup>
     <!-- all the AndroidX assemblies -->
     <ItemGroup>
+        <_AndroidXAssembly Include="Xamarin.Android.ReactiveX.RxJava" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation.Experimental" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
@@ -180,6 +181,7 @@
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
         <_AndroidXMavenArtifact Include="androidx.activity.activity" />
+        <_AndroidXMavenArtifact Include="androidx.activity.activity-ktx" />
         <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier" />
         <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier-common" />
         <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier-provider" />
@@ -196,12 +198,12 @@
         <_AndroidXMavenArtifact Include="androidx.camera.camera-camera2" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-core" />
         <_AndroidXMavenArtifact Include="androidx.camera.camera-lifecycle" />
-        <_AndroidXMavenArtifact Include="androidx.camera.camera-view" />
         <_AndroidXMavenArtifact Include="androidx.car.app.app" />
         <_AndroidXMavenArtifact Include="androidx.car.car" />
         <_AndroidXMavenArtifact Include="androidx.car.car-cluster" />
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection" />
+        <_AndroidXMavenArtifact Include="androidx.collection.collection-ktx" />
         <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-solver" />
@@ -209,6 +211,7 @@
         <_AndroidXMavenArtifact Include="androidx.coordinatorlayout.coordinatorlayout" />
         <_AndroidXMavenArtifact Include="androidx.core.core" />
         <_AndroidXMavenArtifact Include="androidx.core.core-animation" />
+        <_AndroidXMavenArtifact Include="androidx.core.core-ktx" />
         <_AndroidXMavenArtifact Include="androidx.core.core-role" />
         <_AndroidXMavenArtifact Include="androidx.cursoradapter.cursoradapter" />
         <_AndroidXMavenArtifact Include="androidx.customview.customview" />
@@ -224,6 +227,7 @@
         <_AndroidXMavenArtifact Include="androidx.emoji.emoji-bundled" />
         <_AndroidXMavenArtifact Include="androidx.exifinterface.exifinterface" />
         <_AndroidXMavenArtifact Include="androidx.fragment.fragment" />
+        <_AndroidXMavenArtifact Include="androidx.fragment.fragment-ktx" />
         <_AndroidXMavenArtifact Include="androidx.gridlayout.gridlayout" />
         <_AndroidXMavenArtifact Include="androidx.heifwriter.heifwriter" />
         <_AndroidXMavenArtifact Include="androidx.interpolator.interpolator" />
@@ -239,10 +243,16 @@
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-extensions" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-livedata" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-livedata-core" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-livedata-core-ktx" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-livedata-ktx" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-process" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-reactivestreams" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-reactivestreams-ktx" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-runtime-ktx" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-service" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel" />
+        <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel-ktx" />
         <_AndroidXMavenArtifact Include="androidx.lifecycle.lifecycle-viewmodel-savedstate" />
         <_AndroidXMavenArtifact Include="androidx.loader.loader" />
         <_AndroidXMavenArtifact Include="androidx.localbroadcastmanager.localbroadcastmanager" />
@@ -253,22 +263,36 @@
         <_AndroidXMavenArtifact Include="androidx.mediarouter.mediarouter" />
         <_AndroidXMavenArtifact Include="androidx.multidex.multidex" />
         <_AndroidXMavenArtifact Include="androidx.navigation.navigation-common" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-common-ktx" />
         <_AndroidXMavenArtifact Include="androidx.navigation.navigation-fragment" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-fragment-ktx" />
         <_AndroidXMavenArtifact Include="androidx.navigation.navigation-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-runtime-ktx" />
         <_AndroidXMavenArtifact Include="androidx.navigation.navigation-ui" />
+        <_AndroidXMavenArtifact Include="androidx.navigation.navigation-ui-ktx" />
         <_AndroidXMavenArtifact Include="androidx.paging.paging-common" />
+        <_AndroidXMavenArtifact Include="androidx.paging.paging-common-ktx" />
         <_AndroidXMavenArtifact Include="androidx.paging.paging-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.paging.paging-runtime-ktx" />
+        <_AndroidXMavenArtifact Include="androidx.paging.paging-rxjava2" />
+        <_AndroidXMavenArtifact Include="androidx.paging.paging-rxjava2-ktx" />
         <_AndroidXMavenArtifact Include="androidx.palette.palette" />
+        <_AndroidXMavenArtifact Include="androidx.palette.palette-ktx" />
         <_AndroidXMavenArtifact Include="androidx.percentlayout.percentlayout" />
         <_AndroidXMavenArtifact Include="androidx.preference.preference" />
+        <_AndroidXMavenArtifact Include="androidx.preference.preference-ktx" />
         <_AndroidXMavenArtifact Include="androidx.print.print" />
         <_AndroidXMavenArtifact Include="androidx.recommendation.recommendation" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview-selection" />
         <_AndroidXMavenArtifact Include="androidx.room.room-common" />
         <_AndroidXMavenArtifact Include="androidx.room.room-guava" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-ktx" />
         <_AndroidXMavenArtifact Include="androidx.room.room-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-rxjava2" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-rxjava3" />
         <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate" />
+        <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate-ktx" />
         <_AndroidXMavenArtifact Include="androidx.security.security-crypto" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-builders" />
         <_AndroidXMavenArtifact Include="androidx.slice.slice-core" />
@@ -290,13 +314,19 @@
         <_AndroidXMavenArtifact Include="androidx.window.window" />
         <_AndroidXMavenArtifact Include="androidx.window.window-extensions" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
+        <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
+        <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm" />
+        <_AndroidXMavenArtifact Include="org.reactivestreams.reactive-streams" />
     </ItemGroup>
 </Project>
