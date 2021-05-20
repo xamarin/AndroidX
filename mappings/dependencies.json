@@ -965,6 +965,28 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Room.Room.RxJava2",
+      "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Runtime",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Room.Common",
+        "Xamarin.AndroidX.Room.Runtime",
+        "Xamarin.Android.ReactiveX.RxJava"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Room.Room.RxJava3",
+      "dependencies": [
+        "Xamarin.AndroidX.Room.Common",
+        "Xamarin.AndroidX.Room.Runtime",
+        "Xamarin.Android.ReactiveX.RxJava3.RxJava"
+      ]
+    },
+    {
+      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Sqlite.Framework",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
