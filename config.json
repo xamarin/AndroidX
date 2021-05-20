@@ -276,8 +276,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core-animation",
-        "version": "1.0.0-alpha01",
-        "nugetVersion": "1.0.0.5-alpha01",
+        "version": "1.0.0-alpha02",
+        "nugetVersion": "1.0.0.5-alpha02",
         "nugetId": "Xamarin.AndroidX.Core.Animation",
         "dependencyOnly": false
       },
@@ -898,6 +898,22 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.room",
+        "artifactId": "room-rxjava2",
+        "version": "2.0.0",
+        "nugetVersion": "2.0.0",
+        "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.room",
+        "artifactId": "room-rxjava3",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
+        "nugetId": "Xamarin.AndroidX.Room.Room.RxJava3",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.savedstate",
         "artifactId": "savedstate",
         "version": "1.1.0",
@@ -1175,6 +1191,14 @@
         "version": "2.2.10.1",
         "nugetVersion": "2.2.10.1",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "io.reactivex.rxjava3",
+        "artifactId": "rxjava",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": true
       },
       {
