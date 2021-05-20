@@ -289,6 +289,8 @@
         <_AndroidXMavenArtifact Include="androidx.room.room-guava" />
         <_AndroidXMavenArtifact Include="androidx.room.room-ktx" />
         <_AndroidXMavenArtifact Include="androidx.room.room-runtime" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-rxjava2" />
+        <_AndroidXMavenArtifact Include="androidx.room.room-rxjava3" />
         <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate" />
         <_AndroidXMavenArtifact Include="androidx.savedstate.savedstate-ktx" />
         <_AndroidXMavenArtifact Include="androidx.security.security-crypto" />
@@ -319,6 +321,7 @@
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
+        <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
