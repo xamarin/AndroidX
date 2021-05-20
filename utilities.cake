@@ -25,7 +25,7 @@ Task ("spell-check")
                 DeleteFile(file_spell_errors);
             }
             EnsureDirectoryExists("./externals/");
-            string url = "https://raw.githubusercontent.com/titoBouzout/Dictionaries/main/";
+            string url = "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/";
 
             string[] files_dictionaries = new[]
             {
@@ -110,6 +110,7 @@ Task ("spell-check")
                 "ReactiveStreams",
                 "Ktx",
                 "RxJava2",
+                "RxJava3",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
