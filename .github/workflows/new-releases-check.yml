@@ -50,8 +50,8 @@ jobs:
 
             Checklist
             - [ ] Add any metadata needed to get PR to compile
-            - [ ] Verify any new namespaces are properly renamed
-            - [ ] Verify nuget/namespace spelling (spell-check.cake)           
+            - [ ] Verify any new namespaces are properly renamed (utilities.cake)
+            - [ ] Verify nuget/namespace spelling (utilities.cake)           
             - [ ] Locally generate diffs
             - [ ] Review any breaking changes
             - [ ] Attach diffs to PR
