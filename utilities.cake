@@ -401,6 +401,33 @@ Task ("read-analysis-files")
         }
     );
 
+Task("dependencies")
+    .Does
+    (
+        () =>
+        {
+            if (!(binderator_json_array?.Count > 0)) 
+            {
+                using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+                {
+                    JsonTextReader jtr = new JsonTextReader(reader);
+                    binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                }
+            }
+
+            Warning("config.json dependencies ...");
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                string groupId      = (string) jo["groupId"];
+                string artifactId   = (string) jo["artifactId"];
+                string nugetId      = (string) jo["nugetId"];
+                string nugetVersion = (string) jo["nugetVersion"];
+
+            }
+        }
+    );
+
+
 
 Task ("Default")
     .IsDependentOn ("read-analysis-files")

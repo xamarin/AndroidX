@@ -3,8 +3,8 @@
 #tool nuget:?package=vswhere&version=2.8.4
 
 // Cake Addins
+#addin nuget:?package=Cake.FileHelpers&version=4.0.1
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
-#addin nuget:?package=Cake.FileHelpers&version=3.2.1
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=12.2.1
 #addin nuget:?package=SharpZipLib&version=1.2.0
@@ -320,10 +320,13 @@ Task("binderate-config-verify")
     (
         () =>
         {
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            if (!(binderator_json_array?.Count > 0)) 
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
-                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+                {
+                    JsonTextReader jtr = new JsonTextReader(reader);
+                    binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                }
             }
 
             Information("config.json verification...");
@@ -443,10 +446,13 @@ Task("binderate-fix")
     (
         () =>
         {
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            if (!(binderator_json_array?.Count > 0)) 
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
-                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+                {
+                    JsonTextReader jtr = new JsonTextReader(reader);
+                    binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                }
             }
 
             Warning("config.json fixing missing folder strucutre ...");
@@ -485,6 +491,7 @@ Task("binderate-fix")
         }
     );
 
+
 // using System.Threading;
 // using Microsoft.Extensions.Logging;
 // using Microsoft.Extensions.Logging.Abstractions;
@@ -498,13 +505,16 @@ Task("binderate-nuget-check")
     (
         () =>
         {
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            if (!(binderator_json_array?.Count > 0)) 
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
-                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+                {
+                    JsonTextReader jtr = new JsonTextReader(reader);
+                    binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+                }
             }
 
-            Warning("config.json fixing missing folder strucutre ...");
+            Warning("config.json fixing missing folder structure ...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
                 string groupId      = (string) jo["groupId"];

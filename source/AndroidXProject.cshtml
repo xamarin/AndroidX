@@ -1,5 +1,5 @@
 ﻿@using System.Linq
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
     <TargetFramework>MonoAndroid9.0</TargetFramework>
     <IsBindingProject>true</IsBindingProject>
@@ -31,12 +31,16 @@
     <NoWarn>0618;0109;0114;0628;0108;0809</NoWarn>
   </PropertyGroup>
 
+  @{
+    int index = Model.NuGetVersion.LastIndexOf(".");
+    string artifact_version = Model.NuGetVersion.Substring(0, index);
+  }
   <PropertyGroup>
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>Xamarin AndroidX - @(Model.Name)</Title>
     <Summary>Xamarin.Android bindings for AndroidX - @(Model.Name)</Summary>
-    <Description>Xamarin.Android bindings for AndroidX - @(Model.Name)</Description>
-    <PackageTags>Xamarin AndroidX Xamarin.AndroidX Support Google @(Model.Name)</PackageTags>
+    <Description>Xamarin.Android bindings for AndroidX - @(Model.Name)  artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</Description>
+    <PackageTags>Xamarin AndroidX Xamarin.AndroidX Support Google @(Model.Name) artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</PackageTags>
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
@@ -61,11 +65,19 @@
       }
   </ItemGroup>
 
-  @*<ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')" />
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
+    <JavaSourceJar 
+          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" 
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')" 
+          />
+    <JavaDocJar 
+          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" 
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')" 
+          />
     }   
-  </ItemGroup>*@
+  </ItemGroup>
 
     
   <ItemGroup>
