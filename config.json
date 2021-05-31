@@ -28,16 +28,16 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.2.2",
-        "nugetVersion": "1.2.2",
+        "version": "1.2.3",
+        "nugetVersion": "1.2.3",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
-        "version": "1.2.2",
-        "nugetVersion": "1.2.2",
+        "version": "1.2.3",
+        "nugetVersion": "1.2.3",
         "nugetId": "Xamarin.AndroidX.Activity.Ktx",
         "dependencyOnly": false
       },
@@ -84,16 +84,16 @@
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.7",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat-resources",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.7",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "dependencyOnly": false
       },
@@ -260,16 +260,16 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2.3",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.AndroidX.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.core",
         "artifactId": "core-ktx",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.AndroidX.Core.Core.Ktx",
         "dependencyOnly": false
       },
@@ -308,32 +308,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "4.2.0",
-        "nugetVersion": "4.2.0",
+        "version": "4.2.1",
+        "nugetVersion": "4.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "4.2.0",
-        "nugetVersion": "4.2.0",
+        "version": "4.2.1",
+        "nugetVersion": "4.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "4.2.0",
-        "nugetVersion": "4.2.0",
+        "version": "4.2.1",
+        "nugetVersion": "4.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "4.2.0",
-        "nugetVersion": "4.2.0",
+        "version": "4.2.1",
+        "nugetVersion": "4.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -396,16 +396,16 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.3.3",
-        "nugetVersion": "1.3.3",
+        "version": "1.3.4",
+        "nugetVersion": "1.3.4",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment-ktx",
-        "version": "1.3.3",
-        "nugetVersion": "1.3.3",
+        "version": "1.3.4",
+        "nugetVersion": "1.3.4",
         "nugetId": "Xamarin.AndroidX.Fragment.Ktx",
         "dependencyOnly": false
       },
@@ -500,8 +500,8 @@
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common-java8",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0",
+        "version": "2.3.1",
+        "nugetVersion": "2.3.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
         "dependencyOnly": false
       },
@@ -524,8 +524,8 @@
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-ktx",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0",
+        "version": "2.3.1",
+        "nugetVersion": "2.3.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
         "dependencyOnly": false
       },
@@ -900,8 +900,8 @@
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava2",
-        "version": "2.0.0",
-        "nugetVersion": "2.0.0",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2",
         "dependencyOnly": false
       },
@@ -1100,8 +1100,8 @@
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime-ktx",
-        "version": "2.0.1",
-        "nugetVersion": "2.0.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
         "dependencyOnly": false
       },
