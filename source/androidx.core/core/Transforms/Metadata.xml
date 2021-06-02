@@ -84,4 +84,14 @@
         TitleData
     </attr>
 
+    <remove-node
+        path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.Object']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=1 and parameter[1][@type='T']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=3 and parameter[1][@type='T'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Object...']]"
+        />
+
 </metadata>

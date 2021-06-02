@@ -144,7 +144,9 @@
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CursorAdapter",
         "Xamarin.AndroidX.DrawerLayout",
-        "Xamarin.AndroidX.Fragment"
+        "Xamarin.AndroidX.Fragment",
+        "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.SavedState"
       ]
     },
     {
@@ -284,6 +286,14 @@
       "id": "Xamarin.AndroidX.Lifecycle.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Camera.View",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Camera.Core",
+        "Xamarin.AndroidX.Lifecycle.Common"
       ]
     },
     {
@@ -855,12 +865,15 @@
     {
       "id": "Xamarin.AndroidX.Paging.Runtime",
       "dependencies": [
+        "Xamarin.AndroidX.Arch.Core.Runtime",
+        "Xamarin.AndroidX.Lifecycle.LiveData",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Paging.Common",
+        "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
         "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
         "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
         "Xamarin.AndroidX.Paging.Common.Ktx",
-        "Xamarin.AndroidX.Paging.Common",
-        "Xamarin.AndroidX.RecyclerView",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Android"
       ]
@@ -967,8 +980,6 @@
     {
       "id": "Xamarin.AndroidX.Room.Room.RxJava2",
       "dependencies": [
-        "Xamarin.AndroidX.Arch.Core.Runtime",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
         "Xamarin.AndroidX.Room.Common",
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.Android.ReactiveX.RxJava"
