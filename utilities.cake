@@ -1,3 +1,4 @@
+#tool nuget:?package=Cake.CoreCLR
 /*
      dotnet cake spell-check.cake
     dotnet cake spell-check.cake -t=spell-check
@@ -150,6 +151,8 @@ Task ("spell-check")
                         Information($"          Found in EN-US dictionary!");
                         continue;
                     }
+
+                    Information($"Added {nuget_id_part} from {nuget_id}");
                     spell_errors.Add(nuget_id_part);
                 }
             }
@@ -201,9 +204,9 @@ Task("binderate-diff")
         {
 			EnsureDirectoryExists("./output/");
 
-			// "git diff main:config.json config.json" > ./output/config.json.diff-from-main.txt"
+			// "git diff -U999999 main:config.json config.json" > ./output/config.json.diff-from-main.txt"
 			string process = "git"; 
-			string process_args = "diff main:config.json config.json";
+			string process_args = "diff -U999999 main:config.json config.json";
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
 			{
@@ -223,157 +226,141 @@ Task ("api-diff-markdown-info-pr")
         () =>
         {
             // TODO: api-diff markdown info based on diff from main
-            string[] lines = System.IO.File.ReadAllLines("./output/config.json.diff-from-main.txt");
+            string[] lines_from_file = System.IO.File.ReadAllLines("./output/config.json.diff-from-main.txt");
 
-            bool group_new = false;
-            bool artifact_new = false;
-            string group_id = null;
-            string artifact_id = null;
-            string g = "g";
-            string a = "a";
-            string v_a;
-            string v_a_old = null;
-            string v_a_new = null;
-            string v_n;
-            string v_n_old = null;
-            string v_n_new = null;
-            string changelog_item = null;
-
+            List<string> lines = new List<string>(lines_from_file);
             List<string> changelog = new List<string>();
-            foreach(string line in lines)
+
+            List<List<string>> changelog_blocks = new List<List<string>>();
+            List<string> changelog_block = null;
+            int idx_start = -1;
+            int idx_stop = -1;
+            for(int i = 0; i < lines.Count(); i++)
             {
-                if (line.Contains("{") && line.Contains("}"))
-                {
-                    changelog_item = null;
-                }
-                if (line.Contains("groupId") && line.Contains("+"))
-                {
-                    group_new = true;
-                }
-                if (line.Contains("artifactId") && line.Contains("+"))
-                {
-                    artifact_new = true;
-                }
+                string line = lines[i];
                 if (line.Contains("groupId"))
                 {
-                    g = new string
-                                        (
-                                            line
-                                                .ToCharArray()
-                                                .Where(c => !Char.IsWhiteSpace(c))
-                                                .ToArray()
-                                        )
-                                        .Replace("\"", "")
-                                        .Replace("+", "")
-                                        .Replace(":", "")
-                                        .Replace("groupId", "")
-                                        .Replace(",", "")
-                                        ;
-                    Information($"       g = {g}");
-                    continue;
+                    idx_start = i;
                 }
-                if (line.Contains("artifactId"))
+                                
+                if(line.Contains("dependencyOnly"))
                 {
-                    a = new string
-                                        (
-                                            line
-                                                .ToCharArray()
-                                                .Where(c => !Char.IsWhiteSpace(c))
-                                                .ToArray()
-                                        )
-                                        .Replace("\"", "")
-                                        .Replace("+", "")
-                                        .Replace(":", "")
-                                        .Replace("artifactId", "")
-                                        .Replace(",", "")
-                                        ;
-                    Information($"       a = {a}");
-                    continue;
+                    if (line.StartsWith("-"))
+                    {
+                        continue;
+                    }
+                    idx_stop = i;
                 }
-                if (line.Contains("version"))
+
+                if (idx_start != -1 && idx_stop != -1)
                 {
-                    v_a = new string
-                                        (
-                                            line
-                                                .ToCharArray()
-                                                .Where(c => !Char.IsWhiteSpace(c))
-                                                .ToArray()
-                                        )
-                                        .Replace("\"", "")
-                                        .Replace("+", "")
-                                        .Replace("-", "")
-                                        .Replace(":", "")
-                                        .Replace("version", "")
-                                        .Replace(",", "")
-                                        ;
-                    Information($"          v_a     = {v_a}");
-                    if (line.StartsWith("+"))
-                    {
-                        v_a_new = v_a;
-                        Information($"       v_a_new = {v_a_new}");
-                    } 
-                    else if (line.StartsWith("-"))
-                    {
-                        v_a_old = v_a;
-                        Information($"       v_a_old = {v_a_old}");
-                    }
-                    else
-                    {
-
-                    }
-                    continue;
+                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start);
+                    changelog_blocks.Add(changelog_block);
+                    idx_start = -1;
+                    idx_stop = -1;
                 }
-                if (line.Contains("nugetVersion"))
+            }
+
+
+            foreach (List<string> changelog_block_lines in changelog_blocks)
+            {
+                string g = null;
+                string a = null;
+                string v_artifact_new = null;
+                string v_artifact_old = null;
+                string v_nuget_new = null;
+                string v_nuget_old = null;
+                string nuget_id = null;
+
+                foreach(string line in changelog_block_lines)
                 {
-                    v_n = new string
-                                        (
-                                            line
-                                                .ToCharArray()
-                                                .Where(c => !Char.IsWhiteSpace(c))
-                                                .ToArray()
-                                        )
-                                        .Replace("\"", "")
-                                        .Replace("+", "")
-                                        .Replace("-", "")
-                                        .Replace(":", "")
-                                        .Replace("nugetVersion", "")
-                                        .Replace(",", "")
-                                        ;
-                    Information($"          v_n     = {v_n}");
-                    if (line.StartsWith("+"))
+                    if (line.Contains("groupId"))
                     {
-                        v_n_new = v_n;
-                        Information($"       v_n_new = {v_n_new}");
-                    } 
-                    else if (line.StartsWith("-"))
-                    {
-                        v_n_old = v_n;
-                        Information($"       v_n_old = {v_n_old}");
+                        g = ParseDiffLine(line, "groupId");
+                        continue;
                     }
-                    else
+                    if (line.Contains("artifactId"))
                     {
+                        a = ParseDiffLine(line, "artifactId");
+                        continue;
+                    }
+                    if (line.Contains("version"))
+                    {
+                        if (line.StartsWith("+"))
+                        {
+                            v_artifact_new = ParseDiffLine(line, "version");
+                            continue;
+                        }
 
+                        v_artifact_old = ParseDiffLine(line, "version");
+                        continue;
                     }
 
+                    if (line.Contains("nugetVersion"))
+                    {
+                        v_nuget_old = ParseDiffLine(line, "nugetVersion");
+                        continue;
+                    }
+                    if (line.Contains("nugetVersion"))
+                    {
+                        v_nuget_new = ParseDiffLine(line, "nugetVersion");
+                        continue;
+                    }
+                    if (line.Contains("nugetId"))
+                    {
+                        nuget_id = ParseDiffLine(line, "nugetId");
+                        continue;
+                    }
+                }
+
+                if(v_artifact_new == null)
+                {
                     continue;
                 }
 
-                changelog_item = $"- {g}:{a} - {v_a_old} -> {v_a_new}";
-                changelog.Add(changelog_item);
+                string changelog_line = $"- {g}:{a} - {v_artifact_old} -> {v_artifact_new}";
+
+                changelog.Add(changelog_line);
             }
 
             if (changelog.Count > 0)
             {
                 System.IO.File.WriteAllLines("./output/changelog.md", changelog);
             }
+
             return;
         }
     );
 
+string ParseDiffLine(string line, string name)
+{
+    if (line[0] == '-')
+    {
+        StringBuilder sb = new StringBuilder(line);
+        sb[0] = ' ';
+        line = sb.ToString();
+    }
+
+    return new string
+                    (
+                        line
+                            .ToCharArray()
+                            .Where(c => !Char.IsWhiteSpace(c))
+                            .ToArray()
+                    )
+                    .Replace("\"", "")
+                    .Replace("+", "")
+                    .Replace("-", "")
+                    .Replace(":", "")
+                    .Replace(name, "")
+                    .Replace(",", "")
+                    ;
+}
+
 Task ("read-analysis-files")
-    .IsDependentOn ("namespace-check")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
+    .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
     .Does 
     (
