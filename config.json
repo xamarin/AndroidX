@@ -133,7 +133,7 @@
         "groupId": "androidx.biometric",
         "artifactId": "biometric",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.1",
+        "nugetVersion": "1.1.0.2",
         "nugetId": "Xamarin.AndroidX.Biometric",
         "dependencyOnly": false
       },
@@ -437,7 +437,7 @@
         "groupId": "androidx.leanback",
         "artifactId": "leanback",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.7",
+        "nugetVersion": "1.0.0.8",
         "nugetId": "Xamarin.AndroidX.Leanback",
         "dependencyOnly": false
       },
@@ -525,7 +525,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-ktx",
         "version": "2.3.1",
-        "nugetVersion": "2.3.1",
+        "nugetVersion": "2.3.1.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
         "dependencyOnly": false
       },
@@ -749,7 +749,7 @@
         "groupId": "androidx.paging",
         "artifactId": "paging-common",
         "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common",
         "dependencyOnly": false
       },
@@ -757,7 +757,7 @@
         "groupId": "androidx.paging",
         "artifactId": "paging-common-ktx",
         "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common.Ktx",
         "dependencyOnly": false
       },
@@ -765,7 +765,7 @@
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime",
         "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime",
         "dependencyOnly": false
       },
@@ -773,7 +773,7 @@
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime-ktx",
         "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime.Ktx",
         "dependencyOnly": false
       },
@@ -781,7 +781,7 @@
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2",
         "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2",
         "dependencyOnly": false
       },
@@ -789,7 +789,7 @@
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2-ktx",
         "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
         "dependencyOnly": false
       },
@@ -852,8 +852,8 @@
       {
         "groupId": "androidx.recyclerview",
         "artifactId": "recyclerview",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.RecyclerView",
         "dependencyOnly": false
       },
@@ -869,7 +869,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-common",
         "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "nugetVersion": "2.3.0.1",
         "nugetId": "Xamarin.AndroidX.Room.Common",
         "dependencyOnly": false
       },
@@ -877,7 +877,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-ktx",
         "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "nugetVersion": "2.3.0.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.Ktx",
         "dependencyOnly": false
       },
@@ -885,7 +885,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-guava",
         "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "nugetVersion": "2.3.0.1",
         "nugetId": "Xamarin.AndroidX.Room.Guava",
         "dependencyOnly": false
       },
@@ -893,7 +893,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-runtime",
         "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "nugetVersion": "2.3.0.1",
         "nugetId": "Xamarin.AndroidX.Room.Runtime",
         "dependencyOnly": false
       },
@@ -901,7 +901,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-rxjava2",
         "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "nugetVersion": "2.3.0.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2",
         "dependencyOnly": false
       },
@@ -909,7 +909,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-rxjava3",
         "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "nugetVersion": "2.3.0.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava3",
         "dependencyOnly": false
       },
@@ -1013,7 +1013,7 @@
         "groupId": "androidx.tvprovider",
         "artifactId": "tvprovider",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.7",
+        "nugetVersion": "1.0.0.8",
         "nugetId": "Xamarin.AndroidX.TvProvider",
         "dependencyOnly": false
       },
@@ -1101,7 +1101,7 @@
         "groupId": "androidx.work",
         "artifactId": "work-runtime-ktx",
         "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "nugetVersion": "2.5.0.1",
         "nugetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
         "dependencyOnly": false
       },
