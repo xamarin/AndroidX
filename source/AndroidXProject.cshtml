@@ -81,20 +81,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) 
+    @foreach (var art in @Model.MavenArtifacts)
     {
-    <JavaSourceJar 
-          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" 
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')" 
+    <JavaSourceJar
+          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
-    <JavaDocJar 
-          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" 
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')" 
+    <JavaDocJar
+          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
           />
-    }   
+    }
   </ItemGroup>
 
-    
+
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
     <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
@@ -121,7 +121,7 @@
     <Folder Include="Additions\" />
     <Folder Include="Jars\" />
     <Folder Include="Transforms\" />
-    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Material") 
+    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Material")
     {
     <Folder Include="Java\" />
     }
@@ -140,7 +140,7 @@
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
-    <AndroidJavaSource 
+    <AndroidJavaSource
       Condition="Exists('..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java')"
       Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java"
       >
@@ -155,24 +155,24 @@
       } else {
     <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" />
       }
-    }   
+    }
   </ItemGroup>
 
 
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) 
+    @foreach (var art in @Model.MavenArtifacts)
     {
-      if (art.MavenArtifactPackaging == "aar") 
+      if (art.MavenArtifactPackaging == "aar")
       {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
     <!-- For those artifacts with lib/ folder -->
-    <InputJar 
+    <InputJar
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
-      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar" 
+      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar"
       />
-      } 
-      else 
+      }
+      else
       {
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
       }
@@ -189,11 +189,11 @@
       }
     }
     <!-- some additional fixes -->
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition") 
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition")
     {
         <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
     }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Work.Runtime") 
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Work.Runtime")
     {
         <!--
         Xamarin.AndroidX.Work.Runtime Should Reference Xamarin.AndroidX.Room.Runtime
@@ -201,12 +201,12 @@
         -->
         <ProjectReference Include="..\androidx.room.room-runtime\androidx.room.room-runtime.csproj" PrivateAssets="none" />
         <ProjectReference Include="..\androidx.lifecycle.lifecycle-service/androidx.lifecycle.lifecycle-service.csproj" PrivateAssets="none" />
-    }  
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Fragment") 
+    }
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Fragment")
     {
         <ProjectReference Include="..\androidx.savedstate.savedstate\androidx.savedstate.savedstate.csproj" PrivateAssets="none" />
     }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.SavedState") 
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.SavedState")
     {
         <ProjectReference Include="..\androidx.lifecycle.lifecycle-common\androidx.lifecycle.lifecycle-common.csproj" PrivateAssets="none" />
     }
@@ -214,12 +214,12 @@
     {
         <ProjectReference Include="..\androidx.core.core\androidx.core.core.csproj" PrivateAssets="none" />
     }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Lifecycle.Runtime") 
+    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Lifecycle.Runtime")
     {
         <ProjectReference Include="..\androidx.arch.core.core-runtime\androidx.arch.core.core-runtime.csproj" PrivateAssets="none" />
     }
   </ItemGroup>
-  
+
 
   <ItemGroup>
     <!-- PackageReference -->
@@ -236,5 +236,5 @@
       <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" />
     </ItemGroup>
   }
-  
+
 </Project>
