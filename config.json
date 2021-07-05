@@ -260,16 +260,16 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.core",
         "artifactId": "core-ktx",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Core.Core.Ktx",
         "dependencyOnly": false
       },
@@ -308,32 +308,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "4.2.1",
-        "nugetVersion": "4.2.1",
+        "version": "4.2.2",
+        "nugetVersion": "4.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "4.2.1",
-        "nugetVersion": "4.2.1",
+        "version": "4.2.2",
+        "nugetVersion": "4.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "4.2.1",
-        "nugetVersion": "4.2.1",
+        "version": "4.2.2",
+        "nugetVersion": "4.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "4.2.1",
-        "nugetVersion": "4.2.1",
+        "version": "4.2.2",
+        "nugetVersion": "4.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -1108,8 +1108,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0.1",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
