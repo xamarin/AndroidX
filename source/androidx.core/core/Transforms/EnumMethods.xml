@@ -18,12 +18,63 @@
         <method jni-name="startNestedScroll" parameter="p0" clr-enum-type="Android.Views.ScrollAxis" />
     </mapping>
     <mapping jni-interface="androidx/core/view/NestedScrollingParent">
+        <!--
         <method jni-name="onNestedScrollAccepted" parameter="p2" clr-enum-type="Android.Views.ScrollAxis" />
-        <method jni-name="onStartNestedScroll" parameter="p2" clr-enum-type="Android.Views.ScrollAxis" />
+        -->
+        <method jni-name="onStartNestedScroll" parameter="axis" clr-enum-type="Android.Views.ScrollAxis" />
         <method jni-name="getNestedScrollAxes" parameter="return" clr-enum-type="Android.Views.ScrollAxis" />
     </mapping>
     <mapping jni-class="androidx/core/widget/AutoSizeableTextView">
         <method jni-name="getAutoSizeTextType" parameter="return" clr-enum-type="Android.Widget.AutoSizeTextType" />
         <method jni-name="setAutoSizeTextTypeWithDefaults" parameter="p0" clr-enum-type="Android.Widget.AutoSizeTextType" />
     </mapping>
+
+
+    <mapping jni-interface="androidx/core/internal/view/SupportMenuItem">
+        <method jni-name="setShowAsAction" parameter="actionEnum" clr-enum-type="Android.Views.ShowAsAction" />
+    </mapping>
+    <mapping jni-interface="androidx/core/internal/view/SupportMenuItem">
+        <method jni-name="setShowAsActionFlags" parameter="actionEnum" clr-enum-type="Android.Views.ShowAsAction" />
+    </mapping>
+
+    <mapping jni-interface="androidx/core/view/NestedScrollingChild">
+        <method jni-name="startNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+    <mapping jni-interface="androidx/core/view/NestedScrollingChild2">
+        <method jni-name="startNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+
+    <mapping jni-interface="androidx/core/view/NestedScrollingParent">
+        <method jni-name="onNestedScrollAccepted" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+        <method jni-name="onStartNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+    <mapping jni-interface="androidx/core/view/NestedScrollingParent2">
+        <method jni-name="onNestedScrollAccepted" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+        <method jni-name="onStartNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+
+    <mapping jni-class="androidx/core/view/NestedScrollingParentHelper">
+        <method jni-name="onNestedScrollAccepted" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+
+
+    <mapping jni-class="androidx/core/view/ViewParentCompat">
+        <method jni-name="onNestedScrollAccepted" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+        <method jni-name="onStartNestedScroll" parameter="nestedScrollAxes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+
+
+    <mapping jni-class="androidx/core/widget/NestedScrollView">
+        <method jni-name="onNestedScrollAccepted" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+        <method jni-name="onStartNestedScroll" parameter="axes" clr-enum-type="Android.Views.ScrollAxis" />
+    </mapping>
+    
+    <mapping jni-interface="androidx/core/app/ActivityCompat.OnRequestPermissionsResultCallback">
+        <method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
+    </mapping>
+    
+    <mapping jni-class="androidx/core/widget/AutoSizeableTextView">
+        <method jni-name="setAutoSizeTextTypeWithDefaults" parameter="autoSizeTextType" clr-enum-type="Android.Widget.AutoSizeTextType" />
+    </mapping>
+ 
 </enum-method-mappings>
