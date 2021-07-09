@@ -35,16 +35,18 @@
     <remove-node path="/api/package[@name='androidx.core.provider']/class[@name='FontsContractCompat.Columns']/implements[@name='android.provider.BaseColumns']" />
     
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingChild']/method[@name='startNestedScroll' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedType">Android.Views.ScrollAxis</attr>
+    <!--
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onStartNestedScroll' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='getNestedScrollAxes' and count(parameter)=0]" name="managedReturn">Android.Views.ScrollAxis</attr>
     <add-node path="/api/package[@name='androidx.core.widget']/class[@name='NestedScrollView']">
         <method deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" jni-return="V" jni-signature="(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V" visibility="public" static="false" abstract="false" return="void" name="onNestedScrollAccepted">
-            <parameter type="android.view.View" name="p0" jni-type="Landroid/view/View;"></parameter>
-            <parameter type="android.view.View" name="p1" jni-type="Landroid/view/View;"></parameter>
-            <parameter type="Android.Views.ScrollAxis" name="p2" jni-type="I"></parameter>
+            <parameter type="android.view.View" name="child" jni-type="Landroid/view/View;"></parameter>
+            <parameter type="android.view.View" name="target" jni-type="Landroid/view/View;"></parameter>
+            <parameter type="android.view.ScrollAxis" name="axes" jni-type="I"></parameter>
         </method>
     </add-node>
     <attr path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent']/method[@name='onNestedScrollAccepted' and count(parameter)=3 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int']]/parameter[3]" name="managedType">Android.Views.ScrollAxis</attr>
+    -->
 
     <attr
         path="/api/package[@name='androidx.core.content.pm']/class[@name='ShortcutInfoCompatSaver.NoopImpl']/method[@name='addShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;']]"
@@ -93,5 +95,6 @@
     <remove-node
         path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=3 and parameter[1][@type='T'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Object...']]"
         />
+
 
 </metadata>

@@ -223,17 +223,4 @@
     <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]" name="managedReturn">Android.Content.PM.ConfigChanges</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 
-    <remove-node
-        path="/api/package[@name='androidx.appcompat.view.menu']/class[@name='MenuPopupHelper']/implements[@name='androidx.appcompat.view.menu.MenuHelper']"
-        />    
-        
-    <!--    
-    <attr
-        path="//class[@visibility='']"
-        name="visibility"
-        >
-        public
-    </attr>
-    -->
-    
 </metadata>

@@ -366,7 +366,7 @@ Task ("read-analysis-files")
     (
         () =>
         {
-            string[] files = new[]
+            List<string> files = new List<string>
             {
                 "./output/spell-errors.txt",
                 "./output/changelog.md",
@@ -375,6 +375,12 @@ Task ("read-analysis-files")
                 "./output/missing_dotnet_type.csv",
                 "./output/missing_java_type.csv",
             };
+
+            if ( ! FileExists("./output/spell-errors.txt") )
+            {
+                files.Remove("./output/spell-errors.txt");
+            }
+
 			string process = "code";
 			string process_args = $"-n {string.Join(" ", files)}";
 			IEnumerable<string> redirectedStandardOutput;

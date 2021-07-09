@@ -188,6 +188,29 @@
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
 
+    <!--
+    <add-node
+        path="/api/package[@name='com.google.android.material.navigation']/class[@name='NavigationBarItemView']"
+        >
+        <method
+                abstract="false" static="false" visibility="public" return="void" name="setEnabled" 
+                deprecated="not deprecated" final="false" jni-signature="(Z)V" bridge="true" native="false"
+                jni-return="V" synchronized="false" synthetic="true"
+                >
+            <parameter name="p0" type="boolean" jni-type="Z">
+            </parameter>
+        </method>
+        
+    </add-node>
+    -->
+
+    <attr
+        path="/api/package[@name='com.google.android.material.navigationrail']/class[@name='NavigationRailView']/method[@name='createNavigationBarMenuView' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+        name="managedReturn"
+        >
+        Google.Android.Material.Navigation.NavigationBarMenuView
+    </attr>
+
     <remove-node
         path="/api/package[@name='com.google.android.material.datepicker']/class[@name='OnSelectionChangedListener']/typeParameters"
         />

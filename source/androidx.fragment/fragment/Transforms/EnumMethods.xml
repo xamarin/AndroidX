@@ -15,4 +15,10 @@
     <mapping jni-class="androidx/loader/content/ContextCompat">
         <method jni-name="checkSelfPermission" parameter="return" clr-enum-type="Android.Content.PM.Permission" />
     </mapping>
+
+    <mapping jni-class="androidx/fragment/app/FragmentActivity">
+        <method jni-name="onRequestPermissionsResult" parameter="grantResults" clr-enum-type="Android.Content.PM.Permission[]" />
+    </mapping>
+
+
 </enum-method-mappings>

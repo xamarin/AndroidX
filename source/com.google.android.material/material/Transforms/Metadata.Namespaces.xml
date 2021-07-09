@@ -110,5 +110,11 @@
     >
     Google.Android.Material.TimePicker
   </attr>
+  <attr
+    path="/api/package[@name='com.google.android.material.navigationrail']"
+    name="managedName"
+    >
+    Google.Android.Material.NavigationRail
+  </attr>
 
 </metadata>
