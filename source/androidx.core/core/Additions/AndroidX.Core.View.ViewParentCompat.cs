@@ -41,23 +41,5 @@ namespace AndroidX.Core.View
 
 		}
 
-
-		/*
-		public void OnNestedScrollAccepted (Android.Views.View child, Android.Views.View target, int axis, int @type)
-		{
-			Android.Views.ScrollAxis scroll_axis = (Android.Views.ScrollAxis) axis;
-
-			OnNestedScrollAccepted(child, target, scroll_axis, @type);
-
-			return;
-		}
-
-		public bool OnStartNestedScroll (Android.Views.View child, Android.Views.View target, int axis, int @type)
-		{
-			Android.Views.ScrollAxis scroll_axis = (Android.Views.ScrollAxis) axis;
-
-			return OnStartNestedScroll(child, target, scroll_axis, @type);
-		}
-		*/
 	}
 }
