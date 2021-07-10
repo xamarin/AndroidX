@@ -16,12 +16,18 @@ resources:
     - repository: internal-templates
       type: github
       name: xamarin/yaml-templates
+      ref: refs/heads/main # this should be the default, but I notice it still picks master
       endpoint: xamarin
       ref: refs/heads/main
     - repository: components
       type: github
       name: xamarin/XamarinComponents
       endpoint: xamarin
+
+parameters:
+  - name: CodeSignOverride
+    type: string
+    default: ' ' # set to true to force realsigning, false to force testsigning, keep blank to let the pipeline infer
 
 jobs:
   - template: .ci/build.yml@components
@@ -48,5 +54,6 @@ jobs:
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
+        CodeSignOverride: false # testing true case
         dependsOn: [ 'build' ]
         condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
