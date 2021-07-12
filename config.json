@@ -2,6 +2,8 @@
   {
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
+    "strictRuntimeDependencies": true,
+    "excludedRuntimeDependencies": "com.google.crypto.tink.tink-android",
     "additionalProjects": [
       "source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
@@ -1114,6 +1116,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.auto.value",
+        "artifactId": "auto-value-annotations",
+        "version": "1.6.6",
+        "nugetVersion": "1.6.6",
+        "nugetId": "Xamarin.Google.AutoValue.Annotations",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.guava",
         "artifactId": "guava",
         "version": "28.2.0",
@@ -1183,6 +1193,14 @@
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-rx2",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Rx2",
         "dependencyOnly": true
       },
       {

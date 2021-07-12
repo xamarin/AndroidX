@@ -184,6 +184,9 @@ public class ArtifactModel
 
 	[JsonProperty ("dependencyOnly")]
 	public bool DependencyOnly { get; set; }
+
+	[JsonProperty ("excludedRuntimeDependencies")]
+	public string ExcludedRuntimeDependencies { get; set; }
 }
 
 public class MyArray
@@ -193,6 +196,12 @@ public class MyArray
 
 	[JsonProperty ("slnFile")]
 	public string SlnFile { get; set; }
+
+	[JsonProperty ("strictRuntimeDependencies")]
+	public bool StrictRuntimeDependencies { get; set; }
+
+	[JsonProperty ("excludedRuntimeDependencies")]
+	public string ExcludedRuntimeDependencies { get; set; }
 
 	[JsonProperty ("additionalProjects")]
 	public List<string> AdditionalProjects { get; set; }
