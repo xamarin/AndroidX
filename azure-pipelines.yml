@@ -8,6 +8,9 @@ pr:
 variables:
   AndroidBinderatorVersion: 0.4.7
   AndroidXMigrationVersion: 1.0.8
+  DotNetVersion: 6.0.100-preview.5.21302.13
+  LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d16-10-macos
+  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d16-10-windows
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
@@ -31,18 +34,25 @@ jobs:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin' ]   
       areaPath: 'DevDiv\Xamarin SDK\Android'
+      initSteps:
+        - task: UseDotNet@2
+          displayName: install .NET $(DotNetVersion)
+          inputs:
+            version: $(DotNetVersion)
+        - pwsh: |
+            dotnet workload install microsoft-android-sdk-full
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
             dotnet tool install --global Cake.Tool
             dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-10-macos
+            boots $(LegacyXamarinAndroidPkg)
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
             dotnet tool install --global Cake.Tool
             dotnet tool install --global boots
-            boots https://aka.ms/xamarin-android-commercial-d16-10-windows
+            boots $(LegacyXamarinAndroidVsix)
           condition: eq(variables['System.JobName'], 'windows')
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
