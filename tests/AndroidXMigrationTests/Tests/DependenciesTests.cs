@@ -274,6 +274,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Browser",
 				"Xamarin.AndroidX.CardView",
 				"Xamarin.AndroidX.Collection",
+				"Xamarin.AndroidX.Concurrent.Futures",
 				"Xamarin.AndroidX.ConstraintLayout",
 				"Xamarin.AndroidX.ConstraintLayout.Solver",
 				"Xamarin.AndroidX.CoordinatorLayout",
@@ -303,6 +304,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.SavedState",
 				"Xamarin.AndroidX.SlidingPaneLayout",
 				"Xamarin.AndroidX.SwipeRefreshLayout",
+				"Xamarin.AndroidX.Tracing.Tracing",
 				"Xamarin.AndroidX.Transition",
 				"Xamarin.AndroidX.VectorDrawable",
 				"Xamarin.AndroidX.VectorDrawable.Animated",
@@ -318,7 +320,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var flattened = tree.Flatten(ids).ToList();
 			flattened.Sort();
 
-			Assert.Equal(expected, flattened);
+			Assert.Equal(expected, flattened.ToArray());
 		}
 
 		[Fact]
@@ -373,7 +375,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.MediaRouter",
-				"Xamarin.AndroidX.Palette",
 				"Xamarin.Google.Android.Material",
 			};
 
@@ -382,7 +383,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var flattened = tree.Reduce(ids).ToList();
 			flattened.Sort();
 
-			Assert.Equal(expected, flattened);
+			Assert.Equal(expected, flattened.ToArray());
 		}
 	}
 }

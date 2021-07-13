@@ -6,6 +6,8 @@ pr:
   - main
   
 variables:
+  AndroidBinderatorVersion: 0.4.7
+  AndroidXMigrationVersion: 1.0.8
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
@@ -43,8 +45,8 @@ jobs:
             boots https://aka.ms/xamarin-android-commercial-d16-10-windows
           condition: eq(variables['System.JobName'], 'windows')
       tools:
-        - 'xamarin.androidbinderator.tool': '0.4.2'
-        - 'xamarin.androidx.migration.tool': '1.0.7.1'
+        - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
+        - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
