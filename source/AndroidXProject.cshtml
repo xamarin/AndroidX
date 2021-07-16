@@ -2,7 +2,7 @@
 @using System.Linq
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFramework>MonoAndroid9.0</TargetFramework>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android30.0</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
@@ -93,8 +93,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework)" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\$(TargetFramework)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\monoandroid90" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\net6.0-android30.0" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\monoandroid90" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\net6.0-android30.0" />
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
   </ItemGroup>
 
