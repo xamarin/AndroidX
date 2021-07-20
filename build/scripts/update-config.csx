@@ -16,6 +16,7 @@ using MavenNet;
 using MavenNet.Models;
 using Newtonsoft.Json;
 using NuGet.Versioning;
+using System.ComponentModel;
 
 // Parse the configuration file
 var config_file = Args[0];
@@ -29,6 +30,7 @@ var config_json = File.ReadAllText (config_file);
 var config = JsonConvert.DeserializeObject<List<MyArray>> (config_json);
 var should_update = Args.Count > 1 && Args[1].ToLowerInvariant () == "update";
 var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
+var serializer_settings = new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore };
 
 // Query Maven
 var repo = MavenRepository.FromGoogle ();
@@ -96,7 +98,7 @@ foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
 	if (should_update || should_minor_bump)
 	{
 		// Write update config.json back to disk
-		var output = JsonConvert.SerializeObject (config, Formatting.Indented);
+		var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
 		File.WriteAllText (config_file, output + Environment.NewLine);
 	}
 }
@@ -182,6 +184,7 @@ public class ArtifactModel
 	[JsonProperty ("nugetId")]
 	public string NugetId { get; set; }
 
+	[DefaultValue ("")]
 	[JsonProperty ("dependencyOnly")]
 	public bool DependencyOnly { get; set; }
 
