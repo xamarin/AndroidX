@@ -30,16 +30,16 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.2.3",
-        "nugetVersion": "1.2.3",
+        "version": "1.2.4",
+        "nugetVersion": "1.2.4",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
-        "version": "1.2.3",
-        "nugetVersion": "1.2.3",
+        "version": "1.2.4",
+        "nugetVersion": "1.2.4",
         "nugetId": "Xamarin.AndroidX.Activity.Ktx",
         "dependencyOnly": false
       },
@@ -86,16 +86,16 @@
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0",
+        "version": "1.3.1",
+        "nugetVersion": "1.3.1",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat-resources",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0",
+        "version": "1.3.1",
+        "nugetVersion": "1.3.1",
         "nugetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "dependencyOnly": false
       },
@@ -150,24 +150,24 @@
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-camera2",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.5",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
         "nugetId": "Xamarin.AndroidX.Camera.Camera2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-core",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.5",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
         "nugetId": "Xamarin.AndroidX.Camera.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-lifecycle",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.5",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
         "nugetId": "Xamarin.AndroidX.Camera.Lifecycle",
         "dependencyOnly": false
       },
@@ -398,16 +398,16 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.3.5",
-        "nugetVersion": "1.3.5",
+        "version": "1.3.6",
+        "nugetVersion": "1.3.6",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment-ktx",
-        "version": "1.3.5",
-        "nugetVersion": "1.3.5",
+        "version": "1.3.6",
+        "nugetVersion": "1.3.6",
         "nugetId": "Xamarin.AndroidX.Fragment.Ktx",
         "dependencyOnly": false
       },
@@ -638,8 +638,8 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.3.1",
-        "nugetVersion": "1.3.1",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
@@ -750,48 +750,48 @@
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.2",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common-ktx",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.1",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.2",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime-ktx",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.1",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.1",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2-ktx",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0.1",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
         "dependencyOnly": false
       },
