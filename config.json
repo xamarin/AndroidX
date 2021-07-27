@@ -1004,6 +1004,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.startup",
+        "artifactId": "startup-runtime",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Startup.Runtime",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.swiperefreshlayout",
         "artifactId": "swiperefreshlayout",
         "version": "1.1.0",
