@@ -99,7 +99,6 @@
     </ItemGroup>
     <!-- all the AndroidX assemblies -->
     <ItemGroup>
-        <_AndroidXAssembly Include="Xamarin.Android.ReactiveX.RxJava" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation.Experimental" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
@@ -175,8 +174,6 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.WebKit" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Work.Runtime" />
         <_AndroidXAssembly Include="Xamarin.Google.Android.Material" />
-        <_AndroidXAssembly Include="Xamarin.Jetbrains.Annotations" />
-        <_AndroidXAssembly Include="Xamarin.Kotlin.StdLib" />
     </ItemGroup>
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
@@ -316,6 +313,7 @@
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
+        <_AndroidXMavenArtifact Include="com.google.auto.value.auto-value-annotations" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
@@ -327,6 +325,7 @@
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-rx2" />
         <_AndroidXMavenArtifact Include="org.reactivestreams.reactive-streams" />
     </ItemGroup>
 </Project>
