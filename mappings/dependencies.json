@@ -999,8 +999,7 @@
     {
       "id": "Xamarin.AndroidX.Security.SecurityCrypto",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Com.Google.Crypto.Tink.Android"
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
