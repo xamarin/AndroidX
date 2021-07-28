@@ -3,7 +3,7 @@
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
-    "excludedRuntimeDependencies": "com.google.crypto.tink.tink-android",
+    "excludedRuntimeDependencies": "",
     "additionalProjects": [
       "source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
@@ -1225,6 +1225,14 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.3",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.crypto.tink",
+        "artifactId": "tink-android",
+        "version": "1.6.1",
+        "nugetVersion": "1.6.1",
+        "nugetId": "Xamarin.Com.Google.Crypto.Tink.Android",
         "dependencyOnly": true
       }
     ]
