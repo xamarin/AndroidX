@@ -410,7 +410,7 @@
       "id": "Xamarin.AndroidX.ConstraintLayout",
       "dependencies": [
         "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.ConstraintLayout.Solver",
+        "Xamarin.AndroidX.ConstraintLayout.Core",
         "Xamarin.AndroidX.Core"
       ]
     },
@@ -490,6 +490,10 @@
         "Xamarin.AndroidX.Collection",
         "Xamarin.Kotlin.StdLib"
       ]
+    },
+    {
+      "id": "Xamarin.AndroidX.ConstraintLayout.Core",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.ConstraintLayout.Solver",
