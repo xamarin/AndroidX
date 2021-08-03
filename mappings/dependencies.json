@@ -523,6 +523,12 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
+      "dependencies": [
+        "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Core.Role",
       "dependencies": []
     },
