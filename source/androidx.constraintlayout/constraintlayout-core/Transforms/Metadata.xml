@@ -1,0 +1,69 @@
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core']/class[@name='SolverVariable']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.constraintlayout.core.SolverVariable']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.motion']/class[@name='MotionPaths']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.constraintlayout.core.motion.MotionPaths']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.widgets']/class[@name='WidgetRun.RunType']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension.Type']/field[@name='FIXED']"
+        name="managedName"
+        >
+        FixedField
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='Fixed' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        FixedStatic
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='Fixed' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedName"
+        >
+        FixedStatic
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='Percent' and count(parameter)=2 and parameter[1][@type='java.lang.Object'] and parameter[2][@type='float']]"
+        name="managedName"
+        >
+        PercentStatic
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='Ratio' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedName"
+        >
+        RatioStatic
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='Suggested' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        SuggestedStatic
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.core.state']/class[@name='Dimension']/method[@name='Suggested' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedName"
+        >
+        SuggestedStatic
+    </attr>
+
+
+
+</metadata>
