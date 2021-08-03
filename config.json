@@ -3,7 +3,7 @@
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
-    "excludedRuntimeDependencies": "com.google.crypto.tink.tink-android",
+    "excludedRuntimeDependencies": "com.google.firebase.firebase-appindexing;com.google.crypto.tink.tink-android",
     "additionalProjects": [
       "source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
@@ -273,6 +273,14 @@
         "version": "1.6.0",
         "nugetVersion": "1.6.0.1",
         "nugetId": "Xamarin.AndroidX.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.core",
+        "artifactId": "core-google-shortcuts",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
         "dependencyOnly": false
       },
       {
