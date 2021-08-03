@@ -276,7 +276,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Concurrent.Futures",
 				"Xamarin.AndroidX.ConstraintLayout",
-				"Xamarin.AndroidX.ConstraintLayout.Solver",
+				"Xamarin.AndroidX.ConstraintLayout.Core",
 				"Xamarin.AndroidX.CoordinatorLayout",
 				"Xamarin.AndroidX.Core",
 				"Xamarin.AndroidX.CursorAdapter",
