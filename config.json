@@ -237,6 +237,14 @@
       },
       {
         "groupId": "androidx.constraintlayout",
+        "artifactId": "constraintlayout-core",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.ConstraintLayout.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.constraintlayout",
         "artifactId": "constraintlayout-solver",
         "version": "2.0.4",
         "nugetVersion": "2.0.4.3",
@@ -464,7 +472,7 @@
         "artifactId": "legacy-support-core-ui",
         "version": "1.0.0",
         "nugetVersion": "1.0.0.9",
-        "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",    
         "dependencyOnly": false
       },
       {
