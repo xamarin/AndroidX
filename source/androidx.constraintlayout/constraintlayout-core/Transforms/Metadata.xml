@@ -13,7 +13,7 @@
     </attr>
 
     <attr
-        path="/api/package[@name='androidx.constraintlayout.core.widgets']/class[@name='WidgetRun.RunType']"
+        path="/api/package[@name='androidx.constraintlayout.core.widgets.analyzer']/class[@name='WidgetRun.RunType']"
         name="visibility"
         >
         public
