@@ -3,7 +3,7 @@
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
-    "excludedRuntimeDependencies": "com.google.firebase.firebase-appindexing;com.google.crypto.tink.tink-android",
+    "excludedRuntimeDependencies": "com.google.crypto.tink.tink-android",
     "additionalProjects": [
       "source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
@@ -281,6 +281,8 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
+        "excludedRuntimeDependencies": "com.google.firebase.firebase-appindexing",
+
         "dependencyOnly": false
       },
       {
