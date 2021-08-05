@@ -281,8 +281,6 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
-        "excludedRuntimeDependencies": "com.google.firebase.firebase-appindexing",
-
         "dependencyOnly": false
       },
       {
@@ -1244,7 +1242,15 @@
         "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
-      }
+      },      
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appindexing",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.1",
+        "nugetId": "Xamarin.Firebase.AppIndexing",
+        "dependencyOnly": true
+      },
     ]
   }
 ]
