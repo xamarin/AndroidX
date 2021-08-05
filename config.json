@@ -30,16 +30,16 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.2.4",
-        "nugetVersion": "1.2.4.1",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
-        "version": "1.2.4",
-        "nugetVersion": "1.2.4.1",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.AndroidX.Activity.Ktx",
         "dependencyOnly": false
       },
@@ -230,9 +230,17 @@
       {
         "groupId": "androidx.constraintlayout",
         "artifactId": "constraintlayout",
-        "version": "2.0.4",
-        "nugetVersion": "2.0.4.3",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.AndroidX.ConstraintLayout",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.constraintlayout",
+        "artifactId": "constraintlayout-core",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.ConstraintLayout.Core",
         "dependencyOnly": false
       },
       {
@@ -265,6 +273,14 @@
         "version": "1.6.0",
         "nugetVersion": "1.6.0.1",
         "nugetId": "Xamarin.AndroidX.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.core",
+        "artifactId": "core-google-shortcuts",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
         "dependencyOnly": false
       },
       {
@@ -310,32 +326,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "4.2.2",
-        "nugetVersion": "4.2.2.1",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "4.2.2",
-        "nugetVersion": "4.2.2.1",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "4.2.2",
-        "nugetVersion": "4.2.2.1",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "4.2.2",
-        "nugetVersion": "4.2.2.1",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -464,7 +480,7 @@
         "artifactId": "legacy-support-core-ui",
         "version": "1.0.0",
         "nugetVersion": "1.0.0.9",
-        "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",    
         "dependencyOnly": false
       },
       {
@@ -1226,7 +1242,15 @@
         "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
-      }
+      },      
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appindexing",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.1",
+        "nugetId": "Xamarin.Firebase.AppIndexing",
+        "dependencyOnly": true
+      },
     ]
   }
 ]

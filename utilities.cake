@@ -112,6 +112,7 @@ Task ("spell-check")
                 "Ktx",
                 "RxJava2",
                 "RxJava3",
+                "GoogleShortcuts",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 

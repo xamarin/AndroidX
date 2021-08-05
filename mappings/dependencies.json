@@ -410,7 +410,7 @@
       "id": "Xamarin.AndroidX.ConstraintLayout",
       "dependencies": [
         "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.ConstraintLayout.Solver",
+        "Xamarin.AndroidX.ConstraintLayout.Core",
         "Xamarin.AndroidX.Core"
       ]
     },
@@ -492,6 +492,10 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.ConstraintLayout.Core",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.ConstraintLayout.Solver",
       "dependencies": []
     },
@@ -515,6 +519,12 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
+      "dependencies": [
         "Xamarin.AndroidX.Core"
       ]
     },

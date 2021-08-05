@@ -203,11 +203,13 @@
         <_AndroidXMavenArtifact Include="androidx.collection.collection-ktx" />
         <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
+        <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-core" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-solver" />
         <_AndroidXMavenArtifact Include="androidx.contentpager.contentpager" />
         <_AndroidXMavenArtifact Include="androidx.coordinatorlayout.coordinatorlayout" />
         <_AndroidXMavenArtifact Include="androidx.core.core" />
         <_AndroidXMavenArtifact Include="androidx.core.core-animation" />
+        <_AndroidXMavenArtifact Include="androidx.core.core-google-shortcuts" />
         <_AndroidXMavenArtifact Include="androidx.core.core-ktx" />
         <_AndroidXMavenArtifact Include="androidx.core.core-role" />
         <_AndroidXMavenArtifact Include="androidx.cursoradapter.cursoradapter" />
