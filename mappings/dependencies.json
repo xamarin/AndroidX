@@ -525,8 +525,13 @@
     {
       "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
       "dependencies": [
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Core",
+        "Xamarin.Firebase.AppIndexing"
       ]
+    },
+    {
+      "id": "Xamarin.Firebase.AppIndexing",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Core.Role",
