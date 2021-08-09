@@ -30,16 +30,16 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0",
+        "version": "1.3.1",
+        "nugetVersion": "1.3.1",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.0",
+        "version": "1.3.1",
+        "nugetVersion": "1.3.1",
         "nugetId": "Xamarin.AndroidX.Activity.Ktx",
         "dependencyOnly": false
       },
@@ -406,8 +406,8 @@
       {
         "groupId": "androidx.exifinterface",
         "artifactId": "exifinterface",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2.3",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.ExifInterface",
         "dependencyOnly": false
       },
@@ -480,7 +480,7 @@
         "artifactId": "legacy-support-core-ui",
         "version": "1.0.0",
         "nugetVersion": "1.0.0.9",
-        "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",    
+        "nugetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",
         "dependencyOnly": false
       },
       {
@@ -654,8 +654,8 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "version": "1.4.1",
+        "nugetVersion": "1.4.1",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
@@ -1242,7 +1242,7 @@
         "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": true
-      },      
+      },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appindexing",
@@ -1250,7 +1250,7 @@
         "nugetVersion": "120.0.0.1",
         "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
-      },
+      }
     ]
   }
 ]
