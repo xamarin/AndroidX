@@ -57,7 +57,6 @@ Android.Support.Annotation,IIdResInvoker,AndroidX.Annotations,IIdResInvoker,Xama
 Android.Support.Annotation,AnimResAttribute,AndroidX.Annotations,AnimResAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
 Android.Support.Annotation,InterpolatorResAttribute,AndroidX.Annotations,InterpolatorResAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
 Android.Support.Annotation,NonNullAttribute,AndroidX.Annotations,NonNullAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
-Android.Support.Annotation,NonNullAttribute,ReactiveX.Annotations,NonNullAttribute,Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava,,,,,
 Android.Support.Annotation,ColorLongAttribute,AndroidX.Annotations,ColorLongAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
 Android.Support.Annotation,RestrictToScope,AndroidX.Annotations,RestrictToScope,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,android.support.annotation,RestrictTo.Scope,androidx.annotation,RestrictTo.Scope,
 Android.Support.Annotation,IRestrictTo,AndroidX.Annotations,IRestrictTo,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,android.support.annotation,RestrictTo,androidx.annotation,RestrictTo,
@@ -65,8 +64,6 @@ Android.Support.Annotation,IRestrictToInvoker,AndroidX.Annotations,IRestrictToIn
 Android.Support.Annotation,IAnimRes,AndroidX.Annotations,IAnimRes,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,android.support.annotation,AnimRes,androidx.annotation,AnimRes,
 Android.Support.Annotation,IAnimResInvoker,AndroidX.Annotations,IAnimResInvoker,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,android.support.annotation,AnimRes,androidx.annotation,AnimRes,
 Android.Support.Annotation,NullableAttribute,AndroidX.Annotations,NullableAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
-Android.Support.Annotation,NullableAttribute,JetBrains.Annotations,NullableAttribute,Xamarin.Android.Support.Annotations,Xamarin.Jetbrains.Annotations,,,,,
-Android.Support.Annotation,NullableAttribute,ReactiveX.Annotations,NullableAttribute,Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava,,,,,
 Android.Support.Annotation,IntRangeAttribute,AndroidX.Annotations,IntRangeAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
 Android.Support.Annotation,IdResAttribute,AndroidX.Annotations,IdResAttribute,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,,,,,
 Android.Support.Annotation,IFractionRes,AndroidX.Annotations,IFractionRes,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,android.support.annotation,FractionRes,androidx.annotation,FractionRes,
@@ -1713,16 +1710,16 @@ AndroidX.Slice.Widget,SliceActionView,AndroidX.Slice.Widget,SliceActionView,Xama
 AndroidX.Slice.Widget,GridContent,AndroidX.Slice.Widget,GridContent,Xamarin.Android.Support.Slices.View,Xamarin.AndroidX.Slice.View,androidx.slice.widget,GridContent,androidx.slice.widget,GridContent,
 AndroidX.Slice.Widget,GridContent.CellContent,AndroidX.Slice.Widget,GridContent.CellContent,Xamarin.Android.Support.Slices.View,Xamarin.AndroidX.Slice.View,androidx.slice.widget,GridContent.CellContent,androidx.slice.widget,GridContent.CellContent,
 AndroidX.Slice.Widget,ShortcutView,AndroidX.Slice.Widget,ShortcutView,Xamarin.Android.Support.Slices.View,Xamarin.AndroidX.Slice.View,androidx.slice.widget,ShortcutView,androidx.slice.widget,ShortcutView,
-,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteChooserDialogFragment.
+Android.Support.V7.App,MediaRouteChooserDialogFragment,AndroidX.MediaRouter.App,MediaRouteChooserDialogFragment,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteChooserDialogFragment,androidx.mediarouter.app,MediaRouteChooserDialogFragment,
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteDevicePickerDialog.
-,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteDiscoveryFragment.
-,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteControllerDialog.
+Android.Support.V7.App,MediaRouteDiscoveryFragment,AndroidX.MediaRouter.App,MediaRouteDiscoveryFragment,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteDiscoveryFragment,androidx.mediarouter.app,MediaRouteDiscoveryFragment,
+Android.Support.V7.App,MediaRouteControllerDialog,AndroidX.MediaRouter.App,MediaRouteControllerDialog,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteControllerDialog,androidx.mediarouter.app,MediaRouteControllerDialog,
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteCastDialog.
-,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteChooserDialog.
+Android.Support.V7.App,MediaRouteChooserDialog,AndroidX.MediaRouter.App,MediaRouteChooserDialog,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteChooserDialog,androidx.mediarouter.app,MediaRouteChooserDialog,
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteChooserDialog.RouteComparator.
 Android.Support.V7.App,MediaRouteButton,AndroidX.MediaRouter.App,MediaRouteButton,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteButton,androidx.mediarouter.app,MediaRouteButton,
 Android.Support.V7.App,MediaRouteActionProvider,AndroidX.MediaRouter.App,MediaRouteActionProvider,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteActionProvider,androidx.mediarouter.app,MediaRouteActionProvider,
-,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.mediarouter.app.MediaRouteControllerDialogFragment.
+Android.Support.V7.App,MediaRouteControllerDialogFragment,AndroidX.MediaRouter.App,MediaRouteControllerDialogFragment,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteControllerDialogFragment,androidx.mediarouter.app,MediaRouteControllerDialogFragment,
 Android.Support.V7.App,MediaRouteDialogFactory,AndroidX.MediaRouter.App,MediaRouteDialogFactory,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.app,MediaRouteDialogFactory,androidx.mediarouter.app,MediaRouteDialogFactory,
 Android.Support.V7.Media,MediaSessionStatus,AndroidX.MediaRouter.Media,MediaSessionStatus,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.media,MediaSessionStatus,androidx.mediarouter.media,MediaSessionStatus,
 Android.Support.V7.Media,MediaSessionStatus.Builder,AndroidX.MediaRouter.Media,MediaSessionStatus.Builder,Xamarin.Android.Support.v7.MediaRouter,Xamarin.AndroidX.MediaRouter,android.support.v7.media,MediaSessionStatus.Builder,androidx.mediarouter.media,MediaSessionStatus.Builder,
@@ -2772,10 +2769,8 @@ Android.Support.Design.Internal,IExperimentalInvoker,Google.Android.Material.Int
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type com.google.android.material.bottomnavigation.BottomNavigationPresenter.
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type com.google.android.material.bottomnavigation.BottomNavigationPresenter.SavedState.
 Android.Support.Design.Internal,ThemeEnforcement,Google.Android.Material.Internal,ThemeEnforcement,Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,android.support.design.internal,ThemeEnforcement,com.google.android.material.internal,ThemeEnforcement,
-Android.Support.Design.Internal,ExperimentalAttribute,Kotlin,ExperimentalAttribute,Xamarin.Android.Support.Design,Xamarin.Kotlin.StdLib,,,,,
 Android.Support.Design.Internal,ExperimentalAttribute,AndroidX.Annotations.Experimental,ExperimentalAttribute,Xamarin.Android.Support.Design,Xamarin.AndroidX.Annotation.Experimental,,,,,
 Android.Support.Design.Internal,ExperimentalAttribute,Google.Android.Material.Internal,ExperimentalAttribute,Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,,,,,
-Android.Support.Design.Internal,ExperimentalAttribute,ReactiveX.Annotations,ExperimentalAttribute,Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava,,,,,
 Android.Support.Design.Internal,NavigationMenuView,Google.Android.Material.Internal,NavigationMenuView,Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,android.support.design.internal,NavigationMenuView,com.google.android.material.internal,NavigationMenuView,
 Android.Support.Design.Internal,ScrimInsetsFrameLayout,Google.Android.Material.Internal,ScrimInsetsFrameLayout,Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,android.support.design.internal,ScrimInsetsFrameLayout,com.google.android.material.internal,ScrimInsetsFrameLayout,
 Android.Support.Design.Internal,ForegroundLinearLayout,Google.Android.Material.Internal,ForegroundLinearLayout,Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,android.support.design.internal,ForegroundLinearLayout,com.google.android.material.internal,ForegroundLinearLayout,
