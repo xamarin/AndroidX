@@ -8,7 +8,7 @@ pr:
 variables:
   AndroidBinderatorVersion: 0.4.7
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-preview.6.21355.2
+  DotNetVersion: 6.0.100-preview.7.21379.14
   LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d16-10-macos
   LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d16-10-windows
   BUILD_NUMBER: $(Build.BuildNumber)
@@ -40,7 +40,7 @@ jobs:
           inputs:
             version: $(DotNetVersion)
         - pwsh: |
-            dotnet workload install microsoft-android-sdk-full
+            dotnet workload install android
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool
