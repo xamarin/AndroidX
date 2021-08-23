@@ -113,6 +113,7 @@ Task ("spell-check")
                 "RxJava2",
                 "RxJava3",
                 "GoogleShortcuts",
+                "WindowJava",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
