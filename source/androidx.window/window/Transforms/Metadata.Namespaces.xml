@@ -7,4 +7,11 @@
         AndroidX.Window
     </attr>
 
+    <attr 
+        path="/api/package[@name='androidx.window.layout']"
+        name="managedName"
+        >
+        AndroidX.Window.Layout
+    </attr>
+
 </metadata>
