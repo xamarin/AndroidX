@@ -358,11 +358,64 @@ string ParseDiffLine(string line, string name)
                     ;
 }
 
+Task ("api-diff-analysis")
+    .Does 
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            DirectoryPathCollection directories = GetSubDirectories("./output/api-diff");
+            Dictionary<string, string>  nugets_modified = new Dictionary<string, string>();
+
+            foreach(DirectoryPath d in directories)
+            {
+                string d_name = d.GetDirectoryName();
+
+                Information( $"Directory    = {d}");
+                Information( $"     nugetId    = {d.GetDirectoryName()}");
+
+                string groupId      = null;
+                string artifactId   = null;
+                string nugetId      = null;
+                string nugetVersion = null;
+                // no guarantees thta config.json is sorted, so linear "search"
+                // TODO: sort + (LINQ or binary serch)
+                foreach(JObject jo in binderator_json_array[0]["artifacts"])
+                {
+                    groupId      = (string) jo["groupId"];
+                    artifactId   = (string) jo["artifactId"];
+                    nugetId      = (string) jo["nugetId"];
+                    nugetVersion = (string) jo["nugetVersion"];
+
+                    if (nugetId == d_name)
+                    {
+                        Information( $"     groupId                     = {groupId}");
+                        Information( $"     artifactId                  = {artifactId}");
+                        Information( $"     artifactId  fully qualified = {groupId}.{artifactId}");
+
+                        nugets_modified.Add(d_name, $"{groupId}.{artifactId}");
+                    }
+                }
+            }
+
+            string[] lines = nugets_modified.Select(kv => kv.Key + Environment.NewLine + "\t" + kv.Value).ToArray();
+            System.IO.File.WriteAllLines("./output/nugets-with-changed-APIs.md", lines);
+
+            return;
+        }
+    );
+
 Task ("read-analysis-files")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
+    .IsDependentOn ("api-diff-analysis")    
     .Does 
     (
         () =>
@@ -375,6 +428,7 @@ Task ("read-analysis-files")
                 "./output/missing_dotnet_override_type.csv",
                 "./output/missing_dotnet_type.csv",
                 "./output/missing_java_type.csv",
+                "./output/nugets-with-changed-APIs.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
