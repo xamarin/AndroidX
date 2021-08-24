@@ -1192,6 +1192,15 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Window.WindowJava",
+      "dependencies": [
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Window",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Core"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Work.Runtime",
       "dependencies": [
         "Xamarin.AndroidX.Core",

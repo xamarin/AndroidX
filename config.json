@@ -1094,8 +1094,8 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window",
-        "version": "1.0.0-alpha09",
-        "nugetVersion": "1.0.0.1-alpha09",
+        "version": "1.0.0-alpha10",
+        "nugetVersion": "1.0.0.1-alpha10",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
@@ -1105,6 +1105,14 @@
         "version": "1.0.0-alpha01",
         "nugetVersion": "1.0.0.2-alpha01",
         "nugetId": "Xamarin.AndroidX.Window.WindowExtensions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.window",
+        "artifactId": "window-java",
+        "version": "1.0.0-alpha10",
+        "nugetVersion": "1.0.0.1-alpha10",
+        "nugetId": "Xamarin.AndroidX.Window.WindowJava",
         "dependencyOnly": false
       },
       {
