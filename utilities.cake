@@ -429,6 +429,7 @@ Task ("read-analysis-files")
                 "./output/missing_dotnet_override_type.csv",
                 "./output/missing_dotnet_type.csv",
                 "./output/missing_java_type.csv",
+                "./output/nugets-with-changed-APIs.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
