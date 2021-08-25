@@ -858,6 +858,10 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Migration.Tool",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1138,6 +1142,13 @@
         "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Slice.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
