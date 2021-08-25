@@ -114,6 +114,8 @@ Task ("spell-check")
                 "RxJava3",
                 "GoogleShortcuts",
                 "WindowJava",
+                "Startup",
+                "StartupRuntime",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
