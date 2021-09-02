@@ -1256,34 +1256,56 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core-jvm",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-android",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-rx2",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx2",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-jdk8",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Jdk8",
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-reactive",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Reactive",
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -1334,6 +1356,28 @@
           {
             "templateFile": "templates/kotlin/Pom.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "kotlinx",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/kotlinx/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/kotlinx/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
         ]
       }
