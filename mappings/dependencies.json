@@ -410,7 +410,7 @@
       "id": "Xamarin.AndroidX.ConstraintLayout",
       "dependencies": [
         "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.ConstraintLayout.Solver",
+        "Xamarin.AndroidX.ConstraintLayout.Core",
         "Xamarin.AndroidX.Core"
       ]
     },
@@ -492,6 +492,10 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.ConstraintLayout.Core",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.ConstraintLayout.Solver",
       "dependencies": []
     },
@@ -517,6 +521,17 @@
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core"
       ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
+      "dependencies": [
+        "Xamarin.AndroidX.Core",
+        "Xamarin.Firebase.AppIndexing"
+      ]
+    },
+    {
+      "id": "Xamarin.Firebase.AppIndexing",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Core.Role",
@@ -843,6 +858,10 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Migration.Tool",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1126,6 +1145,13 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Tracing.Tracing"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.TvProvider",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1174,6 +1200,15 @@
       "id": "Xamarin.AndroidX.Window.WindowExtensions",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Window.WindowJava",
+      "dependencies": [
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Window",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Core"
       ]
     },
     {

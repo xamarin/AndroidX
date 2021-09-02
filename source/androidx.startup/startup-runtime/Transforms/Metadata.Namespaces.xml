@@ -1,18 +1,8 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='package']" 
+        path="/api/package[@name='androidx.startup']" 
         name="managedName"
         >
-        Package
+        AndroidX.Startup
     </attr>
-    -->
-    <attr 
-        path="/api/package[@name='androidx.car.app']" 
-        name="managedName"
-        >
-        AndroidX.Car.App
-    </attr>    
-    
-    
 </metadata>

@@ -203,11 +203,13 @@
         <_AndroidXMavenArtifact Include="androidx.collection.collection-ktx" />
         <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
+        <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-core" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-solver" />
         <_AndroidXMavenArtifact Include="androidx.contentpager.contentpager" />
         <_AndroidXMavenArtifact Include="androidx.coordinatorlayout.coordinatorlayout" />
         <_AndroidXMavenArtifact Include="androidx.core.core" />
         <_AndroidXMavenArtifact Include="androidx.core.core-animation" />
+        <_AndroidXMavenArtifact Include="androidx.core.core-google-shortcuts" />
         <_AndroidXMavenArtifact Include="androidx.core.core-ktx" />
         <_AndroidXMavenArtifact Include="androidx.core.core-role" />
         <_AndroidXMavenArtifact Include="androidx.cursoradapter.cursoradapter" />
@@ -297,6 +299,7 @@
         <_AndroidXMavenArtifact Include="androidx.slidingpanelayout.slidingpanelayout" />
         <_AndroidXMavenArtifact Include="androidx.sqlite.sqlite" />
         <_AndroidXMavenArtifact Include="androidx.sqlite.sqlite-framework" />
+        <_AndroidXMavenArtifact Include="androidx.startup.startup-runtime" />
         <_AndroidXMavenArtifact Include="androidx.swiperefreshlayout.swiperefreshlayout" />
         <_AndroidXMavenArtifact Include="androidx.tracing.tracing" />
         <_AndroidXMavenArtifact Include="androidx.transition.transition" />
@@ -310,10 +313,12 @@
         <_AndroidXMavenArtifact Include="androidx.webkit.webkit" />
         <_AndroidXMavenArtifact Include="androidx.window.window" />
         <_AndroidXMavenArtifact Include="androidx.window.window-extensions" />
+        <_AndroidXMavenArtifact Include="androidx.window.window-java" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.auto.value.auto-value-annotations" />
+        <_AndroidXMavenArtifact Include="com.google.firebase.firebase-appindexing" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
