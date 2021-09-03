@@ -116,7 +116,12 @@ Task ("spell-check")
                 "WindowJava",
                 "Startup",
                 "StartupRuntime",
-            };
+                "Kotlin",
+                "StdLib",
+                "Jdk7",
+                "Jdk8",
+                "Jetbrains",
+           };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
             using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
