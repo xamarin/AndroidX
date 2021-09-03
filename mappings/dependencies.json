@@ -798,11 +798,11 @@
         "Xamarin.AndroidX.Lifecycle.Common",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.KotlinX.Coroutines.Android"
+        "Xamarin.Android.ReactiveStreams"
       ]
     },
     {
-      "id": "Xamarin.KotlinX.Coroutines.Android",
+      "id": "Xamarin.Android.ReactiveStreams",
       "dependencies": []
     },
     {
@@ -811,6 +811,10 @@
         "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
         "Xamarin.Kotlin.StdLib"
       ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Android",
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Media2.Common",
@@ -858,6 +862,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
