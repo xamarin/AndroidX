@@ -118,7 +118,10 @@
     },
     {
       "id": "Xamarin.Kotlin.StdLib",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Jetbrains.Annotations",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Ads.Identifier",
@@ -858,10 +861,6 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Migration.Tool",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -987,8 +986,8 @@
       "dependencies": [
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Paging.Common",
-        "Xamarin.Android.ReactiveX.RxJava",
         "Xamarin.Kotlin.StdLib",
+        "Xamarin.Android.ReactiveX.RxJava",
         "Xamarin.KotlinX.Coroutines.Rx2"
       ]
     },
@@ -1229,6 +1228,33 @@
         "Xamarin.AndroidX.Work.Runtime",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Android"
+      ]
+    },
+    {
+      "id": "Xamarin.Jetbrains.Annotations",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Kotlin.Reflect",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.Kotlin.StdLib.Common",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Kotlin.StdLib.Jdk7",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.Kotlin.StdLib.Jdk8",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk7",
+        "Xamarin.Kotlin.StdLib"
       ]
     }
   ]
