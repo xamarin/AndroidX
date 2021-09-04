@@ -8,6 +8,7 @@
     <FirstParty Include="Xamarin.Kotlin.*.dll" />    
     <FirstParty Include="androidx-migrator.dll" />
     <FirstParty Include="jetifierWrapper*.jar" />
+    <FirstParty Include="org.jetbrains.*.jar" />
   </ItemGroup>
 
   <ItemGroup>
