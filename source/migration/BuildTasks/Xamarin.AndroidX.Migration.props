@@ -174,6 +174,8 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.WebKit" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Work.Runtime" />
         <_AndroidXAssembly Include="Xamarin.Google.Android.Material" />
+        <_AndroidXAssembly Include="Xamarin.Jetbrains.Annotations" />
+        <_AndroidXAssembly Include="Xamarin.Kotlin.StdLib" />
     </ItemGroup>
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
@@ -326,7 +328,11 @@
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-reflect" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib-common" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib-jdk7" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib-jdk8" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm" />
