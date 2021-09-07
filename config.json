@@ -1307,7 +1307,8 @@
         "version": "1.0.3",
         "nugetVersion": "1.0.3",
         "nugetId": "Xamarin.Android.ReactiveStreams",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "reactive-streams"
       },
       {
         "groupId": "com.google.firebase",
@@ -1334,6 +1335,20 @@
           {
             "templateFile": "templates/kotlin/Pom.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
+          }
+        ]
+      },
+      {
+        "name": "reactive-streams",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/reactive-streams/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
         ]
       }
