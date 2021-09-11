@@ -16,6 +16,69 @@ string file_spell_errors = "./output/spell-errors.txt";
 List<string> spell_errors = null;
 JArray binderator_json_array = null;
 
+Task ("list-artifacts")
+    .Does 
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            Information("config.json list supported artifacts...");
+
+            List<string> lines1 = new List<string>();
+            List<string> lines2 = new List<string>();
+            string space = " ";
+            string dash = "-";
+            int width1 = 70;
+            int width2 = 20;
+
+            lines1.Add($"# Artifacts supported");
+            lines2.Add($"# Artifacts with versions supported");
+            lines1.Add(Environment.NewLine);
+            lines1.Add(Environment.NewLine);
+            lines2.Add(Environment.NewLine);
+            lines2.Add(Environment.NewLine);
+            lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
+            lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
+            lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
+            lines2.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|");
+
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+
+                string group_id  	= (string) jo["groupId"];
+                string artifact_id  = (string) jo["artifactId"];
+                string artifact_v   = (string) jo["version"];
+                string nuget_id  	= (string) jo["nugetId"];
+                string nuget_v  	= (string) jo["nugetVersion"];
+
+                string maven = $"{group_id}:{artifact_id}";
+                string nuget = $"{nuget_id}";
+                string line1 = $@"|{maven.PadRight(width1)}|{nuget.PadRight(width1)}|";
+                string line2 = $@"|{maven.PadRight(width1)}|{artifact_v.PadRight(width2)}|{nuget.PadRight(width1)}|{nuget_v.PadRight(width2)}|";
+
+                lines1.Add(line1);
+                lines2.Add(line2);
+            }
+
+            EnsureDirectoryExists("./output/");
+			System.IO.File.WriteAllLines($"./output/artifact-list.md", lines1.ToArray());
+			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions.md", lines2.ToArray());
+			System.IO.File.WriteAllLines($"./output/artifact-list-{DateTime.Now.ToString("yyyyMMdd")}.md", lines1.ToArray());
+			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions-{DateTime.Now.ToString("yyyyMMdd")}.md", lines2.ToArray());
+
+        }
+    );
+
 Task ("spell-check")
     .Does 
     (
@@ -424,6 +487,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
     .IsDependentOn ("api-diff-analysis")    
+    .IsDependentOn ("list-artifacts")
     .Does 
     (
         () =>
