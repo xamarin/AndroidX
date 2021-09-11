@@ -27,7 +27,7 @@ Task ("list-artifacts")
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
-            Information("config.json lis suppoerted artifacts...");
+            Information("config.json list supported artifacts...");
 
             List<string> lines1 = new List<string>();
             List<string> lines2 = new List<string>();
