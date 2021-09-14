@@ -1345,7 +1345,8 @@
         "artifactId": "tink-android",
         "version": "1.6.1",
         "nugetVersion": "1.6.1",
-        "nugetId": "Xamarin.Com.Google.Crypto.Tink.Android",
+        "nugetId": "Xamarin.Google.Crypto.Tink.Android",
+        "templateSet": "google-crypto-tink",
         "dependencyOnly": false
       }
     ],
@@ -1396,6 +1397,20 @@
         "templates": [
           {
             "templateFile": "templates/reactive-streams/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "google-crypto-tink",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/google-crypto-tink/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
