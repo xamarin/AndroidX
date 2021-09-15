@@ -32,7 +32,7 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
-      validPackagePrefixes: [ 'Xamarin' ]   
+      validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\Xamarin SDK\Android'
       initSteps:
         - task: UseDotNet@2
