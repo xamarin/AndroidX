@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android30.0</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <AssemblyName>Xamarin.AndroidX.AppCompat.Resources</AssemblyName>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
