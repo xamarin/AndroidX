@@ -184,6 +184,10 @@ Task ("spell-check")
                 "Jdk7",
                 "Jdk8",
                 "Jetbrains",
+                "KotlinX",
+                "Coroutines",
+                "Jvm", 
+                "GoogleGson", 
            };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
