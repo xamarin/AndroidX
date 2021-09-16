@@ -2,7 +2,6 @@
   <attr path="/api/package[@name='com.google.crypto.tink.aead']" name="managedName">Xamarin.Google.Crypto.Tink.Aead</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.aead.subtle']" name="managedName">Xamarin.Google.Crypto.Tink.Aead.Subtle</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.annotations']" name="managedName">Xamarin.Google.Crypto.Tink.Annotations</attr>
-  <attr path="/api/package[@name='com.google.crypto.tink.config']" name="managedName">Xamarin.Google.Crypto.Tink.Config</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.daead']" name="managedName">Xamarin.Google.Crypto.Tink.DAead</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.hybrid']" name="managedName">Xamarin.Google.Crypto.Tink.Hybrid</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.hybrid.subtle']" name="managedName">Xamarin.Google.Crypto.Tink.Hybrid.Subtle</attr>
@@ -15,4 +14,40 @@
   <attr path="/api/package[@name='com.google.crypto.tink.streamingaead']" name="managedName">Xamarin.Google.Crypto.Tink.StreamingAead</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.subtle.prf']" name="managedName">Xamarin.Google.Crypto.Tink.Subtle.Prf</attr>
   <attr path="/api/package[@name='com.google.crypto.tink.tinkkey']" name="managedName">Xamarin.Google.Crypto.Tink.Tinkkey</attr>
+
+  <attr
+      path="/api/package[@name='com.google.crypto.tink']" 
+      name="managedName"
+      >
+      Xamarin.Google.Crypto.Tink
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.crypto.tink.shaded']" 
+      name="managedName"
+      >
+      Xamarin.Google.Crypto.Tink.Shaded
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']" 
+      name="managedName"
+      >
+      Xamarin.Google.Crypto.Tink.Shaded.Protobuf
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.crypto.tink.subtle']" 
+      name="managedName"
+      >
+      Xamarin.Google.Crypto.Tink.Subtle
+  </attr>
+  <!--
+    switching Config to Configs (plural)
+    more according to .NET naming and there is type Config!!!!
+  -->
+  <attr 
+      path="/api/package[@name='com.google.crypto.tink.config']" 
+      name="managedName"
+      >
+      Xamarin.Google.Crypto.Tink.Configs
+  </attr>
+
 </metadata>
