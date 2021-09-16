@@ -186,7 +186,8 @@ Task ("spell-check")
                 "Jetbrains",
                 "KotlinX",
                 "Coroutines",
-                "Jvm",       
+                "Jvm", 
+                "GoogleGson", 
            };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
