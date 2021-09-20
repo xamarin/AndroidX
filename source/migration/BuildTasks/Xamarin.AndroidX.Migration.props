@@ -146,6 +146,7 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Loader" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.LocalBroadcastManager" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Media" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.Media2.Widget" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.MediaRouter" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.MultiDex" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Palette" />
@@ -320,6 +321,7 @@
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.auto.value.auto-value-annotations" />
+        <_AndroidXMavenArtifact Include="com.google.code.gson.gson" />
         <_AndroidXMavenArtifact Include="com.google.firebase.firebase-appindexing" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
@@ -336,6 +338,8 @@
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-jdk8" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-reactive" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-rx2" />
         <_AndroidXMavenArtifact Include="org.reactivestreams.reactive-streams" />
     </ItemGroup>
