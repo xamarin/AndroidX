@@ -215,4 +215,11 @@
     </attr>
     
 
+    <attr 
+        path="/api/package[@name='androidx.work']/class[@name='WorkManagerInitializer']/method[@name='create' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
 </metadata>
