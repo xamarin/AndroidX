@@ -1153,7 +1153,8 @@
         "version": "1.6.6",
         "nugetVersion": "1.6.6",
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "auto-value"
       },
       {
         "groupId": "com.google.guava",
@@ -1411,6 +1412,20 @@
         "templates": [
           {
             "templateFile": "templates/gson/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "auto-value",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/auto-value/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
