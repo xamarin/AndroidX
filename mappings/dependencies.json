@@ -1,6 +1,14 @@
 {
   "packages": [
     {
+      "id": "GoogleGson",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Android.ReactiveStreams",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Activity",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -788,7 +796,9 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Core",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
@@ -802,10 +812,6 @@
       ]
     },
     {
-      "id": "Xamarin.Android.ReactiveStreams",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
@@ -814,7 +820,10 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Android",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Media2.Common",
@@ -960,7 +969,10 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Common",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Paging.Common.Ktx",
@@ -995,16 +1007,21 @@
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Paging.Common",
         "Xamarin.Kotlin.StdLib",
-        "Xamarin.Android.ReactiveX.RxJava",
-        "Xamarin.KotlinX.Coroutines.Rx2"
+        "Xamarin.KotlinX.Coroutines.Rx2",
+        "Xamarin.Android.ReactiveX.RxJava"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Rx2",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm",
+        "Xamarin.KotlinX.Coroutines.Reactive",
+        "Xamarin.Android.ReactiveX.RxJava"
       ]
     },
     {
       "id": "Xamarin.Android.ReactiveX.RxJava",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.KotlinX.Coroutines.Rx2",
       "dependencies": []
     },
     {
@@ -1263,6 +1280,21 @@
       "dependencies": [
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Jdk8",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Reactive",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm",
+        "Xamarin.Android.ReactiveStreams"
       ]
     }
   ]
