@@ -188,6 +188,8 @@ Task ("spell-check")
                 "Coroutines",
                 "Jvm", 
                 "GoogleGson", 
+                "Rx2",
+                "AutoValue",
            };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
