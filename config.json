@@ -326,32 +326,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.0.1",
-        "nugetVersion": "7.0.1",
+        "version": "7.0.2",
+        "nugetVersion": "7.0.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.0.1",
-        "nugetVersion": "7.0.1",
+        "version": "7.0.2",
+        "nugetVersion": "7.0.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.0.1",
-        "nugetVersion": "7.0.1",
+        "version": "7.0.2",
+        "nugetVersion": "7.0.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.0.1",
-        "nugetVersion": "7.0.1",
+        "version": "7.0.2",
+        "nugetVersion": "7.0.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -654,40 +654,40 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media2",
         "artifactId": "media2-common",
-        "version": "1.1.3",
-        "nugetVersion": "1.1.3.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Media2.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media2",
         "artifactId": "media2-session",
-        "version": "1.1.3",
-        "nugetVersion": "1.1.3.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Media2.Session",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media2",
         "artifactId": "media2-widget",
-        "version": "1.1.3",
-        "nugetVersion": "1.1.3.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Media2.Widget",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
-        "version": "1.2.4",
-        "nugetVersion": "1.2.4.1",
+        "version": "1.2.5",
+        "nugetVersion": "1.2.5",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": false
       },
@@ -1086,8 +1086,8 @@
       {
         "groupId": "androidx.wear",
         "artifactId": "wear",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.3",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear",
         "dependencyOnly": false
       },
@@ -1126,16 +1126,16 @@
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0.2",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
         "dependencyOnly": false
       },
@@ -1190,8 +1190,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1199,8 +1199,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1211,8 +1211,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1223,8 +1223,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1235,8 +1235,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1247,8 +1247,8 @@
       {
         "groupId": "org.jetbrains",
         "artifactId": "annotations",
-        "version": "13.0",
-        "nugetVersion": "13.0.0.4",
+        "version": "22.0.0",
+        "nugetVersion": "22.0.0",
         "nugetId": "Xamarin.Jetbrains.Annotations",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1343,8 +1343,8 @@
       {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
-        "version": "2.8.6",
-        "nugetVersion": "2.8.6",
+        "version": "2.8.8",
+        "nugetVersion": "2.8.8",
         "nugetId": "GoogleGson",
         "dependencyOnly": false,
         "templateSet": "gson"
