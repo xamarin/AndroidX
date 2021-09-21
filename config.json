@@ -654,32 +654,32 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media2",
         "artifactId": "media2-common",
-        "version": "1.1.3",
-        "nugetVersion": "1.1.3.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Media2.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media2",
         "artifactId": "media2-session",
-        "version": "1.1.3",
-        "nugetVersion": "1.1.3.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Media2.Session",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media2",
         "artifactId": "media2-widget",
-        "version": "1.1.3",
-        "nugetVersion": "1.1.3.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Media2.Widget",
         "dependencyOnly": false
       },
@@ -1086,8 +1086,8 @@
       {
         "groupId": "androidx.wear",
         "artifactId": "wear",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.3",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear",
         "dependencyOnly": false
       },
@@ -1150,8 +1150,8 @@
       {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
-        "version": "1.6.6",
-        "nugetVersion": "1.6.6",
+        "version": "1.8.2",
+        "nugetVersion": "1.8.2",
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
         "dependencyOnly": false,
         "templateSet": "auto-value"
@@ -1191,8 +1191,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1200,8 +1200,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1212,8 +1212,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1224,8 +1224,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1236,8 +1236,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.5.30",
-        "nugetVersion": "1.5.30",
+        "version": "1.5.31",
+        "nugetVersion": "1.5.31",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1346,8 +1346,8 @@
       {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
-        "version": "2.8.6",
-        "nugetVersion": "2.8.6",
+        "version": "2.8.8",
+        "nugetVersion": "2.8.8",
         "nugetId": "GoogleGson",
         "dependencyOnly": false,
         "templateSet": "gson"
