@@ -12,7 +12,7 @@
     <FirstParty Include="androidx-migrator.dll" />
     <FirstParty Include="jetifierWrapper*.jar" />
     <FirstParty Include="org.jetbrains.*.jar" />
-    <FirstParty Include="kotlinx-coroutines.*.jar" />    
+    <FirstParty Include="kotlinx-coroutines*.jar" />  
   </ItemGroup>
 
   <ItemGroup>
