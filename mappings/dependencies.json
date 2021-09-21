@@ -828,8 +828,10 @@
     {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
+        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Concurrent.Futures",
+        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.VersionedParcelable",
         "Xamarin.Google.Guava.ListenableFuture"
@@ -1196,11 +1198,12 @@
       "id": "Xamarin.AndroidX.Wear",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.ConstraintLayout",
+        "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.RecyclerView",
-        "Xamarin.AndroidX.SwipeRefreshLayout"
+        "Xamarin.AndroidX.SwipeRefreshLayout",
+        "Xamarin.AndroidX.VersionedParcelable"
       ]
     },
     {
