@@ -1311,18 +1311,20 @@
       {
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxjava",
-        "version": "2.2.10.1",
+        "version": "2.2.10",
         "nugetVersion": "2.2.10.1",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "rxjava"
       },
       {
         "groupId": "io.reactivex.rxjava3",
         "artifactId": "rxjava",
-        "version": "3.0.0",
-        "nugetVersion": "3.0.0",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1.1",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "rxjava"
       },
       {
         "groupId": "org.reactivestreams",
@@ -1426,6 +1428,20 @@
         "templates": [
           {
             "templateFile": "templates/auto-value/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "rxjava",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/rxjava/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
