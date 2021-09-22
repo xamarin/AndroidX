@@ -34,7 +34,7 @@ jobs:
     parameters:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
-      areaPath: 'DevDiv\Xamarin SDK\Android'
+      areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
