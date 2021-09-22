@@ -51,22 +51,22 @@
       SourceFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" 
       DestinationFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar"
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar')" />
-    }  
-    
-    <ItemGroup>
-      @foreach (var art in @Model.MavenArtifacts) {
-      <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)@(rx_version)-@(art.MavenArtifactVersion)%(Extension)" />
-      <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)@(rx_version)-@(art.MavenArtifactVersion)%(Extension)" />
-      }
-    </ItemGroup>
+    }      
   </Target>
 
   <ItemGroup>
-    <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+    @foreach (var art in @Model.MavenArtifacts) {
+    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)%(Extension)" />
+    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\*-sources.jar" Link="Jars\%(Filename)%(Extension)" />
+    }
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>
