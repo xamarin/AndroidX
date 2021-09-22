@@ -99,6 +99,8 @@
     </ItemGroup>
     <!-- all the AndroidX assemblies -->
     <ItemGroup>
+        <_AndroidXAssembly Include="Xamarin.Android.ReactiveX.RxJava" />
+        <_AndroidXAssembly Include="Xamarin.Android.ReactiveX.RxJava3.RxJava" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Annotation.Experimental" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.AppCompat" />
