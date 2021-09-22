@@ -1,7 +1,7 @@
-#! "netcoreapp3.1"
+#! "net5.0"
 
-#r "nuget: MavenNet, 2.2.0"
-#r "nuget: Newtonsoft.Json, 12.0.3"
+#r "nuget: MavenNet, 2.2.13"
+#r "nuget: Newtonsoft.Json, 13.0.1"
 #r "nuget: NuGet.Versioning, 5.11.0"
 
 // Usage:
@@ -33,6 +33,10 @@ var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
 var serializer_settings = new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore };
 serializer_settings.Converters.Add (new Newtonsoft.Json.Converters.StringEnumConverter ());
 
+// Keep file sorted by dependency only, then by groupid then by artifactid
+foreach (var array in config)
+	array.Artifacts.Sort ((ArtifactModel a, ArtifactModel b) => string.Compare ($"{a.DependencyOnly}-{a.GroupId} {a.ArtifactId}", $"{b.DependencyOnly}-{b.GroupId} {b.ArtifactId}"));
+
 // Query Maven
 await MavenFactory.Initialize (config);
 
@@ -40,7 +44,7 @@ Console.WriteLine ("| Package (* = Needs Update)                                
 Console.WriteLine ("|--------------------------------------------------------------|-----------------|-----------------|");
 
 // Find the Maven artifact for each package in our configuration file
-foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
+foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 	var a = FindMavenArtifact (config, art);
 
 	if (a is null)
@@ -97,7 +101,7 @@ foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
 
 	if (should_update || should_minor_bump)
 	{
-		// Write update config.json back to disk
+		// Write updated config.json back to disk
 		var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
 		File.WriteAllText (config_file, output + Environment.NewLine);
 	}
@@ -177,8 +181,17 @@ public static class MavenFactory
 			artifact_mavens.Add ((repo, artifact));
 		}
 
-		foreach (var group in artifact_mavens.GroupBy (a => a.Item1))
-			await group.Key.Refresh (group.Select (g => g.Item2.GroupId).Distinct ().ToArray ());
+		foreach (var maven_group in artifact_mavens.GroupBy (a => a.Item1)) {
+			var maven = maven_group.Key;
+			var artifacts = maven_group.Select (a => a.Item2);
+
+			foreach (var artifact_group in artifacts.GroupBy (a => a.GroupId)) {
+				var gid = artifact_group.Key;
+				var artifact_ids = artifact_group.Select (a => a.ArtifactId).ToArray ();
+
+				await maven.Populate (gid, artifact_ids);
+			}
+		}
 	}
 
 	public static MavenRepository GetMavenRepository (List<MyArray> config, ArtifactModel artifact)
