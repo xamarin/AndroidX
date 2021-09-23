@@ -29,7 +29,7 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865089</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865037</PackageLicenseUrl>
+    <PackageLicenseUrl>https://aka.ms/AAdvooz</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
   </PropertyGroup>
@@ -60,6 +60,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\templates\gson\License.md" Pack="true" PackagePath="License.md" />
     <None Include="..\..\templates\gson\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
