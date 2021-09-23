@@ -22,12 +22,6 @@
       Xamarin.Google.Crypto.Tink
   </attr>
   <attr
-      path="/api/package[@name='com.google.crypto.tink.shaded']" 
-      name="managedName"
-      >
-      Xamarin.Google.Crypto.Tink.Shaded
-  </attr>
-  <attr
       path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']" 
       name="managedName"
       >
