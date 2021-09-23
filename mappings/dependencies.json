@@ -9,6 +9,18 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.Android.ReactiveX.RxJava",
+      "dependencies": [
+        "Xamarin.Android.ReactiveStreams"
+      ]
+    },
+    {
+      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+      "dependencies": [
+        "Xamarin.Android.ReactiveStreams"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Activity",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -876,6 +888,10 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Migration.Tool",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1004,23 +1020,19 @@
       "dependencies": [
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Paging.Common",
+        "Xamarin.Android.ReactiveX.RxJava",
         "Xamarin.Kotlin.StdLib",
-        "Xamarin.KotlinX.Coroutines.Rx2",
-        "Xamarin.Android.ReactiveX.RxJava"
+        "Xamarin.KotlinX.Coroutines.Rx2"
       ]
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Rx2",
       "dependencies": [
+        "Xamarin.Android.ReactiveX.RxJava",
         "Xamarin.Kotlin.StdLib.Jdk8",
         "Xamarin.KotlinX.Coroutines.Core.Jvm",
-        "Xamarin.KotlinX.Coroutines.Reactive",
-        "Xamarin.Android.ReactiveX.RxJava"
+        "Xamarin.KotlinX.Coroutines.Reactive"
       ]
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
@@ -1119,10 +1131,6 @@
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.Android.ReactiveX.RxJava3.RxJava"
       ]
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Sqlite.Framework",
