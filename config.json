@@ -1326,15 +1326,17 @@
         "version": "1.0.1",
         "nugetVersion": "1.0.1.2",
         "nugetId": "Xamarin.Google.Guava.FailureAccess",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "28.2.0",
-        "nugetVersion": "28.2.0",
+        "version": "29.0-android",
+        "nugetVersion": "29.0.0",
         "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "groupId": "com.google.guava",
@@ -1342,7 +1344,8 @@
         "version": "1.0",
         "nugetVersion": "1.0.0.2",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "groupId": "com.xamarin.androidx",
@@ -1442,6 +1445,20 @@
         "templates": [
           {
             "templateFile": "templates/rxjava/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "guava",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/guava/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
