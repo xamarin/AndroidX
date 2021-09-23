@@ -1321,31 +1321,67 @@
         "dependencyOnly": true
       },
       {
+        "templateSet": "guava",
         "groupId": "com.google.guava",
         "artifactId": "failureaccess",
         "version": "1.0.1",
         "nugetVersion": "1.0.1.2",
         "nugetId": "Xamarin.Google.Guava.FailureAccess",
-        "dependencyOnly": false,
-        "templateSet": "guava"
+        "dependencyOnly": false
       },
       {
+        "templateSet": "guava",
         "groupId": "com.google.guava",
         "artifactId": "guava",
         "version": "29.0-android",
         "nugetVersion": "29.0.0",
         "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": false,
-        "templateSet": "guava"
+        "dependencyOnly": true
       },
       {
+        "templateSet": "guava",
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
         "version": "1.0",
         "nugetVersion": "1.0.0.2",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
-        "dependencyOnly": false,
-        "templateSet": "guava"
+        "dependencyOnly": false
+      },
+      {
+        "templateSet": "findbugs",
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "version": "3.0.2",
+        "nugetVersion": "3.0.2",
+        "nugetId": "Xamarin.Google.Code.FindBugs",
+        "dependencyOnly": false
+      },
+      {
+        "templateSet": "checkerframework",
+        "groupId": "org.checkerframework",
+        "artifactId": "checker-compat-qual",
+        "version": "2.5.5",
+        "nugetVersion": "2.5.5",
+        "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual",
+        "dependencyOnly": false
+      },
+      {
+        "templateSet": "errorprone",
+        "groupId": "com.google.errorprone",
+        "artifactId": "error_prone_annotations",
+        "version": "2.3.4",
+        "nugetVersion": "2.3.4",
+        "nugetId": "Xamarin.Google.ErrorProne.ErrorProneAnnotations",
+        "dependencyOnly": false
+      },
+      {
+        "templateSet": "j2objc",
+        "groupId": "com.google.j2objc",
+        "artifactId": "j2objc-annotations",
+        "version": "1.3",
+        "nugetVersion": "1.3.0",
+        "nugetId": "Xamarin.Google.J2Objc.J2ObjcAnnotations",
+        "dependencyOnly": false
       },
       {
         "groupId": "com.xamarin.androidx",
@@ -1459,6 +1495,62 @@
         "templates": [
           {
             "templateFile": "templates/guava/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "findbugs",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/findbugs/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "errorprone",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/errorprone/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "checkerframework",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/checkerframework/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "j2objc",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/j2objc/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
