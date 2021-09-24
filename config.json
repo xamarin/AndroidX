@@ -3,7 +3,6 @@
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
-    "excludedRuntimeDependencies": "com.google.crypto.tink.tink-android",
     "additionalProjects": [
       "source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
@@ -1166,6 +1165,15 @@
         "templateSet": "gson"
       },
       {
+        "groupId": "com.google.crypto.tink",
+        "artifactId": "tink-android",
+        "version": "1.6.1",
+        "nugetVersion": "1.6.1",
+        "nugetId": "Xamarin.Google.Crypto.Tink.Android",
+        "dependencyOnly": false,
+        "templateSet": "tink"
+      },
+      {
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxjava",
         "version": "2.2.10",
@@ -1442,6 +1450,20 @@
         "templates": [
           {
             "templateFile": "templates/rxjava/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "tink",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/tink/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
