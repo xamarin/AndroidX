@@ -1,9 +1,6 @@
 @{
   var assembly_name = string.IsNullOrEmpty(Model.AssemblyName) ? Model.NuGetPackageId : Model.AssemblyName;
-  
-  // We don't want our .jar file names to conflict, so we need ex: rxjava3.jar
-  var rx_version = Model.NuGetPackageId.Contains("RxJava3") ? "3" : "2";
-  
+    
   if (!Model.Metadata.TryGetValue("friendlyName", out string friendlyName)) { friendlyName = Model.NuGetPackageId.Replace("Xamarin.", ""); }
 }
 
@@ -49,14 +46,14 @@
     @foreach (var art in @Model.MavenArtifacts) {
     <Move 
       SourceFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" 
-      DestinationFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar"
+      DestinationFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar"
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar')" />
     }  
     
     <ItemGroup>
       @foreach (var art in @Model.MavenArtifacts) {
-      <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)@(rx_version)-@(art.MavenArtifactVersion)%(Extension)" />
-      <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)@(rx_version)-@(art.MavenArtifactVersion)%(Extension)" />
+      <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)-@(art.MavenArtifactVersion)%(Extension)" />
+      <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)-@(art.MavenArtifactVersion)%(Extension)" />
       }
     </ItemGroup>
   </Target>
