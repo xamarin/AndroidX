@@ -116,10 +116,11 @@
     </add-node>
 
     <remove-node
-        path="/api/package[@name='com.google.crypto.tink.proto']"
-        />
-    <remove-node
         path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']"
+        />
+    <!--        
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.proto']"
         />
     <remove-node
         path="/api/package[@name='com.google.crypto.tink.signature']"
@@ -138,6 +139,10 @@
         />
     <remove-node
         path="/api/package[@name='com.google.crypto.tink.streamingaead']"
+        />
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink']/class[@name='PrimitiveSet']/typeParameters"
         />
 
 </metadata>
