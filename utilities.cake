@@ -192,6 +192,8 @@ Task ("spell-check")
                 "AutoValue",
                 "ReactiveX",
                 "RxJava",
+                "Crypto",
+                "Tink",
            };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
