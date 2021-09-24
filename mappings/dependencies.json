@@ -549,7 +549,14 @@
       "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
       "dependencies": [
         "Xamarin.AndroidX.Core",
+        "Xamarin.Google.Crypto.Tink.Android",
         "Xamarin.Firebase.AppIndexing"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Crypto.Tink.Android",
+      "dependencies": [
+        "GoogleGson"
       ]
     },
     {
@@ -888,10 +895,6 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Migration.Tool",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Navigation.Common",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1148,7 +1151,8 @@
     {
       "id": "Xamarin.AndroidX.Security.SecurityCrypto",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation"
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Google.Crypto.Tink.Android"
       ]
     },
     {
