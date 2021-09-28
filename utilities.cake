@@ -254,12 +254,14 @@ Task ("namespace-check")
             FilePath[] files_androidx = GetFiles("./generated/**/Androidx.*.cs").ToArray();
             FilePath[] files_com = GetFiles("./generated/**/Com.*.cs").ToArray();
             FilePath[] files_org = GetFiles("./generated/**/Org.*.cs").ToArray();
-            FilePath[] files_io = GetFiles("./generated/**/Io.*.cs").ToArray();
+            FilePath[] files_io_1 = GetFiles("./generated/**/Io.*.cs").ToArray();
+            FilePath[] files_io_2 = GetFiles("./generated/**/IO.*.cs").ToArray();
 
             files = files.Concat(files_androidx.ToArray()).ToArray();
             files = files.Concat(files_com.ToArray()).ToArray();
             files = files.Concat(files_org.ToArray()).ToArray();
-            files = files.Concat(files_io.ToArray()).ToArray();
+            files = files.Concat(files_io_1.ToArray()).ToArray();
+            files = files.Concat(files_io_2.ToArray()).ToArray();
 
             if (files.Any())
             {
