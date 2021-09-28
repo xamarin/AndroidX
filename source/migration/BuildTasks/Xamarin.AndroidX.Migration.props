@@ -177,6 +177,8 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.WebKit" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Work.Runtime" />
         <_AndroidXAssembly Include="Xamarin.Google.Android.Material" />
+        <_AndroidXAssembly Include="Xamarin.Google.Code.FindBugs" />
+        <_AndroidXAssembly Include="Xamarin.Google.ErrorProne.ErrorProneAnnotations" />
         <_AndroidXAssembly Include="Xamarin.Jetbrains.Annotations" />
         <_AndroidXAssembly Include="Xamarin.Kotlin.StdLib" />
     </ItemGroup>
@@ -323,14 +325,18 @@
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.auto.value.auto-value-annotations" />
+        <_AndroidXMavenArtifact Include="com.google.code.findbugs.jsr305" />
         <_AndroidXMavenArtifact Include="com.google.code.gson.gson" />
+        <_AndroidXMavenArtifact Include="com.google.errorprone.error_prone_annotations" />
         <_AndroidXMavenArtifact Include="com.google.firebase.firebase-appindexing" />
         <_AndroidXMavenArtifact Include="com.google.guava.failureaccess" />
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
+        <_AndroidXMavenArtifact Include="com.google.j2objc.j2objc-annotations" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
+        <_AndroidXMavenArtifact Include="org.checkerframework.checker-compat-qual" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-reflect" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
