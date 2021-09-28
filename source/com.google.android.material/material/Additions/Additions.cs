@@ -174,6 +174,23 @@ namespace Google.Android.Material.TextField
     }
 }
 
+// Interface method parameter names were p0, fixing them would break these
+// property names, so add these so we have both property names.
+namespace Google.Android.Material.Navigation
+{
+    public partial class NavigationBarView
+    {
+        public partial class ItemSelectedEventArgs : EventArgs
+        {
+            public IMenuItem Item => P0;
+        }
+
+        public partial class ItemReselectedEventArgs : EventArgs
+        {
+            public IMenuItem Item => P0;
+        }
+    }
+}
 
 namespace Google.Android.Material.DatePicker
 {

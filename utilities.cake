@@ -16,8 +16,71 @@ string file_spell_errors = "./output/spell-errors.txt";
 List<string> spell_errors = null;
 JArray binderator_json_array = null;
 
+Task ("list-artifacts")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            Information("config.json list supported artifacts...");
+
+            List<string> lines1 = new List<string>();
+            List<string> lines2 = new List<string>();
+            string space = " ";
+            string dash = "-";
+            int width1 = 70;
+            int width2 = 20;
+
+            lines1.Add($"# Artifacts supported");
+            lines2.Add($"# Artifacts with versions supported");
+            lines1.Add(Environment.NewLine);
+            lines1.Add(Environment.NewLine);
+            lines2.Add(Environment.NewLine);
+            lines2.Add(Environment.NewLine);
+            lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
+            lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
+            lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
+            lines2.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|");
+
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+
+                string group_id  	= (string) jo["groupId"];
+                string artifact_id  = (string) jo["artifactId"];
+                string artifact_v   = (string) jo["version"];
+                string nuget_id  	= (string) jo["nugetId"];
+                string nuget_v  	= (string) jo["nugetVersion"];
+
+                string maven = $"{group_id}:{artifact_id}";
+                string nuget = $"{nuget_id}";
+                string line1 = $@"|{maven.PadRight(width1)}|{nuget.PadRight(width1)}|";
+                string line2 = $@"|{maven.PadRight(width1)}|{artifact_v.PadRight(width2)}|{nuget.PadRight(width1)}|{nuget_v.PadRight(width2)}|";
+
+                lines1.Add(line1);
+                lines2.Add(line2);
+            }
+
+            EnsureDirectoryExists("./output/");
+			System.IO.File.WriteAllLines($"./output/artifact-list.md", lines1.ToArray());
+			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions.md", lines2.ToArray());
+			System.IO.File.WriteAllLines($"./output/artifact-list-{DateTime.Now.ToString("yyyyMMdd")}.md", lines1.ToArray());
+			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions-{DateTime.Now.ToString("yyyyMMdd")}.md", lines2.ToArray());
+
+        }
+    );
+
 Task ("spell-check")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -36,7 +99,7 @@ Task ("spell-check")
             };
             foreach(string file_dictionary in files_dictionaries)
             {
-                string url_full = url + System.Uri.EscapeDataString(file_dictionary); 
+                string url_full = url + System.Uri.EscapeDataString(file_dictionary);
                 Information($"Downloading ");
                 Information($"      {url_full}");
                 if (!FileExists($"./externals/{file_dictionary}"))
@@ -112,7 +175,26 @@ Task ("spell-check")
                 "Ktx",
                 "RxJava2",
                 "RxJava3",
-            };
+                "GoogleShortcuts",
+                "WindowJava",
+                "Startup",
+                "StartupRuntime",
+                "Kotlin",
+                "StdLib",
+                "Jdk7",
+                "Jdk8",
+                "Jetbrains",
+                "KotlinX",
+                "Coroutines",
+                "Jvm",
+                "GoogleGson",
+                "Rx2",
+                "AutoValue",
+                "ReactiveX",
+                "RxJava",
+                "Crypto",
+                "Tink",
+           };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
             using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
@@ -165,7 +247,7 @@ Task ("spell-check")
     );
 
 Task ("namespace-check")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -205,7 +287,7 @@ Task("binderate-diff")
 			EnsureDirectoryExists("./output/");
 
 			// "git diff -U999999 main:config.json config.json" > ./output/config.json.diff-from-main.txt"
-			string process = "git"; 
+			string process = "git";
 			string process_args = "diff -U999999 main:config.json config.json";
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
@@ -221,7 +303,7 @@ Task("binderate-diff")
 
 Task ("api-diff-markdown-info-pr")
     .IsDependentOn("binderate-diff")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -242,7 +324,7 @@ Task ("api-diff-markdown-info-pr")
                 {
                     idx_start = i;
                 }
-                                
+
                 if(line.Contains("dependencyOnly"))
                 {
                     if (line.StartsWith("-"))
@@ -357,12 +439,66 @@ string ParseDiffLine(string line, string name)
                     ;
 }
 
+Task ("api-diff-analysis")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            DirectoryPathCollection directories = GetSubDirectories("./output/api-diff");
+            Dictionary<string, string>  nugets_modified = new Dictionary<string, string>();
+
+            foreach(DirectoryPath d in directories)
+            {
+                string d_name = d.GetDirectoryName();
+
+                Information( $"Directory    = {d}");
+                Information( $"     nugetId    = {d.GetDirectoryName()}");
+
+                string groupId      = null;
+                string artifactId   = null;
+                string nugetId      = null;
+                string nugetVersion = null;
+                // no guarantees thta config.json is sorted, so linear "search"
+                // TODO: sort + (LINQ or binary serch)
+                foreach(JObject jo in binderator_json_array[0]["artifacts"])
+                {
+                    groupId      = (string) jo["groupId"];
+                    artifactId   = (string) jo["artifactId"];
+                    nugetId      = (string) jo["nugetId"];
+                    nugetVersion = (string) jo["nugetVersion"];
+
+                    if (nugetId == d_name)
+                    {
+                        Information( $"     groupId                     = {groupId}");
+                        Information( $"     artifactId                  = {artifactId}");
+                        Information( $"     artifactId  fully qualified = {groupId}.{artifactId}");
+
+                        nugets_modified.Add(d_name, $"{groupId}.{artifactId}");
+                    }
+                }
+            }
+
+            string[] lines = nugets_modified.Select(kv => kv.Key + Environment.NewLine + "\t" + kv.Value).ToArray();
+            System.IO.File.WriteAllLines("./output/nugets-with-changed-APIs.md", lines);
+
+            return;
+        }
+    );
+
 Task ("read-analysis-files")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
-    .Does 
+    .IsDependentOn ("api-diff-analysis")
+    .IsDependentOn ("list-artifacts")
+    .Does
     (
         () =>
         {
@@ -374,6 +510,7 @@ Task ("read-analysis-files")
                 "./output/missing_dotnet_override_type.csv",
                 "./output/missing_dotnet_type.csv",
                 "./output/missing_java_type.csv",
+                "./output/nugets-with-changed-APIs.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
@@ -399,7 +536,7 @@ Task("dependencies")
     (
         () =>
         {
-            if (!(binderator_json_array?.Count > 0)) 
+            if (!(binderator_json_array?.Count > 0))
             {
                 using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
                 {

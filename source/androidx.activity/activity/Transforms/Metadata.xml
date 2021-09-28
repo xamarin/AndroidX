@@ -321,5 +321,17 @@
         path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.RequestMultiplePermissions']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
         />
 
+    <attr
+        path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.CaptureVideo']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
 
+    <attr
+        path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.CaptureVideo']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.net.Uri']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
 </metadata>
