@@ -1,3 +1,15 @@
 ﻿<metadata>
-  
+    <attr
+        path="/api/package[@name='com.google.errorprone.annotations']"
+        name="managedName"
+        >
+        Xamarin.Google.ErrorProne.Annotations
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.errorprone.annotations.concurrent']"
+        name="managedName"
+        >
+        Xamarin.Google.ErrorProne.Annotations.Concurrent
+    </attr>
+    
 </metadata>
