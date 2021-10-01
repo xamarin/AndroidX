@@ -56,7 +56,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework);buildTransitive\$(TargetFramework)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
   </ItemGroup>
 
   <ItemGroup>
