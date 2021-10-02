@@ -69,17 +69,18 @@
             >
       <method
               visibility="public" static="false" abstract="false" return="java.lang.Object" name="toBuilder"
-              deprecated="not deprecated" final="false" bridge="false" native="false" 
+              deprecated="not deprecated" final="false" bridge="false" native="false"
               synchronized="false" synthetic="false"
               >
       </method>
 
       <method
-              visibility="public" static="false" abstract="false" return="java.lang.Object" name="newBuilderForType" 
+              visibility="public" static="false" abstract="false" return="java.lang.Object" name="newBuilderForType"
               deprecated="not deprecated" final="false" bridge="false" native="false"
               synchronized="false" synthetic="false"
               >
       </method>
+
     </add-node>
 
     <attr
@@ -96,7 +97,13 @@
         Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal.IProtobufList
     </attr>
     <attr
-        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='Internal.BooleanList']/method[@name='mutableCopyWithCapacity' and count(parameter)=1 and parameter[1][@type='int']]"
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface/method[@name='mutableCopyWithCapacity' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal.IProtobufList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class/method[@name='mutableCopyWithCapacity' and count(parameter)=1 and parameter[1][@type='int']]"
         name="managedReturn"
         >
         Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal.IProtobufList
@@ -116,33 +123,336 @@
     </add-node>
 
     <remove-node
-        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']"
-        />
-    <!--        
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.proto']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.signature']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.prf']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.aead']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.daead']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.hybrid']"
-        />
-    <remove-node
-        path="/api/package[@name='com.google.crypto.tink.streamingaead']"
-        />
-    -->
-    <remove-node
         path="/api/package[@name='com.google.crypto.tink']/class[@name='PrimitiveSet']/typeParameters"
         />
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractMessageLite.Builder']"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite']/method[@name='newBuilderForType' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='getDefaultInstanceForType' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Shaded.Protobuf.IMessageLite
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class/method[@name='getDefaultInstanceForType' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Shaded.Protobuf.IMessageLite
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='buildPartial' and count(parameter)=0]"
+        name="override"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class/method[@name='buildPartial' and count(parameter)=0]"
+        name="final"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class/method[@name='buildPartial' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface/method[@name='buildPartial' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class/method[@name='write']"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']"
+        name="abstract"
+        >
+        false
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='ByteOutput']/method[@name='writeLazy']"
+        name="abstract"
+        >
+        true
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/interface[@name='EncryptedKeysetOrBuilder']/method[@name='getEncryptedKeyset' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.GeneratedExtension']/method[@name='getDefaultValue' and count(parameter)=0]"
+        name="propertyName"
+        >
+        RawDefaultValue
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.GeneratedExtension']/method[@name='getDefaultValue' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='EncryptedKeyset.Builder']/method[@name='getEncryptedKeyset' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractProtobufList']/method[@name='retainAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;?&gt;']]"
+        />
+        
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractProtobufList']/method[@name='removeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;?&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='LazyStringArrayList']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='LazyStringArrayList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='build' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='clear' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='clear' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='clear' and count(parameter)=0]"
+        name="override"
+        >
+        true
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='KeyData.Builder']/method[@name='getKeyMaterialType' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/interface[@name='KeyDataOrBuilder']/method[@name='getKeyMaterialType' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='CodedOutputStream']/method[@name='writeLazy']"
+        name="abstract"
+        >
+        false			 
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='FieldSet']/typeParameters"
+        name="abstract"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='ByteString']/method[@name='iterator' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Util.IIterator
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractMessageLite.Builder']"
+        name="abstract"
+        >			 
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='UnmodifiableLazyStringList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='mergeFrom']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='mergeFrom']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='mergeFrom']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='MapFieldLite']/method[@name='entrySet' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.ICollection
+    </attr>
+
+
+    <add-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.ExtendableBuilder']"
+        >			 
+        <method abstract="true" deprecated="not deprecated" final="false" name="clear" 
+         bridge="false" native="false" return="com.google.crypto.tink.shaded.protobuf.MessageLite.Builder" 
+         static="false" synchronized="false" synthetic="false" visibility="public"
+         >
+        </method>
+        <method abstract="true" deprecated="not deprecated" final="false" name="build" 
+         bridge="false" native="false" return="com.google.crypto.tink.shaded.protobuf.MessageLite" 
+          static="false" synchronized="false" synthetic="false" visibility="public"
+         >
+        </method>						 
+    </add-node>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='build' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='buildPartial' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='clear' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='FieldSet']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+    <!--
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractParser']/method[@name='parsePartialFrom' and count(parameter)=2 and parameter[1][@type='java.io.InputStream'] and parameter[2][@type='com.google.crypto.tink.shaded.protobuf.ExtensionRegistryLite']]/parameter[1]"
+        name="managedType"
+        >
+        Xamarin.Google.Crypto.Tink.Shaded.Protobuf.CodedInputStream
+    </attr>
+    -->
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractMessageLite.Builder']/method[@name='clone' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='clone' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite.Builder']/method[@name='clone' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class/method[@name='getDefaultInstanceForType' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface/method[@name='getDefaultInstanceForType' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+
+    <add-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='AbstractParser']"
+        >
+        <method abstract="false" deprecated="not deprecated" final="false" name="parsePartialFrom" 
+            bridge="false" native="false" return="MessageType" jni-return="TMessageType;" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="input" type="com.google.crypto.tink.shaded.protobuf.CodedInputStream" 
+            ></parameter>
+            <parameter name="extensionRegistry" type="com.google.crypto.tink.shaded.protobuf.ExtensionRegistryLite" 
+            ></parameter>
+            <exception name="InvalidProtocolBufferException" type="com.google.crypto.tink.shaded.protobuf.InvalidProtocolBufferException"></exception>
+        </method>
+
+    </add-node>
+
+    <!--
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='Internal.MapAdapter']/method[@name='entrySet' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.ICollection &lt; Java.Util.IMapEntry &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='MapFieldLite']/method[@name='entrySet' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='LazyStringArrayList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='Internal.MapAdapter']/method[@name='entrySet' and count(parameter)=0]"
+    >
+    </remove-node>
+
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='UnmodifiableLazyStringList']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+    >
+    </remove-node>
 
 </metadata>
