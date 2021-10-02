@@ -10,7 +10,7 @@ namespace Xamarin.Google.Crypto.Tink.Shaded.Protobuf
 	// [global::Android.Runtime.Register ("com/google/crypto/tink/shaded/protobuf/LazyStringArrayList", DoNotGenerateAcw=true)]
 	public partial class LazyStringArrayList //: global::Java.Util.AbstractList, global::Xamarin.Google.Crypto.Tink.Shaded.Protobuf.ILazyStringList, global::Java.Util.IRandomAccess {
     {
-		//[Register ("get", "(I)Ljava/lang/Object;", "GetGet_IHandler")]
+		[Register ("get", "(I)Ljava/lang/Object;", "GetGet_IHandler")]
 		public override unsafe Java.Lang.Object Get (int index)
 		{
 			const string __id = "get.(I)Ljava/lang/String;";
