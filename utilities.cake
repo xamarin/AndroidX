@@ -17,7 +17,7 @@ List<string> spell_errors = null;
 JArray binderator_json_array = null;
 
 Task ("spell-check")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -36,7 +36,7 @@ Task ("spell-check")
             };
             foreach(string file_dictionary in files_dictionaries)
             {
-                string url_full = url + System.Uri.EscapeDataString(file_dictionary); 
+                string url_full = url + System.Uri.EscapeDataString(file_dictionary);
                 Information($"Downloading ");
                 Information($"      {url_full}");
                 if (!FileExists($"./externals/{file_dictionary}"))
@@ -116,6 +116,15 @@ Task ("spell-check")
                 "WindowJava",
                 "Startup",
                 "StartupRuntime",
+		        "MaterialIcons",
+		        "Saveable",
+		        "Util",
+		        "ProfileInstaller",
+		        "Kotlin",
+		        "StdLib",
+		        "Jdk7",
+		        "Jdk8",
+		        "Jetbrains",
             };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
@@ -169,7 +178,7 @@ Task ("spell-check")
     );
 
 Task ("namespace-check")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -209,7 +218,7 @@ Task("binderate-diff")
 			EnsureDirectoryExists("./output/");
 
 			// "git diff -U999999 main:config.json config.json" > ./output/config.json.diff-from-main.txt"
-			string process = "git"; 
+			string process = "git";
 			string process_args = "diff -U999999 main:config.json config.json";
 			IEnumerable<string> redirectedStandardOutput;
 			ProcessSettings process_settings = new ProcessSettings ()
@@ -225,7 +234,7 @@ Task("binderate-diff")
 
 Task ("api-diff-markdown-info-pr")
     .IsDependentOn("binderate-diff")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -246,7 +255,7 @@ Task ("api-diff-markdown-info-pr")
                 {
                     idx_start = i;
                 }
-                                
+
                 if(line.Contains("dependencyOnly"))
                 {
                     if (line.StartsWith("-"))
@@ -362,7 +371,7 @@ string ParseDiffLine(string line, string name)
 }
 
 Task ("api-diff-analysis")
-    .Does 
+    .Does
     (
         () =>
         {
@@ -418,8 +427,8 @@ Task ("read-analysis-files")
     .IsDependentOn ("api-diff-markdown-info-pr")
     .IsDependentOn ("namespace-check")
     .IsDependentOn ("spell-check")
-    .IsDependentOn ("api-diff-analysis")    
-    .Does 
+    .IsDependentOn ("api-diff-analysis")
+    .Does
     (
         () =>
         {
@@ -457,7 +466,7 @@ Task("dependencies")
     (
         () =>
         {
-            if (!(binderator_json_array?.Count > 0)) 
+            if (!(binderator_json_array?.Count > 0))
             {
                 using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
                 {
