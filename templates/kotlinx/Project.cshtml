@@ -1,0 +1,72 @@
+@{
+  var friendlyName = "Xamarin.KotlinX.Coroutines";
+  if (Model.Metadata.TryGetValue("friendlyName", out string name)) {
+    friendlyName += " " + name;
+  }
+}
+<Project Sdk="Xamarin.Legacy.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+    <RootNamespace>Xamarin.KotlinX.Coroutines.Core</RootNamespace>
+    @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
+    <AssemblyName>@(Model.AssemblyName)</AssemblyName>
+    } else {
+    <AssemblyName>@(Model.NuGetPackageId)</AssemblyName>
+    }
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>@(Model.NuGetPackageId)</PackageId>
+    <Title>@(Model.NuGetPackageId) reference library for Xamarin.Android</Title>
+    <PackageDescription>Xamarin.Android binding for @(Model.NuGetPackageId.Replace("Xamarin", ""))</PackageDescription>
+    <Authors>Microsoft</Authors>
+    <Owners>Microsoft</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2083771</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar" Visible="false" />
+    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
+    }
+  </ItemGroup>
+
+  <ItemGroup>
+    @foreach (var dep in @Model.NuGetDependencies) {
+      if (dep.IsProjectReference) {
+    <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
+      } else {
+    <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+      }
+    }
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\templates\kotlinx\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\kotlinx\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+</Project>

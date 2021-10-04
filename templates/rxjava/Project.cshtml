@@ -1,0 +1,87 @@
+@{
+  var assembly_name = string.IsNullOrEmpty(Model.AssemblyName) ? Model.NuGetPackageId : Model.AssemblyName;
+  
+  // We don't want our .jar file names to conflict, so we need ex: rxjava3.jar
+  var rx_version = Model.NuGetPackageId.Contains("RxJava3") ? "3" : "2";
+  
+  if (!Model.Metadata.TryGetValue("friendlyName", out string friendlyName)) { friendlyName = Model.NuGetPackageId.Replace("Xamarin.", ""); }
+}
+
+<Project Sdk="Xamarin.Legacy.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+    <RootNamespace>ReactiveX</RootNamespace>
+    <AssemblyName>@(assembly_name)</AssemblyName>
+    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+    <!--
+      No warnings for:
+       - CS0618: 'member' is obsolete: 'text'
+       - CS0109: The member 'member' does not hide an inherited member. The new keyword is not required
+       - CS0114: 'function1' hides inherited member 'function2'. To make the current method override that implementation, add the override keyword. Otherwise add the new keyword.
+       - CS0628: 'member' : new protected member declared in sealed class
+       - CS0108: 'member1' hides inherited member 'member2'. Use the new keyword if hiding was intended.
+       - CS0809: Obsolete member 'member' overrides non-obsolete member 'member'
+    -->
+    <NoWarn>0618;0109;0114;0628;0108;0809</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>@(Model.NuGetPackageId)</PackageId>
+    <Title>@(friendlyName) for Xamarin.Android</Title>
+    <PackageDescription>Xamarin.Android binding for @(friendlyName)</PackageDescription>
+    <Authors>Microsoft</Authors>
+    <Owners>Microsoft</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2083771</PackageProjectUrl>
+    <PackageLicenseUrl>https://aka.ms/AAdvvt0</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+  </PropertyGroup>
+
+  <Target Name="RenameJars" BeforeTargets="PrepareForBuild">
+    <!-- We want the jar embedded as rxjava-3.0.1.jar, so it doesn't conflict with other versions -->
+    @foreach (var art in @Model.MavenArtifacts) {
+    <Move 
+      SourceFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" 
+      DestinationFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar"
+      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar')" />
+    }      
+  </Target>
+
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)%(Extension)" />
+    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\*-sources.jar" Link="Jars\%(Filename)%(Extension)" />
+    }
+  </ItemGroup>
+
+  <ItemGroup>
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    @foreach (var dep in @Model.NuGetDependencies) {
+      if (dep.IsProjectReference) {
+    <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
+      } else {
+    <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+      }
+    }
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\templates\rxjava\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\rxjava\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+</Project>

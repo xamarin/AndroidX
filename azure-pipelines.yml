@@ -6,11 +6,12 @@ pr:
   - main
   
 variables:
-  AndroidBinderatorVersion: 0.4.8
+  AndroidBinderatorVersion: 0.5.0
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-preview.7.21379.14
-  LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d16-10-macos
-  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d16-10-windows
+  DotNetVersion: 6.0.100-rc.1.21463.6
+  # NOTE: there wasn't a public release of 16.11 for macOS
+  LegacyXamarinAndroidPkg: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4941337/d16-11/7776c9f1c8fac303c3aa57867825990850be0384/xamarin.android-11.4.0.5.pkg
+  LegacyXamarinAndroidVsix: https://download.visualstudio.microsoft.com/download/pr/7372b89a-b719-426c-9916-c33cbc6c7a61/45c38957fdcacfbee95be95ee40c4f5a4cc9ace69416625ad26e2da83b176941/Xamarin.Android.Sdk-11.4.0.5.vsix
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
@@ -32,8 +33,8 @@ jobs:
   - template: .ci/build.yml@components
     parameters:
       timeoutInMinutes: 120
-      validPackagePrefixes: [ 'Xamarin' ]   
-      areaPath: 'DevDiv\Xamarin SDK\Android'
+      validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
+      areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
@@ -41,6 +42,12 @@ jobs:
             version: $(DotNetVersion)
         - pwsh: |
             dotnet workload install android
+        - task: JavaToolInstaller@0
+          inputs:
+            versionSpec: '11'
+            jdkArchitectureOption: 'x64'
+            jdkSourceOption: 'PreInstalled'
+
       preBuildSteps:
         - pwsh: |
             dotnet tool uninstall --global Cake.Tool

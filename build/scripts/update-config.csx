@@ -1,8 +1,8 @@
-#! "netcoreapp3.1"
+#! "net5.0"
 
-#r "nuget: MavenNet, 2.2.0"
-#r "nuget: Newtonsoft.Json, 12.0.3"
-#r "nuget: NuGet.Versioning, 5.8.0"
+#r "nuget: MavenNet, 2.2.13"
+#r "nuget: Newtonsoft.Json, 13.0.1"
+#r "nuget: NuGet.Versioning, 5.11.0"
 
 // Usage:
 //   dotnet tool install -g dotnet-script
@@ -31,17 +31,21 @@ var config = JsonConvert.DeserializeObject<List<MyArray>> (config_json);
 var should_update = Args.Count > 1 && Args[1].ToLowerInvariant () == "update";
 var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
 var serializer_settings = new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore };
+serializer_settings.Converters.Add (new Newtonsoft.Json.Converters.StringEnumConverter ());
+
+// Keep file sorted by dependency only, then by groupid then by artifactid
+foreach (var array in config)
+	array.Artifacts.Sort ((ArtifactModel a, ArtifactModel b) => string.Compare ($"{a.DependencyOnly}-{a.GroupId} {a.ArtifactId}", $"{b.DependencyOnly}-{b.GroupId} {b.ArtifactId}"));
 
 // Query Maven
-var repo = MavenRepository.FromGoogle ();
-await repo.Refresh ();
+await MavenFactory.Initialize (config);
 
 Console.WriteLine ("| Package (* = Needs Update)                                   | Currently Bound | Latest Stable   |");
 Console.WriteLine ("|--------------------------------------------------------------|-----------------|-----------------|");
 
 // Find the Maven artifact for each package in our configuration file
-foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
-	var a = FindMavenArtifact (repo, art);
+foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
+	var a = FindMavenArtifact (config, art);
 
 	if (a is null)
 		continue;
@@ -97,14 +101,15 @@ foreach (var art in config[0].Artifacts.Where(a => !a.DependencyOnly)) {
 
 	if (should_update || should_minor_bump)
 	{
-		// Write update config.json back to disk
+		// Write updated config.json back to disk
 		var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
 		File.WriteAllText (config_file, output + Environment.NewLine);
 	}
 }
 
-static Artifact FindMavenArtifact (MavenRepository repo, ArtifactModel artifact)
+static Artifact FindMavenArtifact (List<MyArray> config, ArtifactModel artifact)
 {
+	var repo = MavenFactory.GetMavenRepository (config, artifact);
 	var group = repo.Groups.FirstOrDefault (g => artifact.GroupId == g.Id);
 
 	return group?.Artifacts?.FirstOrDefault (a => artifact.ArtifactId == a.Id);
@@ -120,7 +125,7 @@ static bool NeedsUpdate (ArtifactModel model, Artifact artifact)
 		return false;
 
 	// Already on latest
-	var current = SemanticVersion.Parse (model.Version);
+	var current = GetVersion (model.Version);
 
 	if (latest <= current)
 		return false;
@@ -154,7 +159,81 @@ static SemanticVersion GetVersion (string s)
 	if (version.Count (c => c == '.') == 1)
 		version += ".0";
 
+	// SemanticVersion can't handle more than 3 parts, like '0.11.91.1'
+	if (version.Count (c => c == '.') > 2)
+		return new SemanticVersion (0, 0, 0);
+
 	return SemanticVersion.Parse (version + tag);
+}
+
+public static class MavenFactory
+{
+	static readonly Dictionary<string, MavenRepository> repositories = new Dictionary<string, MavenRepository> ();
+
+	public static async Task Initialize (List<MyArray> config)
+	{
+		var artifact_mavens = new List<(MavenRepository, ArtifactModel)> ();
+
+		foreach (var artifact in config[0].Artifacts.Where (ma => !ma.DependencyOnly)) {
+			var (type, location) = GetMavenInfoForArtifact (config, artifact);
+			var repo = GetOrCreateRepository (type, location);
+
+			artifact_mavens.Add ((repo, artifact));
+		}
+
+		foreach (var maven_group in artifact_mavens.GroupBy (a => a.Item1)) {
+			var maven = maven_group.Key;
+			var artifacts = maven_group.Select (a => a.Item2);
+
+			foreach (var artifact_group in artifacts.GroupBy (a => a.GroupId)) {
+				var gid = artifact_group.Key;
+				var artifact_ids = artifact_group.Select (a => a.ArtifactId).ToArray ();
+
+				await maven.Populate (gid, artifact_ids);
+			}
+		}
+	}
+
+	public static MavenRepository GetMavenRepository (List<MyArray> config, ArtifactModel artifact)
+	{
+		var (type, location) = GetMavenInfoForArtifact (config, artifact);
+		var repo = GetOrCreateRepository (type, location);
+
+		return repo;
+	}
+
+	static (MavenRepoType type, string location) GetMavenInfoForArtifact (List<MyArray> config, ArtifactModel artifact)
+	{
+		var template = config[0].GetTemplateSet (artifact.TemplateSet);
+
+		if (template.MavenRepositoryType.HasValue)
+			return (template.MavenRepositoryType.Value, template.MavenRepositoryLocation);
+
+		return (config[0].MavenRepositoryType, config[0].MavenRepositoryLocation);
+	}
+
+	static MavenRepository GetOrCreateRepository (MavenRepoType type, string location)
+	{
+		var key = $"{type}|{location}";
+
+		if (repositories.TryGetValue (key, out MavenRepository repository))
+			return repository;
+
+		MavenRepository maven;
+
+		if (type == MavenRepoType.Directory)
+			maven = MavenRepository.FromDirectory (location);
+		else if (type == MavenRepoType.Url)
+			maven = MavenRepository.FromUrl (location);
+		else if (type == MavenRepoType.MavenCentral)
+			maven = MavenRepository.FromMavenCentral ();
+		else
+			maven = MavenRepository.FromGoogle ();
+
+		repositories.Add (key, maven);
+
+		return maven;
+	}
 }
 
 // Configuration File Model
@@ -165,6 +244,21 @@ public class Template
 
 	[JsonProperty ("outputFileRule")]
 	public string OutputFileRule { get; set; }
+}
+
+public class TemplateSetModel
+{
+	[JsonProperty ("name")]
+	public string Name { get; set; }
+
+	[JsonProperty ("mavenRepositoryType")]
+	public MavenRepoType? MavenRepositoryType { get; set; }
+
+	[JsonProperty ("mavenRepositoryLocation")]
+	public string MavenRepositoryLocation { get; set; } = null;
+
+	[JsonProperty ("templates")]
+	public List<Template> Templates { get; set; } = new List<Template> ();
 }
 
 public class ArtifactModel
@@ -190,12 +284,23 @@ public class ArtifactModel
 
 	[JsonProperty ("excludedRuntimeDependencies")]
 	public string ExcludedRuntimeDependencies { get; set; }
+
+	[JsonProperty ("templateSet")]
+	public string TemplateSet { get; set; }
+
+	[JsonProperty ("metadata")]
+	public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string> ();
+
+	public bool ShouldSerializeMetadata () => Metadata.Any ();
 }
 
 public class MyArray
 {
 	[JsonProperty ("mavenRepositoryType")]
-	public string MavenRepositoryType { get; set; }
+	public MavenRepoType MavenRepositoryType { get; set; }
+
+	[JsonProperty ("mavenRepositoryLocation")]
+	public string MavenRepositoryLocation { get; set; }
 
 	[JsonProperty ("slnFile")]
 	public string SlnFile { get; set; }
@@ -214,10 +319,40 @@ public class MyArray
 
 	[JsonProperty ("artifacts")]
 	public List<ArtifactModel> Artifacts { get; set; }
+
+	[JsonProperty ("templateSets")]
+	public List<TemplateSetModel> TemplateSets { get; set; } = new List<TemplateSetModel> ();
+
+	public TemplateSetModel GetTemplateSet (string name)
+	{
+		// If an artifact doesn't specify a template set, first try using the original
+		// single template list if it exists.  If not, look for a template set called "default".
+		if (string.IsNullOrEmpty (name)) {
+			if (Templates.Any ())
+				return new TemplateSetModel { Templates = Templates };
+
+			name = "default";
+		}
+
+		var set = TemplateSets.FirstOrDefault (s => s.Name == name);
+
+		if (set == null)
+			throw new ArgumentException ($"Could not find requested template set '{name}'");
+
+		return set;
+	}
 }
 
 public class Root
 {
 	[JsonProperty ("MyArray")]
 	public List<MyArray> MyArray { get; set; }
+}
+
+public enum MavenRepoType
+{
+	Url,
+	Directory,
+	Google,
+	MavenCentral
 }
