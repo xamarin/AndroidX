@@ -1,11 +1,80 @@
 ﻿<metadata>
-    <!--
     <attr 
-        path="/api/package[@name='androidx.compose']" 
+        path="/api/package[@name='androidx.compose.runtime']" 
         name="managedName"
         >
-        AndroidX.Compose
+        AndroidX.Compose.Runtime
     </attr>
-    -->
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.collection']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.Collection
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.adapters']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Adapters
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableList']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Implementations.ImmutableList
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableMap']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Implementations.ImmutableMap
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableSet']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Implementations.ImmutableSet
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.persistentOrderedMap']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Implementations.PersistentOrderedMap
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.persistentOrderedSet']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Implementations.PersistentOrderedSet
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.internal']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.snapshots']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.Snapshots
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.tooling']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.Tooling
+    </attr>
 
 </metadata>

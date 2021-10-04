@@ -1,17 +1,12 @@
 ﻿<metadata>
     <!--
-    <attr 
-        path="/api/package[@name='package']" 
-        name="managedName"
-        >
-        Package
-    </attr>
+    ProfileInstallers class exists!
     -->
     <attr 
         path="/api/package[@name='androidx.profileinstaller']" 
         name="managedName"
         >
-        AndroidX.ProfileInstaller
+        AndroidX.ProfileInstallers
     </attr>    
     
     

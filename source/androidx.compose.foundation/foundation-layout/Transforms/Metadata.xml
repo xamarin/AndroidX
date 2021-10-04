@@ -1,3 +1,28 @@
 ﻿<metadata>
 
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.layout']/class[@name='PaddingValues.Absolute']/method[@name='calculateBottomPadding-D9Ej5fM' and count(parameter)=0]"
+        name="managedName"
+        >
+        CalculateBottomPadding
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.layout']/class[@name='PaddingValues.Absolute']/method[@name='calculateLeftPadding-u2uoSUM' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.unit.LayoutDirection']]"
+        name="managedName"
+        >
+        CalculateLeftPadding
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.layout']/class[@name='PaddingValues.Absolute']/method[@name='calculateRightPadding-u2uoSUM' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.unit.LayoutDirection']]"
+        name="managedName"
+        >
+        CalculateRightPadding
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.layout']/class[@name='PaddingValues.Absolute']/method[@name='calculateTopPadding-D9Ej5fM' and count(parameter)=0]"
+        name="managedName"
+        >
+        CalculateTopPadding
+    </attr>
+
 </metadata>

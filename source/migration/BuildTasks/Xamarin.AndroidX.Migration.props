@@ -146,6 +146,7 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.Loader" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.LocalBroadcastManager" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Media" />
+        <_AndroidXAssembly Include="Xamarin.AndroidX.Media2.Widget" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.MediaRouter" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.MultiDex" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Palette" />
@@ -174,6 +175,8 @@
         <_AndroidXAssembly Include="Xamarin.AndroidX.WebKit" />
         <_AndroidXAssembly Include="Xamarin.AndroidX.Work.Runtime" />
         <_AndroidXAssembly Include="Xamarin.Google.Android.Material" />
+        <_AndroidXAssembly Include="Xamarin.Jetbrains.Annotations" />
+        <_AndroidXAssembly Include="Xamarin.Kotlin.StdLib" />
     </ItemGroup>
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
@@ -201,6 +204,25 @@
         <_AndroidXMavenArtifact Include="androidx.cardview.cardview" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection" />
         <_AndroidXMavenArtifact Include="androidx.collection.collection-ktx" />
+        <_AndroidXMavenArtifact Include="androidx.compose.animation.animation" />
+        <_AndroidXMavenArtifact Include="androidx.compose.animation.animation-core" />
+        <_AndroidXMavenArtifact Include="androidx.compose.foundation.foundation" />
+        <_AndroidXMavenArtifact Include="androidx.compose.foundation.foundation-layout" />
+        <_AndroidXMavenArtifact Include="androidx.compose.material.material" />
+        <_AndroidXMavenArtifact Include="androidx.compose.material.material-icons-core" />
+        <_AndroidXMavenArtifact Include="androidx.compose.material.material-icons-extended" />
+        <_AndroidXMavenArtifact Include="androidx.compose.material.material-ripple" />
+        <_AndroidXMavenArtifact Include="androidx.compose.runtime.runtime" />
+        <_AndroidXMavenArtifact Include="androidx.compose.runtime.runtime-livedata" />
+        <_AndroidXMavenArtifact Include="androidx.compose.runtime.runtime-rxjava2" />
+        <_AndroidXMavenArtifact Include="androidx.compose.runtime.runtime-saveable" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-geometry" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-graphics" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-text" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-unit" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-util" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-viewbinding" />
         <_AndroidXMavenArtifact Include="androidx.concurrent.concurrent-futures" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout" />
         <_AndroidXMavenArtifact Include="androidx.constraintlayout.constraintlayout-core" />
@@ -281,6 +303,7 @@
         <_AndroidXMavenArtifact Include="androidx.preference.preference" />
         <_AndroidXMavenArtifact Include="androidx.preference.preference-ktx" />
         <_AndroidXMavenArtifact Include="androidx.print.print" />
+        <_AndroidXMavenArtifact Include="androidx.profileinstaller.profileinstaller" />
         <_AndroidXMavenArtifact Include="androidx.recommendation.recommendation" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview-selection" />
@@ -326,7 +349,11 @@
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-reflect" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib-common" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib-jdk7" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib-jdk8" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm" />

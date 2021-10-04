@@ -1,3 +1,96 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime']/interface[@name='Applier']/typeParameters" 
+        />
 
+
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toImmutableList']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toImmutableMap']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toImmutableSet']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toPersistentMap']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toPersistentHashMap']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toPersistentSet']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toPersistentHashSet']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toPersistentList']"
+        name="managedReturn"
+        >
+        Java.Util.ICollection
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateMap']/method[@name='getSize' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateMap']/method[@name='getValues' and count(parameter)=0]"
+        name="propertyName"
+        />
+
+
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateList']/method[@name='containsAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateList']/method[@name='removeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateList']/method[@name='retainAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateList']/method[@name='getSize' and count(parameter)=0]"
+        />
+
+
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateMap']"
+        />
+        
 </metadata>

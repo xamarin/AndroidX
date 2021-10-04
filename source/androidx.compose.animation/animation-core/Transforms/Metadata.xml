@@ -1,3 +1,92 @@
 ﻿<metadata>
 
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='DecayAnimation']/constructor[@name='DecayAnimation' and count(parameter)=4 and parameter[1][@type='androidx.compose.animation.core.DecayAnimationSpec&lt;T&gt;'] and parameter[2][@type='androidx.compose.animation.core.TwoWayConverter&lt;T, V&gt;'] and parameter[3][@type='T'] and parameter[4][@type='V']]"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/interface/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <!--
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    -->
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='TweenSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='SnapSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='KeyframesSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='SpringSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='RepeatableSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='FloatTweenSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='InfiniteRepeatableSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='FloatSpringSpec']/method[@name='vectorize']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='RepeatableSpec']/method[@name='vectorize' and count(parameter)=1 and parameter[1][@type='androidx.compose.animation.core.TwoWayConverter&lt;T, V&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='SnapSpec']/method[@name='vectorize' and count(parameter)=1 and parameter[1][@type='androidx.compose.animation.core.TwoWayConverter&lt;T, V&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/class[@name='InfiniteRepeatableSpec']/method[@name='vectorize' and count(parameter)=1 and parameter[1][@type='androidx.compose.animation.core.TwoWayConverter&lt;T, V&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/interface[@name='FiniteAnimationSpec']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/interface[@name='DecayAnimationSpec']"
+        />
+    <!--
+    -->        
+
+    <remove-node
+        path="/api/package[@name='androidx.compose.animation.core']/interface[@name='AnimationSpec']"
+        />
+
 </metadata>

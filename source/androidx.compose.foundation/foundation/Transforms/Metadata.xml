@@ -1,3 +1,69 @@
 ﻿<metadata>
 
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='RoundedCornerShapeKt']/method[@name='RoundedCornerShape-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        RoundedCornerShape1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='RoundedCornerShapeKt']/method[@name='RoundedCornerShape-a9UjIt4' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]"
+        name="managedName"
+        >
+        RoundedCornerShape1
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='CornerBasedShape']/method[@name='copy' and count(parameter)=4 and parameter[1][@type='androidx.compose.foundation.shape.CornerSize'] and parameter[2][@type='androidx.compose.foundation.shape.CornerSize'] and parameter[3][@type='androidx.compose.foundation.shape.CornerSize'] and parameter[4][@type='androidx.compose.foundation.shape.CornerSize']]"
+        name="abstract"
+        >
+        false
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='CutCornerShapeKt']/method[@name='CutCornerShape-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CutCornerShape1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='CutCornerShapeKt']/method[@name='CutCornerShape-a9UjIt4' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]"
+        name="managedName"
+        >
+        CutCornerShape1
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='CornerSizeKt']/method[@name='CornerSize-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CornerSize1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='AbsoluteRoundedCornerShapeKt']/method[@name='AbsoluteRoundedCornerShape-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        AbsoluteRoundedCornerShape1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='AbsoluteRoundedCornerShapeKt']/method[@name='AbsoluteRoundedCornerShape-a9UjIt4' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]"
+        name="managedName"
+        >
+        AbsoluteRoundedCornerShape1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='AbsoluteCutCornerShapeKt']/method[@name='AbsoluteCutCornerShape-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        AbsoluteCutCornerShape1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.foundation.shape']/class[@name='AbsoluteCutCornerShapeKt']/method[@name='AbsoluteCutCornerShape-a9UjIt4' and count(parameter)=4 and parameter[1][@type='float'] and parameter[2][@type='float'] and parameter[3][@type='float'] and parameter[4][@type='float']]"
+        name="managedName"
+        >
+        AbsoluteCutCornerShape1
+    </attr>
+
+
+
 </metadata>

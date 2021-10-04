@@ -1,3 +1,99 @@
 ﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='ConstraintsKt']/method[@name='constrain-4WqzIAM' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        ConstrainFromSize
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='ConstraintsKt']/method[@name='constrain-N9IONVI' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        ConstrainFromOtherConstraints
+    </attr>
+
+
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='Dp']/method[@name='compareTo-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='IntOffsetKt']/method[@name='minus-Nv-tHpc' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        Minus1
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='IntOffsetKt']/method[@name='minus-oCl6YwE' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        Minus2
+    </attr>
+
+
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='Dp']/method[@name='div-0680j_4' and count(parameter)=2 and parameter[1][@type='float'] and parameter[2][@type='float']]"
+        name="managedName"
+        >
+        Div1
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='Dp']/method[@name='div-u2uoSUM' and count(parameter)=2 and parameter[1][@type='float'] and parameter[2][@type='float']]"
+        name="managedName"
+        >
+        Div2
+    </attr>
+
+
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='IntOffsetKt']/method[@name='plus-Nv-tHpc' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        Plus1
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='IntOffsetKt']/method[@name='plus-oCl6YwE' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        Plus2
+    </attr>
+
+
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='IntRectKt']/method[@name='IntRect-E1MhUcY' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        IntRectFromTopLeftAndBottomRight
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/class[@name='IntRectKt']/method[@name='IntRect-VbeCjmY' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        IntRectFromOffsetAndSize
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/interface[@name='Density']/method[@name='toSp-0xMU5do' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        ToSp
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/interface[@name='Density']/method[@name='toSp-kPz2Gy4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        ToSp1
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.unit']/interface[@name='Density']/method[@name='toSp-kPz2Gy4' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        ToSp
+    </attr>
 
 </metadata>
