@@ -51,7 +51,7 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -93,10 +93,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\monoandroid90" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\net6.0-android30.0" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\monoandroid90" />
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="buildTransitive\net6.0-android30.0" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
   </ItemGroup>
 

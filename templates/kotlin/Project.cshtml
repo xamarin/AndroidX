@@ -7,7 +7,7 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>MonoAndroid9.0</TargetFramework>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>Xamarin.Kotlin</RootNamespace>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
@@ -56,7 +56,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="build\$(TargetFramework);buildTransitive\$(TargetFramework)" />
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
   </ItemGroup>
 
   <ItemGroup>
@@ -86,7 +86,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\kotlin\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\kotlin\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
   </ItemGroup>
 
 </Project>
