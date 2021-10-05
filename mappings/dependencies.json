@@ -1,26 +1,6 @@
 {
   "packages": [
     {
-      "id": "GoogleGson",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.Android.ReactiveStreams",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava",
-      "dependencies": [
-        "Xamarin.Android.ReactiveStreams"
-      ]
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-      "dependencies": [
-        "Xamarin.Android.ReactiveStreams"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Activity",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -796,14 +776,7 @@
       "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
       "dependencies": [
         "Xamarin.AndroidX.Core",
-        "Xamarin.Google.Crypto.Tink.Android",
         "Xamarin.Firebase.AppIndexing"
-      ]
-    },
-    {
-      "id": "Xamarin.Google.Crypto.Tink.Android",
-      "dependencies": [
-        "GoogleGson"
       ]
     },
     {
@@ -1042,12 +1015,6 @@
       ]
     },
     {
-      "id": "Xamarin.KotlinX.Coroutines.Core",
-      "dependencies": [
-        "Xamarin.KotlinX.Coroutines.Core.Jvm"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1055,7 +1022,7 @@
         "Xamarin.AndroidX.Lifecycle.Common",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.Android.ReactiveStreams"
+        "Xamarin.KotlinX.Coroutines.Android"
       ]
     },
     {
@@ -1066,19 +1033,10 @@
       ]
     },
     {
-      "id": "Xamarin.KotlinX.Coroutines.Android",
-      "dependencies": [
-        "Xamarin.Kotlin.StdLib.Jdk8",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Concurrent.Futures",
-        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.VersionedParcelable",
         "Xamarin.Google.Guava.ListenableFuture"
@@ -1214,10 +1172,7 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-      "dependencies": [
-        "Xamarin.Kotlin.StdLib.Common",
-        "Xamarin.Kotlin.StdLib.Jdk8"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Paging.Common.Ktx",
@@ -1258,12 +1213,7 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Rx2",
-      "dependencies": [
-        "Xamarin.Android.ReactiveX.RxJava",
-        "Xamarin.Kotlin.StdLib.Jdk8",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm",
-        "Xamarin.KotlinX.Coroutines.Reactive"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
@@ -1371,6 +1321,10 @@
       ]
     },
     {
+      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.AndroidX.Sqlite.Framework",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1386,8 +1340,7 @@
     {
       "id": "Xamarin.AndroidX.Security.SecurityCrypto",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Google.Crypto.Tink.Android"
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -1434,12 +1387,11 @@
       "id": "Xamarin.AndroidX.Wear",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.ConstraintLayout",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.RecyclerView",
-        "Xamarin.AndroidX.SwipeRefreshLayout",
-        "Xamarin.AndroidX.VersionedParcelable"
+        "Xamarin.AndroidX.SwipeRefreshLayout"
       ]
     },
     {
@@ -1483,7 +1435,6 @@
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.AndroidX.Sqlite.Framework",
         "Xamarin.AndroidX.Sqlite",
-        "Xamarin.AndroidX.Startup.StartupRuntime",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
@@ -1506,10 +1457,6 @@
       ]
     },
     {
-      "id": "Xamarin.Kotlin.StdLib.Common",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.Kotlin.StdLib.Jdk7",
       "dependencies": [
         "Xamarin.Kotlin.StdLib"
@@ -1520,21 +1467,6 @@
       "dependencies": [
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
-      ]
-    },
-    {
-      "id": "Xamarin.KotlinX.Coroutines.Jdk8",
-      "dependencies": [
-        "Xamarin.Kotlin.StdLib.Jdk8",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm"
-      ]
-    },
-    {
-      "id": "Xamarin.KotlinX.Coroutines.Reactive",
-      "dependencies": [
-        "Xamarin.Kotlin.StdLib.Jdk8",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm",
-        "Xamarin.Android.ReactiveStreams"
       ]
     }
   ]
