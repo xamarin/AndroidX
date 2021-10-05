@@ -76,5 +76,11 @@
         >
         AndroidX.Compose.Runtime.Tooling
     </attr>
-
+    <attr 
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.internal']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Runtime.external.KotlinX.Collections.Immutable.Internal
+    </attr>
+    
 </metadata>
