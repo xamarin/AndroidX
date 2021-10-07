@@ -1091,6 +1091,38 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-ongoing",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.Ongoing",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-input",
+        "version": "1.1.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.Input",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-phone-interactions",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.PhoneInteractions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-remote-interactions",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.webkit",
         "artifactId": "webkit",
         "version": "1.4.0",
