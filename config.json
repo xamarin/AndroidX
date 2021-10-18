@@ -325,32 +325,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.0.2",
-        "nugetVersion": "7.0.2.2",
+        "version": "7.0.3",
+        "nugetVersion": "7.0.3",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.0.2",
-        "nugetVersion": "7.0.2.2",
+        "version": "7.0.3",
+        "nugetVersion": "7.0.3",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.0.2",
-        "nugetVersion": "7.0.2.2",
+        "version": "7.0.3",
+        "nugetVersion": "7.0.3",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.0.2",
-        "nugetVersion": "7.0.2.2",
+        "version": "7.0.3",
+        "nugetVersion": "7.0.3",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -653,8 +653,8 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.4.2",
-        "nugetVersion": "1.4.2.2",
+        "version": "1.4.3",
+        "nugetVersion": "1.4.3",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
@@ -1125,16 +1125,16 @@
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.2",
+        "version": "2.7.0",
+        "nugetVersion": "2.7.0",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime-ktx",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.2",
+        "version": "2.7.0",
+        "nugetVersion": "2.7.0",
         "nugetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
         "dependencyOnly": false
       },
@@ -1185,8 +1185,8 @@
       {
         "groupId": "io.reactivex.rxjava3",
         "artifactId": "rxjava",
-        "version": "3.1.1",
-        "nugetVersion": "3.1.1.2",
+        "version": "3.1.2",
+        "nugetVersion": "3.1.2",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
         "templateSet": "rxjava"
