@@ -1119,8 +1119,9 @@
         "artifactId": "wear-remote-interactions",
         "version": "1.0.0",
         "nugetVersion": "1.0.0.0",
-        "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions",
-        "dependencyOnly": false
+        "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions",        
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "com.google.android.gms.play-services-basement,com.google.android.gms.play-services-wearable"
       },
       {
         "groupId": "androidx.webkit",
@@ -1340,6 +1341,15 @@
         "version": "1.5.2",
         "nugetVersion": "1.5.2.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx2",
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-guava",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Guava",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
       },
