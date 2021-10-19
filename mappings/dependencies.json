@@ -1215,6 +1215,49 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Wear.Input",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Wear.Ongoing",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.VersionedParcelable"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Wear.PhoneInteractions",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Wear",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Wear.RemoteInteractions",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Concurrent.Futures",
+        "Xamarin.Kotlin.StdLib",
+        "Xamarin.KotlinX.Coroutines.Guava",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Guava",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm",
+        "Xamarin.Google.Guava"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.WebKit",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1293,6 +1336,10 @@
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
       ]
+    },
+    {
+      "id": "Xamarin.Google.Guava",
+      "dependencies": []
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Jdk8",
