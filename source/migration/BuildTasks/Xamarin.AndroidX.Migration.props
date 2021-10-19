@@ -315,6 +315,10 @@
         <_AndroidXMavenArtifact Include="androidx.viewpager.viewpager" />
         <_AndroidXMavenArtifact Include="androidx.viewpager2.viewpager2" />
         <_AndroidXMavenArtifact Include="androidx.wear.wear" />
+        <_AndroidXMavenArtifact Include="androidx.wear.wear-input" />
+        <_AndroidXMavenArtifact Include="androidx.wear.wear-ongoing" />
+        <_AndroidXMavenArtifact Include="androidx.wear.wear-phone-interactions" />
+        <_AndroidXMavenArtifact Include="androidx.wear.wear-remote-interactions" />
         <_AndroidXMavenArtifact Include="androidx.webkit.webkit" />
         <_AndroidXMavenArtifact Include="androidx.window.window" />
         <_AndroidXMavenArtifact Include="androidx.window.window-extensions" />
@@ -341,6 +345,7 @@
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-android" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm" />
+        <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-guava" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-jdk8" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-reactive" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlinx.kotlinx-coroutines-rx2" />
