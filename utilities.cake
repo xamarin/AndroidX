@@ -194,6 +194,8 @@ Task ("spell-check")
                 "RxJava",
                 "Crypto",
                 "Tink",
+                "PhoneInteractions",
+                "RemoteInteractions",
            };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
