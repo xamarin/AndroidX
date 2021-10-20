@@ -1292,6 +1292,7 @@
     {
       "id": "Xamarin.AndroidX.Work.Runtime",
       "dependencies": [
+        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.AndroidX.Lifecycle.Service",

@@ -14,10 +14,10 @@ Xamarin.Android.Arch.Persistence.Db.Framework,Xamarin.AndroidX.Sqlite.Framework,
 Xamarin.Android.Arch.Persistence.Room.Common,Xamarin.AndroidX.Media2.Widget,Xamarin.Android.Arch.Persistence.Room.Common,Xamarin.AndroidX.Media2.Widget,1.2.0.2
 Xamarin.Android.Arch.Persistence.Room.Common,Xamarin.AndroidX.Room.Common,Xamarin.Android.Arch.Persistence.Room.Common,Xamarin.AndroidX.Room.Common,2.3.0.4
 Xamarin.Android.Arch.Persistence.Room.Runtime,Xamarin.AndroidX.Room.Runtime,Xamarin.Android.Arch.Persistence.Room.Runtime,Xamarin.AndroidX.Room.Runtime,2.3.0.4
-Xamarin.Android.Arch.Work.Runtime,Xamarin.AndroidX.Work.Runtime,Xamarin.Android.Arch.Work.Runtime,Xamarin.AndroidX.Work.Runtime,2.6.0.2
+Xamarin.Android.Arch.Work.Runtime,Xamarin.AndroidX.Work.Runtime,Xamarin.Android.Arch.Work.Runtime,Xamarin.AndroidX.Work.Runtime,2.7.0
 Xamarin.Android.Support.Animated.Vector.Drawable,Xamarin.AndroidX.VectorDrawable.Animated,Xamarin.Android.Support.Animated.Vector.Drawable,Xamarin.AndroidX.VectorDrawable.Animated,1.1.0.10
 Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava,Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava,2.2.21.2
-Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava3.RxJava,Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava3.RxJava,3.1.1.2
+Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava3.RxJava,Xamarin.Android.Support.Annotations,Xamarin.Android.ReactiveX.RxJava3.RxJava,3.1.2
 Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Annotation,1.2.0.3
 Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Media2.Widget,Xamarin.Android.Support.Annotations,Xamarin.AndroidX.Media2.Widget,1.2.0.2
 Xamarin.Android.Support.Annotations,Xamarin.Jetbrains.Annotations,Xamarin.Android.Support.Annotations,Xamarin.Jetbrains.Annotations,22.0.0.2
@@ -25,9 +25,9 @@ Xamarin.Android.Support.AsyncLayoutInflater,Xamarin.AndroidX.AsyncLayoutInflater
 Xamarin.Android.Support.Collections,Xamarin.AndroidX.Collection,Xamarin.Android.Support.Collections,Xamarin.AndroidX.Collection,1.1.0.10
 Xamarin.Android.Support.Compat,Xamarin.AndroidX.Core,Xamarin.Android.Support.Compat,Xamarin.AndroidX.Core,1.6.0.3
 Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.ConstraintLayout,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.ConstraintLayout,2.1.1.2
-Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingAdapters,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingAdapters,7.0.2.2
-Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingRuntime,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingRuntime,7.0.2.2
-Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.ViewBinding,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.ViewBinding,7.0.2.2
+Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingAdapters,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingAdapters,7.0.3
+Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingRuntime,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.DataBindingRuntime,7.0.3
+Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.ViewBinding,Xamarin.Android.Support.Constraint.Layout,Xamarin.AndroidX.DataBinding.ViewBinding,7.0.3
 Xamarin.Android.Support.Constraint.Layout.Solver,Xamarin.AndroidX.ConstraintLayout.Solver,Xamarin.Android.Support.Constraint.Layout.Solver,Xamarin.AndroidX.ConstraintLayout.Solver,2.0.4.5
 Xamarin.Android.Support.CoordinaterLayout,Xamarin.AndroidX.CoordinatorLayout,Xamarin.Android.Support.CoordinaterLayout,Xamarin.AndroidX.CoordinatorLayout,1.1.0.10
 Xamarin.Android.Support.Core.UI,Xamarin.AndroidX.Legacy.Support.Core.UI,Xamarin.Android.Support.Core.UI,Xamarin.AndroidX.Legacy.Support.Core.UI,1.0.0.11
@@ -36,7 +36,7 @@ Xamarin.Android.Support.CursorAdapter,Xamarin.AndroidX.CursorAdapter,Xamarin.And
 Xamarin.Android.Support.CustomTabs,Xamarin.AndroidX.Browser,Xamarin.Android.Support.CustomTabs,Xamarin.AndroidX.Browser,1.3.0.8
 Xamarin.Android.Support.CustomView,Xamarin.AndroidX.CustomView,Xamarin.Android.Support.CustomView,Xamarin.AndroidX.CustomView,1.1.0.9
 Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava,Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava,2.2.21.2
-Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava3.RxJava,Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava3.RxJava,3.1.1.2
+Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava3.RxJava,Xamarin.Android.Support.Design,Xamarin.Android.ReactiveX.RxJava3.RxJava,3.1.2
 Xamarin.Android.Support.Design,Xamarin.AndroidX.Annotation.Experimental,Xamarin.Android.Support.Design,Xamarin.AndroidX.Annotation.Experimental,1.1.0.3
 Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,Xamarin.Android.Support.Design,Xamarin.Google.Android.Material,1.4.0.4
 Xamarin.Android.Support.Design,Xamarin.Kotlin.StdLib,Xamarin.Android.Support.Design,Xamarin.Kotlin.StdLib,1.5.31.2
@@ -52,7 +52,7 @@ Xamarin.Android.Support.HeifWriter,Xamarin.AndroidX.HeifWriter,Xamarin.Android.S
 Xamarin.Android.Support.Interpolator,Xamarin.AndroidX.Interpolator,Xamarin.Android.Support.Interpolator,Xamarin.AndroidX.Interpolator,1.0.0.10
 Xamarin.Android.Support.Loader,Xamarin.AndroidX.Loader,Xamarin.Android.Support.Loader,Xamarin.AndroidX.Loader,1.1.0.10
 Xamarin.Android.Support.LocalBroadcastManager,Xamarin.AndroidX.LocalBroadcastManager,Xamarin.Android.Support.LocalBroadcastManager,Xamarin.AndroidX.LocalBroadcastManager,1.0.0.10
-Xamarin.Android.Support.Media.Compat,Xamarin.AndroidX.Media,Xamarin.Android.Support.Media.Compat,Xamarin.AndroidX.Media,1.4.2.2
+Xamarin.Android.Support.Media.Compat,Xamarin.AndroidX.Media,Xamarin.Android.Support.Media.Compat,Xamarin.AndroidX.Media,1.4.3
 Xamarin.Android.Support.MultiDex,Xamarin.AndroidX.MultiDex,Xamarin.Android.Support.MultiDex,Xamarin.AndroidX.MultiDex,2.0.1.10
 Xamarin.Android.Support.Percent,Xamarin.AndroidX.PercentLayout,Xamarin.Android.Support.Percent,Xamarin.AndroidX.PercentLayout,1.0.0.11
 Xamarin.Android.Support.Print,Xamarin.AndroidX.Print,Xamarin.Android.Support.Print,Xamarin.AndroidX.Print,1.0.0.10
