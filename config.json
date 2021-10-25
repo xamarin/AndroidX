@@ -1120,8 +1120,7 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0.0",
         "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions",        
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "com.google.android.gms.play-services-basement,com.google.android.gms.play-services-wearable"
+        "dependencyOnly": false
       },
       {
         "groupId": "androidx.webkit",
@@ -1368,6 +1367,22 @@
         "version": "20.0.0",
         "nugetVersion": "120.0.0.2",
         "nugetId": "Xamarin.Firebase.AppIndexing",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-basement",
+        "version": "17.0.0",
+        "nugetVersion": "117.6.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Basement",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-wearable",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
       {
