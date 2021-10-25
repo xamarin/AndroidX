@@ -1,6 +1,26 @@
 {
   "packages": [
     {
+      "id": "GoogleGson",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Android.ReactiveStreams",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Android.ReactiveX.RxJava",
+      "dependencies": [
+        "Xamarin.Android.ReactiveStreams"
+      ]
+    },
+    {
+      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+      "dependencies": [
+        "Xamarin.Android.ReactiveStreams"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Activity",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -591,7 +611,9 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Core",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Compose.Compose.Material.Material",
@@ -664,7 +686,10 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Android",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Compose.Runtime.Runtime.LiveData",
@@ -679,13 +704,9 @@
       "id": "Xamarin.AndroidX.Compose.Runtime.Runtime.RxJava2",
       "dependencies": [
         "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.Kotlin.StdLib",
-        "Xamarin.Android.ReactiveX.RxJava"
+        "Xamarin.Android.ReactiveX.RxJava",
+        "Xamarin.Kotlin.StdLib"
       ]
-    },
-    {
-      "id": "Xamarin.Android.ReactiveX.RxJava",
-      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Compose.Runtime.Runtime.Saveable",
@@ -776,7 +797,14 @@
       "id": "Xamarin.AndroidX.Core.GoogleShortcuts",
       "dependencies": [
         "Xamarin.AndroidX.Core",
+        "Xamarin.Google.Crypto.Tink.Android",
         "Xamarin.Firebase.AppIndexing"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Crypto.Tink.Android",
+      "dependencies": [
+        "GoogleGson"
       ]
     },
     {
@@ -1022,7 +1050,8 @@
         "Xamarin.AndroidX.Lifecycle.Common",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.KotlinX.Coroutines.Android"
+        "Xamarin.KotlinX.Coroutines.Android",
+        "Xamarin.Android.ReactiveStreams"
       ]
     },
     {
@@ -1039,7 +1068,9 @@
         "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.VersionedParcelable",
-        "Xamarin.Google.Guava.ListenableFuture"
+        "Xamarin.Google.Guava.ListenableFuture",
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core"
       ]
     },
     {
@@ -1078,6 +1109,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -1172,7 +1207,10 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Common",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Paging.Common.Ktx",
@@ -1213,7 +1251,12 @@
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Rx2",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.Android.ReactiveX.RxJava",
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm",
+        "Xamarin.KotlinX.Coroutines.Reactive"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
@@ -1321,10 +1364,6 @@
       ]
     },
     {
-      "id": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-      "dependencies": []
-    },
-    {
       "id": "Xamarin.AndroidX.Sqlite.Framework",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1340,7 +1379,8 @@
     {
       "id": "Xamarin.AndroidX.Security.SecurityCrypto",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation"
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Google.Crypto.Tink.Android"
       ]
     },
     {
@@ -1391,7 +1431,9 @@
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.RecyclerView",
-        "Xamarin.AndroidX.SwipeRefreshLayout"
+        "Xamarin.AndroidX.SwipeRefreshLayout",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.VersionedParcelable"
       ]
     },
     {
@@ -1435,7 +1477,8 @@
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.AndroidX.Sqlite.Framework",
         "Xamarin.AndroidX.Sqlite",
-        "Xamarin.Google.Guava.ListenableFuture"
+        "Xamarin.Google.Guava.ListenableFuture",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
       ]
     },
     {
@@ -1467,6 +1510,21 @@
       "dependencies": [
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Jdk8",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Reactive",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Jdk8",
+        "Xamarin.KotlinX.Coroutines.Core.Jvm",
+        "Xamarin.Android.ReactiveStreams"
       ]
     }
   ]
