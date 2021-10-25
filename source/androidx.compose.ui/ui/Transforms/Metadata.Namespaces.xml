@@ -66,6 +66,12 @@
         AndroidX.Compose.UI.Input.NestedScroll
     </attr>
     <attr 
+        path="/api/package[@name='androidx.compose.ui.input.pointer']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Input.Pointer
+    </attr>
+    <attr 
         path="/api/package[@name='androidx.compose.ui.input.pointer.util']" 
         name="managedName"
         >

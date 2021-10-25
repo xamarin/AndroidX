@@ -54,10 +54,16 @@
         AndroidX.Compose.UI.Text.Platform.Extensions
     </attr>
     <attr 
+        path="/api/package[@name='androidx.compose.ui.text.android.style']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Text.Android.Style
+    </attr>
+    <attr 
         path="/api/package[@name='androidx.compose.ui.text.style']" 
         name="managedName"
         >
         AndroidX.Compose.UI.Text.Style
     </attr>
-
+    
 </metadata>
