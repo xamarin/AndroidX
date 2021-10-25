@@ -21,5 +21,32 @@
         >
         AndroidX.Wear.Provider
     </attr>
-    
+
+    <attr 
+        path="/api/package[@name='androidx.wear.wear-ongoing']"
+        name="managedName"
+        >
+        AndroidX.Wear.Ongoing
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.wear.wear-input']"
+        name="managedName"
+        >
+        AndroidX.Wear.Input
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.wear.wear-phone-interactions']"
+        name="managedName"
+        >
+        AndroidX.Wear.PhoneInteractions
+    </attr>
+
+    <attr 
+        path="/api/package[@name='androidx.wear.wear-remote-interactions']"
+        name="managedName"
+        >
+        AndroidX.Wear.RemoteInteractions
+    </attr>
 </metadata>

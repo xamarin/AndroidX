@@ -1,0 +1,20 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.wear']"
+        name="managedName"
+        >
+        AndroidX.Wear
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.remote']"
+        name="managedName"
+        >
+        AndroidX.Wear.Remote
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.remote.interactions']"
+        name="managedName"
+        >
+        AndroidX.Wear.Remote.Interactions
+    </attr>
+</metadata>

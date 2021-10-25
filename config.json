@@ -1091,6 +1091,38 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-ongoing",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.Ongoing",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-input",
+        "version": "1.1.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.Input",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-phone-interactions",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.PhoneInteractions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear",
+        "artifactId": "wear-remote-interactions",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions",        
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.webkit",
         "artifactId": "webkit",
         "version": "1.4.0",
@@ -1312,6 +1344,15 @@
         "templateSet": "kotlinx"
       },
       {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-guava",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Guava",
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
+      },
+      {
         "groupId": "org.reactivestreams",
         "artifactId": "reactive-streams",
         "version": "1.0.3",
@@ -1326,6 +1367,22 @@
         "version": "20.0.0",
         "nugetVersion": "120.0.0.2",
         "nugetId": "Xamarin.Firebase.AppIndexing",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-basement",
+        "version": "17.0.0",
+        "nugetVersion": "117.6.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Basement",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-wearable",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
       {
