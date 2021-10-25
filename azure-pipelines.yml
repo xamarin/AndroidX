@@ -44,7 +44,7 @@ jobs:
           inputs:
             version: $(DotNetVersion)
         - pwsh: |
-            dotnet workload update --verbosity diag --from-rollback-file workload.json --source $(Dotnet6Source) --source $(NuGetOrgSource) --verbosity diag
+            dotnet workload update --verbosity diag --from-rollback-file workload.json --source $(Dotnet6Source) --source $(NuGetOrgSource)
             dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
         - task: JavaToolInstaller@0
           inputs:
