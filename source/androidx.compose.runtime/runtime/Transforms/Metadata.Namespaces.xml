@@ -3,8 +3,57 @@
         not surfacing/generating MCWs 
         Compose does work for kotlin only via Annotations and kotlin defined UI
         it does not make sense for C# until parsing of kotlin and transpiling to c# is ready (if ever)
-    -->
+
+        BINDINGSGENERATOR : error BG0000: System.InvalidOperationException: The XPath expression evaluated to unexpected type System.Boolean.
+
     <remove-node path="path=/api/package" />
+    <remove-node path="path=/api" />
+    <remove-node path="path=/api/package/*" />
+    <remove-node path="path=/api/package/*" />
+    <remove-node path="path=//package" />
+
+    error BG4301: Invalid XPath specification: path=//package/. 
+    <remove-node path="path=//package/" />
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.collection']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.adapters']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableList']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableMap']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableSet']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.persistentOrderedMap']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.persistentOrderedSet']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.internal']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.snapshots']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.tooling']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.internal']" 
+        />
 
     <attr 
         path="/api/package[@name='androidx.compose.runtime']" 

@@ -1,10 +1,19 @@
 ﻿<metadata>
-    <!--
-        not surfacing/generating MCWs 
-        Compose does work for kotlin only via Annotations and kotlin defined UI
-        it does not make sense for C# until parsing of kotlin and transpiling to c# is ready (if ever)
-    -->
-    <remove-node path="path=/api/package" />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.graphics']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.graphics.colorspace']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.graphics.drawscope']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.graphics.painter']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.graphics.vector']" 
+        />
 
     <attr 
         path="/api/package[@name='androidx.compose.ui.graphics']" 

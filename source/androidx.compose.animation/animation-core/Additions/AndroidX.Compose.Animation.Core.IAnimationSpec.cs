@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
+/*
 namespace AndroidX.Compose.Animation.Core {
 
 	// Metadata.xml XPath interface reference: path="/api/package[@name='androidx.compose.animation.core']/interface[@name='AnimationSpec']"
@@ -102,3 +103,4 @@ namespace AndroidX.Compose.Animation.Core {
 
 	}
 }
+*/

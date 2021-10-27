@@ -1,10 +1,37 @@
 ﻿<metadata>
-    <!--
-        not surfacing/generating MCWs 
-        Compose does work for kotlin only via Annotations and kotlin defined UI
-        it does not make sense for C# until parsing of kotlin and transpiling to c# is ready (if ever)
-    -->
-    <remove-node path="path=/api/package" />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.android']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.android.animation']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.android.selection']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.font']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.input']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.intl']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.platform']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.platform.extensions']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.android.style']" 
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.style']" 
+        />
 
     <attr 
         path="/api/package[@name='androidx.compose.ui.text']" 

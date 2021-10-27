@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
+/*
 namespace AndroidX.Compose.Animation.Core 
 {
 
@@ -28,3 +29,4 @@ namespace AndroidX.Compose.Animation.Core
 		}
     }
 }
+*/

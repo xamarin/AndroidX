@@ -1,4 +1,8 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='androidx.compose.foundation.layout']" 
+        />
+
     <attr 
         path="/api/package[@name='androidx.compose.foundation.layout']" 
         name="managedName"

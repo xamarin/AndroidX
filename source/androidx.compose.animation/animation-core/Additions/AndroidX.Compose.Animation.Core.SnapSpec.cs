@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
+/*
 namespace AndroidX.Compose.Animation.Core 
 {
 	// Metadata.xml XPath class reference: path="/api/package[@name='androidx.compose.animation.core']/class[@name='SnapSpec']"
@@ -27,3 +28,4 @@ namespace AndroidX.Compose.Animation.Core
 		}
     }
 }
+*/
