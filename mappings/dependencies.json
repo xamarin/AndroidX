@@ -1050,7 +1050,6 @@
         "Xamarin.AndroidX.Lifecycle.Common",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.KotlinX.Coroutines.Android",
         "Xamarin.Android.ReactiveStreams"
       ]
     },
@@ -1064,13 +1063,13 @@
     {
       "id": "Xamarin.AndroidX.Media2.Common",
       "dependencies": [
+        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Concurrent.Futures",
+        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.VersionedParcelable",
-        "Xamarin.Google.Guava.ListenableFuture",
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Core"
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -1109,10 +1108,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -1244,8 +1239,8 @@
       "dependencies": [
         "Xamarin.AndroidX.Arch.Core.Runtime",
         "Xamarin.AndroidX.Paging.Common",
-        "Xamarin.Kotlin.StdLib",
         "Xamarin.Android.ReactiveX.RxJava",
+        "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Rx2"
       ]
     },
@@ -1427,12 +1422,11 @@
       "id": "Xamarin.AndroidX.Wear",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.ConstraintLayout",
+        "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.SwipeRefreshLayout",
-        "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.AndroidX.VersionedParcelable"
       ]
     },
@@ -1477,8 +1471,8 @@
         "Xamarin.AndroidX.Room.Runtime",
         "Xamarin.AndroidX.Sqlite.Framework",
         "Xamarin.AndroidX.Sqlite",
-        "Xamarin.Google.Guava.ListenableFuture",
-        "Xamarin.AndroidX.Startup.StartupRuntime"
+        "Xamarin.AndroidX.Startup.StartupRuntime",
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
