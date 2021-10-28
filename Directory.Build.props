@@ -15,6 +15,8 @@
     
     <!-- .NET 6+ packages support back to API-21 -->
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+
+    <_AndroidUseJavaLegacyResolver>true</_AndroidUseJavaLegacyResolver>
   </PropertyGroup>
   
   <!-- Folders that .targets files need to go into -->
