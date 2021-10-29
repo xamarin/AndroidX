@@ -39,6 +39,7 @@
     </attr>
     -->
 
+    <!--
     <remove-node
         path="/api/package[@name='androidx.compose.ui.input.pointer']/class[@name='RequestDisallowInterceptTouchEvent']/method[@name='invoke' and count(parameter)=1 and parameter[1][@type='boolean']]"
         />
@@ -51,7 +52,8 @@
         name="managedReturn"
         >
         Java.Lang.Object
-    </attr>
+    </attr>        
+    -->
 
 
 

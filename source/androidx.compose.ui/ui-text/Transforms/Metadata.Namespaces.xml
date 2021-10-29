@@ -33,6 +33,7 @@
         path="/api/package[@name='androidx.compose.ui.text.style']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.ui.text']" 
         name="managedName"
@@ -98,6 +99,7 @@
         name="managedName"
         >
         AndroidX.Compose.UI.Text.Style
-    </attr>
+    </attr>        
+    -->
     
 </metadata>

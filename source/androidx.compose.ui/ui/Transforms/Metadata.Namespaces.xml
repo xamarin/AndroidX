@@ -72,6 +72,7 @@
         path="/api/package[@name='androidx.inspection.compose.ui']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.ui.graphics']" 
         name="managedName"
@@ -215,6 +216,7 @@
         name="managedName"
         >
         AndroidX.Inspection.Compose.UI
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

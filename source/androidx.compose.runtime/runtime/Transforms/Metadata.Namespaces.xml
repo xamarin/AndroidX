@@ -55,6 +55,7 @@
         path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable.internal']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.runtime']" 
         name="managedName"
@@ -137,6 +138,7 @@
         name="managedName"
         >
         AndroidX.Compose.Runtime.External.KotlinX.Collections.Immutable.Internal
-    </attr>
+    </attr>        
+    -->
     
 </metadata>

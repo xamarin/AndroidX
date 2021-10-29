@@ -3,11 +3,14 @@
         path="/api/package[@name='androidx.compose.material.ripple']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.material.ripple']" 
         name="managedName"
         >
         AndroidX.Compose.Material.Ripple
     </attr>
+        
+    -->
 
 </metadata>

@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.runtime.saveable']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.runtime.saveable']" 
         name="managedName"
         >
         AndroidX.Compose.Runtime.Saveable
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

@@ -4,6 +4,7 @@
         />
 
 
+    <!--
     <attr
         path="/api/package[@name='androidx.compose.runtime.external.kotlinx.collections.immutable']/class[@name='ExtensionsKt']/method[@name='toImmutableList']"
         name="managedReturn"
@@ -91,6 +92,7 @@
         />
     <remove-node
         path="/api/package[@name='androidx.compose.runtime.snapshots']/class[@name='SnapshotStateMap']"
-        />
-        
+        />         
+    -->
+       
 </metadata>

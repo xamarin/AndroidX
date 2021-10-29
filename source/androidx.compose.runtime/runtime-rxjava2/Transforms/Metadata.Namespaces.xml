@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.runtime.rxjava2']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.runtime.rxjava2']" 
         name="managedName"
         >
         AndroidX.Compose.Runtime.RxJava2
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

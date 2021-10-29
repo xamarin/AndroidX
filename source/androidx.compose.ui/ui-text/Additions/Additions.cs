@@ -3,6 +3,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 
+/*
 namespace AndroidX.Compose.UI.Text 
 {
 	public sealed partial class AnnotatedString
@@ -25,3 +26,4 @@ namespace AndroidX.Compose.UI.Text.Font
 		}
     }
 }
+*/

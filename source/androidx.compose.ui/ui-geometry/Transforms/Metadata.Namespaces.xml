@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.ui.geometry']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.ui.geometry']" 
         name="managedName"
         >
         AndroidX.Compose.UI.Geometry
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

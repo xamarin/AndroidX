@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.runtime.livedata']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.runtime.livedata']" 
         name="managedName"
         >
         AndroidX.Compose.Runtime.LiveData
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

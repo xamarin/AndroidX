@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.ui.unit']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.ui.unit']" 
         name="managedName"
         >
         AndroidX.Compose.UI.Unit
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

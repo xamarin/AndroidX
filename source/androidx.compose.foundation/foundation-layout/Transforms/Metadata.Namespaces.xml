@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.foundation.layout']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.foundation.layout']" 
         name="managedName"
         >
         AndroidX.Compose.Foundation.Layout
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

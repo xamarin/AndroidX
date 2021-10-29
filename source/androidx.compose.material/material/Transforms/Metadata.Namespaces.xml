@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.material']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.material']" 
         name="managedName"
         >
         AndroidX.Compose.Material
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.animation.core']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.animation.core']" 
         name="managedName"
         >
         AndroidX.Compose.Animation.Core
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

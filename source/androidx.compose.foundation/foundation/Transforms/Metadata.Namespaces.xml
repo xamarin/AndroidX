@@ -24,6 +24,7 @@
         path="/api/package[@name='androidx.compose.foundation.text.selection']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.foundation']" 
         name="managedName"
@@ -71,6 +72,7 @@
         name="managedName"
         >
         AndroidX.Compose.Foundation.Text.Selection
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

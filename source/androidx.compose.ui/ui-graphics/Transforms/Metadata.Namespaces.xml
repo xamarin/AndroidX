@@ -15,6 +15,7 @@
         path="/api/package[@name='androidx.compose.ui.graphics.vector']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.ui.graphics']" 
         name="managedName"
@@ -44,6 +45,7 @@
         name="managedName"
         >
         AndroidX.Compose.UI.Graphics.Vector
-    </attr>
+    </attr>        
+    -->
 
 </metadata>

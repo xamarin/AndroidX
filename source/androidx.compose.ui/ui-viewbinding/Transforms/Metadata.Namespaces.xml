@@ -3,11 +3,13 @@
         path="/api/package[@name='androidx.compose.ui.viewinterop']" 
         />
 
+    <!--
     <attr 
         path="/api/package[@name='androidx.compose.ui.viewinterop']" 
         name="managedName"
         >
         AndroidX.Compose.UI.ViewInterOp
-    </attr>
+    </attr>        
+    -->
 
 </metadata>
