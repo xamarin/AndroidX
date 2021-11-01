@@ -1,7 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.ripple']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 

@@ -1,7 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.animation.core']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 

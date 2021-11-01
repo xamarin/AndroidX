@@ -1,22 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.icons']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.icons.rounded']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.icons.sharp']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.icons.outlined']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.icons.filled']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.material.icons.twotone']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 

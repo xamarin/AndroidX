@@ -1,7 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.runtime.rxjava2']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 

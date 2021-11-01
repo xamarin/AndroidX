@@ -1,28 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.gestures']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.interaction']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.lazy']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.selection']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.shape']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.text']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.foundation.text.selection']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 

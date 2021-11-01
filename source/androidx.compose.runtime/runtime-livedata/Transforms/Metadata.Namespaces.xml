@@ -1,7 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.runtime.livedata']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 

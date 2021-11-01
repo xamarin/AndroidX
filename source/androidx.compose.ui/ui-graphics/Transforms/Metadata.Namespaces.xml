@@ -1,19 +1,5 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.compose.ui.graphics']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.ui.graphics.colorspace']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.ui.graphics.drawscope']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.ui.graphics.painter']" 
-        />
-    <remove-node
-        path="/api/package[@name='androidx.compose.ui.graphics.vector']" 
-        />
+    <remove-node path="/api/package/" />
 
     <!--
     <attr 
