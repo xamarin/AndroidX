@@ -515,42 +515,42 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Animation.Animation",
+      "id": "Xamarin.AndroidX.Compose.Animation",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Animation.Animation.Core",
-        "Xamarin.AndroidX.Compose.Foundation.Foundation.Layout",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Geometry",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.AndroidX.Compose.UI.UI",
+        "Xamarin.AndroidX.Compose.Animation.Core",
+        "Xamarin.AndroidX.Compose.Foundation.Layout",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Geometry",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AndroidX.Compose.UI",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Animation.Animation.Core",
+      "id": "Xamarin.AndroidX.Compose.Animation.Core",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Unit",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.AndroidX.Compose.UI.UI",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Unit",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AndroidX.Compose.UI",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Core"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Foundation.Foundation.Layout",
+      "id": "Xamarin.AndroidX.Compose.Foundation.Layout",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.AndroidX.Compose.UI.UI",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AndroidX.Compose.UI",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Runtime.Runtime",
+      "id": "Xamarin.AndroidX.Compose.Runtime",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.Kotlin.StdLib",
@@ -558,32 +558,32 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.UI.Geometry",
+      "id": "Xamarin.AndroidX.Compose.UI.Geometry",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.Kotlin.StdLib"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.UI.Util",
+      "id": "Xamarin.AndroidX.Compose.UI.Util",
       "dependencies": [
         "Xamarin.Kotlin.StdLib"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.UI",
+      "id": "Xamarin.AndroidX.Compose.UI",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.AutoFill",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime.Saveable",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Geometry",
-        "Xamarin.AndroidX.Compose.UI.UI.Graphics",
-        "Xamarin.AndroidX.Compose.UI.UI.Text",
-        "Xamarin.AndroidX.Compose.UI.UI.Unit",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
+        "Xamarin.AndroidX.Compose.Runtime.Saveable",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Geometry",
+        "Xamarin.AndroidX.Compose.UI.Graphics",
+        "Xamarin.AndroidX.Compose.UI.Text",
+        "Xamarin.AndroidX.Compose.UI.Unit",
+        "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.AndroidX.Lifecycle.Common.Java8",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
@@ -600,12 +600,12 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.UI.Unit",
+      "id": "Xamarin.AndroidX.Compose.UI.Unit",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Geometry",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Geometry",
+        "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.Kotlin.StdLib"
       ]
     },
@@ -616,71 +616,71 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Compose.Material.Material",
-      "dependencies": [
-        "Xamarin.AndroidX.Compose.Animation.Animation.Core",
-        "Xamarin.AndroidX.Compose.Animation.Animation",
-        "Xamarin.AndroidX.Compose.Foundation.Foundation.Layout",
-        "Xamarin.AndroidX.Compose.Foundation.Foundation",
-        "Xamarin.AndroidX.Compose.Compose.Material.MaterialIcons.Core",
-        "Xamarin.AndroidX.Compose.Compose.Material.Material.Ripple",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Text",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.AndroidX.Compose.UI.UI",
-        "Xamarin.Kotlin.StdLib.Common"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Compose.Foundation.Foundation",
+      "id": "Xamarin.AndroidX.Compose.Foundation",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Animation.Animation",
-        "Xamarin.AndroidX.Compose.Foundation.Foundation.Layout",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Text",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.AndroidX.Compose.UI.UI",
+        "Xamarin.AndroidX.Compose.Animation",
+        "Xamarin.AndroidX.Compose.Foundation.Layout",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Text",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AndroidX.Compose.UI",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Compose.Material.MaterialIcons.Core",
-      "dependencies": [
-        "Xamarin.AndroidX.Compose.UI.UI",
-        "Xamarin.Kotlin.StdLib"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Compose.Compose.Material.Material.Ripple",
-      "dependencies": [
-        "Xamarin.AndroidX.Compose.Animation.Animation",
-        "Xamarin.AndroidX.Compose.Foundation.Foundation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.Kotlin.StdLib.Common"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Compose.UI.UI.Text",
+      "id": "Xamarin.AndroidX.Compose.UI.Text",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime.Saveable",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Graphics",
-        "Xamarin.AndroidX.Compose.UI.UI.Unit",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
+        "Xamarin.AndroidX.Compose.Runtime.Saveable",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Graphics",
+        "Xamarin.AndroidX.Compose.UI.Unit",
+        "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.AndroidX.Core",
         "Xamarin.Kotlin.StdLib.Common",
         "Xamarin.Kotlin.StdLib"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Compose.Material.Material.Icons.Extended",
+      "id": "Xamarin.AndroidX.Compose.Material",
       "dependencies": [
-        "Xamarin.AndroidX.Compose.Compose.Material.MaterialIcons.Core",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
+        "Xamarin.AndroidX.Compose.Animation.Core",
+        "Xamarin.AndroidX.Compose.Animation",
+        "Xamarin.AndroidX.Compose.Foundation.Layout",
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.AndroidX.Compose.Material.Icons.Core",
+        "Xamarin.AndroidX.Compose.Material.Ripple",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Text",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.Material.Icons.Core",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.Material.Ripple",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Animation",
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.Material.Icons.Extended",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Material.Icons.Core",
+        "Xamarin.AndroidX.Compose.Runtime",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
@@ -692,37 +692,37 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Runtime.Runtime.LiveData",
+      "id": "Xamarin.AndroidX.Compose.Runtime.LiveData",
       "dependencies": [
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.Kotlin.StdLib"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Runtime.Runtime.RxJava2",
+      "id": "Xamarin.AndroidX.Compose.Runtime.RxJava2",
       "dependencies": [
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
+        "Xamarin.AndroidX.Compose.Runtime",
         "Xamarin.Android.ReactiveX.RxJava",
         "Xamarin.Kotlin.StdLib"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.Runtime.Runtime.Saveable",
+      "id": "Xamarin.AndroidX.Compose.Runtime.Saveable",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
+        "Xamarin.AndroidX.Compose.Runtime",
         "Xamarin.Kotlin.StdLib"
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.UI.Graphics",
+      "id": "Xamarin.AndroidX.Compose.UI.Graphics",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime.Runtime",
-        "Xamarin.AndroidX.Compose.UI.UI.Unit",
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Unit",
+        "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
@@ -734,10 +734,10 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.UI.ViewBinding",
+      "id": "Xamarin.AndroidX.Compose.UI.ViewBinding",
       "dependencies": [
-        "Xamarin.AndroidX.Compose.UI.UI.Util",
-        "Xamarin.AndroidX.Compose.UI.UI",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AndroidX.Compose.UI",
         "Xamarin.AndroidX.DataBinding.ViewBinding",
         "Xamarin.AndroidX.Fragment.Ktx",
         "Xamarin.Kotlin.StdLib"
@@ -1108,10 +1108,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
