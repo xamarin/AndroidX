@@ -15,7 +15,7 @@
     error BG4301: Invalid XPath specification: path=//package/. 
     <remove-node path="path=//package/" />
     -->
-    <remove-node path="/api/package/" />
+    <remove-node path="/api/package" />
 
     <!--
     <attr 
