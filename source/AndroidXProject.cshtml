@@ -227,4 +227,13 @@
     </ItemGroup>
   }
 
+  <!-- Compose nuget package details until Compose support is implemented -->
+  @if (@Model.NuGetPackageId.StartsWith("Xamarin.AndroidX.Compose"))
+  {
+    <PropertyGroup>
+      <Summary>Xamarin.Android bindings for AndroidX - @(Model.Name) (bindings without managed callable wrappers (C#) and are only used for including Java files)</Summary>
+      <Description>Xamarin.Android bindings for AndroidX - @(Model.Name) (bindings without managed callable wrappers (C#) and are only used for including Java files) artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</Description>
+    </PropertyGroup>
+  }
+
 </Project>
