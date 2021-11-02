@@ -30,7 +30,8 @@
         "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
         "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.Tracing.Tracing"
+        "Xamarin.AndroidX.Tracing.Tracing",
+        "Xamarin.Kotlin.StdLib"
       ]
     },
     {
@@ -51,6 +52,7 @@
         "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.VersionedParcelable"
       ]
@@ -76,7 +78,8 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.ViewModel",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation"
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Kotlin.StdLib"
       ]
     },
     {
@@ -91,6 +94,13 @@
       "id": "Xamarin.AndroidX.Tracing.Tracing",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
+      ]
+    },
+    {
+      "id": "Xamarin.Kotlin.StdLib",
+      "dependencies": [
+        "Xamarin.Jetbrains.Annotations",
+        "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
@@ -134,13 +144,6 @@
       "dependencies": [
         "Xamarin.AndroidX.SavedState",
         "Xamarin.Kotlin.StdLib"
-      ]
-    },
-    {
-      "id": "Xamarin.Kotlin.StdLib",
-      "dependencies": [
-        "Xamarin.Jetbrains.Annotations",
-        "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
@@ -795,7 +798,8 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.Process",
       "dependencies": [
-        "Xamarin.AndroidX.Lifecycle.Runtime"
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
       ]
     },
     {
@@ -817,6 +821,13 @@
       "id": "Xamarin.KotlinX.Coroutines.Core",
       "dependencies": [
         "Xamarin.KotlinX.Coroutines.Core.Jvm"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
@@ -1176,13 +1187,6 @@
         "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "Xamarin.AndroidX.RecyclerView",
         "Xamarin.AndroidX.Slice.Core"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
