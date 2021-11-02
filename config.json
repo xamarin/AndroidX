@@ -36,6 +36,14 @@
       },
       {
         "groupId": "androidx.activity",
+        "artifactId": "activity-compose",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0.0",
+        "nugetId": "Xamarin.AndroidX.Activity.Compose",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
         "version": "1.3.1",
         "nugetVersion": "1.3.1.2",
@@ -344,6 +352,30 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Text",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.compose.ui",
+        "artifactId": "ui-tooling",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.compose.ui",
+        "artifactId": "ui-tooling-preview",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.compose.ui",
+        "artifactId": "ui-tooling-data",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Data",
         "dependencyOnly": false
       },
       {
@@ -1331,11 +1363,27 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-appcompat-theme",
+        "version": "0.15.0",
+        "nugetVersion": "0.15.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "com.google.android.material",
         "artifactId": "material",
         "version": "1.4.0",
         "nugetVersion": "1.4.0.4",
         "nugetId": "Xamarin.Google.Android.Material",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.material",
+        "artifactId": "compose-theme-adapter",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.0",
+        "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
         "dependencyOnly": false
       },
       {

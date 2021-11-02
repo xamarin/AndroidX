@@ -105,6 +105,16 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Activity.Compose",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.Runtime.Saveable",
+        "Xamarin.AndroidX.Activity.Ktx",
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Core.Core.Ktx",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -474,6 +484,15 @@
       ]
     },
     {
+      "id": "Xamarin.Google.Accompanist.AppCompat.Theme",
+      "dependencies": [
+        "Xamarin.AndroidX.AppCompat",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.Google.Android.Material",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
       "id": "Xamarin.Google.Android.Material",
       "dependencies": [
         "Xamarin.AndroidX.Annotation.Experimental",
@@ -490,6 +509,17 @@
         "Xamarin.AndroidX.Transition",
         "Xamarin.AndroidX.VectorDrawable",
         "Xamarin.AndroidX.ViewPager2"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
+      "dependencies": [
+        "Xamarin.AndroidX.AppCompat",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.AndroidX.Compose.Material",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.Google.Android.Material",
+        "Xamarin.Kotlin.StdLib.Jdk8"
       ]
     },
     {
@@ -593,6 +623,36 @@
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Android",
         "Xamarin.KotlinX.Coroutines.Core"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.UI.Tooling",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Compose.Material",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
+        "Xamarin.AndroidX.Compose.UI.Tooling.Data",
+        "Xamarin.AndroidX.Activity.Compose",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.UI.Tooling.Data",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.Kotlin.StdLib",
       ]
     },
     {

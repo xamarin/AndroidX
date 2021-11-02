@@ -183,6 +183,7 @@
     <!-- all the AndroidX maven artifacts (groupId.artifactId) -->
     <ItemGroup>
         <_AndroidXMavenArtifact Include="androidx.activity.activity" />
+        <_AndroidXMavenArtifact Include="androidx.activity.activity-compose" />
         <_AndroidXMavenArtifact Include="androidx.activity.activity-ktx" />
         <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier" />
         <_AndroidXMavenArtifact Include="androidx.ads.ads-identifier-common" />
@@ -222,6 +223,9 @@
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-geometry" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-graphics" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-text" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-tooling" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui:ui-tooling-preview" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui:ui-tooling-data" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-unit" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-util" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-viewbinding" />
@@ -345,8 +349,10 @@
         <_AndroidXMavenArtifact Include="androidx.window.window-java" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-appcompat-theme" />
         <_AndroidXMavenArtifact Include="com.google.android.gms.play-services-basement" />
         <_AndroidXMavenArtifact Include="com.google.android.gms.play-services-wearable" />
+        <_AndroidXMavenArtifact Include="com.google.android.material.compose-theme-adapter" />
         <_AndroidXMavenArtifact Include="com.google.android.material.material" />
         <_AndroidXMavenArtifact Include="com.google.auto.value.auto-value-annotations" />
         <_AndroidXMavenArtifact Include="com.google.code.gson.gson" />
