@@ -1,10 +1,9 @@
 ﻿<metadata>
-    <!--    
     <attr 
-        path=""
-        name="managedName"
+        path="/api/package[@name='androidx.lifecycle']/class[@name='ProcessLifecycleInitializer']/method[@name='create' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+        name="managedReturn"
         >
-        parameterName
+        Java.Lang.Object
     </attr>
     -->
 </metadata>
