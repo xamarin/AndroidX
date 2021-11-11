@@ -96,17 +96,5 @@
         path="/api/package[@name='androidx.core.util']/class[@name='Preconditions']/method[@name='checkStringNotEmpty' and count(parameter)=3 and parameter[1][@type='T'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Object...']]"
         />
 
-    <attr
-        path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent2']/method[@name='onNestedScrollAccepted' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int']]"
-        name="managedName"
-        >
-        OnNestedScrollAccepted2
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.core.view']/interface[@name='NestedScrollingParent2']/method[@name='onStartNestedScroll' and count(parameter)=4 and parameter[1][@type='android.view.View'] and parameter[2][@type='android.view.View'] and parameter[3][@type='int'] and parameter[4][@type='int']]"
-        name="managedName"
-        >
-        OnStartNestedScroll2
-    </attr>
 
 </metadata>
