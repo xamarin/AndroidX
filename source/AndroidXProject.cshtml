@@ -71,19 +71,19 @@
       }
   </ItemGroup>
 
-  
-  <!--
-  <ItemGroup>
+    <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts)
     {
       if (@Model.NuGetPackageId == "Xamarin.AndroidX.DataBinding.DataBindingCommon" )
       {
         continue;
       }
+      <!--
     <JavaSourceJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
           Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
+      -->
     <JavaDocJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
           Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
