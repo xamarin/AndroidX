@@ -1,4 +1,4 @@
-﻿  @using System
+﻿@using System
 @using System.Linq
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
@@ -71,24 +71,20 @@
       }
   </ItemGroup>
 
-    <ItemGroup>
+  <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts)
     {
-      if (@Model.NuGetPackageId == "Xamarin.AndroidX.Core" )
-      {
     <JavaSourceJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
-          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
-      }
-      <!--
     <JavaDocJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
-          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
+          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
           />
-      -->
     }
   </ItemGroup>
+
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
