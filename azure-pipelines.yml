@@ -6,9 +6,9 @@ pr:
   - main
   
 variables:
-  AndroidBinderatorVersion: 0.5.0
+  AndroidBinderatorVersion: 0.5.2
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-rc.2.21505.57
+  DotNetVersion: 6.0.100
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
   # NOTE: there wasn't a public release of 16.11 for macOS
@@ -37,7 +37,11 @@ jobs:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
-      xcode: 13.0
+      macosImage: 'macOS-11'                                  # the name of the macOS VM image
+                                                              # BigSur 20211120
+      xcode: 13.1
+      dotnet: '5.0.403'                                       # the version of .NET Core to use
+      dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)

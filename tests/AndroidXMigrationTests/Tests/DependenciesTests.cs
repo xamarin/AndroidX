@@ -313,6 +313,9 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.ViewPager2",
 				"Xamarin.Google.Android.Material",
 				"Xamarin.Google.Guava.ListenableFuture",
+				"Xamarin.Jetbrains.Annotations",
+				"Xamarin.Kotlin.StdLib",
+				"Xamarin.Kotlin.StdLib.Common",
 			};
 
 			var tree = PackageDependencyTree.Load();

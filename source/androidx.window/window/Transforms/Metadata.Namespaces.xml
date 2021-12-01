@@ -19,4 +19,11 @@
         >
         AndroidX.Window.Core
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.window.embedding']"
+        name="managedName"
+        >
+        AndroidX.Window.Embedding
+    </attr>
+   
 </metadata>
