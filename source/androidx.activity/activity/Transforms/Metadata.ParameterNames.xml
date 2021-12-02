@@ -1,2 +1,3 @@
 ﻿<metadata>
+  <attr path="/api/package[@name='androidx.activity.contextaware']/interface[@name='OnContextAvailableListener']/method[@name='onContextAvailable' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]" name="name">context</attr>
 </metadata>
