@@ -8,4 +8,11 @@
     </attr>
     -->
     <attr path="/api/package[@name='androidx.fragment.app']" name="managedName">AndroidX.Fragment.App</attr>
+
+    <attr 
+        path="/api/package[@name='androidx.fragment.app.strictmode']"
+        name="managedName"
+        >
+        AndroidX.Fragment.App.StrictMode
+    </attr>
 </metadata>
