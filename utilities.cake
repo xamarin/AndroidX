@@ -201,6 +201,9 @@ Task ("spell-check")
                 "Tink",
                 "PhoneInteractions",
                 "RemoteInteractions",
+                "Emoji2",
+                "ViewsHelper",
+                "ResourceInspection",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
