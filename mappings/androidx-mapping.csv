@@ -808,7 +808,7 @@ Android.Support.V4.Print,PrintHelper.IOnPrintFinishCallback,AndroidX.Print,Print
 Android.Support.V4.Print,PrintHelper.IOnPrintFinishCallbackInvoker,AndroidX.Print,PrintHelper.IOnPrintFinishCallbackInvoker,Xamarin.Android.Support.Print,Xamarin.AndroidX.Print,android.support.v4.print,PrintHelper.OnPrintFinishCallback,androidx.print,PrintHelper.OnPrintFinishCallback,
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.lifecycle.HolderFragment.
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.lifecycle.HolderFragment.HolderFragmentManager.
-Android.Arch.Lifecycle,ProcessLifecycleOwnerInitializer,AndroidX.Lifecycle,ProcessLifecycleOwnerInitializer,Xamarin.Android.Arch.Lifecycle.Extensions,Xamarin.AndroidX.Lifecycle.Process,android.arch.lifecycle,ProcessLifecycleOwnerInitializer,androidx.lifecycle,ProcessLifecycleOwnerInitializer,
+,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.lifecycle.ProcessLifecycleOwnerInitializer.
 Android.Arch.Lifecycle,ServiceLifecycleDispatcher,AndroidX.Lifecycle,ServiceLifecycleDispatcher,Xamarin.Android.Arch.Lifecycle.Extensions,Xamarin.AndroidX.Lifecycle.Service,android.arch.lifecycle,ServiceLifecycleDispatcher,androidx.lifecycle,ServiceLifecycleDispatcher,
 ,,,,,,,,,,WARNING: Unable to find AndroidX type for Java type androidx.lifecycle.ServiceLifecycleDispatcher.DispatchRunnable.
 Android.Arch.Lifecycle,ViewModelStores,AndroidX.Lifecycle,ViewModelStores,Xamarin.Android.Arch.Lifecycle.Extensions,Xamarin.AndroidX.Lifecycle.Extensions,android.arch.lifecycle,ViewModelStores,androidx.lifecycle,ViewModelStores,

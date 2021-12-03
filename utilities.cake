@@ -42,6 +42,7 @@ Task ("list-artifacts")
             lines1.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
+            // | Maven Fully Qualified Artifact                                       | NuGet Package                                                        |
             lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
             lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
             lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
