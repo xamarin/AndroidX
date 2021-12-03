@@ -207,9 +207,12 @@
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CursorAdapter",
         "Xamarin.AndroidX.DrawerLayout",
+        "Xamarin.AndroidX.Emoji2.ViewsHelper",
+        "Xamarin.AndroidX.Emoji2",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.ResourceInspection.Annotation",
         "Xamarin.AndroidX.SavedState"
       ]
     },
@@ -238,19 +241,44 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Emoji2.ViewsHelper",
+      "dependencies": [
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Emoji2"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Emoji2",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Lifecycle.Process",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Fragment",
       "dependencies": [
         "Xamarin.AndroidX.Activity",
         "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
         "Xamarin.AndroidX.Loader",
         "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.ViewPager"
+        "Xamarin.AndroidX.ViewPager",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.ResourceInspection.Annotation",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -884,6 +912,20 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Lifecycle.Process",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Tracing.Tracing"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Loader",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1025,13 +1067,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Lifecycle.Process",
-      "dependencies": [
-        "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.AndroidX.Startup.StartupRuntime"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Lifecycle.Service",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.Runtime"
@@ -1044,13 +1079,6 @@
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Core"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
@@ -1119,6 +1147,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -1208,14 +1240,7 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.Kotlin.StdLib",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm"
-      ]
-    },
-    {
-      "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-      "dependencies": [
-        "Xamarin.Kotlin.StdLib.Common",
-        "Xamarin.Kotlin.StdLib.Jdk8"
+        "Xamarin.KotlinX.Coroutines.Core"
       ]
     },
     {
@@ -1562,6 +1587,13 @@
       "dependencies": [
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Common",
+        "Xamarin.Kotlin.StdLib.Jdk8"
       ]
     },
     {
