@@ -1365,9 +1365,81 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-appcompat-theme",
-        "version": "0.15.0",
-        "nugetVersion": "0.15.0.0",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
         "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-drawablepainter",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.DrawablePainter",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-flowlayout",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.FlowLayout",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-pager",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.Pager",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-pager-indicators",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-permissions",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.Permissions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-placeholder",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.Placeholder",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-placeholder-material",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-swiperefresh",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-systemuicontroller",
+        "version": "0.16.0",
+        "nugetVersion": "0.16.0.0",
+        "nugetId": "Xamarin.Google.Accompanist.SystemUIController",
         "dependencyOnly": false
       },
       {
@@ -1430,6 +1502,14 @@
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
         "templateSet": "rxjava"
+      },
+      {
+        "groupId": "io.github.aakira",
+        "artifactId": "napier",
+        "version": "1.4.1",
+        "nugetVersion": "1.4.1",
+        "nugetId": "Xamarin.AAkira.Napier",
+        "dependencyOnly": false
       },
       {
         "groupId": "org.jetbrains",

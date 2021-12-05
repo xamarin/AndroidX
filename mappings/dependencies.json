@@ -21,6 +21,12 @@
       ]
     },
     {
+      "id": "Xamarin.AAkira.Napier",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Activity",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -492,6 +498,82 @@
         "Xamarin.AndroidX.AppCompat",
         "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.Google.Android.Material",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.DrawablePainter",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.FlowLayout",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.Pager",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.AAkira.Napier",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.Pager.Indicators",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Material",
+        "Xamarin.Google.Accompanist.Pager",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.Permissions",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.AndroidX.Activity.Compose",
+        "Xamarin.AAkira.Napier",
+        "Xamarin.KotlinX.Coroutines.Android",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.Placeholder",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Foundation",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.AAkira.Napier",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.Placeholder.Material",
+      "dependencies": [
+        "Xamarin.Google.Accompanist.Placeholder",
+        "Xamarin.AndroidX.Compose.Material",
+        "Xamarin.AAkira.Napier",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.SwipeRefresh",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Material",
+        "Xamarin.AndroidX.Compose.UI.Tooling",
+        "Xamarin.AndroidX.Compose.UI.Util",
+        "Xamarin.Kotlin.StdLib.Jdk8"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Accompanist.SystemUIController",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.Kotlin.StdLib.Jdk8"
       ]
     },

@@ -350,6 +350,15 @@
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime" />
         <_AndroidXMavenArtifact Include="androidx.work.work-runtime-ktx" />
         <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-appcompat-theme" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-drawablepainter" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-flowlayout" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-pager" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-pager-indicators" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-permissions" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-placeholder" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-placeholder-material" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-swiperefresh" />
+        <_AndroidXMavenArtifact Include="com.google.accompanist.accompanist-systemuicontroller" />
         <_AndroidXMavenArtifact Include="com.google.android.gms.play-services-basement" />
         <_AndroidXMavenArtifact Include="com.google.android.gms.play-services-wearable" />
         <_AndroidXMavenArtifact Include="com.google.android.material.compose-theme-adapter" />
@@ -364,6 +373,7 @@
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
+        <_AndroidXMavenArtifact Include="io.github.aakira.napier" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-reflect" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
