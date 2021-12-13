@@ -7,6 +7,8 @@
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 
+using System.Collections.Generic;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -269,6 +271,8 @@ Task ("namespace-check")
             FilePath[] files_org = GetFiles("./generated/**/Org.*.cs").ToArray();
             FilePath[] files_io_1 = GetFiles("./generated/**/Io.*.cs").ToArray();
             FilePath[] files_io_2 = GetFiles("./generated/**/IO.*.cs").ToArray();
+            FilePath[] files_net = GetFiles("./generated/**/Net.*.cs").ToArray();
+            FilePath[] files_kotlin = GetFiles("./generated/**/Kotlin*.cs").ToArray();
             FilePath[] files_kotlinx = GetFiles("./generated/**/Kotlinx*.cs").ToArray();
 
             files = files.Concat(files_androidx.ToArray()).ToArray();
@@ -467,6 +471,7 @@ Task ("api-diff-analysis")
 
             DirectoryPathCollection directories = GetSubDirectories("./output/api-diff");
             Dictionary<string, string>  nugets_modified = new Dictionary<string, string>();
+            Dictionary<string, int[]>   api_changes_breaking_removed = new Dictionary<string, int[]>();
 
             foreach(DirectoryPath d in directories)
             {
@@ -499,7 +504,39 @@ Task ("api-diff-analysis")
                 }
             }
 
-            string[] lines = nugets_modified.Select(kv => kv.Key + Environment.NewLine + "\t" + kv.Value).ToArray();
+            FilePathCollection files = GetFiles(@"./output/api-diff/**/*.dll.breaking.md");
+            List<string> commands = new List<string>();
+
+            foreach(FilePath f in files)
+            {
+                Information($"file = {f}");
+
+                string[] lines_in_file = System.IO.File.ReadAllLines(f.ToString());
+                List<int> line_numbers = new List<int>();
+
+                for(int i=0; i<lines_in_file.Length; i++)
+                {
+                    if (lines_in_file[i].ToLower().Contains("remove"))
+                    {
+                        line_numbers.Add(i + 1);
+                        string command = $"code -n -g {f}:{i + 1}";
+                        Information($"      command = {command}");
+                        commands.Add(command);
+                    }
+                }
+
+                api_changes_breaking_removed.Add(f.ToString(), line_numbers.ToArray());
+            }
+
+            System.IO.File.WriteAllLines("./output/commands-open-file.sh", commands.ToArray());
+
+            var nugets_modified_ordered = nugets_modified.ToList();
+
+            nugets_modified_ordered.Sort((pair1,pair2) => pair1.Value.CompareTo(pair2.Value));
+
+            string[] lines = nugets_modified_ordered
+                                            .Select(kv => $"- {kv.Value}" + Environment.NewLine + "\t - " + kv.Key)
+                                            .ToArray();
             System.IO.File.WriteAllLines("./output/nugets-with-changed-APIs.md", lines);
 
             return;
@@ -526,6 +563,7 @@ Task ("read-analysis-files")
                 "./output/missing_dotnet_type.csv",
                 "./output/missing_java_type.csv",
                 "./output/nugets-with-changed-APIs.md",
+                "./output/commands-open-file.sh",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
