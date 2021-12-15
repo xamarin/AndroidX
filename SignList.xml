@@ -3,7 +3,7 @@
   <ItemGroup>
     <FirstParty Include="Xamarin.Android.*.dll" />
     <FirstParty Include="Xamarin.AndroidX.*.dll" />
-    <FirstParty Include="Xamarin.Google.Android.Material.dll" />
+    <FirstParty Include="Xamarin.Google.*.dll" />
     <FirstParty Include="Xamarin.Jetbrains.*.dll" />
     <FirstParty Include="Xamarin.Kotlin.*.dll" />    
     <FirstParty Include="Xamarin.KotlinX.*.dll" />    

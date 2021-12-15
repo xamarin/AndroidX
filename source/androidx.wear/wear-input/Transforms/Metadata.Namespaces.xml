@@ -1,0 +1,15 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.wear']"
+        name="managedName"
+        >
+        AndroidX.Wear
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.wear.input']"
+        name="managedName"
+        >
+        AndroidX.Wear.Input
+    </attr>
+
+</metadata>

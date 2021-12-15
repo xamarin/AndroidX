@@ -1,0 +1,55 @@
+﻿<metadata>
+    <remove-node path="/api/package" />
+
+    <!--
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.gestures']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Gestures
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.interaction']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Interaction
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.lazy']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Lazy
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.selection']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Selection
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.shape']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Shape
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.text']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Text
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.foundation.text.selection']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Foundation.Text.Selection
+    </attr>        
+    -->
+
+</metadata>

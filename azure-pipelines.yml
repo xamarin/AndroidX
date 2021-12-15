@@ -6,12 +6,13 @@ pr:
   - main
   
 variables:
-  AndroidBinderatorVersion: 0.5.0
+  AndroidBinderatorVersion: 0.5.2
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.100-rc.1.21463.6
-  # NOTE: there wasn't a public release of 16.11 for macOS
-  LegacyXamarinAndroidPkg: https://dl.internalx.com/vsts-devdiv/Xamarin.Android/public/4941337/d16-11/7776c9f1c8fac303c3aa57867825990850be0384/xamarin.android-11.4.0.5.pkg
-  LegacyXamarinAndroidVsix: https://download.visualstudio.microsoft.com/download/pr/7372b89a-b719-426c-9916-c33cbc6c7a61/45c38957fdcacfbee95be95ee40c4f5a4cc9ace69416625ad26e2da83b176941/Xamarin.Android.Sdk-11.4.0.5.vsix
+  DotNetVersion: 6.0.100
+  DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
+  NuGetOrgSource: https://api.nuget.org/v3/index.json
+  LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d17-0-macos
+  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-0-windows
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
@@ -35,13 +36,19 @@ jobs:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
+      macosImage: 'macOS-11'                                  # the name of the macOS VM image (BigSur)
+      windowsImage: windows-2022
+      xcode: 13.1
+      dotnet: '5.0.403'                                       # the version of .NET Core to use
+      dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
           inputs:
             version: $(DotNetVersion)
         - pwsh: |
-            dotnet workload install android
+            dotnet workload update --verbosity diag --from-rollback-file workload.json --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
         - task: JavaToolInstaller@0
           inputs:
             versionSpec: '11'

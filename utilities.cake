@@ -42,6 +42,7 @@ Task ("list-artifacts")
             lines1.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
+            // | Maven Fully Qualified Artifact                                       | NuGet Package                                                        |
             lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
             lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
             lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
@@ -113,61 +114,61 @@ Task ("spell-check")
             {
                 "Xamarin",
                 "AndroidX",
-		        "IdentifierCommon",
-		        "IdentifierProvider",
-		        "AppCompat",
-		        "AppCompatResources",
-		        "Runtime",
-		        "AsyncLayoutInflater",
-		        "AutoFill",
-		        "Biometric",
-		        "Camera2",
-		        "Lifecycle",
-		        "CardView",
-		        "ConstraintLayout",
-		        "CoordinatorLayout",
-		        "ContentPager",
-		        "CursorAdapter",
-		        "CustomView",
-		        "DataBinding",
-		        "DataBindingAdapters",
-		        "DataBindingCommon",
-		        "DataBindingRuntime",
-		        "ViewBinding",
-		        "DocumentFile",
-		        "DrawerLayout",
-		        "DynamicAnimation",
-		        "Emoji",
-		        "ExifInterface",
-		        "GridLayout",
-		        "HeifWriter",
-		        "Interpolator",
-		        "Leanback",
-		        "V14",
-		        "UI",
-		        "Utils",
-		        "V13",
-		        "V4",
-		        "LiveData",
-		        "ViewModel",
-		        "ViewModelSavedState",
-		        "LocalBroadcastManager",
-		        "Media2",
-		        "MediaRouter",
-		        "MultiDex",
-		        "Runtime",
-		        "PercentLayout",
-		        "RecyclerView",
-		        "SavedState",
-		        "SlidingPaneLayout",
-		        "Sqlite",
-		        "SwipeRefreshLayout",
-		        "TvProvider",
-		        "VectorDrawable",
-		        "VersionedParcelable",
-		        "ViewPager",
-		        "ViewPager2",
-		        "WebKit",
+                "IdentifierCommon",
+                "IdentifierProvider",
+                "AppCompat",
+                "AppCompatResources",
+                "Runtime",
+                "AsyncLayoutInflater",
+                "AutoFill",
+                "Biometric",
+                "Camera2",
+                "Lifecycle",
+                "CardView",
+                "ConstraintLayout",
+                "CoordinatorLayout",
+                "ContentPager",
+                "CursorAdapter",
+                "CustomView",
+                "DataBinding",
+                "DataBindingAdapters",
+                "DataBindingCommon",
+                "DataBindingRuntime",
+                "ViewBinding",
+                "DocumentFile",
+                "DrawerLayout",
+                "DynamicAnimation",
+                "Emoji",
+                "ExifInterface",
+                "GridLayout",
+                "HeifWriter",
+                "Interpolator",
+                "Leanback",
+                "V14",
+                "UI",
+                "Utils",
+                "V13",
+                "V4",
+                "LiveData",
+                "ViewModel",
+                "ViewModelSavedState",
+                "LocalBroadcastManager",
+                "Media2",
+                "MediaRouter",
+                "MultiDex",
+                "Runtime",
+                "PercentLayout",
+                "RecyclerView",
+                "SavedState",
+                "SlidingPaneLayout",
+                "Sqlite",
+                "SwipeRefreshLayout",
+                "TvProvider",
+                "VectorDrawable",
+                "VersionedParcelable",
+                "ViewPager",
+                "ViewPager2",
+                "WebKit",
                 "WindowExtensions",
                 "SecurityCrypto",
                 "Java8",
@@ -179,6 +180,10 @@ Task ("spell-check")
                 "WindowJava",
                 "Startup",
                 "StartupRuntime",
+                "MaterialIcons",
+                "Saveable",
+                "Util",
+                "ProfileInstaller",
                 "Kotlin",
                 "StdLib",
                 "Jdk7",
@@ -201,7 +206,12 @@ Task ("spell-check")
                 "ErrorProneAnnotations",
                 "J2Objc",
                 "J2ObjcAnnotations",
+                "Crypto",
+                "Tink",
+                "PhoneInteractions",
+                "RemoteInteractions",
            };
+
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
             using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
@@ -263,12 +273,16 @@ Task ("namespace-check")
             FilePath[] files_androidx = GetFiles("./generated/**/Androidx.*.cs").ToArray();
             FilePath[] files_com = GetFiles("./generated/**/Com.*.cs").ToArray();
             FilePath[] files_org = GetFiles("./generated/**/Org.*.cs").ToArray();
-            FilePath[] files_io = GetFiles("./generated/**/Io.*.cs").ToArray();
+            FilePath[] files_io_1 = GetFiles("./generated/**/Io.*.cs").ToArray();
+            FilePath[] files_io_2 = GetFiles("./generated/**/IO.*.cs").ToArray();
+            FilePath[] files_kotlinx = GetFiles("./generated/**/Kotlinx*.cs").ToArray();
 
             files = files.Concat(files_androidx.ToArray()).ToArray();
             files = files.Concat(files_com.ToArray()).ToArray();
             files = files.Concat(files_org.ToArray()).ToArray();
-            files = files.Concat(files_io.ToArray()).ToArray();
+            files = files.Concat(files_io_1.ToArray()).ToArray();
+            files = files.Concat(files_io_2.ToArray()).ToArray();
+            files = files.Concat(files_kotlinx.ToArray()).ToArray();
 
             if (files.Any())
             {

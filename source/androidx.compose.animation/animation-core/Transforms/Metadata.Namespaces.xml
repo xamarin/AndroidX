@@ -1,0 +1,13 @@
+﻿<metadata>
+    <remove-node path="/api/package" />
+
+    <!--
+    <attr 
+        path="/api/package[@name='androidx.compose.animation.core']" 
+        name="managedName"
+        >
+        AndroidX.Compose.Animation.Core
+    </attr>        
+    -->
+
+</metadata>

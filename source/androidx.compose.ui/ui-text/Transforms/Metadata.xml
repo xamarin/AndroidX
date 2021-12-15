@@ -1,0 +1,176 @@
+﻿<metadata>
+    <!--
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='add' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.text.intl.Locale']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='contains' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.text.intl.Locale']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='addAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends androidx.compose.ui.text.intl.Locale&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='removeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='containsAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='retainAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+
+
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='getSize' and count(parameter)=0]"
+        name="managedName"
+        >
+        Size
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='size' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/method[@name='contains' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.text.intl.Locale']]"
+        />
+
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontWeight']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.text.font.FontWeight']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text']/class[@name='AnnotatedString']/method[@name='getLength' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text']/class[@name='AnnotatedString']/method[@name='getLength' and count(parameter)=0]"
+        name="managedName"
+        >
+        Length
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text']/class[@name='AnnotatedString']/method[@name='length' and count(parameter)=0]"
+        />
+
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='add' and count(parameter)=1 and parameter[1][@type='androidx.compose.ui.text.font.Font']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='add' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='androidx.compose.ui.text.font.Font']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='addAll' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.Collection&lt;? extends androidx.compose.ui.text.font.Font&gt;']]/parameter[2]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='addAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends androidx.compose.ui.text.font.Font&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='containsAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='removeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='retainAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='set' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='androidx.compose.ui.text.font.Font']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='set' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='androidx.compose.ui.text.font.Font']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='getSize' and count(parameter)=0]"
+        name="managedName"
+        >
+        Size
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='size' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.text.font']/class[@name='FontListFontFamily']/method[@name='subList' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
+        name="managedName"
+        >
+        SubListOriginal
+    </attr>
+    -->
+
+</metadata>

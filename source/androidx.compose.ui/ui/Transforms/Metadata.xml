@@ -1,0 +1,61 @@
+﻿<metadata>
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.draw']/class[@name='CacheDrawScope']/method[@name='toSp-0xMU5do' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        ToSp
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.draw']/class[@name='CacheDrawScope']/method[@name='toSp-kPz2Gy4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        ToSp1
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.layout']/class[@name='ScaleFactorKt']/method[@name='times-m-w2e94' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+        name="managedName"
+        >
+        Times1
+    </attr>
+
+    <!--
+        error CS0161: 'RequestDisallowInterceptTouchEvent.Invoke(Object)': 
+        not all code paths return a value 
+        ??? bug in generator ???
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.input.pointer']/class[@name='RequestDisallowInterceptTouchEvent']/method[@name='invoke' and count(parameter)=1 and parameter[1][@type='boolean']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.ui.input.pointer']/class[@name='RequestDisallowInterceptTouchEvent']/method[@name='invoke' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    -->
+
+    <!--
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.input.pointer']/class[@name='RequestDisallowInterceptTouchEvent']/method[@name='invoke' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.input.pointer']/class[@name='RequestDisallowInterceptTouchEvent']/implements"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.compose.ui.node']/class[@name='LayoutNodeKt']/method[@name='requireOwner' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    -->
+
+
+
+
+</metadata>
