@@ -192,6 +192,15 @@ Task ("spell-check")
                 "AutoValue",
                 "ReactiveX",
                 "RxJava",
+                "ListenableFuture",
+                "FailureAccess",
+                "FindBugs",
+                "CheckerFramework",
+                "CheckerCompatQual",
+                "ErrorProne",
+                "ErrorProneAnnotations",
+                "J2Objc",
+                "J2ObjcAnnotations",
            };
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
