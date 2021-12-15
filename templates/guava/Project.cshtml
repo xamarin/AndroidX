@@ -98,10 +98,12 @@
       <JavaSourcesJar 
         Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" 
         Link="Jars\%(Filename)%(Extension)" 
+        Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')" 
         />
       <JavaDocJar 
         Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" 
-        Link="Jars\%(Filename)%(Extension)" 
+        Link="Jars\%(Filename)%(Extension)"
+        Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')" 
         />
       <TransformFile
         Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" 
