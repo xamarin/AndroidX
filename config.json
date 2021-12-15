@@ -1321,31 +1321,31 @@
         "dependencyOnly": true
       },
       {
-        "templateSet": "guava",
-        "groupId": "com.google.guava",
-        "artifactId": "failureaccess",
-        "version": "1.0.1",
-        "nugetVersion": "1.0.1.2",
-        "nugetId": "Xamarin.Google.Guava.FailureAccess",
-        "dependencyOnly": false
-      },
-      {
-        "templateSet": "guava",
         "groupId": "com.google.guava",
         "artifactId": "guava",
         "version": "29.0-android",
         "nugetVersion": "29.0.0",
         "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
-        "templateSet": "guava",
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
-        "version": "1.0",
-        "nugetVersion": "1.0.0.2",
+        "version": "9999.0-empty-to-avoid-conflict-with-guava",
+        "nugetVersion": "9999.0.0.0-empty-to-avoid-conflict-with-guava",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "templateSet": "guava"
+      },
+      {
+        "groupId": "com.google.guava",
+        "artifactId": "failureaccess",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1.2",
+        "nugetId": "Xamarin.Google.Guava.FailureAccess",
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "templateSet": "findbugs",
