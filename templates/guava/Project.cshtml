@@ -1,19 +1,7 @@
-@{
-  var assembly_name = string.IsNullOrEmpty(Model.AssemblyName) ? Model.NuGetPackageId : Model.AssemblyName;
-  
-  // We don't want our .jar file names to conflict, so we need ex: rxjava3.jar
-  var rx_version = Model.NuGetPackageId.Contains("RxJava3") ? "3" : "2";
-  
-  if (!Model.Metadata.TryGetValue("friendlyName", out string friendlyName)) { friendlyName = Model.NuGetPackageId.Replace("Xamarin.", ""); }
-}
-
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
     <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
-    <RootNamespace>ReactiveX</RootNamespace>
-    <AssemblyName>@(assembly_name)</AssemblyName>
-    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
     <!--
       No warnings for:
        - CS0618: 'member' is obsolete: 'text'
@@ -34,41 +22,101 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>@(Model.NuGetPackageId)</PackageId>
-    <Title>@(friendlyName) for Xamarin.Android</Title>
-    <PackageDescription>Xamarin.Android binding for @(friendlyName)</PackageDescription>
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2083771</PackageProjectUrl>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=2083684</PackageLicenseUrl>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageLicenseUrl>
+    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865435</PackageProjectUrl>
+    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/bumptech/glide</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
+      <PackageId>@Model.NuGetPackageId</PackageId>
+      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      switch(@Model.NuGetPackageId)
+      {
+          case "Xamarin.Google.Guava":
+            <Title>Xamarin.Google.Guava</Title>
+            <Title>Google Guava reference library for Xamarin.Android</Title>
+            <PackageDescription>
+            Xamarin.Android bindings for Google Guava
+
+            NOTE: This package is meant to be used as a reference only for other binding projects that depend on Guava.
+            This package does not expose any useful API's in the .dll itself.
+
+            Guava is a set of core libraries that includes new collection types (such as multimap and multiset), immutable collections, a graph library, functional types, an in-memory cache, and APIs/utilities for concurrency, I/O, hashing, primitives, reflection, string processing, and much more!
+            </PackageDescription>
+            <AssemblyName>Xamarin.Google.Guava</AssemblyName>
+            <RootNamespace>Guava</RootNamespace>
+            break; 
+          case "Xamarin.Google.Guava.FailureAccess":
+            <Title>Xamarin.Google.Guava.FailureAccess</Title>
+            <Title>Google Guava FailureAccess reference library for Xamarin.Android</Title>
+            <PackageDescription>
+            Xamarin.Android bindings for Google Guava FailureAccess
+
+            NOTE: This package is meant to be used as a reference only for other binding projects that depend on Guava.
+            This package does not expose any useful API's in the .dll itself.
+
+            Guava is a set of core libraries that includes new collection types (such as multimap and multiset), immutable collections, a graph library, functional types, an in-memory cache, and APIs/utilities for concurrency, I/O, hashing, primitives, reflection, string processing, and much more!
+            </PackageDescription>
+            <AssemblyName>Xamarin.Google.Guava.FailureAccess</AssemblyName>
+            <RootNamespace>Guava.FailureAccess</RootNamespace>
+            break; 
+          case "Xamarin.Google.Guava.ListenableFuture":
+            <Title>Xamarin.Google.Guava.ListenableFuture</Title>
+            <Title>Google Guava ListenableFuture reference library for Xamarin.Android</Title>
+            <PackageDescription>
+            Xamarin.Android bindings for Google Guava ListenableFuture
+
+            NOTE: This package is meant to be used as a reference only for other binding projects that depend on Guava.
+            This package does not expose any useful API's in the .dll itself.
+
+            Guava is a set of core libraries that includes new collection types (such as multimap and multiset), immutable collections, a graph library, functional types, an in-memory cache, and APIs/utilities for concurrency, I/O, hashing, primitives, reflection, string processing, and much more!
+            </PackageDescription>
+            <AssemblyName>Xamarin.Google.Guava.ListenableFuture</AssemblyName>
+            <RootNamespace>Guava.ListenableFuture</RootNamespace>
+            break; 
+          default:
+            break; 
+      }
+      <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+    }
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
-  <Target Name="RenameJars" BeforeTargets="PrepareForBuild">
-    <!-- We want the jar embedded as rxjava-3.0.1.jar, so it doesn't conflict with other versions -->
-    @foreach (var art in @Model.MavenArtifacts) {
-    <Move 
-      SourceFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" 
-      DestinationFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar"
-      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar')" />
-    }  
-    
-    <ItemGroup>
-      @foreach (var art in @Model.MavenArtifacts) {
-      <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)@(rx_version)-@(art.MavenArtifactVersion)%(Extension)" />
-      <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)@(rx_version)-@(art.MavenArtifactVersion)%(Extension)" />
-      }
-    </ItemGroup>
-  </Target>
 
   <ItemGroup>
-    <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
+      <InputJar 
+        Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" 
+        Link="Jars\%(Filename)%(Extension)" 
+        />
+      <JavaSourcesJar 
+        Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" 
+        Link="Jars\%(Filename)%(Extension)" 
+        />
+      <JavaDocJar 
+        Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" 
+        Link="Jars\%(Filename)%(Extension)" 
+        />
+      <TransformFile
+        Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" 
+        Link="Transforms\%(Filename)%(Extension)" 
+        />
+      <Compile 
+        Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Additions\*.cs" 
+        Link="Additions\%(Filename)%(Extension)" 
+        />
+      <None 
+        Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\*.targets" 
+        Pack="True" 
+        PackagePath="@@(_TfmNuGetBuildFolders->'%(Identity)$(PackageId).targets')" 
+        />
+     }
   </ItemGroup>
 
   <ItemGroup>
@@ -82,7 +130,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\templates\rxjava\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\guava\License.md" Pack="true" PackagePath="License.md" />
+    <None Include="..\..\templates\guava\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>
