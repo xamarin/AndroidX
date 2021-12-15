@@ -1276,6 +1276,13 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.Google.Guava",
+      "dependencies": [
+        "Xamarin.Google.Guava.FailureAccess",
+        "Xamarin.Google.Guava.ListenableFuture"
+      ]
+    },
+    {
       "id": "Xamarin.Google.Guava.FailureAccess",
       "dependencies": []
     },
