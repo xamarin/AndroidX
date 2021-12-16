@@ -6,7 +6,7 @@ pr:
   - main
   
 variables:
-  AndroidBinderatorVersion: 0.5.2
+  AndroidBinderatorVersion: 0.5.3
   AndroidXMigrationVersion: 1.0.8
   DotNetVersion: 6.0.100
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
