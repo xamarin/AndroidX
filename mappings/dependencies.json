@@ -1464,9 +1464,9 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Concurrent.Futures",
+        "Xamarin.Google.Guava.ListenableFuture",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Guava",
-        "Xamarin.Google.Guava.ListenableFuture",
         "Xamarin.GooglePlayServices.Basement",
         "Xamarin.GooglePlayServices.Wearable"
       ]
@@ -1474,9 +1474,9 @@
     {
       "id": "Xamarin.KotlinX.Coroutines.Guava",
       "dependencies": [
+        "Xamarin.Google.Guava",
         "Xamarin.Kotlin.StdLib.Jdk8",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm",
-        "Xamarin.Google.Guava"
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
       ]
     },
     {
@@ -1590,10 +1590,6 @@
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
       ]
-    },
-    {
-      "id": "Xamarin.Google.Guava",
-      "dependencies": []
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Jdk8",
