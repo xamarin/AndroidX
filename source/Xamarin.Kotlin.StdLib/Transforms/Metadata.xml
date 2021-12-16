@@ -177,4 +177,45 @@
   <attr path="/api/package/class[substring(@name,string-length(@name)-7)='.Default']" name="managedName">DefaultStatic</attr>
   <remove-node path="/api/package/class[substring(@name,string-length(@name)-7)='.Default' and count(method)=0 and count(field)=0]" />
 
+  <add-node
+    path="/api/package[@name='kotlin']/class[@name='UShortArray']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="int" name="size"
+      deprecated="not deprecated" final="true" bridge="true" native="false" synchronized="false" 
+      synthetic="false" 
+      >
+    </method>
+  </add-node>
+  <add-node
+    path="/api/package[@name='kotlin']/class[@name='ULongArray']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="int" name="size"
+      deprecated="not deprecated" final="true" bridge="true" native="false" synchronized="false" 
+      synthetic="false" 
+      >
+    </method>
+  </add-node>
+  <add-node
+    path="/api/package[@name='kotlin']/class[@name='UIntArray']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="int" name="size"
+      deprecated="not deprecated" final="true" bridge="true" native="false" synchronized="false" 
+      synthetic="false" 
+      >
+    </method>
+  </add-node>
+  <add-node
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="int" name="size"
+      deprecated="not deprecated" final="true" bridge="true" native="false" synchronized="false" 
+      synthetic="false" 
+      >
+    </method>
+  </add-node>
+
 </metadata>
