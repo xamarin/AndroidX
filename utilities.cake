@@ -320,6 +320,156 @@ Task("binderate-diff")
 		}
 	);
 
+void RunProcess(FilePath file, string args)
+{
+    int exit_code = StartProcess(file, args);
+    if (exit_code != 0)
+    {
+        throw new Exception ($"Process {file} exited with code {exit_code}.");
+    }
+
+    return;
+}
+
+System.Xml.XmlDocument xmldoc = null;
+System.Xml.XmlNamespaceManager nsmgr = null;
+
+Task ("target-sdk-version-check")
+    .Does
+    (
+        () =>
+        {
+            FilePath        config_file = MakeAbsolute(new FilePath("./config.json")).FullPath;
+            DirectoryPath   base_path = MakeAbsolute(new DirectoryPath ("./")).FullPath;
+
+            // Run the dotnet tool for binderator
+            RunProcess
+            (
+                "xamarin-android-binderator",
+                $"--config=\"{config_file}\" --basepath=\"{base_path}\""
+            );
+
+            Dictionary<(string group, string artifact), int> artifacts_target_sdk = null;
+            Dictionary<(string group, string artifact), string> artifacts_versions = null;
+            Parallel.Invoke
+            (
+                () =>
+                {
+                    FilePath[] files_android_manifests = GetFiles("./externals/**/AndroidManifest.xml").ToArray();
+                    foreach(FilePath fp in files_android_manifests)
+                    {
+                        Information($"files_android_manifest = {fp}");
+                    }
+
+                    artifacts_target_sdk = new Dictionary<(string group, string artifact), int>();
+
+                    string xpath_expression_nodes_to_find =
+                                $@"/manifest/uses-sdk/@android:targetSdkVersion"
+                                ;
+
+
+                    foreach(FilePath fp in files_android_manifests)
+                    {
+                        Information($"      AndroidManifest = {fp}");
+                        xmldoc = new System.Xml.XmlDocument();
+                        xmldoc.Load(fp.ToString());
+
+                        nsmgr = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
+                        nsmgr.AddNamespace("android", "http://schemas.android.com/apk/res/android");
+
+                        string t = xmldoc.SelectSingleNode(xpath_expression_nodes_to_find, nsmgr)?.Value;
+
+                        string[] path_parts = fp
+                                                .ToString()
+                                                .Split
+                                                    (
+                                                        new char[]{ '/' },
+                                                        System.StringSplitOptions.None
+                                                    );
+
+                        string a = path_parts[path_parts.Length - 2];
+                        string g = path_parts[path_parts.Length - 3];
+                                                
+                        Information($"              artifact  = {g}:{a} - SDK {t}");
+                        int t_sdk; 
+                        bool ok = int.TryParse(t, out t_sdk);
+                        if (ok)
+                        {
+                            artifacts_target_sdk.Add((g,a), t_sdk);
+                        }
+                    }
+
+                    return;
+                },
+                () =>
+                {
+                    FilePath[] files_poms = GetFiles("./externals/**/*.pom").ToArray();
+                    foreach(FilePath fp in files_poms)
+                    {
+                        Information($"files_android_pom     = {fp}");
+                    }
+
+                    artifacts_versions = new Dictionary<(string group, string artifact), string>();
+
+
+                    foreach(FilePath fp in files_poms)
+                    {
+                        Information($"      pom.xml = {fp}");
+                        xmldoc = new System.Xml.XmlDocument();
+                        xmldoc.Load(fp.ToString());
+
+                        nsmgr = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
+                        nsmgr.AddNamespace("pom", "http://maven.apache.org/POM/4.0.0");
+
+                        string v = xmldoc.SelectSingleNode($@"/pom:project/pom:version", nsmgr)?.InnerText;
+                        Information($"              version     = {v}");
+                        if ( v == null )
+                        {
+                            v = xmldoc.SelectSingleNode($@"/pom:project/pom:parent/pom:version", nsmgr)?.InnerText;
+                        }
+                        
+                        string g = xmldoc.SelectSingleNode($@"/pom:project/pom:groupId", nsmgr)?.InnerText;
+                        if ( g == null )
+                        {
+                            g = xmldoc.SelectSingleNode($@"/pom:project/pom:parent/pom:groupId", nsmgr)?.InnerText;
+                        }
+                        Information($"              groupId     = {g}");
+
+                        string a = xmldoc.SelectSingleNode($@"/pom:project/pom:artifactId", nsmgr)?.InnerText;
+                        Information($"              artifactId  = {a}");
+
+                        artifacts_versions.Add((g, a), v);
+                    }
+                    return;
+                }
+            );
+
+            Dictionary<(string group, string artifact), (string version, int sdk)> artifact_fq_sdk;
+            artifact_fq_sdk = new Dictionary<(string group, string artifact), (string version, int sdk)>();
+
+            foreach (KeyValuePair<(string group, string artifact), int> ga in artifacts_target_sdk)
+            {
+                int t_sdk = ga.Value;
+                string v = artifacts_versions[ga.Key];
+                
+                artifact_fq_sdk.Add((ga.Key.group, ga.Key.artifact), (v, t_sdk));
+            }
+
+            List<string> log_artifacts_sdk_targets = new List<string>();
+
+            foreach (KeyValuePair<(string g, string a), (string v, int sdk)> ga in artifact_fq_sdk)
+            {
+                string log = $"{ga.Key.g}.{ga.Key.a}:{ga.Value.v} - SDK {ga.Value.sdk}";
+                Information(log);
+                log_artifacts_sdk_targets.Add(log);
+            }
+
+            System.IO.File.WriteAllLines("./output/artifacts_sdk_targets.md", log_artifacts_sdk_targets.ToArray());
+
+            return;
+        }
+    );
+
 Task ("api-diff-markdown-info-pr")
     .IsDependentOn("binderate-diff")
     .Does
@@ -564,6 +714,7 @@ Task ("read-analysis-files")
                 "./output/missing_java_type.csv",
                 "./output/nugets-with-changed-APIs.md",
                 "./output/commands-open-file.sh",
+                "./output/artifacts_sdk_targets.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
