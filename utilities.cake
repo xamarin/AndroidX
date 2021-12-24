@@ -500,7 +500,7 @@ Task ("api-diff-analysis")
                         Information( $"     artifactId                  = {artifactId}");
                         Information( $"     artifactId  fully qualified = {groupId}.{artifactId}");
 
-                        nugets_modified.Add(d_name, $"{groupId}.{artifactId}");
+                        nugets_modified.Add($"{nugetId}-{nugetVersion}", $"{groupId}.{artifactId}");
                     }
                 }
             }
