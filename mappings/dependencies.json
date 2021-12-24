@@ -30,15 +30,12 @@
         "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
         "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.Tracing.Tracing",
-        "Xamarin.Kotlin.StdLib"
+        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Annotation",
-      "dependencies": [
-        "Xamarin.AndroidX.Migration"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Collection",
@@ -52,7 +49,6 @@
         "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.VersionedParcelable"
       ]
@@ -78,8 +74,7 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.ViewModel",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.Kotlin.StdLib"
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -94,13 +89,6 @@
       "id": "Xamarin.AndroidX.Tracing.Tracing",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
-      ]
-    },
-    {
-      "id": "Xamarin.Kotlin.StdLib",
-      "dependencies": [
-        "Xamarin.Jetbrains.Annotations",
-        "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
@@ -147,6 +135,13 @@
       ]
     },
     {
+      "id": "Xamarin.Kotlin.StdLib",
+      "dependencies": [
+        "Xamarin.Jetbrains.Annotations",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Ads.Identifier",
       "dependencies": [
         "Xamarin.AndroidX.Ads.IdentifierCommon",
@@ -185,12 +180,6 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core",
         "Xamarin.Google.AutoValue.Annotations"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration",
-      "dependencies": [
-        "Xamarin.AndroidX.MultiDex"
       ]
     },
     {
@@ -1027,8 +1016,7 @@
     {
       "id": "Xamarin.AndroidX.Lifecycle.Process",
       "dependencies": [
-        "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.AndroidX.Startup.StartupRuntime"
+        "Xamarin.AndroidX.Lifecycle.Runtime"
       ]
     },
     {
@@ -1044,13 +1032,6 @@
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Core"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
@@ -1118,7 +1099,17 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Migration",
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
@@ -1292,6 +1283,13 @@
         "Xamarin.AndroidX.Fragment.Ktx",
         "Xamarin.AndroidX.Preference",
         "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
