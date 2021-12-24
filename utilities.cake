@@ -363,11 +363,6 @@ Task ("target-sdk-version-check")
 
                     artifacts_target_sdk = new Dictionary<(string group, string artifact), int>();
 
-                    string xpath_expression_nodes_to_find =
-                                $@"/manifest/uses-sdk/@android:targetSdkVersion"
-                                ;
-
-
                     foreach(FilePath fp in files_android_manifests)
                     {
                         Information($"      AndroidManifest = {fp}");
@@ -377,7 +372,8 @@ Task ("target-sdk-version-check")
                         nsmgr = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
                         nsmgr.AddNamespace("android", "http://schemas.android.com/apk/res/android");
 
-                        string t = xmldoc.SelectSingleNode(xpath_expression_nodes_to_find, nsmgr)?.Value;
+                        string t = xmldoc.SelectSingleNode($@"/manifest/uses-sdk/@android:targetSdkVersion", nsmgr)?.Value;
+                        string mc = xmldoc.SelectSingleNode($@"/manifest/uses-sdk/@android:minCompileSdk", nsmgr)?.Value;
 
                         string[] path_parts = fp
                                                 .ToString()
@@ -390,7 +386,7 @@ Task ("target-sdk-version-check")
                         string a = path_parts[path_parts.Length - 2];
                         string g = path_parts[path_parts.Length - 3];
                                                 
-                        Information($"              artifact  = {g}:{a} - SDK {t}");
+                        Information($"              artifact  = {g}:{a} - target SDK version = {t} min compile SDK = {mc}");
                         int t_sdk; 
                         bool ok = int.TryParse(t, out t_sdk);
                         if (ok)
