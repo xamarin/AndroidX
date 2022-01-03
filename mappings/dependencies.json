@@ -52,9 +52,9 @@
         "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.AndroidX.VersionedParcelable"
+        "Xamarin.AndroidX.VersionedParcelable",
+        "Xamarin.AndroidX.Concurrent.Futures"
       ]
     },
     {
@@ -207,13 +207,13 @@
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.CursorAdapter",
         "Xamarin.AndroidX.DrawerLayout",
-        "Xamarin.AndroidX.Emoji2.ViewsHelper",
-        "Xamarin.AndroidX.Emoji2",
         "Xamarin.AndroidX.Fragment",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
-        "Xamarin.AndroidX.ResourceInspection.Annotation",
-        "Xamarin.AndroidX.SavedState"
+        "Xamarin.AndroidX.SavedState",
+        "Xamarin.AndroidX.Emoji2.ViewsHelper",
+        "Xamarin.AndroidX.Emoji2",
+        "Xamarin.AndroidX.ResourceInspection.Annotation"
       ]
     },
     {
@@ -241,6 +241,24 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Fragment",
+      "dependencies": [
+        "Xamarin.AndroidX.Activity",
+        "Xamarin.AndroidX.Annotation.Experimental",
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Lifecycle.LiveData.Core",
+        "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
+        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.Loader",
+        "Xamarin.AndroidX.SavedState",
+        "Xamarin.AndroidX.ViewPager",
+        "Xamarin.AndroidX.Core.Core.Ktx",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Emoji2.ViewsHelper",
       "dependencies": [
         "Xamarin.AndroidX.Collection",
@@ -254,25 +272,7 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Lifecycle.Process",
         "Xamarin.AndroidX.Startup.StartupRuntime"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Fragment",
-      "dependencies": [
-        "Xamarin.AndroidX.Activity",
-        "Xamarin.AndroidX.Annotation.Experimental",
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core.Core.Ktx",
-        "Xamarin.AndroidX.Lifecycle.LiveData.Core",
-        "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
-        "Xamarin.AndroidX.Lifecycle.ViewModel",
-        "Xamarin.AndroidX.Loader",
-        "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.ViewPager",
-        "Xamarin.Kotlin.StdLib"
       ]
     },
     {
@@ -912,13 +912,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Lifecycle.Process",
-      "dependencies": [
-        "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.AndroidX.Startup.StartupRuntime"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Startup.StartupRuntime",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1064,6 +1057,13 @@
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.Lifecycle.Service",
         "Xamarin.AndroidX.Lifecycle.ViewModel"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.Process",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
       ]
     },
     {
