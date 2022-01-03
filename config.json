@@ -560,6 +560,7 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Emoji2",
+        "excludedRuntimeDependencies": "androidx.lifecycle.lifecycle-process",
         "dependencyOnly": false
       },
       {
