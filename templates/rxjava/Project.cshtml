@@ -70,6 +70,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
+  </ItemGroup>
+
+  <ItemGroup>
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
     <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />

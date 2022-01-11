@@ -51,6 +51,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
+  </ItemGroup>
+
+  <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
     <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\%(Filename)%(Extension)" />
     <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />

@@ -1628,6 +1628,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/reactive-streams/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -1640,6 +1644,10 @@
           {
             "templateFile": "templates/gson/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/kotlinx/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -1656,6 +1664,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/auto-value/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -1670,6 +1682,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/rxjava/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -1682,6 +1698,10 @@
           {
             "templateFile": "templates/tink/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/tink/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
