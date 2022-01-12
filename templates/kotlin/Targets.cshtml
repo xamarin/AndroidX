@@ -3,8 +3,10 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-    <AndroidJavaLibrary Condition=" '$(AndroidApplication)' == 'true' " Include="$(MSBuildThisFileDirectory)..\..\jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar">
-    </AndroidJavaLibrary>
+    <AndroidJavaLibrary 
+      Condition=" '$(AndroidApplication)' == 'true' " 
+      Include="$(MSBuildThisFileDirectory)..\..\jar\@(art.MavenGroupId).@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar"
+      />
     }
   </ItemGroup>
 

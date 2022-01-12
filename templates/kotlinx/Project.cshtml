@@ -49,7 +49,7 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar" Visible="false" />
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar" Visible="false" />
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
     }
   </ItemGroup>
