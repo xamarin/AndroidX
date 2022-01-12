@@ -44,6 +44,11 @@
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
   </PropertyGroup>
 
+  <!--
+    PR    https://github.com/xamarin/AndroidX/pull/378
+    XC    https://github.com/xamarin/XamarinComponents/tree/main/Android/ReactiveX/source
+  -->
+
   <Target Name="RenameJars" BeforeTargets="PrepareForBuild">
     <!-- We want the jar embedded as rxjava-3.0.1.jar, so it doesn't conflict with other versions -->
     @foreach (var art in @Model.MavenArtifacts) {
@@ -67,10 +72,6 @@
 
   <ItemGroup>
     <Compile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
   </ItemGroup>
 
   <ItemGroup>
