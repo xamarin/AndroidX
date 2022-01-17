@@ -503,6 +503,55 @@ Task ("api-diff-analysis")
         }
     );
 
+Task("nuget-analysis")
+.Does
+    (
+        () =>
+        {
+            string path = "./output/*.nupkg";
+            FilePathCollection files_configs = GetFiles(path);
+            foreach(FilePath f in files_configs)
+            {
+                Information($"File  = {f}");
+                string fzip = $"{f.ToString().Replace(".nupkg", "")}";
+                DeleteDirectory
+                            (
+                                fzip, 
+                                new DeleteDirectorySettings 
+                                {
+                                    Recursive = true,
+                                    Force = true
+                                }
+                            );
+                Unzip($"{f}", fzip);
+
+                IEnumerable<string> redirected_std_out;
+                IEnumerable<string> redirected_std_err;
+                int exit_code =
+                                StartProcess
+                                    (
+                                        "tree",
+                                        new ProcessSettings 
+                                        {
+                                            Arguments = $"-H {f.ToString().Replace(".nupkg", "")}",
+                                            // WorkingDirectory = "./"
+                                            RedirectStandardOutput = true,
+                                            RedirectStandardError = true
+                                        },
+                                        out redirected_std_out,
+                                        out redirected_std_err
+                                    );
+                
+                System.IO.File.WriteAllLines
+                                    (
+                                        $"{f.ToString().Replace(".nupkg", ".md")}", 
+                                        redirected_std_out.ToArray()
+                                    );
+            }
+        }
+    );
+
+
 Task ("read-analysis-files")
     .IsDependentOn ("binderate-diff")
     .IsDependentOn ("api-diff-markdown-info-pr")
