@@ -503,7 +503,7 @@ Task ("api-diff-analysis")
         }
     );
 
-Task("nuget-analysis")
+Task("nuget-structure-analysis")
 .Does
     (
         () =>
@@ -559,6 +559,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("spell-check")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
+    .IsDependentOn ("nuget-structure-analysis")
     .Does
     (
         () =>
