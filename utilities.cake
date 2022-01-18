@@ -513,17 +513,20 @@ Task("nuget-structure-analysis")
             foreach(FilePath f in files_configs)
             {
                 Information($"File  = {f}");
-                string fzip = $"{f.ToString().Replace(".nupkg", "")}";
-                DeleteDirectory
+                string d_zip = $"{f.ToString().Replace(".nupkg", "")}";
+                if (DirectoryExists(d_zip))
+                {
+                    DeleteDirectory
                             (
-                                fzip, 
+                                d_zip, 
                                 new DeleteDirectorySettings 
                                 {
                                     Recursive = true,
                                     Force = true
                                 }
                             );
-                Unzip($"{f}", fzip);
+                }
+                Unzip($"{f}", d_zip);
 
                 IEnumerable<string> redirected_std_out;
                 IEnumerable<string> redirected_std_err;
