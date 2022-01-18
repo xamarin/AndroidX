@@ -39,8 +39,8 @@ jobs:
       macosImage: 'macOS-11'                                  # the name of the macOS VM image (BigSur)
       windowsImage: windows-2022
       xcode: 13.1
-      dotnet: '6.0.101'                                       # the version of .NET Core to use
-      dotnetStable: '5.0.404'                                 # the stable version of .NET Core to use
+      dotnet: '5.0.403'                                       # the version of .NET Core to use
+      dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
