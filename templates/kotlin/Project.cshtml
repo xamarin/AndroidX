@@ -7,7 +7,7 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>Xamarin.Kotlin</RootNamespace>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
@@ -70,7 +70,7 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" Visible="false" />
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId)-@(art.MavenArtifactVersion).jar" Visible="false" />
     <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
     }
   </ItemGroup>
