@@ -7,7 +7,7 @@
 
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>@(rootNamespace)</RootNamespace>
     <AssemblyName>@(assembly_name)</AssemblyName>
@@ -42,6 +42,11 @@
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
   </PropertyGroup>
 
+  <!--
+    PR    https://github.com/xamarin/AndroidX/pull/373
+    XC    https://github.com/xamarin/XamarinComponents/tree/main/Android/ReactiveStreams/source/
+  -->
+  
   <ItemGroup>
     <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
   </ItemGroup>
