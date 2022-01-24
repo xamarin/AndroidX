@@ -101,7 +101,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard\" />
+    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard/" />
       }
     }
   </ItemGroup>
