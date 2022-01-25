@@ -279,7 +279,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
-				"Xamarin.AndroidX.Lifecycle.Process",
+				//"Xamarin.AndroidX.Lifecycle.Process",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
 				"Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
@@ -302,6 +302,9 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.ViewPager2",
 				"Xamarin.Google.Android.Material",
 				"Xamarin.Google.Guava.ListenableFuture",
+				"Xamarin.Jetbrains.Annotations",
+				"Xamarin.Kotlin.StdLib",
+				"Xamarin.Kotlin.StdLib.Common",
 			};
 
 			var tree = PackageDependencyTree.Load();
