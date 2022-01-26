@@ -554,6 +554,67 @@ Task("nuget-structure-analysis")
         }
     );
 
+Task ("test-url-discovery")
+    .Does
+    (
+        () =>
+        {
+            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            {
+                JsonTextReader jtr = new JsonTextReader(reader);
+                binderator_json_array = (JArray)JToken.ReadFrom(jtr);
+            }
+
+            string group_id         = null;
+            string artifact_id      = null;
+            string version          = null;
+            string extension        = null;
+            string url_root         = $"https://dl.google.com/android/maven2/";
+            string uri              = null;
+
+            System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
+            System.Net.Http.HttpResponseMessage result = null;
+            System.Net.HttpStatusCode sc;
+
+            foreach(JObject jo in binderator_json_array[0]["artifacts"])
+            {
+                bool? dependency_only = (bool?) jo["dependencyOnly"];
+                if ( dependency_only == true)
+                {
+                    continue;
+                }
+                
+                group_id      = (string) jo["groupId"];
+                artifact_id   = (string) jo["artifactId"];
+                version       = (string) jo["version"];
+
+                string uri_group    = group_id.Replace(".", "/");
+
+                extension     = "aar";
+                uri    = $"{url_root}/{uri_group}/{artifact_id}/{version}/{artifact_id}-{version}.{extension}";
+                result = client.GetAsync(uri).Result;
+                sc = result.StatusCode;
+                if ( sc == System.Net.HttpStatusCode.Accepted || sc == System.Net.HttpStatusCode.OK)
+                {
+                    Information($"Probing found     = {uri}");
+                    continue;
+                }
+
+                extension     = "jar";
+                uri    = $"{url_root}/{uri_group}/{artifact_id}/{version}/{artifact_id}-{version}.{extension}";
+                result = client.GetAsync(uri).Result;
+                sc = result.StatusCode;
+
+                if ( sc == System.Net.HttpStatusCode.Accepted || sc == System.Net.HttpStatusCode.OK)
+                {
+                    Information($"Probing found     = {uri}");
+                    continue;
+                }
+
+                Information($"Probing missed    = {uri}");                    
+            }
+        }
+    );
 
 Task ("read-analysis-files")
     .IsDependentOn ("binderate-diff")
