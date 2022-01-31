@@ -80,7 +80,10 @@
   <attr path="/api/package/class[implements[@name='java.lang.Comparable']]/method[@name='compareTo' and count(parameter)=1]/parameter[1]" name="managedType">Java.Lang.Object</attr>
   <attr path="/api/package/class[implements[@name='java.lang.Iterable']]/method[@name='iterator' and count(parameter)=0]" name="managedReturn">Java.Util.IIterator</attr>
   <attr path="/api/package/class[implements[@name='java.util.Collection']]/method[starts-with(@name,'add-') and count(parameter)=1]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+  <!-- 
+    moved below attempt to solve without remove-node
   <remove-node path="/api/package/class[implements[@name='java.util.Collection'] and @final='true']/method[@name='getSize' and count(parameter)=0]" />
+  -->
   <add-node path="/api/package/class[implements[@name='java.lang.Comparable'] and @final='true' and count(method[@name='compareTo'])=0]">
     <method abstract="false" deprecated="not deprecated" final="false" name="compareTo" native="false" return="int" static="false" synchronized="false" visibility="public">
       <parameter name="p0" type="java.lang.Object" />
@@ -176,6 +179,41 @@
   <remove-node path="/api/package/class[substring(@name,string-length(@name)-9)='.Companion' and count(method)=0 and count(field)=0]" />
   <attr path="/api/package/class[substring(@name,string-length(@name)-7)='.Default']" name="managedName">DefaultStatic</attr>
   <remove-node path="/api/package/class[substring(@name,string-length(@name)-7)='.Default' and count(method)=0 and count(field)=0]" />
+  
+  <!--
+  generated/org.jetbrains.kotlin.kotlin-stdlib/obj/Debug/monoandroid9.0/generated/src/Kotlin.UByteArray.cs(10,69): error CS0535: 'UByteArray' does not implement interface member 'ICollection.Size()' [generated/org.jetbrains.kotlin.kotlin-stdlib/org.jetbrains.kotlin.kotlin-stdlib.csproj]
+  generated/org.jetbrains.kotlin.kotlin-stdlib/obj/Debug/monoandroid9.0/generated/src/Kotlin.ULongArray.cs(10,69): error CS0535: 'ULongArray' does not implement interface member 'ICollection.Size()' [generated/org.jetbrains.kotlin.kotlin-stdlib/org.jetbrains.kotlin.kotlin-stdlib.csproj]
+  generated/org.jetbrains.kotlin.kotlin-stdlib/obj/Debug/monoandroid9.0/generated/src/Kotlin.UShortArray.cs(10,70): error CS0535: 'UShortArray' does not implement interface member 'ICollection.Size()' [generated/org.jetbrains.kotlin.kotlin-stdlib/org.jetbrains.kotlin.kotlin-stdlib.csproj]
+  generated/org.jetbrains.kotlin.kotlin-stdlib/obj/Debug/monoandroid9.0/generated/src/Kotlin.UIntArray.cs(10,68): error CS0535: 'UIntArray' does not implement interface member 'ICollection.Size()' [generated/org.jetbrains.kotlin.kotlin-stdlib/org.jetbrains.kotlin.kotlin-stdlib.csproj]
+  -->
+  <!--
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']/implements[@name='java.util.Collection']"
+    name="name-generic-aware"
+    >java.util.Collection&lt;java.lang.Object&gt;</attr>
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']/implements[@name='java.util.Collection']"
+    name="jni-type"
+    >Ljava/util/Collection&lt;+Ljava/lang/Object;&gt;;</attr>    
+  -->
+
+  <!-- 
+  <remove-node
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='getSize']"
+    />
+  -->
+  <!--
+    old
+    XPath seems to be incorrect
+  <remove-node path="/api/package/class[implements[@name='java.util.Collection'] and @final='true']/method[@name='getSize' and count(parameter)=0]" />
+  -->
+  <!--
+  <remove-node path="/api/package/class[implements[@name='java.util.Collection']]/method[@name='getSize' and count(parameter)=0]" />
+  -->
+  <remove-node path="/api/package/class[@name='UByteArray']/implements[@name='java.util.Collection']" />
+  <remove-node path="/api/package/class[@name='UIntArray']/implements[@name='java.util.Collection']" />
+  <remove-node path="/api/package/class[@name='UShortArray']/implements[@name='java.util.Collection']" />
+  <remove-node path="/api/package/class[@name='ULongArray']/implements[@name='java.util.Collection']" />
 
   <add-node
     path="/api/package[@name='kotlin']/class[@name='UShortArray']"

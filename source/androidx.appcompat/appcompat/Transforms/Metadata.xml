@@ -223,4 +223,11 @@
     <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[@name='getChangingConfigurations' and count(parameter)=0]" name="managedReturn">Android.Content.PM.ConfigChanges</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ActivityChooserModel.ActivityResolveInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.appcompat.widget.ActivityChooserModel.ActivityResolveInfo']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
 
+    <attr
+      path="/api/package[@name='androidx.appcompat.widget']/class/method[@name='readProperties' and count(parameter)=2 and parameter[2][@type='android.view.inspector.PropertyReader']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+    </attr>
+
 </metadata>
