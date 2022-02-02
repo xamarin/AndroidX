@@ -210,10 +210,18 @@
   <!--
   <remove-node path="/api/package/class[implements[@name='java.util.Collection']]/method[@name='getSize' and count(parameter)=0]" />
   -->
+
   <remove-node path="/api/package/class[@name='UByteArray']/implements[@name='java.util.Collection']" />
   <remove-node path="/api/package/class[@name='UIntArray']/implements[@name='java.util.Collection']" />
   <remove-node path="/api/package/class[@name='UShortArray']/implements[@name='java.util.Collection']" />
   <remove-node path="/api/package/class[@name='ULongArray']/implements[@name='java.util.Collection']" />
+
+  <attr
+    path="/api/package/class/method/parameter[@name='arg0']"
+    name="name"
+    >
+    $this
+  </attr>
 
   <add-node
     path="/api/package[@name='kotlin']/class[@name='UShortArray']"
