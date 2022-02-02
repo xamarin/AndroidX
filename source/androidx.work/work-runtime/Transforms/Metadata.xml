@@ -7,6 +7,7 @@
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='keepResultsForAtLeast']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setBackoffCriteria']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setConstraints']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setExpedited']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialRunAttemptCount']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialState']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInputData']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
@@ -135,6 +136,12 @@
         androidx.work.WorkRequest.Builder        
     </attr>
     <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setExpedited']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder
+    </attr>
+    <attr
         path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInitialRunAttemptCount']"
         name="return"
         >
@@ -157,6 +164,12 @@
         name="return"
         >
         androidx.work.WorkRequest.Builder        
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setScheduleRequestedAt']"
+        name="return"
+        >
+        androidx.work.WorkRequest.Builder
     </attr>
     
     <add-node

@@ -252,6 +252,8 @@
         <_AndroidXMavenArtifact Include="androidx.emoji.emoji" />
         <_AndroidXMavenArtifact Include="androidx.emoji.emoji-appcompat" />
         <_AndroidXMavenArtifact Include="androidx.emoji.emoji-bundled" />
+        <_AndroidXMavenArtifact Include="androidx.emoji2.emoji2" />
+        <_AndroidXMavenArtifact Include="androidx.emoji2.emoji2-views-helper" />
         <_AndroidXMavenArtifact Include="androidx.exifinterface.exifinterface" />
         <_AndroidXMavenArtifact Include="androidx.fragment.fragment" />
         <_AndroidXMavenArtifact Include="androidx.fragment.fragment-ktx" />
@@ -314,6 +316,7 @@
         <_AndroidXMavenArtifact Include="androidx.recommendation.recommendation" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview" />
         <_AndroidXMavenArtifact Include="androidx.recyclerview.recyclerview-selection" />
+        <_AndroidXMavenArtifact Include="androidx.resourceinspection.resourceinspection-annotation" />
         <_AndroidXMavenArtifact Include="androidx.room.room-common" />
         <_AndroidXMavenArtifact Include="androidx.room.room-guava" />
         <_AndroidXMavenArtifact Include="androidx.room.room-ktx" />

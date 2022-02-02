@@ -36,15 +36,12 @@
         "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
         "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.Tracing.Tracing",
-        "Xamarin.Kotlin.StdLib"
+        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Annotation",
-      "dependencies": [
-        "Xamarin.AndroidX.Migration"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Collection",
@@ -58,7 +55,6 @@
         "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Lifecycle.Runtime",
         "Xamarin.AndroidX.VersionedParcelable"
       ]
@@ -100,13 +96,6 @@
       "id": "Xamarin.AndroidX.Tracing.Tracing",
       "dependencies": [
         "Xamarin.AndroidX.Annotation"
-      ]
-    },
-    {
-      "id": "Xamarin.Kotlin.StdLib",
-      "dependencies": [
-        "Xamarin.Jetbrains.Annotations",
-        "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
@@ -171,6 +160,13 @@
       ]
     },
     {
+      "id": "Xamarin.Kotlin.StdLib",
+      "dependencies": [
+        "Xamarin.Jetbrains.Annotations",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Ads.Identifier",
       "dependencies": [
         "Xamarin.AndroidX.Ads.IdentifierCommon",
@@ -209,12 +205,6 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core",
         "Xamarin.Google.AutoValue.Annotations"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration",
-      "dependencies": [
-        "Xamarin.AndroidX.MultiDex"
       ]
     },
     {
@@ -1034,6 +1024,38 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Emoji2",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Lifecycle.Process",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Lifecycle.Process",
+      "dependencies": [
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Startup.StartupRuntime"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Tracing.Tracing"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Emoji2.ViewsHelper",
+      "dependencies": [
+        "Xamarin.AndroidX.Collection",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Emoji2"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Loader",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -1175,13 +1197,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Lifecycle.Process",
-      "dependencies": [
-        "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.AndroidX.Startup.StartupRuntime"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.Lifecycle.Service",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.Runtime"
@@ -1194,13 +1209,6 @@
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Core"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Startup.StartupRuntime",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Tracing.Tracing"
       ]
     },
     {
@@ -1358,14 +1366,7 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Arch.Core.Common",
         "Xamarin.Kotlin.StdLib",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm"
-      ]
-    },
-    {
-      "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-      "dependencies": [
-        "Xamarin.Kotlin.StdLib.Common",
-        "Xamarin.Kotlin.StdLib.Jdk8"
+        "Xamarin.KotlinX.Coroutines.Core"
       ]
     },
     {
@@ -1457,6 +1458,12 @@
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.RecyclerView"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.ResourceInspection.Annotation",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation"
       ]
     },
     {
@@ -1712,6 +1719,13 @@
       "dependencies": [
         "Xamarin.Kotlin.StdLib.Jdk7",
         "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
+      "id": "Xamarin.KotlinX.Coroutines.Core.Jvm",
+      "dependencies": [
+        "Xamarin.Kotlin.StdLib.Common",
+        "Xamarin.Kotlin.StdLib.Jdk8"
       ]
     },
     {

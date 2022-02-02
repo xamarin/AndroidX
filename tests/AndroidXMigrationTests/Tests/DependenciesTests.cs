@@ -26,7 +26,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var flattened = tree.Flatten("Xamarin.AndroidX.Palette").ToArray();
 
 			Assert.Contains("Xamarin.AndroidX.Annotation", flattened);
-			Assert.Contains("Xamarin.AndroidX.MultiDex", flattened);
 			Assert.Equal(flattened, flattened.Distinct().ToArray());
 		}
 
@@ -43,8 +42,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -66,8 +63,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Annotation",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -91,8 +86,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.CursorAdapter",
 				"Xamarin.AndroidX.Annotation",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -115,8 +108,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.VersionedParcelable",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Collection",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -134,10 +125,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Annotation",
 			};
 
-			var expected = new[]
+			var expected = new string[]
 			{
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -158,8 +147,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -181,8 +168,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -279,11 +264,14 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.ConstraintLayout.Core",
 				"Xamarin.AndroidX.CoordinatorLayout",
 				"Xamarin.AndroidX.Core",
+				//"Xamarin.AndroidX.Core.Core.Ktx",
 				"Xamarin.AndroidX.CursorAdapter",
 				"Xamarin.AndroidX.CustomView",
 				"Xamarin.AndroidX.DocumentFile",
 				"Xamarin.AndroidX.DrawerLayout",
 				"Xamarin.AndroidX.DynamicAnimation",
+				//"Xamarin.AndroidX.Emoji2",
+				//"Xamarin.AndroidX.Emoji2.ViewsHelper",
 				"Xamarin.AndroidX.Fragment",
 				"Xamarin.AndroidX.Interpolator",
 				"Xamarin.AndroidX.Legacy.Support.Core.UI",
@@ -291,18 +279,19 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
+				//"Xamarin.AndroidX.Lifecycle.Process",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
 				"Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
 				"Xamarin.AndroidX.Loader",
 				"Xamarin.AndroidX.LocalBroadcastManager",
 				"Xamarin.AndroidX.Media",
-				"Xamarin.AndroidX.Migration",
-				"Xamarin.AndroidX.MultiDex",
 				"Xamarin.AndroidX.Print",
 				"Xamarin.AndroidX.RecyclerView",
+				//"Xamarin.AndroidX.ResourceInspection.Annotation",
 				"Xamarin.AndroidX.SavedState",
 				"Xamarin.AndroidX.SlidingPaneLayout",
+				//"Xamarin.AndroidX.Startup.StartupRuntime",
 				"Xamarin.AndroidX.SwipeRefreshLayout",
 				"Xamarin.AndroidX.Tracing.Tracing",
 				"Xamarin.AndroidX.Transition",
@@ -313,10 +302,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.ViewPager2",
 				"Xamarin.Google.Android.Material",
 				"Xamarin.Google.Guava.ListenableFuture",
-				"Xamarin.Jetbrains.Annotations",
-				"Xamarin.Kotlin.StdLib",
-				"Xamarin.Kotlin.StdLib.Common",
-			};
+                "Xamarin.Jetbrains.Annotations",
+                "Xamarin.Kotlin.StdLib",
+                "Xamarin.Kotlin.StdLib.Common",
+            };
 
 			var tree = PackageDependencyTree.Load();
 

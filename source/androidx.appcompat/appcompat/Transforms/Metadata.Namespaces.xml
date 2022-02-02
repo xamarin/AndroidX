@@ -14,4 +14,11 @@
     <attr path="/api/package[@name='androidx.appcompat.view']" name="managedName">AndroidX.AppCompat.View</attr>
     <attr path="/api/package[@name='androidx.appcompat.view.menu']" name="managedName">AndroidX.AppCompat.View.Menu</attr>
     <attr path="/api/package[@name='androidx.appcompat.widget']" name="managedName">AndroidX.AppCompat.Widget</attr>
+
+    <attr 
+        path="/api/package[@name='androidx.appcompat.resources']"
+        name="managedName"
+        >
+        AndroidX.AppCompat.App.Resources
+    </attr>
 </metadata>
