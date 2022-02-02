@@ -802,6 +802,15 @@
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
         "dependencyOnly": false
       },
+      
+      {
+        "groupId": "androidx.lifecycle",
+        "artifactId": "lifecycle-viewmodel-compose",
+        "version": "2.4.0",
+        "nugetVersion": "2.4.0.0",
+        "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose",
+        "dependencyOnly": false
+      },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-ktx",

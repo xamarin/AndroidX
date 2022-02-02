@@ -148,6 +148,14 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose",
+      "dependencies": [
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.ViewModel",
