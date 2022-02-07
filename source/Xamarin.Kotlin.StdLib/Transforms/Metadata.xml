@@ -261,14 +261,14 @@
     path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='set-VurrAj0' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='byte']]/parameter[3]"
     name="type"
     >
-    byte
+    ubyte
   </attr>
 
   <attr
     path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='get-w2LRezQ' and count(parameter)=2 and parameter[1][@type='byte[]'] and parameter[2][@type='int']]"
     name="return"
     >
-    byte
+    ubyte
   </attr>
   <attr
     path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='set-VXSXFK8' and count(parameter)=3 and parameter[1][@type='int[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[3]"
