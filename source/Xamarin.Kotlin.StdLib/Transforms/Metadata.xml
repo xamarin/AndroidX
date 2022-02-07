@@ -216,13 +216,6 @@
   <remove-node path="/api/package/class[@name='UShortArray']/implements[@name='java.util.Collection']" />
   <remove-node path="/api/package/class[@name='ULongArray']/implements[@name='java.util.Collection']" />
 
-  <attr
-    path="/api/package/class/method/parameter[@name='arg0']"
-    name="name"
-    >
-    $this
-  </attr>
-
   <add-node
     path="/api/package[@name='kotlin']/class[@name='UShortArray']"
     >
@@ -263,5 +256,59 @@
       >
     </method>
   </add-node>
+
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='set-VurrAj0' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='byte']]/parameter[3]"
+    name="type"
+    >
+    byte
+  </attr>
+
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='get-w2LRezQ' and count(parameter)=2 and parameter[1][@type='byte[]'] and parameter[2][@type='int']]"
+    name="return"
+    >
+    byte
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='set-VXSXFK8' and count(parameter)=3 and parameter[1][@type='int[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[3]"
+    name="managedType"
+    >
+    uint
+  </attr>
+
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='get-pVg5ArA' and count(parameter)=2 and parameter[1][@type='int[]'] and parameter[2][@type='int']]"
+    name="return"
+    >
+    uint
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='ULongArray']/method[@name='set-k8EXiF4' and count(parameter)=3 and parameter[1][@type='long[]'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[3]"
+    name="managedType"
+    >
+    ulong
+  </attr>
+
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='ULongArray']/method[@name='get-s-VKNKU' and count(parameter)=2 and parameter[1][@type='long[]'] and parameter[2][@type='int']]"
+    name="return"
+    >
+    ulong
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UShortArray']/method[@name='set-01HTLdE' and count(parameter)=3 and parameter[1][@type='short[]'] and parameter[2][@type='int'] and parameter[3][@type='short']]/parameter[3]"
+    name="managedType"
+    >
+    ushort
+  </attr>
+
+  <attr
+    path="/api/package[@name='kotlin']/class[@name='UShortArray']/method[@name='get-Mh2AYeg' and count(parameter)=2 and parameter[1][@type='short[]'] and parameter[2][@type='int']]"
+    name="return"
+    >
+    ushort
+  </attr>
+
 
 </metadata>
