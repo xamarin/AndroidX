@@ -1317,8 +1317,8 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window",
-        "version": "1.0.0-beta04",
-        "nugetVersion": "1.0.0.6-beta04",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
@@ -1333,8 +1333,8 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window-java",
-        "version": "1.0.0-beta04",
-        "nugetVersion": "1.0.0.6-beta04",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Window.WindowJava",
         "dependencyOnly": false
       },
@@ -1419,8 +1419,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.5.31",
-        "nugetVersion": "1.5.31.4",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1431,8 +1431,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.5.31",
-        "nugetVersion": "1.5.31.4",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1440,8 +1440,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.5.31",
-        "nugetVersion": "1.5.31.4",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1452,8 +1452,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.5.31",
-        "nugetVersion": "1.5.31.4",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1464,8 +1464,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.5.31",
-        "nugetVersion": "1.5.31.4",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
