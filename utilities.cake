@@ -278,8 +278,10 @@ Task ("namespace-check")
             files = files.Concat(files_androidx.ToArray()).ToArray();
             files = files.Concat(files_com.ToArray()).ToArray();
             files = files.Concat(files_org.ToArray()).ToArray();
+            files = files.Concat(files_net.ToArray()).ToArray();
             files = files.Concat(files_io_1.ToArray()).ToArray();
             files = files.Concat(files_io_2.ToArray()).ToArray();
+            files = files.Concat(files_kotlin.ToArray()).ToArray();
             files = files.Concat(files_kotlinx.ToArray()).ToArray();
 
             if (files.Any())
