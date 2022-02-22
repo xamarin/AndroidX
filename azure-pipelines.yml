@@ -37,7 +37,8 @@ jobs:
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       macosImage:                                             # the name of the macOS VM image (BigSur) - Disabled until we have newer XA classic packages
-      windowsImage: windows-2022
+      windowsAgentPoolName: AzurePipelines-EO
+      windowsImageOverride: AzurePipelinesWindows2022compliant
       xcode: 13.1
       dotnet: '5.0.403'                                       # the version of .NET Core to use
       dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
