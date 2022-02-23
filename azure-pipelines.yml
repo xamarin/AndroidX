@@ -8,11 +8,11 @@ pr:
 variables:
   AndroidBinderatorVersion: 0.5.3
   AndroidXMigrationVersion: 1.0.8
-  DotNetVersion: 6.0.101
+  DotNetVersion: 6.0.200
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
   LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d17-0-macos
-  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-0-windows
+  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-1-windows
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
@@ -36,11 +36,11 @@ jobs:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
-      macosImage: 'macOS-11'                                  # the name of the macOS VM image (BigSur)
+      macosImage:                                             # the name of the macOS VM image (BigSur) - Disabled until we have newer XA classic packages
       windowsImage: windows-2022
       xcode: 13.1
-      dotnet: '5.0.403'                                       # the version of .NET Core to use
-      dotnetStable: '3.1.415'                                 # the stable version of .NET Core to use
+      dotnet: '5.0.405'                                       # the version of .NET Core to use
+      dotnetStable: '3.1.416'                                 # the stable version of .NET Core to use
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)

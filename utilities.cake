@@ -289,14 +289,16 @@ Task ("namespace-check")
             FilePath[] files_io_1 = GetFiles("./generated/**/Io.*.cs").ToArray();
             FilePath[] files_io_2 = GetFiles("./generated/**/IO.*.cs").ToArray();
             FilePath[] files_net = GetFiles("./generated/**/Net.*.cs").ToArray();
-            FilePath[] files_kotlin = GetFiles("./generated/**/Kotlin*.cs").ToArray();
-            FilePath[] files_kotlinx = GetFiles("./generated/**/Kotlinx*.cs").ToArray();
+            FilePath[] files_kotlin = GetFiles("./generated/**/Org.Jetbrains.Kotlin*.cs").ToArray();
+            FilePath[] files_kotlinx = GetFiles("./generated/**/Org.Jetbrains.Kotlinx*.cs").ToArray();
 
             files = files.Concat(files_androidx.ToArray()).ToArray();
             files = files.Concat(files_com.ToArray()).ToArray();
             files = files.Concat(files_org.ToArray()).ToArray();
+            files = files.Concat(files_net.ToArray()).ToArray();
             files = files.Concat(files_io_1.ToArray()).ToArray();
             files = files.Concat(files_io_2.ToArray()).ToArray();
+            files = files.Concat(files_kotlin.ToArray()).ToArray();
             files = files.Concat(files_kotlinx.ToArray()).ToArray();
 
             if (files.Any())
