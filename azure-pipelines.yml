@@ -29,6 +29,7 @@ resources:
       type: github
       name: xamarin/XamarinComponents
       endpoint: xamarin
+      ref: refs/heads/dev/bond/eo-pools
 
 jobs:
   - template: .ci/build.yml@components
