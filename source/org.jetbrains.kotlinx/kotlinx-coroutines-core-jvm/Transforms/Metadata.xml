@@ -25,13 +25,17 @@
       <remove-node path="/api/package[@name='kotlinx.coroutines.flow']/class[@name='FlowKt']/method[starts-with(@name,'sample-')]" />
       <remove-node path="/api/package[@name='kotlinx.coroutines']/class[@name='TimeoutKt']/method[starts-with(@name,'withTimeout-')]" />
       <remove-node path="/api/package[@name='kotlinx.coroutines']/class[@name='TimeoutKt']/method[starts-with(@name,'withTimeoutOrNull-')]" />
-
+  
     <attr
         path="/api/package[@name='kotlinx.coroutines']/class[@name='SchedulerTaskKt']/method[@name='getTaskContext' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
         name="managedReturn"
         >
         Java.Lang.Object
     </attr>
+  
+    <!-- These are internal in Kotlin and should be removed from the Java API -->
+    <remove-node path="/api/package[@name='kotlinx.coroutines.scheduling']/class[@name='TasksKt']/field[@name='BlockingContext']" />  
+    <remove-node path="/api/package[@name='kotlinx.coroutines.scheduling']/class[@name='TasksKt']/field[@name='NonBlockingContext']" />
 
     <remove-node
         path="/api/package[@name='kotlin.coroutines.jvm.internal']"
