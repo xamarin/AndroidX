@@ -79,7 +79,7 @@ jobs:
 
     - template: compliance/sbom/job.v1.yml@internal-templates
       parameters:
-        #dependsOn: signing
+        dependsOn: build
         #condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
         #artifactNames: [ nuget-signed ]
         artifactNames: [ nuget ]
