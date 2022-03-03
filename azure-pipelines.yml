@@ -76,3 +76,12 @@ jobs:
       parameters:
         dependsOn: [ 'build' ]
         condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+
+    - template: compliance/sbom/job.v1.yml@internal-templates
+      parameters:
+        #dependsOn: signing
+        #condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+        #artifactNames: [ nuget-signed ]
+        artifactNames: [ nuget ]
+        packageName: androidx
+        packageFilter: '*.nupkg'
