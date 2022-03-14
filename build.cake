@@ -636,7 +636,7 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    var settings = new DotNetCoreMSBuildSettings()
+    var settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
@@ -647,12 +647,12 @@ Task("libs")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetCoreRestore("./generated/AndroidX.sln", new DotNetCoreRestoreSettings
+    DotNetRestore("./generated/AndroidX.sln", new DotNetRestoreSettings
     {
         MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
     });
 
-    DotNetCoreMSBuild("./generated/AndroidX.sln", settings);
+    DotNetMSBuild("./generated/AndroidX.sln", settings);
 });
 
 Task("libs-native")
@@ -674,7 +674,7 @@ Task("nuget")
     .IsDependentOn("libs")
     .Does(() =>
 {
-    var settings = new DotNetCoreMSBuildSettings()
+    var settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
@@ -687,7 +687,7 @@ Task("nuget")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetCoreMSBuild("./generated/AndroidX.sln", settings);
+    DotNetMSBuild("./generated/AndroidX.sln", settings);
 });
 
 Task("samples-generate-all-targets")
@@ -1066,7 +1066,7 @@ Task("migration-tests")
     MSBuild("./tests/AndroidXMigrationTests.sln", settings);
 
     // test
-    DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+    DotNetTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetTestSettings {
         Configuration = CONFIGURATION,
         NoBuild = true,
         Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",

@@ -1150,7 +1150,17 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Migration",
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
