@@ -96,5 +96,17 @@
         >
         AndroidX.Car.App.Connection
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.constraints']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Constraints
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.managers']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Managers
+    </attr>
 
 </metadata>
