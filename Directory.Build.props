@@ -5,6 +5,8 @@
     <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
     
+    <Nullable>enable</Nullable>
+    
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
