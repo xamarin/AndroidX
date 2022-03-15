@@ -117,4 +117,17 @@
     Google.Android.Material.NavigationRail
   </attr>
 
+  <attr
+    path="/api/package[@name='com.google.android.material.motion']"
+    name="managedName"
+    >
+    Google.Android.Material.Motion
+  </attr>
+  <attr
+    path="/api/package[@name='com.google.android.material.divider']"
+    name="managedName"
+    >
+    Google.Android.Material.Divider
+  </attr>
+
 </metadata>

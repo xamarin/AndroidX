@@ -3,4 +3,8 @@
     <attr path="/api/package[@name='androidx.slidingpanelayout.widget']/interface[@name='SlidingPaneLayout.PanelSlideListener']/method[@name='onPanelOpened' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedName">panel</attr>
     <attr path="/api/package[@name='androidx.slidingpanelayout.widget']/interface[@name='SlidingPaneLayout.PanelSlideListener']/method[@name='onPanelSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[1]" name="managedName">panel</attr>
     <attr path="/api/package[@name='androidx.slidingpanelayout.widget']/interface[@name='SlidingPaneLayout.PanelSlideListener']/method[@name='onPanelSlide' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[2]" name="managedName">slideOffset</attr>
+
+    <!-- Cannot have both AddListener/RemoveListener and SetListener -->
+    <remove-node path="/api/package[@name='androidx.slidingpanelayout.widget']/class[@name='SlidingPaneLayout']/method[@name='addPanelSlideListener' and count(parameter)=1 and parameter[1][@type='androidx.slidingpanelayout.widget.SlidingPaneLayout.PanelSlideListener']]" />
+    <remove-node path="/api/package[@name='androidx.slidingpanelayout.widget']/class[@name='SlidingPaneLayout']/method[@name='removePanelSlideListener' and count(parameter)=1 and parameter[1][@type='androidx.slidingpanelayout.widget.SlidingPaneLayout.PanelSlideListener']]" />
 </metadata>
