@@ -1602,7 +1602,7 @@
         "artifactId": "jsr305",
         "version": "3.0.2",
         "nugetVersion": "3.0.2",
-        "nugetId": "Xamarin.Google.Code.FindBugs",
+        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
         "dependencyOnly": false
       },
       {
@@ -1620,7 +1620,7 @@
         "artifactId": "error_prone_annotations",
         "version": "2.3.4",
         "nugetVersion": "2.3.4",
-        "nugetId": "Xamarin.Google.ErrorProne.ErrorProneAnnotations",
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false
       },
       {
@@ -1629,7 +1629,7 @@
         "artifactId": "j2objc-annotations",
         "version": "1.3",
         "nugetVersion": "1.3.0",
-        "nugetId": "Xamarin.Google.J2Objc.J2ObjcAnnotations",
+        "nugetId": "Xamarin.Google.J2Objc.Annotations",
         "dependencyOnly": false
       },
       {
