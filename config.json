@@ -771,14 +771,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "androidx.hilt",
-        "artifactId": "hilt-common",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Hilt.Common",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "androidx.interpolator",
         "artifactId": "interpolator",
         "version": "1.0.0",
@@ -1814,6 +1806,15 @@
         "templateSet": "net-ltgt-gradle-incap"
       },
       {
+        "groupId": "com.android.installreferrer",
+        "artifactId": "installreferrer",
+        "version": "1.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.Google.Android.Installeferer",
+        "dependencyOnly": false,
+        "templateSet": "installreferrer"
+      },
+      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "17.0.0",
@@ -1859,6 +1860,14 @@
         "version": "1.0",
         "nugetVersion": "1.0.0.5",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-core",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1.3",
+        "nugetId": "Xamarin.AndroidX.Camera.Core",
         "dependencyOnly": true
       },
       {
@@ -2015,6 +2024,20 @@
         "templates": [
           {
             "templateFile": "templates/net-ltgt-gradle-incap/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "installreferrer",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/installreferrer/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
