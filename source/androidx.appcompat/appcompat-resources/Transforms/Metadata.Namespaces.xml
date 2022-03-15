@@ -25,7 +25,12 @@
         >
         AndroidX.AppCompat.Widget
     </attr>
-    
+    <attr 
+        path="/api/package[@name='androidx.appcompat.resources']"
+        name="managedName"
+        >
+        AndroidX.AppCompat.Resources
+    </attr>
     
         
 </metadata>

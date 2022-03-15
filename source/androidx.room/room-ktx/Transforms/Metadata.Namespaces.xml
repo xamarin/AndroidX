@@ -5,5 +5,11 @@
         >
         AndroidX.Room
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.room.migration']" 
+        name="managedName"
+        >
+        AndroidX.Room.Migration
+    </attr>
 
 </metadata>
