@@ -1542,7 +1542,8 @@
         "version": "1.4.1",
         "nugetVersion": "1.4.1",
         "nugetId": "Xamarin.AAkira.Napier",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "templateSet": "napier"
       },
       {
         "groupId": "org.jetbrains",
@@ -1842,6 +1843,20 @@
         "templates": [
           {
             "templateFile": "templates/tink/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "napier",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/napier/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
