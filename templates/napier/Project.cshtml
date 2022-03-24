@@ -7,7 +7,7 @@
 
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>@(rootNamespace)</RootNamespace>
     <AssemblyName>@(assembly_name)</AssemblyName>
@@ -51,18 +51,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
     <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\%(Filename)%(Extension)" />
     <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
+    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
 
   <ItemGroup>
-    @foreach (var dep in @Model.NuGetDependencies) {
-      if (dep.IsProjectReference) {
-    <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
-      } else {
-    <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
+    @foreach (var dep in @Model.NuGetDependencies) 
+    {
+      if (dep.IsProjectReference) 
+      {
+      <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
+      } 
+      else 
+      {
+      <PackageReference Include="@(dep.NuGetPackageId)" Version="@(dep.NuGetVersion)" />
       }
     }
   </ItemGroup>
