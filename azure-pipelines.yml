@@ -8,6 +8,7 @@ pr:
 variables:
   AndroidBinderatorVersion: 0.5.3
   AndroidXMigrationVersion: 1.0.8
+  BootsVersion: 1.1.0.712-preview2
   DotNetVersion: 6.0.200
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
@@ -57,16 +58,14 @@ jobs:
 
       preBuildSteps:
         - pwsh: |
-            dotnet tool uninstall --global Cake.Tool
-            dotnet tool install --global Cake.Tool
-            dotnet tool install --global boots
+            dotnet tool update --global Cake.Tool
+            dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
-            dotnet tool uninstall --global Cake.Tool
-            dotnet tool install --global Cake.Tool
-            dotnet tool install --global boots
-            boots $(LegacyXamarinAndroidVsix)
+            dotnet tool update --global Cake.Tool
+            dotnet tool update --global boots --version $(BootsVersion)
+            boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
           condition: eq(variables['System.JobName'], 'windows')
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
@@ -76,3 +75,11 @@ jobs:
       parameters:
         dependsOn: [ 'build' ]
         condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+
+    - template: compliance/sbom/job.v1.yml@internal-templates
+      parameters:
+        dependsOn: signing
+        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+        artifactNames: [ nuget-signed ]
+        packageName: androidx
+        packageFilter: '*.nupkg'

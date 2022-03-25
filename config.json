@@ -198,7 +198,7 @@
         "groupId": "androidx.car.app",
         "artifactId": "app",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0",
+        "nugetVersion": "1.1.0.1",
         "nugetId": "Xamarin.AndroidX.Car.App.App",
         "dependencyOnly": false
       },
@@ -927,7 +927,7 @@
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment",
         "version": "2.4.1",
-        "nugetVersion": "2.4.1",
+        "nugetVersion": "2.4.1.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment",
         "dependencyOnly": false
       },
@@ -974,48 +974,48 @@
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0.2",
+        "version": "3.1.1",
+        "nugetVersion": "3.1.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common-ktx",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0.2",
+        "version": "3.1.1",
+        "nugetVersion": "3.1.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0.2",
+        "version": "3.1.1",
+        "nugetVersion": "3.1.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime-ktx",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0.2",
+        "version": "3.1.1",
+        "nugetVersion": "3.1.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0.2",
+        "version": "3.1.1",
+        "nugetVersion": "3.1.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2-ktx",
-        "version": "3.1.0",
-        "nugetVersion": "3.1.0.2",
+        "version": "3.1.1",
+        "nugetVersion": "3.1.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
         "dependencyOnly": false
       },
@@ -1127,7 +1127,7 @@
         "groupId": "androidx.room",
         "artifactId": "room-ktx",
         "version": "2.4.2",
-        "nugetVersion": "2.4.2",
+        "nugetVersion": "2.4.2.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.Ktx",
         "dependencyOnly": false
       },
@@ -1359,7 +1359,7 @@
         "groupId": "androidx.window",
         "artifactId": "window",
         "version": "1.0.0",
-        "nugetVersion": "1.0.0.1",
+        "nugetVersion": "1.0.0.7",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
@@ -1399,7 +1399,7 @@
         "groupId": "com.google.android.material",
         "artifactId": "material",
         "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "nugetVersion": "1.5.0.1",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
