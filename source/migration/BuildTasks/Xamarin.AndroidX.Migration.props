@@ -224,8 +224,8 @@
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-graphics" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-text" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-tooling" />
-        <_AndroidXMavenArtifact Include="androidx.compose.ui:ui-tooling-preview" />
-        <_AndroidXMavenArtifact Include="androidx.compose.ui:ui-tooling-data" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-tooling-data" />
+        <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-tooling-preview" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-unit" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-util" />
         <_AndroidXMavenArtifact Include="androidx.compose.ui.ui-viewbinding" />
@@ -375,9 +375,9 @@
         <_AndroidXMavenArtifact Include="com.google.guava.guava" />
         <_AndroidXMavenArtifact Include="com.google.guava.listenablefuture" />
         <_AndroidXMavenArtifact Include="com.xamarin.androidx.migration" />
+        <_AndroidXMavenArtifact Include="io.github.aakira.napier" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava2.rxjava" />
         <_AndroidXMavenArtifact Include="io.reactivex.rxjava3.rxjava" />
-        <_AndroidXMavenArtifact Include="io.github.aakira.napier" />
         <_AndroidXMavenArtifact Include="org.jetbrains.annotations" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-reflect" />
         <_AndroidXMavenArtifact Include="org.jetbrains.kotlin.kotlin-stdlib" />
