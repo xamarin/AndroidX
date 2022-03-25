@@ -201,7 +201,7 @@ Task ("spell-check")
                 "Placeholder",
                 "Material",
                 "SwipeRefresh",
-                "SystemUIController"
+                "SystemUIController",
                 "ProfileInstaller",
                 "Kotlin",
                 "StdLib",
