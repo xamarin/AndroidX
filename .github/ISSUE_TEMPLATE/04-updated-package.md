@@ -15,3 +15,5 @@ If there is already an issue for the desired package, add a +1 emoji reaction
 to the issue to vote for the issue instead of filing this one.
 
 If there is no existing issue, go ahead and file this issue.
+
+Note that, in general, we only bind *stable* packages. We do not bind pre-release packages.
