@@ -15,6 +15,9 @@
     
     <!-- .NET 6+ packages support back to API-21 -->
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    
+    <!-- Mark .NET6+ packages as supporting trimming -->
+    <IsTrimmable>true</IsTrimmable>
   </PropertyGroup>
   
   <!-- Folders that .targets files need to go into -->
