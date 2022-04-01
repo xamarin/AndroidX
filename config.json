@@ -531,6 +531,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.core",
+        "artifactId": "core-splashscreen",
+        "version": "1.0.0-beta02",
+        "nugetVersion": "1.0.0-beta02",
+        "nugetId": "Xamarin.AndroidX.Core.SplashScreen",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.cursoradapter",
         "artifactId": "cursoradapter",
         "version": "1.0.0",
@@ -1541,16 +1549,16 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window-rxjava2",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0.6-rc01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Window.WindowRxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.window",
         "artifactId": "window-rxjava3",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0.6-rc01",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Window.WindowRxJava3",
         "dependencyOnly": false
       },
@@ -1860,6 +1868,14 @@
         "version": "1.0.1",
         "nugetVersion": "1.0.1.3",
         "nugetId": "Xamarin.AndroidX.Camera.Core",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "androidx.compose.runtime",
+        "artifactId": "runtime",
+        "version": "1.0.5",
+        "nugetVersion": "1.0.5.2",
+        "nugetId": "Xamarin.AndroidX.Compose.Runtime",
         "dependencyOnly": true
       },
       {
