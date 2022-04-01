@@ -42,6 +42,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
