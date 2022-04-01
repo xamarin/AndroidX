@@ -848,6 +848,13 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Core.SplashScreen",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
       "dependencies": [
         "Xamarin.AndroidX.DataBinding.DataBindingCommon",
@@ -1150,7 +1157,17 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Migration",
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
