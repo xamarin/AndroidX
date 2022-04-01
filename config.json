@@ -459,6 +459,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.core",
+        "artifactId": "core-splashscreen",
+        "version": "1.0.0-beta02",
+        "nugetVersion": "1.0.0-beta02",
+        "nugetId": "Xamarin.AndroidX.Core.SplashScreen",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.cursoradapter",
         "artifactId": "cursoradapter",
         "version": "1.0.0",
