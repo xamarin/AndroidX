@@ -856,6 +856,13 @@
       "dependencies": []
     },
     {
+      "id": "Xamarin.AndroidX.Core.SplashScreen",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.Kotlin.StdLib"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
       "dependencies": [
         "Xamarin.AndroidX.DataBinding.DataBindingCommon",
