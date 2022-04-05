@@ -24,7 +24,7 @@ This package provides a set of tools and MSBuild tasks to aid in the migration f
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
 
     <dependencies>
-      <group targetFramework="monoandroid90">
+      <group targetFramework="monoandroid120">
         <dependency id="Xamarin.AndroidX.MultiDex" version="$multidex$" include="All" />
       </group>
     </dependencies>
@@ -32,21 +32,21 @@ This package provides a set of tools and MSBuild tasks to aid in the migration f
   </metadata>
   <files>
 
-    <file src="bin\Release\netstandard2.0\Tools\**\*" target="build\monoandroid90\Tools" />
-    <file src="bin\Release\netstandard2.0\Mono.*.dll" target="build\monoandroid90" />
-    <file src="bin\Release\netstandard2.0\Xamarin.*.dll" target="build\monoandroid90" />
-    <file src="bin\Release\netstandard2.0\ILRepack.dll" target="build\monoandroid90" />
-    <file src="Xamarin.AndroidX.Migration.props" target="build\monoandroid90" />
-    <file src="Xamarin.AndroidX.Migration.targets" target="build\monoandroid90" />
+    <file src="bin\Release\netstandard2.0\Tools\**\*" target="build\monoandroid120\Tools" />
+    <file src="bin\Release\netstandard2.0\Mono.*.dll" target="build\monoandroid120" />
+    <file src="bin\Release\netstandard2.0\Xamarin.*.dll" target="build\monoandroid120" />
+    <file src="bin\Release\netstandard2.0\ILRepack.dll" target="build\monoandroid120" />
+    <file src="Xamarin.AndroidX.Migration.props" target="build\monoandroid120" />
+    <file src="Xamarin.AndroidX.Migration.targets" target="build\monoandroid120" />
     
-    <file src="bin\Release\netstandard2.0\Tools\**\*" target="buildTransitive\monoandroid90\Tools" />
-    <file src="bin\Release\netstandard2.0\Mono.*.dll" target="buildTransitive\monoandroid90" />
-    <file src="bin\Release\netstandard2.0\Xamarin.*.dll" target="buildTransitive\monoandroid90" />
-    <file src="bin\Release\netstandard2.0\ILRepack.dll" target="buildTransitive\monoandroid90" />
-    <file src="Xamarin.AndroidX.Migration.props" target="buildTransitive\monoandroid90" />
-    <file src="Xamarin.AndroidX.Migration.targets" target="buildTransitive\monoandroid90" />
+    <file src="bin\Release\netstandard2.0\Tools\**\*" target="buildTransitive\monoandroid120\Tools" />
+    <file src="bin\Release\netstandard2.0\Mono.*.dll" target="buildTransitive\monoandroid120" />
+    <file src="bin\Release\netstandard2.0\Xamarin.*.dll" target="buildTransitive\monoandroid120" />
+    <file src="bin\Release\netstandard2.0\ILRepack.dll" target="buildTransitive\monoandroid120" />
+    <file src="Xamarin.AndroidX.Migration.props" target="buildTransitive\monoandroid120" />
+    <file src="Xamarin.AndroidX.Migration.targets" target="buildTransitive\monoandroid120" />
 
-    <file src="_._" target="lib\monoandroid90\_._" />
+    <file src="_._" target="lib\monoandroid120\_._" />
 
     <file src="readme.txt" target="readme.txt" />
 
