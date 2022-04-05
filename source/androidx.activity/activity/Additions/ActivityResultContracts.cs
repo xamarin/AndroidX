@@ -183,3 +183,34 @@ namespace AndroidX.Activity.Result.Contract
 		}		
 	}
 }
+
+namespace AndroidX.Activity.Result.Contract 
+{
+	// Metadata.xml XPath class reference: path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts']"
+	// [global::Android.Runtime.Register ("androidx/activity/result/contract/ActivityResultContracts", DoNotGenerateAcw=true)]
+	public sealed partial class ActivityResultContracts //: global::Java.Lang.Object 
+	{
+		public partial class CreateDocument
+		{
+			// Metadata.xml XPath method reference: path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.CreateDocument']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String']]"
+			[Register ("createIntent", "(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;", "GetCreateIntent_Landroid_content_Context_Ljava_lang_String_Handler")]
+			public override unsafe global::Android.Content.Intent CreateIntent (global::Android.Content.Context context, global::Java.Lang.Object input)
+			{
+				const string __id = "createIntent.(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;";
+				IntPtr native_input = JNIEnv.NewString ((string) input);
+				try {
+					JniArgumentValue* __args = stackalloc JniArgumentValue [2];
+					__args [0] = new JniArgumentValue ((context == null) ? IntPtr.Zero : ((global::Java.Lang.Object) context).Handle);
+					__args [1] = new JniArgumentValue (native_input);
+					var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, __args);
+					return global::Java.Lang.Object.GetObject<global::Android.Content.Intent> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_input);
+					global::System.GC.KeepAlive (context);
+					global::System.GC.KeepAlive (input);
+				}
+			}
+		}
+	}
+}
+

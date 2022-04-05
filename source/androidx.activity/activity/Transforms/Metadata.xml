@@ -214,7 +214,7 @@
         Java.Lang.Object
     </attr>
 
-
+    <!--
     <attr
         path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.CreateDocument']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String']]/parameter[2]"
         name="managedType"
@@ -227,6 +227,10 @@
         >
         Android.Content.Intent
     </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.CreateDocument']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String']]"
+        />
     <attr
         path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.CreateDocument']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
         name="managedReturn"
