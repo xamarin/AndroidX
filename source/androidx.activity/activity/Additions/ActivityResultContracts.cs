@@ -181,14 +181,5 @@ namespace AndroidX.Activity.Result.Contract
 			}
 
 		}		
-		public partial class CreateDocument //: global::AndroidX.Activity.Result.Contract.ActivityResultContract 
-		{
-			public global::Android.Content.Intent CreateIntent (global::Android.Content.Context context, string input)
-			{
-				return CreateIntent (context, (Java.Lang.Object) input);
-			}
-		}
 	}
-
-
 }
