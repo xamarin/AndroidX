@@ -36,7 +36,9 @@
     },
     {
       "id": "Xamarin.AndroidX.Annotation",
-      "dependencies": []
+      "dependencies": [
+        "Xamarin.AndroidX.Migration"
+      ]
     },
     {
       "id": "Xamarin.AndroidX.Collection",
@@ -183,6 +185,12 @@
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Core",
         "Xamarin.Google.AutoValue.Annotations"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration",
+      "dependencies": [
+        "Xamarin.AndroidX.MultiDex"
       ]
     },
     {
