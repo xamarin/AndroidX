@@ -40,7 +40,8 @@
         "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "Xamarin.AndroidX.Lifecycle.ViewModel",
         "Xamarin.AndroidX.SavedState",
-        "Xamarin.AndroidX.Tracing.Tracing"
+        "Xamarin.AndroidX.Tracing.Tracing",
+        "Xamarin.Kotlin.StdLib"
       ]
     },
     {
@@ -104,6 +105,13 @@
       ]
     },
     {
+      "id": "Xamarin.Kotlin.StdLib",
+      "dependencies": [
+        "Xamarin.Jetbrains.Annotations",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Activity.Compose",
       "dependencies": [
         "Xamarin.AndroidX.Activity.Ktx",
@@ -161,13 +169,6 @@
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Android",
         "Xamarin.KotlinX.Coroutines.Core"
-      ]
-    },
-    {
-      "id": "Xamarin.Kotlin.StdLib",
-      "dependencies": [
-        "Xamarin.Jetbrains.Annotations",
-        "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
@@ -628,6 +629,7 @@
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Unit",
         "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.AndroidX.Compose.UI",
         "Xamarin.Kotlin.StdLib.Common"
@@ -671,9 +673,20 @@
         "Xamarin.AndroidX.Compose.Animation",
         "Xamarin.AndroidX.Compose.Foundation.Layout",
         "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Graphics",
         "Xamarin.AndroidX.Compose.UI.Text",
         "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.Kotlin.StdLib.Common"
+      ]
+    },
+    {
+      "id": "Xamarin.AndroidX.Compose.UI.Graphics",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Compose.Runtime",
+        "Xamarin.AndroidX.Compose.UI.Unit",
+        "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
@@ -705,12 +718,16 @@
         "Xamarin.AndroidX.Compose.UI.Text",
         "Xamarin.AndroidX.Compose.UI.Util",
         "Xamarin.AndroidX.Compose.UI",
+        "Xamarin.AndroidX.Lifecycle.Runtime",
+        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.SavedState",
         "Xamarin.Kotlin.StdLib.Common"
       ]
     },
     {
       "id": "Xamarin.AndroidX.Compose.Material.Icons.Core",
       "dependencies": [
+        "Xamarin.AndroidX.Compose.Runtime",
         "Xamarin.AndroidX.Compose.UI",
         "Xamarin.Kotlin.StdLib"
       ]
@@ -758,16 +775,6 @@
       ]
     },
     {
-      "id": "Xamarin.AndroidX.Compose.UI.Graphics",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Compose.Runtime",
-        "Xamarin.AndroidX.Compose.UI.Unit",
-        "Xamarin.AndroidX.Compose.UI.Util",
-        "Xamarin.Kotlin.StdLib.Common"
-      ]
-    },
-    {
       "id": "Xamarin.AndroidX.ProfileInstaller.ProfileInstaller",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -779,6 +786,7 @@
       "dependencies": [
         "Xamarin.AndroidX.Activity.Compose",
         "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Compose.Animation",
         "Xamarin.AndroidX.Compose.Material",
         "Xamarin.AndroidX.Compose.Runtime",
         "Xamarin.AndroidX.Compose.UI.Tooling.Data",
