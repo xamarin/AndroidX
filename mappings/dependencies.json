@@ -369,6 +369,7 @@
     {
       "id": "Xamarin.AndroidX.Camera.Camera2",
       "dependencies": [
+        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Camera.Core",
         "Xamarin.AndroidX.Concurrent.Futures",
@@ -388,7 +389,6 @@
         "Xamarin.AndroidX.Lifecycle.Common",
         "Xamarin.AndroidX.Lifecycle.LiveData",
         "Xamarin.Google.AutoValue.Annotations",
-        "Xamarin.Kotlin.StdLib",
         "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
@@ -416,32 +416,6 @@
       "id": "Xamarin.AndroidX.Camera.Lifecycle",
       "dependencies": [
         "Xamarin.AndroidX.Camera.Core",
-        "Xamarin.AndroidX.Concurrent.Futures",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.Lifecycle.Common",
-        "Xamarin.Google.AutoValue.Annotations",
-        "Xamarin.Google.Guava.ListenableFuture"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Camera.Video",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Camera.Core",
-        "Xamarin.AndroidX.Concurrent.Futures",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.Google.AutoValue.Annotations"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Camera.View",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation.Experimental",
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AppCompat",
-        "Xamarin.AndroidX.Camera.Core",
-        "Xamarin.AndroidX.Camera.Lifecycle",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Lifecycle.Common",
         "Xamarin.Google.AutoValue.Annotations",
@@ -1192,10 +1166,6 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
