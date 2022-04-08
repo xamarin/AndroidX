@@ -49,23 +49,4 @@
         protected
     </attr>
   
-    <attr
-        path="/api/package[@name='androidx.camera.core.impl.utils']/class[@name='CompareSizesByArea']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.util.Size'] and parameter[2][@type='android.util.Size']]/parameter[1]"
-        name="managedType"
-        >
-        Java.Lang.Object
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.camera.core.impl.utils']/class[@name='CompareSizesByArea']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.util.Size'] and parameter[2][@type='android.util.Size']]/parameter[2]"
-        name="managedType"
-        >
-        Java.Lang.Object
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.camera.core.impl']/class[@name='SessionProcessorSurface']/method[@name='provideSurface' and count(parameter)=0]"
-        name="visibility"
-        >
-        protected
-    </attr>
-
 </metadata>

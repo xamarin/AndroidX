@@ -34,15 +34,5 @@
         path="/api/package[@name='androidx.camera.camera2.interop']/class[@name='CaptureRequestOptions']/implements"
         />
 
-    <attr 
-        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='Camera2CameraFactory']/method[@name='getCameraManager' and count(parameter)=0]" 
-        name="managedReturn"
-        >
-        Java.Lang.Object
-    </attr>
-    <remove-node
-        path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='Camera2CameraInfoImpl']/implements"
-        />
-
-
+  <attr path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='Camera2CameraFactory']/method[@name='getCameraManager' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
 </metadata>

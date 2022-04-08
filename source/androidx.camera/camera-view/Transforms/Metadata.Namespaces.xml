@@ -37,18 +37,6 @@
         >
         AndroidX.Camera.View.Video
     </attr>
-    <attr 
-        path="/api/package[@name='androidx.camera.view.transform']" 
-        name="managedName"
-        >
-        AndroidX.Camera.View.Transform
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.camera.view.internal.compat.quirk']" 
-        name="managedName"
-        >
-        AndroidX.Camera.View.Internal.Compat.Quirk
-    </attr>
     
     
 </metadata>
