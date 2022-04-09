@@ -1,0 +1,16 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='androidx.camera.video']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Video
+    </attr>    
+    <attr 
+        path="/api/package[@name='androidx.camera.video.impl']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Video.Impl
+    </attr>    
+    
+    
+</metadata>
