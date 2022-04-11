@@ -101,7 +101,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard\" />
+    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard/" />
       }
     }
   </ItemGroup>
@@ -223,7 +223,7 @@
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
     <ItemGroup>
-      <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid9.0' " />
+      <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid12.0' " />
     </ItemGroup>
   }
 

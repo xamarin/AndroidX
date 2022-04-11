@@ -42,6 +42,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -63,6 +65,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			{
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -86,6 +90,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Collection",
 				"Xamarin.AndroidX.CursorAdapter",
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -108,6 +114,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.VersionedParcelable",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.Collection",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids);
@@ -127,6 +135,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 
 			var expected = new string[]
 			{
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -147,6 +157,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -168,6 +180,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var expected = new[]
 			{
 				"Xamarin.AndroidX.Annotation",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 			};
 
 			var flattened = tree.Flatten(ids, false);
@@ -264,11 +278,14 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.ConstraintLayout.Core",
 				"Xamarin.AndroidX.CoordinatorLayout",
 				"Xamarin.AndroidX.Core",
+				"Xamarin.AndroidX.Core.Core.Ktx",
 				"Xamarin.AndroidX.CursorAdapter",
 				"Xamarin.AndroidX.CustomView",
 				"Xamarin.AndroidX.DocumentFile",
 				"Xamarin.AndroidX.DrawerLayout",
 				"Xamarin.AndroidX.DynamicAnimation",
+				"Xamarin.AndroidX.Emoji2",
+				"Xamarin.AndroidX.Emoji2.ViewsHelper",
 				"Xamarin.AndroidX.Fragment",
 				"Xamarin.AndroidX.Interpolator",
 				"Xamarin.AndroidX.Legacy.Support.Core.UI",
@@ -276,16 +293,21 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
+				"Xamarin.AndroidX.Lifecycle.Process",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
 				"Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
 				"Xamarin.AndroidX.Loader",
 				"Xamarin.AndroidX.LocalBroadcastManager",
 				"Xamarin.AndroidX.Media",
+				"Xamarin.AndroidX.Migration",
+				"Xamarin.AndroidX.MultiDex",
 				"Xamarin.AndroidX.Print",
 				"Xamarin.AndroidX.RecyclerView",
+				"Xamarin.AndroidX.ResourceInspection.Annotation",
 				"Xamarin.AndroidX.SavedState",
 				"Xamarin.AndroidX.SlidingPaneLayout",
+				"Xamarin.AndroidX.Startup.StartupRuntime",
 				"Xamarin.AndroidX.SwipeRefreshLayout",
 				"Xamarin.AndroidX.Tracing.Tracing",
 				"Xamarin.AndroidX.Transition",
@@ -294,15 +316,25 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.VersionedParcelable",
 				"Xamarin.AndroidX.ViewPager",
 				"Xamarin.AndroidX.ViewPager2",
+				"Xamarin.AndroidX.Window",
 				"Xamarin.Google.Android.Material",
 				"Xamarin.Google.Guava.ListenableFuture",
-			};
+                "Xamarin.Jetbrains.Annotations",
+                "Xamarin.Kotlin.StdLib",
+                "Xamarin.Kotlin.StdLib.Common",
+				"Xamarin.Kotlin.StdLib.Jdk7",
+				"Xamarin.Kotlin.StdLib.Jdk8",
+				"Xamarin.KotlinX.Coroutines.Android",
+				"Xamarin.KotlinX.Coroutines.Core.Jvm"
+	    };
 
 			var tree = PackageDependencyTree.Load();
 
 			var flattened = tree.Flatten(ids).ToList();
 			flattened.Sort();
 
+			System.Console.WriteLine ($"expected: {string.Join (",", expected)}");
+			System.Console.WriteLine ($"actual: {string.Join (",",  flattened)}");
 			Assert.Equal(expected, flattened.ToArray());
 		}
 
@@ -365,6 +397,9 @@ namespace Xamarin.AndroidX.Migration.Tests
 
 			var flattened = tree.Reduce(ids).ToList();
 			flattened.Sort();
+
+			System.Console.WriteLine ($"expected: {string.Join (",", expected)}");
+			System.Console.WriteLine ($"actual: {string.Join (",", flattened)}");
 
 			Assert.Equal(expected, flattened.ToArray());
 		}

@@ -7,7 +7,7 @@
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=12.2.1
-#addin nuget:?package=SharpZipLib&version=1.2.0
+#addin nuget:?package=SharpZipLib&version=1.3.3
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
@@ -46,8 +46,8 @@ if (IsRunningOnWindows() && string.IsNullOrEmpty(VISUAL_STUDIO_ROOT))
 // Resolve Xamarin.Android installation
 var XAMARIN_ANDROID_PATH = EnvironmentVariable ("XAMARIN_ANDROID_PATH");
 var ANDROID_SDK_BASE_VERSION = "v1.0";
-var ANDROID_SDK_VERSION = "v10.0";
-var AndroidSdkBuildTools = $"29.0.2";
+var ANDROID_SDK_VERSION = "v12.0";
+var AndroidSdkBuildTools = $"32.0.0";
 
 if (string.IsNullOrEmpty(XAMARIN_ANDROID_PATH)) {
     if (IsRunningOnWindows()) {
@@ -636,7 +636,7 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    var settings = new DotNetCoreMSBuildSettings()
+    var settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
@@ -647,12 +647,12 @@ Task("libs")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetCoreRestore("./generated/AndroidX.sln", new DotNetCoreRestoreSettings
+    DotNetRestore("./generated/AndroidX.sln", new DotNetRestoreSettings
     {
         MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
     });
 
-    DotNetCoreMSBuild("./generated/AndroidX.sln", settings);
+    DotNetMSBuild("./generated/AndroidX.sln", settings);
 });
 
 Task("libs-native")
@@ -674,7 +674,7 @@ Task("nuget")
     .IsDependentOn("libs")
     .Does(() =>
 {
-    var settings = new DotNetCoreMSBuildSettings()
+    var settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
@@ -687,7 +687,7 @@ Task("nuget")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetCoreMSBuild("./generated/AndroidX.sln", settings);
+    DotNetMSBuild("./generated/AndroidX.sln", settings);
 });
 
 Task("samples-generate-all-targets")
@@ -1066,7 +1066,7 @@ Task("migration-tests")
     MSBuild("./tests/AndroidXMigrationTests.sln", settings);
 
     // test
-    DotNetCoreTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetCoreTestSettings {
+    DotNetTest("Xamarin.AndroidX.Migration.Tests.csproj", new DotNetTestSettings {
         Configuration = CONFIGURATION,
         NoBuild = true,
         Logger = "trx;LogFileName=Xamarin.AndroidX.Migration.Tests.trx",
@@ -1076,7 +1076,7 @@ Task("migration-tests")
 });
 
 
-var TF_MONIKER = "monoandroid90";
+var TF_MONIKER = "monoandroid120";
 string SUPPORT_MERGED_DLL = "./output/AndroidSupport.Merged.dll";
 string ANDROIDX_MERGED_DLL = "./output/AndroidX.Merged.dll";
 string MAPPING_URL = "https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-mapping.csv";
