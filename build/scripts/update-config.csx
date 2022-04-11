@@ -6,17 +6,19 @@
 
 // Usage:
 //   dotnet tool install -g dotnet-script
-//   dotnet script update-config.csx -- ../../config.json <update|bump>
+//   dotnet script update-config.csx -- ../../config.json <update|bump|published>
 // This script compares the versions of Java packages we are currently binding to the
-// stable versions available in Google's Maven repository.  The specified configuration
-// file can be automatically updated by including the "update" argument.  A revision bump
-// can be applied to all packages with the "bump" argument, which is mutually exclusive
-// with "update".
+// stable versions available in Google's Maven repository.  
+// update - Automatically update the specified configuration file
+// bump - Apply NuGet revision bump to *all* packages
+// published - Display which NuGet package versions are already published on NuGet.org
+
 using MavenNet;
 using MavenNet.Models;
 using Newtonsoft.Json;
 using NuGet.Versioning;
 using System.ComponentModel;
+using System.Net.Http;
 
 // Parse the configuration file
 var config_file = Args[0];
@@ -30,6 +32,7 @@ var config_json = File.ReadAllText (config_file);
 var config = JsonConvert.DeserializeObject<List<MyArray>> (config_json);
 var should_update = Args.Count > 1 && Args[1].ToLowerInvariant () == "update";
 var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
+var check_published = Args.Count > 1 && Args[1].ToLowerInvariant () == "published";
 var serializer_settings = new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore };
 serializer_settings.Converters.Add (new Newtonsoft.Json.Converters.StringEnumConverter ());
 
@@ -40,8 +43,12 @@ foreach (var array in config)
 // Query Maven
 await MavenFactory.Initialize (config);
 
-Console.WriteLine ("| Package (* = Needs Update)                                   | Currently Bound | Latest Stable   |");
-Console.WriteLine ("|--------------------------------------------------------------|-----------------|-----------------|");
+var column1 = ("Package" + (check_published ? "" : " (* = Needs Update)")).PadRight (58);
+var column2 = (check_published ? "Version" : "Currently Bound").PadRight (17);
+var column3 = (check_published ? "Status" : "Latest Stable").PadRight (15);
+
+Console.WriteLine ($"| {column1} | {column2} | {column3} |");
+Console.WriteLine ("|------------------------------------------------------------|-------------------|-----------------|");
 
 // Find the Maven artifact for each package in our configuration file
 foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
@@ -97,7 +104,12 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 		art.NugetVersion = $"{version}.{revision}{release}";
 	}
 
-	Console.WriteLine ($"| {package_name.PadRight (60)} | {current_version.PadRight (15)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");
+  if (check_published) {
+    var status = (await DoesNuGetPackageAlreadyExist (art.NugetId, art.NugetVersion)) ? "Published" : "Not Published";
+	  Console.WriteLine ($"| {art.NugetId.PadRight (58)} | {art.NugetVersion.PadRight (17)} | {status.PadRight (15)} |");  
+  } else {
+	  Console.WriteLine ($"| {package_name.PadRight (58)} | {current_version.PadRight (17)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");  
+  }
 
 	if (should_update || should_minor_bump)
 	{
@@ -164,6 +176,16 @@ static SemanticVersion GetVersion (string s)
 		return new SemanticVersion (0, 0, 0);
 
 	return SemanticVersion.Parse (version + tag);
+}
+	
+public static async Task<bool> DoesNuGetPackageAlreadyExist (string package, string version)
+{
+  var url = $"https://www.nuget.org/api/v2/package/{package}/{version}";
+  
+  using (var client = new HttpClient ()) {
+    var result = await client.GetAsync (url);
+    return result.StatusCode != System.Net.HttpStatusCode.NotFound;
+  }
 }
 
 public static class MavenFactory
