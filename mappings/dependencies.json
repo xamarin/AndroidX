@@ -49,12 +49,12 @@
     {
       "id": "Xamarin.AndroidX.Core",
       "dependencies": [
-        "Xamarin.AndroidX.Annotation.Experimental",
         "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.AndroidX.Lifecycle.Runtime",
-        "Xamarin.AndroidX.VersionedParcelable"
+        "Xamarin.AndroidX.VersionedParcelable",
+        "Xamarin.AndroidX.Annotation.Experimental",
+        "Xamarin.AndroidX.Concurrent.Futures"
       ]
     },
     {
@@ -261,15 +261,18 @@
     {
       "id": "Xamarin.AndroidX.Fragment",
       "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Legacy.Support.Core.UI",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.Lifecycle.ViewModel",
+        "Xamarin.AndroidX.Loader",
         "Xamarin.AndroidX.Activity",
         "Xamarin.AndroidX.Annotation.Experimental",
-        "Xamarin.AndroidX.Annotation",
         "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
-        "Xamarin.AndroidX.Lifecycle.ViewModel",
-        "Xamarin.AndroidX.Loader",
         "Xamarin.AndroidX.SavedState",
         "Xamarin.AndroidX.ViewPager",
         "Xamarin.Kotlin.StdLib"
@@ -299,9 +302,7 @@
     },
     {
       "id": "Xamarin.AndroidX.AppCompat.Resources",
-      "dependencies": [
-        "Xamarin.AndroidX.AppCompat.AppCompatResources"
-      ]
+      "dependencies": []
     },
     {
       "id": "Xamarin.AndroidX.Arch.Core.Common",
@@ -473,9 +474,9 @@
       "id": "Xamarin.AndroidX.CoordinatorLayout",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
         "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.CustomView"
+        "Xamarin.AndroidX.CustomView",
+        "Xamarin.AndroidX.Collection"
       ]
     },
     {
@@ -821,8 +822,8 @@
       "id": "Xamarin.AndroidX.CustomView",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.Collection",
-        "Xamarin.AndroidX.Core"
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.Collection"
       ]
     },
     {
@@ -943,6 +944,23 @@
       ]
     },
     {
+      "id": "Xamarin.AndroidX.Legacy.Support.Core.UI",
+      "dependencies": [
+        "Xamarin.AndroidX.Annotation",
+        "Xamarin.AndroidX.AsyncLayoutInflater",
+        "Xamarin.AndroidX.CoordinatorLayout",
+        "Xamarin.AndroidX.Core",
+        "Xamarin.AndroidX.CursorAdapter",
+        "Xamarin.AndroidX.CustomView",
+        "Xamarin.AndroidX.DrawerLayout",
+        "Xamarin.AndroidX.Interpolator",
+        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+        "Xamarin.AndroidX.SlidingPaneLayout",
+        "Xamarin.AndroidX.SwipeRefreshLayout",
+        "Xamarin.AndroidX.ViewPager"
+      ]
+    },
+    {
       "id": "Xamarin.AndroidX.Loader",
       "dependencies": [
         "Xamarin.AndroidX.Annotation",
@@ -965,23 +983,6 @@
       "dependencies": [
         "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "Xamarin.Kotlin.StdLib"
-      ]
-    },
-    {
-      "id": "Xamarin.AndroidX.Legacy.Support.Core.UI",
-      "dependencies": [
-        "Xamarin.AndroidX.Annotation",
-        "Xamarin.AndroidX.AsyncLayoutInflater",
-        "Xamarin.AndroidX.CoordinatorLayout",
-        "Xamarin.AndroidX.Core",
-        "Xamarin.AndroidX.CursorAdapter",
-        "Xamarin.AndroidX.CustomView",
-        "Xamarin.AndroidX.DrawerLayout",
-        "Xamarin.AndroidX.Interpolator",
-        "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-        "Xamarin.AndroidX.SlidingPaneLayout",
-        "Xamarin.AndroidX.SwipeRefreshLayout",
-        "Xamarin.AndroidX.ViewPager"
       ]
     },
     {
@@ -1166,6 +1167,10 @@
     },
     {
       "id": "Xamarin.AndroidX.MultiDex",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.AndroidX.Migration.Tool",
       "dependencies": []
     },
     {
