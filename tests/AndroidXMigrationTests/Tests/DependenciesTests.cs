@@ -12,10 +12,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 
 			Assert.NotEmpty(tree.Packages);
 
-			Assert.NotNull(tree.Packages.FirstOrDefault(p => p.Id == "Xamarin.Google.Android.Material"));
+			Assert.NotNull(tree.Packages.FirstOrDefault(p => p.Id == "Xamarin.AndroidX.SwipeRefreshLayout"));
 
-			var material = tree.GetOrCreate("Xamarin.Google.Android.Material");
-			Assert.Contains("Xamarin.AndroidX.AppCompat", material.Dependencies);
+			var material = tree.GetOrCreate("Xamarin.AndroidX.SwipeRefreshLayout");
+			Assert.Contains("Xamarin.AndroidX.Interpolator", material.Dependencies);
 		}
 
 		[Fact]
@@ -23,7 +23,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 		{
 			var tree = PackageDependencyTree.Load();
 
-			var flattened = tree.Flatten("Xamarin.AndroidX.Palette").ToArray();
+			var flattened = tree.Flatten("Xamarin.AndroidX.Fragment").ToArray();
 
 			Assert.Contains("Xamarin.AndroidX.Annotation", flattened);
 			Assert.Equal(flattened, flattened.Distinct().ToArray());
@@ -241,7 +241,7 @@ namespace Xamarin.AndroidX.Migration.Tests
 
 			var flattened = tree.Flatten(ids);
 			Assert.NotEmpty(flattened);
-			Assert.NotEqual(ids, flattened);
+			Assert.Equal(ids, flattened);
 
 			var actual = tree.Reduce(flattened);
 			Assert.Equal(ids, actual);
@@ -253,79 +253,31 @@ namespace Xamarin.AndroidX.Migration.Tests
 			var ids = new[]
 			{
 				"Xamarin.AndroidX.AppCompat",
-				"Xamarin.AndroidX.Browser",
-				"Xamarin.AndroidX.CardView",
 				"Xamarin.AndroidX.Legacy.Support.Core.Utils",
 				"Xamarin.AndroidX.Legacy.Support.V4",
-				"Xamarin.Google.Android.Material",
 			};
 
 			var expected = new[]
 			{
-				"Xamarin.AndroidX.Activity",
 				"Xamarin.AndroidX.Annotation",
-				"Xamarin.AndroidX.Annotation.Experimental",
 				"Xamarin.AndroidX.AppCompat",
-				"Xamarin.AndroidX.AppCompat.AppCompatResources",
 				"Xamarin.AndroidX.Arch.Core.Common",
 				"Xamarin.AndroidX.Arch.Core.Runtime",
-				"Xamarin.AndroidX.AsyncLayoutInflater",
-				"Xamarin.AndroidX.Browser",
-				"Xamarin.AndroidX.CardView",
 				"Xamarin.AndroidX.Collection",
-				"Xamarin.AndroidX.Concurrent.Futures",
-				"Xamarin.AndroidX.ConstraintLayout",
-				"Xamarin.AndroidX.ConstraintLayout.Core",
-				"Xamarin.AndroidX.CoordinatorLayout",
 				"Xamarin.AndroidX.Core",
-				"Xamarin.AndroidX.Core.Core.Ktx",
-				"Xamarin.AndroidX.CursorAdapter",
-				"Xamarin.AndroidX.CustomView",
 				"Xamarin.AndroidX.DocumentFile",
-				"Xamarin.AndroidX.DrawerLayout",
-				"Xamarin.AndroidX.DynamicAnimation",
-				"Xamarin.AndroidX.Emoji2",
-				"Xamarin.AndroidX.Emoji2.ViewsHelper",
-				"Xamarin.AndroidX.Fragment",
-				"Xamarin.AndroidX.Interpolator",
-				"Xamarin.AndroidX.Legacy.Support.Core.UI",
 				"Xamarin.AndroidX.Legacy.Support.Core.Utils",
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.Common",
 				"Xamarin.AndroidX.Lifecycle.LiveData.Core",
-				"Xamarin.AndroidX.Lifecycle.Process",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
-				"Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
 				"Xamarin.AndroidX.Loader",
 				"Xamarin.AndroidX.LocalBroadcastManager",
-				"Xamarin.AndroidX.Media",
 				"Xamarin.AndroidX.Migration",
 				"Xamarin.AndroidX.MultiDex",
 				"Xamarin.AndroidX.Print",
-				"Xamarin.AndroidX.RecyclerView",
-				"Xamarin.AndroidX.ResourceInspection.Annotation",
-				"Xamarin.AndroidX.SavedState",
-				"Xamarin.AndroidX.SlidingPaneLayout",
-				"Xamarin.AndroidX.Startup.StartupRuntime",
-				"Xamarin.AndroidX.SwipeRefreshLayout",
-				"Xamarin.AndroidX.Tracing.Tracing",
-				"Xamarin.AndroidX.Transition",
-				"Xamarin.AndroidX.VectorDrawable",
-				"Xamarin.AndroidX.VectorDrawable.Animated",
 				"Xamarin.AndroidX.VersionedParcelable",
-				"Xamarin.AndroidX.ViewPager",
-				"Xamarin.AndroidX.ViewPager2",
-				"Xamarin.AndroidX.Window",
-				"Xamarin.Google.Android.Material",
-				"Xamarin.Google.Guava.ListenableFuture",
-                "Xamarin.Jetbrains.Annotations",
-                "Xamarin.Kotlin.StdLib",
-                "Xamarin.Kotlin.StdLib.Common",
-				"Xamarin.Kotlin.StdLib.Jdk7",
-				"Xamarin.Kotlin.StdLib.Jdk8",
-				"Xamarin.KotlinX.Coroutines.Android",
-				"Xamarin.KotlinX.Coroutines.Core.Jvm"
 	    };
 
 			var tree = PackageDependencyTree.Load();
@@ -350,7 +302,6 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Lifecycle.LiveData",
 				"Xamarin.AndroidX.Lifecycle.Runtime",
 				"Xamarin.AndroidX.Lifecycle.ViewModel",
-				"Xamarin.AndroidX.VectorDrawable.Animated",
 				"Xamarin.AndroidX.Annotation",
 				"Xamarin.AndroidX.AsyncLayoutInflater",
 				"Xamarin.AndroidX.Collection",
@@ -359,38 +310,31 @@ namespace Xamarin.AndroidX.Migration.Tests
 				"Xamarin.AndroidX.Legacy.Support.Core.UI",
 				"Xamarin.AndroidX.Legacy.Support.Core.Utils",
 				"Xamarin.AndroidX.CursorAdapter",
-				"Xamarin.AndroidX.Browser",
 				"Xamarin.AndroidX.CustomView",
-				"Xamarin.Google.Android.Material",
 				"Xamarin.AndroidX.DocumentFile",
 				"Xamarin.AndroidX.DrawerLayout",
 				"Xamarin.AndroidX.Fragment",
 				"Xamarin.AndroidX.Interpolator",
 				"Xamarin.AndroidX.Loader",
 				"Xamarin.AndroidX.LocalBroadcastManager",
-				"Xamarin.AndroidX.Media",
 				"Xamarin.AndroidX.Print",
 				"Xamarin.AndroidX.SlidingPaneLayout",
 				"Xamarin.AndroidX.SwipeRefreshLayout",
-				"Xamarin.AndroidX.Transition",
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.AppCompat",
 				"Xamarin.AndroidX.CardView",
-				"Xamarin.AndroidX.MediaRouter",
 				"Xamarin.AndroidX.Palette",
-				"Xamarin.AndroidX.RecyclerView",
-				"Xamarin.AndroidX.VectorDrawable",
 				"Xamarin.AndroidX.VersionedParcelable",
-				"Xamarin.AndroidX.ViewPager",
 			};
 
 			var expected = new[]
 			{
-				"Xamarin.AndroidX.Browser",
+				"Xamarin.AndroidX.AppCompat",
+				"Xamarin.AndroidX.CardView",
+				"Xamarin.AndroidX.Fragment",
 				"Xamarin.AndroidX.Legacy.Support.V4",
 				"Xamarin.AndroidX.Lifecycle.LiveData",
-				"Xamarin.AndroidX.MediaRouter",
-				"Xamarin.Google.Android.Material",
+				"Xamarin.AndroidX.Palette",
 			};
 
 			var tree = PackageDependencyTree.Load();

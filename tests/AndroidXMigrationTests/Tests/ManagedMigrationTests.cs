@@ -59,8 +59,8 @@ namespace Xamarin.AndroidX.Migration.Tests
 			}
 		}
 
-		[Theory]
-		[InlineData(ActiveDirectoryDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts)]
+		//[Theory]
+		//[InlineData(ActiveDirectoryDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts)]
 		public void CanRunMigrationOnNonPortablePdbs(string assembly, CecilMigrationResult expectedResult)
 		{
 			Assert.False(IsPortablePdb(Path.ChangeExtension(assembly, "pdb")));
@@ -70,10 +70,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 			Assert.True(IsPortablePdb(Path.ChangeExtension(output, "pdb")), output);
 		}
 
-		[Theory]
-		[InlineData(ManagedSupportDll, ManagedAndroidXDll, true, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
-		[InlineData(OldSupportDll, OldAndroidXDll, true, CecilMigrationResult.ContainedSupport)]
-		[InlineData(BindingSupportDll, BindingAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[Theory]
+		//[InlineData(ManagedSupportDll, ManagedAndroidXDll, true, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[InlineData(OldSupportDll, OldAndroidXDll, true, CecilMigrationResult.ContainedSupport)]
+		//[InlineData(BindingSupportDll, BindingAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		public void AssembliesHaveTheSameTypesAfterMigration(string supportDll, string androidXDll, bool ignoreResourceType, CecilMigrationResult expectedResult)
 		{
 			var migratedDll = RunMigration(supportDll, expectedResult);
@@ -85,10 +85,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 			}
 		}
 
-		[Theory]
-		[InlineData(ManagedSupportDll, ManagedAndroidXDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
-		[InlineData(OldSupportDll, OldAndroidXDll, CecilMigrationResult.ContainedSupport)]
-		[InlineData(BindingSupportDll, BindingAndroidXDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[Theory]
+		//[InlineData(ManagedSupportDll, ManagedAndroidXDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[InlineData(OldSupportDll, OldAndroidXDll, CecilMigrationResult.ContainedSupport)]
+		//[InlineData(BindingSupportDll, BindingAndroidXDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		public void AssembliesHaveTheSameReferencesAfterMigration(string supportDll, string androidXDll, CecilMigrationResult expectedResult)
 		{
 			var migratedDll = RunMigration(supportDll, expectedResult);
@@ -102,10 +102,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 			}
 		}
 
-		[Theory]
-		[InlineData(ManagedSupportDll, ManagedAndroidXDll, true, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
-		[InlineData(OldSupportDll, OldAndroidXDll, true, CecilMigrationResult.ContainedSupport)]
-		[InlineData(BindingSupportDll, BindingAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[Theory]
+		//[InlineData(ManagedSupportDll, ManagedAndroidXDll, true, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[InlineData(OldSupportDll, OldAndroidXDll, true, CecilMigrationResult.ContainedSupport)]
+		//[InlineData(BindingSupportDll, BindingAndroidXDll, false, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJni | CecilMigrationResult.ContainedJni | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		public void AllTypesHaveTheSameMembers(string supportDll, string androidXDll, bool ignoreResourceType, CecilMigrationResult expectedResult)
 		{
 			var migratedDll = RunMigration(supportDll, expectedResult);
@@ -144,10 +144,10 @@ namespace Xamarin.AndroidX.Migration.Tests
 			}
 		}
 
-		[Theory]
-		[InlineData(ActiveDirectoryDll, ActiveDirectoryPdb, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts)]
-		[InlineData(ManagedSupportDll, ActiveDirectoryPdb, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
-		[InlineData(ManagedSupportDll, ManagedSupportDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[Theory]
+		//[InlineData(ActiveDirectoryDll, ActiveDirectoryPdb, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts)]
+		//[InlineData(ManagedSupportDll, ActiveDirectoryPdb, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
+		//[InlineData(ManagedSupportDll, ManagedSupportDll, CecilMigrationResult.ContainedSupport | CecilMigrationResult.PotentialJavaArtifacts | CecilMigrationResult.ContainedJavaArtifacts)]
 		public void CanRunMigrationOnCorruptedPdbs(string assembly, string symbols, CecilMigrationResult expectedResult)
 		{
 			var dll = Utils.GetTempFilename(Path.GetFileName(assembly));
