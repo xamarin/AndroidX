@@ -1,13 +1,13 @@
 // Tools needed by cake addins
 #tool nuget:?package=Cake.CoreCLR
-#tool nuget:?package=vswhere&version=2.8.4
+#tool nuget:?package=vswhere
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=4.0.1
-#addin nuget:?package=Newtonsoft.Json&version=12.0.3
-#addin nuget:?package=Cake.MonoApiTools&version=3.0.5
+#addin nuget:?package=Cake.FileHelpers
+#addin nuget:?package=Newtonsoft.Json
+#addin nuget:?package=Cake.MonoApiTools
+#addin nuget:?package=SharpZipLib
 #addin nuget:?package=CsvHelper&version=12.2.1
-#addin nuget:?package=SharpZipLib&version=1.3.3
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
@@ -847,14 +847,27 @@ Task("generate-mapping")
         "AndroidX NuGet Version",
     };
     foreach (var record in records) {
-        var androidxNuget = GetNuGetId(record.AndroidX);
-        lines.Add(
-            record.Support + "," +
-            record.AndroidX + "," +
-            GetNuGetId(record.Support, supportJson) + "," +
-            androidxNuget + "," +
-            GetNuGetVersion(androidxNuget));
+        Information($"record  = {record}");
+        if ( record.Support == "Xamarin.Android.Support.v4" )
+        {
+            continue;
+        }
+        try
+        {
+            var androidxNuget = GetNuGetId(record.AndroidX);        
+            lines.Add(
+                record.Support + "," +
+                record.AndroidX + "," +
+                GetNuGetId(record.Support, supportJson) + "," +
+                androidxNuget + "," +
+                GetNuGetVersion(androidxNuget));
+        }
+        catch (System.Exception)
+        {                        
+            throw;
+        }
     }
+    Information($"heeeereeeee");
     FileWriteLines("./output/mappings/androidx-assemblies.csv", lines.ToArray());
     CopyFileToDirectory("./output/mappings/androidx-assemblies.csv", "./mappings/");
 
