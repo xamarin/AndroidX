@@ -206,6 +206,7 @@ Task ("spell-check")
                 "Emoji2",
                 "ViewsHelper",
                 "ResourceInspection",
+                "SplashScreen"
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
