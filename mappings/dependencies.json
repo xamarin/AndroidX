@@ -1157,7 +1157,9 @@
     {
       "id": "Xamarin.AndroidX.MediaRouter",
       "dependencies": [
+        "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "Xamarin.AndroidX.AppCompat",
+        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.Palette",
         "Xamarin.AndroidX.RecyclerView",
