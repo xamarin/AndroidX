@@ -1581,25 +1581,29 @@
         "groupId": "com.google.guava",
         "artifactId": "failureaccess",
         "version": "1.0.1",
-        "nugetVersion": "1.0.1.5",
+        "nugetVersion": "1.0.1.6",
         "nugetId": "Xamarin.Google.Guava.FailureAccess",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "29.0.0",
-        "nugetVersion": "29.0.0",
+        "version": "31.1-android",
+        "nugetVersion": "31.1.0.2",
         "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "com.google.code.findbugs.jsr305,org.checkerframework.checker-qual,org.checkerframework.checker-compat-qual,com.google.errorprone.error_prone_annotations,com.google.j2objc.j2objc-annotations,com.google.guava.listenablefuture",
+        "templateSet": "guava"
       },
       {
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
         "version": "1.0",
-        "nugetVersion": "1.0.0.5",
+        "nugetVersion": "1.0.0.8",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
-        "dependencyOnly": true
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "groupId": "com.xamarin.androidx",
@@ -1611,6 +1615,20 @@
       }
     ],
     "templateSets": [
+      {
+        "name": "guava",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/guava/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
       {
         "name": "kotlin",
         "mavenRepositoryType": "MavenCentral",

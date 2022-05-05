@@ -705,6 +705,9 @@ Task("samples-generate-all-targets")
         // Skip the migration packages as that is not meant forto be used here
         if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
             continue;
+        // Skip Guava.ListenableFuture as it cannot be used in the same project as Guava itself
+        if (nupkg.FullPath.Contains("Xamarin.Google.Guava.ListenableFuture"))
+            continue;
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
@@ -713,18 +716,6 @@ Task("samples-generate-all-targets")
             new XAttribute("Version", match.Groups[2])));
 
     }
-
-    // R8 ACW errors about missing classes
-    // TODO: could have been grabbed from config.json
-    itemGroup.Add(new XElement(xmlns + "PackageReference",
-        new XAttribute("Include", "Xamarin.Google.Guava"),
-        new XAttribute("Version", "27.1.0.4")));
-    itemGroup.Add(new XElement(xmlns + "PackageReference",
-        new XAttribute("Include", "Xamarin.Google.Guava.FailureAccess"),
-        new XAttribute("Version", "1.0.1.2")));
-    itemGroup.Add(new XElement(xmlns + "PackageReference",
-        new XAttribute("Include", "Xamarin.Google.Guava.ListenableFuture"),
-        new XAttribute("Version", "1.0.0.2")));
 
     var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
     xdoc.Save("./output/AllPackages.targets");
