@@ -1365,8 +1365,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0.2",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
@@ -1396,6 +1396,34 @@
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
         "dependencyOnly": false,
         "templateSet": "tink"
+      },
+      {
+        "groupId": "com.google.guava",
+        "artifactId": "failureaccess",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1.6",
+        "nugetId": "Xamarin.Google.Guava.FailureAccess",
+        "dependencyOnly": false,
+        "templateSet": "guava"
+      },
+      {
+        "groupId": "com.google.guava",
+        "artifactId": "guava",
+        "version": "31.1-android",
+        "nugetVersion": "31.1.0.2",
+        "nugetId": "Xamarin.Google.Guava",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "com.google.code.findbugs.jsr305,org.checkerframework.checker-qual,org.checkerframework.checker-compat-qual,com.google.errorprone.error_prone_annotations,com.google.j2objc.j2objc-annotations,com.google.guava.listenablefuture",
+        "templateSet": "guava"
+      },
+      {
+        "groupId": "com.google.guava",
+        "artifactId": "listenablefuture",
+        "version": "1.0",
+        "nugetVersion": "1.0.0.8",
+        "nugetId": "Xamarin.Google.Guava.ListenableFuture",
+        "dependencyOnly": false,
+        "templateSet": "guava"
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -1576,34 +1604,6 @@
         "nugetVersion": "120.0.0.2",
         "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "failureaccess",
-        "version": "1.0.1",
-        "nugetVersion": "1.0.1.6",
-        "nugetId": "Xamarin.Google.Guava.FailureAccess",
-        "dependencyOnly": false,
-        "templateSet": "guava"
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "guava",
-        "version": "31.1-android",
-        "nugetVersion": "31.1.0.2",
-        "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "com.google.code.findbugs.jsr305,org.checkerframework.checker-qual,org.checkerframework.checker-compat-qual,com.google.errorprone.error_prone_annotations,com.google.j2objc.j2objc-annotations,com.google.guava.listenablefuture",
-        "templateSet": "guava"
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "listenablefuture",
-        "version": "1.0",
-        "nugetVersion": "1.0.0.8",
-        "nugetId": "Xamarin.Google.Guava.ListenableFuture",
-        "dependencyOnly": false,
-        "templateSet": "guava"
       },
       {
         "groupId": "com.xamarin.androidx",
