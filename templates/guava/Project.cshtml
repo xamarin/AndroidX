@@ -120,11 +120,6 @@
 
   @if(Model.NuGetPackageId == "Xamarin.Google.Guava") {
   <ItemGroup>
-    <!-- Temporarily handle these here instead of through binderator because they require parent POM dependency support -->
-    <PackageReference Include="Xamarin.CheckerFramework.CheckerCompatQual" Version="2.5.5" />
-    <PackageReference Include="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.2" />
-    <PackageReference Include="Xamarin.Google.ErrorProne.Annotations" Version="2.4.0.1" />
-    <PackageReference Include="Xamarin.Google.J2Objc.Annotations" Version="1.3.0" />
     <!-- Reference a version of ListenableFuture that does not contain 'listenablefuture.jar' -->
     <PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="9999.0.0" />
   </ItemGroup>
