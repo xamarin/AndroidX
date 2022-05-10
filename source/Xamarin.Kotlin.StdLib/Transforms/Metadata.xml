@@ -256,58 +256,30 @@
       >
     </method>
   </add-node>
-
+  <!-- Temporary fix for https://github.com/xamarin/java.interop/issues/984 -->
   <attr
-    path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='set-VurrAj0' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='byte']]/parameter[3]"
+    path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='contains-7apg3OU' and count(parameter)=1 and parameter[1][@type='byte']]/parameter[1]"
     name="type"
     >
     ubyte
   </attr>
   <attr
-    path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='get-w2LRezQ' and count(parameter)=2 and parameter[1][@type='byte[]'] and parameter[2][@type='int']]"
-    name="return"
-    >
-    ubyte
-  </attr>
-  <attr
-    path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='set-VXSXFK8' and count(parameter)=3 and parameter[1][@type='int[]'] and parameter[2][@type='int'] and parameter[3][@type='int']]/parameter[3]"
+    path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='contains-WZ4Q5Ns' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
     name="type"
     >
     uint
   </attr>
-
   <attr
-    path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='get-pVg5ArA' and count(parameter)=2 and parameter[1][@type='int[]'] and parameter[2][@type='int']]"
-    name="return"
-    >
-    uint
-  </attr>
-  <attr
-    path="/api/package[@name='kotlin']/class[@name='ULongArray']/method[@name='set-k8EXiF4' and count(parameter)=3 and parameter[1][@type='long[]'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[3]"
+    path="/api/package[@name='kotlin']/class[@name='ULongArray']/method[@name='contains-VKZWuLQ' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]"
     name="type"
     >
     ulong
   </attr>
-
   <attr
-    path="/api/package[@name='kotlin']/class[@name='ULongArray']/method[@name='get-s-VKNKU' and count(parameter)=2 and parameter[1][@type='long[]'] and parameter[2][@type='int']]"
-    name="return"
-    >
-    ulong
-  </attr>
-  <attr
-    path="/api/package[@name='kotlin']/class[@name='UShortArray']/method[@name='set-01HTLdE' and count(parameter)=3 and parameter[1][@type='short[]'] and parameter[2][@type='int'] and parameter[3][@type='short']]/parameter[3]"
+    path="/api/package[@name='kotlin']/class[@name='UShortArray']/method[@name='contains-xj2QHRw' and count(parameter)=1 and parameter[1][@type='short']]/parameter[1]"
     name="type"
     >
     ushort
   </attr>
-
-  <attr
-    path="/api/package[@name='kotlin']/class[@name='UShortArray']/method[@name='get-Mh2AYeg' and count(parameter)=2 and parameter[1][@type='short[]'] and parameter[2][@type='int']]"
-    name="return"
-    >
-    ushort
-  </attr>
-
 
 </metadata>
