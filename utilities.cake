@@ -223,7 +223,9 @@ Task ("spell-check")
                 "Emoji2",
                 "ViewsHelper",
                 "ResourceInspection",
-                "SplashScreen"
+                "SplashScreen",
+                "FailureAccess",
+                "ListenableFuture",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

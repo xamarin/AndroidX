@@ -1213,7 +1213,9 @@
     {
       "id": "Xamarin.AndroidX.MediaRouter",
       "dependencies": [
+        "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "Xamarin.AndroidX.AppCompat",
+        "Xamarin.AndroidX.Core",
         "Xamarin.AndroidX.Media",
         "Xamarin.AndroidX.Palette",
         "Xamarin.AndroidX.RecyclerView",
@@ -1571,7 +1573,6 @@
         "Xamarin.AndroidX.Concurrent.Futures",
         "Xamarin.Kotlin.StdLib",
         "Xamarin.KotlinX.Coroutines.Guava",
-        "Xamarin.Google.Guava.ListenableFuture",
         "Xamarin.GooglePlayServices.Basement",
         "Xamarin.GooglePlayServices.Wearable"
       ]
@@ -1579,9 +1580,9 @@
     {
       "id": "Xamarin.KotlinX.Coroutines.Guava",
       "dependencies": [
+        "Xamarin.Google.Guava",
         "Xamarin.Kotlin.StdLib.Jdk8",
-        "Xamarin.KotlinX.Coroutines.Core.Jvm",
-        "Xamarin.Google.Guava"
+        "Xamarin.KotlinX.Coroutines.Core.Jvm"
       ]
     },
     {
@@ -1644,6 +1645,41 @@
         "Xamarin.AndroidX.Core.Core.Ktx",
         "Xamarin.Kotlin.StdLib.Jdk8"
       ]
+    },
+    {
+      "id": "Xamarin.Google.Guava",
+      "dependencies": [
+        "Xamarin.Google.Guava.FailureAccess",
+        "Xamarin.CheckerFramework.CheckerCompatQual",
+        "Xamarin.Google.Code.FindBugs.JSR305",
+        "Xamarin.Google.ErrorProne.Annotations",
+        "Xamarin.Google.Guava.ListenableFuture",
+        "Xamarin.Google.J2Objc.Annotations"
+      ]
+    },
+    {
+      "id": "Xamarin.Google.Guava.FailureAccess",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.CheckerFramework.CheckerCompatQual",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Google.Code.FindBugs.JSR305",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Google.ErrorProne.Annotations",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Google.J2Objc.Annotations",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Jetbrains.Annotations",
+      "dependencies": []
     },
     {
       "id": "Xamarin.Kotlin.StdLib.Jdk8",
@@ -1761,10 +1797,6 @@
         "Xamarin.Kotlin.StdLib.Common",
         "Xamarin.Kotlin.StdLib.Jdk8"
       ]
-    },
-    {
-      "id": "Xamarin.Google.Guava",
-      "dependencies": []
     },
     {
       "id": "Xamarin.KotlinX.Coroutines.Jdk8",

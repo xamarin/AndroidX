@@ -215,4 +215,8 @@
         path="/api/package[@name='com.google.android.material.datepicker']/class[@name='OnSelectionChangedListener']/typeParameters"
         />
 
-</metadata>
+    <remove-node
+        path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setLayoutParams' and count(parameter)=1 and parameter[1][@type='android.view.ViewGroup.LayoutParams']]"
+        />
+
+  </metadata>
