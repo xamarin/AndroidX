@@ -1413,7 +1413,7 @@
         "nugetVersion": "31.1.0.2",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": false,
-        "excludedRuntimeDependencies": "com.google.code.findbugs.jsr305,org.checkerframework.checker-qual,org.checkerframework.checker-compat-qual,com.google.errorprone.error_prone_annotations,com.google.j2objc.j2objc-annotations,com.google.guava.listenablefuture",
+        "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
         "templateSet": "guava"
       },
       {
@@ -1424,6 +1424,15 @@
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": false,
         "templateSet": "guava"
+      },
+      {
+        "groupId": "com.google.j2objc",
+        "artifactId": "j2objc-annotations",
+        "version": "1.3",
+        "nugetVersion": "1.3.0",
+        "nugetId": "Xamarin.Google.J2Objc.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "no-bindings"
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -1442,6 +1451,15 @@
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
         "templateSet": "rxjava"
+      },
+      {
+        "groupId": "org.checkerframework",
+        "artifactId": "checker-qual",
+        "version": "3.22.0",
+        "nugetVersion": "3.22.0",
+        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
+        "dependencyOnly": false,
+        "templateSet": "no-bindings"
       },
       {
         "groupId": "org.jetbrains",
@@ -1598,6 +1616,22 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "version": "3.0.2",
+        "nugetVersion": "3.0.2.4",
+        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.errorprone",
+        "artifactId": "error_prone_annotations",
+        "version": "2.11.0",
+        "nugetVersion": "2.4.0.3",
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appindexing",
         "version": "20.0.0",
@@ -1622,6 +1656,24 @@
           {
             "templateFile": "templates/guava/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "no-bindings",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/no-bindings/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/no-bindings/Targets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
