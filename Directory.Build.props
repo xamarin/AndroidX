@@ -15,13 +15,16 @@
     
     <!-- .NET 6+ packages support back to API-21 -->
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    
+    <!-- Mark .NET6+ packages as supporting trimming -->
+    <IsTrimmable>true</IsTrimmable>
   </PropertyGroup>
   
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
-    <AndroidXNuGetTargetFolders Include="build\monoandroid90" />
+    <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="build\net6.0-android31.0" />
-    <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid90" />
+    <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
   </ItemGroup>
 </Project>

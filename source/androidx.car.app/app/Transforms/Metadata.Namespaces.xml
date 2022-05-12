@@ -72,5 +72,41 @@
         >
         AndroidX.Car.App.Versioning
     </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.hardware']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Hardware
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.hardware.info']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Hardware.Info
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.hardware.common']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Hardware.Common
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.connection']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Connection
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.constraints']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Constraints
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.car.app.managers']"
+        name="managedName"
+        >
+        AndroidX.Car.App.Managers
+    </attr>
 
 </metadata>

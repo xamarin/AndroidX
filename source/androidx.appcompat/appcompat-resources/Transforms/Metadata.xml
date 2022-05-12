@@ -42,4 +42,23 @@
         public
     </attr>
     
+    <!--
+        name="managedReturn"
+        and
+        Android.Graphics.Color
+
+        generated/androidx.appcompat.appcompat-resources/obj/Debug/monoandroid9.0/generated/src/AndroidX.AppCompat.Widget.VectorEnabledTintResources.cs(232,12): 
+        error CS0029: 
+        Cannot implicitly convert type 
+            'int' 
+        to 
+            'Android.Graphics.Color' 
+    -->
+    <attr
+        path="/api/package[@name='androidx.appcompat.widget']/class[@name='VectorEnabledTintResources']/method[@name='getColor' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="return"
+        >
+        android.graphics.Color
+    </attr>
+
 </metadata>

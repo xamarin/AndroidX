@@ -2,7 +2,7 @@
 @using System.Linq
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
@@ -101,7 +101,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard\" />
+    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard/" />
       }
     }
   </ItemGroup>
@@ -223,8 +223,17 @@
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
     <ItemGroup>
-      <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid9.0' " />
+      <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid12.0' " />
     </ItemGroup>
+  }
+
+  <!-- Compose nuget package details until Compose support is implemented -->
+  @if (@Model.NuGetPackageId.StartsWith("Xamarin.AndroidX.Compose"))
+  {
+    <PropertyGroup>
+      <Summary>Xamarin.Android bindings for AndroidX - @(Model.Name) (bindings without managed callable wrappers (C#) and are only used for including Java files)</Summary>
+      <Description>Xamarin.Android bindings for AndroidX - @(Model.Name) (bindings without managed callable wrappers (C#) and are only used for including Java files) artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</Description>
+    </PropertyGroup>
   }
 
 </Project>

@@ -50,5 +50,12 @@
         >
         AndroidX.Core.Telephony
     </attr>
+    <attr
+        path="/api/package[@name='androidx.core.app.unusedapprestrictions']"
+        name="managedName"
+        >
+        AndroidX.Core.App.UnusedAppRestrictions
+    </attr>
+
 
 </metadata>

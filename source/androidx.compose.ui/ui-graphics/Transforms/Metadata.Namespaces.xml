@@ -1,0 +1,37 @@
+﻿<metadata>
+    <remove-node path="/api/package" />
+
+    <!--
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.graphics']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Graphics
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.graphics.colorspace']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Graphics.Colorspace
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.graphics.drawscope']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Graphics.Drawscope
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.graphics.painter']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Graphics.Painter
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.compose.ui.graphics.vector']" 
+        name="managedName"
+        >
+        AndroidX.Compose.UI.Graphics.Vector
+    </attr>        
+    -->
+
+</metadata>
