@@ -1,12 +1,12 @@
 // Tools needed by cake addins
 #tool nuget:?package=Cake.CoreCLR
-#tool nuget:?package=vswhere&version=2.8.4
+#tool nuget:?package=vswhere&version=3.0.2
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=4.0.1
-#addin nuget:?package=Newtonsoft.Json&version=12.0.3
+#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Newtonsoft.Json&version=13.0.1
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
-#addin nuget:?package=CsvHelper&version=12.2.1
+#addin nuget:?package=CsvHelper&version=27.2.1
 #addin nuget:?package=SharpZipLib&version=1.3.3
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
@@ -812,7 +812,7 @@ Task("generate-mapping")
 
     // read the newly generated mapping file
     var csvReader = new StreamReader("./mappings/androidx-mapping.csv");
-    var csv = new CsvReader(csvReader);
+    var csv = new CsvReader(csvReader, System.Globalization.CultureInfo.CurrentCulture);
     var records = csv.GetRecords<dynamic>()
         .Cast<IDictionary<string, object>>()
         .Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")
