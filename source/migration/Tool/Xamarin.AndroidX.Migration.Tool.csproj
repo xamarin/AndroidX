@@ -16,7 +16,7 @@
     <Description>This package provides a set of tools and MSBuild tasks to aid in the migration from Android Support to Android X.</Description>
     <Summary>This package provides a set of tools and MSBuild tasks to aid in the migration from Android Support to Android X.</Summary>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2099353</PackageProjectUrl>
-    <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageTags>Xamarin.AndroidX Xamarin Android Support AndroidX Migration</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Authors>Microsoft</Authors>
@@ -40,6 +40,7 @@
 
   <ItemGroup>
     <None Include="..\..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
+    <None Include="..\..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
   </ItemGroup>
 
 </Project>

@@ -36,7 +36,7 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>1.1.0.1</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
@@ -54,6 +54,7 @@
 
   <ItemGroup>
     <None Include="..\..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
+    <None Include="..\..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
   </ItemGroup>
 
   <ItemGroup>
