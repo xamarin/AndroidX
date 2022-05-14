@@ -35,7 +35,7 @@ var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
 var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.3/AndroidSupport.Merged.dll";
 
-var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-7.zip";
+var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d17-2.zip";
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
 
