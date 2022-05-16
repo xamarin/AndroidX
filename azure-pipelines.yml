@@ -9,12 +9,12 @@ variables:
   AndroidBinderatorVersion: 0.5.4
   AndroidXMigrationVersion: 1.0.8
   BootsVersion: 1.1.0.712-preview2
-  DotNetVersion: 6.0.200
+  DotNetVersion: 6.0.300
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
-  XamarinDotNetWorkloadSource: https://aka.ms/dotnet/maui/preview.13.json
+  XamarinDotNetWorkloadSource: https://aka.ms/dotnet/maui/rc.3.json
   LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d17-0-macos
-  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-1-windows
+  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-2-windows
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
   PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
