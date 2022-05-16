@@ -52,7 +52,7 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
@@ -95,6 +95,7 @@
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
+    <None Include="..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
   </ItemGroup>
 
   @if (@Model.MavenArtifacts.Count > 0) {
