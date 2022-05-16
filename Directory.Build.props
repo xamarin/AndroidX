@@ -26,7 +26,7 @@
     <!-- Common package metadata -->
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <Copyright>Â© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
   </PropertyGroup>
@@ -38,4 +38,4 @@
     <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
   </ItemGroup>
-</Project>
+</Project
