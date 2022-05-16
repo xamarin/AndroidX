@@ -22,6 +22,13 @@
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
     <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
+    
+    <!-- Common package metadata -->
+    <Authors>Microsoft</Authors>
+    <Owners>Microsoft</Owners>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
   </PropertyGroup>
   
   <!-- Folders that .targets files need to go into -->
