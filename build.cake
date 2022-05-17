@@ -1,12 +1,12 @@
 // Tools needed by cake addins
 #tool nuget:?package=Cake.CoreCLR
-#tool nuget:?package=vswhere&version=2.8.4
+#tool nuget:?package=vswhere&version=3.0.2
 
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=4.0.1
-#addin nuget:?package=Newtonsoft.Json&version=12.0.3
+#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Newtonsoft.Json&version=13.0.1
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
-#addin nuget:?package=CsvHelper&version=12.2.1
+#addin nuget:?package=CsvHelper&version=27.2.1
 #addin nuget:?package=SharpZipLib&version=1.3.3
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
@@ -35,7 +35,7 @@ var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-
 // In order to create the type mapping, we need to get the AndroidSupport.Merged.dll
 var SUPPORT_MERGED_DLL_URL = EnvironmentVariable("SUPPORT_MERGED_DLL_URL") ?? $"https://github.com/xamarin/AndroidSupportComponents/releases/download/28.0.0.3/AndroidSupport.Merged.dll";
 
-var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d16-7.zip";
+var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d17-2.zip";
 
 var SUPPORT_CONFIG_URL = "https://raw.githubusercontent.com/xamarin/AndroidSupportComponents/master/config.json";
 
@@ -812,7 +812,7 @@ Task("generate-mapping")
 
     // read the newly generated mapping file
     var csvReader = new StreamReader("./mappings/androidx-mapping.csv");
-    var csv = new CsvReader(csvReader);
+    var csv = new CsvReader(csvReader, System.Globalization.CultureInfo.CurrentCulture);
     var records = csv.GetRecords<dynamic>()
         .Cast<IDictionary<string, object>>()
         .Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")

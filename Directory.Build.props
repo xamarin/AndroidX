@@ -18,6 +18,10 @@
     
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>
+    
+    <!-- Warnings we want to error on: -->
+    <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
+    <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
   </PropertyGroup>
   
   <!-- Folders that .targets files need to go into -->
