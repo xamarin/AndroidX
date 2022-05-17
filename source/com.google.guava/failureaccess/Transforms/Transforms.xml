@@ -1,19 +1,2 @@
 <metadata>
-  <!-- Rename Namespaces -->
-  <attr path="/api/package[@name='com.google.common.util.concurrent.internal']" name="managedName">Google.Common.Util.Concurrent.Internal</attr>
-
-  <attr 
-    path="/api/package[@name='com.google.common.util.concurrent']" 
-    name="managedName"
-    >
-    Google.Common.Util.Concurrent
-  </attr>
-  <attr 
-    path="/api/package[@name='com.google.common.util.concurrent.internal']"
-    name="managedName"
-    >
-    Google.Common.Util.Concurrent.Internal
-  </attr>
-
-
 </metadata>

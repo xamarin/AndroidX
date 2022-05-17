@@ -1,5 +1,4 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.preference']" name="managedName">AndroidX.Preference</attr>
     <attr path="/api/package[@name='androidx.preference']/class[@name='MultiSelectListPreference']/method[@name='getValues' and count(parameter)=0]" name="propertyName"></attr>
     <!--
 	<remove-node path="/api/package[@name='androidx.preference']/class[@name='MultiSelectListPreference']/method[@name='getValues' and count(parameter)=0]" />

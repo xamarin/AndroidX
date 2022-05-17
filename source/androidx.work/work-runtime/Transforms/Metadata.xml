@@ -1,7 +1,5 @@
 
 <metadata>
-    <attr path="/api/package[@name='androidx.work']" name="managedName">AndroidX.Work</attr>
-    
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='build']" name="managedReturn">AndroidX.Work.WorkRequest</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='addTag']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='keepResultsForAtLeast']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
@@ -13,91 +11,6 @@
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInputData']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setPeriodStartTime']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setScheduleRequestedAt']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
-
-    <attr 
-        path="/api/package[@name='androidx.work.impl']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.background']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Background
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.foreground']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Foreground
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.background.greedy']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Background.Greedy
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.background.systemjob']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Background.SystemJob
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.background.systemalarm']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Background.SystemAlarm
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.constraints']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Constraints  
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.constraints.controllers']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Constraints.Controllers
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.constraints.trackers']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Constraints.Trackers  
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.utils']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Utils
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.utils.futures']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Utils.Futures
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.utils.taskexecutor']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Utils.TaskExecutor
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.model']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Model
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.workers']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Workers
-    </attr>
     
     <remove-node
         path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/typeParameters" 
@@ -207,25 +120,6 @@
     <remove-node
         path="/api/package[@name='androidx.work.impl']"
         />
-
-    <attr 
-        path="/api/package[@name='androidx.work.impl.foreground']" 
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Foreground
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.multiprocess']"
-        name="managedName"
-        >
-        AndroidX.Work.MultiProcess
-    </attr>
-    <attr 
-        path="/api/package[@name='androidx.work.impl.diagnostics']"
-        name="managedName"
-        >
-        AndroidX.Work.Impl.Diagnostics
-    </attr>
     
 
     <attr 

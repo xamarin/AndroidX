@@ -1,1 +1,4 @@
-﻿<metadata></metadata>
+﻿<metadata>
+    <!-- Differs from our preferred pluralization of "Executors", maintained for backwards compatibility -->
+    <attr path="/api/package[@name='androidx.arch.core.executor']" name="managedName">AndroidX.Arch.Core.Executor</attr>
+</metadata>
