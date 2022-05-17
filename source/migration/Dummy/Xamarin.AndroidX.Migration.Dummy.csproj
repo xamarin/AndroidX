@@ -5,6 +5,7 @@
     <PackageId>Xamarin.AndroidX.Migration</PackageId>
     <IsPackable>false</IsPackable>
     <PackageVersion>$(MigrationPackageVersion)</PackageVersion>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
 </Project>
