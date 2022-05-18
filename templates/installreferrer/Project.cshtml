@@ -3,7 +3,7 @@
     <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>Annotations</RootNamespace>
-    <AssemblyName>Xamarin.Google.Android.Installeferer</AssemblyName>
+    <AssemblyName>Xamarin.Google.Android.Installeferrer</AssemblyName>
     <!--
       No warnings for:
        - CS0618: 'member' is obsolete: 'text'
@@ -47,7 +47,7 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\%(Filename)%(Extension)" />
+    <LibraryProjectZip Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Link="Jars\%(Filename)%(Extension)" />
     <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
