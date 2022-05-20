@@ -900,7 +900,8 @@ Task ("merge")
     // merge them all
     EnsureDirectoryExists("./output/");
     RunProcess("androidx-migrator",
-        $"merge" +
+        $"merge" + 
+        " --verbose" +
         $"  --assembly " + string.Join(" --assembly ", mergeDlls) +
         $"  --output ./output/AndroidX.Merged.dll" +
         $"  --search \"{XAMARIN_ANDROID_PATH}/{ANDROID_SDK_VERSION}\" " +
