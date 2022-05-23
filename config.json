@@ -30,7 +30,7 @@
         "groupId": "androidx.activity",
         "artifactId": "activity",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.2",
+        "nugetVersion": "1.4.0.3",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
@@ -461,8 +461,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core-splashscreen",
-        "version": "1.0.0-beta02",
-        "nugetVersion": "1.0.0-beta02",
+        "version": "1.0.0-rc01",
+        "nugetVersion": "1.0.0-rc01",
         "nugetId": "Xamarin.AndroidX.Core.SplashScreen",
         "dependencyOnly": false
       },
