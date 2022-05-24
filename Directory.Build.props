@@ -19,6 +19,9 @@
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>
     
+    <!-- Generate NRT annotations -->
+    <Nullable Condition=" '$(Nullable)' == '' ">enable</Nullable>
+    
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
     <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
