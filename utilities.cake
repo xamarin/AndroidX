@@ -214,6 +214,7 @@ Task ("spell-check")
 		        "J2Objc",
 		        "CheckerFramework",
 		        "CheckerQual",
+                "Installreferrer",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
