@@ -549,6 +549,7 @@ System.Xml.XmlDocument xmldoc = null;
 System.Xml.XmlNamespaceManager ns = null;
 
 Task("metadata-verify")
+    .IsDependentOn("binderate")
     .Does
     (
         () =>
