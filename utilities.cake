@@ -6,9 +6,11 @@
 #addin nuget:?package=WeCantSpell.Hunspell&version=3.0.1
 #addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
+#addin nuget:?package=Mono.Cecil&version=0.11.4
 
 using System.Collections.Generic;
 
+using Mono.Cecil;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -835,6 +837,78 @@ Task("dependencies")
         }
     );
 
+Task("generate-namespace-file")
+    .Does
+    (
+        () =>
+        {
+            var list = FindNamespacesInDirectory ("./generated");
+            System.IO.File.WriteAllLines ("published-namespaces.txt", list);        
+        }
+    );
+
+Task("verify-namespace-file")
+    .Does
+    (
+        () =>
+        {
+            var new_list = FindNamespacesInDirectory ("./generated");
+            var old_list = System.IO.File.ReadAllLines ("published-namespaces.txt");
+
+            var unhandled_changes = false;
+
+            var new_ns = new_list.Except (old_list);
+
+            if (new_ns.Any ()) {
+                unhandled_changes = true;
+                Console.WriteLine ("New Namespaces");
+                Console.WriteLine ("--------------");
+
+                foreach (var ns in new_ns)
+                  Console.WriteLine (ns);
+                  
+                Console.WriteLine ();
+            }
+
+            var removed_ns = old_list.Except (new_list);
+
+            if (removed_ns.Any ()) {
+                unhandled_changes = true;
+                Console.WriteLine ("Removed Namespaces");
+                Console.WriteLine ("------------------");
+
+                foreach (var ns in removed_ns)
+                    Console.WriteLine (ns);
+            }
+
+            if (unhandled_changes)
+                throw new Exception ("Namespaces were added or removed.");
+        }
+    );
+
+static List<string> FindNamespacesInDirectory (string directory)
+{
+    var list = new SortedSet<string> ();
+
+    foreach (var file in System.IO.Directory.EnumerateFiles (directory, "*.dll", SearchOption.AllDirectories))
+        foreach (var ns in FindNamespaces (file))
+            list.Add (ns);
+
+	return list.ToList ();
+}
+
+static List<string> FindNamespaces (string assembly)
+{
+    var asm = AssemblyDefinition.ReadAssembly (assembly);
+    var list = new SortedSet<string> ();
+
+    foreach (var module in asm.Modules)
+        foreach (var type in module.Types)
+            if (!string.IsNullOrWhiteSpace (type.Namespace))
+                list.Add (type.Namespace);
+
+    return list.ToList ();
+}
 
 
 Task ("Default")

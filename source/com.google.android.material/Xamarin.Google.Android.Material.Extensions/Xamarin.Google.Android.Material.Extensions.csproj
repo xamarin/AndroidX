@@ -32,14 +32,9 @@
     <Summary>Xamarin.Android bindings for AndroidX - material extensions</Summary>
     <Description>Xamarin.Android bindings for AndroidX - material extensions</Description>
     <PackageTags>Xamarin AndroidX Xamarin.AndroidX Support Google material extensions</PackageTags>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>1.5.0-rc$(PackageVersionSuffix)</PackageVersion>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
