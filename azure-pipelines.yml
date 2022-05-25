@@ -68,6 +68,10 @@ jobs:
             dotnet tool update --global boots --version $(BootsVersion)
             boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
           condition: eq(variables['System.JobName'], 'windows')
+          
+      postBuildSteps:
+        - pwsh: |
+            dotnet cake utilities.cake -t=verify-namespace-file
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
         - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
