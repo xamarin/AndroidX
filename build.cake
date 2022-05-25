@@ -557,6 +557,7 @@ System.Xml.XmlDocument xmldoc = null;
 System.Xml.XmlNamespaceManager ns = null;
 
 Task("metadata-verify")
+    .IsDependentOn("binderate")
     .Does
     (
         () =>
@@ -802,7 +803,7 @@ Task("generate-mapping")
     }
     CopyFileToDirectory("./output/mappings/dependencies.json", "./mappings/");
 
-    // generate the nuget mappings
+    Information("generate the nuget mappings");
     Information("Generating the androidx-assemblies.csv file...");
     var support = "./externals/android.support";
     var supportJson = support + "/config.json";
@@ -810,9 +811,11 @@ Task("generate-mapping")
     if (!FileExists(supportJson))
         DownloadFile(SUPPORT_CONFIG_URL, supportJson);
 
-    // read the newly generated mapping file
+    Information("read the newly generated mapping file");
     var csvReader = new StreamReader("./mappings/androidx-mapping.csv");
     var csv = new CsvReader(csvReader, System.Globalization.CultureInfo.CurrentCulture);
+
+    Information("csv.GetRecords<dynamic>()");
     var records = csv.GetRecords<dynamic>()
         .Cast<IDictionary<string, object>>()
         .Select(r => $"{r["Support .NET assembly"]}|{r["AndroidX .NET assembly"]}")
@@ -837,8 +840,13 @@ Task("generate-mapping")
         "AndroidX NuGet," +
         "AndroidX NuGet Version",
     };
+
+    Information("iterate records");
     foreach (var record in records) {
+        Information($"record.Support    = {record.Support}");
+        Information($"record.AndroidX   = {record.AndroidX}");
         var androidxNuget = GetNuGetId(record.AndroidX);
+        Information($"record.androidxNuget   = {androidxNuget}");
         lines.Add(
             record.Support + "," +
             record.AndroidX + "," +
@@ -849,7 +857,7 @@ Task("generate-mapping")
     FileWriteLines("./output/mappings/androidx-assemblies.csv", lines.ToArray());
     CopyFileToDirectory("./output/mappings/androidx-assemblies.csv", "./mappings/");
 
-    // update the .props
+    Information("update the props");
     Information("Generating the Xamarin.AndroidX.Migration.props file...");
     var propsPath = "./source/migration/BuildTasks/Xamarin.AndroidX.Migration.props";
     var xprops = XDocument.Load(propsPath);
@@ -893,9 +901,36 @@ Task ("merge")
     var allDlls = GetFiles($"./generated/*/bin/Release/monoandroid*/Xamarin.*.dll");
     var mergeDlls = allDlls
         .GroupBy(d => d.GetFilename().FullPath)
-        .Where(g => !g.Key.Contains("Xamarin.AndroidX.Migration"))
+        .Where
+            (
+                g => 
+                    ! g.Key.Contains("Xamarin.AndroidX.Migration") 
+                    && 
+                    ! g.Key.Contains("Xamarin.Google.Guava") 
+                    && 
+                    ! g.Key.Contains("Xamarin.Kotlin") 
+                    && 
+                    ! g.Key.Contains("Xamarin.KotlinX") 
+                    && 
+                    ! g.Key.Contains("Xamarin.Jetbrains") 
+                    && 
+                    ! g.Key.Contains("Xamarin.Android.ReactiveStreams")                     
+                    && 
+                    ! g.Key.Contains("Xamarin.Android.ReactiveX") 
+                    &&                    
+                    ! g.Key.Contains("Xamarin.Google.AutoValue") 
+                    && 
+                    ! g.Key.Contains("Xamarin.Google.Android.Installreferrer") 
+            )
         .Select(g => g.FirstOrDefault())
         .ToList();
+
+    string merged_dlls = string.Join(System.Environment.NewLine, mergeDlls);
+    Information($"---------------------------------------------------------------------------");
+    Information($"Merged Assemblies (dlls):");
+    Information($"{merged_dlls}");
+    Information($"---------------------------------------------------------------------------");
+    System.IO.File.WriteAllText("./output/merged-assemblies-dlls.csv", merged_dlls);
 
     // merge them all
     EnsureDirectoryExists("./output/");
