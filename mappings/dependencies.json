@@ -1582,14 +1582,22 @@
       ]
     },
     {
+      "id": "Xamarin.CheckerFramework.CheckerQual",
+      "dependencies": []
+    },
+    {
+      "id": "Xamarin.Google.Android.Installreferrer",
+      "dependencies": []
+    },
+    {
       "id": "Xamarin.Google.Guava",
       "dependencies": [
         "Xamarin.Google.Guava.FailureAccess",
-        "Xamarin.CheckerFramework.CheckerCompatQual",
+        "Xamarin.Google.J2Objc.Annotations",
+        "Xamarin.CheckerFramework.CheckerQual",
         "Xamarin.Google.Code.FindBugs.JSR305",
         "Xamarin.Google.ErrorProne.Annotations",
-        "Xamarin.Google.Guava.ListenableFuture",
-        "Xamarin.Google.J2Objc.Annotations"
+        "Xamarin.Google.Guava.ListenableFuture"
       ]
     },
     {
@@ -1597,7 +1605,7 @@
       "dependencies": []
     },
     {
-      "id": "Xamarin.CheckerFramework.CheckerCompatQual",
+      "id": "Xamarin.Google.J2Objc.Annotations",
       "dependencies": []
     },
     {
@@ -1606,10 +1614,6 @@
     },
     {
       "id": "Xamarin.Google.ErrorProne.Annotations",
-      "dependencies": []
-    },
-    {
-      "id": "Xamarin.Google.J2Objc.Annotations",
       "dependencies": []
     },
     {
