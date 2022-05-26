@@ -1,17 +1,16 @@
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 Do not translate or localize
 
-Xamarin Components for Guava incorporates 
+Xamarin Components for Kotlinx Coroutines incorporates 
 third party material from the projects listed below. The original copyright 
 notice and the license under which Microsoft received such third party 
 material are set forth below.  Microsoft reserves all other rights not 
 expressly granted, whether by implication, estoppel or otherwise.
 
 ########################################
-# Guava
-# https://github.com/google/guava
+# Kotlin
+# https://github.com/JetBrains/kotlin
 ########################################
-
 
                                  Apache License
                            Version 2.0, January 2004
@@ -200,8 +199,6 @@ expressly granted, whether by implication, estoppel or otherwise.
       file or class name and description of purpose be included on the
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
-
-   Copyright [yyyy] [name of copyright owner]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
