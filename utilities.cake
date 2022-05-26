@@ -760,6 +760,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
     .IsDependentOn ("nuget-structure-analysis")
+    .IsDependentOn ("verify-namespace-file")
     .Does
     (
         () =>
@@ -866,7 +867,13 @@ Task("verify-namespace-file")
             }
 
             if (unhandled_changes)
-                throw new Exception ("Namespaces were added or removed.");
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"Namespaces were added or removed.");
+                sb.AppendLine($"please run:");
+                sb.AppendLine($"    dotnet cake utilities.cake -t=generate-namespace-file");
+                throw new Exception (sb.ToString());
+            }
         }
     );
 
