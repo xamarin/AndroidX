@@ -1,6 +1,4 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.dynamicanimation.animation']" name="managedName">AndroidX.DynamicAnimation.Animation</attr>
-    <attr path="/api/package[@name='androidx.dynamicanimation.animation']" name="managedName">AndroidX.DynamicAnimation</attr>
     <remove-node path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='SpringForce']/implements[@name='androidx.dynamicanimation.animation.Force']" />
     <remove-node path="/api/package[@name='androidx.dynamicanimation.animation']/class[@name='FlingAnimation.DragForce']/implements[@name='androidx.dynamicanimation.animation.Force']" />
     <attr path="/api/package[@name='androidx.dynamicanimation.animation']/interface[@name='DynamicAnimation.OnAnimationEndListener']/method[@name='onAnimationEnd' and count(parameter)=4 and parameter[1][@type='androidx.dynamicanimation.animation.DynamicAnimation'] and parameter[2][@type='boolean'] and parameter[3][@type='float'] and parameter[4][@type='float']]/parameter[1]" name="managedName">animation</attr>

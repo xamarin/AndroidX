@@ -1,4 +1,7 @@
 ﻿<metadata>
+    <!-- Preserve incorrect capitalization of "Customtabs" for backward compatibility -->
+    <attr path="/api/package[@name='android.support.customtabs.trusted']" name="managedName">Android.Support.Customtabs.Trusted</attr>
+    
     <remove-node path="/api/package[@name='androidx.browser.browseractions']/interface[@name='BrowserActionsIntent.BrowserActionsFallDialogListener']" />
     <remove-node path="/api/package[@name='androidx.browser.browseractions']/interface[@name='BrowserActionsFallbackMenuUi.BrowserActionsFallMenuUiListener']" />
     <attr path="/api/package[@name='androidx.browser.customtabs']/class[@name='CustomTabsServiceConnection']/method[@name='onCustomTabsServiceConnected' and count(parameter)=2 and parameter[1][@type='android.content.ComponentName'] and parameter[2][@type='androidx.browser.customtabs.CustomTabsClient']]/parameter[1]" name="managedName">name</attr>
