@@ -1,4 +1,7 @@
 ﻿<metadata>
+    <!-- Mispelling of "Sqlite", preserved for backwards compatibility -->
+    <attr path="/api/package[@name='androidx.core.database.sqlite']" name="managedName">AndroidX.Core.Database.SqlLite</attr>
+    
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getExtras' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='NotificationCompat.Action']/method[@name='getRemoteInputs']" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.core.app']/class[@name='RemoteInput']/method[@name='getAllowFreeFormInput' and count(parameter)=0]" name="visibility">protected</attr>
