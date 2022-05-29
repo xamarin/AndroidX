@@ -19,11 +19,10 @@
   <PropertyGroup>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageLicenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</PackageLicenseUrl>
-
     @foreach (var art in @Model.MavenArtifacts) 
     {
       <PackageId>@Model.NuGetPackageId</PackageId>
@@ -80,7 +79,6 @@
       }
       <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
     }
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
     
   <ItemGroup>

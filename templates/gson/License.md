@@ -1,13 +1,22 @@
-The MIT License (MIT)
+**Xamarin is not responsible for, nor does it grant any licenses to,
+third-party packages. Some packages may require or install dependencies which
+are governed by additional licenses.**
+
+Note: This component depends on [GoogleGson](https://github.com/google/gson), which is subject to
+the [Apache 2.0](https://github.com/google/gson/blob/master/LICENSE).
+
+### Xamarin Component for GoogleGson for Xamarin.Android
+
+**The MIT License (MIT)**
 
 Copyright (c) .NET Foundation Contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.

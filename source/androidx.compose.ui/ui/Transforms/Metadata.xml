@@ -1,4 +1,5 @@
 ﻿<metadata>
+    <remove-node path="/api/package" />
 
     <attr
         path="/api/package[@name='androidx.compose.ui.draw']/class[@name='CacheDrawScope']/method[@name='toSp-0xMU5do' and count(parameter)=1 and parameter[1][@type='float']]"
