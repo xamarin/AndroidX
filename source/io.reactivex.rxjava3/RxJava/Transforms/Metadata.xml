@@ -1,4 +1,12 @@
 ﻿<metadata>
+    <!-- Preserve non-preferred capitalization of "JDK8" for backwards compatibility -->
+    <attr
+        path="/api/package[@name='io.reactivex.rxjava3.internal.jdk8']"
+        name="managedName"
+        >
+        ReactiveX.RxJava3.Internal.JDK8
+    </attr>
+    
     <add-node
         path="/api/package[@name='io.reactivex.rxjava3.internal.observers']/class[@name='BasicFuseableObserver']"
         >

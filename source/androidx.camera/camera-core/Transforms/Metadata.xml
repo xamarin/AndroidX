@@ -1,4 +1,11 @@
 <metadata>
+    <!-- Preserve non-standard namespace remapping -->
+    <attr 
+        path="/api/package[@name='androidx.camera.core.internal.compat']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Core.Internal.Utils
+    </attr>
     
     <attr
         path="/api/package[@name='androidx.camera.core.impl']/class[@name='ImmediateSurface']/method[@name='provideSurface' and count(parameter)=0]"
