@@ -1,0 +1,21 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']/method[@name='removeShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.String&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']/method[@name='removeAllShortcuts' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.sharetarget']/class[@name='ShortcutInfoCompatSaverImpl']/method[@name='addShortcuts' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.core.content.pm.ShortcutInfoCompat&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+</metadata>

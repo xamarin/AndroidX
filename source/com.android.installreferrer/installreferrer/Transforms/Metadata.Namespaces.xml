@@ -1,0 +1,15 @@
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.datastore.core']"
+        name="managedName"
+        >
+        AndroidX.DataStore.Core
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.core.handlers']"
+        name="managedName"
+        >
+        AndroidX.DataStore.Core.Handlers
+    </attr>
+
+</metadata>

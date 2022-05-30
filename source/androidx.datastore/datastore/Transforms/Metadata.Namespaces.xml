@@ -1,0 +1,15 @@
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.datastore']"
+        name="managedName"
+        >
+        AndroidX.DataStore
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.migrations']"
+        name="managedName"
+        >
+        AndroidX.DataStore.Migrations
+    </attr>
+
+</metadata>

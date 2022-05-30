@@ -1,0 +1,41 @@
+<metadata>
+
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromAbsoluteLeft-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CreateGuidelineFromAbsoluteLeftKt
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromAbsoluteRight-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CreateGuidelineFromAbsoluteRightKt
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromBottom-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CreateGuidelineFromBottomKt
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromEnd-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CreateGuidelineFromEndKt
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromStart-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CreateGuidelineFromStartKt
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.constraintlayout.compose']/class[@name='ConstraintLayoutBaseScope']/method[@name='createGuidelineFromTop-0680j_4' and count(parameter)=1 and parameter[1][@type='float']]"
+        name="managedName"
+        >
+        CreateGuidelineFromTopKt
+    </attr>
+
+
+</metadata>

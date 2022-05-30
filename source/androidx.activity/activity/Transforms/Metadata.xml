@@ -338,4 +338,9 @@
         >
         Java.Lang.Object
     </attr>
+
+    <remove-node 
+        path="/api/package[@name='androidx.activity.result']/class[@name='ActivityResultLauncher']/method[@name='getContract' and count(parameter)=0]"
+        />
+
 </metadata>
