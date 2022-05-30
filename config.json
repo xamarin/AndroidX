@@ -1601,6 +1601,15 @@
         "templateSet": "accompanist"
       },
       {
+        "groupId": "org.checkerframework",
+        "artifactId": "checker-qual",
+        "version": "3.12.0",
+        "nugetVersion": "3.12.0",
+        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
+        "dependencyOnly": false,
+        "templateSet": "no-bindings"
+      },
+      {
         "groupId": "org.jetbrains",
         "artifactId": "annotations",
         "version": "23.0.0",
