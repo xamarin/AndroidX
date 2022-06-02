@@ -485,32 +485,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.2.0",
-        "nugetVersion": "7.2.0",
+        "version": "7.2.1",
+        "nugetVersion": "7.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.2.0",
-        "nugetVersion": "7.2.0",
+        "version": "7.2.1",
+        "nugetVersion": "7.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.2.0",
-        "nugetVersion": "7.2.0",
+        "version": "7.2.1",
+        "nugetVersion": "7.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.2.0",
-        "nugetVersion": "7.2.0",
+        "version": "7.2.1",
+        "nugetVersion": "7.2.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -1530,8 +1530,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-android",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1539,8 +1539,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1548,8 +1548,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core-jvm",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1557,8 +1557,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-guava",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Guava",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1566,8 +1566,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-jdk8",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1575,8 +1575,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-reactive",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Reactive",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1584,8 +1584,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-rx2",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1",
+        "version": "1.6.2",
+        "nugetVersion": "1.6.2",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx2",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -1593,8 +1593,8 @@
       {
         "groupId": "org.reactivestreams",
         "artifactId": "reactive-streams",
-        "version": "1.0.3",
-        "nugetVersion": "1.0.3.6",
+        "version": "1.0.4",
+        "nugetVersion": "1.0.4",
         "nugetId": "Xamarin.Android.ReactiveStreams",
         "dependencyOnly": false,
         "templateSet": "reactive-streams"
