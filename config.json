@@ -84,16 +84,16 @@
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1.1",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat-resources",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1.1",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2",
         "nugetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "dependencyOnly": false
       },
@@ -420,8 +420,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0.2",
+        "version": "1.8.0",
+        "nugetVersion": "1.8.0",
         "nugetId": "Xamarin.AndroidX.Core",
         "dependencyOnly": false
       },
@@ -444,8 +444,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core-ktx",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0.2",
+        "version": "1.8.0",
+        "nugetVersion": "1.8.0",
         "nugetId": "Xamarin.AndroidX.Core.Core.Ktx",
         "dependencyOnly": false
       },
@@ -1364,8 +1364,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.6.0",
-        "nugetVersion": "1.6.0",
+        "version": "1.6.1",
+        "nugetVersion": "1.6.1",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
@@ -1445,8 +1445,8 @@
       {
         "groupId": "io.reactivex.rxjava3",
         "artifactId": "rxjava",
-        "version": "3.1.4",
-        "nugetVersion": "3.1.4.1",
+        "version": "3.1.5",
+        "nugetVersion": "3.1.5",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
         "templateSet": "rxjava"
@@ -1454,8 +1454,8 @@
       {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
-        "version": "3.22.0",
-        "nugetVersion": "3.22.0",
+        "version": "3.22.1",
+        "nugetVersion": "3.22.1",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
