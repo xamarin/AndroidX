@@ -1,0 +1,3269 @@
+{
+  "Registrations": [
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "activity",
+          "GroupId": "androidx.activity",
+          "Version": "1.4.0",
+          "NuGetId": "Xamarin.AndroidX.Activity",
+          "NuGetVersion": "1.4.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "activity-ktx",
+          "GroupId": "androidx.activity",
+          "Version": "1.4.0",
+          "NuGetId": "Xamarin.AndroidX.Activity.Ktx",
+          "NuGetVersion": "1.4.0.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ads-identifier",
+          "GroupId": "androidx.ads",
+          "Version": "1.0.0-alpha04",
+          "NuGetId": "Xamarin.AndroidX.Ads.Identifier",
+          "NuGetVersion": "1.0.0.11-alpha04"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ads-identifier-common",
+          "GroupId": "androidx.ads",
+          "Version": "1.0.0-alpha04",
+          "NuGetId": "Xamarin.AndroidX.Ads.IdentifierCommon",
+          "NuGetVersion": "1.0.0.11-alpha04"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ads-identifier-provider",
+          "GroupId": "androidx.ads",
+          "Version": "1.0.0-alpha04",
+          "NuGetId": "Xamarin.AndroidX.Ads.IdentifierProvider",
+          "NuGetVersion": "1.0.0.11-alpha04"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "annotation",
+          "GroupId": "androidx.annotation",
+          "Version": "1.3.0",
+          "NuGetId": "Xamarin.AndroidX.Annotation",
+          "NuGetVersion": "1.3.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "annotation-experimental",
+          "GroupId": "androidx.annotation",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.Annotation.Experimental",
+          "NuGetVersion": "1.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "appcompat",
+          "GroupId": "androidx.appcompat",
+          "Version": "1.4.2",
+          "NuGetId": "Xamarin.AndroidX.AppCompat",
+          "NuGetVersion": "1.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "appcompat-resources",
+          "GroupId": "androidx.appcompat",
+          "Version": "1.4.2",
+          "NuGetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
+          "NuGetVersion": "1.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-common",
+          "GroupId": "androidx.arch.core",
+          "Version": "2.1.0",
+          "NuGetId": "Xamarin.AndroidX.Arch.Core.Common",
+          "NuGetVersion": "2.1.0.14"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-runtime",
+          "GroupId": "androidx.arch.core",
+          "Version": "2.1.0",
+          "NuGetId": "Xamarin.AndroidX.Arch.Core.Runtime",
+          "NuGetVersion": "2.1.0.14"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "asynclayoutinflater",
+          "GroupId": "androidx.asynclayoutinflater",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.AsyncLayoutInflater",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "autofill",
+          "GroupId": "androidx.autofill",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.AutoFill",
+          "NuGetVersion": "1.1.0.12"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "biometric",
+          "GroupId": "androidx.biometric",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Biometric",
+          "NuGetVersion": "1.1.0.9"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "browser",
+          "GroupId": "androidx.browser",
+          "Version": "1.4.0",
+          "NuGetId": "Xamarin.AndroidX.Browser",
+          "NuGetVersion": "1.4.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "camera-camera2",
+          "GroupId": "androidx.camera",
+          "Version": "1.0.2",
+          "NuGetId": "Xamarin.AndroidX.Camera.Camera2",
+          "NuGetVersion": "1.0.2.4"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "camera-core",
+          "GroupId": "androidx.camera",
+          "Version": "1.0.2",
+          "NuGetId": "Xamarin.AndroidX.Camera.Core",
+          "NuGetVersion": "1.0.2.4"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "camera-lifecycle",
+          "GroupId": "androidx.camera",
+          "Version": "1.0.2",
+          "NuGetId": "Xamarin.AndroidX.Camera.Lifecycle",
+          "NuGetVersion": "1.0.2.4"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "car",
+          "GroupId": "androidx.car",
+          "Version": "1.0.0-alpha7",
+          "NuGetId": "Xamarin.AndroidX.Car.Car",
+          "NuGetVersion": "1.0.0.11-alpha7"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "car-cluster",
+          "GroupId": "androidx.car",
+          "Version": "1.0.0-alpha5",
+          "NuGetId": "Xamarin.AndroidX.Car.Cluster",
+          "NuGetVersion": "1.0.0.11-alpha5"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "app",
+          "GroupId": "androidx.car.app",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Car.App.App",
+          "NuGetVersion": "1.1.0.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "cardview",
+          "GroupId": "androidx.cardview",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.CardView",
+          "NuGetVersion": "1.0.0.15"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "collection",
+          "GroupId": "androidx.collection",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.Collection",
+          "NuGetVersion": "1.2.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "collection-ktx",
+          "GroupId": "androidx.collection",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.Collection.Ktx",
+          "NuGetVersion": "1.2.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "animation",
+          "GroupId": "androidx.compose.animation",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Animation",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "animation-core",
+          "GroupId": "androidx.compose.animation",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Animation.Core",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "foundation",
+          "GroupId": "androidx.compose.foundation",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Foundation",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "foundation-layout",
+          "GroupId": "androidx.compose.foundation",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Foundation.Layout",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "material",
+          "GroupId": "androidx.compose.material",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Material",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "material-icons-core",
+          "GroupId": "androidx.compose.material",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Material.Icons.Core",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "material-icons-extended",
+          "GroupId": "androidx.compose.material",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Material.Icons.Extended",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "material-ripple",
+          "GroupId": "androidx.compose.material",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Material.Ripple",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "runtime",
+          "GroupId": "androidx.compose.runtime",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Runtime",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "runtime-livedata",
+          "GroupId": "androidx.compose.runtime",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Runtime.LiveData",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "runtime-rxjava2",
+          "GroupId": "androidx.compose.runtime",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Runtime.RxJava2",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "runtime-saveable",
+          "GroupId": "androidx.compose.runtime",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.Runtime.Saveable",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui-geometry",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI.Geometry",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui-graphics",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI.Graphics",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui-text",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI.Text",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui-unit",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI.Unit",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui-util",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI.Util",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "ui-viewbinding",
+          "GroupId": "androidx.compose.ui",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Compose.UI.ViewBinding",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "concurrent-futures",
+          "GroupId": "androidx.concurrent",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Concurrent.Futures",
+          "NuGetVersion": "1.1.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "constraintlayout",
+          "GroupId": "androidx.constraintlayout",
+          "Version": "2.1.4",
+          "NuGetId": "Xamarin.AndroidX.ConstraintLayout",
+          "NuGetVersion": "2.1.4"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "constraintlayout-core",
+          "GroupId": "androidx.constraintlayout",
+          "Version": "1.0.4",
+          "NuGetId": "Xamarin.AndroidX.ConstraintLayout.Core",
+          "NuGetVersion": "1.0.4"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "constraintlayout-solver",
+          "GroupId": "androidx.constraintlayout",
+          "Version": "2.0.4",
+          "NuGetId": "Xamarin.AndroidX.ConstraintLayout.Solver",
+          "NuGetVersion": "2.0.4.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "contentpager",
+          "GroupId": "androidx.contentpager",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.ContentPager",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "coordinatorlayout",
+          "GroupId": "androidx.coordinatorlayout",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.CoordinatorLayout",
+          "NuGetVersion": "1.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core",
+          "GroupId": "androidx.core",
+          "Version": "1.8.0",
+          "NuGetId": "Xamarin.AndroidX.Core",
+          "NuGetVersion": "1.8.0"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-animation",
+          "GroupId": "androidx.core",
+          "Version": "1.0.0-alpha02",
+          "NuGetId": "Xamarin.AndroidX.Core.Animation",
+          "NuGetVersion": "1.0.0.11-alpha02"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-google-shortcuts",
+          "GroupId": "androidx.core",
+          "Version": "1.0.1",
+          "NuGetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
+          "NuGetVersion": "1.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-ktx",
+          "GroupId": "androidx.core",
+          "Version": "1.8.0",
+          "NuGetId": "Xamarin.AndroidX.Core.Core.Ktx",
+          "NuGetVersion": "1.8.0"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-role",
+          "GroupId": "androidx.core",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Core.Role",
+          "NuGetVersion": "1.0.0.11"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "core-splashscreen",
+          "GroupId": "androidx.core",
+          "Version": "1.0.0-rc01",
+          "NuGetId": "Xamarin.AndroidX.Core.SplashScreen",
+          "NuGetVersion": "1.0.0-rc01"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "cursoradapter",
+          "GroupId": "androidx.cursoradapter",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.CursorAdapter",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "customview",
+          "GroupId": "androidx.customview",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.CustomView",
+          "NuGetVersion": "1.1.0.12"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "databinding-adapters",
+          "GroupId": "androidx.databinding",
+          "Version": "7.2.1",
+          "NuGetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
+          "NuGetVersion": "7.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "databinding-common",
+          "GroupId": "androidx.databinding",
+          "Version": "7.2.1",
+          "NuGetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+          "NuGetVersion": "7.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "databinding-runtime",
+          "GroupId": "androidx.databinding",
+          "Version": "7.2.1",
+          "NuGetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
+          "NuGetVersion": "7.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "viewbinding",
+          "GroupId": "androidx.databinding",
+          "Version": "7.2.1",
+          "NuGetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
+          "NuGetVersion": "7.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "documentfile",
+          "GroupId": "androidx.documentfile",
+          "Version": "1.0.1",
+          "NuGetId": "Xamarin.AndroidX.DocumentFile",
+          "NuGetVersion": "1.0.1.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "drawerlayout",
+          "GroupId": "androidx.drawerlayout",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.DrawerLayout",
+          "NuGetVersion": "1.1.1.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "dynamicanimation",
+          "GroupId": "androidx.dynamicanimation",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.DynamicAnimation",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "emoji",
+          "GroupId": "androidx.emoji",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Emoji",
+          "NuGetVersion": "1.1.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "emoji-appcompat",
+          "GroupId": "androidx.emoji",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Emoji.AppCompat",
+          "NuGetVersion": "1.1.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "emoji-bundled",
+          "GroupId": "androidx.emoji",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Emoji.Bundled",
+          "NuGetVersion": "1.1.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "emoji2",
+          "GroupId": "androidx.emoji2",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Emoji2",
+          "NuGetVersion": "1.1.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "emoji2-views-helper",
+          "GroupId": "androidx.emoji2",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Emoji2.ViewsHelper",
+          "NuGetVersion": "1.1.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "exifinterface",
+          "GroupId": "androidx.exifinterface",
+          "Version": "1.3.3",
+          "NuGetId": "Xamarin.AndroidX.ExifInterface",
+          "NuGetVersion": "1.3.3.5"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "fragment",
+          "GroupId": "androidx.fragment",
+          "Version": "1.4.1",
+          "NuGetId": "Xamarin.AndroidX.Fragment",
+          "NuGetVersion": "1.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "fragment-ktx",
+          "GroupId": "androidx.fragment",
+          "Version": "1.4.1",
+          "NuGetId": "Xamarin.AndroidX.Fragment.Ktx",
+          "NuGetVersion": "1.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "gridlayout",
+          "GroupId": "androidx.gridlayout",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.GridLayout",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "heifwriter",
+          "GroupId": "androidx.heifwriter",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.HeifWriter",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "interpolator",
+          "GroupId": "androidx.interpolator",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Interpolator",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "leanback",
+          "GroupId": "androidx.leanback",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Leanback",
+          "NuGetVersion": "1.0.0.15"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "leanback-preference",
+          "GroupId": "androidx.leanback",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Leanback.Preference",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "legacy-preference-v14",
+          "GroupId": "androidx.legacy",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Legacy.Preference.V14",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "legacy-support-core-ui",
+          "GroupId": "androidx.legacy",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",
+          "NuGetVersion": "1.0.0.14"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "legacy-support-core-utils",
+          "GroupId": "androidx.legacy",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "legacy-support-v13",
+          "GroupId": "androidx.legacy",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Legacy.Support.V13",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "legacy-support-v4",
+          "GroupId": "androidx.legacy",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Legacy.Support.V4",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-common",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Common",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-common-java8",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-extensions",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.2.0",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Extensions",
+          "NuGetVersion": "2.2.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-livedata",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-livedata-core",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-livedata-core-ktx",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-livedata-ktx",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-process",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Process",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-reactivestreams",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-reactivestreams-ktx",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-runtime",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Runtime",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-runtime-ktx",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-service",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.Service",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-viewmodel",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-viewmodel-ktx",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "lifecycle-viewmodel-savedstate",
+          "GroupId": "androidx.lifecycle",
+          "Version": "2.4.1",
+          "NuGetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
+          "NuGetVersion": "2.4.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "loader",
+          "GroupId": "androidx.loader",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Loader",
+          "NuGetVersion": "1.1.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "localbroadcastmanager",
+          "GroupId": "androidx.localbroadcastmanager",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.LocalBroadcastManager",
+          "NuGetVersion": "1.1.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "media",
+          "GroupId": "androidx.media",
+          "Version": "1.6.0",
+          "NuGetId": "Xamarin.AndroidX.Media",
+          "NuGetVersion": "1.6.0"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "media2-common",
+          "GroupId": "androidx.media2",
+          "Version": "1.2.1",
+          "NuGetId": "Xamarin.AndroidX.Media2.Common",
+          "NuGetVersion": "1.2.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "media2-session",
+          "GroupId": "androidx.media2",
+          "Version": "1.2.1",
+          "NuGetId": "Xamarin.AndroidX.Media2.Session",
+          "NuGetVersion": "1.2.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "media2-widget",
+          "GroupId": "androidx.media2",
+          "Version": "1.2.1",
+          "NuGetId": "Xamarin.AndroidX.Media2.Widget",
+          "NuGetVersion": "1.2.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "mediarouter",
+          "GroupId": "androidx.mediarouter",
+          "Version": "1.3.0",
+          "NuGetId": "Xamarin.AndroidX.MediaRouter",
+          "NuGetVersion": "1.3.0"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "multidex",
+          "GroupId": "androidx.multidex",
+          "Version": "2.0.1",
+          "NuGetId": "Xamarin.AndroidX.MultiDex",
+          "NuGetVersion": "2.0.1.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-common",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.Common",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-common-ktx",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-fragment",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.Fragment",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-fragment-ktx",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-runtime",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.Runtime",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-runtime-ktx",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-ui",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.UI",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "navigation-ui-ktx",
+          "GroupId": "androidx.navigation",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
+          "NuGetVersion": "2.4.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "paging-common",
+          "GroupId": "androidx.paging",
+          "Version": "3.1.1",
+          "NuGetId": "Xamarin.AndroidX.Paging.Common",
+          "NuGetVersion": "3.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "paging-common-ktx",
+          "GroupId": "androidx.paging",
+          "Version": "3.1.1",
+          "NuGetId": "Xamarin.AndroidX.Paging.Common.Ktx",
+          "NuGetVersion": "3.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "paging-runtime",
+          "GroupId": "androidx.paging",
+          "Version": "3.1.1",
+          "NuGetId": "Xamarin.AndroidX.Paging.Runtime",
+          "NuGetVersion": "3.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "paging-runtime-ktx",
+          "GroupId": "androidx.paging",
+          "Version": "3.1.1",
+          "NuGetId": "Xamarin.AndroidX.Paging.Runtime.Ktx",
+          "NuGetVersion": "3.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "paging-rxjava2",
+          "GroupId": "androidx.paging",
+          "Version": "3.1.1",
+          "NuGetId": "Xamarin.AndroidX.Paging.RxJava2",
+          "NuGetVersion": "3.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "paging-rxjava2-ktx",
+          "GroupId": "androidx.paging",
+          "Version": "3.1.1",
+          "NuGetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
+          "NuGetVersion": "3.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "palette",
+          "GroupId": "androidx.palette",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Palette",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "palette-ktx",
+          "GroupId": "androidx.palette",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Palette.Palette.Ktx",
+          "NuGetVersion": "1.0.0.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "percentlayout",
+          "GroupId": "androidx.percentlayout",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.PercentLayout",
+          "NuGetVersion": "1.0.0.14"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "preference",
+          "GroupId": "androidx.preference",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.Preference",
+          "NuGetVersion": "1.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "preference-ktx",
+          "GroupId": "androidx.preference",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.Preference.Preference.Ktx",
+          "NuGetVersion": "1.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "print",
+          "GroupId": "androidx.print",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Print",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "profileinstaller",
+          "GroupId": "androidx.profileinstaller",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.ProfileInstaller.ProfileInstaller",
+          "NuGetVersion": "1.1.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "recommendation",
+          "GroupId": "androidx.recommendation",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Recommendation",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "recyclerview",
+          "GroupId": "androidx.recyclerview",
+          "Version": "1.2.1",
+          "NuGetId": "Xamarin.AndroidX.RecyclerView",
+          "NuGetVersion": "1.2.1.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "recyclerview-selection",
+          "GroupId": "androidx.recyclerview",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.RecyclerView.Selection",
+          "NuGetVersion": "1.1.0.7"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "resourceinspection-annotation",
+          "GroupId": "androidx.resourceinspection",
+          "Version": "1.0.1",
+          "NuGetId": "Xamarin.AndroidX.ResourceInspection.Annotation",
+          "NuGetVersion": "1.0.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "room-common",
+          "GroupId": "androidx.room",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Room.Common",
+          "NuGetVersion": "2.4.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "room-guava",
+          "GroupId": "androidx.room",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Room.Guava",
+          "NuGetVersion": "2.4.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "room-ktx",
+          "GroupId": "androidx.room",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Room.Room.Ktx",
+          "NuGetVersion": "2.4.2.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "room-runtime",
+          "GroupId": "androidx.room",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Room.Runtime",
+          "NuGetVersion": "2.4.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "room-rxjava2",
+          "GroupId": "androidx.room",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Room.Room.RxJava2",
+          "NuGetVersion": "2.4.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "room-rxjava3",
+          "GroupId": "androidx.room",
+          "Version": "2.4.2",
+          "NuGetId": "Xamarin.AndroidX.Room.Room.RxJava3",
+          "NuGetVersion": "2.4.2.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "savedstate",
+          "GroupId": "androidx.savedstate",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.SavedState",
+          "NuGetVersion": "1.1.0.7"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "savedstate-ktx",
+          "GroupId": "androidx.savedstate",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.SavedState.SavedState.Ktx",
+          "NuGetVersion": "1.1.0.7"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "security-crypto",
+          "GroupId": "androidx.security",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Security.SecurityCrypto",
+          "NuGetVersion": "1.0.0.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "slice-builders",
+          "GroupId": "androidx.slice",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Slice.Builders",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "slice-core",
+          "GroupId": "androidx.slice",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Slice.Core",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "slice-view",
+          "GroupId": "androidx.slice",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Slice.View",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "slidingpanelayout",
+          "GroupId": "androidx.slidingpanelayout",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.SlidingPaneLayout",
+          "NuGetVersion": "1.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "sqlite",
+          "GroupId": "androidx.sqlite",
+          "Version": "2.2.0",
+          "NuGetId": "Xamarin.AndroidX.Sqlite",
+          "NuGetVersion": "2.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "sqlite-framework",
+          "GroupId": "androidx.sqlite",
+          "Version": "2.2.0",
+          "NuGetId": "Xamarin.AndroidX.Sqlite.Framework",
+          "NuGetVersion": "2.2.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "startup-runtime",
+          "GroupId": "androidx.startup",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.Startup.StartupRuntime",
+          "NuGetVersion": "1.1.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "swiperefreshlayout",
+          "GroupId": "androidx.swiperefreshlayout",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.SwipeRefreshLayout",
+          "NuGetVersion": "1.1.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "tracing",
+          "GroupId": "androidx.tracing",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Tracing.Tracing",
+          "NuGetVersion": "1.1.0"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "transition",
+          "GroupId": "androidx.transition",
+          "Version": "1.4.1",
+          "NuGetId": "Xamarin.AndroidX.Transition",
+          "NuGetVersion": "1.4.1.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "tvprovider",
+          "GroupId": "androidx.tvprovider",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.TvProvider",
+          "NuGetVersion": "1.0.0.15"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "vectordrawable",
+          "GroupId": "androidx.vectordrawable",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.VectorDrawable",
+          "NuGetVersion": "1.1.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "vectordrawable-animated",
+          "GroupId": "androidx.vectordrawable",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.VectorDrawable.Animated",
+          "NuGetVersion": "1.1.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "versionedparcelable",
+          "GroupId": "androidx.versionedparcelable",
+          "Version": "1.1.1",
+          "NuGetId": "Xamarin.AndroidX.VersionedParcelable",
+          "NuGetVersion": "1.1.1.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "viewpager",
+          "GroupId": "androidx.viewpager",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.ViewPager",
+          "NuGetVersion": "1.0.0.13"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "viewpager2",
+          "GroupId": "androidx.viewpager2",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.ViewPager2",
+          "NuGetVersion": "1.0.0.15"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "wear",
+          "GroupId": "androidx.wear",
+          "Version": "1.2.0",
+          "NuGetId": "Xamarin.AndroidX.Wear",
+          "NuGetVersion": "1.2.0.5"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "wear-input",
+          "GroupId": "androidx.wear",
+          "Version": "1.1.0",
+          "NuGetId": "Xamarin.AndroidX.Wear.Input",
+          "NuGetVersion": "1.0.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "wear-ongoing",
+          "GroupId": "androidx.wear",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Wear.Ongoing",
+          "NuGetVersion": "1.0.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "wear-phone-interactions",
+          "GroupId": "androidx.wear",
+          "Version": "1.0.1",
+          "NuGetId": "Xamarin.AndroidX.Wear.PhoneInteractions",
+          "NuGetVersion": "1.0.1.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "wear-remote-interactions",
+          "GroupId": "androidx.wear",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Wear.RemoteInteractions",
+          "NuGetVersion": "1.0.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "webkit",
+          "GroupId": "androidx.webkit",
+          "Version": "1.4.0",
+          "NuGetId": "Xamarin.AndroidX.WebKit",
+          "NuGetVersion": "1.4.0.7"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "window",
+          "GroupId": "androidx.window",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Window",
+          "NuGetVersion": "1.0.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "window-extensions",
+          "GroupId": "androidx.window",
+          "Version": "1.0.0-alpha01",
+          "NuGetId": "Xamarin.AndroidX.Window.WindowExtensions",
+          "NuGetVersion": "1.0.0.8-alpha01"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "window-java",
+          "GroupId": "androidx.window",
+          "Version": "1.0.0",
+          "NuGetId": "Xamarin.AndroidX.Window.WindowJava",
+          "NuGetVersion": "1.0.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "work-runtime",
+          "GroupId": "androidx.work",
+          "Version": "2.7.1",
+          "NuGetId": "Xamarin.AndroidX.Work.Runtime",
+          "NuGetVersion": "2.7.1.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "work-runtime-ktx",
+          "GroupId": "androidx.work",
+          "Version": "2.7.1",
+          "NuGetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
+          "NuGetVersion": "2.7.1.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "material",
+          "GroupId": "com.google.android.material",
+          "Version": "1.6.1",
+          "NuGetId": "Xamarin.Google.Android.Material",
+          "NuGetVersion": "1.6.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "auto-value-annotations",
+          "GroupId": "com.google.auto.value",
+          "Version": "1.9",
+          "NuGetId": "Xamarin.Google.AutoValue.Annotations",
+          "NuGetVersion": "1.9.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "gson",
+          "GroupId": "com.google.code.gson",
+          "Version": "2.9.0",
+          "NuGetId": "GoogleGson",
+          "NuGetVersion": "2.9.0.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "tink-android",
+          "GroupId": "com.google.crypto.tink",
+          "Version": "1.6.1",
+          "NuGetId": "Xamarin.Google.Crypto.Tink.Android",
+          "NuGetVersion": "1.6.1.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "failureaccess",
+          "GroupId": "com.google.guava",
+          "Version": "1.0.1",
+          "NuGetId": "Xamarin.Google.Guava.FailureAccess",
+          "NuGetVersion": "1.0.1.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "guava",
+          "GroupId": "com.google.guava",
+          "Version": "31.1-android",
+          "NuGetId": "Xamarin.Google.Guava",
+          "NuGetVersion": "31.1.0.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "listenablefuture",
+          "GroupId": "com.google.guava",
+          "Version": "1.0",
+          "NuGetId": "Xamarin.Google.Guava.ListenableFuture",
+          "NuGetVersion": "1.0.0.8"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "j2objc-annotations",
+          "GroupId": "com.google.j2objc",
+          "Version": "1.3",
+          "NuGetId": "Xamarin.Google.J2Objc.Annotations",
+          "NuGetVersion": "1.3.0"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "rxjava",
+          "GroupId": "io.reactivex.rxjava2",
+          "Version": "2.2.21",
+          "NuGetId": "Xamarin.Android.ReactiveX.RxJava",
+          "NuGetVersion": "2.2.21.6"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "rxjava",
+          "GroupId": "io.reactivex.rxjava3",
+          "Version": "3.1.5",
+          "NuGetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+          "NuGetVersion": "3.1.5"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "checker-qual",
+          "GroupId": "org.checkerframework",
+          "Version": "3.22.1",
+          "NuGetId": "Xamarin.CheckerFramework.CheckerQual",
+          "NuGetVersion": "3.22.1"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "annotations",
+          "GroupId": "org.jetbrains",
+          "Version": "23.0.0",
+          "NuGetId": "Xamarin.Jetbrains.Annotations",
+          "NuGetVersion": "23.0.0.3"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlin-reflect",
+          "GroupId": "org.jetbrains.kotlin",
+          "Version": "1.6.21",
+          "NuGetId": "Xamarin.Kotlin.Reflect",
+          "NuGetVersion": "1.6.21"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlin-stdlib",
+          "GroupId": "org.jetbrains.kotlin",
+          "Version": "1.6.21",
+          "NuGetId": "Xamarin.Kotlin.StdLib",
+          "NuGetVersion": "1.6.21"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlin-stdlib-common",
+          "GroupId": "org.jetbrains.kotlin",
+          "Version": "1.6.21",
+          "NuGetId": "Xamarin.Kotlin.StdLib.Common",
+          "NuGetVersion": "1.6.21"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlin-stdlib-jdk7",
+          "GroupId": "org.jetbrains.kotlin",
+          "Version": "1.6.21",
+          "NuGetId": "Xamarin.Kotlin.StdLib.Jdk7",
+          "NuGetVersion": "1.6.21"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlin-stdlib-jdk8",
+          "GroupId": "org.jetbrains.kotlin",
+          "Version": "1.6.21",
+          "NuGetId": "Xamarin.Kotlin.StdLib.Jdk8",
+          "NuGetVersion": "1.6.21"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-android",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Android",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-core",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Core",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-core-jvm",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-guava",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Guava",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-jdk8",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Jdk8",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-reactive",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Reactive",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "kotlinx-coroutines-rx2",
+          "GroupId": "org.jetbrains.kotlinx",
+          "Version": "1.6.2",
+          "NuGetId": "Xamarin.KotlinX.Coroutines.Rx2",
+          "NuGetVersion": "1.6.2"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    },
+    {
+      "Component": {
+        "Type": "Maven",
+        "Maven": {
+          "ArtifactId": "reactive-streams",
+          "GroupId": "org.reactivestreams",
+          "Version": "1.0.4",
+          "NuGetId": "Xamarin.Android.ReactiveStreams",
+          "NuGetVersion": "1.0.4"
+        }
+      },
+      "License": "MIT",
+      "Description": "AndroidX and dependencies",
+      "LicenseDetail": [
+        "MIT by Microsoft, other by Google and other 3rd party"
+      ]
+    }
+  ],
+  "Version": 1
+}
