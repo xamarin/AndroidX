@@ -282,4 +282,79 @@
     ushort
   </attr>
 
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowFloat
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowFloat
+  </attr>
+
+
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowFloat
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowFloat
+  </attr>
+
+  <remove-node 
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic']/implements"
+    />
+
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedName"
+      >
+      ElapsedNow
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='minus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedName"
+      >
+      Minus
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='plus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedName"
+      >
+      Plus
+    </attr>
+
+
 </metadata>
