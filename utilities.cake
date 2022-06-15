@@ -758,7 +758,8 @@ Task ("read-analysis-files")
     .IsDependentOn ("spell-check")
     .IsDependentOn ("api-diff-analysis")
     .IsDependentOn ("list-artifacts")
-    .IsDependentOn ("nuget-structure-analysis")
+    //.IsDependentOn ("nuget-structure-analysis")
+    .IsDependentOn ("generate-namespace-file")
     .Does
     (
         () =>
