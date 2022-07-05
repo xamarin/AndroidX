@@ -282,4 +282,138 @@
     ushort
   </attr>
 
+
+
+
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowOfFloat
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowOfDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowOfFloat
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowOfDouble
+  </attr>
+
+
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowOfFloat
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowOfDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Float&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowOfFloat
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.sequences']/class[@name='SequencesKt___SequencesKt']/method[@name='maxOrThrow' and count(parameter)=1 and parameter[1][@type='kotlin.sequences.Sequence&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MaxOrThrowOfDouble
+  </attr>
+
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[starts-with(@name, 'plus')]"
+    name="managedName"
+    >
+    Plus
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeMark.DefaultImpls']/method[@name='plus-LRDsOJo' and count(parameter)=2 and parameter[1][@type='kotlin.time.TimeMark'] and parameter[2][@type='long']]"
+    name="managedName"
+    >
+    Plus
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeMark.DefaultImpls']/method[@name='minus-LRDsOJo' and count(parameter)=2 and parameter[1][@type='kotlin.time.TimeMark'] and parameter[2][@type='long']]"
+    name="managedName"
+    >
+    Minus
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[starts-with(@name, 'minus')]"
+    name="managedName"
+    >
+    Minus
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic']/method[starts-with(@name, 'markNow')]"
+    name="managedName"
+    >
+    MarkNow
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[starts-with(@name, 'elapsedNow')]"
+    name="managedName"
+    >
+    ElapsedNow
+  </attr>
+
+  <!--
+  -->
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='plus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="return"
+    >
+    Kotlin.Time.ITimeMark
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/interface[@name='TimeMark']/method[@name='plus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="managedReturn"
+    >
+    Kotlin.Time.ITimeMark
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='minus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="return"
+    >
+    kotlin.time.TimeMark
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/interface[@name='TimeMark']/method[@name='minus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="managedReturn"
+    >
+    Kotlin.Time.ITimeMark
+  </attr>
+
+  <attr
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic']/method[@name='markNow-z9LOYto' and count(parameter)=0]"
+    name="return"
+    >
+    kotlin.time.TimeMark
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.time']/interface[@name='TimeSource']/method[@name='markNow' and count(parameter)=0]"
+    name="return"
+    >
+    kotlin.time.TimeMark
+  </attr>
+
+
+
+  
 </metadata>
