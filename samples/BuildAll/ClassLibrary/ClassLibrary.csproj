@@ -54,20 +54,20 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Google.Guava">
-      <Version>29.0.0</Version>
+      <Version>31.1.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Guava.FailureAccess">
-      <Version>1.0.1.4</Version>
+      <Version>1.0.1.7</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Guava.ListenableFuture">
-      <Version>1.0.0.4</Version>
+      <Version>9999.0.0</Version>
     </PackageReference>
     <!--
     ./samples/BuildAll/ClassLibrary/obj/Debug/lp/167/jl/res/values/values.xml(0,0):
     Error APT2260: resource android:attr/lStar not found. (APT2260) (ClassLibrary)
     -->
     <PackageReference Include="Xamarin.AndroidX.Core">
-      <Version>1.6.0.3</Version>
+      <Version>1.8.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="..\..\..\output\AllPackages.targets" />
