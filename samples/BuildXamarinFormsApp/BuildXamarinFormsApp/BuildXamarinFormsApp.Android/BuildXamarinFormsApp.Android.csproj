@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -88,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BuildXamarinFormsApp\BuildXamarinFormsApp.csproj">
-      <Project>{9147554D-1842-47FE-B9F5-ABF8414B0676}</Project>
+      <Project>{0762E7E2-F0CE-4390-915F-26B9B8A40B59}</Project>
       <Name>BuildXamarinFormsApp</Name>
     </ProjectReference>
   </ItemGroup>
