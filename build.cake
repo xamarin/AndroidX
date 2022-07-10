@@ -688,7 +688,7 @@ Task("samples-generate-all-targets")
     // make a big .targets file that pulls in everything
     var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
     var itemGroup = new XElement(xmlns + "ItemGroup");
-    foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+    foreach (var nupkg in GetFiles("./output/*.nupkg").OrderBy(fp => fp.FullPath)) {
         Information($"NuGet package = {nupkg}");
 
         // Skip Wear as it has special implications requiring more packages to be used properly in an app
@@ -703,7 +703,7 @@ Task("samples-generate-all-targets")
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-        itemGroup.Add(new XElement(xmlns + "PackageReference",
+        itemGroup.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
 
@@ -724,11 +724,11 @@ Task("samples")
     CleanDirectories(packagesPath);
 
     // build the samples
-    var settings = new MSBuildSettings()
+    MSBuildSettings settings_msbuild = new MSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetVerbosity(VERBOSITY)
         .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.binlog")
+        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog")
         .WithRestore()
         .WithProperty("RestorePackagesPath", packagesPath)
         .WithProperty("DesignTimeBuild", "false")
@@ -741,6 +741,14 @@ Task("samples")
         settings.ToolPath = MSBUILD_PATH;
 
     MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+    MSBuild("./samples/BuildAll/dotnet/BuildAllDotNet.sln", settings);
+
+    DotNetBuildSettings settings_dotnet = new DotNetBuildSettings()
+    {
+
+    };
+    DotNetBuild("./samples/BuildAll/BuildAll.sln", settings);
+    DotNetBuild("./samples/BuildAll/BuildAll.sln", settings);
 });
 
 Task("api-diff")
