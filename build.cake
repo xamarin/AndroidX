@@ -628,7 +628,7 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    var settings = new DotNetMSBuildSettings()
+    DotNetMSBuildSettings settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
@@ -735,20 +735,37 @@ Task("samples")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings_msbuild.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings.ToolPath = MSBUILD_PATH;
+        settings_msbuild.ToolPath = MSBUILD_PATH;
 
-    MSBuild("./samples/BuildAll/BuildAll.sln", settings);
-    MSBuild("./samples/BuildAll/dotnet/BuildAllDotNet.sln", settings);
+    Information($"{new string ('=', 160)}");
+    Information("MSBuild    ./samples/BuildAll/BuildAll.sln");
+    MSBuild("./samples/BuildAll/BuildAll.sln", settings_msbuild);
+    // Information($"{new string ('=', 160)}");
+    // Information("MSBuild    ./samples/dotnet/BuildAllDotNet.sln");
+    // MSBuild("./samples/dotnet/BuildAllDotNet.sln", settings_msbuild);
 
-    DotNetBuildSettings settings_dotnet = new DotNetBuildSettings()
+    DotNetCoreBuildSettings settings_dotnet = new DotNetCoreBuildSettings()
     {
-
+        Configuration = CONFIGURATION,
     };
-    DotNetBuild("./samples/BuildAll/BuildAll.sln", settings);
-    DotNetBuild("./samples/BuildAll/BuildAll.sln", settings);
+    // Information($"{new string ('=', 160)}");
+    // Information("DotNetBuild    ./samples/BuildAll/BuildAll.sln");
+    // DotNetBuild("./samples/BuildAll/BuildAll.sln", settings_dotnet);
+    Information($"{new string ('=', 160)}");
+    Information("DotNetBuild    ./samples/BuildAll/dotnet/BuildAllDotNet.sln");
+    DotNetBuild("./samples/dotnet/BuildAllDotNet.sln", settings_dotnet);
+    Information($"{new string ('=', 160)}");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllDotNet.sln");
+    DotNetBuild("./samples/dotnet/BuildAllDotNet.sln", settings_dotnet);
+    Information($"{new string ('=', 160)}");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllMauiApp.sln");
+    DotNetBuild("./samples/dotnet/BuildAllMauiApp.sln", settings_dotnet);
+    Information($"{new string ('=', 160)}");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+    DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
 });
 
 Task("api-diff")
