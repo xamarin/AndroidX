@@ -33,19 +33,9 @@
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>@(friendlyName) for Xamarin.Android</Title>
     <PackageDescription>Xamarin.Android binding for @(friendlyName)</PackageDescription>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2084008</PackageProjectUrl>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT AND MIT-0</PackageLicenseExpression>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
   </PropertyGroup>
-
-  <!--
-    PR    https://github.com/xamarin/AndroidX/pull/373
-    XC    https://github.com/xamarin/XamarinComponents/tree/main/Android/ReactiveStreams/source/
-  -->
   
   <ItemGroup>
     <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />

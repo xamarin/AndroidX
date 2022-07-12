@@ -1,9 +1,4 @@
 ﻿<metadata>
-    <attr path="/api/package[@name='androidx.room']" name="managedName">AndroidX.Room</attr>
-    <attr path="/api/package[@name='androidx.room.migration']" name="managedName">AndroidX.Room.Migration</attr>
-    <attr path="/api/package[@name='androidx.room.paging']" name="managedName">AndroidX.Room.Paging</attr>
-    <attr path="/api/package[@name='androidx.room.util']" name="managedName">AndroidX.Room.Util</attr>
-
     <remove-node path="/api/package[@name='androidx.room']/class[@name='EntityDeletionOrUpdateAdapter']/method[@name='createQuery' and count(parameter)=0]" />
 
     <remove-node path="/api/package[@name='androidx.room.util']/class[@name='TableInfo.ForeignKeyWithSequence']/implements" />

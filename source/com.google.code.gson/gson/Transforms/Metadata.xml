@@ -1,10 +1,4 @@
 ﻿<metadata>
-	<!-- namespaces -->
-	<attr path="/api/package[@name='com.google.gson']" name="managedName">GoogleGson</attr>
-	<attr path="/api/package[@name='com.google.gson.annotations']" name="managedName">GoogleGson.Annotations</attr>
-	<attr path="/api/package[@name='com.google.gson.reflect']" name="managedName">GoogleGson.Reflect</attr>
-	<attr path="/api/package[@name='com.google.gson.stream']" name="managedName">GoogleGson.Stream</attr>
-
 	<attr path="/api/package[@name='com.google.gson']/class[@name='JsonStreamParser']/method[@name='next']" name="managedReturn">Java.Lang.Object</attr>
 	
 	<!-- remove private/internal/implementation/deprecated types -->

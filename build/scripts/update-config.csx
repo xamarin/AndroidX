@@ -1,4 +1,4 @@
-#! "net5.0"
+#! "net6.0"
 
 #r "nuget: MavenNet, 2.2.13"
 #r "nuget: Newtonsoft.Json, 13.0.1"
@@ -6,12 +6,13 @@
 
 // Usage:
 //   dotnet tool install -g dotnet-script
-//   dotnet script update-config.csx -- ../../config.json <update|bump|published>
+//   dotnet script update-config.csx -- ../../config.json <update|bump|published|sort>
 // This script compares the versions of Java packages we are currently binding to the
 // stable versions available in Google's Maven repository.  
 // update - Automatically update the specified configuration file
 // bump - Apply NuGet revision bump to *all* packages
 // published - Display which NuGet package versions are already published on NuGet.org
+// sort - Sort the provided config.json without making any updates
 
 using MavenNet;
 using MavenNet.Models;
@@ -32,6 +33,7 @@ var config_json = File.ReadAllText (config_file);
 var config = JsonConvert.DeserializeObject<List<MyArray>> (config_json);
 var should_update = Args.Count > 1 && Args[1].ToLowerInvariant () == "update";
 var should_minor_bump = Args.Count > 1 && Args[1].ToLowerInvariant () == "bump";
+var should_sort = Args.Count > 1 && Args[1].ToLowerInvariant () == "sort";
 var check_published = Args.Count > 1 && Args[1].ToLowerInvariant () == "published";
 var serializer_settings = new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore };
 serializer_settings.Converters.Add (new Newtonsoft.Json.Converters.StringEnumConverter ());
@@ -110,13 +112,13 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
   } else {
 	  Console.WriteLine ($"| {package_name.PadRight (58)} | {current_version.PadRight (17)} | {(GetLatestVersion (a)?.ToString () ?? string.Empty).PadRight (15)} |");  
   }
+}
 
-	if (should_update || should_minor_bump)
-	{
-		// Write updated config.json back to disk
-		var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
-		File.WriteAllText (config_file, output + Environment.NewLine);
-	}
+if (should_update || should_minor_bump || should_sort)
+{
+	// Write updated config.json back to disk
+	var output = JsonConvert.SerializeObject (config, Formatting.Indented, serializer_settings);
+	File.WriteAllText (config_file, output + Environment.NewLine);
 }
 
 static Artifact FindMavenArtifact (List<MyArray> config, ArtifactModel artifact)

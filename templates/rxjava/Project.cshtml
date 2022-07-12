@@ -35,19 +35,9 @@
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>@(friendlyName) for Xamarin.Android</Title>
     <PackageDescription>Xamarin.Android binding for @(friendlyName)</PackageDescription>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2083771</PackageProjectUrl>
-    <PackageLicenseUrl>https://aka.ms/AAdvvt0</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
   </PropertyGroup>
-
-  <!--
-    PR    https://github.com/xamarin/AndroidX/pull/378
-    XC    https://github.com/xamarin/XamarinComponents/tree/main/Android/ReactiveX/source
-  -->
 
   <Target Name="RenameJars" BeforeTargets="PrepareForBuild">
     <!-- We want the jar embedded as rxjava-3.0.1.jar, so it doesn't conflict with other versions -->

@@ -1,9 +1,0 @@
-﻿<metadata>
-    <!-- That's right, still has support here :( -->
-    <attr path="/api/package[@name='android.support.v4.media']" name="managedName">Android.Support.V4.Media</attr>
-    <attr path="/api/package[@name='android.support.v4.media.session']" name="managedName">Android.Support.V4.Media.Session</attr>
-    <attr path="/api/package[@name='androidx.media']" name="managedName">AndroidX.Media</attr>
-    <attr path="/api/package[@name='androidx.media.app']" name="managedName">AndroidX.Media.App</attr>
-    <attr path="/api/package[@name='androidx.media.session']" name="managedName">AndroidX.Media.Session</attr>
-    <attr path="/api/package[@name='androidx.media.utils']" name="managedName">AndroidX.Media.Utils</attr>
-</metadata>

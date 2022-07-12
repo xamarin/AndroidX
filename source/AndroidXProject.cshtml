@@ -47,14 +47,9 @@
     <Summary>Xamarin.Android bindings for AndroidX - @(Model.Name)</Summary>
     <Description>Xamarin.Android bindings for AndroidX - @(Model.Name)  artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</Description>
     <PackageTags>Xamarin AndroidX Xamarin.AndroidX Support Google @(Model.Name) artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</PackageTags>
-    <Authors>Microsoft</Authors>
-    <Owners>Microsoft</Owners>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</PackageProjectUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</PackageIconUrl>
+    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
@@ -95,6 +90,8 @@
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
+    <None Include="..\..\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
   </ItemGroup>
 
   @if (@Model.MavenArtifacts.Count > 0) {
@@ -223,7 +220,7 @@
   @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
   {
     <ItemGroup>
-      <ProjectReference Include="..\..\source\migration\Dummy\Xamarin.AndroidX.Migration.Dummy.csproj" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid12.0' " />
+      <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid12.0' " />
     </ItemGroup>
   }
 

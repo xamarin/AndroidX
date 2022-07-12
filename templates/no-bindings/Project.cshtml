@@ -1,0 +1,42 @@
+﻿<Project Sdk="Xamarin.Legacy.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>@Model.NuGetPackageId</PackageId>
+    <Title>@Model.NuGetPackageId</Title>
+    <PackageVersion>@Model.NuGetVersion</PackageVersion>
+    <PackageDescription>@Model.NuGetPackageId</PackageDescription>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    
+    @switch(@Model.NuGetPackageId)
+    {
+        case "Xamarin.CheckerFramework.CheckerQual":
+          <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        break;
+        
+        default:
+          <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        break;
+    }
+  </PropertyGroup>
+
+  <ItemGroup>
+      <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
+        <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\$(NuGetJarName)" Visible="false" />
+    }
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\License.md" Pack="true" PackagePath="License.md" />
+    <None Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+</Project>

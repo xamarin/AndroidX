@@ -13,6 +13,11 @@
     <FirstParty Include="jetifierWrapper*.jar" />
     <FirstParty Include="org.jetbrains.*.jar" />
     <FirstParty Include="kotlinx-coroutines*.jar" />  
+    <FirstParty Include="Xamarin.Google.Guava.*.dll" />
+
+    <FirstParty Include="guava*.jar" />
+    <FirstParty Include="checker-qual.jar" />
+    <FirstParty Include="j2objc-annotations.jar" />  
   </ItemGroup>
 
   <ItemGroup>

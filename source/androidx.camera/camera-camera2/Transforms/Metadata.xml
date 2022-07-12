@@ -1,5 +1,29 @@
 <metadata>
-  <remove-node path="/api/package/class/implements[@name='androidx.camera.core.ConfigProvider']" />
+    <!-- Preserve non-standard namespace remapping -->
+    <attr 
+        path="/api/package[@name='androidx.camera.camera2.impl']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Camera2
+    </attr>
+    
+    <!-- Preserve missing period for backwards compatbility -->
+    <attr 
+        path="/api/package[@name='androidx.camera.camera2.internal.compat.params']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Camera2Internal.Compat.Params
+    </attr>    
+
+    <!-- Preserve non-preferred "InterOp" capitalization for backwards compatbility -->
+    <attr 
+        path="/api/package[@name='androidx.camera.camera2.interop']" 
+        name="managedName"
+        >
+        AndroidX.Camera.Camera2.InterOp
+    </attr>
+    
+    <remove-node path="/api/package/class/implements[@name='androidx.camera.core.ConfigProvider']" />
     
     <remove-node
         path="/api/package[@name='androidx.camera.camera2.internal']/class[@name='ImageAnalysisConfigProvider']/implements"
