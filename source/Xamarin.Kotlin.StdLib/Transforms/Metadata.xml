@@ -283,8 +283,6 @@
   </attr>
 
 
-
-
   <attr
     path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Float&gt;']]"
     name="managedName"
@@ -308,6 +306,12 @@
     name="managedName"
     >
     MaxOrThrowOfDouble
+  </attr>
+  <attr
+    path="/api/package[@name='kotlin.collections']/class[@name='CollectionsKt___CollectionsKt']/method[@name='minOrThrow' and count(parameter)=1 and parameter[1][@type='java.lang.Iterable&lt;java.lang.Double&gt;']]"
+    name="managedName"
+    >
+    MinOrThrowDouble
   </attr>
 
 
@@ -414,6 +418,76 @@
   </attr>
 
 
+  <remove-node 
+    path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic']/implements"
+    />
 
-  
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='minus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedName"
+      >
+      Minus
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeMark.DefaultImpls']/method[@name='minus-LRDsOJo' and count(parameter)=2 and parameter[1][@type='kotlin.time.TimeMark'] and parameter[2][@type='long']]"
+      name="managedName"
+      >
+      Minus
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='minus-LRDsOJo' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+      name="managedName"
+      >
+      Minus
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='plus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedName"
+      >
+      Plus
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeMark.DefaultImpls']/method[@name='plus-LRDsOJo' and count(parameter)=2 and parameter[1][@type='kotlin.time.TimeMark'] and parameter[2][@type='long']]"
+      name="managedName"
+      >
+      Plus
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='plus-LRDsOJo' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='long']]"
+      name="managedName"
+      >
+      Plus
+    </attr>
+
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic']/method[@name='markNow-z9LOYto' and count(parameter)=0]"
+      name="managedName"
+      >
+      MarkNow
+    </attr>
+
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=0]"
+      name="managedName"
+      >
+      ElapsedNow
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedName"
+      >
+      ElapsedNow
+    </attr>
+    <remove-node
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=0]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedReturn"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/implements"
+      name="managedReturn"
+      />
+
 </metadata>
