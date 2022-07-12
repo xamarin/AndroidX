@@ -768,6 +768,35 @@ Task("samples")
     DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
 });
 
+Task("samples-dotnet")
+    .IsDependentOn("nuget")
+    .IsDependentOn("samples-generate-all-targets")
+    .Does(() =>
+{
+    // clear the packages folder so we always use the latest
+    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
+    EnsureDirectoryExists(packagesPath);
+    CleanDirectories(packagesPath);
+
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration(CONFIGURATION)
+        .SetMaxCpuCount(0)
+        .EnableBinaryLogger($"./output/samples-dotnet.{CONFIGURATION}.binlog")
+        .WithProperty("RestorePackagesPath", packagesPath)
+        .WithProperty("DesignTimeBuild", "false")
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
+    if (!string.IsNullOrEmpty(ANDROID_HOME))
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    DotNetRestore("./samples/BuildAll/BuildAllDotNet.sln", new DotNetRestoreSettings
+    {
+        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+    });
+
+    DotNetMSBuild("./samples/BuildAll/BuildAllDotNet.sln", settings);
+});
+
 Task("api-diff")
     .Does
     (
@@ -920,14 +949,16 @@ Task ("packages")
 Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples");
+    .IsDependentOn ("samples")
+    .IsDependentOn ("samples-dotnet");
 
 Task ("ci")
     .IsDependentOn ("check-tools")
     .IsDependentOn ("inject-variables")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples");
+    .IsDependentOn ("samples")
+    .IsDependentOn ("samples-dotnet");
 
 // for local builds, conditionally do the first binderate
 if (FileExists ("./generated/AndroidX.sln")) {
