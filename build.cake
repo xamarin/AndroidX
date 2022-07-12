@@ -740,9 +740,18 @@ Task("samples")
     if (!string.IsNullOrEmpty(MSBUILD_PATH))
         settings_msbuild.ToolPath = MSBUILD_PATH;
 
-    Information($"{new string ('=', 160)}");
-    Information("MSBuild    ./samples/BuildAll/BuildAll.sln");
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildAll/BuildAll.sln");    
     MSBuild("./samples/BuildAll/BuildAll.sln", settings_msbuild);
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln");
+    // MSBuild("./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln", settings_msbuild);
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln");
+    MSBuild("./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln", settings_msbuild);
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ");
+    MSBuild("./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ", settings_msbuild);
     // Information($"{new string ('=', 160)}");
     // Information("MSBuild    ./samples/dotnet/BuildAllDotNet.sln");
     // MSBuild("./samples/dotnet/BuildAllDotNet.sln", settings_msbuild);
@@ -763,9 +772,9 @@ Task("samples")
     Information($"{new string ('=', 160)}");
     Information("DotNetBuild    ./samples/dotnet/BuildAllMauiApp.sln");
     DotNetBuild("./samples/dotnet/BuildAllMauiApp.sln", settings_dotnet);
-    Information($"{new string ('=', 160)}");
-    Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
-    DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
+    // Information($"{new string ('=', 160)}");
+    // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+    // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
 });
 
 Task("api-diff")
