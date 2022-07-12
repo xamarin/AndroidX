@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = " BuildMinimalMaterial", "BuildMinimalMaterial\ BuildMinimalMaterial.csproj", "{F47B1471-0F85-4690-B8A7-09F86ABBB1F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetStandardLibrary.SDKShortStyle", "NetStandardLibrary.SDKShortStyle\NetStandardLibrary.SDKShortStyle.csproj", "{B9788E82-E704-407C-8A9D-F4461B0645AF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{F47B1471-0F85-4690-B8A7-09F86ABBB1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F47B1471-0F85-4690-B8A7-09F86ABBB1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F47B1471-0F85-4690-B8A7-09F86ABBB1F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9788E82-E704-407C-8A9D-F4461B0645AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9788E82-E704-407C-8A9D-F4461B0645AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9788E82-E704-407C-8A9D-F4461B0645AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9788E82-E704-407C-8A9D-F4461B0645AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
