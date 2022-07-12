@@ -7,7 +7,7 @@ pr:
   
 variables:
   AndroidBinderatorVersion: 0.5.4
-  AndroidXMigrationVersion: 1.0.9
+  AndroidXMigrationVersion: 1.0.10
   BootsVersion: 1.1.0.712-preview2
   DotNetVersion: 6.0.300
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
@@ -42,6 +42,7 @@ jobs:
       windowsAgentPoolName: android-win-2022
       dotnet: '6.0.300'                                       # the version of .NET Core to use
       dotnetStable: '6.0.300'                                 # the stable version of .NET Core to use
+      xcode: 13.2.1
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
