@@ -159,6 +159,7 @@ AndroidX.Emoji.Widget
 AndroidX.Emoji2.Text
 AndroidX.Emoji2.Text.FlatBuffer
 AndroidX.Emoji2.ViewsIntegration
+AndroidX.Enterprise.Feedback
 AndroidX.ExifInterface.Media
 AndroidX.Fragment.App
 AndroidX.Fragment.App.StrictMode
@@ -258,6 +259,8 @@ AndroidX.Window.Embedding
 AndroidX.Window.Extensions
 AndroidX.Window.Java.Layout
 AndroidX.Window.Layout
+AndroidX.Window.RxJava2.Layout
+AndroidX.Window.RxJava3.Layout
 AndroidX.Work
 AndroidX.Work.Impl.Background.Greedy
 AndroidX.Work.Impl.Background.SystemJob
@@ -272,6 +275,7 @@ AndroidX.Work.Impl.Utils.Futures
 AndroidX.Work.Impl.Utils.TaskExecutor
 AndroidX.Work.Impl.Workers
 AndroidX.Work.MultiProcess
+Google.Android.Libraries.Appactions.Service
 Google.Android.Material.Animation
 Google.Android.Material.AppBar
 Google.Android.Material.Badge
@@ -322,6 +326,10 @@ Google.Android.Material.Tooltip
 Google.Android.Material.Transformation
 Google.Android.Material.Transition
 Google.Android.Material.Transition.Platform
+Google.Assistant.Appactions.Suggestions
+Google.Assistant.Appactions.Suggestions.Client
+Google.Assistant.Appactions.Widgets
+Google.Assistant.Appactions.Widgets.Pinappwidget
 Google.AutoValue.Annotations
 Google.AutoValue.Extension.Serializable
 Google.AutoValue.Extension.ToPrettyString
@@ -461,6 +469,12 @@ Xamarin.Google.Crypto.Tink.StreamingAead
 Xamarin.Google.Crypto.Tink.Subtle
 Xamarin.Google.Crypto.Tink.Subtle.Prf
 Xamarin.Google.Crypto.Tink.Tinkkey
+Xamarin.Google.Flogger
+Xamarin.Google.Flogger.Backend
+Xamarin.Google.Flogger.Backend.System
+Xamarin.Google.Flogger.Parameter
+Xamarin.Google.Flogger.Parser
+Xamarin.Google.Flogger.Util
 Xamarin.Kotlin
 Xamarin.KotlinX.Coroutines
 Xamarin.KotlinX.Coroutines.Channels
@@ -471,6 +485,7 @@ Xamarin.KotlinX.Coroutines.Guava
 Xamarin.KotlinX.Coroutines.Intrinsics
 Xamarin.KotlinX.Coroutines.Reactive
 Xamarin.KotlinX.Coroutines.Rx2
+Xamarin.KotlinX.Coroutines.Rx3
 Xamarin.KotlinX.Coroutines.Scheduling
 Xamarin.KotlinX.Coroutines.Selects
 Xamarin.KotlinX.Coroutines.Stream
