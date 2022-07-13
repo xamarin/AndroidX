@@ -7,9 +7,9 @@ pr:
   
 variables:
   AndroidBinderatorVersion: 0.5.4
-  AndroidXMigrationVersion: 1.0.9
+  AndroidXMigrationVersion: 1.0.10
   BootsVersion: 1.1.0.712-preview2
-  DotNetVersion: 6.0.301
+  DotNetVersion: 6.0.300
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
   XamarinDotNetWorkloadSource: https://aka.ms/dotnet/maui/rc.3.json
@@ -40,7 +40,7 @@ jobs:
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       macosImage: macOS-11                                    # the name of the macOS VM image (BigSur)
       windowsAgentPoolName: android-win-2022
-      xcode: 13.3.1
+      xcode: 13.2.1
       dotnet: '6.0.300'                                       # the version of .NET Core to use
       dotnetStable: '6.0.300'                                 # the stable version of .NET Core to use
       initSteps:
