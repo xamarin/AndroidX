@@ -1,3 +1,33 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.common.flogger']/class[@name='FluentLogger']/method[@name='at' and count(parameter)=1 and parameter[1][@type='java.util.logging.Level']]"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger']/class[@name='FluentLogger']/method[@name='at' and count(parameter)=1 and parameter[1][@type='java.util.logging.Level']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend']/class[@name='SimpleMessageFormatter']/method[@name='addParameterImpl' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='com.google.common.flogger.parameter.Parameter']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend']/class[@name='SimpleMessageFormatter']/method[@name='buildImpl' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend']/class[@name='SimpleMessageFormatter']/method[@name='buildImpl' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
 
 </metadata>
