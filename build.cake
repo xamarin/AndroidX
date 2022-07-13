@@ -782,15 +782,8 @@ Task("samples-dotnet")
 
 
     Information($"=====================================================================================================");
-    Information("DotNetBuild    ./samples/BuildAll/dotnet/BuildAllDotNet.sln");
-    DotNetRestore("./samples/BuildAll/dotnet/BuildAllDotNet.sln", new DotNetRestoreSettings
-    {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-    });
-    DotNetMSBuild("./samples/dotnet/BuildAllDotNet.sln", settings);
-    Information($"=====================================================================================================");
     Information("DotNetBuild    ./samples/dotnet/BuildAllDotNet.sln");
-    DotNetRestore("./samples/BuildAll/dotnet/BuildAllDotNet.sln", new DotNetRestoreSettings
+    DotNetRestore("./samples/dotnet/BuildAllDotNet.sln", new DotNetRestoreSettings
     {
         MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
     });
@@ -802,6 +795,13 @@ Task("samples-dotnet")
         MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
     });
     DotNetMSBuild("./samples/dotnet/BuildAllMauiApp.sln", settings);
+    Information($"=====================================================================================================");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+    DotNetRestore("./samples/dotnet/BuildAllXamarinForms.sln", new DotNetRestoreSettings
+    {
+        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+    });
+    DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
     // Information($"=====================================================================================================");
     // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
     // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
