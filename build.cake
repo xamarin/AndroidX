@@ -750,9 +750,9 @@ Task("samples")
     Information("MSBuild    ./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln");
     MSBuild("./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln", settings_msbuild);
     Information($"=====================================================================================================");
-    Information("MSBuild    ./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ");
-    MSBuild("./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ", settings_msbuild);
-    // Information($"{new string ('=', 160)}");
+    // Information("MSBuild    ./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ");
+    // MSBuild("./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ", settings_msbuild);
+    Information($"=====================================================================================================");
     // Information("MSBuild    ./samples/dotnet/BuildAllDotNet.sln");
     // MSBuild("./samples/dotnet/BuildAllDotNet.sln", settings_msbuild);
 

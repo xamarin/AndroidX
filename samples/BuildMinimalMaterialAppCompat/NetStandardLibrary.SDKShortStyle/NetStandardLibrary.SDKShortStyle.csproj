@@ -1,11 +1,18 @@
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+<Project Sdk="Xamarin.Legacy.Sdk">
+<!--
+<Project Sdk="MSBuild.Sdk.Extras">
+-->
 
   <PropertyGroup>
-    <TargetFramework>monoandroid120</TargetFramework>
+    <TargetFramework>monoandroid12.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.Material" />
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" />
+    <None Remove="Xamarin.Google.Android.Material" />
+    <None Remove="Xamarin.AndroidX.AppCompat" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.4.2.1" />
   </ItemGroup>
 </Project>
