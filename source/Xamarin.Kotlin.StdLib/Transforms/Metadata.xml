@@ -478,16 +478,40 @@
       >
       ElapsedNow
     </attr>
+
     <remove-node
       path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=0]"
       />
     <remove-node
       path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=1 and parameter[1][@type='long']]"
-      name="managedReturn"
       />
     <remove-node
       path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/implements"
-      name="managedReturn"
+      />
+
+    <remove-node
+      path="/api/package[@name='kotlin']/class[@name='UShortArray']/method[@name='contains-xj2QHRw' and count(parameter)=1 and parameter[1][@type='ushort']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin']/class[@name='UIntArray']/method[@name='contains-WZ4Q5Ns' and count(parameter)=1 and parameter[1][@type='uint']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin']/class[@name='ULongArray']/method[@name='contains-VKZWuLQ' and count(parameter)=1 and parameter[1][@type='ulong']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin']/class[@name='UByteArray']/method[@name='contains-7apg3OU' and count(parameter)=1 and parameter[1][@type='ubyte']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.ranges']/class[@name='UIntRange']/method[@name='contains-WZ4Q5Ns' and count(parameter)=1 and parameter[1][@type='uint']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.ranges']/class[@name='ULongRange']/method[@name='contains-VKZWuLQ' and count(parameter)=1 and parameter[1][@type='ulong']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.ranges']/class[@name='ULongProgression.Companion']/method[@name='fromClosedRange-7ftBX0g' and count(parameter)=3 and parameter[1][@type='ulong'] and parameter[2][@type='ulong'] and parameter[3][@type='long']]"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.ranges']/class[@name='UIntProgression.Companion']/method[@name='fromClosedRange-Nkh28Cs' and count(parameter)=3 and parameter[1][@type='uint'] and parameter[2][@type='uint'] and parameter[3][@type='int']]"
       />
 
 </metadata>
