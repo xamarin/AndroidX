@@ -628,7 +628,7 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    var settings = new DotNetMSBuildSettings()
+    DotNetMSBuildSettings settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
@@ -688,7 +688,7 @@ Task("samples-generate-all-targets")
     // make a big .targets file that pulls in everything
     var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
     var itemGroup = new XElement(xmlns + "ItemGroup");
-    foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+    foreach (var nupkg in GetFiles("./output/*.nupkg").OrderBy(fp => fp.FullPath)) {
         Information($"NuGet package = {nupkg}");
 
         // Skip Wear as it has special implications requiring more packages to be used properly in an app
@@ -703,7 +703,7 @@ Task("samples-generate-all-targets")
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-        itemGroup.Add(new XElement(xmlns + "PackageReference",
+        itemGroup.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
 
@@ -724,12 +724,55 @@ Task("samples")
     CleanDirectories(packagesPath);
 
     // build the samples
-    var settings = new MSBuildSettings()
+    MSBuildSettings settings_msbuild = new MSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetVerbosity(VERBOSITY)
         .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.binlog")
+        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog")
         .WithRestore()
+        .WithProperty("RestorePackagesPath", packagesPath)
+        .WithProperty("DesignTimeBuild", "false")
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
+    if (!string.IsNullOrEmpty(ANDROID_HOME))
+        settings_msbuild.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+
+    if (!string.IsNullOrEmpty(MSBUILD_PATH))
+        settings_msbuild.ToolPath = MSBUILD_PATH;
+
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildAll/BuildAll.sln");    
+    MSBuild("./samples/BuildAll/BuildAll.sln", settings_msbuild);
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln");
+    // MSBuild("./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln", settings_msbuild);
+    Information($"=====================================================================================================");
+    Information("MSBuild    ./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln");
+    MSBuild("./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln", settings_msbuild);
+    Information($"=====================================================================================================");
+    // Information("MSBuild    ./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ");
+    // MSBuild("./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ", settings_msbuild);
+    Information($"=====================================================================================================");
+    // Information("MSBuild    ./samples/dotnet/BuildAllDotNet.sln");
+    // MSBuild("./samples/dotnet/BuildAllDotNet.sln", settings_msbuild);
+
+    return;
+});
+
+Task("samples-dotnet")
+    .IsDependentOn("nuget")
+    .IsDependentOn("samples-generate-all-targets")
+    .Does(() =>
+{
+    // clear the packages folder so we always use the latest
+    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
+    EnsureDirectoryExists(packagesPath);
+    CleanDirectories(packagesPath);
+
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration(CONFIGURATION)
+        .SetMaxCpuCount(0)
+        .EnableBinaryLogger($"./output/samples-dotnet.{CONFIGURATION}.binlog")
         .WithProperty("RestorePackagesPath", packagesPath)
         .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
@@ -737,10 +780,39 @@ Task("samples")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings.ToolPath = MSBUILD_PATH;
+    Information($"=====================================================================================================");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllDotNet.sln");
+    DotNetRestore("./samples/dotnet/BuildAllDotNet.sln", new DotNetRestoreSettings
+    {
+        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+    });
+    DotNetMSBuild("./samples/dotnet/BuildAllDotNet.sln", settings);
 
-    MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+    if 
+        ( 
+            ! BuildSystem.GitHubActions.IsRunningOnGitHubActions 
+            &&
+            ! BuildSystem.AzurePipelines.IsRunningOnAzurePipelines
+        )
+    {
+        Information($"=====================================================================================================");
+        Information("DotNetBuild    ./samples/dotnet/BuildAllMauiApp.sln");
+        DotNetRestore("./samples/dotnet/BuildAllMauiApp.sln", new DotNetRestoreSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+        });
+        DotNetMSBuild("./samples/dotnet/BuildAllMauiApp.sln", settings);
+        Information($"=====================================================================================================");
+        Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+        DotNetRestore("./samples/dotnet/BuildAllXamarinForms.sln", new DotNetRestoreSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+        });
+        // DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
+        // Information($"=====================================================================================================");
+        // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+        // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
+    }
 });
 
 Task("api-diff")
@@ -895,14 +967,16 @@ Task ("packages")
 Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples");
+    .IsDependentOn ("samples")
+    .IsDependentOn ("samples-dotnet");
 
 Task ("ci")
     .IsDependentOn ("check-tools")
     .IsDependentOn ("inject-variables")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples");
+    .IsDependentOn ("samples")
+    .IsDependentOn ("samples-dotnet");
 
 // for local builds, conditionally do the first binderate
 if (FileExists ("./generated/AndroidX.sln")) {
