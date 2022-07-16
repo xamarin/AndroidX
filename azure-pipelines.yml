@@ -13,7 +13,7 @@ variables:
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
   XamarinDotNetWorkloadSource: https://aka.ms/dotnet/maui/rc.3.json
-  LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d17-0-macos
+  LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d17-2-macos
   LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-2-windows
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
@@ -38,7 +38,7 @@ jobs:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
-      macosImage:                                             # the name of the macOS VM image (BigSur) - Disabled until we have newer XA classic packages
+      macosImage: macOS-11                                    # the name of the macOS VM image (BigSur)
       windowsAgentPoolName: android-win-2022
       xcode: 13.2.1
       dotnet: '6.0.300'                                       # the version of .NET Core to use
