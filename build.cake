@@ -718,6 +718,12 @@ Task("samples-generate-all-targets")
 
     var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
     xdoc.Save("./output/AllPackages.targets");
+
+    // ... and Directory.packages.props for central package management
+    // 
+    string content_original = System.IO.File.ReadAllText("./output/AllPackages.targets");
+    string content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
 });
 
 Task("samples")
