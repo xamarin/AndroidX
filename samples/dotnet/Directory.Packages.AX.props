@@ -1,3 +1,6 @@
 <Project >
-  <Import Project="..\..\output\Directory.packages.props" />
+  <Import 
+    Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+    Project="..\..\output\Directory.packages.props" 
+    />
 </Project>
