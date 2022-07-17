@@ -703,6 +703,13 @@ Task("samples-generate-all-targets")
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+
+        if ( match.Groups[1].Value == "Xamarin.AndroidX.Security.SecurityCrypto" )
+        {
+            // MAUI uses pinned/locked/exact preview version 1.1.0-alpha03 - skipit
+            continue;
+        }
+
         itemGroup.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
