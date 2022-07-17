@@ -1418,8 +1418,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "listenablefuture",
-        "version": "1.0",
-        "nugetVersion": "1.0.0.9",
+        "version": "9999.0-empty-to-avoid-conflict-with-guava",
+        "nugetVersion": "9999.0.0",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": false,
         "templateSet": "guava"
