@@ -1,8 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0-ios</TargetFramework>
-    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
   </PropertyGroup>
   <ItemGroup>
@@ -12,9 +14,18 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\Default.png">
-      <Link>Resources\Default.png</Link>
-    </BundleResource>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <!--
+    <PackageReference Include="Xamarin.Forms" VersionOverride="5.0.0.2478" />
+    <PackageReference Include="Xamarin.Essentials" VersionOverride="1.7.3" />
+    -->
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuildAllXamarinForms\BuildAllXamarinForms.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\Default-568h%402x.png">
       <Link>Resources\Default-568h%402x.png</Link>
     </BundleResource>
@@ -24,18 +35,8 @@
     <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\Default%402x.png">
       <Link>Resources\Default%402x.png</Link>
     </BundleResource>
-    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\Default-Portrait.png">
-      <Link>Resources\Default-Portrait.png</Link>
-    </BundleResource>
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
-  </ItemGroup>
-
 </Project>
-
 <!--
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
