@@ -814,10 +814,7 @@ Task("samples-dotnet")
     {
         MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
     });
-    // DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
-    // Information($"=====================================================================================================");
-    // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
-    // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
+    DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
     
 });
 
