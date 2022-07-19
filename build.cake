@@ -801,31 +801,24 @@ Task("samples-dotnet")
     });
     DotNetMSBuild("./samples/dotnet/BuildAllDotNet.sln", settings);
 
-    if 
-        ( 
-            ! BuildSystem.GitHubActions.IsRunningOnGitHubActions 
-            &&
-            ! BuildSystem.AzurePipelines.IsRunningOnAzurePipelines
-        )
+    Information($"=====================================================================================================");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllMauiApp.sln");
+    DotNetRestore("./samples/dotnet/BuildAllMauiApp.sln", new DotNetRestoreSettings
     {
-        Information($"=====================================================================================================");
-        Information("DotNetBuild    ./samples/dotnet/BuildAllMauiApp.sln");
-        DotNetRestore("./samples/dotnet/BuildAllMauiApp.sln", new DotNetRestoreSettings
-        {
-            MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-        });
-        DotNetMSBuild("./samples/dotnet/BuildAllMauiApp.sln", settings);
-        Information($"=====================================================================================================");
-        Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
-        DotNetRestore("./samples/dotnet/BuildAllXamarinForms.sln", new DotNetRestoreSettings
-        {
-            MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-        });
-        // DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
-        // Information($"=====================================================================================================");
-        // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
-        // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
-    }
+        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+    });
+    DotNetMSBuild("./samples/dotnet/BuildAllMauiApp.sln", settings);
+    Information($"=====================================================================================================");
+    Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+    DotNetRestore("./samples/dotnet/BuildAllXamarinForms.sln", new DotNetRestoreSettings
+    {
+        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
+    });
+    // DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
+    // Information($"=====================================================================================================");
+    // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
+    // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
+    
 });
 
 Task("api-diff")
