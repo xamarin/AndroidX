@@ -42,7 +42,7 @@ jobs:
       windowsAgentPoolName: android-win-2022
       dotnet: '6.0.300'                                       # the version of .NET Core to use
       dotnetStable: '6.0.300'                                 # the stable version of .NET Core to use
-      xcode: 13.3
+      xcode: 13.3.1
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
@@ -64,6 +64,8 @@ jobs:
             dotnet tool update --global Cake.Tool
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
+            sudo xcode-select -s /Applications/Xcode_$(xcode).app
+            sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
             dotnet tool update --global Cake.Tool
