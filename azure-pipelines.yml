@@ -51,6 +51,8 @@ jobs:
         - pwsh: |
             dotnet workload update --verbosity diag --from-rollback-file $(XamarinDotNetWorkloadSource) --source $(Dotnet6Source) --source $(NuGetOrgSource)
             dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            dotnet workload install maui --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
+
         - task: JavaToolInstaller@0
           inputs:
             versionSpec: '11'
