@@ -67,6 +67,8 @@ jobs:
             sudo xcode-select -s "/Applications/Xcode_$(xcode).app"
             sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
+          inputs:
+            version: $(xcode)
         - pwsh: |
             dotnet tool update --global Cake.Tool
             dotnet tool update --global boots --version $(BootsVersion)
