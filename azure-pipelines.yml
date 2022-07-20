@@ -65,7 +65,6 @@ jobs:
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
             echo "/Applications/Xcode_$xcode.app"
-            echo "/Applications/Xcode_${{xcode}}.app"
             sudo xcode-select -s "/Applications/Xcode_$xcode.app"
             sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
