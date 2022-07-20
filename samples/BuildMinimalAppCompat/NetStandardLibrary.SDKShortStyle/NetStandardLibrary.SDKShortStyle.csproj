@@ -1,7 +1,7 @@
 <Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFramework>monoandroid120</TargetFramework>
+    <TargetFramework>MonoAndroid12.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
