@@ -703,6 +703,13 @@ Task("samples-generate-all-targets")
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+
+        if ( match.Groups[1].Value == "Xamarin.AndroidX.Security.SecurityCrypto" )
+        {
+            // MAUI uses pinned/locked/exact preview version 1.1.0-alpha03 - skipit
+            continue;
+        }
+
         itemGroup.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
@@ -711,6 +718,12 @@ Task("samples-generate-all-targets")
 
     var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
     xdoc.Save("./output/AllPackages.targets");
+
+    // ... and Directory.packages.props for central package management
+    // 
+    string content_original = System.IO.File.ReadAllText("./output/AllPackages.targets");
+    string content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
 });
 
 Task("samples")
@@ -813,35 +826,6 @@ Task("samples-dotnet")
         // Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
         // DotNetBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings_dotnet);
     }
-});
-
-Task("samples-dotnet")
-    .IsDependentOn("nuget")
-    .IsDependentOn("samples-generate-all-targets")
-    .Does(() =>
-{
-    // clear the packages folder so we always use the latest
-    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
-    EnsureDirectoryExists(packagesPath);
-    CleanDirectories(packagesPath);
-
-    var settings = new DotNetMSBuildSettings()
-        .SetConfiguration(CONFIGURATION)
-        .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/samples-dotnet.{CONFIGURATION}.binlog")
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("DesignTimeBuild", "false")
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    DotNetRestore("./samples/BuildAll/BuildAllDotNet.sln", new DotNetRestoreSettings
-    {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-    });
-
-    DotNetMSBuild("./samples/BuildAll/BuildAllDotNet.sln", settings);
 });
 
 Task("api-diff")
