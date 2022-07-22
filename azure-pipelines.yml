@@ -40,9 +40,9 @@ jobs:
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
       windowsAgentPoolName: android-win-2022
+      xcode: 13.3.1
       dotnet: '6.0.300'                                       # the version of .NET Core to use
       dotnetStable: '6.0.300'                                 # the stable version of .NET Core to use
-      xcode: 13.3.1
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
