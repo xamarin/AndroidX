@@ -38,11 +38,12 @@ jobs:
       timeoutInMinutes: 120
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
-      macosImage: macOS-11                                    # the name of the macOS VM image (BigSur)
+      macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
       windowsAgentPoolName: android-win-2022
       xcode: 13.2.1
       dotnet: '6.0.300'                                       # the version of .NET Core to use
       dotnetStable: '6.0.300'                                 # the stable version of .NET Core to use
+      xcode: 13.3.1
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
@@ -51,6 +52,8 @@ jobs:
         - pwsh: |
             dotnet workload update --verbosity diag --from-rollback-file $(XamarinDotNetWorkloadSource) --source $(Dotnet6Source) --source $(NuGetOrgSource)
             dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            dotnet workload install maui --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
+
         - task: JavaToolInstaller@0
           inputs:
             versionSpec: '11'
@@ -62,6 +65,8 @@ jobs:
             dotnet tool update --global Cake.Tool
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
+            sudo xcode-select -s "/Applications/Xcode_13.3.1.app"
+            sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
             dotnet tool update --global Cake.Tool
