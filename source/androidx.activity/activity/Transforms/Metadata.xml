@@ -338,4 +338,16 @@
         >
         Java.Lang.Object
     </attr>
+
+    <add-node
+        path="/api/package[@name='androidx.activity']/class[@name='ComponentDialog']"
+        >
+        <method 
+            visibility="public"  abstract="false" static="false" return="androidx.activity.OnBackPressedDispatcher" name="getOnBackPressedDispatcher" 
+            deprecated="not deprecated" final="false" jni-signature="()Landroidx/activity/OnBackPressedDispatcher;" 
+            bridge="false" native="false" jni-return="Landroidx/activity/OnBackPressedDispatcher;" 
+            synchronized="false" synthetic="false" return-not-null="true" 
+            />
+    </add-node>
+ 
 </metadata>
