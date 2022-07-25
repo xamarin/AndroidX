@@ -73,6 +73,7 @@
     <AndroidNamespaceReplacement Include='config' Replacement='Configs' />
     <AndroidNamespaceReplacement Include='executor' Replacement='Executors' />
     <AndroidNamespaceReplacement Include='profileinstaller' Replacement='ProfileInstallers' />
+    <AndroidNamespaceReplacement Include='androidx.lifecycle.viewmodel' Replacement='AndroidX.Lifecycle.ViewModels' />
     
     <!-- Un-capitalization of 2-letter abbreviations -->
     <AndroidNamespaceReplacement Include='tv' Replacement='Tv' />    
