@@ -753,21 +753,25 @@ Task("samples")
     if (!string.IsNullOrEmpty(MSBUILD_PATH))
         settings_msbuild.ToolPath = MSBUILD_PATH;
 
-    Information($"=====================================================================================================");
-    Information("MSBuild    ./samples/BuildAll/BuildAll.sln");    
-    MSBuild("./samples/BuildAll/BuildAll.sln", settings_msbuild);
-    Information($"=====================================================================================================");
-    Information("MSBuild    ./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln");
-    // MSBuild("./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln", settings_msbuild);
-    Information($"=====================================================================================================");
-    Information("MSBuild    ./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln");
-    MSBuild("./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln", settings_msbuild);
-    Information($"=====================================================================================================");
-    // Information("MSBuild    ./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ");
-    // MSBuild("./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln ", settings_msbuild);
-    Information($"=====================================================================================================");
-    // Information("MSBuild    ./samples/dotnet/BuildAllDotNet.sln");
-    // MSBuild("./samples/dotnet/BuildAllDotNet.sln", settings_msbuild);
+    string[] solutions = new string[]
+    {
+        "./samples/BuildAll/BuildAll.sln",
+        "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
+        "./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
+        //"./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
+        //"./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+    };
+
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"MSBuild          {solution} / {filename}");    
+        MSBuild(solution, settings_msbuild.EnableBinaryLogger($"./output/samples.{filename}.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog"));
+    }
+
+    RunTarget("samples-dotnet");
 
     return;
 });
@@ -793,29 +797,28 @@ Task("samples-dotnet")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    Information($"=====================================================================================================");
-    Information("DotNetBuild    ./samples/dotnet/BuildAllDotNet.sln");
-    DotNetRestore("./samples/dotnet/BuildAllDotNet.sln", new DotNetRestoreSettings
+    string[] solutions = new string[]
     {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-    });
-    DotNetMSBuild("./samples/dotnet/BuildAllDotNet.sln", settings);
+        "./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+        "./samples/dotnet/BuildAllMauiApp.sln",
+        "./samples/dotnet/BuildAllXamarinForms.sln",
+    };
 
-    Information($"=====================================================================================================");
-    Information("DotNetBuild    ./samples/dotnet/BuildAllMauiApp.sln");
-    DotNetRestore("./samples/dotnet/BuildAllMauiApp.sln", new DotNetRestoreSettings
+    foreach(string solution in solutions)
     {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-    });
-    DotNetMSBuild("./samples/dotnet/BuildAllMauiApp.sln", settings);
-    Information($"=====================================================================================================");
-    Information("DotNetBuild    ./samples/dotnet/BuildAllXamarinForms.sln");
-    DotNetRestore("./samples/dotnet/BuildAllXamarinForms.sln", new DotNetRestoreSettings
-    {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-    });
-    DotNetMSBuild("./samples/dotnet/BuildAllXamarinForms.sln", settings);
-    
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"DotNetMSBuild        {solution} / {filename}");    
+        DotNetRestore(solution, new DotNetRestoreSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-restore-{filename}.binlog")
+        });
+        DotNetBuild(solution, new DotNetBuildSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+        });
+    }
 });
 
 Task("api-diff")
@@ -971,7 +974,7 @@ Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
-    .IsDependentOn ("samples-dotnet");
+    ;
 
 Task ("ci")
     .IsDependentOn ("check-tools")
@@ -979,7 +982,7 @@ Task ("ci")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
-    .IsDependentOn ("samples-dotnet");
+    ;
 
 // for local builds, conditionally do the first binderate
 if (FileExists ("./generated/AndroidX.sln")) {
