@@ -1811,14 +1811,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "androidx.activity",
-        "artifactId": "activity-ktx",
-        "version": "1.3.0",
-        "nugetVersion": "1.3.1.3",
-        "nugetId": "Xamarin.AndroidX.Activity.Ktx",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-ktx",
         "version": "2.3.0",
