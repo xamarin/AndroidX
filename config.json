@@ -1787,46 +1787,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.guava",
-        "artifactId": "failureaccess",
-        "version": "1.0.1",
-        "nugetVersion": "1.0.1.5",
-        "nugetId": "Xamarin.Google.Guava.FailureAccess",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "guava",
-        "version": "29.0.0",
-        "nugetVersion": "29.0.0",
-        "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "listenablefuture",
-        "version": "1.0",
-        "nugetVersion": "1.0.0.5",
-        "nugetId": "Xamarin.Google.Guava.ListenableFuture",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "androidx.lifecycle",
-        "artifactId": "lifecycle-viewmodel-ktx",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.1.3",
-        "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "androidx.compose.ui",
-        "artifactId": "ui",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "com.xamarin.androidx",
         "artifactId": "migration",
         "version": "1.0",
