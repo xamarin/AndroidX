@@ -12,7 +12,7 @@ variables:
   DotNetVersion: 6.0.300
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
-  XamarinDotNetWorkloadSource: https://aka.ms/dotnet/maui/rc.3.json
+  XamarinDotNetWorkloadSource: https://aka.ms/dotnet/maui/6.0.400.json
   LegacyXamarinAndroidPkg: https://aka.ms/xamarin-android-commercial-d17-2-macos
   LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-2-windows
   BUILD_NUMBER: $(Build.BuildNumber)
