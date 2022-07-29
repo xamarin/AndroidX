@@ -10,6 +10,7 @@ variables:
   AndroidXMigrationVersion: 1.0.10
   BootsVersion: 1.1.0.712-preview2
   DotNetVersion: 6.0.300
+  XcodeVersion: 13.3.1
   DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
   NuGetOrgSource: https://api.nuget.org/v3/index.json
   XamarinDotNetWorkloadSource: workloads.json   # or url (check for recent versions - redth)
@@ -42,9 +43,9 @@ jobs:
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
       windowsAgentPoolName: android-win-2022
-      xcode: 13.3.1
-      dotnet: '6.0.300'                                       # the version of .NET Core to use
-      dotnetStable: '6.0.300'                                 # the stable version of .NET Core to use
+      xcode: $(XcodeVersion)
+      dotnet: $(DotNetVersion)                                # the version of .NET Core to use
+      dotnetStable: $(DotNetVersion)                          # the stable version of .NET Core to use
       initSteps:
         - task: UseDotNet@2
           displayName: install .NET $(DotNetVersion)
@@ -66,7 +67,7 @@ jobs:
             dotnet tool update --global Cake.Tool
             dotnet tool update --global boots --version $(BootsVersion)
             boots $(LegacyXamarinAndroidPkg)
-            sudo xcode-select -s "/Applications/Xcode_13.3.1.app"
+            sudo xcode-select -s "/Applications/Xcode_$(XcodeVersion).app"
             sudo xcode-select -p
           condition: eq(variables['System.JobName'], 'macos')
         - pwsh: |
