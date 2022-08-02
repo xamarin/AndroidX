@@ -482,6 +482,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.customview",
+        "artifactId": "customview-poolingcontainer",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.CustomView.PoolingContainer",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
         "version": "7.2.1",
