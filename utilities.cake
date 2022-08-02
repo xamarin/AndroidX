@@ -520,6 +520,7 @@ Task ("spell-check")
 		        "J2Objc",
 		        "CheckerFramework",
 		        "CheckerQual",
+                "PoolingContainer",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
