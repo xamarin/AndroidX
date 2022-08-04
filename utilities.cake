@@ -517,14 +517,15 @@ Task ("spell-check")
                 "SplashScreen",
                 "FailureAccess",
                 "ListenableFuture",
-		        "J2Objc",
-		        "CheckerFramework",
-		        "CheckerQual",
+    		        "J2Objc",
+		            "CheckerFramework",
+		            "CheckerQual",
                 "WindowRxJava2",
                 "WindowRxJava3",
                 "AppActions",
                 "Rx3",
                 "SystemBackend",
+                "PoolingContainer",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

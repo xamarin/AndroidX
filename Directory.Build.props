@@ -164,7 +164,7 @@
     <AndroidNamespaceReplacement Include='wear-ongoing' Replacement='Ongoing' />
     <AndroidNamespaceReplacement Include='wear-phone-interactions' Replacement='PhoneInteractions' />
     <AndroidNamespaceReplacement Include='wear-remote-interactions' Replacement='RemoveInteractions' />
-    <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />    
-
+    <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />
+    <AndroidNamespaceReplacement Include='poolingcontainer' Replacement='PoolingContainer' />
   </ItemGroup>
 </Project>
