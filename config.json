@@ -171,10 +171,34 @@
       },
       {
         "groupId": "androidx.camera",
+        "artifactId": "camera-extensions",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Camera.Extensions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.camera",
         "artifactId": "camera-lifecycle",
         "version": "1.1.0",
         "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.Camera.Lifecycle",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-video",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Camera.Video",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-view",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Camera.View",
         "dependencyOnly": false
       },
       {
@@ -1412,8 +1436,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-appcompat-theme",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1421,8 +1445,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-drawablepainter",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.DrawablePainter",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1430,8 +1454,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-flowlayout",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.FlowLayout",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1439,8 +1463,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-pager",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.Pager",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1448,8 +1472,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-pager-indicators",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1457,8 +1481,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-permissions",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.Permissions",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1466,8 +1490,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-placeholder",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.Placeholder",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1475,8 +1499,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-placeholder-material",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1484,8 +1508,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-swiperefresh",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1493,17 +1517,26 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-systemuicontroller",
-        "version": "0.25.0",
-        "nugetVersion": "0.25.0",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
         "nugetId": "Xamarin.Google.Accompanist.SystemUIController",
         "dependencyOnly": false,
         "templateSet": "accompanist"
       },
       {
+        "groupId": "dev.chrisbanes.snapper",
+        "artifactId": "snapper",
+        "version": "0.1.2",
+        "nugetVersion": "0.1.2",
+        "nugetId": "Xamarin.Dev.ChrisBanes.Snapper",
+        "dependencyOnly": false,
+        "templateSet": "dev-chrisbanes-snapper"
+      },
+      {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
-        "version": "1.1.15",
-        "nugetVersion": "1.1.15",
+        "version": "1.0.5",
+        "nugetVersion": "1.0.5",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
         "dependencyOnly": false
       },
@@ -1959,6 +1992,21 @@
           }
         ]
       },
+      {
+        "name": "dev-chrisbanes-snapper",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/dev-chrisbanes-snapper/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      
       {
         "name": "accompanist",
         "mavenRepositoryType": "MavenCentral",
