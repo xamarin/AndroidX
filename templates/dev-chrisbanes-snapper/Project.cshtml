@@ -53,7 +53,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) 
     {
-    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Link="Jars\%(Filename)%(Extension)" />
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Link="Jars\%(Filename)%(Extension)" />
     <JavaSourcesJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" Link="Jars\%(Filename)%(Extension)" />
     }
   </ItemGroup>
@@ -73,8 +73,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\License.md" Pack="true" PackagePath="LICENSE.md" />
-    <None Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\templates\dev-chrisbanes-snapper\License.md" Pack="true" PackagePath="LICENSE.md" />
+    <None Include="..\..\templates\dev-chrisbanes-snapper\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
 
 </Project>
