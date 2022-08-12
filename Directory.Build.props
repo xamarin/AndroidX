@@ -166,5 +166,8 @@
     <AndroidNamespaceReplacement Include='wear-remote-interactions' Replacement='RemoveInteractions' />
     <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />
     <AndroidNamespaceReplacement Include='poolingcontainer' Replacement='PoolingContainer' />
+    <AndroidNamespaceReplacement Include='appactions' Replacement='AppActions' />
+    <AndroidNamespaceReplacement Include='pinappwidget' Replacement='PinAppWidget' />
+    
   </ItemGroup>
 </Project>
