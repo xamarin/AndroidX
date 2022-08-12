@@ -2,8 +2,6 @@
   <PropertyGroup>
     <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
-    <RootNamespace>Annotations</RootNamespace>
-    <AssemblyName>Xamarin.Google.AutoValue.Annotations</AssemblyName>
     <!--
       No warnings for:
        - CS0618: 'member' is obsolete: 'text'
@@ -22,11 +20,43 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>@(Model.NuGetPackageId)</PackageId>
-    <Title>Flogger Bindings for Xamarin.Android</Title>
     <PackageDescription>Xamarin.Android bindings for Flogger (Fluent Logging API for java)</PackageDescription>
     <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    @foreach (var art in @Model.MavenArtifacts) 
+    {
+      <PackageId>@Model.NuGetPackageId</PackageId>
+      <AssemblyName>@Model.NuGetPackageId</AssemblyName>
+      switch(@Model.NuGetPackageId)
+      {
+          case "Xamarin.Flogger":
+            <Title>Xamarin.Flogger</Title>
+            <PackageDescription>
+            Xamarin.Android bindings for Google Flogger
+
+            Flogger: A Fluent Logging API for Java.
+            </PackageDescription>
+            <RootNamespace>Xamarin.Flogger</RootNamespace>
+            <AssemblyName>Xamarin.Flogger</AssemblyName>
+            break; 
+          case "Xamarin.Flogger.SystemBackend":
+            <Title>Xamarin.Flogger.SystemBackend</Title>
+            <PackageDescription>
+            Xamarin.Android bindings for Google Flogger
+
+            Flogger: A Fluent Logging API for Java.
+            </PackageDescription>
+            <AssemblyName>Xamarin.Flogger.SystemBackend</AssemblyName>
+            <RootNamespace>Xamarin.Flogger.SystemBackend</RootNamespace>
+            break; 
+          default:
+            break; 
+      }
+      <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+    }
   </PropertyGroup>
 
   <ItemGroup>
