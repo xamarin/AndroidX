@@ -161,6 +161,7 @@
     <AndroidNamespaceReplacement Include='wear-remote-interactions' Replacement='RemoveInteractions' />
     <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />
     <AndroidNamespaceReplacement Include='poolingcontainer' Replacement='PoolingContainer' />
+    <AndroidNamespaceReplacement Include='sessionprocessor' Replacement='SessionProcessor' />
     
   </ItemGroup>
 </Project>
