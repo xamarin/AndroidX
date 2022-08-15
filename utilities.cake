@@ -538,6 +538,8 @@ Task ("spell-check")
 		        "CheckerFramework",
 		        "CheckerQual",
                 "PoolingContainer",
+                "Dev",
+                "ChrisBanes",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
