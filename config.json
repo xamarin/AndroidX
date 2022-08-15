@@ -1822,6 +1822,15 @@
         "templateSet": "flogger"
       },
       {
+        "groupId": "com.android.installreferrer",
+        "artifactId": "installreferrer",
+        "version": "1.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.Google.Android.InstallReferrer",
+        "dependencyOnly": false,
+        "templateSet": "installreferrer"
+      },
+      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "18.0.2",
@@ -2027,6 +2036,19 @@
         "templates": [
           {
             "templateFile": "templates/flogger/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+        "name": "installreferrer",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/installreferrer/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
