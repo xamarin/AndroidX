@@ -271,4 +271,277 @@
     Java.Lang.Object
   </attr>
   
+  <add-node
+    path="/api/package[@name='androidx.camera.video.impl']/class[@name='VideoCaptureConfig']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="boolean" name="containsOption"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" >
+      <parameter 
+          type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="void" name="findOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+          type="java.lang.String" name="p0" 
+          jni-type="Ljava/lang/String;" not-null="true" 
+          />
+      <parameter 
+          type="androidx.camera.core.impl.Config.OptionMatcher" name="p1" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="androidx.camera.core.impl.Config.OptionPriority" name="getOptionPriority"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.OptionPriority&gt;" name="getPriorities" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      jni-signature="(Landroidx/camera/core/impl/Config$Option;)Ljava/util/Set;" jni-return="Ljava/util/Set&lt;Landroidx/camera/core/impl/Config$OptionPriority;&gt;;" 
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" />
+    </method>
+    <method 
+      visibility="public" static="true" abstract="false" return="boolean" name="hasConflict" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="priority1" 
+        not-null="true" 
+        />
+      <parameter
+        type="androidx.camera.core.impl.Config.OptionPriority"  name="priority2" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.Option&lt;?&gt;&gt;" name="listOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true" 
+      />
+    <method 
+      visibility="public" static="true" abstract="false" return="androidx.camera.core.impl.Config" name="mergeConfigs" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="extendedConfig" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="baseConfig" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false"  name="retrieveOption" return="ValueT"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+       synchronized="false" synthetic="false" 
+       >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOption" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="ValueT" name="p1" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOptionWithPriority" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"  
+      synchronized="false" synthetic="false"
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="p1" 
+        not-null="true" 
+        />
+    </method>
+
+  </add-node>
+
+  <add-node
+    path="/api/package[@name='androidx.camera.video.impl']/class[@name='VideoCaptureLegacyConfig']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="boolean" name="containsOption"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" >
+      <parameter 
+          type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="void" name="findOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+          type="java.lang.String" name="p0" 
+          jni-type="Ljava/lang/String;" not-null="true" 
+          />
+      <parameter 
+          type="androidx.camera.core.impl.Config.OptionMatcher" name="p1" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="androidx.camera.core.impl.Config.OptionPriority" name="getOptionPriority"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.OptionPriority&gt;" name="getPriorities" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" />
+    </method>
+    <method 
+      visibility="public" static="true" abstract="false" return="boolean" name="hasConflict" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="priority1" 
+        not-null="true" 
+        />
+      <parameter
+        type="androidx.camera.core.impl.Config.OptionPriority"  name="priority2" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.Option&lt;?&gt;&gt;" name="listOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true" 
+      />
+      <method 
+      visibility="public" static="true" abstract="false" return="androidx.camera.core.impl.Config" name="mergeConfigs" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="extendedConfig" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="baseConfig" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false"  name="retrieveOption" return="ValueT"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+       synchronized="false" synthetic="false" 
+       >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOption" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="ValueT" name="p1" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOptionWithPriority" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"  
+      synchronized="false" synthetic="false"
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="p1" 
+        not-null="true" 
+        />
+      </method>
+
+  </add-node>
+
+  <!-- 
+    TODO: Bug? Issue?
+    DANGER!!!
+    interface with default package visibility
+    yet it is used in generation of derived classes
+    making it public could create errors during ACW generation
+  -->
+  <attr
+    path="/api/package[@name='androidx.camera.video']/interface[@name='OutputOptions.Builder']"
+    name="visibility"
+    >
+    public
+  </attr>
+
 </metadata>
