@@ -534,9 +534,10 @@ Task ("spell-check")
                 "SplashScreen",
                 "FailureAccess",
                 "ListenableFuture",
-		        "J2Objc",
-		        "CheckerFramework",
-		        "CheckerQual",
+    		        "J2Objc",
+		            "CheckerFramework",
+		            "CheckerQual",
+                "InstallReferrer",
                 "PoolingContainer",
            };
 
@@ -1191,7 +1192,13 @@ Task("verify-namespace-file")
             }
 
             if (unhandled_changes)
-                throw new Exception ("Namespaces were added or removed.");
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"Namespaces were added or removed.");
+                sb.AppendLine($"please run:");
+                sb.AppendLine($"    dotnet cake utilities.cake -t=generate-namespace-file");
+                throw new Exception (sb.ToString());
+            }
         }
     );
 
