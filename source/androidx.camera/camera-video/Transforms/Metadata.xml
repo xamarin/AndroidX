@@ -536,12 +536,22 @@
     interface with default package visibility
     yet it is used in generation of derived classes
     making it public could create errors during ACW generation
-  -->
   <attr
     path="/api/package[@name='androidx.camera.video']/interface[@name='OutputOptions.Builder']"
     name="visibility"
     >
     public
   </attr>
+  -->
+
+  <remove-node 
+    path="/api/package[@name='androidx.camera.video']/class[@name='FileDescriptorOutputOptions.Builder']"
+    />
+  <remove-node 
+    path="/api/package[@name='androidx.camera.video']/class[@name='FileOutputOptions.Builder']"
+    />
+  <remove-node 
+    path="/api/package[@name='androidx.camera.video']/class[@name='MediaStoreOutputOptions.Builder']"
+    />
 
 </metadata>
