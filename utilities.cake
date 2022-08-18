@@ -544,6 +544,8 @@ Task ("spell-check")
                 "SystemBackend",
                 "InstallReferrer",
                 "PoolingContainer",
+                "Dev",
+                "ChrisBanes",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

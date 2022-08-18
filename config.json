@@ -28,24 +28,24 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-compose",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Activity.Compose",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Activity.Ktx",
         "dependencyOnly": false
       },
@@ -171,10 +171,34 @@
       },
       {
         "groupId": "androidx.camera",
+        "artifactId": "camera-extensions",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Camera.Extensions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.camera",
         "artifactId": "camera-lifecycle",
         "version": "1.1.0",
         "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.Camera.Lifecycle",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-video",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Camera.Video",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-view",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Camera.View",
         "dependencyOnly": false
       },
       {
@@ -228,176 +252,176 @@
       {
         "groupId": "androidx.compose.animation",
         "artifactId": "animation",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Animation",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.animation",
         "artifactId": "animation-core",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Animation.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.foundation",
         "artifactId": "foundation",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Foundation",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.foundation",
         "artifactId": "foundation-layout",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Foundation.Layout",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.material",
         "artifactId": "material",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Material",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.material",
         "artifactId": "material-icons-core",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.material",
         "artifactId": "material-icons-extended",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.Extended",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.material",
         "artifactId": "material-ripple",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Material.Ripple",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-livedata",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.LiveData",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-rxjava2",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-saveable",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.Saveable",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-geometry",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Geometry",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-graphics",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Graphics",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-text",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Text",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-tooling",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
-        "artifactId": "ui-tooling-preview",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.compose.ui",
         "artifactId": "ui-tooling-data",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Data",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
+        "artifactId": "ui-tooling-preview",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.compose.ui",
         "artifactId": "ui-unit",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Unit",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-util",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Util",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-viewbinding",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.UI.ViewBinding",
         "dependencyOnly": false
       },
@@ -524,32 +548,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.2.1",
-        "nugetVersion": "7.2.1.1",
+        "version": "7.2.2",
+        "nugetVersion": "7.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.2.1",
-        "nugetVersion": "7.2.1.1",
+        "version": "7.2.2",
+        "nugetVersion": "7.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.2.1",
-        "nugetVersion": "7.2.1.1",
+        "version": "7.2.2",
+        "nugetVersion": "7.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.2.1",
-        "nugetVersion": "7.2.1.1",
+        "version": "7.2.2",
+        "nugetVersion": "7.2.2",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -636,16 +660,16 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment-ktx",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Fragment.Ktx",
         "dependencyOnly": false
       },
@@ -732,16 +756,16 @@
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common-java8",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
         "dependencyOnly": false
       },
@@ -756,113 +780,112 @@
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-core",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-core-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-process",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Process",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-reactivestreams",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-reactivestreams-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-service",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Service",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
         "dependencyOnly": false
       },
-      
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-compose",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-savedstate",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "dependencyOnly": false
       },
@@ -933,64 +956,64 @@
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.UI",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui-ktx",
-        "version": "2.5.0",
-        "nugetVersion": "2.5.0",
+        "version": "2.5.1",
+        "nugetVersion": "2.5.1",
         "nugetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
         "dependencyOnly": false
       },
@@ -1435,12 +1458,103 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "com.google.android.material",
-        "artifactId": "material",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1.1",
-        "nugetId": "Xamarin.Google.Android.Material",
-        "dependencyOnly": false
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-appcompat-theme",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-drawablepainter",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.DrawablePainter",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-flowlayout",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.FlowLayout",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-pager",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.Pager",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-pager-indicators",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-permissions",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.Permissions",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-placeholder",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.Placeholder",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-placeholder-material",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-swiperefresh",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "com.google.accompanist",
+        "artifactId": "accompanist-systemuicontroller",
+        "version": "0.20.3",
+        "nugetVersion": "0.20.3",
+        "nugetId": "Xamarin.Google.Accompanist.SystemUIController",
+        "dependencyOnly": false,
+        "templateSet": "accompanist"
+      },
+      {
+        "groupId": "dev.chrisbanes.snapper",
+        "artifactId": "snapper",
+        "version": "0.1.2",
+        "nugetVersion": "0.1.2",
+        "nugetId": "Xamarin.Dev.ChrisBanes.Snapper",
+        "dependencyOnly": false,
+        "templateSet": "dev-chrisbanes-snapper"
       },
       {
         "groupId": "com.google.assistant.appactions",
@@ -1461,9 +1575,17 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.0",
+        "version": "1.0.5",
+        "nugetVersion": "1.0.5",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "com.google.android.material",
+        "artifactId": "material",
+        "version": "1.6.1",
+        "nugetVersion": "1.6.1.1",
+        "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
       {
@@ -1531,6 +1653,15 @@
         "templateSet": "no-bindings"
       },
       {
+        "groupId": "io.github.aakira",
+        "artifactId": "napier",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
+        "nugetId": "Xamarin.AAkira.Napier",
+        "dependencyOnly": false,
+        "templateSet": "napier"
+      },
+      {
         "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxjava",
         "version": "2.2.21",
@@ -1549,109 +1680,10 @@
         "templateSet": "rxjava"
       },
       {
-        "groupId": "io.github.aakira",
-        "artifactId": "napier",
-        "version": "1.4.1",
-        "nugetVersion": "1.4.1",
-        "nugetId": "Xamarin.AAkira.Napier",
-        "dependencyOnly": false,
-        "templateSet": "napier"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-appcompat-theme",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-drawablepainter",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.DrawablePainter",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-flowlayout",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.FlowLayout",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-pager",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.Pager",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-pager-indicators",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-permissions",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.Permissions",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-placeholder",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.Placeholder",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-placeholder-material",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-swiperefresh",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
-        "groupId": "com.google.accompanist",
-        "artifactId": "accompanist-systemuicontroller",
-        "version": "0.16.0",
-        "nugetVersion": "0.16.0.0",
-        "nugetId": "Xamarin.Google.Accompanist.SystemUIController",
-        "dependencyOnly": false,
-        "templateSet": "accompanist"
-      },
-      {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
-        "version": "3.23.0",
-        "nugetVersion": "3.23.0",
+        "version": "3.24.0",
+        "nugetVersion": "3.24.0",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
@@ -2073,6 +2105,21 @@
           }
         ]
       },
+      {
+        "name": "dev-chrisbanes-snapper",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/dev-chrisbanes-snapper/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      
       {
         "name": "accompanist",
         "mavenRepositoryType": "MavenCentral",
