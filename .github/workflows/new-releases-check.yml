@@ -35,6 +35,7 @@ jobs:
         --
         config.json
         update
+        -dep:https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/main/config.json
 
     - name: Create Pull Request
       id: cpr
