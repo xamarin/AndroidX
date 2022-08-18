@@ -43,6 +43,11 @@
   </ItemGroup>
   
   <ItemGroup>
+    <!--
+      must be used before `com.google.`
+    -->
+    <AndroidNamespaceReplacement Include='com.google.common.flogger' Replacement='Xamarin.Google.Flogger' />    
+
     <!-- Company namespace changes -->
     <AndroidNamespaceReplacement Include='androidx.' Replacement='AndroidX' />
     <AndroidNamespaceReplacement Include='com.google.gson' Replacement='GoogleGson' />
@@ -161,6 +166,8 @@
     <AndroidNamespaceReplacement Include='wear-remote-interactions' Replacement='RemoveInteractions' />
     <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />
     <AndroidNamespaceReplacement Include='poolingcontainer' Replacement='PoolingContainer' />
+    <AndroidNamespaceReplacement Include='appactions' Replacement='AppActions' />
+    <AndroidNamespaceReplacement Include='pinappwidget' Replacement='PinAppWidget' />
     
   </ItemGroup>
 </Project>
