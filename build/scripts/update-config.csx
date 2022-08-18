@@ -77,6 +77,9 @@ foreach (var art in config[0].Artifacts.Where (a => !a.DependencyOnly)) {
 		}
 	}
 
+	if (art.Frozen)
+		package_name = "# " + package_name;
+  
 	// Bump the revision version of all NuGet versions
 	// If there isn't currently a revision version, make it ".1"
 	if (should_minor_bump)
@@ -131,6 +134,10 @@ static Artifact FindMavenArtifact (List<MyArray> config, ArtifactModel artifact)
 
 static bool NeedsUpdate (ArtifactModel model, Artifact artifact)
 {
+	// Don't update package if it's "Frozen"
+	if (model.Frozen)
+		return false;
+    
 	// Get latest stable version
 	var latest = GetLatestVersion (artifact);
 
@@ -305,6 +312,9 @@ public class ArtifactModel
 	[DefaultValue ("")]
 	[JsonProperty ("dependencyOnly")]
 	public bool DependencyOnly { get; set; }
+
+	[JsonProperty ("frozen")]
+	public bool Frozen { get; set; }
 
 	[JsonProperty ("excludedRuntimeDependencies")]
 	public string ExcludedRuntimeDependencies { get; set; }
