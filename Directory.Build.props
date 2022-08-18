@@ -162,6 +162,7 @@
     <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />
     <AndroidNamespaceReplacement Include='poolingcontainer' Replacement='PoolingContainer' />
     <AndroidNamespaceReplacement Include='sessionprocessor' Replacement='SessionProcessor' />
+    <AndroidNamespaceReplacement Include='dev.chrisbanes.snapper' Replacement='Xamarin.Dev.ChrisBanes.Snapper' />
     
   </ItemGroup>
 </Project>
