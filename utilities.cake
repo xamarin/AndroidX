@@ -537,8 +537,15 @@ Task ("spell-check")
     		        "J2Objc",
 		            "CheckerFramework",
 		            "CheckerQual",
+                "WindowRxJava2",
+                "WindowRxJava3",
+                "AppActions",
+                "Rx3",
+                "SystemBackend",
                 "InstallReferrer",
                 "PoolingContainer",
+                "Dev",
+                "ChrisBanes",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

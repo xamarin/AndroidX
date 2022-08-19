@@ -15,6 +15,9 @@
     <FirstParty Include="kotlinx-coroutines*.jar" />  
     <FirstParty Include="Xamarin.Google.Guava.*.dll" />
     <FirstParty Include="Xamarin.AAkira.*.dll" />
+    <FirstParty Include="Xamarin.Dev.ChrisBanes.Snapper.dll" />
+    <FirstParty Include="Xamarin.Flogger.dll" />
+    <FirstParty Include="Xamarin.Flogger.*.dll" />
 
     <FirstParty Include="guava*.jar" />
     <FirstParty Include="checker-qual.jar" />
