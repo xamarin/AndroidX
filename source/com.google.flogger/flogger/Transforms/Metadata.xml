@@ -29,5 +29,24 @@
         >
         protected
     </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend']/class[@name='BaseMessageFormatter']/method[@name='addParameterImpl' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='com.google.common.flogger.parameter.Parameter']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend']/class[@name='BaseMessageFormatter']/method[@name='buildImpl' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend']/class[@name='BaseMessageFormatter']/method[@name='buildImpl' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
 
 </metadata>
