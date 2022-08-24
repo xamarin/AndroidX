@@ -1,0 +1,15 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend.system']/class[@name='AbstractLogRecord']/method[@name='setResourceBundle' and count(parameter)=1 and parameter[1][@type='java.util.ResourceBundle']]"
+        name="propertyName"
+        >
+        ResourceBundle
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.common.flogger.backend.system']/class[@name='AbstractLogRecord']/method[@name='setResourceBundleName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="propertyName"
+        >
+        ResourceBundleName
+    </attr>
+
+</metadata>
