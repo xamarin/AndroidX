@@ -42,6 +42,12 @@
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
   </ItemGroup>
   
+  <!-- Folders that _._ files need to go into for packages without managed libraries -->
+  <ItemGroup>
+    <AndroidXNuGetLibFolders Include="lib\monoandroid12.0" />
+    <AndroidXNuGetLibFolders Include="lib\net6.0-android31.0" />
+  </ItemGroup>  
+  
   <ItemGroup>
     <!--
       must be used before `com.google.`
