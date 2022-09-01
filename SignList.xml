@@ -22,6 +22,7 @@
     
     <FirstParty Include="guava*.jar" />
     <FirstParty Include="checker-qual.jar" />
+    <FirstParty Include="checker-compat-qual.jar" />
     <FirstParty Include="j2objc-annotations.jar" />  
   </ItemGroup>
 
