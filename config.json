@@ -1396,8 +1396,8 @@
       {
         "groupId": "androidx.webkit",
         "artifactId": "webkit",
-        "version": "1.4.0",
-        "nugetVersion": "1.4.0.8",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.AndroidX.WebKit",
         "dependencyOnly": false
       },
@@ -1560,8 +1560,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
-        "version": "1.1.16",
-        "nugetVersion": "1.1.16",
+        "version": "1.1.17",
+        "nugetVersion": "1.1.17",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
         "dependencyOnly": false
       },
@@ -1674,8 +1674,8 @@
       {
         "groupId": "dev.chrisbanes.snapper",
         "artifactId": "snapper",
-        "version": "0.2.2",
-        "nugetVersion": "0.2.2",
+        "version": "0.3.0",
+        "nugetVersion": "0.3.0",
         "nugetId": "Xamarin.Dev.ChrisBanes.Snapper",
         "dependencyOnly": false,
         "templateSet": "dev-chrisbanes-snapper"
@@ -1709,19 +1709,19 @@
       },
       {
         "groupId": "org.checkerframework",
-        "artifactId": "checker-qual",
-        "version": "3.24.0",
-        "nugetVersion": "3.24.0",
-        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
+        "artifactId": "checker-compat-qual",
+        "version": "2.5.5",
+        "nugetVersion": "2.5.5",
+        "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
       },
       {
         "groupId": "org.checkerframework",
-        "artifactId": "checker-compat-qual",
-        "version": "2.5.5",
-        "nugetVersion": "2.5.5",
-        "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual",
+        "artifactId": "checker-qual",
+        "version": "3.25.0",
+        "nugetVersion": "3.25.0",
+        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
       },
@@ -1875,16 +1875,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2.1",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tasks",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.1",
+        "version": "18.0.2",
+        "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Tasks",
         "dependencyOnly": true
       },
@@ -1892,7 +1892,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
         "version": "17.1.0",
-        "nugetVersion": "117.1.0.6",
+        "nugetVersion": "117.1.0.7",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
@@ -1900,15 +1900,15 @@
         "groupId": "com.google.code.findbugs",
         "artifactId": "jsr305",
         "version": "3.0.2",
-        "nugetVersion": "3.0.2.4",
+        "nugetVersion": "3.0.2.6",
         "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.11.0",
-        "nugetVersion": "2.4.0.3",
+        "version": "2.10.0",
+        "nugetVersion": "2.10.0.2",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
@@ -1916,7 +1916,7 @@
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appindexing",
         "version": "20.0.0",
-        "nugetVersion": "120.0.0.2",
+        "nugetVersion": "120.0.0.9",
         "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
       },
@@ -1927,7 +1927,7 @@
         "nugetVersion": "1.0.10",
         "nugetId": "Xamarin.AndroidX.Migration",
         "dependencyOnly": true
-      },
+      }
     ],
     "templateSets": [
       {
