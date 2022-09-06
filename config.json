@@ -1563,6 +1563,7 @@
         "version": "1.1.17",
         "nugetVersion": "1.1.17",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
+        "excludedRuntimeDependencies": "androidx.compose.runtime.runtime,androidx.compose.material.material",
         "dependencyOnly": false
       },
       {
@@ -1907,8 +1908,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.10.0",
-        "nugetVersion": "2.10.0.2",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
