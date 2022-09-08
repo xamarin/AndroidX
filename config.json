@@ -1560,11 +1560,11 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
-        "version": "1.1.17",
-        "nugetVersion": "1.1.17",
+        "version": "1.1.16",
+        "nugetVersion": "1.1.16",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
-        "excludedRuntimeDependencies": "androidx.compose.runtime.runtime,androidx.compose.material.material",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "frozen": true
       },
       {
         "groupId": "com.google.android.material",
