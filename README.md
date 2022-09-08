@@ -18,6 +18,9 @@ With the release of AndroidX, Android Support is now considered deprecated and w
 - This repository binds over 200 (2022-09) AndroidX libraries that are published to [NuGet.org](https://nuget.org). The full 
   package list can be found in [config.json](config.json).
 - AndroidX Java artifacts come from [Google's Maven Respository](https://maven.google.com/web/index.html#).
+- dependency Maven artifacts come from different maven repositories mostly:
+  - [Google's Maven Respository](https://maven.google.com/web/index.html#) and
+  - [Maven/Sonatype Central](https://repo1.maven.org/maven2/)
 - Google's release notes for AndroidX libraries are available [here](https://developer.android.com/jetpack/androidx/versions/stable-channel).
 - The major/minor/patch version numbers mirror the AndroidX library version. For example, the NuGet `Xamarin.AndroidX.Core 1.3.2.1` 
   binds version `1.3.2` of the AndroidX library `androidx.core:core`.
@@ -40,10 +43,13 @@ Full list of maven artifact with versions to NuGet mappings with versions:
 
 The license for this repository is specified in [LICENSE.md](LICENSE.md)
 
+Detailed metada with licenses can be found in: [Component Governance cgmanifes.json](./cgmanifest.json)
+
 ## Building
 
 Instructions for building this repository are specified in [BUILDING.md](BUILDING.md)
 
+In depth building instructions: [./docs/build.md](./docs/build.md).
 
 ## Contribution Guidelines
 
