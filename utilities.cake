@@ -1067,6 +1067,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("list-artifacts")
     //.IsDependentOn ("nuget-structure-analysis")
     .IsDependentOn ("generate-namespace-file")
+    .IsDependentOn ("tools-executive-order")
     .Does
     (
         () =>
@@ -1174,6 +1175,137 @@ Task("verify-namespace-file")
 
             if (unhandled_changes)
                 throw new Exception ("Namespaces were added or removed.");
+        }
+    );
+
+Task("tools-executive-order")
+    .IsDependentOn ("tools-executive-oreder-csv")
+    .IsDependentOn ("tools-executive-oreder-detailed-markdown")
+    ;
+
+Task("tools-executive-oreder-csv")
+    .Does
+    (
+        () =>
+        {
+            /*
+                dotnet --info
+                dotnet --list-sdks
+                dotnet --list-runtimes
+
+                too much info
+                let's parse globel.json for now
+            */
+
+
+            /*
+            xamarin-android-binderator --help
+            -c, --config=VALUE         JSON Config File.
+            -b, --basepath=VALUE       Default Base Path.
+            -h, --help                 show this message and exit
+
+            no version info
+
+            let's parse 
+                dotnet tool list --global
+            */
+            StringBuilder sb = new StringBuilder();
+			string process = null;
+			string process_args = null;
+			IEnumerable<string> redirectedStandardOutput = null;
+			int exitCodeWithoutArguments;
+			ProcessSettings process_settings = null;
+
+			process = "dotnet";
+			process_args = "tool list --global";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+            sb.AppendLine(redirectedStandardOutput.ToString());
+
+
+			System.IO.File.WriteAllLines("./output/tools-executive-oreder.csv", redirectedStandardOutput.ToArray());
+
+            return;
+        }
+    );
+
+
+Task("tools-executive-oreder-detailed-markdown")
+    .Does
+    (
+        () =>
+        {
+            StringBuilder sb = new StringBuilder();
+			string process = null;
+			string process_args = null;
+			IEnumerable<string> redirectedStandardOutput = null;
+			int exitCodeWithoutArguments;
+			ProcessSettings process_settings = null;
+
+			process = "dotnet";
+			process_args = "--info";
+            process_settings = new ProcessSettings ()
+                                                {
+                                                    Arguments = process_args,
+                                                    RedirectStandardOutput = true,
+                                                }
+                                                .SetRedirectStandardOutput(true);                                               
+            redirectedStandardOutput = null;
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            //? System.Diagnostics.Process.ReadToEnd();
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+            sb.AppendLine(redirectedStandardOutput.ToString());
+
+			process = "dotnet";
+			process_args = "--list-sdks";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+            };
+            redirectedStandardOutput = null;
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+            sb.AppendLine(redirectedStandardOutput.ToString());
+
+			process = "dotnet";
+			process_args = "--list-runtimes";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+            redirectedStandardOutput = null;
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+            sb.AppendLine(redirectedStandardOutput.ToString());
+
+			process = "dotnet";
+			process_args = "cake --info";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+            redirectedStandardOutput = null;
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+            sb.AppendLine(redirectedStandardOutput.ToString());
+
+			System.IO.File.WriteAllText("./output/tools-executive-oreder.md", sb.ToString());
+
+            return;
         }
     );
 
