@@ -1,0 +1,31 @@
+name: 🆕 New AndroidX package binding request
+description: Request for a new Google AndroidX package to be bound.
+title: 'Bind "example.package"'
+labels: ["new-package-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New package bindings are prioritized based on demand.  Before filing
+        this issue, use this link to see if the package has already been requested:
+
+        https://github.com/xamarin/AndroidX/issues?q=is%3Aissue+is%3Aopen+label%3Anew-package-request
+
+        If there is already an issue for the desired package, add a +1 emoji reaction
+        to the issue to vote for the issue instead of filing this one.
+
+        If there is no existing issue, go ahead and file this issue.
+
+        Note that, in general, we only bind *stable* packages. We do not bind pre-release packages.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What package would you like to see a new binding for?
+      placeholder: Package name / link, any additional information
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        By opening the issue you agree to follow this project's [Code of Conduct](https://dotnetfoundation.org/about/code-of-conduct).

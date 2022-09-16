@@ -1,0 +1,26 @@
+name: 📦 Update AndroidX package binding request
+description: Request for a newer version of a package in this repository to be bound.
+title: 'Update "example.package" to "1.1.0"'
+labels: 'update-package-request'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Note that this template rarely needs to be used. We have an automated process that runs periodically
+        that files a PR to update the packages to the latest *stable* releases from Google.
+
+        It may take a few weeks to get new versions committed and released.
+
+        Note that, in general, we only bind *stable* versions. We do not bind pre-release package versions.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What package needs to be bumped to a newer version?
+      placeholder: Package name / link, any additional information
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        By opening the issue you agree to follow this project's [Code of Conduct](https://dotnetfoundation.org/about/code-of-conduct).

@@ -1,0 +1,45 @@
+name: "🤔 Something else?"
+description: Not sure where your issue fits? We'll direct it the right place!
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report! Please make sure to add as much detail as you can.
+  - type: dropdown
+    id: android-type
+    attributes:
+      label: Android application type
+      description: In what type(s) of Android application(s) do you see this issue?
+      multiple: true
+      options:
+      - Classic Xamarin.Android (MonoAndroid12.0, etc.)
+      - Android for .NET (net6.0-android, etc.)
+      - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: platform-versions
+    attributes:
+      label: Affected platform version
+      description: Please provide the version number of the platform you see this issue on.
+      placeholder: E.g. VS 2022 17.0.1, VSMac 8.10, .NET 6.0.100, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please give us a detailed description of the issue that you're seeing. You can add screenshots and videos as well.
+      placeholder: Tell us what you see! (And how it's different from what you expected to see!)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any (short!) relevant log output.  Longer logs can be attached as .txt files.
+      render: shell
+  - type: markdown
+    attributes:
+      value: |
+        By opening the issue you agree to follow this project's [Code of Conduct](https://dotnetfoundation.org/about/code-of-conduct).

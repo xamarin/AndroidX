@@ -1,0 +1,557 @@
+<metadata>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Defaults']/method[@name='getConfig' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setBackgroundExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setUseCaseEventCallback' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.UseCase.EventCallback']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Defaults']/method[@name='getConfig' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setBackgroundExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setUseCaseEventCallback' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.UseCase.EventCallback']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setTargetName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setTargetClass' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;androidx.camera.video.VideoCaptureLegacy&gt;']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.OutputFileOptions.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='getUseCaseConfig' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setSurfaceOccupancyPriority' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setSessionOptionUnpacker' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.SessionConfig.OptionUnpacker']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setDefaultSessionConfig' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.SessionConfig']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setDefaultCaptureConfig' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.CaptureConfig']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setCaptureOptionUnpacker' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.CaptureConfig.OptionUnpacker']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setCameraSelector' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.CameraSelector']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setTargetRotation' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setTargetResolution' and count(parameter)=1 and parameter[1][@type='android.util.Size']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setTargetAspectRatio' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setSupportedResolutions' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;android.util.Pair&lt;java.lang.Integer, android.util.Size[]&gt;&gt;']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setMaxResolution' and count(parameter)=1 and parameter[1][@type='android.util.Size']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCaptureLegacy.Builder']/method[@name='setDefaultResolution' and count(parameter)=1 and parameter[1][@type='android.util.Size']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setTargetName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setTargetClass' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;androidx.camera.video.VideoCapture&lt;T&gt;&gt;']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='getUseCaseConfig' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setSurfaceOccupancyPriority' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setSessionOptionUnpacker' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.SessionConfig.OptionUnpacker']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setDefaultSessionConfig' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.SessionConfig']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setDefaultCaptureConfig' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.CaptureConfig']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setCaptureOptionUnpacker' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.CaptureConfig.OptionUnpacker']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setCameraSelector' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.CameraSelector']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setTargetRotation' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setTargetResolution' and count(parameter)=1 and parameter[1][@type='android.util.Size']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setTargetAspectRatio' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setSupportedResolutions' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;android.util.Pair&lt;java.lang.Integer, android.util.Size[]&gt;&gt;']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setMaxResolution' and count(parameter)=1 and parameter[1][@type='android.util.Size']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setDefaultResolution' and count(parameter)=1 and parameter[1][@type='android.util.Size']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='VideoEncoderConfigDefaultResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='VideoEncoderConfigCamcorderProfileResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+  path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioSourceSettingsCamcorderProfileResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioEncoderConfigCamcorderProfileResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioSourceSettingsDefaultResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioEncoderConfigDefaultResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  
+  <add-node
+    path="/api/package[@name='androidx.camera.video.impl']/class[@name='VideoCaptureConfig']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="boolean" name="containsOption"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" >
+      <parameter 
+          type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="void" name="findOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+          type="java.lang.String" name="p0" 
+          jni-type="Ljava/lang/String;" not-null="true" 
+          />
+      <parameter 
+          type="androidx.camera.core.impl.Config.OptionMatcher" name="p1" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="androidx.camera.core.impl.Config.OptionPriority" name="getOptionPriority"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.OptionPriority&gt;" name="getPriorities" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      jni-signature="(Landroidx/camera/core/impl/Config$Option;)Ljava/util/Set;" jni-return="Ljava/util/Set&lt;Landroidx/camera/core/impl/Config$OptionPriority;&gt;;" 
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" />
+    </method>
+    <method 
+      visibility="public" static="true" abstract="false" return="boolean" name="hasConflict" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="priority1" 
+        not-null="true" 
+        />
+      <parameter
+        type="androidx.camera.core.impl.Config.OptionPriority"  name="priority2" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.Option&lt;?&gt;&gt;" name="listOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true" 
+      />
+    <method 
+      visibility="public" static="true" abstract="false" return="androidx.camera.core.impl.Config" name="mergeConfigs" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="extendedConfig" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="baseConfig" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false"  name="retrieveOption" return="ValueT"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+       synchronized="false" synthetic="false" 
+       >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOption" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="ValueT" name="p1" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOptionWithPriority" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"  
+      synchronized="false" synthetic="false"
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="p1" 
+        not-null="true" 
+        />
+    </method>
+
+  </add-node>
+
+  <add-node
+    path="/api/package[@name='androidx.camera.video.impl']/class[@name='VideoCaptureLegacyConfig']"
+    >
+    <method 
+      visibility="public" static="false" abstract="false" return="boolean" name="containsOption"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" >
+      <parameter 
+          type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="void" name="findOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+          type="java.lang.String" name="p0" 
+          jni-type="Ljava/lang/String;" not-null="true" 
+          />
+      <parameter 
+          type="androidx.camera.core.impl.Config.OptionMatcher" name="p1" 
+          not-null="true" 
+          />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="androidx.camera.core.impl.Config.OptionPriority" name="getOptionPriority"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.OptionPriority&gt;" name="getPriorities" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;?&gt;" name="p0" 
+        not-null="true" />
+    </method>
+    <method 
+      visibility="public" static="true" abstract="false" return="boolean" name="hasConflict" 
+      deprecated="not deprecated" final="false" bridge="false" native="false" 
+      synchronized="false" synthetic="false" 
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="priority1" 
+        not-null="true" 
+        />
+      <parameter
+        type="androidx.camera.core.impl.Config.OptionPriority"  name="priority2" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="java.util.Set&lt;androidx.camera.core.impl.Config.Option&lt;?&gt;&gt;" name="listOptions" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true" 
+      />
+      <method 
+      visibility="public" static="true" abstract="false" return="androidx.camera.core.impl.Config" name="mergeConfigs" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      return-not-null="true"
+      >
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="extendedConfig" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config" name="baseConfig" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false"  name="retrieveOption" return="ValueT"
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+       synchronized="false" synthetic="false" 
+       >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOption" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"
+      synchronized="false" synthetic="false" 
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="ValueT" name="p1" 
+        />
+    </method>
+    <method 
+      visibility="public" static="false" abstract="false" return="ValueT" name="retrieveOptionWithPriority" 
+      deprecated="not deprecated" final="false" bridge="false" native="false"  
+      synchronized="false" synthetic="false"
+      >
+      <typeParameters>
+        <typeParameter name="ValueT" classBound="java.lang.Object" jni-classBound="Ljava/lang/Object;" />
+      </typeParameters>
+      <parameter 
+        type="androidx.camera.core.impl.Config.Option&lt;ValueT&gt;" name="p0" 
+        not-null="true" 
+        />
+      <parameter 
+        type="androidx.camera.core.impl.Config.OptionPriority" name="p1" 
+        not-null="true" 
+        />
+      </method>
+
+  </add-node>
+
+  <!-- 
+    TODO: Bug? Issue?
+    DANGER!!!
+    interface with default package visibility
+    yet it is used in generation of derived classes
+    making it public could create errors during ACW generation
+  <attr
+    path="/api/package[@name='androidx.camera.video']/interface[@name='OutputOptions.Builder']"
+    name="visibility"
+    >
+    public
+  </attr>
+  -->
+
+  <remove-node 
+    path="/api/package[@name='androidx.camera.video']/class[@name='FileDescriptorOutputOptions.Builder']"
+    />
+  <remove-node 
+    path="/api/package[@name='androidx.camera.video']/class[@name='FileOutputOptions.Builder']"
+    />
+  <remove-node 
+    path="/api/package[@name='androidx.camera.video']/class[@name='MediaStoreOutputOptions.Builder']"
+    />
+
+</metadata>

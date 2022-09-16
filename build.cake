@@ -628,7 +628,7 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    var settings = new DotNetMSBuildSettings()
+    DotNetMSBuildSettings settings = new DotNetMSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
@@ -688,7 +688,7 @@ Task("samples-generate-all-targets")
     // make a big .targets file that pulls in everything
     var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
     var itemGroup = new XElement(xmlns + "ItemGroup");
-    foreach (var nupkg in GetFiles("./output/*.nupkg")) {
+    foreach (var nupkg in GetFiles("./output/*.nupkg").OrderBy(fp => fp.FullPath)) {
         Information($"NuGet package = {nupkg}");
 
         // Skip Wear as it has special implications requiring more packages to be used properly in an app
@@ -703,6 +703,13 @@ Task("samples-generate-all-targets")
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
+
+        if ( match.Groups[1].Value == "Xamarin.AndroidX.Security.SecurityCrypto" )
+        {
+            // MAUI uses pinned/locked/exact preview version 1.1.0-alpha03 - skipit
+            continue;
+        }
+
         itemGroup.Add(new XElement(xmlns + "PackageReference",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
@@ -711,6 +718,12 @@ Task("samples-generate-all-targets")
 
     var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
     xdoc.Save("./output/AllPackages.targets");
+
+    // ... and Directory.packages.props for central package management
+    // 
+    string content_original = System.IO.File.ReadAllText("./output/AllPackages.targets");
+    string content_new      = content_original.Replace("PackageReference", "PackageVersion");
+    System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
 });
 
 Task("samples")
@@ -724,23 +737,43 @@ Task("samples")
     CleanDirectories(packagesPath);
 
     // build the samples
-    var settings = new MSBuildSettings()
+    MSBuildSettings settings_msbuild = new MSBuildSettings()
         .SetConfiguration(CONFIGURATION)
         .SetVerbosity(VERBOSITY)
         .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.binlog")
+        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog")
         .WithRestore()
         .WithProperty("RestorePackagesPath", packagesPath)
         .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings_msbuild.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings.ToolPath = MSBUILD_PATH;
+        settings_msbuild.ToolPath = MSBUILD_PATH;
 
-    MSBuild("./samples/BuildAll/BuildAll.sln", settings);
+    string[] solutions = new string[]
+    {
+        "./samples/BuildAll/BuildAll.sln",
+        "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
+        "./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
+        //"./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
+        //"./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+    };
+
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"MSBuild          {solution} / {filename}");    
+        MSBuild(solution, settings_msbuild.EnableBinaryLogger($"./output/samples.{filename}.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog"));
+    }
+
+    RunTarget("samples-dotnet");
+
+    return;
 });
 
 Task("samples-dotnet")
@@ -764,12 +797,28 @@ Task("samples-dotnet")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetRestore("./samples/BuildAll/BuildAllDotNet.sln", new DotNetRestoreSettings
+    string[] solutions = new string[]
     {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/samples-dotnet-restore.binlog")
-    });
+        "./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+        "./samples/dotnet/BuildAllMauiApp.sln",
+        "./samples/dotnet/BuildAllXamarinForms.sln",
+    };
 
-    DotNetMSBuild("./samples/BuildAll/BuildAllDotNet.sln", settings);
+    foreach(string solution in solutions)
+    {
+        FilePath fp_solution = new FilePath(solution);
+        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
+        Information($"=====================================================================================================");
+        Information($"DotNetMSBuild        {solution} / {filename}");    
+        DotNetRestore(solution, new DotNetRestoreSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-restore-{filename}.binlog")
+        });
+        DotNetBuild(solution, new DotNetBuildSettings
+        {
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+        });
+    }
 });
 
 Task("api-diff")
@@ -925,7 +974,7 @@ Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
-    .IsDependentOn ("samples-dotnet");
+    ;
 
 Task ("ci")
     .IsDependentOn ("check-tools")
@@ -933,7 +982,7 @@ Task ("ci")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
-    .IsDependentOn ("samples-dotnet");
+    ;
 
 // for local builds, conditionally do the first binderate
 if (FileExists ("./generated/AndroidX.sln")) {
