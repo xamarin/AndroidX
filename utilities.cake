@@ -8,7 +8,7 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.2.1
 #addin nuget:?package=Mono.Cecil&version=0.11.4
 
-#addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.1
+#addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.2
 #addin nuget:?package=HolisticWare.Core.Net.HTTP&version=0.0.1
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.1
 
@@ -353,10 +353,12 @@ Task ("list-artifacts")
             lines2.Add(Environment.NewLine);
             lines2.Add(Environment.NewLine);
             // | Maven Fully Qualified Artifact                                       | NuGet Package                                                        |
-            lines1.Add($@"|{space.PadRight(width1)}|{space.PadRight(width1)}|");
-            lines1.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
-            lines2.Add($@"|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
-            lines2.Add($@"|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|");
+            lines1.Add($@"|{new string(' ', 4)}|{space.PadRight(width1)}|{space.PadRight(width1)}|");
+            lines1.Add($@"|{new string('-', 4)}|{dash.PadRight(width1, '-')}|{dash.PadRight(width1, '-')}|");
+            lines2.Add($@"|{new string(' ', 4)}|{space.PadRight(width1)}|{space.PadRight(width2)}|{space.PadRight(width1)}|{space.PadRight(width2)}|");
+            lines2.Add($@"|{new string('-', 4)}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|{dash.PadRight(width1, '-')}|{dash.PadRight(width2, '-')}|");
+
+            int i = 1;
 
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
@@ -374,11 +376,14 @@ Task ("list-artifacts")
 
                 string maven = $"{group_id}:{artifact_id}";
                 string nuget = $"{nuget_id}";
-                string line1 = $@"|{maven.PadRight(width1)}|{nuget.PadRight(width1)}|";
-                string line2 = $@"|{maven.PadRight(width1)}|{artifact_v.PadRight(width2)}|{nuget.PadRight(width1)}|{nuget_v.PadRight(width2)}|";
+                string index = i.ToString();
+                string line1 = $@"|{index.PadLeft(4)}|{maven.PadRight(width1)}|{nuget.PadRight(width1)}|";
+                string line2 = $@"|{index.PadLeft(4)}|{maven.PadRight(width1)}|{artifact_v.PadRight(width2)}|{nuget.PadRight(width1)}|{nuget_v.PadRight(width2)}|";
 
                 lines1.Add(line1);
                 lines2.Add(line2);
+
+                i++;
             }
 
             EnsureDirectoryExists("./output/");
@@ -386,7 +391,9 @@ Task ("list-artifacts")
 			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions.md", lines2.ToArray());
 			System.IO.File.WriteAllLines($"./output/artifact-list-{DateTime.Now.ToString("yyyyMMdd")}.md", lines1.ToArray());
 			System.IO.File.WriteAllLines($"./output/artifact-list-with-versions-{DateTime.Now.ToString("yyyyMMdd")}.md", lines2.ToArray());
-
+            EnsureDirectoryExists("./docs/");
+			System.IO.File.WriteAllLines($"./docs/artifact-list.md", lines1.ToArray());
+			System.IO.File.WriteAllLines($"./docs/artifact-list-with-versions.md", lines2.ToArray());
         }
     );
 
@@ -493,6 +500,23 @@ Task ("spell-check")
                 "MaterialIcons",
                 "Saveable",
                 "Util",
+                "Accompanist",
+                "Compose",
+                "Data",
+                "Preview",
+                "Theme",
+                "Tooling",
+                "AAkira",
+                "Napier",
+                "DrawablePainter",
+                "FlowLayout",
+                "Pager",
+                "Indicators",
+                "Permissions",
+                "Placeholder",
+                "Material",
+                "SwipeRefresh",
+                "SystemUIController",
                 "ProfileInstaller",
                 "Kotlin",
                 "StdLib",
@@ -517,9 +541,19 @@ Task ("spell-check")
                 "SplashScreen",
                 "FailureAccess",
                 "ListenableFuture",
-		        "J2Objc",
-		        "CheckerFramework",
-		        "CheckerQual",
+                "J2Objc",
+                "CheckerFramework",
+                "CheckerQual",
+                "CheckerCompatQual",
+                "WindowRxJava2",
+                "WindowRxJava3",
+                "AppActions",
+                "Rx3",
+                "SystemBackend",
+                "InstallReferrer",
+                "PoolingContainer",
+                "Dev",
+                "ChrisBanes",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -1067,6 +1101,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("list-artifacts")
     //.IsDependentOn ("nuget-structure-analysis")
     .IsDependentOn ("generate-namespace-file")
+    .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
     .Does
     (
@@ -1083,6 +1118,8 @@ Task ("read-analysis-files")
                 "./output/nugets-with-changed-APIs.md",
                 "./output/commands-open-file.sh",
                 "./output/artifacts_sdk_targets.md",
+                "./output/ci-publish-log.txt",
+                "./output/name-tag.md",
             };
 
             if ( ! FileExists("./output/spell-errors.txt") )
@@ -1100,6 +1137,125 @@ Task ("read-analysis-files")
          	};
 			int exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
 			Information("Exit code: {0}", exitCodeWithoutArguments);
+        }
+    );
+
+// notes for published artifacts by tags collected from CI builds after publishing/pushing
+// it was very handy when we need to delist packages
+// https://github.com/moljac/HolisticWare.WebSite.Notes/tree/master/xamarin/products/xamarin-platform/traditional-standard/xamarin.android/advanced/bindings/android-ecosystem/androidx/updates/tags
+Task("generate-markdown-publish-log")
+    .Does
+    (
+        () =>
+        {
+            string ci_publish_log_file = "./output/ci-publish-log.txt";
+
+            string[] ci_publish_log_lines = null;
+
+            if (System.IO.File.Exists(ci_publish_log_file))
+            {
+                ci_publish_log_lines = System.IO.File.ReadAllLines(ci_publish_log_file);
+            }
+            else
+            {
+                Error("No log file found");
+                Error($"     save ci log to {ci_publish_log_file}");
+
+                FileWriteText(ci_publish_log_file, $"{ci_publish_log_file}          paste log from CI");
+
+                return;
+            }
+
+            int row = 1;
+            string n1 = null;
+            string n2 = null;
+            List<string> packages           = new List<string>();
+            List<string> packages_published = new List<string>();
+            List<string> packages_rejected  = new List<string>();
+
+
+            foreach (string s in ci_publish_log_lines)
+            {
+                if (s.Contains("Pushing ") && s.Contains(".nupkg to 'https://www.nuget.org/api/v2/package'..."))
+                {
+                    n1 = s.Substring(37, s.Length - 39);
+                    n2 = n1.Replace(" to 'https://www.nuget.org/api/v2/package'.", "");
+
+                    packages.Add(n2);
+
+                    if
+                        (
+                            ci_publish_log_lines[row+1].Contains("Conflict https://www.nuget.org/api/v2/package")
+                            &&
+                            ci_publish_log_lines[row+2].Contains(".nupkg' already exists at feed 'https://www.nuget.org/api/v2/package'.")
+                        )
+                    {
+                        packages_rejected.Add(n2);
+                    }
+                    else if
+                        (
+                            ci_publish_log_lines[row+2].Contains("Created https://www.nuget.org/api/v2/package")
+                            &&
+                            ci_publish_log_lines[row+3].Contains("Your package was pushed.")
+                        )
+                    {
+                        packages_published.Add(n2);
+                    }
+                    else if
+                        (
+                            ci_publish_log_lines[row+1].Contains("Created https://www.nuget.org/api/v2/package")
+                            &&
+                            // if warning is present
+                            ci_publish_log_lines[row+2].Contains("Your package was pushed.")   
+                        )
+                    {
+                        packages_published.Add(n2);
+                    }
+                    else
+                    {
+                        Error($"n1                          = {n1}");
+                        Error($"n2                          = {n2}");
+                        Error($"ci_publish_log_lines[row+1] = {ci_publish_log_lines[row+1]}");
+                        Error($"ci_publish_log_lines[row+2] = {ci_publish_log_lines[row+2]}");
+                        Error($"ci_publish_log_lines[row+3] = {ci_publish_log_lines[row+3]}");
+                        Error($"ci_publish_log_lines[row+4] = {ci_publish_log_lines[row+4]}");
+                    }
+                }
+
+                row++;
+            }
+
+            string dump_packages_published  = string.Join($"{Environment.NewLine}", packages_published);
+            string dump_packages_rejected   = string.Join($"{Environment.NewLine}", packages_rejected);
+
+            string markdown =
+@"
+# name-tag
+
+name-tag.md
+
+Total packages = %PackagesTotal.Count%
+
+Pushed / Published: %PackagesPushedPublished.Count%
+
+
+```
+%PackagesPushedPublished%
+```
+
+Rejected / Duplicates: %PackagesRejectedDuplicates.Count%
+
+```
+%PackagesRejectedDuplicates%
+```
+";
+            markdown = markdown.Replace("%PackagesTotal.Count%", $"{packages.Count}");
+            markdown = markdown.Replace("%PackagesPushedPublished.Count%", $"{packages_published.Count}");
+            markdown = markdown.Replace("%PackagesRejectedDuplicates.Count%", $"{packages_rejected.Count}");
+            markdown = markdown.Replace("%PackagesPushedPublished%", dump_packages_published);
+            markdown = markdown.Replace("%PackagesRejectedDuplicates%", dump_packages_rejected);
+
+            System.IO.File.WriteAllText("./output/name-tag.md", markdown);
         }
     );
 
@@ -1174,7 +1330,13 @@ Task("verify-namespace-file")
             }
 
             if (unhandled_changes)
-                throw new Exception ("Namespaces were added or removed.");
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"Namespaces were added or removed.");
+                sb.AppendLine($"please run:");
+                sb.AppendLine($"    dotnet cake utilities.cake -t=generate-namespace-file");
+                throw new Exception (sb.ToString());
+            }
         }
     );
 

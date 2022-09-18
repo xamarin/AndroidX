@@ -42,7 +42,18 @@
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
   </ItemGroup>
   
+  <!-- Folders that _._ files need to go into for packages without managed libraries -->
   <ItemGroup>
+    <AndroidXNuGetLibFolders Include="lib\monoandroid12.0" />
+    <AndroidXNuGetLibFolders Include="lib\net6.0-android31.0" />
+  </ItemGroup>  
+  
+  <ItemGroup>
+    <!--
+      must be used before `com.google.`
+    -->
+    <AndroidNamespaceReplacement Include='com.google.common.flogger' Replacement='Xamarin.Google.Flogger' />    
+
     <!-- Company namespace changes -->
     <AndroidNamespaceReplacement Include='androidx.' Replacement='AndroidX' />
     <AndroidNamespaceReplacement Include='com.google.gson' Replacement='GoogleGson' />
@@ -68,6 +79,7 @@
     <AndroidNamespaceReplacement Include='config' Replacement='Configs' />
     <AndroidNamespaceReplacement Include='executor' Replacement='Executors' />
     <AndroidNamespaceReplacement Include='profileinstaller' Replacement='ProfileInstallers' />
+    <AndroidNamespaceReplacement Include='androidx.lifecycle.viewmodel' Replacement='AndroidX.Lifecycle.ViewModels' />
     
     <!-- Un-capitalization of 2-letter abbreviations -->
     <AndroidNamespaceReplacement Include='tv' Replacement='Tv' />    
@@ -158,6 +170,12 @@
     <AndroidNamespaceReplacement Include='wear-ongoing' Replacement='Ongoing' />
     <AndroidNamespaceReplacement Include='wear-phone-interactions' Replacement='PhoneInteractions' />
     <AndroidNamespaceReplacement Include='wear-remote-interactions' Replacement='RemoveInteractions' />
-    <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />    
+    <AndroidNamespaceReplacement Include='webkit' Replacement='WebKit' />
+    <AndroidNamespaceReplacement Include='poolingcontainer' Replacement='PoolingContainer' />
+    <AndroidNamespaceReplacement Include='sessionprocessor' Replacement='SessionProcessor' />
+    <AndroidNamespaceReplacement Include='dev.chrisbanes.snapper' Replacement='Xamarin.Dev.ChrisBanes.Snapper' />
+    <AndroidNamespaceReplacement Include='appactions' Replacement='AppActions' />
+    <AndroidNamespaceReplacement Include='pinappwidget' Replacement='PinAppWidget' />
+
   </ItemGroup>
 </Project>

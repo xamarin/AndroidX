@@ -455,4 +455,108 @@
     >
     </remove-node>
 
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.mac']/class[@name='AesCmacKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.mac']/class[@name='MacKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+
+    <!--
+    <add-node
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='JwtHmacKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="true" return="com.google.crypto.tink.proto.JwtHmacKey.CustomKid" name="getCustomKid" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="()Lcom/google/crypto/tink/proto/JwtHmacKey$CustomKid;" 
+            synchronized="false" synthetic="false"
+            />
+    </add-node>
+    -->
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/interface[@name='JwtHmacKeyOrBuilder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='JwtHmacKey.Builder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/interface[@name='JwtRsaSsaPssPublicKeyOrBuilder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='JwtRsaSsaPssPublicKey.Builder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/interface[@name='JwtRsaSsaPkcs1PublicKeyOrBuilder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='JwtRsaSsaPkcs1PublicKey.Builder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/interface[@name='JwtEcdsaPublicKeyOrBuilder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class[@name='JwtEcdsaPublicKey.Builder']/method[@name='getCustomKid' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='Field']"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='FieldMaskOrBuilder']/method[@name='getKindCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='ValueOrBuilder']/method[@name='getKindCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='Value.Builder']/method[@name='getKindCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='NullValue']/field[@name='NULL_VALUE']"
+        name="managedName"
+        >
+        NullValueData
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.internal']/class[@name='KeyTypeManager.KeyFactory.KeyFormat']/field[@name='keyFormat']"
+        name="managedName"
+        >
+        KeyFormatData
+    </attr>
+
+
 </metadata>
