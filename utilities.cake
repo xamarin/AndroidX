@@ -1102,6 +1102,7 @@ Task ("read-analysis-files")
     //.IsDependentOn ("nuget-structure-analysis")
     .IsDependentOn ("generate-namespace-file")
     .IsDependentOn ("generate-markdown-publish-log")
+    .IsDependentOn ("generate-component-governance")    
     .Does
     (
         () =>
