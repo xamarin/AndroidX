@@ -212,7 +212,7 @@
 | 205|io.github.aakira:napier                                               |2.6.1               |Xamarin.AAkira.Napier                                                 |2.6.1               |
 | 206|io.reactivex.rxjava2:rxjava                                           |2.2.21              |Xamarin.Android.ReactiveX.RxJava                                      |2.2.21.7            |
 | 207|io.reactivex.rxjava3:rxjava                                           |3.1.5               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.5.1             |
-| 208|org.checkerframework:checker-compat-qual                              |3.24.0              |Xamarin.CheckerFramework.CheckerCompatQual                            |3.24.0              |
+| 208|org.checkerframework:checker-compat-qual                              |2.5.5               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.5               |
 | 209|org.checkerframework:checker-qual                                     |3.25.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.25.0              |
 | 210|org.jetbrains:annotations                                             |23.0.0              |Xamarin.Jetbrains.Annotations                                         |23.0.0.4            |
 | 211|org.jetbrains.kotlin:kotlin-reflect                                   |1.7.10              |Xamarin.Kotlin.Reflect                                                |1.7.10              |
