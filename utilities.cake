@@ -283,9 +283,9 @@ Task ("mappings-artifact-nuget")
     (
         () =>
         {
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./config.json")))
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
+                JsonTextReader jtr = new JsonTextReader(string_reader);
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
@@ -331,9 +331,9 @@ Task ("list-artifacts")
     (
         () =>
         {
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./config.json")))
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
+                JsonTextReader jtr = new JsonTextReader(string_reader);
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
@@ -524,9 +524,9 @@ Task ("spell-check")
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
 
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./config.json")))
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
+                JsonTextReader jtr = new JsonTextReader(string_reader);
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
@@ -925,9 +925,9 @@ Task ("api-diff-analysis")
     (
         () =>
         {
-            using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./config.json")))
             {
-                JsonTextReader jtr = new JsonTextReader(reader);
+                JsonTextReader jtr = new JsonTextReader(string_reader);
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
@@ -1110,9 +1110,9 @@ Task("dependencies")
         {
             if (!(binderator_json_array?.Count > 0))
             {
-                using (StreamReader reader = System.IO.File.OpenText(@"./config.json"))
+                using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./config.json")))
                 {
-                    JsonTextReader jtr = new JsonTextReader(reader);
+                    JsonTextReader jtr = new JsonTextReader(string_reader);
                     binderator_json_array = (JArray)JToken.ReadFrom(jtr);
                 }
             }
@@ -1188,14 +1188,24 @@ Task("tools-executive-oreder-csv")
     (
         () =>
         {
+            StringBuilder sb = new StringBuilder();
+
             /*
                 dotnet --info
                 dotnet --list-sdks
                 dotnet --list-runtimes
 
                 too much info
-                let's parse globel.json for now
+                let's parse global.json for now
             */
+            Newtonsoft.Json.Linq.JObject json_object = null;
+
+            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./global.json")))
+            {
+                JsonTextReader jtr = new JsonTextReader(string_reader);
+                json_object = (Newtonsoft.Json.Linq.JObject) JToken.ReadFrom(jtr);
+            }
+
 
 
             /*
@@ -1209,7 +1219,6 @@ Task("tools-executive-oreder-csv")
             let's parse 
                 dotnet tool list --global
             */
-            StringBuilder sb = new StringBuilder();
 			string process = null;
 			string process_args = null;
 			IEnumerable<string> redirectedStandardOutput = null;
@@ -1226,10 +1235,70 @@ Task("tools-executive-oreder-csv")
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
             sb.AppendLine(new string('=',120));
             sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
+            foreach (string line in redirectedStandardOutput.ToList())
+            {
+                if
+                    (
+                        line.Contains("api-tools")
+                        ||
+                        line.Contains("boots")
+                        ||
+                        line.Contains("xamarin.androidx.migration.tool")
+                        ||
+                        line.Contains("xamarin.androidbinderator.tool")
+                    )
+                {
+                    string line_csv = System.Text.RegularExpressions.Regex.Replace(line, @"\s+", "," );
+                    Information($"line_csv = {line_csv}");
+                    string[] parts = line_csv.Split(new string[] {","}, StringSplitOptions.RemoveEmptyEntries);
+                    sb.AppendLine($"{parts[0]},{parts[1]}");
+                }
+            }
+
+            /*
+            gradle --version
+            */
+			process = "gradle";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+
+            /*
+            java --version
+            */
+			process = "java";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
+
+            /*
+            javac --version
+            */
+			process = "javac";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            sb.AppendLine(new string('=',120));
+            sb.AppendLine($"{process}       {process_args}");
 
 
-			System.IO.File.WriteAllLines("./output/tools-executive-oreder.csv", redirectedStandardOutput.ToArray());
+			System.IO.File.WriteAllText("./output/tools-executive-order.csv", sb.ToString());
 
             return;
         }
@@ -1303,7 +1372,7 @@ Task("tools-executive-oreder-detailed-markdown")
             sb.AppendLine($"{process}       {process_args}");
             sb.AppendLine(redirectedStandardOutput.ToString());
 
-			System.IO.File.WriteAllText("./output/tools-executive-oreder.md", sb.ToString());
+			System.IO.File.WriteAllText("./output/tools-executive-order.md", sb.ToString());
 
             return;
         }
