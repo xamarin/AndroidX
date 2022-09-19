@@ -84,24 +84,24 @@
       {
         "groupId": "androidx.annotation",
         "artifactId": "annotation-experimental",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.2",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
         "nugetId": "Xamarin.AndroidX.Annotation.Experimental",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat-resources",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0",
+        "version": "1.5.1",
+        "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "dependencyOnly": false
       },
@@ -476,8 +476,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.AndroidX.Core",
         "dependencyOnly": false
       },
@@ -500,8 +500,8 @@
       {
         "groupId": "androidx.core",
         "artifactId": "core-ktx",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.AndroidX.Core.Core.Ktx",
         "dependencyOnly": false
       },
@@ -548,32 +548,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -956,64 +956,64 @@
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common-ktx",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment-ktx",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime-ktx",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.UI",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui-ktx",
-        "version": "2.5.1",
-        "nugetVersion": "2.5.1",
+        "version": "2.5.2",
+        "nugetVersion": "2.5.2",
         "nugetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
         "dependencyOnly": false
       },
@@ -1563,8 +1563,8 @@
         "version": "1.1.16",
         "nugetVersion": "1.1.16",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
-        "frozen": "true",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "frozen": true
       },
       {
         "groupId": "com.google.android.material",
@@ -1710,19 +1710,19 @@
       },
       {
         "groupId": "org.checkerframework",
-        "artifactId": "checker-qual",
-        "version": "3.24.0",
-        "nugetVersion": "3.24.0",
-        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
+        "artifactId": "checker-compat-qual",
+        "version": "2.5.5",
+        "nugetVersion": "2.5.5",
+        "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
       },
       {
         "groupId": "org.checkerframework",
-        "artifactId": "checker-compat-qual",
-        "version": "2.5.5",
-        "nugetVersion": "2.5.5",
-        "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual",
+        "artifactId": "checker-qual",
+        "version": "3.25.0",
+        "nugetVersion": "3.25.0",
+        "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
       },
@@ -1928,7 +1928,7 @@
         "nugetVersion": "1.0.10",
         "nugetId": "Xamarin.AndroidX.Migration",
         "dependencyOnly": true
-      },
+      }
     ],
     "templateSets": [
       {
