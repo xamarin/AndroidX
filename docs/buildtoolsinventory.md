@@ -18,5 +18,5 @@
     }
 }
 ```
-"version": "6.0.400"6.0.400
-"rollForward": "latestMinor"latestMinor
+version6.0.400
+rollForwardlatestMinor

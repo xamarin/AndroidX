@@ -1161,7 +1161,13 @@ Task("generate-markdown-publish-log")
                 Error("No log file found");
                 Error($"     save ci log to {ci_publish_log_file}");
 
-                FileWriteText(ci_publish_log_file, $"{ci_publish_log_file}          paste log from CI");
+                FileWriteText
+                            (
+                                ci_publish_log_file, 
+                                $"{ci_publish_log_file}          paste log from CI"
+                                + Environment.NewLine +
+                                $"dotnet cake utilities.cake -t=tools-executive-order"
+                            );
 
                 return;
             }
@@ -1357,6 +1363,12 @@ Task("tools-executive-oreder-csv-and-markdown")
             sb_md.AppendLine("./buildtoolsinventory.csv");
             sb_md.AppendLine();
 
+			string process = null;
+			string process_args = null;
+			IEnumerable<string> redirectedStandardOutput = null;
+			int exitCodeWithoutArguments;
+			ProcessSettings process_settings = null;
+
             /*
                 dotnet --info
                 dotnet --list-sdks
@@ -1380,7 +1392,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             {
                 string version  = (string) jp.Value;
                 sb.AppendLine($"dotnet sdk, {version}");
-                sb_md.AppendLine($"{jp.Key}{version}");
+                sb_md.AppendLine($"{jp.Name}{version}");
             }
 
             List
@@ -1401,7 +1413,60 @@ Task("tools-executive-oreder-csv-and-markdown")
                 sb.AppendLine($"msbuild-sdks {name}, {value}");
             }							
 
+            /*
+            mono --version
+            */
+			process = "mono";
+			process_args = "--version";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput.ToList())
+            {
+                string tool = null;
+                string version = null;
 
+                if
+                    (
+                        line.Contains("Mono JIT compiler version ")
+                    )
+                {
+                    tool = line.Replace("Mono JIT compiler version ", "");
+                    version = tool;
+                    sb.AppendLine($"Mono JIT compiler, {version}");
+                }
+            }
+
+
+            /*
+            nuget
+            */
+			process = "nuget";
+			process_args = "";
+            process_settings = new ProcessSettings ()
+			{
+                Arguments = process_args,
+                RedirectStandardOutput = true,
+            };
+			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput.ToList())
+            {
+                string tool = null;
+                string version = null;
+
+                if
+                    (
+                        line.Contains("NuGet Version: ")
+                    )
+                {
+                    tool = line.Replace("NuGet Version: ", "");
+                    version = tool;
+                    sb.AppendLine($"nuget, {version}");
+                }
+            }
 
             /*
             xamarin-android-binderator --help
@@ -1414,12 +1479,6 @@ Task("tools-executive-oreder-csv-and-markdown")
             let's parse 
                 dotnet tool list --global
             */
-			string process = null;
-			string process_args = null;
-			IEnumerable<string> redirectedStandardOutput = null;
-			int exitCodeWithoutArguments;
-			ProcessSettings process_settings = null;
-
 			process = "dotnet";
 			process_args = "tool list --global";
             process_settings = new ProcessSettings ()
@@ -1535,11 +1594,11 @@ Task("tools-executive-oreder-csv-and-markdown")
                 string tool = null;
                 string version = null;
 
-                if (line.Contains("Gradle"))
+                if (line.Contains("javac"))
                 {
-                    tool = line.Replace("Gradle ", "");
+                    tool = line.Replace("javac ", "");
                     version = tool;
-                    sb.AppendLine($"Gradle, {version}");
+                    sb.AppendLine($"javac, {version}");
                 }
             }
 
