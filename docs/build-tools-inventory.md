@@ -97,3 +97,6 @@ default in `nuget-diff.cake` (no target is necessary)
 ```
 dotnet tool api-tools,*
 ```
+
+https://github.com/xamarin/xamarin-android/blob/56d785e0a71aada17a9f4586d76efa5e3b757cb8/build-tools/xaprepare/xaprepare/Application/Context.cs#L942
+
