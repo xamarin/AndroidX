@@ -1362,11 +1362,35 @@ Task("tools-executive-oreder-csv")
             */
             Newtonsoft.Json.Linq.JObject json_object = null;
 
-            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./global.json")))
+            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText("./global.json")))
             {
-                JsonTextReader jtr = new JsonTextReader(string_reader);
-                json_object = (Newtonsoft.Json.Linq.JObject) JToken.ReadFrom(jtr);
+                Newtonsoft.Json.JsonTextReader jtr = new Newtonsoft.Json.JsonTextReader(string_reader);
+                json_object = (Newtonsoft.Json.Linq.JObject) Newtonsoft.Json.Linq.JToken.ReadFrom(jtr);
             }
+
+            foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["sdk"])
+            {
+                string version  = (string) jp.Value;
+                sb.AppendLine($"dotnet sdk, {version}");
+            }
+
+            List
+                <(
+                    string nuget_id, 
+                    string version
+                )> msbuild_sdks = new List
+                                        <(
+                                            string nuget_id, 
+                                            string vetsion
+                                        )>();
+            
+            foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["msbuild-sdks"])
+            {
+                string name  = (string) jp.Name;
+                string value  = (string) jp.Value;
+                msbuild_sdks.Add((name, value));
+                sb.AppendLine($"msbuild-sdks {name}, {value}");
+            }							
 
 
 
