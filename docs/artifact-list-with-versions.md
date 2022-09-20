@@ -66,7 +66,7 @@
 |  59|androidx.core:core-google-shortcuts                                   |1.0.1               |Xamarin.AndroidX.Core.GoogleShortcuts                                 |1.0.1.1             |
 |  60|androidx.core:core-ktx                                                |1.9.0               |Xamarin.AndroidX.Core.Core.Ktx                                        |1.9.0               |
 |  61|androidx.core:core-role                                               |1.0.0               |Xamarin.AndroidX.Core.Role                                            |1.0.0.12            |
-|  62|androidx.core:core-splashscreen                                       |1.0.0               |Xamarin.AndroidX.Core.SplashScreen                                    |1.0.0               |
+|  62|androidx.core:core-splashscreen                                       |1.0.0               |Xamarin.AndroidX.Core.SplashScreen                                    |1.0.0.1             |
 |  63|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.14            |
 |  64|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.13            |
 |  65|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0               |
