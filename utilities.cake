@@ -1351,7 +1351,7 @@ Task("tools-executive-oreder-csv")
         () =>
         {
             StringBuilder sb = new StringBuilder();
-
+            sb.AppendLine("BuildToolName,BuildToolVersion");
             /*
                 dotnet --info
                 dotnet --list-sdks
@@ -1395,8 +1395,6 @@ Task("tools-executive-oreder-csv")
                 RedirectStandardOutput = true,
             };
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
             foreach (string line in redirectedStandardOutput.ToList())
             {
                 if
@@ -1428,9 +1426,42 @@ Task("tools-executive-oreder-csv")
                 RedirectStandardOutput = true,
             };
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
+            foreach (string line in redirectedStandardOutput)
+            {
+                string tool = null;
+                string version = null;
 
+                if (line.Contains("Gradle"))
+                {
+                    tool = line.Replace("Gradle ", "");
+                    version = tool;
+                    sb.AppendLine($"Gradle, {version}");
+                }
+                else if (line.Contains("Kotlin:"))
+                {
+                    tool = line.Replace("Kotlin:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"Kotlin, {version}");
+                }
+                else if (line.Contains("Groovy:"))
+                {
+                    tool = line.Replace("Groovy:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"Groovy, {version}");
+                }
+                else if (line.Contains("Ant:"))
+                {
+                    tool = line.Replace("Ant:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"Ant, {version}");
+                }
+                else if (line.Contains("JVM:"))
+                {
+                    tool = line.Replace("JVM:", "").Trim();
+                    version = tool;
+                    sb.AppendLine($"JVM, {version}");
+                }
+            }
             /*
             java --version
             */
@@ -1442,8 +1473,6 @@ Task("tools-executive-oreder-csv")
                 RedirectStandardOutput = true,
             };
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
 
             /*
             javac --version
@@ -1456,11 +1485,10 @@ Task("tools-executive-oreder-csv")
                 RedirectStandardOutput = true,
             };
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
 
 
 			System.IO.File.WriteAllText("./output/tools-executive-order.csv", sb.ToString());
+			System.IO.File.WriteAllText("./docs/tools-executive-order.csv", sb.ToString());
 
             return;
         }
