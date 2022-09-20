@@ -995,3 +995,15 @@ if (FileExists ("./generated/AndroidX.sln")) {
 }
 
 RunTarget (TARGET);
+
+CakeExecuteScript
+            (
+                "./utilities.cake",
+                new CakeSettings
+                { 
+                    Arguments = new Dictionary<string, string>() 
+                    { 
+                        { "target", "tools-executive-order" } 
+                    } 
+                }
+            );
