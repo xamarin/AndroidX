@@ -1341,17 +1341,22 @@ Task("verify-namespace-file")
     );
 
 Task("tools-executive-order")
-    .IsDependentOn ("tools-executive-oreder-csv")
-    .IsDependentOn ("tools-executive-oreder-detailed-markdown")
+    .IsDependentOn ("tools-executive-oreder-csv-and-markdown")
     ;
 
-Task("tools-executive-oreder-csv")
+Task("tools-executive-oreder-csv-and-markdown")
     .Does
     (
         () =>
         {
             StringBuilder sb = new StringBuilder();
+            StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
+            sb_md.AppendLine("# Executive Order Build Tools Inventory");
+            sb_md.AppendLine();
+            sb_md.AppendLine("./buildtoolsinventory.csv");
+            sb_md.AppendLine();
+
             /*
                 dotnet --info
                 dotnet --list-sdks
@@ -1361,17 +1366,21 @@ Task("tools-executive-oreder-csv")
                 let's parse global.json for now
             */
             Newtonsoft.Json.Linq.JObject json_object = null;
-
-            using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText("./global.json")))
+            string global_json = System.IO.File.ReadAllText("./global.json");
+            using (StringReader string_reader = new StringReader(global_json))
             {
                 Newtonsoft.Json.JsonTextReader jtr = new Newtonsoft.Json.JsonTextReader(string_reader);
                 json_object = (Newtonsoft.Json.Linq.JObject) Newtonsoft.Json.Linq.JToken.ReadFrom(jtr);
             }
 
+            sb_md.AppendLine("```");
+            sb_md.AppendLine(global_json);
+            sb_md.AppendLine("```");
             foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["sdk"])
             {
                 string version  = (string) jp.Value;
                 sb.AppendLine($"dotnet sdk, {version}");
+                sb_md.AppendLine($"{jp.Key}{version}");
             }
 
             List
@@ -1497,6 +1506,18 @@ Task("tools-executive-oreder-csv")
                 RedirectStandardOutput = true,
             };
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput)
+            {
+                string tool = null;
+                string version = null;
+
+                if (line.Contains("openjdk"))
+                {
+                    tool = line.Replace("openjdk ", "");
+                    version = tool;
+                    sb.AppendLine($"openjdk, {version}");
+                }
+            }
 
             /*
             javac --version
@@ -1509,88 +1530,28 @@ Task("tools-executive-oreder-csv")
                 RedirectStandardOutput = true,
             };
 			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+            foreach (string line in redirectedStandardOutput)
+            {
+                string tool = null;
+                string version = null;
 
+                if (line.Contains("Gradle"))
+                {
+                    tool = line.Replace("Gradle ", "");
+                    version = tool;
+                    sb.AppendLine($"Gradle, {version}");
+                }
+            }
 
-			System.IO.File.WriteAllText("./output/tools-executive-order.csv", sb.ToString());
-			System.IO.File.WriteAllText("./docs/tools-executive-order.csv", sb.ToString());
-
-            return;
-        }
-    );
-
-
-Task("tools-executive-oreder-detailed-markdown")
-    .Does
-    (
-        () =>
-        {
-            StringBuilder sb = new StringBuilder();
-			string process = null;
-			string process_args = null;
-			IEnumerable<string> redirectedStandardOutput = null;
-			int exitCodeWithoutArguments;
-			ProcessSettings process_settings = null;
-
-			process = "dotnet";
-			process_args = "--info";
-            process_settings = new ProcessSettings ()
-                                                {
-                                                    Arguments = process_args,
-                                                    RedirectStandardOutput = true,
-                                                }
-                                                .SetRedirectStandardOutput(true);                                               
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            //? System.Diagnostics.Process.ReadToEnd();
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			process = "dotnet";
-			process_args = "--list-sdks";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-            };
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			process = "dotnet";
-			process_args = "--list-runtimes";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-            };
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			process = "dotnet";
-			process_args = "cake --info";
-            process_settings = new ProcessSettings ()
-			{
-                Arguments = process_args,
-                RedirectStandardOutput = true,
-            };
-            redirectedStandardOutput = null;
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            sb.AppendLine(new string('=',120));
-            sb.AppendLine($"{process}       {process_args}");
-            sb.AppendLine(redirectedStandardOutput.ToString());
-
-			System.IO.File.WriteAllText("./output/tools-executive-order.md", sb.ToString());
+			System.IO.File.WriteAllText("./output/buildtoolsinventory.csv", sb.ToString());
+			System.IO.File.WriteAllText("./docs/buildtoolsinventory.csv", sb.ToString());
+			System.IO.File.WriteAllText("./output/buildtoolsinventory.md", sb_md.ToString());
+			System.IO.File.WriteAllText("./docs/buildtoolsinventory.md", sb_md.ToString());
 
             return;
         }
     );
+
 
 static List<string> FindNamespacesInDirectory (string directory)
 {
