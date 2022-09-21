@@ -1,2501 +1,2901 @@
 {
-  "Registrations": [
+  "$schema": "https://json.schemastore.org/component-detection-manifest.json",
+  "registrations": [
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "activity",
-          "GroupId": "androidx.activity",
-          "Version": "1.4.0",
-          "NuGetId": "Xamarin.AndroidX.Activity",
-          "NuGetVersion": "1.4.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "activity",
+          "groupId": "androidx.activity",
+          "version": "1.5.1",
+          "nuGetId": "Xamarin.AndroidX.Activity",
+          "nuGetVersion": "1.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "activity-ktx",
-          "GroupId": "androidx.activity",
-          "Version": "1.4.0",
-          "NuGetId": "Xamarin.AndroidX.Activity.Ktx",
-          "NuGetVersion": "1.4.0.3"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "activity-compose",
+          "groupId": "androidx.activity",
+          "version": "1.5.1",
+          "nuGetId": "Xamarin.AndroidX.Activity.Compose",
+          "nuGetVersion": "1.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ads-identifier",
-          "GroupId": "androidx.ads",
-          "Version": "1.0.0-alpha04",
-          "NuGetId": "Xamarin.AndroidX.Ads.Identifier",
-          "NuGetVersion": "1.0.0.12-alpha04"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "activity-ktx",
+          "groupId": "androidx.activity",
+          "version": "1.5.1",
+          "nuGetId": "Xamarin.AndroidX.Activity.Ktx",
+          "nuGetVersion": "1.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ads-identifier-common",
-          "GroupId": "androidx.ads",
-          "Version": "1.0.0-alpha04",
-          "NuGetId": "Xamarin.AndroidX.Ads.IdentifierCommon",
-          "NuGetVersion": "1.0.0.12-alpha04"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ads-identifier",
+          "groupId": "androidx.ads",
+          "version": "1.0.0-alpha04",
+          "nuGetId": "Xamarin.AndroidX.Ads.Identifier",
+          "nuGetVersion": "1.0.0.12-alpha04"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ads-identifier-provider",
-          "GroupId": "androidx.ads",
-          "Version": "1.0.0-alpha04",
-          "NuGetId": "Xamarin.AndroidX.Ads.IdentifierProvider",
-          "NuGetVersion": "1.0.0.12-alpha04"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ads-identifier-common",
+          "groupId": "androidx.ads",
+          "version": "1.0.0-alpha04",
+          "nuGetId": "Xamarin.AndroidX.Ads.IdentifierCommon",
+          "nuGetVersion": "1.0.0.12-alpha04"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "annotation",
-          "GroupId": "androidx.annotation",
-          "Version": "1.3.0",
-          "NuGetId": "Xamarin.AndroidX.Annotation",
-          "NuGetVersion": "1.3.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ads-identifier-provider",
+          "groupId": "androidx.ads",
+          "version": "1.0.0-alpha04",
+          "nuGetId": "Xamarin.AndroidX.Ads.IdentifierProvider",
+          "nuGetVersion": "1.0.0.12-alpha04"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "annotation-experimental",
-          "GroupId": "androidx.annotation",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.Annotation.Experimental",
-          "NuGetVersion": "1.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "annotation",
+          "groupId": "androidx.annotation",
+          "version": "1.4.0",
+          "nuGetId": "Xamarin.AndroidX.Annotation",
+          "nuGetVersion": "1.4.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "appcompat",
-          "GroupId": "androidx.appcompat",
-          "Version": "1.4.2",
-          "NuGetId": "Xamarin.AndroidX.AppCompat",
-          "NuGetVersion": "1.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "annotation-experimental",
+          "groupId": "androidx.annotation",
+          "version": "1.3.0",
+          "nuGetId": "Xamarin.AndroidX.Annotation.Experimental",
+          "nuGetVersion": "1.3.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "appcompat-resources",
-          "GroupId": "androidx.appcompat",
-          "Version": "1.4.2",
-          "NuGetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
-          "NuGetVersion": "1.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "appcompat",
+          "groupId": "androidx.appcompat",
+          "version": "1.5.1",
+          "nuGetId": "Xamarin.AndroidX.AppCompat",
+          "nuGetVersion": "1.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-common",
-          "GroupId": "androidx.arch.core",
-          "Version": "2.1.0",
-          "NuGetId": "Xamarin.AndroidX.Arch.Core.Common",
-          "NuGetVersion": "2.1.0.15"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "appcompat-resources",
+          "groupId": "androidx.appcompat",
+          "version": "1.5.1",
+          "nuGetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
+          "nuGetVersion": "1.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-runtime",
-          "GroupId": "androidx.arch.core",
-          "Version": "2.1.0",
-          "NuGetId": "Xamarin.AndroidX.Arch.Core.Runtime",
-          "NuGetVersion": "2.1.0.15"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-common",
+          "groupId": "androidx.arch.core",
+          "version": "2.1.0",
+          "nuGetId": "Xamarin.AndroidX.Arch.Core.Common",
+          "nuGetVersion": "2.1.0.15"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "asynclayoutinflater",
-          "GroupId": "androidx.asynclayoutinflater",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.AsyncLayoutInflater",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-runtime",
+          "groupId": "androidx.arch.core",
+          "version": "2.1.0",
+          "nuGetId": "Xamarin.AndroidX.Arch.Core.Runtime",
+          "nuGetVersion": "2.1.0.15"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "autofill",
-          "GroupId": "androidx.autofill",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.AutoFill",
-          "NuGetVersion": "1.1.0.13"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "asynclayoutinflater",
+          "groupId": "androidx.asynclayoutinflater",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.AsyncLayoutInflater",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "biometric",
-          "GroupId": "androidx.biometric",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Biometric",
-          "NuGetVersion": "1.1.0.10"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "autofill",
+          "groupId": "androidx.autofill",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.AutoFill",
+          "nuGetVersion": "1.1.0.13"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "browser",
-          "GroupId": "androidx.browser",
-          "Version": "1.4.0",
-          "NuGetId": "Xamarin.AndroidX.Browser",
-          "NuGetVersion": "1.4.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "biometric",
+          "groupId": "androidx.biometric",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Biometric",
+          "nuGetVersion": "1.1.0.10"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "camera-camera2",
-          "GroupId": "androidx.camera",
-          "Version": "1.0.2",
-          "NuGetId": "Xamarin.AndroidX.Camera.Camera2",
-          "NuGetVersion": "1.0.2.5"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "browser",
+          "groupId": "androidx.browser",
+          "version": "1.4.0",
+          "nuGetId": "Xamarin.AndroidX.Browser",
+          "nuGetVersion": "1.4.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "camera-core",
-          "GroupId": "androidx.camera",
-          "Version": "1.0.2",
-          "NuGetId": "Xamarin.AndroidX.Camera.Core",
-          "NuGetVersion": "1.0.2.5"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "camera-camera2",
+          "groupId": "androidx.camera",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Camera.Camera2",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "camera-lifecycle",
-          "GroupId": "androidx.camera",
-          "Version": "1.0.2",
-          "NuGetId": "Xamarin.AndroidX.Camera.Lifecycle",
-          "NuGetVersion": "1.0.2.5"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "camera-core",
+          "groupId": "androidx.camera",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Camera.Core",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "car",
-          "GroupId": "androidx.car",
-          "Version": "1.0.0-alpha7",
-          "NuGetId": "Xamarin.AndroidX.Car.Car",
-          "NuGetVersion": "1.0.0.12-alpha7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "camera-extensions",
+          "groupId": "androidx.camera",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Camera.Extensions",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "car-cluster",
-          "GroupId": "androidx.car",
-          "Version": "1.0.0-alpha5",
-          "NuGetId": "Xamarin.AndroidX.Car.Cluster",
-          "NuGetVersion": "1.0.0.12-alpha5"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "camera-lifecycle",
+          "groupId": "androidx.camera",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Camera.Lifecycle",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "app",
-          "GroupId": "androidx.car.app",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Car.App.App",
-          "NuGetVersion": "1.1.0.3"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "camera-video",
+          "groupId": "androidx.camera",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Camera.Video",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "cardview",
-          "GroupId": "androidx.cardview",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.CardView",
-          "NuGetVersion": "1.0.0.16"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "camera-view",
+          "groupId": "androidx.camera",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Camera.View",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "collection",
-          "GroupId": "androidx.collection",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.Collection",
-          "NuGetVersion": "1.2.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "car",
+          "groupId": "androidx.car",
+          "version": "1.0.0-alpha7",
+          "nuGetId": "Xamarin.AndroidX.Car.Car",
+          "nuGetVersion": "1.0.0.12-alpha7"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "collection-ktx",
-          "GroupId": "androidx.collection",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.Collection.Ktx",
-          "NuGetVersion": "1.2.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "car-cluster",
+          "groupId": "androidx.car",
+          "version": "1.0.0-alpha5",
+          "nuGetId": "Xamarin.AndroidX.Car.Cluster",
+          "nuGetVersion": "1.0.0.12-alpha5"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "animation",
-          "GroupId": "androidx.compose.animation",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Animation",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "app",
+          "groupId": "androidx.car.app",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Car.App.App",
+          "nuGetVersion": "1.1.0.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "animation-core",
-          "GroupId": "androidx.compose.animation",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Animation.Core",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "cardview",
+          "groupId": "androidx.cardview",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.CardView",
+          "nuGetVersion": "1.0.0.16"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "foundation",
-          "GroupId": "androidx.compose.foundation",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Foundation",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "collection",
+          "groupId": "androidx.collection",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Collection",
+          "nuGetVersion": "1.2.0.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "foundation-layout",
-          "GroupId": "androidx.compose.foundation",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Foundation.Layout",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "collection-ktx",
+          "groupId": "androidx.collection",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Collection.Ktx",
+          "nuGetVersion": "1.2.0.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "material",
-          "GroupId": "androidx.compose.material",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Material",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "animation",
+          "groupId": "androidx.compose.animation",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Animation",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "material-icons-core",
-          "GroupId": "androidx.compose.material",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Material.Icons.Core",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "animation-core",
+          "groupId": "androidx.compose.animation",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Animation.Core",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "material-icons-extended",
-          "GroupId": "androidx.compose.material",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Material.Icons.Extended",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "foundation",
+          "groupId": "androidx.compose.foundation",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Foundation",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "material-ripple",
-          "GroupId": "androidx.compose.material",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Material.Ripple",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "foundation-layout",
+          "groupId": "androidx.compose.foundation",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Foundation.Layout",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "runtime",
-          "GroupId": "androidx.compose.runtime",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Runtime",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "material",
+          "groupId": "androidx.compose.material",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Material",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "runtime-livedata",
-          "GroupId": "androidx.compose.runtime",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Runtime.LiveData",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "material-icons-core",
+          "groupId": "androidx.compose.material",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Material.Icons.Core",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "runtime-rxjava2",
-          "GroupId": "androidx.compose.runtime",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Runtime.RxJava2",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "material-icons-extended",
+          "groupId": "androidx.compose.material",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Material.Icons.Extended",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "runtime-saveable",
-          "GroupId": "androidx.compose.runtime",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.Runtime.Saveable",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "material-ripple",
+          "groupId": "androidx.compose.material",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Material.Ripple",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "runtime",
+          "groupId": "androidx.compose.runtime",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Runtime",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui-geometry",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI.Geometry",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "runtime-livedata",
+          "groupId": "androidx.compose.runtime",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Runtime.LiveData",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui-graphics",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI.Graphics",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "runtime-rxjava2",
+          "groupId": "androidx.compose.runtime",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Runtime.RxJava2",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui-text",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI.Text",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "runtime-saveable",
+          "groupId": "androidx.compose.runtime",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.Runtime.Saveable",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui-unit",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI.Unit",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui-util",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI.Util",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-geometry",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Geometry",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "ui-viewbinding",
-          "GroupId": "androidx.compose.ui",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Compose.UI.ViewBinding",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-graphics",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Graphics",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "concurrent-futures",
-          "GroupId": "androidx.concurrent",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Concurrent.Futures",
-          "NuGetVersion": "1.1.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-text",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Text",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "constraintlayout",
-          "GroupId": "androidx.constraintlayout",
-          "Version": "2.1.4",
-          "NuGetId": "Xamarin.AndroidX.ConstraintLayout",
-          "NuGetVersion": "2.1.4.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-tooling",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Tooling",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "constraintlayout-core",
-          "GroupId": "androidx.constraintlayout",
-          "Version": "1.0.4",
-          "NuGetId": "Xamarin.AndroidX.ConstraintLayout.Core",
-          "NuGetVersion": "1.0.4.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-tooling-data",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Tooling.Data",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "constraintlayout-solver",
-          "GroupId": "androidx.constraintlayout",
-          "Version": "2.0.4",
-          "NuGetId": "Xamarin.AndroidX.ConstraintLayout.Solver",
-          "NuGetVersion": "2.0.4.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-tooling-preview",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "contentpager",
-          "GroupId": "androidx.contentpager",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.ContentPager",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-unit",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Unit",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "coordinatorlayout",
-          "GroupId": "androidx.coordinatorlayout",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.CoordinatorLayout",
-          "NuGetVersion": "1.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-util",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.Util",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core",
-          "GroupId": "androidx.core",
-          "Version": "1.8.0",
-          "NuGetId": "Xamarin.AndroidX.Core",
-          "NuGetVersion": "1.8.0.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "ui-viewbinding",
+          "groupId": "androidx.compose.ui",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Compose.UI.ViewBinding",
+          "nuGetVersion": "1.2.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-animation",
-          "GroupId": "androidx.core",
-          "Version": "1.0.0-alpha02",
-          "NuGetId": "Xamarin.AndroidX.Core.Animation",
-          "NuGetVersion": "1.0.0.12-alpha02"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "concurrent-futures",
+          "groupId": "androidx.concurrent",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Concurrent.Futures",
+          "nuGetVersion": "1.1.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-google-shortcuts",
-          "GroupId": "androidx.core",
-          "Version": "1.0.1",
-          "NuGetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
-          "NuGetVersion": "1.0.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "constraintlayout",
+          "groupId": "androidx.constraintlayout",
+          "version": "2.1.4",
+          "nuGetId": "Xamarin.AndroidX.ConstraintLayout",
+          "nuGetVersion": "2.1.4.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-ktx",
-          "GroupId": "androidx.core",
-          "Version": "1.8.0",
-          "NuGetId": "Xamarin.AndroidX.Core.Core.Ktx",
-          "NuGetVersion": "1.8.0.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "constraintlayout-core",
+          "groupId": "androidx.constraintlayout",
+          "version": "1.0.4",
+          "nuGetId": "Xamarin.AndroidX.ConstraintLayout.Core",
+          "nuGetVersion": "1.0.4.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-role",
-          "GroupId": "androidx.core",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Core.Role",
-          "NuGetVersion": "1.0.0.12"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "constraintlayout-solver",
+          "groupId": "androidx.constraintlayout",
+          "version": "2.0.4",
+          "nuGetId": "Xamarin.AndroidX.ConstraintLayout.Solver",
+          "nuGetVersion": "2.0.4.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "core-splashscreen",
-          "GroupId": "androidx.core",
-          "Version": "1.0.0-rc01",
-          "NuGetId": "Xamarin.AndroidX.Core.SplashScreen",
-          "NuGetVersion": "1.0.0.1-rc01"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "contentpager",
+          "groupId": "androidx.contentpager",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.ContentPager",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "cursoradapter",
-          "GroupId": "androidx.cursoradapter",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.CursorAdapter",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "coordinatorlayout",
+          "groupId": "androidx.coordinatorlayout",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.CoordinatorLayout",
+          "nuGetVersion": "1.2.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "customview",
-          "GroupId": "androidx.customview",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.CustomView",
-          "NuGetVersion": "1.1.0.13"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core",
+          "groupId": "androidx.core",
+          "version": "1.9.0",
+          "nuGetId": "Xamarin.AndroidX.Core",
+          "nuGetVersion": "1.9.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "databinding-adapters",
-          "GroupId": "androidx.databinding",
-          "Version": "7.2.1",
-          "NuGetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
-          "NuGetVersion": "7.2.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-animation",
+          "groupId": "androidx.core",
+          "version": "1.0.0-alpha02",
+          "nuGetId": "Xamarin.AndroidX.Core.Animation",
+          "nuGetVersion": "1.0.0.12-alpha02"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "databinding-common",
-          "GroupId": "androidx.databinding",
-          "Version": "7.2.1",
-          "NuGetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
-          "NuGetVersion": "7.2.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-google-shortcuts",
+          "groupId": "androidx.core",
+          "version": "1.0.1",
+          "nuGetId": "Xamarin.AndroidX.Core.GoogleShortcuts",
+          "nuGetVersion": "1.0.1.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "databinding-runtime",
-          "GroupId": "androidx.databinding",
-          "Version": "7.2.1",
-          "NuGetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
-          "NuGetVersion": "7.2.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-ktx",
+          "groupId": "androidx.core",
+          "version": "1.9.0",
+          "nuGetId": "Xamarin.AndroidX.Core.Core.Ktx",
+          "nuGetVersion": "1.9.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "viewbinding",
-          "GroupId": "androidx.databinding",
-          "Version": "7.2.1",
-          "NuGetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
-          "NuGetVersion": "7.2.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-role",
+          "groupId": "androidx.core",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Core.Role",
+          "nuGetVersion": "1.0.0.12"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "documentfile",
-          "GroupId": "androidx.documentfile",
-          "Version": "1.0.1",
-          "NuGetId": "Xamarin.AndroidX.DocumentFile",
-          "NuGetVersion": "1.0.1.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "core-splashscreen",
+          "groupId": "androidx.core",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Core.SplashScreen",
+          "nuGetVersion": "1.0.0.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "drawerlayout",
-          "GroupId": "androidx.drawerlayout",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.DrawerLayout",
-          "NuGetVersion": "1.1.1.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "cursoradapter",
+          "groupId": "androidx.cursoradapter",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.CursorAdapter",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "dynamicanimation",
-          "GroupId": "androidx.dynamicanimation",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.DynamicAnimation",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "customview",
+          "groupId": "androidx.customview",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.CustomView",
+          "nuGetVersion": "1.1.0.13"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "emoji",
-          "GroupId": "androidx.emoji",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Emoji",
-          "NuGetVersion": "1.1.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "customview-poolingcontainer",
+          "groupId": "androidx.customview",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.CustomView.PoolingContainer",
+          "nuGetVersion": "1.0.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "emoji-appcompat",
-          "GroupId": "androidx.emoji",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Emoji.AppCompat",
-          "NuGetVersion": "1.1.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "databinding-adapters",
+          "groupId": "androidx.databinding",
+          "version": "7.2.2",
+          "nuGetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
+          "nuGetVersion": "7.2.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "emoji-bundled",
-          "GroupId": "androidx.emoji",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Emoji.Bundled",
-          "NuGetVersion": "1.1.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "databinding-common",
+          "groupId": "androidx.databinding",
+          "version": "7.2.2",
+          "nuGetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
+          "nuGetVersion": "7.2.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "emoji2",
-          "GroupId": "androidx.emoji2",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Emoji2",
-          "NuGetVersion": "1.1.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "databinding-runtime",
+          "groupId": "androidx.databinding",
+          "version": "7.2.2",
+          "nuGetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
+          "nuGetVersion": "7.2.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "emoji2-views-helper",
-          "GroupId": "androidx.emoji2",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Emoji2.ViewsHelper",
-          "NuGetVersion": "1.1.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "viewbinding",
+          "groupId": "androidx.databinding",
+          "version": "7.2.2",
+          "nuGetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
+          "nuGetVersion": "7.2.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "exifinterface",
-          "GroupId": "androidx.exifinterface",
-          "Version": "1.3.3",
-          "NuGetId": "Xamarin.AndroidX.ExifInterface",
-          "NuGetVersion": "1.3.3.6"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "documentfile",
+          "groupId": "androidx.documentfile",
+          "version": "1.0.1",
+          "nuGetId": "Xamarin.AndroidX.DocumentFile",
+          "nuGetVersion": "1.0.1.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "fragment",
-          "GroupId": "androidx.fragment",
-          "Version": "1.4.1",
-          "NuGetId": "Xamarin.AndroidX.Fragment",
-          "NuGetVersion": "1.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "drawerlayout",
+          "groupId": "androidx.drawerlayout",
+          "version": "1.1.1",
+          "nuGetId": "Xamarin.AndroidX.DrawerLayout",
+          "nuGetVersion": "1.1.1.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "fragment-ktx",
-          "GroupId": "androidx.fragment",
-          "Version": "1.4.1",
-          "NuGetId": "Xamarin.AndroidX.Fragment.Ktx",
-          "NuGetVersion": "1.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "dynamicanimation",
+          "groupId": "androidx.dynamicanimation",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.DynamicAnimation",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "gridlayout",
-          "GroupId": "androidx.gridlayout",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.GridLayout",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "emoji",
+          "groupId": "androidx.emoji",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Emoji",
+          "nuGetVersion": "1.1.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "heifwriter",
-          "GroupId": "androidx.heifwriter",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.HeifWriter",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "emoji-appcompat",
+          "groupId": "androidx.emoji",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Emoji.AppCompat",
+          "nuGetVersion": "1.1.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "interpolator",
-          "GroupId": "androidx.interpolator",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Interpolator",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "emoji-bundled",
+          "groupId": "androidx.emoji",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Emoji.Bundled",
+          "nuGetVersion": "1.1.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "leanback",
-          "GroupId": "androidx.leanback",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Leanback",
-          "NuGetVersion": "1.0.0.16"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "emoji2",
+          "groupId": "androidx.emoji2",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Emoji2",
+          "nuGetVersion": "1.2.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "leanback-preference",
-          "GroupId": "androidx.leanback",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Leanback.Preference",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "emoji2-views-helper",
+          "groupId": "androidx.emoji2",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Emoji2.ViewsHelper",
+          "nuGetVersion": "1.2.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "legacy-preference-v14",
-          "GroupId": "androidx.legacy",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Legacy.Preference.V14",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "enterprise-feedback",
+          "groupId": "androidx.enterprise",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Enterprise.Feedback",
+          "nuGetVersion": "1.1.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "legacy-support-core-ui",
-          "GroupId": "androidx.legacy",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",
-          "NuGetVersion": "1.0.0.15"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "exifinterface",
+          "groupId": "androidx.exifinterface",
+          "version": "1.3.3",
+          "nuGetId": "Xamarin.AndroidX.ExifInterface",
+          "nuGetVersion": "1.3.3.6"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "legacy-support-core-utils",
-          "GroupId": "androidx.legacy",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "fragment",
+          "groupId": "androidx.fragment",
+          "version": "1.5.2",
+          "nuGetId": "Xamarin.AndroidX.Fragment",
+          "nuGetVersion": "1.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "legacy-support-v13",
-          "GroupId": "androidx.legacy",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Legacy.Support.V13",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "fragment-ktx",
+          "groupId": "androidx.fragment",
+          "version": "1.5.2",
+          "nuGetId": "Xamarin.AndroidX.Fragment.Ktx",
+          "nuGetVersion": "1.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "legacy-support-v4",
-          "GroupId": "androidx.legacy",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Legacy.Support.V4",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "gridlayout",
+          "groupId": "androidx.gridlayout",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.GridLayout",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-common",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Common",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "heifwriter",
+          "groupId": "androidx.heifwriter",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.HeifWriter",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-common-java8",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "interpolator",
+          "groupId": "androidx.interpolator",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Interpolator",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-extensions",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.2.0",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Extensions",
-          "NuGetVersion": "2.2.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "leanback",
+          "groupId": "androidx.leanback",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Leanback",
+          "nuGetVersion": "1.0.0.16"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-livedata",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "leanback-preference",
+          "groupId": "androidx.leanback",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Leanback.Preference",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-livedata-core",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "legacy-preference-v14",
+          "groupId": "androidx.legacy",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Legacy.Preference.V14",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-livedata-core-ktx",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "legacy-support-core-ui",
+          "groupId": "androidx.legacy",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Legacy.Support.Core.UI",
+          "nuGetVersion": "1.0.0.15"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-livedata-ktx",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "legacy-support-core-utils",
+          "groupId": "androidx.legacy",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Legacy.Support.Core.Utils",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-process",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Process",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "legacy-support-v13",
+          "groupId": "androidx.legacy",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Legacy.Support.V13",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-reactivestreams",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "legacy-support-v4",
+          "groupId": "androidx.legacy",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Legacy.Support.V4",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-reactivestreams-ktx",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-common",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Common",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-runtime",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Runtime",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-common-java8",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-runtime-ktx",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-extensions",
+          "groupId": "androidx.lifecycle",
+          "version": "2.2.0",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Extensions",
+          "nuGetVersion": "2.2.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-service",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.Service",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-livedata",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-viewmodel",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-livedata-core",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-viewmodel-ktx",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-livedata-core-ktx",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "lifecycle-viewmodel-savedstate",
-          "GroupId": "androidx.lifecycle",
-          "Version": "2.4.1",
-          "NuGetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
-          "NuGetVersion": "2.4.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-livedata-ktx",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "loader",
-          "GroupId": "androidx.loader",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Loader",
-          "NuGetVersion": "1.1.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-process",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Process",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "localbroadcastmanager",
-          "GroupId": "androidx.localbroadcastmanager",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.LocalBroadcastManager",
-          "NuGetVersion": "1.1.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-reactivestreams",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "media",
-          "GroupId": "androidx.media",
-          "Version": "1.6.0",
-          "NuGetId": "Xamarin.AndroidX.Media",
-          "NuGetVersion": "1.6.0.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-reactivestreams-ktx",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "media2-common",
-          "GroupId": "androidx.media2",
-          "Version": "1.2.1",
-          "NuGetId": "Xamarin.AndroidX.Media2.Common",
-          "NuGetVersion": "1.2.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-runtime",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Runtime",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "media2-session",
-          "GroupId": "androidx.media2",
-          "Version": "1.2.1",
-          "NuGetId": "Xamarin.AndroidX.Media2.Session",
-          "NuGetVersion": "1.2.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-runtime-ktx",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "media2-widget",
-          "GroupId": "androidx.media2",
-          "Version": "1.2.1",
-          "NuGetId": "Xamarin.AndroidX.Media2.Widget",
-          "NuGetVersion": "1.2.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-service",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.Service",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "mediarouter",
-          "GroupId": "androidx.mediarouter",
-          "Version": "1.3.0",
-          "NuGetId": "Xamarin.AndroidX.MediaRouter",
-          "NuGetVersion": "1.3.0.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-viewmodel",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "multidex",
-          "GroupId": "androidx.multidex",
-          "Version": "2.0.1",
-          "NuGetId": "Xamarin.AndroidX.MultiDex",
-          "NuGetVersion": "2.0.1.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-viewmodel-compose",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-common",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.Common",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-viewmodel-ktx",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-common-ktx",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "lifecycle-viewmodel-savedstate",
+          "groupId": "androidx.lifecycle",
+          "version": "2.5.1",
+          "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
+          "nuGetVersion": "2.5.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-fragment",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.Fragment",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "loader",
+          "groupId": "androidx.loader",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Loader",
+          "nuGetVersion": "1.1.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-fragment-ktx",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "localbroadcastmanager",
+          "groupId": "androidx.localbroadcastmanager",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.LocalBroadcastManager",
+          "nuGetVersion": "1.1.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-runtime",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.Runtime",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media",
+          "groupId": "androidx.media",
+          "version": "1.6.0",
+          "nuGetId": "Xamarin.AndroidX.Media",
+          "nuGetVersion": "1.6.0.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-runtime-ktx",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media2-common",
+          "groupId": "androidx.media2",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Media2.Common",
+          "nuGetVersion": "1.2.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-ui",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.UI",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media2-session",
+          "groupId": "androidx.media2",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Media2.Session",
+          "nuGetVersion": "1.2.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "navigation-ui-ktx",
-          "GroupId": "androidx.navigation",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
-          "NuGetVersion": "2.4.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media2-widget",
+          "groupId": "androidx.media2",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.Media2.Widget",
+          "nuGetVersion": "1.2.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "paging-common",
-          "GroupId": "androidx.paging",
-          "Version": "3.1.1",
-          "NuGetId": "Xamarin.AndroidX.Paging.Common",
-          "NuGetVersion": "3.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "mediarouter",
+          "groupId": "androidx.mediarouter",
+          "version": "1.3.1",
+          "nuGetId": "Xamarin.AndroidX.MediaRouter",
+          "nuGetVersion": "1.3.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "paging-common-ktx",
-          "GroupId": "androidx.paging",
-          "Version": "3.1.1",
-          "NuGetId": "Xamarin.AndroidX.Paging.Common.Ktx",
-          "NuGetVersion": "3.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "multidex",
+          "groupId": "androidx.multidex",
+          "version": "2.0.1",
+          "nuGetId": "Xamarin.AndroidX.MultiDex",
+          "nuGetVersion": "2.0.1.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "paging-runtime",
-          "GroupId": "androidx.paging",
-          "Version": "3.1.1",
-          "NuGetId": "Xamarin.AndroidX.Paging.Runtime",
-          "NuGetVersion": "3.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-common",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.Common",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "paging-runtime-ktx",
-          "GroupId": "androidx.paging",
-          "Version": "3.1.1",
-          "NuGetId": "Xamarin.AndroidX.Paging.Runtime.Ktx",
-          "NuGetVersion": "3.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-common-ktx",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "paging-rxjava2",
-          "GroupId": "androidx.paging",
-          "Version": "3.1.1",
-          "NuGetId": "Xamarin.AndroidX.Paging.RxJava2",
-          "NuGetVersion": "3.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-fragment",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.Fragment",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "paging-rxjava2-ktx",
-          "GroupId": "androidx.paging",
-          "Version": "3.1.1",
-          "NuGetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
-          "NuGetVersion": "3.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-fragment-ktx",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "palette",
-          "GroupId": "androidx.palette",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Palette",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-runtime",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.Runtime",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "palette-ktx",
-          "GroupId": "androidx.palette",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Palette.Palette.Ktx",
-          "NuGetVersion": "1.0.0.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-runtime-ktx",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "percentlayout",
-          "GroupId": "androidx.percentlayout",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.PercentLayout",
-          "NuGetVersion": "1.0.0.15"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-ui",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.UI",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "preference",
-          "GroupId": "androidx.preference",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.Preference",
-          "NuGetVersion": "1.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "navigation-ui-ktx",
+          "groupId": "androidx.navigation",
+          "version": "2.5.2",
+          "nuGetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
+          "nuGetVersion": "2.5.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "preference-ktx",
-          "GroupId": "androidx.preference",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.Preference.Preference.Ktx",
-          "NuGetVersion": "1.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "paging-common",
+          "groupId": "androidx.paging",
+          "version": "3.1.1",
+          "nuGetId": "Xamarin.AndroidX.Paging.Common",
+          "nuGetVersion": "3.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "print",
-          "GroupId": "androidx.print",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Print",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "paging-common-ktx",
+          "groupId": "androidx.paging",
+          "version": "3.1.1",
+          "nuGetId": "Xamarin.AndroidX.Paging.Common.Ktx",
+          "nuGetVersion": "3.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "profileinstaller",
-          "GroupId": "androidx.profileinstaller",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.ProfileInstaller.ProfileInstaller",
-          "NuGetVersion": "1.1.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "paging-runtime",
+          "groupId": "androidx.paging",
+          "version": "3.1.1",
+          "nuGetId": "Xamarin.AndroidX.Paging.Runtime",
+          "nuGetVersion": "3.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "recommendation",
-          "GroupId": "androidx.recommendation",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Recommendation",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "paging-runtime-ktx",
+          "groupId": "androidx.paging",
+          "version": "3.1.1",
+          "nuGetId": "Xamarin.AndroidX.Paging.Runtime.Ktx",
+          "nuGetVersion": "3.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "recyclerview",
-          "GroupId": "androidx.recyclerview",
-          "Version": "1.2.1",
-          "NuGetId": "Xamarin.AndroidX.RecyclerView",
-          "NuGetVersion": "1.2.1.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "paging-rxjava2",
+          "groupId": "androidx.paging",
+          "version": "3.1.1",
+          "nuGetId": "Xamarin.AndroidX.Paging.RxJava2",
+          "nuGetVersion": "3.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "recyclerview-selection",
-          "GroupId": "androidx.recyclerview",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.RecyclerView.Selection",
-          "NuGetVersion": "1.1.0.8"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "paging-rxjava2-ktx",
+          "groupId": "androidx.paging",
+          "version": "3.1.1",
+          "nuGetId": "Xamarin.AndroidX.Paging.RxJava2.Ktx",
+          "nuGetVersion": "3.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "resourceinspection-annotation",
-          "GroupId": "androidx.resourceinspection",
-          "Version": "1.0.1",
-          "NuGetId": "Xamarin.AndroidX.ResourceInspection.Annotation",
-          "NuGetVersion": "1.0.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "palette",
+          "groupId": "androidx.palette",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Palette",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "room-common",
-          "GroupId": "androidx.room",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Room.Common",
-          "NuGetVersion": "2.4.2.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "palette-ktx",
+          "groupId": "androidx.palette",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Palette.Palette.Ktx",
+          "nuGetVersion": "1.0.0.7"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "room-guava",
-          "GroupId": "androidx.room",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Room.Guava",
-          "NuGetVersion": "2.4.2.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "percentlayout",
+          "groupId": "androidx.percentlayout",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.PercentLayout",
+          "nuGetVersion": "1.0.0.15"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "room-ktx",
-          "GroupId": "androidx.room",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Room.Room.Ktx",
-          "NuGetVersion": "2.4.2.3"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "preference",
+          "groupId": "androidx.preference",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Preference",
+          "nuGetVersion": "1.2.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "room-runtime",
-          "GroupId": "androidx.room",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Room.Runtime",
-          "NuGetVersion": "2.4.2.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "preference-ktx",
+          "groupId": "androidx.preference",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Preference.Preference.Ktx",
+          "nuGetVersion": "1.2.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "room-rxjava2",
-          "GroupId": "androidx.room",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Room.Room.RxJava2",
-          "NuGetVersion": "2.4.2.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "print",
+          "groupId": "androidx.print",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Print",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "room-rxjava3",
-          "GroupId": "androidx.room",
-          "Version": "2.4.2",
-          "NuGetId": "Xamarin.AndroidX.Room.Room.RxJava3",
-          "NuGetVersion": "2.4.2.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "profileinstaller",
+          "groupId": "androidx.profileinstaller",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.ProfileInstaller.ProfileInstaller",
+          "nuGetVersion": "1.2.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "savedstate",
-          "GroupId": "androidx.savedstate",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.SavedState",
-          "NuGetVersion": "1.1.0.8"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "recommendation",
+          "groupId": "androidx.recommendation",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Recommendation",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "savedstate-ktx",
-          "GroupId": "androidx.savedstate",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.SavedState.SavedState.Ktx",
-          "NuGetVersion": "1.1.0.8"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "recyclerview",
+          "groupId": "androidx.recyclerview",
+          "version": "1.2.1",
+          "nuGetId": "Xamarin.AndroidX.RecyclerView",
+          "nuGetVersion": "1.2.1.7"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "security-crypto",
-          "GroupId": "androidx.security",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Security.SecurityCrypto",
-          "NuGetVersion": "1.0.0.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "recyclerview-selection",
+          "groupId": "androidx.recyclerview",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.RecyclerView.Selection",
+          "nuGetVersion": "1.1.0.8"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "slice-builders",
-          "GroupId": "androidx.slice",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Slice.Builders",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "resourceinspection-annotation",
+          "groupId": "androidx.resourceinspection",
+          "version": "1.0.1",
+          "nuGetId": "Xamarin.AndroidX.ResourceInspection.Annotation",
+          "nuGetVersion": "1.0.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "slice-core",
-          "GroupId": "androidx.slice",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Slice.Core",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "room-common",
+          "groupId": "androidx.room",
+          "version": "2.4.3",
+          "nuGetId": "Xamarin.AndroidX.Room.Common",
+          "nuGetVersion": "2.4.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "slice-view",
-          "GroupId": "androidx.slice",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Slice.View",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "room-guava",
+          "groupId": "androidx.room",
+          "version": "2.4.3",
+          "nuGetId": "Xamarin.AndroidX.Room.Guava",
+          "nuGetVersion": "2.4.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "slidingpanelayout",
-          "GroupId": "androidx.slidingpanelayout",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.SlidingPaneLayout",
-          "NuGetVersion": "1.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "room-ktx",
+          "groupId": "androidx.room",
+          "version": "2.4.3",
+          "nuGetId": "Xamarin.AndroidX.Room.Room.Ktx",
+          "nuGetVersion": "2.4.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "sqlite",
-          "GroupId": "androidx.sqlite",
-          "Version": "2.2.0",
-          "NuGetId": "Xamarin.AndroidX.Sqlite",
-          "NuGetVersion": "2.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "room-runtime",
+          "groupId": "androidx.room",
+          "version": "2.4.3",
+          "nuGetId": "Xamarin.AndroidX.Room.Runtime",
+          "nuGetVersion": "2.4.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "sqlite-framework",
-          "GroupId": "androidx.sqlite",
-          "Version": "2.2.0",
-          "NuGetId": "Xamarin.AndroidX.Sqlite.Framework",
-          "NuGetVersion": "2.2.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "room-rxjava2",
+          "groupId": "androidx.room",
+          "version": "2.4.3",
+          "nuGetId": "Xamarin.AndroidX.Room.Room.RxJava2",
+          "nuGetVersion": "2.4.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "startup-runtime",
-          "GroupId": "androidx.startup",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.Startup.StartupRuntime",
-          "NuGetVersion": "1.1.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "room-rxjava3",
+          "groupId": "androidx.room",
+          "version": "2.4.3",
+          "nuGetId": "Xamarin.AndroidX.Room.Room.RxJava3",
+          "nuGetVersion": "2.4.3"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "swiperefreshlayout",
-          "GroupId": "androidx.swiperefreshlayout",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.SwipeRefreshLayout",
-          "NuGetVersion": "1.1.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "savedstate",
+          "groupId": "androidx.savedstate",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.SavedState",
+          "nuGetVersion": "1.2.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "tracing",
-          "GroupId": "androidx.tracing",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Tracing.Tracing",
-          "NuGetVersion": "1.1.0.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "savedstate-ktx",
+          "groupId": "androidx.savedstate",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.SavedState.SavedState.Ktx",
+          "nuGetVersion": "1.2.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "transition",
-          "GroupId": "androidx.transition",
-          "Version": "1.4.1",
-          "NuGetId": "Xamarin.AndroidX.Transition",
-          "NuGetVersion": "1.4.1.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "security-crypto",
+          "groupId": "androidx.security",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Security.SecurityCrypto",
+          "nuGetVersion": "1.0.0.7"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "tvprovider",
-          "GroupId": "androidx.tvprovider",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.TvProvider",
-          "NuGetVersion": "1.0.0.16"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "slice-builders",
+          "groupId": "androidx.slice",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Slice.Builders",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "vectordrawable",
-          "GroupId": "androidx.vectordrawable",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.VectorDrawable",
-          "NuGetVersion": "1.1.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "slice-core",
+          "groupId": "androidx.slice",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Slice.Core",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "vectordrawable-animated",
-          "GroupId": "androidx.vectordrawable",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.VectorDrawable.Animated",
-          "NuGetVersion": "1.1.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "slice-view",
+          "groupId": "androidx.slice",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Slice.View",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "versionedparcelable",
-          "GroupId": "androidx.versionedparcelable",
-          "Version": "1.1.1",
-          "NuGetId": "Xamarin.AndroidX.VersionedParcelable",
-          "NuGetVersion": "1.1.1.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "slidingpanelayout",
+          "groupId": "androidx.slidingpanelayout",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.SlidingPaneLayout",
+          "nuGetVersion": "1.2.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "viewpager",
-          "GroupId": "androidx.viewpager",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.ViewPager",
-          "NuGetVersion": "1.0.0.14"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "sqlite",
+          "groupId": "androidx.sqlite",
+          "version": "2.2.0",
+          "nuGetId": "Xamarin.AndroidX.Sqlite",
+          "nuGetVersion": "2.2.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "viewpager2",
-          "GroupId": "androidx.viewpager2",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.ViewPager2",
-          "NuGetVersion": "1.0.0.16"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "sqlite-framework",
+          "groupId": "androidx.sqlite",
+          "version": "2.2.0",
+          "nuGetId": "Xamarin.AndroidX.Sqlite.Framework",
+          "nuGetVersion": "2.2.0.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "wear",
-          "GroupId": "androidx.wear",
-          "Version": "1.2.0",
-          "NuGetId": "Xamarin.AndroidX.Wear",
-          "NuGetVersion": "1.2.0.6"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "startup-runtime",
+          "groupId": "androidx.startup",
+          "version": "1.1.1",
+          "nuGetId": "Xamarin.AndroidX.Startup.StartupRuntime",
+          "nuGetVersion": "1.1.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "wear-input",
-          "GroupId": "androidx.wear",
-          "Version": "1.1.0",
-          "NuGetId": "Xamarin.AndroidX.Wear.Input",
-          "NuGetVersion": "1.0.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "swiperefreshlayout",
+          "groupId": "androidx.swiperefreshlayout",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.SwipeRefreshLayout",
+          "nuGetVersion": "1.1.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "wear-ongoing",
-          "GroupId": "androidx.wear",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Wear.Ongoing",
-          "NuGetVersion": "1.0.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tracing",
+          "groupId": "androidx.tracing",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Tracing.Tracing",
+          "nuGetVersion": "1.1.0.1"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "wear-phone-interactions",
-          "GroupId": "androidx.wear",
-          "Version": "1.0.1",
-          "NuGetId": "Xamarin.AndroidX.Wear.PhoneInteractions",
-          "NuGetVersion": "1.0.1.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "transition",
+          "groupId": "androidx.transition",
+          "version": "1.4.1",
+          "nuGetId": "Xamarin.AndroidX.Transition",
+          "nuGetVersion": "1.4.1.7"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "wear-remote-interactions",
-          "GroupId": "androidx.wear",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Wear.RemoteInteractions",
-          "NuGetVersion": "1.0.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tvprovider",
+          "groupId": "androidx.tvprovider",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.TvProvider",
+          "nuGetVersion": "1.0.0.16"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "webkit",
-          "GroupId": "androidx.webkit",
-          "Version": "1.4.0",
-          "NuGetId": "Xamarin.AndroidX.WebKit",
-          "NuGetVersion": "1.4.0.8"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "vectordrawable",
+          "groupId": "androidx.vectordrawable",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.VectorDrawable",
+          "nuGetVersion": "1.1.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "window",
-          "GroupId": "androidx.window",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Window",
-          "NuGetVersion": "1.0.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "vectordrawable-animated",
+          "groupId": "androidx.vectordrawable",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.VectorDrawable.Animated",
+          "nuGetVersion": "1.1.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "window-extensions",
-          "GroupId": "androidx.window",
-          "Version": "1.0.0-alpha01",
-          "NuGetId": "Xamarin.AndroidX.Window.WindowExtensions",
-          "NuGetVersion": "1.0.0.9-alpha01"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "versionedparcelable",
+          "groupId": "androidx.versionedparcelable",
+          "version": "1.1.1",
+          "nuGetId": "Xamarin.AndroidX.VersionedParcelable",
+          "nuGetVersion": "1.1.1.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "window-java",
-          "GroupId": "androidx.window",
-          "Version": "1.0.0",
-          "NuGetId": "Xamarin.AndroidX.Window.WindowJava",
-          "NuGetVersion": "1.0.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "viewpager",
+          "groupId": "androidx.viewpager",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.ViewPager",
+          "nuGetVersion": "1.0.0.14"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "work-runtime",
-          "GroupId": "androidx.work",
-          "Version": "2.7.1",
-          "NuGetId": "Xamarin.AndroidX.Work.Runtime",
-          "NuGetVersion": "2.7.1.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "viewpager2",
+          "groupId": "androidx.viewpager2",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.ViewPager2",
+          "nuGetVersion": "1.0.0.16"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "work-runtime-ktx",
-          "GroupId": "androidx.work",
-          "Version": "2.7.1",
-          "NuGetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
-          "NuGetVersion": "2.7.1.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "wear",
+          "groupId": "androidx.wear",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Wear",
+          "nuGetVersion": "1.2.0.6"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "material",
-          "GroupId": "com.google.android.material",
-          "Version": "1.6.1",
-          "NuGetId": "Xamarin.Google.Android.Material",
-          "NuGetVersion": "1.6.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "wear-input",
+          "groupId": "androidx.wear",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Wear.Input",
+          "nuGetVersion": "1.0.0.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "auto-value-annotations",
-          "GroupId": "com.google.auto.value",
-          "Version": "1.9",
-          "NuGetId": "Xamarin.Google.AutoValue.Annotations",
-          "NuGetVersion": "1.9.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "wear-ongoing",
+          "groupId": "androidx.wear",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Wear.Ongoing",
+          "nuGetVersion": "1.0.0.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "gson",
-          "GroupId": "com.google.code.gson",
-          "Version": "2.9.0",
-          "NuGetId": "GoogleGson",
-          "NuGetVersion": "2.9.0.2"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "wear-phone-interactions",
+          "groupId": "androidx.wear",
+          "version": "1.0.1",
+          "nuGetId": "Xamarin.AndroidX.Wear.PhoneInteractions",
+          "nuGetVersion": "1.0.1.2"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "tink-android",
-          "GroupId": "com.google.crypto.tink",
-          "Version": "1.6.1",
-          "NuGetId": "Xamarin.Google.Crypto.Tink.Android",
-          "NuGetVersion": "1.6.1.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "wear-remote-interactions",
+          "groupId": "androidx.wear",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Wear.RemoteInteractions",
+          "nuGetVersion": "1.0.0.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "failureaccess",
-          "GroupId": "com.google.guava",
-          "Version": "1.0.1",
-          "NuGetId": "Xamarin.Google.Guava.FailureAccess",
-          "NuGetVersion": "1.0.1.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "webkit",
+          "groupId": "androidx.webkit",
+          "version": "1.5.0",
+          "nuGetId": "Xamarin.AndroidX.WebKit",
+          "nuGetVersion": "1.5.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "guava",
-          "GroupId": "com.google.guava",
-          "Version": "31.1-android",
-          "NuGetId": "Xamarin.Google.Guava",
-          "NuGetVersion": "31.1.0.3"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "window",
+          "groupId": "androidx.window",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Window",
+          "nuGetVersion": "1.0.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "listenablefuture",
-          "GroupId": "com.google.guava",
-          "Version": "1.0",
-          "NuGetId": "Xamarin.Google.Guava.ListenableFuture",
-          "NuGetVersion": "1.0.0.9"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "window-extensions",
+          "groupId": "androidx.window",
+          "version": "1.0.0-alpha01",
+          "nuGetId": "Xamarin.AndroidX.Window.WindowExtensions",
+          "nuGetVersion": "1.0.0.9-alpha01"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "j2objc-annotations",
-          "GroupId": "com.google.j2objc",
-          "Version": "1.3",
-          "NuGetId": "Xamarin.Google.J2Objc.Annotations",
-          "NuGetVersion": "1.3.0.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "window-java",
+          "groupId": "androidx.window",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Window.WindowJava",
+          "nuGetVersion": "1.0.0.9"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "rxjava",
-          "GroupId": "io.reactivex.rxjava2",
-          "Version": "2.2.21",
-          "NuGetId": "Xamarin.Android.ReactiveX.RxJava",
-          "NuGetVersion": "2.2.21.7"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "window-rxjava2",
+          "groupId": "androidx.window",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Window.WindowRxJava2",
+          "nuGetVersion": "1.0.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "rxjava",
-          "GroupId": "io.reactivex.rxjava3",
-          "Version": "3.1.5",
-          "NuGetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
-          "NuGetVersion": "3.1.5.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "window-rxjava3",
+          "groupId": "androidx.window",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.Window.WindowRxJava3",
+          "nuGetVersion": "1.0.0"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "checker-qual",
-          "GroupId": "org.checkerframework",
-          "Version": "3.22.1",
-          "NuGetId": "Xamarin.CheckerFramework.CheckerQual",
-          "NuGetVersion": "3.22.1.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "work-runtime",
+          "groupId": "androidx.work",
+          "version": "2.7.1",
+          "nuGetId": "Xamarin.AndroidX.Work.Runtime",
+          "nuGetVersion": "2.7.1.4"
         }
       },
-      "License": "MIT"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "annotations",
-          "GroupId": "org.jetbrains",
-          "Version": "23.0.0",
-          "NuGetId": "Xamarin.Jetbrains.Annotations",
-          "NuGetVersion": "23.0.0.4"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "work-runtime-ktx",
+          "groupId": "androidx.work",
+          "version": "2.7.1",
+          "nuGetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
+          "nuGetVersion": "2.7.1.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlin-reflect",
-          "GroupId": "org.jetbrains.kotlin",
-          "Version": "1.6.21",
-          "NuGetId": "Xamarin.Kotlin.Reflect",
-          "NuGetVersion": "1.6.21.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "installreferrer",
+          "groupId": "com.android.installreferrer",
+          "version": "1.0",
+          "nuGetId": "Xamarin.Google.Android.InstallReferrer",
+          "nuGetVersion": "1.0.0"
         }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-appcompat-theme",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-drawablepainter",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.DrawablePainter",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-flowlayout",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.FlowLayout",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-pager",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.Pager",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-pager-indicators",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.Pager.Indicators",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-permissions",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.Permissions",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-placeholder",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.Placeholder",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-placeholder-material",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.Placeholder.Material",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-swiperefresh",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.SwipeRefresh",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "accompanist-systemuicontroller",
+          "groupId": "com.google.accompanist",
+          "version": "0.25.1",
+          "nuGetId": "Xamarin.Google.Accompanist.SystemUIController",
+          "nuGetVersion": "0.25.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "compose-theme-adapter",
+          "groupId": "com.google.android.material",
+          "version": "1.1.18",
+          "nuGetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
+          "nuGetVersion": "1.1.18"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "material",
+          "groupId": "com.google.android.material",
+          "version": "1.6.1",
+          "nuGetId": "Xamarin.Google.Android.Material",
+          "nuGetVersion": "1.6.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "suggestions",
+          "groupId": "com.google.assistant.appactions",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.Google.Assistant.AppActions.Suggestions",
+          "nuGetVersion": "1.0.0"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "widgets",
+          "groupId": "com.google.assistant.appactions",
+          "version": "0.0.1",
+          "nuGetId": "Xamarin.Google.Assistant.AppActions.Widgets",
+          "nuGetVersion": "0.0.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "auto-value-annotations",
+          "groupId": "com.google.auto.value",
+          "version": "1.9",
+          "nuGetId": "Xamarin.Google.AutoValue.Annotations",
+          "nuGetVersion": "1.9.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "gson",
+          "groupId": "com.google.code.gson",
+          "version": "2.9.1",
+          "nuGetId": "GoogleGson",
+          "nuGetVersion": "2.9.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tink-android",
+          "groupId": "com.google.crypto.tink",
+          "version": "1.7.0",
+          "nuGetId": "Xamarin.Google.Crypto.Tink.Android",
+          "nuGetVersion": "1.7.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "flogger",
+          "groupId": "com.google.flogger",
+          "version": "0.7.4",
+          "nuGetId": "Xamarin.Flogger",
+          "nuGetVersion": "0.7.4"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "flogger-system-backend",
+          "groupId": "com.google.flogger",
+          "version": "0.7.4",
+          "nuGetId": "Xamarin.Flogger.SystemBackend",
+          "nuGetVersion": "0.7.4"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "failureaccess",
+          "groupId": "com.google.guava",
+          "version": "1.0.1",
+          "nuGetId": "Xamarin.Google.Guava.FailureAccess",
+          "nuGetVersion": "1.0.1.7"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "guava",
+          "groupId": "com.google.guava",
+          "version": "31.1-android",
+          "nuGetId": "Xamarin.Google.Guava",
+          "nuGetVersion": "31.1.0.3"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "listenablefuture",
+          "groupId": "com.google.guava",
+          "version": "1.0",
+          "nuGetId": "Xamarin.Google.Guava.ListenableFuture",
+          "nuGetVersion": "1.0.0.9"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "j2objc-annotations",
+          "groupId": "com.google.j2objc",
+          "version": "1.3",
+          "nuGetId": "Xamarin.Google.J2Objc.Annotations",
+          "nuGetVersion": "1.3.0.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "snapper",
+          "groupId": "dev.chrisbanes.snapper",
+          "version": "0.3.0",
+          "nuGetId": "Xamarin.Dev.ChrisBanes.Snapper",
+          "nuGetVersion": "0.3.0"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "napier",
+          "groupId": "io.github.aakira",
+          "version": "2.6.1",
+          "nuGetId": "Xamarin.AAkira.Napier",
+          "nuGetVersion": "2.6.1"
+        }
+      }
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "rxjava",
+          "groupId": "io.reactivex.rxjava2",
+          "version": "2.2.21",
+          "nuGetId": "Xamarin.Android.ReactiveX.RxJava",
+          "nuGetVersion": "2.2.21.7"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "rxjava",
+          "groupId": "io.reactivex.rxjava3",
+          "version": "3.1.5",
+          "nuGetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+          "nuGetVersion": "3.1.5.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "checker-compat-qual",
+          "groupId": "org.checkerframework",
+          "version": "2.5.5",
+          "nuGetId": "Xamarin.CheckerFramework.CheckerCompatQual",
+          "nuGetVersion": "2.5.5"
+        }
+      },
+      "license": "MIT"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "checker-qual",
+          "groupId": "org.checkerframework",
+          "version": "3.25.0",
+          "nuGetId": "Xamarin.CheckerFramework.CheckerQual",
+          "nuGetVersion": "3.25.0"
+        }
+      },
+      "license": "MIT"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "annotations",
+          "groupId": "org.jetbrains",
+          "version": "23.0.0",
+          "nuGetId": "Xamarin.Jetbrains.Annotations",
+          "nuGetVersion": "23.0.0.4"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlin-reflect",
+          "groupId": "org.jetbrains.kotlin",
+          "version": "1.7.10",
+          "nuGetId": "Xamarin.Kotlin.Reflect",
+          "nuGetVersion": "1.7.10"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlin-stdlib",
+          "groupId": "org.jetbrains.kotlin",
+          "version": "1.7.10",
+          "nuGetId": "Xamarin.Kotlin.StdLib",
+          "nuGetVersion": "1.7.10"
+        }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlin-stdlib",
-          "GroupId": "org.jetbrains.kotlin",
-          "Version": "1.6.21",
-          "NuGetId": "Xamarin.Kotlin.StdLib",
-          "NuGetVersion": "1.6.21.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlin-stdlib-common",
+          "groupId": "org.jetbrains.kotlin",
+          "version": "1.7.10",
+          "nuGetId": "Xamarin.Kotlin.StdLib.Common",
+          "nuGetVersion": "1.7.10"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlin-stdlib-common",
-          "GroupId": "org.jetbrains.kotlin",
-          "Version": "1.6.21",
-          "NuGetId": "Xamarin.Kotlin.StdLib.Common",
-          "NuGetVersion": "1.6.21.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlin-stdlib-jdk7",
+          "groupId": "org.jetbrains.kotlin",
+          "version": "1.7.10",
+          "nuGetId": "Xamarin.Kotlin.StdLib.Jdk7",
+          "nuGetVersion": "1.7.10"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlin-stdlib-jdk7",
-          "GroupId": "org.jetbrains.kotlin",
-          "Version": "1.6.21",
-          "NuGetId": "Xamarin.Kotlin.StdLib.Jdk7",
-          "NuGetVersion": "1.6.21.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlin-stdlib-jdk8",
+          "groupId": "org.jetbrains.kotlin",
+          "version": "1.7.10",
+          "nuGetId": "Xamarin.Kotlin.StdLib.Jdk8",
+          "nuGetVersion": "1.7.10"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlin-stdlib-jdk8",
-          "GroupId": "org.jetbrains.kotlin",
-          "Version": "1.6.21",
-          "NuGetId": "Xamarin.Kotlin.StdLib.Jdk8",
-          "NuGetVersion": "1.6.21.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-android",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Android",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-android",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Android",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-core",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Core",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-core",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Core",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-core-jvm",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-core-jvm",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-guava",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Guava",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-guava",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Guava",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-jdk8",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Jdk8",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-jdk8",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Jdk8",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-reactive",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Reactive",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-reactive",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Reactive",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-rx2",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Rx2",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "kotlinx-coroutines-rx2",
-          "GroupId": "org.jetbrains.kotlinx",
-          "Version": "1.6.2",
-          "NuGetId": "Xamarin.KotlinX.Coroutines.Rx2",
-          "NuGetVersion": "1.6.2.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "kotlinx-coroutines-rx3",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Rx3",
+          "nuGetVersion": "1.6.4"
         }
       },
-      "License": "The Apache Software License, Version 2.0"
+      "license": "The Apache Software License, Version 2.0"
     },
     {
-      "Component": {
-        "Type": "Maven",
-        "Maven": {
-          "ArtifactId": "reactive-streams",
-          "GroupId": "org.reactivestreams",
-          "Version": "1.0.4",
-          "NuGetId": "Xamarin.Android.ReactiveStreams",
-          "NuGetVersion": "1.0.4.1"
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "reactive-streams",
+          "groupId": "org.reactivestreams",
+          "version": "1.0.4",
+          "nuGetId": "Xamarin.Android.ReactiveStreams",
+          "nuGetVersion": "1.0.4.1"
         }
       },
-      "License": "MIT-0"
+      "license": "MIT-0"
     }
   ],
-  "Version": 0
+  "version": 0
 }
