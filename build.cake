@@ -821,7 +821,6 @@ Task("samples-dotnet")
     }
 });
 
-
 Task("tools-executive-order")
     .Does
     (
@@ -837,7 +836,8 @@ Task("tools-executive-order")
                                     { "target", "tools-executive-order" } 
                                 } 
                             }
-                        );        }
+                        );        
+        }
     );
 
 Task("api-diff")
