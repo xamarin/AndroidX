@@ -66,7 +66,7 @@
 |  59|androidx.core:core-google-shortcuts                                   |1.0.1               |Xamarin.AndroidX.Core.GoogleShortcuts                                 |1.0.1.1             |
 |  60|androidx.core:core-ktx                                                |1.8.0               |Xamarin.AndroidX.Core.Core.Ktx                                        |1.8.0.1             |
 |  61|androidx.core:core-role                                               |1.0.0               |Xamarin.AndroidX.Core.Role                                            |1.0.0.12            |
-|  62|androidx.core:core-splashscreen                                       |1.0.0               |Xamarin.AndroidX.Core.SplashScreen                                    |1.0.0               |
+|  62|androidx.core:core-splashscreen                                       |1.0.0               |Xamarin.AndroidX.Core.SplashScreen                                    |1.0.0.1             |
 |  63|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.14            |
 |  64|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.13            |
 |  65|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0               |
@@ -176,7 +176,7 @@
 | 169|androidx.wear:wear-ongoing                                            |1.0.0               |Xamarin.AndroidX.Wear.Ongoing                                         |1.0.0.4             |
 | 170|androidx.wear:wear-phone-interactions                                 |1.0.1               |Xamarin.AndroidX.Wear.PhoneInteractions                               |1.0.1.2             |
 | 171|androidx.wear:wear-remote-interactions                                |1.0.0               |Xamarin.AndroidX.Wear.RemoteInteractions                              |1.0.0.4             |
-| 172|androidx.webkit:webkit                                                |1.4.0               |Xamarin.AndroidX.WebKit                                               |1.4.0.8             |
+| 172|androidx.webkit:webkit                                                |1.5.0               |Xamarin.AndroidX.WebKit                                               |1.5.0               |
 | 173|androidx.window:window                                                |1.0.0               |Xamarin.AndroidX.Window                                               |1.0.0.9             |
 | 174|androidx.window:window-extensions                                     |1.0.0-alpha01       |Xamarin.AndroidX.Window.WindowExtensions                              |1.0.0.9-alpha01     |
 | 175|androidx.window:window-java                                           |1.0.0               |Xamarin.AndroidX.Window.WindowJava                                    |1.0.0.9             |
@@ -208,7 +208,7 @@
 | 201|com.google.guava:guava                                                |31.1-android        |Xamarin.Google.Guava                                                  |31.1.0.3            |
 | 202|com.google.guava:listenablefuture                                     |1.0                 |Xamarin.Google.Guava.ListenableFuture                                 |1.0.0.9             |
 | 203|com.google.j2objc:j2objc-annotations                                  |1.3                 |Xamarin.Google.J2Objc.Annotations                                     |1.3.0.1             |
-| 204|dev.chrisbanes.snapper:snapper                                        |0.2.2               |Xamarin.Dev.ChrisBanes.Snapper                                        |0.2.2               |
+| 204|dev.chrisbanes.snapper:snapper                                        |0.3.0               |Xamarin.Dev.ChrisBanes.Snapper                                        |0.3.0               |
 | 205|io.github.aakira:napier                                               |2.6.1               |Xamarin.AAkira.Napier                                                 |2.6.1               |
 | 206|io.reactivex.rxjava2:rxjava                                           |2.2.21              |Xamarin.Android.ReactiveX.RxJava                                      |2.2.21.7            |
 | 207|io.reactivex.rxjava3:rxjava                                           |3.1.5               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.5.1             |
