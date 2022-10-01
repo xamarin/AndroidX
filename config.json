@@ -548,32 +548,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.2.2",
-        "nugetVersion": "7.2.2",
+        "version": "7.3.0",
+        "nugetVersion": "7.3.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -1563,8 +1563,8 @@
         "version": "1.1.18",
         "nugetVersion": "1.1.18",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
-        "frozen": "true",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "frozen": true
       },
       {
         "groupId": "com.google.android.material",

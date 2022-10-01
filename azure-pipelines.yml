@@ -52,7 +52,7 @@ jobs:
             dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
             dotnet workload install maui --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
             dotnet workload update
-            
+
         - task: JavaToolInstaller@0
           inputs:
             versionSpec: '11'
