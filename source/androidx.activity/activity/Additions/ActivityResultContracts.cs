@@ -214,3 +214,32 @@ namespace AndroidX.Activity.Result.Contract
 	}
 }
 
+
+namespace AndroidX.Activity.Result.Contract 
+{
+	// Metadata.xml XPath class reference: path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts']"
+	// [global::Android.Runtime.Register ("androidx/activity/result/contract/ActivityResultContracts", DoNotGenerateAcw=true)]
+	public sealed partial class ActivityResultContracts //: global::Java.Lang.Object 
+	{
+
+		public partial class PickMultipleVisualMedia //: global::AndroidX.Activity.Result.Contract.ActivityResultContract 
+		{
+
+			// Metadata.xml XPath method reference: path="/api/package[@name='androidx.activity.result.contract']/class[@name='ActivityResultContracts.PickVisualMedia']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
+			[Register ("parseResult", "(ILandroid/content/Intent;)Landroid/net/Uri;", "")]
+			public override sealed unsafe global::Java.Lang.Object? ParseResult (int resultCode, global::Android.Content.Intent? intent)
+			{
+				const string __id = "parseResult.(ILandroid/content/Intent;)Landroid/net/Uri;";
+				try {
+					JniArgumentValue* __args = stackalloc JniArgumentValue [2];
+					__args [0] = new JniArgumentValue (resultCode);
+					__args [1] = new JniArgumentValue ((intent == null) ? IntPtr.Zero : ((global::Java.Lang.Object) intent).Handle);
+					var __rm = _members.InstanceMethods.InvokeNonvirtualObjectMethod (__id, this, __args);
+					return global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+					global::System.GC.KeepAlive (intent);
+				}
+			}
+		}
+	}
+}
