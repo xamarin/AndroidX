@@ -1161,7 +1161,13 @@ Task("generate-markdown-publish-log")
                 Error("No log file found");
                 Error($"     save ci log to {ci_publish_log_file}");
 
-                FileWriteText(ci_publish_log_file, $"{ci_publish_log_file}          paste log from CI");
+                FileWriteText
+                        (
+                            ci_publish_log_file, 
+                            $"dotnet cake utilities.cake -t=generate-markdown-publish-log"
+                            + Environment.NewLine +
+                            "{ci_publish_log_file}          paste log from CI"
+                        );
 
                 return;
             }
