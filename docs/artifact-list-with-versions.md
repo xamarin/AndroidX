@@ -70,10 +70,10 @@
 |  63|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.14            |
 |  64|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.13            |
 |  65|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0               |
-|  66|androidx.databinding:databinding-adapters                             |7.2.2               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |7.2.2               |
-|  67|androidx.databinding:databinding-common                               |7.2.2               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |7.2.2               |
-|  68|androidx.databinding:databinding-runtime                              |7.2.2               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |7.2.2               |
-|  69|androidx.databinding:viewbinding                                      |7.2.2               |Xamarin.AndroidX.DataBinding.ViewBinding                              |7.2.2               |
+|  66|androidx.databinding:databinding-adapters                             |7.3.0               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |7.3.0               |
+|  67|androidx.databinding:databinding-common                               |7.3.0               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |7.3.0               |
+|  68|androidx.databinding:databinding-runtime                              |7.3.0               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |7.3.0               |
+|  69|androidx.databinding:viewbinding                                      |7.3.0               |Xamarin.AndroidX.DataBinding.ViewBinding                              |7.3.0               |
 |  70|androidx.documentfile:documentfile                                    |1.0.1               |Xamarin.AndroidX.DocumentFile                                         |1.0.1.14            |
 |  71|androidx.drawerlayout:drawerlayout                                    |1.1.1               |Xamarin.AndroidX.DrawerLayout                                         |1.1.1.9             |
 |  72|androidx.dynamicanimation:dynamicanimation                            |1.0.0               |Xamarin.AndroidX.DynamicAnimation                                     |1.0.0.14            |
