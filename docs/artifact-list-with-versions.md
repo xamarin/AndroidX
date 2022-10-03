@@ -5,13 +5,13 @@
 
 |    |                                                                      |                    |                                                                      |                    |
 |----|----------------------------------------------------------------------|--------------------|----------------------------------------------------------------------|--------------------|
-|   1|androidx.activity:activity                                            |1.5.1               |Xamarin.AndroidX.Activity                                             |1.5.1               |
-|   2|androidx.activity:activity-compose                                    |1.5.1               |Xamarin.AndroidX.Activity.Compose                                     |1.5.1               |
-|   3|androidx.activity:activity-ktx                                        |1.5.1               |Xamarin.AndroidX.Activity.Ktx                                         |1.5.1               |
+|   1|androidx.activity:activity                                            |1.6.0               |Xamarin.AndroidX.Activity                                             |1.6.0               |
+|   2|androidx.activity:activity-compose                                    |1.6.0               |Xamarin.AndroidX.Activity.Compose                                     |1.6.0               |
+|   3|androidx.activity:activity-ktx                                        |1.6.0               |Xamarin.AndroidX.Activity.Ktx                                         |1.6.0               |
 |   4|androidx.ads:ads-identifier                                           |1.0.0-alpha04       |Xamarin.AndroidX.Ads.Identifier                                       |1.0.0.12-alpha04    |
 |   5|androidx.ads:ads-identifier-common                                    |1.0.0-alpha04       |Xamarin.AndroidX.Ads.IdentifierCommon                                 |1.0.0.12-alpha04    |
 |   6|androidx.ads:ads-identifier-provider                                  |1.0.0-alpha04       |Xamarin.AndroidX.Ads.IdentifierProvider                               |1.0.0.12-alpha04    |
-|   7|androidx.annotation:annotation                                        |1.4.0               |Xamarin.AndroidX.Annotation                                           |1.4.0               |
+|   7|androidx.annotation:annotation                                        |1.5.0               |Xamarin.AndroidX.Annotation                                           |1.5.0               |
 |   8|androidx.annotation:annotation-experimental                           |1.3.0               |Xamarin.AndroidX.Annotation.Experimental                              |1.3.0               |
 |   9|androidx.appcompat:appcompat                                          |1.5.1               |Xamarin.AndroidX.AppCompat                                            |1.5.1               |
 |  10|androidx.appcompat:appcompat-resources                                |1.5.1               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.5.1               |
@@ -84,8 +84,8 @@
 |  77|androidx.emoji2:emoji2-views-helper                                   |1.2.0               |Xamarin.AndroidX.Emoji2.ViewsHelper                                   |1.2.0               |
 |  78|androidx.enterprise:enterprise-feedback                               |1.1.0               |Xamarin.AndroidX.Enterprise.Feedback                                  |1.1.0               |
 |  79|androidx.exifinterface:exifinterface                                  |1.3.3               |Xamarin.AndroidX.ExifInterface                                        |1.3.3.6             |
-|  80|androidx.fragment:fragment                                            |1.5.2               |Xamarin.AndroidX.Fragment                                             |1.5.2               |
-|  81|androidx.fragment:fragment-ktx                                        |1.5.2               |Xamarin.AndroidX.Fragment.Ktx                                         |1.5.2               |
+|  80|androidx.fragment:fragment                                            |1.5.3               |Xamarin.AndroidX.Fragment                                             |1.5.3               |
+|  81|androidx.fragment:fragment-ktx                                        |1.5.3               |Xamarin.AndroidX.Fragment.Ktx                                         |1.5.3               |
 |  82|androidx.gridlayout:gridlayout                                        |1.0.0               |Xamarin.AndroidX.GridLayout                                           |1.0.0.14            |
 |  83|androidx.heifwriter:heifwriter                                        |1.0.0               |Xamarin.AndroidX.HeifWriter                                           |1.0.0.14            |
 |  84|androidx.interpolator:interpolator                                    |1.0.0               |Xamarin.AndroidX.Interpolator                                         |1.0.0.14            |
