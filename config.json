@@ -28,24 +28,24 @@
       {
         "groupId": "androidx.activity",
         "artifactId": "activity",
-        "version": "1.5.1",
-        "nugetVersion": "1.5.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Activity",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-compose",
-        "version": "1.5.1",
-        "nugetVersion": "1.5.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Activity.Compose",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.activity",
         "artifactId": "activity-ktx",
-        "version": "1.5.1",
-        "nugetVersion": "1.5.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Activity.Ktx",
         "dependencyOnly": false
       },
@@ -76,8 +76,8 @@
       {
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
-        "version": "1.4.0",
-        "nugetVersion": "1.4.0",
+        "version": "1.5.0",
+        "nugetVersion": "1.5.0",
         "nugetId": "Xamarin.AndroidX.Annotation",
         "dependencyOnly": false
       },
@@ -660,16 +660,16 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.5.2",
-        "nugetVersion": "1.5.2",
+        "version": "1.5.3",
+        "nugetVersion": "1.5.3",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment-ktx",
-        "version": "1.5.2",
-        "nugetVersion": "1.5.2",
+        "version": "1.5.3",
+        "nugetVersion": "1.5.3",
         "nugetId": "Xamarin.AndroidX.Fragment.Ktx",
         "dependencyOnly": false
       },
@@ -1738,8 +1738,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.7.10",
-        "nugetVersion": "1.7.10",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1750,8 +1750,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.7.10",
-        "nugetVersion": "1.7.10",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1759,8 +1759,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.7.10",
-        "nugetVersion": "1.7.10",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1771,8 +1771,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.7.10",
-        "nugetVersion": "1.7.10",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1783,8 +1783,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.7.10",
-        "nugetVersion": "1.7.10",
+        "version": "1.7.20",
+        "nugetVersion": "1.7.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
