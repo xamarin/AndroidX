@@ -215,11 +215,11 @@
 | 208|org.checkerframework:checker-compat-qual                              |2.5.5               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.5               |
 | 209|org.checkerframework:checker-qual                                     |3.25.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.25.0              |
 | 210|org.jetbrains:annotations                                             |23.0.0              |Xamarin.Jetbrains.Annotations                                         |23.0.0.4            |
-| 211|org.jetbrains.kotlin:kotlin-reflect                                   |1.7.10              |Xamarin.Kotlin.Reflect                                                |1.7.10              |
-| 212|org.jetbrains.kotlin:kotlin-stdlib                                    |1.7.10              |Xamarin.Kotlin.StdLib                                                 |1.7.10              |
-| 213|org.jetbrains.kotlin:kotlin-stdlib-common                             |1.7.10              |Xamarin.Kotlin.StdLib.Common                                          |1.7.10              |
-| 214|org.jetbrains.kotlin:kotlin-stdlib-jdk7                               |1.7.10              |Xamarin.Kotlin.StdLib.Jdk7                                            |1.7.10              |
-| 215|org.jetbrains.kotlin:kotlin-stdlib-jdk8                               |1.7.10              |Xamarin.Kotlin.StdLib.Jdk8                                            |1.7.10              |
+| 211|org.jetbrains.kotlin:kotlin-reflect                                   |1.7.20              |Xamarin.Kotlin.Reflect                                                |1.7.20              |
+| 212|org.jetbrains.kotlin:kotlin-stdlib                                    |1.7.20              |Xamarin.Kotlin.StdLib                                                 |1.7.20              |
+| 213|org.jetbrains.kotlin:kotlin-stdlib-common                             |1.7.20              |Xamarin.Kotlin.StdLib.Common                                          |1.7.20              |
+| 214|org.jetbrains.kotlin:kotlin-stdlib-jdk7                               |1.7.20              |Xamarin.Kotlin.StdLib.Jdk7                                            |1.7.20              |
+| 215|org.jetbrains.kotlin:kotlin-stdlib-jdk8                               |1.7.20              |Xamarin.Kotlin.StdLib.Jdk8                                            |1.7.20              |
 | 216|org.jetbrains.kotlinx:kotlinx-coroutines-android                      |1.6.4               |Xamarin.KotlinX.Coroutines.Android                                    |1.6.4               |
 | 217|org.jetbrains.kotlinx:kotlinx-coroutines-core                         |1.6.4               |Xamarin.KotlinX.Coroutines.Core                                       |1.6.4               |
 | 218|org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm                     |1.6.4               |Xamarin.KotlinX.Coroutines.Core.Jvm                                   |1.6.4               |
