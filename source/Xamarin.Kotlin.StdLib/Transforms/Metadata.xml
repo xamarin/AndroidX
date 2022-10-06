@@ -398,11 +398,17 @@
       />
     <remove-node
       path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/method[@name='elapsedNow-UwyO8pc' and count(parameter)=1 and parameter[1][@type='long']]"
-      name="managedReturn"
       />
     <remove-node
       path="/api/package[@name='kotlin.time']/class[@name='TimeSource.Monotonic.ValueTimeMark']/implements"
-      name="managedReturn"
       />
+
+    <remove-node
+      path="/api/package[@name='kotlin.ranges']/class[@name='UIntRange']/implements[@name='kotlin.ranges.OpenEndRange']"
+      />
+    <remove-node
+      path="/api/package[@name='kotlin.ranges']/class[@name='ULongRange']/implements[@name='kotlin.ranges.OpenEndRange']"
+      />
+
 
 </metadata>
