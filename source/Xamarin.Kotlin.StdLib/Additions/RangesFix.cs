@@ -19,4 +19,20 @@ namespace Kotlin.Ranges
 
 		bool IClosedRange.Contains(Object value) => Contains((uint)(int)value);
 	}
+
+	unsafe partial class UIntRange : IOpenEndRange
+	{
+		Object IOpenEndRange.EndExclusive => (int)EndInclusive;
+		Object IOpenEndRange.Start => (int)Start;
+
+		bool IOpenEndRange.Contains(Object value) => Contains((uint)(int)value);
+	}
+
+	unsafe partial class ULongRange : IOpenEndRange
+	{
+		Object IOpenEndRange.EndExclusive => (int)EndInclusive;
+		Object IOpenEndRange.Start => (int)Start;
+
+		bool IOpenEndRange.Contains(Object value) => Contains((uint)(int)value);
+	}
 }
