@@ -1443,7 +1443,7 @@ Task("tools-executive-oreder-csv-and-markdown")
                     }
                 }
             }
-            catch ()
+            catch
             {
                 sb.AppendLine($"Mono JIT compiler, Not installed");   
             }
