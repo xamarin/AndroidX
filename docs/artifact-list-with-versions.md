@@ -22,7 +22,7 @@
 |  15|androidx.biometric:biometric                                          |1.1.0               |Xamarin.AndroidX.Biometric                                            |1.1.0.10            |
 |  16|androidx.browser:browser                                              |1.4.0               |Xamarin.AndroidX.Browser                                              |1.4.0.2             |
 |  17|androidx.camera:camera-camera2                                        |1.1.0               |Xamarin.AndroidX.Camera.Camera2                                       |1.1.0               |
-|  18|androidx.camera:camera-core                                           |1.1.0               |Xamarin.AndroidX.Camera.Core                                          |1.1.0               |
+|  18|androidx.camera:camera-core                                           |1.1.0               |Xamarin.AndroidX.Camera.Core                                          |1.1.0.1             |
 |  19|androidx.camera:camera-extensions                                     |1.1.0               |Xamarin.AndroidX.Camera.Extensions                                    |1.1.0               |
 |  20|androidx.camera:camera-lifecycle                                      |1.1.0               |Xamarin.AndroidX.Camera.Lifecycle                                     |1.1.0               |
 |  21|androidx.camera:camera-video                                          |1.1.0               |Xamarin.AndroidX.Camera.Video                                         |1.1.0               |
@@ -83,7 +83,7 @@
 |  76|androidx.emoji2:emoji2                                                |1.2.0               |Xamarin.AndroidX.Emoji2                                               |1.2.0               |
 |  77|androidx.emoji2:emoji2-views-helper                                   |1.2.0               |Xamarin.AndroidX.Emoji2.ViewsHelper                                   |1.2.0               |
 |  78|androidx.enterprise:enterprise-feedback                               |1.1.0               |Xamarin.AndroidX.Enterprise.Feedback                                  |1.1.0               |
-|  79|androidx.exifinterface:exifinterface                                  |1.3.3               |Xamarin.AndroidX.ExifInterface                                        |1.3.3.6             |
+|  79|androidx.exifinterface:exifinterface                                  |1.3.4               |Xamarin.AndroidX.ExifInterface                                        |1.3.4               |
 |  80|androidx.fragment:fragment                                            |1.5.3               |Xamarin.AndroidX.Fragment                                             |1.5.3               |
 |  81|androidx.fragment:fragment-ktx                                        |1.5.3               |Xamarin.AndroidX.Fragment.Ktx                                         |1.5.3               |
 |  82|androidx.gridlayout:gridlayout                                        |1.0.0               |Xamarin.AndroidX.GridLayout                                           |1.0.0.14            |
@@ -199,7 +199,7 @@
 | 192|com.google.android.material:material                                  |1.6.1               |Xamarin.Google.Android.Material                                       |1.6.1.1             |
 | 193|com.google.assistant.appactions:suggestions                           |1.0.0               |Xamarin.Google.Assistant.AppActions.Suggestions                       |1.0.0               |
 | 194|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1               |
-| 195|com.google.auto.value:auto-value-annotations                          |1.9                 |Xamarin.Google.AutoValue.Annotations                                  |1.9.0.2             |
+| 195|com.google.auto.value:auto-value-annotations                          |1.10                |Xamarin.Google.AutoValue.Annotations                                  |1.10.0              |
 | 196|com.google.code.gson:gson                                             |2.9.1               |GoogleGson                                                            |2.9.1               |
 | 197|com.google.crypto.tink:tink-android                                   |1.7.0               |Xamarin.Google.Crypto.Tink.Android                                    |1.7.0               |
 | 198|com.google.flogger:flogger                                            |0.7.4               |Xamarin.Flogger                                                       |0.7.4               |
@@ -213,7 +213,7 @@
 | 206|io.reactivex.rxjava2:rxjava                                           |2.2.21              |Xamarin.Android.ReactiveX.RxJava                                      |2.2.21.7            |
 | 207|io.reactivex.rxjava3:rxjava                                           |3.1.5               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.5.1             |
 | 208|org.checkerframework:checker-compat-qual                              |2.5.5               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.5               |
-| 209|org.checkerframework:checker-qual                                     |3.25.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.25.0              |
+| 209|org.checkerframework:checker-qual                                     |3.26.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.26.0              |
 | 210|org.jetbrains:annotations                                             |23.0.0              |Xamarin.Jetbrains.Annotations                                         |23.0.0.4            |
 | 211|org.jetbrains.kotlin:kotlin-reflect                                   |1.7.20              |Xamarin.Kotlin.Reflect                                                |1.7.20              |
 | 212|org.jetbrains.kotlin:kotlin-stdlib                                    |1.7.20              |Xamarin.Kotlin.StdLib                                                 |1.7.20              |
