@@ -9,6 +9,7 @@
     <Title>@Model.NuGetPackageId</Title>
     <PackageVersion>@Model.NuGetVersion</PackageVersion>
     <PackageDescription>@Model.NuGetPackageId</PackageDescription>
+    <PackageTags>Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     
     @switch(@Model.NuGetPackageId)
