@@ -1424,21 +1424,28 @@ Task("tools-executive-oreder-csv-and-markdown")
                 Arguments = process_args,
                 RedirectStandardOutput = true,
             };
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            foreach (string line in redirectedStandardOutput.ToList())
+            try
             {
-                string tool = null;
-                string version = null;
-
-                if
-                    (
-                        line.Contains("Mono JIT compiler version ")
-                    )
+                exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+                foreach (string line in redirectedStandardOutput.ToList())
                 {
-                    tool = line.Replace("Mono JIT compiler version ", "");
-                    version = tool;
-                    sb.AppendLine($"Mono JIT compiler, {version}");
+                    string tool = null;
+                    string version = null;
+
+                    if
+                        (
+                            line.Contains("Mono JIT compiler version ")
+                        )
+                    {
+                        tool = line.Replace("Mono JIT compiler version ", "");
+                        version = tool;
+                        sb.AppendLine($"Mono JIT compiler, {version}");
+                    }
                 }
+            }
+            catch ()
+            {
+                sb.AppendLine($"Mono JIT compiler, Not installed");   
             }
 
 
