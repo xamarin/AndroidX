@@ -25,10 +25,10 @@
   <PropertyGroup>
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>@(Model.NuGetPackageId) reference library for Xamarin.Android</Title>
-    <PackageDescription>Xamarin.Android binding for @(Model.NuGetPackageId.Replace("Xamarin", ""))</PackageDescription>
+    <PackageDescription>.NET for Android (formerly Xamarin.Android) binding for @(Model.NuGetPackageId.Replace("Xamarin", ""))</PackageDescription>
     <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
-    <PackageTags>Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+    <PackageTags>.NET dotnet Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

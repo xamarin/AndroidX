@@ -32,7 +32,7 @@
   <PropertyGroup>
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>@(friendlyName) for Xamarin.Android</Title>
-    <PackageDescription>Xamarin.Android binding for dev.chrisbanes.snapper</PackageDescription>
+    <PackageDescription>.NET for Android (formerly Xamarin.Android) binding for dev.chrisbanes.snapper</PackageDescription>
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
@@ -40,7 +40,7 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
-    <PackageTags>Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
+    <PackageTags>.NET dotnet Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
