@@ -20,9 +20,10 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageDescription>Xamarin.Android bindings for Flogger (Fluent Logging API for java)</PackageDescription>
+    <PackageDescription>.NET for Android (formerly Xamarin.Android) bindings for Flogger (Fluent Logging API for java)</PackageDescription>
     <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+    <PackageTags>.NET dotnet Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup>
