@@ -25,7 +25,7 @@
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>com.android.installreferrer:installrefererrer for Xamarin.Android</Title>
     <PackageDescription>
-        Xamarin.Android bindings for com.android.installreferrer:installrefererrer
+        .NET for Android (formerly Xamarin.Android) bindings for com.android.installreferrer:installrefererrer
         Google Play Store's Install Referrer API to securely retrieve referral content from Google Play
     </PackageDescription>
     <Authors>Microsoft</Authors>
@@ -33,6 +33,7 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
     <PackageVersion>@(Model.NuGetVersion)</PackageVersion>
+    <PackageTags>.NET dotnet Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
