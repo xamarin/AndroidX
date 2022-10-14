@@ -8,7 +8,8 @@
     <PackageId>@Model.NuGetPackageId</PackageId>
     <Title>@Model.NuGetPackageId</Title>
     <PackageVersion>@Model.NuGetVersion</PackageVersion>
-    <PackageDescription>@Model.NuGetPackageId</PackageDescription>
+    <PackageDescription>.NET for Android (formerly Xamarin.Android) bindings @Model.NuGetPackageId</PackageDescription>
+    <PackageTags>.NET dotnet Xamarin Android artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.MavenArtifacts[0].MavenArtifactVersion)</PackageTags>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     
     @switch(@Model.NuGetPackageId)
