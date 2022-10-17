@@ -821,6 +821,25 @@ Task("samples-dotnet")
     }
 });
 
+Task("tools-executive-order")
+    .Does
+    (
+        () =>
+        {
+            CakeExecuteScript
+                        (
+                            "./utilities.cake",
+                            new CakeSettings
+                            { 
+                                Arguments = new Dictionary<string, string>() 
+                                { 
+                                    { "target", "tools-executive-order" } 
+                                } 
+                            }
+                        );        
+        }
+    );
+
 Task("api-diff")
     .Does
     (
@@ -974,6 +993,7 @@ Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
+    .IsDependentOn ("tools-executive-order")
     ;
 
 Task ("ci")
@@ -982,6 +1002,7 @@ Task ("ci")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
+    .IsDependentOn ("tools-executive-order")
     ;
 
 // for local builds, conditionally do the first binderate
