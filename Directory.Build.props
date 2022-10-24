@@ -176,6 +176,6 @@
     <AndroidNamespaceReplacement Include='dev.chrisbanes.snapper' Replacement='Xamarin.Dev.ChrisBanes.Snapper' />
     <AndroidNamespaceReplacement Include='appactions' Replacement='AppActions' />
     <AndroidNamespaceReplacement Include='pinappwidget' Replacement='PinAppWidget' />
-
+    <AndroidNamespaceReplacement Include='materialswitch' Replacement='MaterialSwitch' />
   </ItemGroup>
 </Project>
