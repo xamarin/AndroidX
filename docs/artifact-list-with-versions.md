@@ -70,10 +70,10 @@
 |  63|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.14            |
 |  64|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.13            |
 |  65|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0               |
-|  66|androidx.databinding:databinding-adapters                             |7.3.0               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |7.3.0               |
-|  67|androidx.databinding:databinding-common                               |7.3.0               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |7.3.0               |
-|  68|androidx.databinding:databinding-runtime                              |7.3.0               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |7.3.0               |
-|  69|androidx.databinding:viewbinding                                      |7.3.0               |Xamarin.AndroidX.DataBinding.ViewBinding                              |7.3.0               |
+|  66|androidx.databinding:databinding-adapters                             |7.3.1               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |7.3.1               |
+|  67|androidx.databinding:databinding-common                               |7.3.1               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |7.3.1               |
+|  68|androidx.databinding:databinding-runtime                              |7.3.1               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |7.3.1               |
+|  69|androidx.databinding:viewbinding                                      |7.3.1               |Xamarin.AndroidX.DataBinding.ViewBinding                              |7.3.1               |
 |  70|androidx.documentfile:documentfile                                    |1.0.1               |Xamarin.AndroidX.DocumentFile                                         |1.0.1.14            |
 |  71|androidx.drawerlayout:drawerlayout                                    |1.1.1               |Xamarin.AndroidX.DrawerLayout                                         |1.1.1.9             |
 |  72|androidx.dynamicanimation:dynamicanimation                            |1.0.0               |Xamarin.AndroidX.DynamicAnimation                                     |1.0.0.14            |
@@ -196,7 +196,7 @@
 | 189|com.google.accompanist:accompanist-swiperefresh                       |0.25.1              |Xamarin.Google.Accompanist.SwipeRefresh                               |0.25.1              |
 | 190|com.google.accompanist:accompanist-systemuicontroller                 |0.25.1              |Xamarin.Google.Accompanist.SystemUIController                         |0.25.1              |
 | 191|com.google.android.material:compose-theme-adapter                     |1.1.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter                 |1.1.18              |
-| 192|com.google.android.material:material                                  |1.6.1               |Xamarin.Google.Android.Material                                       |1.6.1.1             |
+| 192|com.google.android.material:material                                  |1.7.0               |Xamarin.Google.Android.Material                                       |1.7.0               |
 | 193|com.google.assistant.appactions:suggestions                           |1.0.0               |Xamarin.Google.Assistant.AppActions.Suggestions                       |1.0.0               |
 | 194|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1               |
 | 195|com.google.auto.value:auto-value-annotations                          |1.10                |Xamarin.Google.AutoValue.Annotations                                  |1.10.0              |
