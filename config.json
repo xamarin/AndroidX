@@ -1569,8 +1569,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.6.1",
-        "nugetVersion": "1.6.1.2",
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
@@ -1892,8 +1892,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
-        "version": "17.1.0",
-        "nugetVersion": "117.1.0.7",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
@@ -1908,8 +1908,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.11.0",
-        "nugetVersion": "2.11.0",
+        "version": "2.14.0",
+        "nugetVersion": "2.14.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
