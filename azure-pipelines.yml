@@ -38,7 +38,7 @@ resources:
 jobs:
   - template: .ci/build.yml@components
     parameters:
-      timeoutInMinutes: 120
+      timeoutInMinutes: 150
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
       macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
