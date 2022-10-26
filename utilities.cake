@@ -554,6 +554,9 @@ Task ("spell-check")
                 "PoolingContainer",
                 "Dev",
                 "ChrisBanes",
+                "Material3",
+                "WindowSizeClass",
+                "Adapter3",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -915,7 +918,7 @@ Task ("api-diff-markdown-info-pr")
                     continue;
                 }
 
-                string changelog_line = $"- {g}:{a} - {v_artifact_old} -> {v_artifact_new}";
+                string changelog_line = $"- `{g}:{a}` - {v_artifact_old} -> {v_artifact_new}";
 
                 changelog.Add(changelog_line);
             }
