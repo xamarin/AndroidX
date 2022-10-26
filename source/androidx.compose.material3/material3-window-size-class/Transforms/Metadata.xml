@@ -1,0 +1,41 @@
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.compose.material3.windowsizeclass']/class[@name='WindowHeightSizeClass']/method[@name='compareTo-pav6bQQ' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.material3.windowsizeclass']/class[@name='WindowHeightSizeClass']/method[@name='compareTo-pav6bQQ' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.material3.windowsizeclass']/class[@name='WindowHeightSizeClass']/method[@name='compareTo-pav6bQQ' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.compose.material3.windowsizeclass']/class[@name='WindowWidthSizeClass']/method[@name='compareTo-GxU_lZo' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.material3.windowsizeclass']/class[@name='WindowWidthSizeClass']/method[@name='compareTo-GxU_lZo' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.compose.material3.windowsizeclass']/class[@name='WindowWidthSizeClass']/method[@name='compareTo-GxU_lZo' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+</metadata>
