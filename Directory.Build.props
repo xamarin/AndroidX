@@ -4,28 +4,28 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
-    
+
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>false</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
-    
+
     <!-- .NET 6+ generates Resource.designer.cs files for bindings projects which we do not want -->
     <AndroidGenerateResourceDesigner>false</AndroidGenerateResourceDesigner>
-    
+
     <!-- .NET 6+ packages support back to API-21 -->
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
-    
+
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>
-    
+
     <!-- Generate NRT annotations -->
     <Nullable Condition=" '$(Nullable)' == '' ">enable</Nullable>
-    
+
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
     <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
-    
+
     <!-- Common package metadata -->
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
@@ -33,7 +33,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
   </PropertyGroup>
-  
+
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
@@ -41,18 +41,18 @@
     <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
   </ItemGroup>
-  
+
   <!-- Folders that _._ files need to go into for packages without managed libraries -->
   <ItemGroup>
     <AndroidXNuGetLibFolders Include="lib\monoandroid12.0" />
     <AndroidXNuGetLibFolders Include="lib\net6.0-android31.0" />
-  </ItemGroup>  
-  
+  </ItemGroup>
+
   <ItemGroup>
     <!--
       must be used before `com.google.`
     -->
-    <AndroidNamespaceReplacement Include='com.google.common.flogger' Replacement='Xamarin.Google.Flogger' />    
+    <AndroidNamespaceReplacement Include='com.google.common.flogger' Replacement='Xamarin.Google.Flogger' />
 
     <!-- Company namespace changes -->
     <AndroidNamespaceReplacement Include='androidx.' Replacement='AndroidX' />
@@ -68,7 +68,7 @@
     <AndroidNamespaceReplacement Include='io.reactivex.' Replacement='ReactiveX' />
     <AndroidNamespaceReplacement Include='kotlinx' Replacement='KotlinX' />
     <AndroidNamespaceReplacement Include='support_lib_boundary' Replacement='ChromiumLibBoundary' />
-    
+
     <!-- Remove some redundant words -->
     <AndroidNamespaceReplacement Include='androidx.dynamicanimation.animation' Replacement='AndroidX.DynamicAnimation' />
 
@@ -80,11 +80,11 @@
     <AndroidNamespaceReplacement Include='executor' Replacement='Executors' />
     <AndroidNamespaceReplacement Include='profileinstaller' Replacement='ProfileInstallers' />
     <AndroidNamespaceReplacement Include='androidx.lifecycle.viewmodel' Replacement='AndroidX.Lifecycle.ViewModels' />
-    
+
     <!-- Un-capitalization of 2-letter abbreviations -->
-    <AndroidNamespaceReplacement Include='tv' Replacement='Tv' />    
-    <AndroidNamespaceReplacement Include='db' Replacement='Db' />    
-    
+    <AndroidNamespaceReplacement Include='tv' Replacement='Tv' />
+    <AndroidNamespaceReplacement Include='db' Replacement='Db' />
+
     <!-- Preferred capitalization for combined words -->
     <AndroidNamespaceReplacement Include='accessibilityservice' Replacement='AccessibilityService' />
     <AndroidNamespaceReplacement Include='appbar' Replacement='AppBar' />
@@ -177,5 +177,7 @@
     <AndroidNamespaceReplacement Include='appactions' Replacement='AppActions' />
     <AndroidNamespaceReplacement Include='pinappwidget' Replacement='PinAppWidget' />
     <AndroidNamespaceReplacement Include='materialswitch' Replacement='MaterialSwitch' />
+    <AndroidNamespaceReplacement Include='windowsizeclass' Replacement='WindowSizeClass' />
+    <AndroidNamespaceReplacement Include='composethemeadapter3' Replacement='ComposeThemeAdapter3' />
   </ItemGroup>
 </Project>
