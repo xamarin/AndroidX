@@ -41,7 +41,7 @@ jobs:
       timeoutInMinutes: 150
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
       areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
-      macosImage: macOS-12                                    # the name of the macOS VM image (BigSur)
+      macosImage: internal-macos12                            # macOS VM image name, must be "internal" locked down image
       windowsAgentPoolName: android-win-2022
       xcode: $(XcodeVersion)
       dotnet: $(DotNetVersion)                                # the version of .NET Core to use
