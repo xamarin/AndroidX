@@ -1643,7 +1643,7 @@
       {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
-        "version": "2.10.0",
+        "version": "2.10",
         "nugetVersion": "2.10.0",
         "nugetId": "GoogleGson",
         "dependencyOnly": false,
@@ -1913,6 +1913,14 @@
         "nugetId": "Xamarin.Android.ReactiveStreams",
         "dependencyOnly": false,
         "templateSet": "reactive-streams"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appindex",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0",
+        "nugetId": "Xamarin.GooglePlayServices.AppIndex",
+        "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
