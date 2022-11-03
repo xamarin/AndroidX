@@ -49,9 +49,26 @@ jobs:
       initSteps:
         - pwsh: |
             dotnet workload update --verbosity diag --from-rollback-file $(XamarinDotNetWorkloadSource) --source $(Dotnet6Source) --source $(NuGetOrgSource)
-            dotnet workload install android --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "##vso[task.logissue type=error]Failed to set up workload rollback file."
+                Write-Host "##vso[task.complete result=Failed;]"
+                exit 0
+            }
+
             dotnet workload install maui --verbosity diag --skip-manifest-update --source $(Dotnet6Source) --source $(NuGetOrgSource)
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "##vso[task.logissue type=error]Failed to install workloads."
+                Write-Host "##vso[task.complete result=Failed;]"
+                exit 0
+            }
+
             dotnet workload update
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "##vso[task.logissue type=error]Failed to update workloads."
+                Write-Host "##vso[task.complete result=Failed;]"
+                exit 0
+            }
+          displayName: Install .NET Workloads
 
         - task: JavaToolInstaller@0
           inputs:
