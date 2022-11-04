@@ -52,17 +52,22 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)%(Extension)" />
-    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\*-sources.jar" Link="Jars\%(Filename)%(Extension)" />
+      if (art.MavenArtifactPackaging == "aar") {
+        <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+        <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" />
+      } else {
+        <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)@(rx_version)-@(art.MavenArtifactVersion).jar" Link="Jars\%(Filename)%(Extension)" />
+        <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\*-sources.jar" Link="Jars\%(Filename)%(Extension)" />
+      }
     }
   </ItemGroup>
 
   <ItemGroup>
-    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\source\@(Model.MavenGroupId)\RxJava\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
+    <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Additions\*.cs" Link="Additions\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>

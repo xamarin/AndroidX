@@ -1733,10 +1733,37 @@
       },
       {
         "groupId": "io.reactivex.rxjava2",
+        "artifactId": "rxandroid",
+        "version": "2.1.1",
+        "nugetVersion": "2.1.1.1",
+        "nugetId": "Xamarin.Android.ReactiveX.RxAndroid",
+        "dependencyOnly": false,
+        "templateSet": "rxjava"
+      },
+      {
+        "groupId": "io.reactivex.rxjava2",
         "artifactId": "rxjava",
         "version": "2.2.21",
         "nugetVersion": "2.2.21.8",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
+        "dependencyOnly": false,
+        "templateSet": "rxjava"
+      },
+      {
+        "groupId": "io.reactivex.rxjava2",
+        "artifactId": "rxkotlin",
+        "version": "2.4.0",
+        "nugetVersion": "2.4.0.1",
+        "nugetId": "Xamarin.Android.ReactiveX.RxKotlin",
+        "dependencyOnly": false,
+        "templateSet": "rxjava"
+      },
+      {
+        "groupId": "io.reactivex.rxjava3",
+        "artifactId": "rxandroid",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0.1",
+        "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxAndroid",
         "dependencyOnly": false,
         "templateSet": "rxjava"
       },
@@ -1746,6 +1773,15 @@
         "version": "3.1.5",
         "nugetVersion": "3.1.5.2",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
+        "dependencyOnly": false,
+        "templateSet": "rxjava"
+      },
+      {
+        "groupId": "io.reactivex.rxjava3",
+        "artifactId": "rxkotlin",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1.1",
+        "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxKotlin",
         "dependencyOnly": false,
         "templateSet": "rxjava"
       },
