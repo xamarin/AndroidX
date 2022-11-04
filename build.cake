@@ -738,13 +738,11 @@ Task("samples")
 
     // build the samples
     MSBuildSettings settings_msbuild = new MSBuildSettings()
-        .SetConfiguration(CONFIGURATION)
+        .SetConfiguration("Debug") // We don't need to run linking
         .SetVerbosity(VERBOSITY)
         .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/samples.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog")
         .WithRestore()
         .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
@@ -787,11 +785,8 @@ Task("samples-dotnet")
     CleanDirectories(packagesPath);
 
     var settings = new DotNetMSBuildSettings()
-        .SetConfiguration(CONFIGURATION)
-        .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/samples-dotnet.{CONFIGURATION}.binlog")
+        .SetConfiguration("Debug") // We don't need to run linking
         .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
@@ -799,7 +794,7 @@ Task("samples-dotnet")
 
     string[] solutions = new string[]
     {
-        "./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+        "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
         "./samples/dotnet/BuildAllXamarinForms.sln",
     };
@@ -810,10 +805,6 @@ Task("samples-dotnet")
         string filename = fp_solution.GetFilenameWithoutExtension().ToString();
         Information($"=====================================================================================================");
         Information($"DotNetMSBuild        {solution} / {filename}");    
-        DotNetRestore(solution, new DotNetRestoreSettings
-        {
-            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-restore-{filename}.binlog")
-        });
         DotNetBuild(solution, new DotNetBuildSettings
         {
             MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
