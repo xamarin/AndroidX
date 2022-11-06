@@ -141,6 +141,7 @@ AndroidX.Core.Database.Sqlite
 AndroidX.Core.Database.SqlLite
 AndroidX.Core.Google.Shortcuts
 AndroidX.Core.Google.Shortcuts.Builders
+AndroidX.Core.Google.Shortcuts.Utils
 AndroidX.Core.Graphics
 AndroidX.Core.Graphics.Drawable
 AndroidX.Core.Hardware.Display
@@ -410,6 +411,9 @@ Kotlin.Time.Jdk8
 Microsoft.CodeAnalysis
 ReactiveStreams
 ReactiveX
+ReactiveX.Android
+ReactiveX.Android.Plugins
+ReactiveX.Android.Schedulers
 ReactiveX.Annotations
 ReactiveX.Disposables
 ReactiveX.Exceptions
@@ -436,6 +440,9 @@ ReactiveX.Observers
 ReactiveX.Parallel
 ReactiveX.Plugins
 ReactiveX.Processors
+ReactiveX.RxJava3.Android
+ReactiveX.RxJava3.Android.Plugins
+ReactiveX.RxJava3.Android.Schedulers
 ReactiveX.RxJava3.Annotations
 ReactiveX.RxJava3.Core
 ReactiveX.RxJava3.Disposables
@@ -459,6 +466,7 @@ ReactiveX.RxJava3.Internal.Schedulers
 ReactiveX.RxJava3.Internal.Subscribers
 ReactiveX.RxJava3.Internal.Subscriptions
 ReactiveX.RxJava3.Internal.Util
+ReactiveX.RxJava3.Kotlin
 ReactiveX.RxJava3.Observables
 ReactiveX.RxJava3.Observers
 ReactiveX.RxJava3.Operators
@@ -468,6 +476,7 @@ ReactiveX.RxJava3.Processors
 ReactiveX.RxJava3.Schedulers
 ReactiveX.RxJava3.Subjects
 ReactiveX.RxJava3.Subscribers
+ReactiveX.RxKotlin
 ReactiveX.Schedulers
 ReactiveX.Subjects
 ReactiveX.Subscribers
