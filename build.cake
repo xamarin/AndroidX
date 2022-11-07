@@ -769,8 +769,6 @@ Task("samples")
         MSBuild(solution, settings_msbuild.EnableBinaryLogger($"./output/samples.{filename}.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog"));
     }
 
-    RunTarget("samples-dotnet");
-
     return;
 });
 
@@ -984,6 +982,7 @@ Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
+    .IsDependentOn ("samples-dotnet")
     .IsDependentOn ("tools-executive-order")
     ;
 
@@ -993,6 +992,7 @@ Task ("ci")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
+    .IsDependentOn ("samples-dotnet")
     .IsDependentOn ("tools-executive-order")
     ;
 
