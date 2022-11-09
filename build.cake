@@ -700,6 +700,9 @@ Task("samples-generate-all-targets")
         // Skip Guava.ListenableFuture as it cannot be used in the same project as Guava itself
         if (nupkg.FullPath.Contains("Xamarin.Google.Guava.ListenableFuture"))
             continue;
+        // Skip XBD because packages do not automatically reference the in-tree version
+        if (nupkg.FullPath.Contains("Xamarin.Build.Download"))
+            continue;
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");

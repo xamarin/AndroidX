@@ -80,6 +80,12 @@ jobs:
         - pwsh: |
             dotnet cake utilities.cake -t=verify-namespace-file
           displayName: Verify published namespaces
+        - task: DotNetCoreCLI@2
+          displayName: Run unit tests
+          inputs:
+            command: test
+            projects: util/Xamarin.Build.Download/source/Xamarin.Build.Download.Tests/Xamarin.Build.Download.Tests.csproj
+            arguments: '-c Release'
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
         - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
