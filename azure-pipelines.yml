@@ -84,7 +84,7 @@ jobs:
           displayName: Run unit tests
           inputs:
             command: test
-            projects: util/Xamarin.Build.Download/source/Xamarin.Build.Download.Tests/Xamarin.Build.Download.Tests.csproj
+            projects: util/**/*.Tests.csproj
             arguments: '-c Release'
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
