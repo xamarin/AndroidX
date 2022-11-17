@@ -30,13 +30,9 @@ resources:
       name: xamarin/yaml-templates
       endpoint: xamarin
       ref: refs/heads/main
-    - repository: components
-      type: github
-      name: xamarin/XamarinComponents
-      endpoint: xamarin
 
 jobs:
-  - template: .ci/build.yml@components
+  - template: build/ci/build.yml
     parameters:
       timeoutInMinutes: 150
       validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
