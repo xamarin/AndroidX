@@ -1,0 +1,45 @@
+parameters:
+  condition: succeeded()
+  verbosity:                                       # the build verbosity: 'minimal', 'normal', 'diagnostic'
+  configuration:                                   # the build configuration: 'Debug', 'Release'
+  validPackagePrefixes: []
+  artifactsPath:
+  
+steps:
+  # before the build starts, make sure the tooling is as expected
+  - pwsh: |
+      dotnet cake build.cake `
+        --target=ci `
+        --configuration="${{ parameters.configuration }}" `
+        --verbosity="${{ parameters.verbosity }}"
+    displayName: 'Build packages'
+    env:
+      JavaSdkDirectory: $(JAVA_HOME)
+      RepositoryCommit: $(Build.SourceVersion)
+      RepositoryBranch: $(Build.SourceBranchName)
+      RepositoryUrl: $(Build.Repository.Uri)
+      RepositoryType: "git"
+
+  - pwsh: |
+      dotnet cake validation.cake `
+        --namespaces="${{ join(',', parameters.validPackagePrefixes) }}" `
+        --verbosity="${{ parameters.verbosity }}"
+    displayName: 'Run NuGet package validation'
+    
+  - pwsh: |
+      dotnet cake nuget-diff.cake `
+        --artifacts="${{ parameters.artifactsPath }}" `
+        --output="${{ parameters.artifactsPath }}/api-diff" `
+        --cache="$(Agent.TempDirectory)/api-diff" `
+        --verbosity="${{ parameters.verbosity }}"
+    displayName: 'Generate API diff'
+
+  - pwsh: dotnet cake utilities.cake -t=verify-namespace-file
+    displayName: Verify published namespaces
+    
+  - task: DotNetCoreCLI@2
+    displayName: Run unit tests
+    inputs:
+      command: test
+      projects: util/**/*.Tests.csproj
+      arguments: '-c ${{ parameters.configuration }}'
