@@ -1,0 +1,13 @@
+parameters:
+  condition: succeeded()
+  dotnetVersion: ''
+
+steps:
+  # before the build starts, make sure the tooling is as expected
+  - task: UseDotNet@2
+    displayName: 'Use dotnet ${{ parameters.dotnetVersion }}'
+    inputs:
+      version: ${{ parameters.dotnetVersion }}
+      performMultiLevelLookup: true
+      includePreviewVersions: true
+    condition: ne('${{ parameters.dotnetVersion }}', '')
