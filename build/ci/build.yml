@@ -54,6 +54,9 @@ parameters:
   forceBuild: 'false'                                       # [manifest, directories] whether or not to force the build
   namesFilter: ''                                           # [manifest, directories] the names of the items to build
   targetsFilter: 'ci'                                       # [manifest, directories] the targets of the items to build
+  dotnetWorkloadRollbackFile: ''
+  dotnetWorkloadSource: ''
+  dotnetNuGetOrgSource: ''
 
 jobs:
   - job: ${{ parameters.name }}
@@ -68,11 +71,13 @@ jobs:
           macos:
             poolName: ${{ parameters.macosAgentPoolName }}
             imageName: ${{ parameters.macosImage }}
+            classicInstallerUrl: $(LegacyXamarinAndroidPkg)
             runCodeQL: false
         ${{ if ne(parameters.windowsImage, '') }}:
           windows:
             poolName: ${{ parameters.windowsAgentPoolName }}
             imageName: ${{ parameters.windowsImage }}
+            classicInstallerUrl: $(LegacyXamarinAndroidVsix)
             runCodeQL: true
     displayName: ${{ parameters.displayName }}
     timeoutInMinutes: ${{ parameters.timeoutInMinutes }}
@@ -84,25 +89,16 @@ jobs:
       name: $(poolName)
       vmImage: $(imageName)
     steps:
-      - checkout: self
-        submodules: ${{ parameters.submodules }}
-
+    
       - template: setup-environment.yml
         parameters:
           dotnetVersion: $(DotNetVersion)
+          dotnetWorkloadRollbackFile: ${{ parameters.dotnetWorkloadRollbackFile }}
+          dotnetWorkloadSource: ${{ parameters.dotnetWorkloadSource }}
+          dotnetNuGetOrgSource: ${{ parameters.dotnetNuGetOrgSource }}
+          dotnetTools: ${{ parameters.tools }}
+          classicInstallerUrl: $(classicInstallerUrl)
 
-      # custom init steps
-      - ${{ parameters.initSteps }}
-      
-      - pwsh: |
-          dotnet tool update -g api-tools --version ${{ parameters.apiTools }}
-          dotnet tool update -g cake.tool --version ${{ parameters.cake }}
-          dotnet tool update -g Microsoft.DotNet.XHarness.CLI --version ${{ parameters.xharness }} --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-eng/nuget/v3/index.json
-        displayName: 'Install required .NET Core global tools'
-      - ${{ each tool in parameters.tools }}:
-        - ${{ each pair in tool }}:
-          - pwsh: dotnet tool update -g ${{ pair.key }} --version ${{ pair.value }}
-            displayName: 'Install additional .NET Core global tool: ${{ pair.key }}'
       - task: NuGetToolInstaller@1
         inputs:
           checkLatest: true

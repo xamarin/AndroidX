@@ -42,35 +42,9 @@ jobs:
       xcode: $(XcodeVersion)
       dotnet: $(DotNetVersion)                                # the version of .NET Core to use
       dotnetStable: $(DotNetVersion)                          # the stable version of .NET Core to use
-      initSteps:
-        - pwsh: |
-            dotnet workload install maui --verbosity diag --from-rollback-file $(XamarinDotNetWorkloadSource) --source $(Dotnet6Source) --source $(NuGetOrgSource)
-            if ($LASTEXITCODE -ne 0) {
-                Write-Host "##vso[task.logissue type=error]Failed to install workloads."
-                Write-Host "##vso[task.complete result=Failed;]"
-                exit 0
-            }
-          displayName: Install .NET Workloads
-
-        - task: JavaToolInstaller@0
-          inputs:
-            versionSpec: '11'
-            jdkArchitectureOption: 'x64'
-            jdkSourceOption: 'PreInstalled'
-
-      preBuildSteps:
-        - pwsh: |
-            dotnet tool update --global Cake.Tool
-            dotnet tool update --global boots --version $(BootsVersion)
-            boots $(LegacyXamarinAndroidPkg)
-            sudo xcode-select -s "/Applications/Xcode_$(XcodeVersion).app"
-            sudo xcode-select -p
-          condition: eq(variables['System.JobName'], 'macos')
-        - pwsh: |
-            dotnet tool update --global Cake.Tool
-            dotnet tool update --global boots --version $(BootsVersion)
-            boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
-          condition: eq(variables['System.JobName'], 'windows')
+      dotnetWorkloadRollbackFile: $(XamarinDotNetWorkloadSource)
+      dotnetWorkloadSource: $(DotNet6Source)
+      dotnetNuGetOrgSource: $(NuGetOrgSource)
           
       postDiffBuildSteps:
         - pwsh: |
@@ -84,7 +58,10 @@ jobs:
             arguments: '-c Release'
       tools:
         - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
-        - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
+        - 'Cake.Tool': '2.2.0'
+        - 'boots': '$(BootsVersion)'
+        - 'api-tools': '1.3.4'
+        
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
