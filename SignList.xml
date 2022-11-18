@@ -19,6 +19,7 @@
     <FirstParty Include="Xamarin.Flogger.dll" />
     <FirstParty Include="Xamarin.Flogger.*.dll" />
     <FirstParty Include="Xamarin.CheckerFramework.*.dll" />
+    <FirstParty Include="Xamarin.Build.Download.dll" />
     
     <FirstParty Include="guava*.jar" />
     <FirstParty Include="checker-qual.jar" />
@@ -38,6 +39,7 @@
   <ItemGroup>
     <Skip Include="System.*.dll" />
     <Skip Include="NuGet.*.dll" />
+    <Skip Include="Microsoft.*.dll" />
     <Skip Include="Mono.*.dll" />
     <Skip Include="MonoPosixHelper.dll" />
     <Skip Include="libMonoPosixHelper.dll" />

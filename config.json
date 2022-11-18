@@ -4,7 +4,8 @@
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
     "additionalProjects": [
-      "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
+      "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj",
+      "util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.csproj"
     ],
     "templates": [
       {
