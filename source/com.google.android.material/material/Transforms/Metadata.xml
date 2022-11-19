@@ -219,4 +219,16 @@
         path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setLayoutParams' and count(parameter)=1 and parameter[1][@type='android.view.ViewGroup.LayoutParams']]"
         />
 
+    <attr
+        path="/api/package[@name='com.google.android.material.navigation']/interface[@name='NavigationBarView.OnItemSelectedListener']/method[@name='onNavigationItemSelected' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
+        name="managedName"
+        >
+        itemSelected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.material.navigation']/interface[@name='NavigationBarView.OnItemReselectedListener']/method[@name='onNavigationItemReselected' and count(parameter)=1 and parameter[1][@type='android.view.MenuItem']]/parameter[1]"
+        name="managedName"
+        >
+        itemReselected
+    </attr>
   </metadata>

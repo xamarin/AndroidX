@@ -182,12 +182,12 @@ namespace Google.Android.Material.Navigation
     {
         public partial class ItemSelectedEventArgs : EventArgs
         {
-            public IMenuItem Item => P0;
+            public IMenuItem Item => ItemSelected;
         }
 
         public partial class ItemReselectedEventArgs : EventArgs
         {
-            public IMenuItem Item => P0;
+            public IMenuItem Item => ItemReselected;
         }
     }
 }
