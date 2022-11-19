@@ -63,7 +63,7 @@
 
   <ItemGroup>
       @foreach (var art in @Model.MavenArtifacts) {
-      <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
+      <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
       }
   </ItemGroup>
 
@@ -72,11 +72,11 @@
     {
     <JavaSourceJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
+          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
           />
     <JavaDocJar
           Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
+          Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
           />
     }
   </ItemGroup>
@@ -84,7 +84,7 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
-    <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
+    <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
     }
   </ItemGroup>
 
