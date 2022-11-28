@@ -102,7 +102,7 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
         (
             fully_qualified_artifact_id.StartsWith("org.checkerframework")
             ||
-            fully_qualified_artifact_id.StartsWith("org.codehaus.mojo")            
+            fully_qualified_artifact_id.StartsWith("org.codehaus.mojo")
         )
     {
         const string l = "MIT";
@@ -231,7 +231,7 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
 
         return l;
     }
-    
+
     if
         (
             fully_qualified_artifact_id.StartsWith("com.google.protobuf")
@@ -269,7 +269,7 @@ Task ("generate-component-governance")
                                 (
                                     "Licenses.json",
                                     Newtonsoft.Json.JsonConvert.SerializeObject
-                                                                            ( 
+                                                                            (
                                                                                 Licenses,
                                                                                 Formatting.Indented
                                                                             )
@@ -325,7 +325,7 @@ Task ("mappings-artifact-nuget")
             return;
         }
     );
-    
+
 Task ("list-artifacts")
     .Does
     (
@@ -557,6 +557,10 @@ Task ("spell-check")
                 "Material3",
                 "WindowSizeClass",
                 "Adapter3",
+                "RxAndroid",
+                "RxKotlin",
+                "RxAndroid",
+                "RxKotlin",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -738,9 +742,9 @@ Task ("target-sdk-version-check")
 
                         string a = path_parts[path_parts.Length - 2];
                         string g = path_parts[path_parts.Length - 3];
-                                                
+
                         Information($"              artifact  = {g}:{a} - target SDK version = {t} min compile SDK = {mc}");
-                        int t_sdk; 
+                        int t_sdk;
                         bool ok = int.TryParse(t, out t_sdk);
                         if (ok)
                         {
@@ -776,7 +780,7 @@ Task ("target-sdk-version-check")
                         {
                             v = xmldoc.SelectSingleNode($@"/pom:project/pom:parent/pom:version", nsmgr)?.InnerText;
                         }
-                        
+
                         string g = xmldoc.SelectSingleNode($@"/pom:project/pom:groupId", nsmgr)?.InnerText;
                         if ( g == null )
                         {
@@ -800,7 +804,7 @@ Task ("target-sdk-version-check")
             {
                 int t_sdk = ga.Value;
                 string v = artifacts_versions[ga.Key];
-                
+
                 artifact_fq_sdk.Add((ga.Key.group, ga.Key.artifact), (v, t_sdk));
             }
 
@@ -1057,8 +1061,8 @@ Task("nuget-structure-analysis")
                 {
                     DeleteDirectory
                             (
-                                d_zip, 
-                                new DeleteDirectorySettings 
+                                d_zip,
+                                new DeleteDirectorySettings
                                 {
                                     Recursive = true,
                                     Force = true
@@ -1073,7 +1077,7 @@ Task("nuget-structure-analysis")
                                 StartProcess
                                     (
                                         "tree",
-                                        new ProcessSettings 
+                                        new ProcessSettings
                                         {
                                             Arguments = $"-H {f.ToString().Replace(".nupkg", "")}",
                                             // WorkingDirectory = "./"
@@ -1083,10 +1087,10 @@ Task("nuget-structure-analysis")
                                         out redirected_std_out,
                                         out redirected_std_err
                                     );
-                
+
                 System.IO.File.WriteAllLines
                                     (
-                                        $"{f.ToString().Replace(".nupkg", ".md")}", 
+                                        $"{f.ToString().Replace(".nupkg", ".md")}",
                                         redirected_std_out.ToArray()
                                     );
             }
@@ -1106,7 +1110,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("generate-namespace-file")
     .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
-    .IsDependentOn ("generate-component-governance")    
+    .IsDependentOn ("generate-component-governance")
     .Does
     (
         () =>
@@ -1167,7 +1171,7 @@ Task("generate-markdown-publish-log")
 
                 FileWriteText
                         (
-                            ci_publish_log_file, 
+                            ci_publish_log_file,
                             $"dotnet cake utilities.cake -t=generate-markdown-publish-log"
                             + Environment.NewLine +
                             "{ci_publish_log_file}          paste log from CI"
@@ -1216,7 +1220,7 @@ Task("generate-markdown-publish-log")
                             ci_publish_log_lines[row+1].Contains("Created https://www.nuget.org/api/v2/package")
                             &&
                             // if warning is present
-                            ci_publish_log_lines[row+2].Contains("Your package was pushed.")   
+                            ci_publish_log_lines[row+2].Contains("Your package was pushed.")
                         )
                     {
                         packages_published.Add(n2);
@@ -1301,7 +1305,7 @@ Task("generate-namespace-file")
         () =>
         {
             var list = FindNamespacesInDirectory ("./generated");
-            System.IO.File.WriteAllLines ("published-namespaces.txt", list);        
+            System.IO.File.WriteAllLines ("published-namespaces.txt", list);
         }
     );
 
@@ -1324,7 +1328,7 @@ Task("verify-namespace-file")
 
                 foreach (var ns in new_ns)
                   Console.WriteLine (ns);
-                  
+
                 Console.WriteLine ();
             }
 
@@ -1401,21 +1405,21 @@ Task("tools-executive-oreder-csv-and-markdown")
 
             List
                 <(
-                    string nuget_id, 
+                    string nuget_id,
                     string version
                 )> msbuild_sdks = new List
                                         <(
-                                            string nuget_id, 
+                                            string nuget_id,
                                             string vetsion
                                         )>();
-            
+
             foreach(Newtonsoft.Json.Linq.JProperty jp in json_object["msbuild-sdks"])
             {
                 string name  = (string) jp.Name;
                 string value  = (string) jp.Value;
                 msbuild_sdks.Add((name, value));
                 sb.AppendLine($"msbuild-sdks {name}, {value}");
-            }							
+            }
 
             /*
             mono --version
@@ -1448,7 +1452,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             }
             catch
             {
-                sb.AppendLine($"Mono JIT compiler, Not installed");   
+                sb.AppendLine($"Mono JIT compiler, Not installed");
             }
 
 
@@ -1487,7 +1491,7 @@ Task("tools-executive-oreder-csv-and-markdown")
 
             no version info
 
-            let's parse 
+            let's parse
                 dotnet tool list --global
             */
 			process = "dotnet";
