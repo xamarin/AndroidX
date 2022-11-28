@@ -2,9 +2,13 @@ parameters:
   condition: succeeded()
   verbosity:                                       # the build verbosity: 'minimal', 'normal', 'diagnostic'
   configuration:                                   # the build configuration: 'Debug', 'Release'
-  validPackagePrefixes: []
   artifactsPath:
   
+  validPackagePrefixes:                            # any NuGet prefixes that should pass validation
+  - Xamarin
+  - GoogleGson
+  - Square
+
 steps:
   # before the build starts, make sure the tooling is as expected
   - pwsh: |
