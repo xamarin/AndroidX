@@ -1,9 +1,9 @@
 BuildToolName,BuildToolVersion
-dotnet sdk, 6.0.401
-dotnet sdk, latestMinor
+dotnet sdk, 6.0.403
+dotnet sdk, patch
 msbuild-sdks MSBuild.Sdk.Extras, 3.0.44
-msbuild-sdks Microsoft.Build.Traversal, 3.1.6
-msbuild-sdks Microsoft.Build.NoTargets, 3.4.0
+msbuild-sdks Microsoft.Build.Traversal, 3.2.0
+msbuild-sdks Microsoft.Build.NoTargets, 3.6.0
 msbuild-sdks Xamarin.Legacy.Sdk, 0.2.0-alpha2
 Mono JIT compiler, 6.12.0.188 (2020-02/ca8abcb6bc4 Thu Oct 13 14:26:22 EDT 2022)
 nuget, 6.3.1.1
@@ -15,6 +15,6 @@ Gradle, 7.5.1
 Kotlin, 1.6.21
 Groovy, 3.0.10
 Ant, Apache Ant(TM) version 1.10.11 compiled on July 10 2021
-JVM, 11.0.13 (Microsoft 11.0.13+8-LTS)
-openjdk, 11.0.13 2021-10-19 LTS
-javac, 11.0.13
+JVM, 11.0.16.1 (Microsoft 11.0.16.1+1-LTS)
+openjdk, 11.0.16.1 2022-08-12 LTS
+javac, 11.0.16.1
