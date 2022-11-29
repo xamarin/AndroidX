@@ -703,6 +703,9 @@ Task("samples-generate-all-targets")
         // Skip XBD because packages do not automatically reference the in-tree version
         if (nupkg.FullPath.Contains("Xamarin.Build.Download"))
             continue;
+        // Skip Binderator because it is not a binding package
+        if (nupkg.FullPath.Contains("Xamarin.AndroidBinderator"))
+            continue;
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
