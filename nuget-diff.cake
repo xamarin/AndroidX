@@ -24,7 +24,7 @@ var nupkgs = GetFiles($"{ARTIFACTS_DIR}/**/*.nupkg");
 if (!nupkgs.Any()) {
 	Warning($"##vso[task.logissue type=warning]No NuGet packages were found.");
 } else {
-	foreach (var nupkg in nupkgs) {
+	Parallel.ForEach (nupkgs, nupkg => {
 		var version = "--latest";
 		var versionFile = nupkg.FullPath + ".baseversion";
 		if (FileExists(versionFile)) {
@@ -43,7 +43,7 @@ if (!nupkgs.Any()) {
 		});
 		if (exitCode != 0)
 			throw new Exception ($"api-tools exited with error code {exitCode}.");
-	}
+	});
 }
 
 
