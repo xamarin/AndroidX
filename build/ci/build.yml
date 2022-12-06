@@ -13,8 +13,8 @@ parameters:
   dotnetWorkloadRollbackFile: 'workloads.json'
   dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
-  classicXAPkg:  https://aka.ms/xamarin-android-commercial-d17-3-macos
-  classicXAVsix: https://aka.ms/xamarin-android-commercial-d17-3-windows
+  classicXAPkg:  https://aka.ms/xamarin-android-commercial-d17-4-macos
+  classicXAVsix: https://aka.ms/xamarin-android-commercial-d17-4-windows
 
   tools:                                                    # a list of additional .NET global tools needed
   - 'xamarin.androidbinderator.tool': '0.5.4'
