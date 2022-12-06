@@ -2398,9 +2398,9 @@
         "maven": {
           "artifactId": "accompanist-appcompat-theme",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2410,9 +2410,9 @@
         "maven": {
           "artifactId": "accompanist-drawablepainter",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.DrawablePainter",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2422,9 +2422,9 @@
         "maven": {
           "artifactId": "accompanist-flowlayout",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.FlowLayout",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2434,9 +2434,9 @@
         "maven": {
           "artifactId": "accompanist-pager",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.Pager",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2446,9 +2446,9 @@
         "maven": {
           "artifactId": "accompanist-pager-indicators",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.Pager.Indicators",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2458,9 +2458,9 @@
         "maven": {
           "artifactId": "accompanist-permissions",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.Permissions",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2470,9 +2470,9 @@
         "maven": {
           "artifactId": "accompanist-placeholder",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.Placeholder",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2482,9 +2482,9 @@
         "maven": {
           "artifactId": "accompanist-placeholder-material",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.Placeholder.Material",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2494,9 +2494,9 @@
         "maven": {
           "artifactId": "accompanist-swiperefresh",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.SwipeRefresh",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2506,9 +2506,9 @@
         "maven": {
           "artifactId": "accompanist-systemuicontroller",
           "groupId": "com.google.accompanist",
-          "version": "0.27.0",
+          "version": "0.28.0",
           "nuGetId": "Xamarin.Google.Accompanist.SystemUIController",
-          "nuGetVersion": "0.27.0"
+          "nuGetVersion": "0.28.0"
         }
       }
     },
@@ -2581,9 +2581,9 @@
         "maven": {
           "artifactId": "auto-value-annotations",
           "groupId": "com.google.auto.value",
-          "version": "1.10",
+          "version": "1.10.1",
           "nuGetId": "Xamarin.Google.AutoValue.Annotations",
-          "nuGetVersion": "1.10.0.1"
+          "nuGetVersion": "1.10.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2811,9 +2811,9 @@
         "maven": {
           "artifactId": "checker-qual",
           "groupId": "org.checkerframework",
-          "version": "3.27.0",
+          "version": "3.28.0",
           "nuGetId": "Xamarin.CheckerFramework.CheckerQual",
-          "nuGetVersion": "3.27.0"
+          "nuGetVersion": "3.28.0"
         }
       },
       "license": "MIT"
@@ -2837,9 +2837,9 @@
         "maven": {
           "artifactId": "kotlin-reflect",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.7.21",
+          "version": "1.7.22",
           "nuGetId": "Xamarin.Kotlin.Reflect",
-          "nuGetVersion": "1.7.21"
+          "nuGetVersion": "1.7.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2850,9 +2850,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.7.21",
+          "version": "1.7.22",
           "nuGetId": "Xamarin.Kotlin.StdLib",
-          "nuGetVersion": "1.7.21"
+          "nuGetVersion": "1.7.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2863,9 +2863,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-common",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.7.21",
+          "version": "1.7.22",
           "nuGetId": "Xamarin.Kotlin.StdLib.Common",
-          "nuGetVersion": "1.7.21"
+          "nuGetVersion": "1.7.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2876,9 +2876,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-jdk7",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.7.21",
+          "version": "1.7.22",
           "nuGetId": "Xamarin.Kotlin.StdLib.Jdk7",
-          "nuGetVersion": "1.7.21"
+          "nuGetVersion": "1.7.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2889,9 +2889,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-jdk8",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.7.21",
+          "version": "1.7.22",
           "nuGetId": "Xamarin.Kotlin.StdLib.Jdk8",
-          "nuGetVersion": "1.7.21"
+          "nuGetVersion": "1.7.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
