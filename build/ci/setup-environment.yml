@@ -38,5 +38,5 @@ steps:
       - pwsh: dotnet tool update -g ${{ pair.key }} --version ${{ pair.value }}
         displayName: 'Install tool: ${{ pair.key }}'
         
-  - pwsh: boots $(classicInstallerUrl)
+  - pwsh: boots --url $(classicInstallerUrl) --downgrade-first
     displayName: 'Install Classic XA'
