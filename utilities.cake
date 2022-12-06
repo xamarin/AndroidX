@@ -14,6 +14,8 @@
 
 using System.Collections.Generic;
 
+using Cake.FileHelpers;
+
 using Mono.Cecil;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
