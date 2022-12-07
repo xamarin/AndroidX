@@ -1,0 +1,42 @@
+parameters:
+  condition: succeeded()
+  dotnetVersion: ''
+  dotnetWorkloadRollbackFile: ''
+  dotnetWorkloadSource: ''
+  dotnetNuGetOrgSource: ''
+  dotnetTools: []
+  classicInstallerUrl: ''
+  
+steps:
+  # before the build starts, make sure the tooling is as expected
+  - task: UseDotNet@2
+    displayName: 'Use dotnet ${{ parameters.dotnetVersion }}'
+    inputs:
+      version: ${{ parameters.dotnetVersion }}
+      performMultiLevelLookup: true
+      includePreviewVersions: true
+    condition: ne('${{ parameters.dotnetVersion }}', '')
+
+  - pwsh: |
+      dotnet workload install maui --verbosity diag --from-rollback-file ${{ parameters.dotnetWorkloadRollbackFile }} --source ${{ parameters.dotnetWorkloadSource }} --source ${{ parameters.dotnetNuGetOrgSource }}
+      if ($LASTEXITCODE -ne 0) {
+          Write-Host "##vso[task.logissue type=error]Failed to install workloads."
+          Write-Host "##vso[task.complete result=Failed;]"
+          exit 0
+      }
+    displayName: Install .NET Workloads
+
+  - task: JavaToolInstaller@0
+    displayName: Use Java 11 SDK
+    inputs:
+      versionSpec: '11'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
+      
+  - ${{ each tool in parameters.dotnetTools }}:
+    - ${{ each pair in tool }}:
+      - pwsh: dotnet tool update -g ${{ pair.key }} --version ${{ pair.value }}
+        displayName: 'Install tool: ${{ pair.key }}'
+        
+  - pwsh: boots --url $(classicInstallerUrl) --downgrade-first
+    displayName: 'Install Classic XA'

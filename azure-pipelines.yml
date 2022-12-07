@@ -6,22 +6,8 @@ pr:
   - main
   
 variables:
-  AndroidBinderatorVersion: 0.5.4
-  AndroidXMigrationVersion: 1.0.10
-  BootsVersion: 1.1.0.712-preview2
-  DotNetVersion: 6.0.403
-  XcodeVersion: 13.3.1
-  DotNet6Source: https://aka.ms/dotnet6/nuget/index.json
-  NuGetOrgSource: https://api.nuget.org/v3/index.json
-  XamarinDotNetWorkloadSource: workloads.json   # or url (check for recent versions - redth)
-                                                # https://aka.ms/dotnet/maui/6.0.401.json
-  # matching builds
-  LegacyXamarinAndroidPkg:  https://aka.ms/xamarin-android-commercial-d17-3-macos
-  LegacyXamarinAndroidVsix: https://aka.ms/xamarin-android-commercial-d17-3-windows
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
-  PRE_RESTORE_PROJECTS: true  # Windows is having an issue on CI right now
-#   XAMARIN_ANDROID_PATH: <path to Xamarin.Android>
 
 resources:
   repositories:
@@ -30,65 +16,10 @@ resources:
       name: xamarin/yaml-templates
       endpoint: xamarin
       ref: refs/heads/main
-    - repository: components
-      type: github
-      name: xamarin/XamarinComponents
-      endpoint: xamarin
 
 jobs:
-  - template: .ci/build.yml@components
-    parameters:
-      timeoutInMinutes: 150
-      validPackagePrefixes: [ 'Xamarin', 'GoogleGson' ]
-      areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'
-      macosImage: internal-macos12                            # macOS VM image name, must be "internal" locked down image
-      windowsAgentPoolName: android-win-2022
-      xcode: $(XcodeVersion)
-      dotnet: $(DotNetVersion)                                # the version of .NET Core to use
-      dotnetStable: $(DotNetVersion)                          # the stable version of .NET Core to use
-      initSteps:
-        - pwsh: |
-            dotnet workload install maui --verbosity diag --from-rollback-file $(XamarinDotNetWorkloadSource) --source $(Dotnet6Source) --source $(NuGetOrgSource)
-            if ($LASTEXITCODE -ne 0) {
-                Write-Host "##vso[task.logissue type=error]Failed to install workloads."
-                Write-Host "##vso[task.complete result=Failed;]"
-                exit 0
-            }
-          displayName: Install .NET Workloads
-
-        - task: JavaToolInstaller@0
-          inputs:
-            versionSpec: '11'
-            jdkArchitectureOption: 'x64'
-            jdkSourceOption: 'PreInstalled'
-
-      preBuildSteps:
-        - pwsh: |
-            dotnet tool update --global Cake.Tool
-            dotnet tool update --global boots --version $(BootsVersion)
-            boots $(LegacyXamarinAndroidPkg)
-            sudo xcode-select -s "/Applications/Xcode_$(XcodeVersion).app"
-            sudo xcode-select -p
-          condition: eq(variables['System.JobName'], 'macos')
-        - pwsh: |
-            dotnet tool update --global Cake.Tool
-            dotnet tool update --global boots --version $(BootsVersion)
-            boots --url $(LegacyXamarinAndroidVsix) --downgrade-first
-          condition: eq(variables['System.JobName'], 'windows')
-          
-      postDiffBuildSteps:
-        - pwsh: |
-            dotnet cake utilities.cake -t=verify-namespace-file
-          displayName: Verify published namespaces
-        - task: DotNetCoreCLI@2
-          displayName: Run unit tests
-          inputs:
-            command: test
-            projects: util/**/*.Tests.csproj
-            arguments: '-c Release'
-      tools:
-        - 'xamarin.androidbinderator.tool': '$(AndroidBinderatorVersion)'
-        - 'xamarin.androidx.migration.tool': '$(AndroidXMigrationVersion)'
+  - template: build/ci/build.yml
+        
   - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
     - template: sign-artifacts/jobs/v2.yml@internal-templates
       parameters:
