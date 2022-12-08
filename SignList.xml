@@ -20,7 +20,8 @@
     <FirstParty Include="Xamarin.Flogger.*.dll" />
     <FirstParty Include="Xamarin.CheckerFramework.*.dll" />
     <FirstParty Include="Xamarin.Build.Download.dll" />
-    
+    <FirstParty Include="Xamarin.AndroidBinderator.dll" />
+    <FirstParty Include="Xamarin.AndroidBinderator.Tool.dll" />    
     <FirstParty Include="guava*.jar" />
     <FirstParty Include="checker-qual.jar" />
     <FirstParty Include="checker-compat-qual.jar" />
@@ -37,12 +38,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Skip Include="System.dll" />
     <Skip Include="System.*.dll" />
     <Skip Include="NuGet.*.dll" />
     <Skip Include="Microsoft.*.dll" />
     <Skip Include="Mono.*.dll" />
     <Skip Include="MonoPosixHelper.dll" />
     <Skip Include="libMonoPosixHelper.dll" />
+    <Skip Include="MavenNet.dll" />
+    <Skip Include="RazorLight.dll" />
+    <Skip Include="mscorlib.dll" />
+    <Skip Include="netstandard.dll" />
+    <Skip Include="WindowsBase.dll" />
+    <Skip Include="mscorlib.dll" />
   </ItemGroup>
 
 </Project>
