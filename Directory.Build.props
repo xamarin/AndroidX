@@ -179,5 +179,6 @@
     <AndroidNamespaceReplacement Include='materialswitch' Replacement='MaterialSwitch' />
     <AndroidNamespaceReplacement Include='windowsizeclass' Replacement='WindowSizeClass' />
     <AndroidNamespaceReplacement Include='composethemeadapter3' Replacement='ComposeThemeAdapter3' />
+    <AndroidNamespaceReplacement Include='imagecapture' Replacement='ImageCapture' />
   </ItemGroup>
 </Project>
