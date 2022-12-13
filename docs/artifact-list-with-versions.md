@@ -203,7 +203,7 @@
 | 196|com.google.android.material:compose-theme-adapter-3                   |1.0.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter3                |1.0.18              |
 | 197|com.google.android.material:material                                  |1.7.0               |Xamarin.Google.Android.Material                                       |1.7.0.1             |
 | 198|com.google.assistant.appactions:suggestions                           |1.0.0               |Xamarin.Google.Assistant.AppActions.Suggestions                       |1.0.0.1             |
-| 199|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.1             |
+| 199|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.2             |
 | 200|com.google.auto.value:auto-value-annotations                          |1.10.1              |Xamarin.Google.AutoValue.Annotations                                  |1.10.1              |
 | 201|com.google.code.gson:gson                                             |2.10                |GoogleGson                                                            |2.10.0              |
 | 202|com.google.crypto.tink:tink-android                                   |1.7.0               |Xamarin.Google.Crypto.Tink.Android                                    |1.7.0.1             |
