@@ -10,10 +10,9 @@ parameters:
   - Square
 
 steps:
-  # before the build starts, make sure the tooling is as expected
   - pwsh: |
       dotnet cake build.cake `
-        --target=ci `
+        --target=ci-build `
         --configuration="${{ parameters.configuration }}" `
         --verbosity="${{ parameters.verbosity }}"
     displayName: 'Build packages'
@@ -40,6 +39,19 @@ steps:
 
   - pwsh: dotnet cake utilities.cake -t=verify-namespace-file
     displayName: Verify published namespaces
+
+  - pwsh: |
+      dotnet cake build.cake `
+        --target=ci-samples `
+        --configuration="${{ parameters.configuration }}" `
+        --verbosity="${{ parameters.verbosity }}"
+    displayName: 'Build samples'
+    env:
+      JavaSdkDirectory: $(JAVA_HOME)
+      RepositoryCommit: $(Build.SourceVersion)
+      RepositoryBranch: $(Build.SourceBranchName)
+      RepositoryUrl: $(Build.Repository.Uri)
+      RepositoryType: "git"
     
   - task: DotNetCoreCLI@2
     displayName: Run unit tests

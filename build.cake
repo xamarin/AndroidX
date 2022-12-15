@@ -734,6 +734,9 @@ Task("samples-generate-all-targets")
 
 Task("samples")
     .IsDependentOn("nuget")
+    .IsDependentOn("samples-only");
+
+Task("samples-only")
     .IsDependentOn("samples-generate-all-targets")
     .Does(() =>
 {
@@ -778,8 +781,12 @@ Task("samples")
     return;
 });
 
+
 Task("samples-dotnet")
     .IsDependentOn("nuget")
+    .IsDependentOn("samples-only-dotnet");
+
+Task("samples-only-dotnet")
     .IsDependentOn("samples-generate-all-targets")
     .Does(() =>
 {
@@ -993,13 +1000,23 @@ Task ("full-run")
     ;
 
 Task ("ci")
+    .IsDependentOn ("ci-build")
+    .IsDependentOn ("ci-samples")
+    ;
+
+// Builds packages but does not run samples
+Task ("ci-build")
     .IsDependentOn ("check-tools")
     .IsDependentOn ("inject-variables")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples")
-    .IsDependentOn ("samples-dotnet")
     .IsDependentOn ("tools-executive-order")
+    ;
+
+// Runs samples without building packages
+Task ("ci-samples")
+    .IsDependentOn ("samples-only")
+    .IsDependentOn ("samples-only-dotnet")
     ;
 
 // for local builds, conditionally do the first binderate
