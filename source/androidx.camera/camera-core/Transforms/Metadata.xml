@@ -75,4 +75,26 @@
         protected
     </attr>
 
+    <add-node
+        path="/api/package[@name='androidx.camera.core.impl.utils']/class[@name='AspectRatioUtil.CompareAspectRatiosByDistanceToTargetRatio']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="Compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
+
+    <attr
+    path="/api/package[@name='androidx.camera.core.imagecapture']/class[@name='ProcessingNode.In']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+    <remove-node 
+        path="/api/package[@name='androidx.camera.core.processing']/interface[@name='Node']/typeParameters"
+        />
 </metadata>

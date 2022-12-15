@@ -554,4 +554,10 @@
     path="/api/package[@name='androidx.camera.video']/class[@name='MediaStoreOutputOptions.Builder']"
     />
 
+    <attr
+      path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setZslDisabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+      name="managedReturn"
+      >
+      Java.Lang.Object
+    </attr>
 </metadata>
