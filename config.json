@@ -1923,7 +1923,8 @@
         "version": "1.6.4",
         "nugetVersion": "1.6.4",
         "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
