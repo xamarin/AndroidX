@@ -5,7 +5,7 @@ name: Check for new stable releases
 # Runs every Monday at 06:00 UTC
 on:
   schedule:
-    - cron: 0 6 * * 1
+    - cron: 0 6 * * 5
   workflow_dispatch:
 
 jobs:
