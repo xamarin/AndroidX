@@ -1980,18 +1980,18 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-wearable",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
-        "nugetId": "Xamarin.GooglePlayServices.Wearable",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
         "artifactId": "play-services-tasks",
         "version": "18.0.2",
         "nugetVersion": "118.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Tasks",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-wearable",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
       {
