@@ -234,7 +234,8 @@
 | 227|org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm                     |1.6.4               |Xamarin.KotlinX.Coroutines.Core.Jvm                                   |1.6.4.1             |
 | 228|org.jetbrains.kotlinx:kotlinx-coroutines-guava                        |1.6.4               |Xamarin.KotlinX.Coroutines.Guava                                      |1.6.4.1             |
 | 229|org.jetbrains.kotlinx:kotlinx-coroutines-jdk8                         |1.6.4               |Xamarin.KotlinX.Coroutines.Jdk8                                       |1.6.4.1             |
-| 230|org.jetbrains.kotlinx:kotlinx-coroutines-reactive                     |1.6.4               |Xamarin.KotlinX.Coroutines.Reactive                                   |1.6.4.1             |
-| 231|org.jetbrains.kotlinx:kotlinx-coroutines-rx2                          |1.6.4               |Xamarin.KotlinX.Coroutines.Rx2                                        |1.6.4.1             |
-| 232|org.jetbrains.kotlinx:kotlinx-coroutines-rx3                          |1.6.4               |Xamarin.KotlinX.Coroutines.Rx3                                        |1.6.4.1             |
-| 233|org.reactivestreams:reactive-streams                                  |1.0.4               |Xamarin.Android.ReactiveStreams                                       |1.0.4.2             |
+| 230|org.jetbrains.kotlinx:kotlinx-coroutines-play-services                |1.6.4               |Xamarin.KotlinX.Coroutines.Play.Services                              |1.6.4               |
+| 231|org.jetbrains.kotlinx:kotlinx-coroutines-reactive                     |1.6.4               |Xamarin.KotlinX.Coroutines.Reactive                                   |1.6.4.1             |
+| 232|org.jetbrains.kotlinx:kotlinx-coroutines-rx2                          |1.6.4               |Xamarin.KotlinX.Coroutines.Rx2                                        |1.6.4.1             |
+| 233|org.jetbrains.kotlinx:kotlinx-coroutines-rx3                          |1.6.4               |Xamarin.KotlinX.Coroutines.Rx3                                        |1.6.4.1             |
+| 234|org.reactivestreams:reactive-streams                                  |1.0.4               |Xamarin.Android.ReactiveStreams                                       |1.0.4.2             |

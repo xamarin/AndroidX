@@ -2965,6 +2965,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "kotlinx-coroutines-play-services",
+          "groupId": "org.jetbrains.kotlinx",
+          "version": "1.6.4",
+          "nuGetId": "Xamarin.KotlinX.Coroutines.Play.Services",
+          "nuGetVersion": "1.6.4"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "kotlinx-coroutines-reactive",
           "groupId": "org.jetbrains.kotlinx",
           "version": "1.6.4",

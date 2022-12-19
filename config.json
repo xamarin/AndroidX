@@ -1919,6 +1919,15 @@
       },
       {
         "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-play-services",
+        "version": "1.6.4",
+        "nugetVersion": "1.6.4",
+        "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
+        "dependencyOnly": false,
+        "templateSet": "kotlinx"
+      },
+      {
+        "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-reactive",
         "version": "1.6.4",
         "nugetVersion": "1.6.4.1",
@@ -1999,14 +2008,6 @@
         "version": "2.14.0",
         "nugetVersion": "2.14.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.firebase",
-        "artifactId": "firebase-appindexing",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0.10",
-        "nugetId": "Xamarin.Firebase.AppIndexing",
         "dependencyOnly": true
       },
       {
