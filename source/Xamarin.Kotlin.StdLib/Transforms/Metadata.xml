@@ -410,5 +410,36 @@
       path="/api/package[@name='kotlin.ranges']/class[@name='ULongRange']/implements[@name='kotlin.ranges.OpenEndRange']"
       />
 
+    <attr
+      path="/api/package[@name='kotlin.time']/interface[@name='TimeSource.WithComparableMarks']/method[@name='markNow' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Kotlin.Time.ITimeMark
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='AbstractDoubleTimeSource']/method[@name='markNow' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Kotlin.Time.ITimeMark
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/class[@name='AbstractLongTimeSource']/method[@name='markNow' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Kotlin.Time.ITimeMark
+    </attr>
 
-</metadata>
+    <attr
+      path="/api/package[@name='kotlin.time']/interface[@name='ComparableTimeMark']/method[@name='minus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedReturn"
+      >
+      Kotlin.Time.ITimeMark
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.time']/interface[@name='ComparableTimeMark']/method[@name='plus-LRDsOJo' and count(parameter)=1 and parameter[1][@type='long']]"
+      name="managedReturn"
+      >
+      Kotlin.Time.ITimeMark
+    </attr>
+
+  </metadata>
