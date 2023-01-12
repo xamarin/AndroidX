@@ -85,6 +85,14 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
             fully_qualified_artifact_id.StartsWith("org.tensorflow")
             ||
             fully_qualified_artifact_id.StartsWith("com.android.volley")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.accompanist")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.assistant.appactions.suggestions")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.flogger")
+            ||
+            fully_qualified_artifact_id.StartsWith("io.github.aakira")            
         )
     {
         const string l = "The Apache Software License, Version 2.0";
@@ -155,6 +163,8 @@ Manifest.Defaults.VersionBasedOnFullyQualifiedArtifactIdDelegate = delegate(stri
             fully_qualified_artifact_id.StartsWith("com.google.android.odml")
             ||
             fully_qualified_artifact_id.StartsWith("com.google.android.ump")
+            ||
+            fully_qualified_artifact_id.StartsWith("com.google.assistant.appactions.widgets")            
         )
     {
         const string l = "Android Software Development Kit License";
