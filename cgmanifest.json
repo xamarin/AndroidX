@@ -2402,7 +2402,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2414,7 +2415,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.DrawablePainter",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2426,7 +2428,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.FlowLayout",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2438,7 +2441,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.Pager",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2450,7 +2454,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.Pager.Indicators",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2462,7 +2467,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.Permissions",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2474,7 +2480,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.Placeholder",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2486,7 +2493,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.Placeholder.Material",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2498,7 +2506,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.SwipeRefresh",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2510,7 +2519,8 @@
           "nuGetId": "Xamarin.Google.Accompanist.SystemUIController",
           "nuGetVersion": "0.28.0"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2624,7 +2634,8 @@
           "nuGetId": "Xamarin.Flogger",
           "nuGetVersion": "0.7.4.1"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2636,7 +2647,8 @@
           "nuGetId": "Xamarin.Flogger.SystemBackend",
           "nuGetVersion": "0.7.4.1"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2712,7 +2724,8 @@
           "nuGetId": "Xamarin.AAkira.Napier",
           "nuGetVersion": "2.6.1.1"
         }
-      }
+      },
+      "license": "The Apache Software License, Version 2.0"
     },
     {
       "component": {
@@ -2811,9 +2824,9 @@
         "maven": {
           "artifactId": "checker-qual",
           "groupId": "org.checkerframework",
-          "version": "3.28.0",
+          "version": "3.29.0",
           "nuGetId": "Xamarin.CheckerFramework.CheckerQual",
-          "nuGetVersion": "3.28.0"
+          "nuGetVersion": "3.29.0"
         }
       },
       "license": "MIT"

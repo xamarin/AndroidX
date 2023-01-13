@@ -5,16 +5,16 @@ msbuild-sdks MSBuild.Sdk.Extras, 3.0.44
 msbuild-sdks Microsoft.Build.Traversal, 3.2.0
 msbuild-sdks Microsoft.Build.NoTargets, 3.7.0
 msbuild-sdks Xamarin.Legacy.Sdk, 0.2.0-alpha2
-Mono JIT compiler, 6.12.0.188 (2020-02/ca8abcb6bc4 Thu Oct 13 14:26:22 EDT 2022)
+Mono JIT compiler, Not installed
 nuget, 6.4.0.123
-api-tools,1.3.5
-boots,1.1.0.36
+api-tools,1.3.4
+boots,1.1.0.712-preview2
 xamarin.androidbinderator.tool,0.5.4
-xamarin.androidx.migration.tool,1.0.10
-Gradle, 7.6
-Kotlin, 1.7.10
-Groovy, 3.0.13
+Gradle, Welcome to 7.5.1!
+Gradle, 7.5.1
+Kotlin, 1.6.21
+Groovy, 3.0.10
 Ant, Apache Ant(TM) version 1.10.11 compiled on July 10 2021
-JVM, 11.0.16.1 (Microsoft 11.0.16.1+1-LTS)
-openjdk, 11.0.16.1 2022-08-12 LTS
-javac, 11.0.16.1
+JVM, 11.0.17 (Eclipse Adoptium 11.0.17+8)
+openjdk, 11.0.17 2022-10-18
+javac, 11.0.17
