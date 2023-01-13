@@ -95,16 +95,16 @@
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat",
-        "version": "1.5.1",
-        "nugetVersion": "1.5.1.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.AppCompat",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.appcompat",
         "artifactId": "appcompat-resources",
-        "version": "1.5.1",
-        "nugetVersion": "1.5.1.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
         "dependencyOnly": false
       },
@@ -255,24 +255,24 @@
       {
         "groupId": "androidx.compose.animation",
         "artifactId": "animation",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Animation",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.animation",
         "artifactId": "animation-core",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Animation.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.animation",
         "artifactId": "animation-graphics",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Animation.Graphics",
         "dependencyOnly": false
       },
@@ -343,120 +343,120 @@
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-livedata",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.LiveData",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-rxjava2",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-rxjava3",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.RxJava3",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.runtime",
         "artifactId": "runtime-saveable",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.Runtime.Saveable",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-geometry",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Geometry",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-graphics",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Graphics",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-text",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Text",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-tooling",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-tooling-data",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Data",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-tooling-preview",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-unit",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Unit",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-util",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.Util",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.ui",
         "artifactId": "ui-viewbinding",
-        "version": "1.3.2",
-        "nugetVersion": "1.3.2",
+        "version": "1.3.3",
+        "nugetVersion": "1.3.3",
         "nugetId": "Xamarin.AndroidX.Compose.UI.ViewBinding",
         "dependencyOnly": false
       },
@@ -583,32 +583,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.3.1",
-        "nugetVersion": "7.3.1.1",
+        "version": "7.4.0",
+        "nugetVersion": "7.4.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.3.1",
-        "nugetVersion": "7.3.1.1",
+        "version": "7.4.0",
+        "nugetVersion": "7.4.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.3.1",
-        "nugetVersion": "7.3.1.1",
+        "version": "7.4.0",
+        "nugetVersion": "7.4.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.3.1",
-        "nugetVersion": "7.3.1.1",
+        "version": "7.4.0",
+        "nugetVersion": "7.4.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -1151,8 +1151,8 @@
       {
         "groupId": "androidx.profileinstaller",
         "artifactId": "profileinstaller",
-        "version": "1.2.1",
-        "nugetVersion": "1.2.1",
+        "version": "1.2.2",
+        "nugetVersion": "1.2.2",
         "nugetId": "Xamarin.AndroidX.ProfileInstaller.ProfileInstaller",
         "dependencyOnly": false
       },
@@ -1191,48 +1191,48 @@
       {
         "groupId": "androidx.room",
         "artifactId": "room-common",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-guava",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Guava",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-ktx",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-runtime",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava2",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava3",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava3",
         "dependencyOnly": false
       },
@@ -1295,16 +1295,16 @@
       {
         "groupId": "androidx.sqlite",
         "artifactId": "sqlite",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.3",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Sqlite",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.sqlite",
         "artifactId": "sqlite-framework",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0.3",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.AndroidX.Sqlite.Framework",
         "dependencyOnly": false
       },
@@ -1646,8 +1646,8 @@
       {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
-        "version": "2.10",
-        "nugetVersion": "2.10.0",
+        "version": "2.10.1",
+        "nugetVersion": "2.10.1",
         "nugetId": "GoogleGson",
         "dependencyOnly": false,
         "templateSet": "gson"
@@ -1710,8 +1710,8 @@
       {
         "groupId": "com.google.j2objc",
         "artifactId": "j2objc-annotations",
-        "version": "1.3",
-        "nugetVersion": "1.3.0.2",
+        "version": "2.8.0",
+        "nugetVersion": "2.8.0",
         "nugetId": "Xamarin.Google.J2Objc.Annotations",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
@@ -1809,8 +1809,8 @@
       {
         "groupId": "org.jetbrains",
         "artifactId": "annotations",
-        "version": "23.1.0",
-        "nugetVersion": "23.1.0",
+        "version": "24.0.0",
+        "nugetVersion": "24.0.0",
         "nugetId": "Xamarin.Jetbrains.Annotations",
         "dependencyOnly": false,
         "templateSet": "kotlin"
