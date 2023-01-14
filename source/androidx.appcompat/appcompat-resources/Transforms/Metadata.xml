@@ -61,4 +61,14 @@
         android.graphics.Color
     </attr>
 
+    <attr
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainerCompat']/method[@name='getConstantState' and count(parameter)=0]"
+        name="propertyName"></attr>
+    <attr
+        path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainerCompat']/method[@name='getConstantState' and count(parameter)=0]"
+        name="managedName"
+        >
+        GetConstantState
+    </attr>
+
 </metadata>
