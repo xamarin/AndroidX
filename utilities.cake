@@ -571,6 +571,8 @@ Task ("spell-check")
                 "RxKotlin",
                 "RxAndroid",
                 "RxKotlin",
+                "WatchFace"
+                "ClientGuava",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
