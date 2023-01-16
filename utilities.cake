@@ -571,7 +571,7 @@ Task ("spell-check")
                 "RxKotlin",
                 "RxAndroid",
                 "RxKotlin",
-                "WatchFace"
+                "WatchFace",
                 "ClientGuava",
            };
 
