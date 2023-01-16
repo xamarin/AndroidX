@@ -13,16 +13,16 @@
         path="/api/package[@name='androidx.wear.watchface']/class[@name='WatchFaceService.EngineWrapper']"
         />
 
-    <!--
     <attr
         path="/api/package[@name='androidx.wear.watchface.control']/class[@name='IWatchFaceInstanceServiceStub']/method[@name='getEditorService' and count(parameter)=0]"
         name="managedReturn"
         >
         AndroidX.Wear.Watchface.Editor.IEditorService
     </attr>
-    -->
+    <!--
     <remove-node
         path="/api/package[@name='androidx.wear.watchface.control']/class[@name='IWatchFaceInstanceServiceStub']/method[@name='getEditorService' and count(parameter)=0]"
         />
-
+    -->
+    
 </metadata>
