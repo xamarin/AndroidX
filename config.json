@@ -1191,48 +1191,48 @@
       {
         "groupId": "androidx.room",
         "artifactId": "room-common",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-guava",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Guava",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-ktx",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-runtime",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava2",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava3",
-        "version": "2.4.3",
-        "nugetVersion": "2.4.3.1",
+        "version": "2.5.0",
+        "nugetVersion": "2.5.0",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava3",
         "dependencyOnly": false
       },
@@ -1773,8 +1773,8 @@
       {
         "groupId": "io.reactivex.rxjava3",
         "artifactId": "rxjava",
-        "version": "3.1.5",
-        "nugetVersion": "3.1.5.2",
+        "version": "3.1.6",
+        "nugetVersion": "3.1.6",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
         "templateSet": "rxjava"
@@ -2005,8 +2005,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.15.0",
-        "nugetVersion": "2.15.0",
+        "version": "2.16",
+        "nugetVersion": "2.16.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
