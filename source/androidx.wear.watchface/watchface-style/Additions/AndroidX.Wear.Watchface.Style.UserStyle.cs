@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using Android.Runtime;
 using Java.Interop;
 
-namespace AndroidX.Wear.Watchface.Style 
+
+namespace AndroidX.Wear.WatchFace.Style 
 {
 	// Metadata.xml XPath class reference: path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']"
 	// [global::Android.Runtime.Register ("androidx/wear/watchface/style/UserStyle", DoNotGenerateAcw=true)]
@@ -28,7 +29,7 @@ namespace AndroidX.Wear.Watchface.Style
 			const string __id = "keySet.()Ljava/util/Set;";
 			try {
 				var __rm = _members.InstanceMethods.InvokeNonvirtualObjectMethod (__id, this, null);
-				return (System.Collections.ICollection?) global::Android.Runtime.JavaSet<global::AndroidX.Wear.Watchface.Style.UserStyleSetting>.FromJniHandle (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				return (System.Collections.ICollection?) global::Android.Runtime.JavaSet<global::AndroidX.Wear.WatchFace.Style.UserStyleSetting>.FromJniHandle (__rm.Handle, JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -40,7 +41,7 @@ namespace AndroidX.Wear.Watchface.Style
 			const string __id = "values.()Ljava/util/Collection;";
 			try {
 				var __rm = _members.InstanceMethods.InvokeNonvirtualObjectMethod (__id, this, null);
-				return (System.Collections.ICollection?) global::Android.Runtime.JavaCollection<global::AndroidX.Wear.Watchface.Style.UserStyleSetting.Option>.FromJniHandle (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				return (System.Collections.ICollection?) global::Android.Runtime.JavaCollection<global::AndroidX.Wear.WatchFace.Style.UserStyleSetting.Option>.FromJniHandle (__rm.Handle, JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
