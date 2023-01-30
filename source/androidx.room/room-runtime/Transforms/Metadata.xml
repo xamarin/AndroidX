@@ -5,6 +5,9 @@
 
     <attr path="/api/package[@name='androidx.room']/class[@name='RoomOpenHelper.Delegate']" name="managedName">HelperDelegate</attr>
 
+     <!-- This field gets placed in a 'MultiInstanceInvalidationService' class which clashes with a Java class of the same name -->
+    <remove-node path="/api/package[@name='androidx.room']/interface[@name='IMultiInstanceInvalidationService']/field[@name='DESCRIPTOR']" />
+  
     <!--    
     <attr
         path="//class[@visibility='']"
