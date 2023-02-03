@@ -159,48 +159,48 @@
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-camera2",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.Camera.Camera2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-core",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.Camera.Core",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-extensions",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.Camera.Extensions",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-lifecycle",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.Camera.Lifecycle",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-video",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.Camera.Video",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-view",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.1",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
         "nugetId": "Xamarin.AndroidX.Camera.View",
         "dependencyOnly": false
       },
@@ -583,32 +583,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "7.4.0",
-        "nugetVersion": "7.4.0.1",
+        "version": "7.4.1",
+        "nugetVersion": "7.4.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "7.4.0",
-        "nugetVersion": "7.4.0.1",
+        "version": "7.4.1",
+        "nugetVersion": "7.4.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "7.4.0",
-        "nugetVersion": "7.4.0.1",
+        "version": "7.4.1",
+        "nugetVersion": "7.4.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "7.4.0",
-        "nugetVersion": "7.4.0.1",
+        "version": "7.4.1",
+        "nugetVersion": "7.4.1",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -1431,8 +1431,8 @@
       {
         "groupId": "androidx.webkit",
         "artifactId": "webkit",
-        "version": "1.5.0",
-        "nugetVersion": "1.5.0.2",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.WebKit",
         "dependencyOnly": false
       },
@@ -1613,8 +1613,8 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0.2",
+        "version": "1.8.0",
+        "nugetVersion": "1.8.0",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false
       },
@@ -1773,8 +1773,8 @@
       {
         "groupId": "io.reactivex.rxjava3",
         "artifactId": "rxjava",
-        "version": "3.1.5",
-        "nugetVersion": "3.1.5.3",
+        "version": "3.1.6",
+        "nugetVersion": "3.1.6",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
         "templateSet": "rxjava"
@@ -1800,8 +1800,8 @@
       {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
-        "version": "3.29.0",
-        "nugetVersion": "3.29.0.1",
+        "version": "3.30.0",
+        "nugetVersion": "3.30.0",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
@@ -1818,8 +1818,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.8.10",
+        "nugetVersion": "1.8.10",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1830,8 +1830,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.8.10",
+        "nugetVersion": "1.8.10",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1839,8 +1839,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.8.10",
+        "nugetVersion": "1.8.10",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1851,8 +1851,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.8.10",
+        "nugetVersion": "1.8.10",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1863,8 +1863,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.1",
+        "version": "1.8.10",
+        "nugetVersion": "1.8.10",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2005,8 +2005,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.15.0",
-        "nugetVersion": "2.15.0",
+        "version": "2.16",
+        "nugetVersion": "2.16.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
