@@ -181,5 +181,6 @@
     <AndroidNamespaceReplacement Include='composethemeadapter3' Replacement='ComposeThemeAdapter3' />
     <AndroidNamespaceReplacement Include='imagecapture' Replacement='ImageCaptures' />
     <AndroidNamespaceReplacement Include='sidesheet' Replacement='SideSheet' />
+    <AndroidNamespaceReplacement Include='watchface' Replacement='WatchFace' />
   </ItemGroup>
 </Project>

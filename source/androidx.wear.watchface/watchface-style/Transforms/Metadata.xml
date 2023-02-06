@@ -1,0 +1,165 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.BooleanUserStyleSetting.BooleanOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.BooleanUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.LongRangeUserStyleSetting.LongRangeOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.LongRangeUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.DoubleRangeUserStyleSetting.DoubleRangeOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.DoubleRangeUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.ListUserStyleSetting.ListOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.ListUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.ComplicationSlotsUserStyleSetting.ComplicationSlotsOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.ComplicationSlotsUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.CustomValueUserStyleSetting.CustomValueOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.CustomValueUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
+    
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='remove' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='remove' and count(parameter)=2 and parameter[1][@type='java.lang.Object'] and parameter[2][@type='java.lang.Object']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='put' and count(parameter)=2 and parameter[1][@type='androidx.wear.watchface.style.UserStyleSetting'] and parameter[2][@type='androidx.wear.watchface.style.UserStyleSetting.Option']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='put' and count(parameter)=2 and parameter[1][@type='androidx.wear.watchface.style.UserStyleSetting'] and parameter[2][@type='androidx.wear.watchface.style.UserStyleSetting.Option']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='put' and count(parameter)=2 and parameter[1][@type='androidx.wear.watchface.style.UserStyleSetting'] and parameter[2][@type='androidx.wear.watchface.style.UserStyleSetting.Option']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='putAll' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;? extends androidx.wear.watchface.style.UserStyleSetting, ? extends androidx.wear.watchface.style.UserStyleSetting.Option&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.IDictionary
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='getValues' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+    <!--
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='entrySet' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='keySet' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='values' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.ICollection
+    </attr>
+    -->
+
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='entrySet' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='keySet' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='values' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyle']/method[@name='get' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+</metadata>
