@@ -1429,6 +1429,94 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-client",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Client",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-client-guava",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.ClientGuava",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-complications",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-complications-data",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-complications-data-source",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data.Source",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-complications-data-source-ktx",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data.Source.Ktx",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-complications-rendering",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Rendering",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-data",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Data",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-guava",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Guava",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.watchface",
+        "artifactId": "watchface-style",
+        "version": "1.0.1",
+        "nugetVersion": "1.0.1",
+        "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Style",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.webkit",
         "artifactId": "webkit",
         "version": "1.6.0",
