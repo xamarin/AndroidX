@@ -15,7 +15,8 @@ parameters:
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
   classicXAPkg:  https://aka.ms/xamarin-android-commercial-d17-4-macos
   classicXAVsix: https://aka.ms/xamarin-android-commercial-d17-4-windows
-
+  skipUnitTests: false                                      # do not run unit test step
+  
   tools:                                                    # a list of additional .NET global tools needed
   - 'xamarin.androidbinderator.tool': '0.5.4'
   - 'Cake.Tool': '2.2.0'
@@ -70,6 +71,7 @@ jobs:
           artifactsPath: ${{ parameters.artifactsPath }}
           verbosity: ${{ parameters.verbosity }}
           configuration: ${{ parameters.configuration }}
+          skipUnitTests: ${{ parameters.skipUnitTests }}
 
       # after the build is complete
       - pwsh: |

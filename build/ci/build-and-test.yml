@@ -3,6 +3,7 @@ parameters:
   verbosity:                                       # the build verbosity: 'minimal', 'normal', 'diagnostic'
   configuration:                                   # the build configuration: 'Debug', 'Release'
   artifactsPath:
+  skipUnitTests: false                             # do not run unit test step
   
   validPackagePrefixes:                            # any NuGet prefixes that should pass validation
   - Xamarin
@@ -55,6 +56,7 @@ steps:
     
   - task: DotNetCoreCLI@2
     displayName: Run unit tests
+    condition: ne(${{ parameters.skipUnitTests }}, 'true')
     inputs:
       command: test
       projects: util/**/*.Tests.csproj
