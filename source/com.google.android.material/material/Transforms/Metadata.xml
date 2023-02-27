@@ -252,7 +252,7 @@
       ISheet - visibility=""
     -->
     <remove-node 
-      path="/api/package[@name='com.google.android.material.sidesheet']/class[@name='SideSheetBehavior']"
+      path="/api/package[@name='com.google.android.material.sidesheet']/class[@name='SideSheetBehavior']/implements"
       />
 
  </metadata>
