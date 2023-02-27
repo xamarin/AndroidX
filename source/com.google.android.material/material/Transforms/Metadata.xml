@@ -218,5 +218,41 @@
     <remove-node
         path="/api/package[@name='com.google.android.material.snackbar']/class[@name='Snackbar.SnackbarLayout']/method[@name='setLayoutParams' and count(parameter)=1 and parameter[1][@type='android.view.ViewGroup.LayoutParams']]"
         />
+ 
+        
+    <attr
+        path="/api/package[@name='com.google.android.material.internal']/class[@name='RectEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Rect'] and parameter[3][@type='android.graphics.Rect']]/parameter[1]"
+        name="managedType"
+        >
+        float
+      </attr>
+      <attr
+      path="/api/package[@name='com.google.android.material.internal']/class[@name='RectEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Rect'] and parameter[3][@type='android.graphics.Rect']]/parameter[2]"
+      name="managedType"
+      >
+      Java.Lang.Object?
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.internal']/class[@name='RectEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Rect'] and parameter[3][@type='android.graphics.Rect']]/parameter[3]"
+      name="managedType"
+      >
+      Java.Lang.Object?
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.android.material.internal']/class[@name='RectEvaluator']/method[@name='evaluate' and count(parameter)=3 and parameter[1][@type='float'] and parameter[2][@type='android.graphics.Rect'] and parameter[3][@type='android.graphics.Rect']]"
+      name="managedReturn"
+      >
+      Java.Lang.Object
+    </attr>
 
-  </metadata>
+
+    <!-- 
+      error CS0234: The type or namespace name 'ISheet' does not exist in the namespace 'Google.Android.Material.SideSheet' 
+
+      ISheet - visibility=""
+    -->
+    <remove-node 
+      path="/api/package[@name='com.google.android.material.sidesheet']/class[@name='SideSheetBehavior']/implements"
+      />
+
+ </metadata>
