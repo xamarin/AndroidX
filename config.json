@@ -469,6 +469,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.concurrent",
+        "artifactId": "concurrent-futures-ktx",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Concurrent.Futures.Ktx",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.constraintlayout",
         "artifactId": "constraintlayout",
         "version": "2.1.4",
@@ -1514,6 +1522,38 @@
         "version": "1.1.1",
         "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Style",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Tiles",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles-material",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Tiles.Material",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles-proto",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Tiles.Proto",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles-renderer",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.Tiles.Renderer",
         "dependencyOnly": false
       },
       {
