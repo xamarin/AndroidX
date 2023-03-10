@@ -1996,9 +1996,22 @@
         "maven": {
           "artifactId": "security-crypto",
           "groupId": "androidx.security",
-          "version": "1.0.0",
+          "version": "1.1.0-alpha05",
           "nuGetId": "Xamarin.AndroidX.Security.SecurityCrypto",
-          "nuGetVersion": "1.0.0.9"
+          "nuGetVersion": "1.1.0-alpha05"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "security-crypto-ktx",
+          "groupId": "androidx.security",
+          "version": "1.1.0-alpha05",
+          "nuGetId": "Xamarin.AndroidX.Security.SecurityCrypto.Ktx",
+          "nuGetVersion": "1.1.0-alpha05"
         }
       },
       "license": "The Apache Software License, Version 2.0"
