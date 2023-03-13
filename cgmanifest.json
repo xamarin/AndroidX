@@ -111,9 +111,9 @@
         "maven": {
           "artifactId": "appcompat",
           "groupId": "androidx.appcompat",
-          "version": "1.6.0",
+          "version": "1.6.1",
           "nuGetId": "Xamarin.AndroidX.AppCompat",
-          "nuGetVersion": "1.6.0.1"
+          "nuGetVersion": "1.6.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -124,9 +124,9 @@
         "maven": {
           "artifactId": "appcompat-resources",
           "groupId": "androidx.appcompat",
-          "version": "1.6.0",
+          "version": "1.6.1",
           "nuGetId": "Xamarin.AndroidX.AppCompat.AppCompatResources",
-          "nuGetVersion": "1.6.0.1"
+          "nuGetVersion": "1.6.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -202,9 +202,9 @@
         "maven": {
           "artifactId": "browser",
           "groupId": "androidx.browser",
-          "version": "1.4.0",
+          "version": "1.5.0",
           "nuGetId": "Xamarin.AndroidX.Browser",
-          "nuGetVersion": "1.4.0.4"
+          "nuGetVersion": "1.5.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -720,6 +720,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "concurrent-futures-ktx",
+          "groupId": "androidx.concurrent",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Concurrent.Futures.Ktx",
+          "nuGetVersion": "1.1.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "constraintlayout",
           "groupId": "androidx.constraintlayout",
           "version": "2.1.4",
@@ -1073,9 +1086,9 @@
         "maven": {
           "artifactId": "exifinterface",
           "groupId": "androidx.exifinterface",
-          "version": "1.3.5",
+          "version": "1.3.6",
           "nuGetId": "Xamarin.AndroidX.ExifInterface",
-          "nuGetVersion": "1.3.5.1"
+          "nuGetVersion": "1.3.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2282,9 +2295,9 @@
         "maven": {
           "artifactId": "watchface",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2295,9 +2308,9 @@
         "maven": {
           "artifactId": "watchface-client",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Client",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2308,9 +2321,9 @@
         "maven": {
           "artifactId": "watchface-client-guava",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.ClientGuava",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2321,9 +2334,9 @@
         "maven": {
           "artifactId": "watchface-complications",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Complications",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2334,9 +2347,9 @@
         "maven": {
           "artifactId": "watchface-complications-data",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2347,9 +2360,9 @@
         "maven": {
           "artifactId": "watchface-complications-data-source",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data.Source",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2360,9 +2373,9 @@
         "maven": {
           "artifactId": "watchface-complications-data-source-ktx",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data.Source.Ktx",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2373,9 +2386,9 @@
         "maven": {
           "artifactId": "watchface-complications-rendering",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Rendering",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2386,9 +2399,9 @@
         "maven": {
           "artifactId": "watchface-data",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Data",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2399,9 +2412,9 @@
         "maven": {
           "artifactId": "watchface-guava",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Guava",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2412,9 +2425,61 @@
         "maven": {
           "artifactId": "watchface-style",
           "groupId": "androidx.wear.watchface",
-          "version": "1.0.1",
+          "version": "1.1.1",
           "nuGetId": "Xamarin.AndroidX.Wear.WatchFace.Style",
-          "nuGetVersion": "1.0.1"
+          "nuGetVersion": "1.1.1"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tiles",
+          "groupId": "androidx.wear.tiles",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Tiles",
+          "nuGetVersion": "1.1.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tiles-material",
+          "groupId": "androidx.wear.tiles",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Tiles.Material",
+          "nuGetVersion": "1.1.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tiles-proto",
+          "groupId": "androidx.wear.tiles",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Tiles.Proto",
+          "nuGetVersion": "1.1.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "tiles-renderer",
+          "groupId": "androidx.wear.tiles",
+          "version": "1.1.0",
+          "nuGetId": "Xamarin.AndroidX.Tiles.Renderer",
+          "nuGetVersion": "1.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2503,9 +2568,9 @@
         "maven": {
           "artifactId": "work-runtime",
           "groupId": "androidx.work",
-          "version": "2.7.1",
+          "version": "2.8.0",
           "nuGetId": "Xamarin.AndroidX.Work.Runtime",
-          "nuGetVersion": "2.7.1.6"
+          "nuGetVersion": "2.8.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2516,9 +2581,9 @@
         "maven": {
           "artifactId": "work-runtime-ktx",
           "groupId": "androidx.work",
-          "version": "2.7.1",
+          "version": "2.8.0",
           "nuGetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
-          "nuGetVersion": "2.7.1.6"
+          "nuGetVersion": "2.8.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
