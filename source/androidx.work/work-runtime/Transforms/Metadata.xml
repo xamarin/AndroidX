@@ -129,4 +129,56 @@
         Java.Lang.Object
     </attr>
     
+
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='BatteryChargingController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='BatteryNotLowController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='NetworkConnectedController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='NetworkMeteredController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='NetworkUnmeteredController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='NetworkNotRoamingController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.controllers']/class[@name='StorageNotLowController']/method[@name='isConstrained' and count(parameter)=1]/parameter[1]" 
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    
+
+    <attr 
+        path="/api/package[@name='androidx.work.impl.utils.taskexecutor']/class[@name='WorkManagerTaskExecutor']/method[@name='getSerialTaskExecutor' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Work.Impl.Utils.TaskExecutor.ISerialExecutor
+    </attr>
+
 </metadata>

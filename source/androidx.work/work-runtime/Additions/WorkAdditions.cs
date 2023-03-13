@@ -61,17 +61,17 @@ namespace AndroidX.Work
             public new Builder SetInputData(Data data)
                 => base.SetInputData(data).JavaCast<Builder>();
 
-            public new Builder SetPeriodStartTime(long periodStartTime, TimeUnit timeUnit)
-                => base.SetPeriodStartTime(periodStartTime, timeUnit).JavaCast<Builder>();
+            // public new Builder SetPeriodStartTime(long periodStartTime, TimeUnit timeUnit)
+            //     => base.SetPeriodStartTime(periodStartTime, timeUnit).JavaCast<Builder>();
 
-            public Builder SetPeriodStartTime(TimeSpan periodStartTime)
-                => base.SetPeriodStartTime((long)periodStartTime.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+            // public Builder SetPeriodStartTime(TimeSpan periodStartTime)
+            //     => base.SetPeriodStartTime((long)periodStartTime.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
 
-            public new Builder SetScheduleRequestedAt(long scheduleRequestedAt, TimeUnit timeUnit)
-                => base.SetPeriodStartTime(scheduleRequestedAt, timeUnit).JavaCast<Builder>();
+            // public new Builder SetScheduleRequestedAt(long scheduleRequestedAt, TimeUnit timeUnit)
+            //     => base.SetPeriodStartTime(scheduleRequestedAt, timeUnit).JavaCast<Builder>();
 
-            public Builder SetScheduleRequestedAt(TimeSpan scheduleRequestedAt)
-                => base.SetPeriodStartTime((long)scheduleRequestedAt.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+            // public Builder SetScheduleRequestedAt(TimeSpan scheduleRequestedAt)
+            //     => base.SetPeriodStartTime((long)scheduleRequestedAt.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
 
             public new Builder SetInitialDelay(TimeSpan initialDelay)
                 => base.SetInitialDelay((long)initialDelay.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
@@ -145,17 +145,17 @@ namespace AndroidX.Work
             public new Builder SetInputData(Data data)
                 => base.SetInputData(data).JavaCast<Builder>();
 
-            public new Builder SetPeriodStartTime(long periodStartTime, TimeUnit timeUnit)
-                => base.SetPeriodStartTime(periodStartTime, timeUnit).JavaCast<Builder>();
+            // public new Builder SetPeriodStartTime(long periodStartTime, TimeUnit timeUnit)
+            //     => base.SetPeriodStartTime(periodStartTime, timeUnit).JavaCast<Builder>();
 
-            public Builder SetPeriodStartTime(TimeSpan periodStartTime)
-                => base.SetPeriodStartTime((long)periodStartTime.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+            // public Builder SetPeriodStartTime(TimeSpan periodStartTime)
+            //     => base.SetPeriodStartTime((long)periodStartTime.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
 
-            public new Builder SetScheduleRequestedAt(long scheduleRequestedAt, TimeUnit timeUnit)
-                => base.SetPeriodStartTime(scheduleRequestedAt, timeUnit).JavaCast<Builder>();
+            // public new Builder SetScheduleRequestedAt(long scheduleRequestedAt, TimeUnit timeUnit)
+            //     => base.SetPeriodStartTime(scheduleRequestedAt, timeUnit).JavaCast<Builder>();
 
-            public Builder SetScheduleRequestedAt(TimeSpan scheduleRequestedAt)
-                => base.SetPeriodStartTime((long)scheduleRequestedAt.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
+            // public Builder SetScheduleRequestedAt(TimeSpan scheduleRequestedAt)
+            //     => base.SetPeriodStartTime((long)scheduleRequestedAt.TotalMilliseconds, TimeUnit.Milliseconds).JavaCast<Builder>();
             #endregion
 
         }
@@ -194,13 +194,13 @@ namespace AndroidX.Work.Impl.Constraints.Trackers
 
     public partial class NetworkStateTracker
     {
-        protected override global::Java.Lang.Object RawInitialState
-        {
-            get
-            {
-                return this.InitialState;
-            }
-        }
+        // protected override global::Java.Lang.Object RawInitialState
+        // {
+        //     get
+        //     {
+        //         return this.InitialState;
+        //     }
+        // }
     }
 
     public partial class BatteryNotLowTracker
