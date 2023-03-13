@@ -192,16 +192,16 @@ namespace AndroidX.Work.Impl.Constraints.Trackers
         }
     }
 
-    public partial class NetworkStateTracker
-    {
-        // protected override global::Java.Lang.Object RawInitialState
-        // {
-        //     get
-        //     {
-        //         return this.InitialState;
-        //     }
-        // }
-    }
+    // public partial class NetworkStateTracker
+    // {
+    //     protected override global::Java.Lang.Object RawInitialState
+    //     {
+    //         get
+    //         {
+    //             return this.InitialState;
+    //         }
+    //     }
+    // }
 
     public partial class BatteryNotLowTracker
     {
