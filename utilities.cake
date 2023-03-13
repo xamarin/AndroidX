@@ -573,6 +573,8 @@ Task ("spell-check")
                 "RxKotlin",
                 "WatchFace",
                 "ClientGuava",
+                "Proto",
+                "Renderer",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
