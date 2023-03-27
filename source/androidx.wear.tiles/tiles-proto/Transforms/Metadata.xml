@@ -1,0 +1,39 @@
+<metadata>
+    <!-- 
+        2023-03-12
+        400+ errors
+        neeeds tons of love
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.wear.tiles.proto']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.tiles.protobuf']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.tiles.protobuf']/class[@name='Internal']"
+        />
+
+    <!--
+    <add-node
+        path="/api/package[@name='androidx.wear.tiles.proto']/class[@name='LayoutElementProto.VerticalAlignmentProp.Builder']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="androidx.wear.tiles.protobuf.MessageLite" name="build" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" 
+            synchronized="false" synthetic="false" 
+            />
+        <method 
+            visibility="public" static="false" abstract="false" return="androidx.wear.tiles.protobuf.MessageLite"  name="buildPartial" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            synchronized="false" synthetic="false" 
+            />
+        <method 
+            visibility="public" static="false" abstract="false" return="androidx.wear.tiles.protobuf.MessageLite.Builder" name="clear"
+            deprecated="not deprecated" final="true" bridge="false" native="false"
+            synchronized="false" synthetic="false" 
+            />
+
+    </add-node>
+    -->
+</metadata>
