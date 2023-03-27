@@ -1,0 +1,8 @@
+<metadata>
+    <remove-node
+        path="/api/package[@name='androidx.wear.tiles.renderer.internal']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.tiles.timeline.internal']"
+        />
+</metadata>
