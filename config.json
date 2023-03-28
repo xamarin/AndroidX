@@ -1014,6 +1014,14 @@
       },
       {
         "groupId": "androidx.navigation",
+        "artifactId": "navigation-compose",
+        "version": "2.4.2",
+        "nugetVersion": "2.4.2",
+        "nugetId": "Xamarin.AndroidX.Navigation.Compose",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment",
         "version": "2.5.3",
         "nugetVersion": "2.5.3.1",
@@ -1434,6 +1442,30 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0.6",
         "nugetId": "Xamarin.AndroidX.Wear.RemoteInteractions",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.compose",
+        "artifactId": "compose-foundation",
+        "version": "1.0.2",
+        "nugetVersion": "1.0.2",
+        "nugetId": "Xamarin.AndroidX.Wear.Compose.Foundation",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.compose",
+        "artifactId": "compose-material",
+        "version": "1.0.2",
+        "nugetVersion": "1.0.2",
+        "nugetId": "Xamarin.AndroidX.Wear.Compose.Material",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.wear.compose",
+        "artifactId": "compose-navigation",
+        "version": "1.0.2",
+        "nugetVersion": "1.0.2",
+        "nugetId": "Xamarin.AndroidX.Wear.Compose.Navigation",
         "dependencyOnly": false
       },
       {
@@ -2138,6 +2170,29 @@
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
+
+
+
+
+      {
+        "groupId": "androidx.navigation",
+        "artifactId": "navigation-common-ktx",
+        "version": "2.4.2",
+        "nugetVersion": "2.4.2",
+        "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "androidx.navigation",
+        "artifactId": "navigation-runtime-ktx",
+        "version": "2.4.2",
+        "nugetVersion": "2.4.2",
+        "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+        "dependencyOnly": true
+      },
+
+
+
       {
         "groupId": "com.xamarin.androidx",
         "artifactId": "migration",
