@@ -1,0 +1,10 @@
+<metadata>
+    
+    <attr
+        path="/api/package[@name='androidx.wear.compose.navigation']/class[@name='WearNavigator']/method[@name='createDestination' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+</metadata>
