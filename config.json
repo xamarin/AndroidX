@@ -966,6 +966,22 @@
       },
       {
         "groupId": "androidx.media2",
+        "artifactId": "media2-exoplayer",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
+        "nugetId": "Xamarin.AndroidX.Media2.ExoPlayer",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media2",
+        "artifactId": "media2-player",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1",
+        "nugetId": "Xamarin.AndroidX.Media2.Player",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media2",
         "artifactId": "media2-session",
         "version": "1.2.1",
         "nugetVersion": "1.2.1.4",
@@ -978,6 +994,94 @@
         "version": "1.2.1",
         "nugetVersion": "1.2.1.4",
         "nugetId": "Xamarin.AndroidX.Media2.Widget",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-common",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-datasource",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.DataSource",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-decoder",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.Decoder",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-exoplayer",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-exoplayer-dash",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Dash",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-exoplayer-hls",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Hls",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-exoplayer-ima",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-exoplayer-smoothstreaming",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.SmoothStreaming",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-exoplayer-workmanager",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.WorkManager",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-database",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.Database",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
+        "artifactId": "media3-extractor",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.Extractor",
         "dependencyOnly": false
       },
       {
@@ -1779,6 +1883,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "com.google.ads.interactivemedia.v3",
+        "artifactId": "interactivemedia",
+        "version": "3.29.0",
+        "nugetVersion": "3.29.0",
+        "nugetId": "Xamarin.Google.Android.Material",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "com.google.assistant.appactions",
         "artifactId": "suggestions",
         "version": "1.0.0",
@@ -2124,10 +2236,34 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-identifier",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.3",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-appindex",
         "version": "16.1.0",
         "nugetVersion": "116.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.AppIndex",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appset",
+        "version": "16.0.2",
+        "nugetVersion": "116.0.2.3",
+        "nugetId": "Xamarin.GooglePlayServices.AppSet",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-base",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Base",
         "dependencyOnly": true
       },
       {
