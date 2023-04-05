@@ -1015,8 +1015,8 @@
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-compose",
-        "version": "2.4.2",
-        "nugetVersion": "2.4.2",
+        "version": "2.5.3",
+        "nugetVersion": "2.5.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Compose",
         "dependencyOnly": false
       },
@@ -1447,24 +1447,24 @@
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-foundation",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2",
         "nugetId": "Xamarin.AndroidX.Wear.Compose.Foundation",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-material",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2",
         "nugetId": "Xamarin.AndroidX.Wear.Compose.Material",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-navigation",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2",
         "nugetId": "Xamarin.AndroidX.Wear.Compose.Navigation",
         "dependencyOnly": false
       },
@@ -1665,8 +1665,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-appcompat-theme",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1674,8 +1674,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-drawablepainter",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.DrawablePainter",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1683,8 +1683,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-flowlayout",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.FlowLayout",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1692,8 +1692,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-pager",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.Pager",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1701,8 +1701,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-pager-indicators",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1710,8 +1710,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-permissions",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.Permissions",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1719,8 +1719,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-placeholder",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.Placeholder",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1728,8 +1728,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-placeholder-material",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1737,8 +1737,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-swiperefresh",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1746,8 +1746,8 @@
       {
         "groupId": "com.google.accompanist",
         "artifactId": "accompanist-systemuicontroller",
-        "version": "0.30.0",
-        "nugetVersion": "0.30.0",
+        "version": "0.30.1",
+        "nugetVersion": "0.30.1",
         "nugetId": "Xamarin.Google.Accompanist.SystemUIController",
         "dependencyOnly": false,
         "templateSet": "accompanist"
@@ -1960,8 +1960,8 @@
       {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
-        "version": "3.31.0",
-        "nugetVersion": "3.31.0",
+        "version": "3.33.0",
+        "nugetVersion": "3.33.0",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
@@ -1978,8 +1978,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.8.10",
-        "nugetVersion": "1.8.10",
+        "version": "1.8.20",
+        "nugetVersion": "1.8.20",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1990,8 +1990,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.8.10",
-        "nugetVersion": "1.8.10",
+        "version": "1.8.20",
+        "nugetVersion": "1.8.20",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1999,8 +1999,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.8.10",
-        "nugetVersion": "1.8.10",
+        "version": "1.8.20",
+        "nugetVersion": "1.8.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2011,8 +2011,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.8.10",
-        "nugetVersion": "1.8.10",
+        "version": "1.8.20",
+        "nugetVersion": "1.8.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2023,8 +2023,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.8.10",
-        "nugetVersion": "1.8.10",
+        "version": "1.8.20",
+        "nugetVersion": "1.8.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2123,6 +2123,22 @@
         "templateSet": "reactive-streams"
       },
       {
+        "groupId": "androidx.navigation",
+        "artifactId": "navigation-common-ktx",
+        "version": "2.4.2",
+        "nugetVersion": "2.4.2",
+        "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "androidx.navigation",
+        "artifactId": "navigation-runtime-ktx",
+        "version": "2.4.2",
+        "nugetVersion": "2.4.2",
+        "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-appindex",
         "version": "16.1.0",
@@ -2170,29 +2186,6 @@
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
-
-
-
-
-      {
-        "groupId": "androidx.navigation",
-        "artifactId": "navigation-common-ktx",
-        "version": "2.4.2",
-        "nugetVersion": "2.4.2",
-        "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "androidx.navigation",
-        "artifactId": "navigation-runtime-ktx",
-        "version": "2.4.2",
-        "nugetVersion": "2.4.2",
-        "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
-        "dependencyOnly": true
-      },
-
-
-
       {
         "groupId": "com.xamarin.androidx",
         "artifactId": "migration",
