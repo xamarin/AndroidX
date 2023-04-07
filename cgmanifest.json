@@ -1606,9 +1606,9 @@
         "maven": {
           "artifactId": "navigation-compose",
           "groupId": "androidx.navigation",
-          "version": "2.4.2",
+          "version": "2.5.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Compose",
-          "nuGetVersion": "2.4.2"
+          "nuGetVersion": "2.5.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2308,9 +2308,9 @@
         "maven": {
           "artifactId": "compose-foundation",
           "groupId": "androidx.wear.compose",
-          "version": "1.0.2",
+          "version": "1.1.2",
           "nuGetId": "Xamarin.AndroidX.Wear.Compose.Foundation",
-          "nuGetVersion": "1.0.2"
+          "nuGetVersion": "1.1.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2321,9 +2321,9 @@
         "maven": {
           "artifactId": "compose-material",
           "groupId": "androidx.wear.compose",
-          "version": "1.0.2",
+          "version": "1.1.2",
           "nuGetId": "Xamarin.AndroidX.Wear.Compose.Material",
-          "nuGetVersion": "1.0.2"
+          "nuGetVersion": "1.1.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2334,9 +2334,9 @@
         "maven": {
           "artifactId": "compose-navigation",
           "groupId": "androidx.wear.compose",
-          "version": "1.0.2",
+          "version": "1.1.2",
           "nuGetId": "Xamarin.AndroidX.Wear.Compose.Navigation",
-          "nuGetVersion": "1.0.2"
+          "nuGetVersion": "1.1.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2658,9 +2658,9 @@
         "maven": {
           "artifactId": "accompanist-appcompat-theme",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2671,9 +2671,9 @@
         "maven": {
           "artifactId": "accompanist-drawablepainter",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.DrawablePainter",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2684,9 +2684,9 @@
         "maven": {
           "artifactId": "accompanist-flowlayout",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.FlowLayout",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2697,9 +2697,9 @@
         "maven": {
           "artifactId": "accompanist-pager",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.Pager",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2710,9 +2710,9 @@
         "maven": {
           "artifactId": "accompanist-pager-indicators",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.Pager.Indicators",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2723,9 +2723,9 @@
         "maven": {
           "artifactId": "accompanist-permissions",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.Permissions",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2736,9 +2736,9 @@
         "maven": {
           "artifactId": "accompanist-placeholder",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.Placeholder",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2749,9 +2749,9 @@
         "maven": {
           "artifactId": "accompanist-placeholder-material",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.Placeholder.Material",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2762,9 +2762,9 @@
         "maven": {
           "artifactId": "accompanist-swiperefresh",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.SwipeRefresh",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2775,9 +2775,9 @@
         "maven": {
           "artifactId": "accompanist-systemuicontroller",
           "groupId": "com.google.accompanist",
-          "version": "0.30.0",
+          "version": "0.30.1",
           "nuGetId": "Xamarin.Google.Accompanist.SystemUIController",
-          "nuGetVersion": "0.30.0"
+          "nuGetVersion": "0.30.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3084,9 +3084,9 @@
         "maven": {
           "artifactId": "checker-qual",
           "groupId": "org.checkerframework",
-          "version": "3.31.0",
+          "version": "3.33.0",
           "nuGetId": "Xamarin.CheckerFramework.CheckerQual",
-          "nuGetVersion": "3.31.0"
+          "nuGetVersion": "3.33.0"
         }
       },
       "license": "MIT"
@@ -3110,9 +3110,9 @@
         "maven": {
           "artifactId": "kotlin-reflect",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.8.10",
+          "version": "1.8.20",
           "nuGetId": "Xamarin.Kotlin.Reflect",
-          "nuGetVersion": "1.8.10"
+          "nuGetVersion": "1.8.20"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3123,9 +3123,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.8.10",
+          "version": "1.8.20",
           "nuGetId": "Xamarin.Kotlin.StdLib",
-          "nuGetVersion": "1.8.10"
+          "nuGetVersion": "1.8.20"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3136,9 +3136,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-common",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.8.10",
+          "version": "1.8.20",
           "nuGetId": "Xamarin.Kotlin.StdLib.Common",
-          "nuGetVersion": "1.8.10"
+          "nuGetVersion": "1.8.20"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3149,9 +3149,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-jdk7",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.8.10",
+          "version": "1.8.20",
           "nuGetId": "Xamarin.Kotlin.StdLib.Jdk7",
-          "nuGetVersion": "1.8.10"
+          "nuGetVersion": "1.8.20"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3162,9 +3162,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-jdk8",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.8.10",
+          "version": "1.8.20",
           "nuGetId": "Xamarin.Kotlin.StdLib.Jdk8",
-          "nuGetVersion": "1.8.10"
+          "nuGetVersion": "1.8.20"
         }
       },
       "license": "The Apache Software License, Version 2.0"
