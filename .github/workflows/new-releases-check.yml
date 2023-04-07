@@ -15,12 +15,12 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: main
         
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.x.x
         
@@ -39,7 +39,7 @@ jobs:
 
     - name: Create Pull Request
       id: cpr
-      uses: peter-evans/create-pull-request@v3
+      uses: peter-evans/create-pull-request@v5
       with:
         commit-message: Weekly stable updates
         branch-suffix: timestamp
