@@ -8,6 +8,9 @@
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
 
+    <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
+    <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
+    
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
