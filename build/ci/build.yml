@@ -19,7 +19,7 @@ parameters:
   
   tools:                                                    # a list of additional .NET global tools needed
   - 'xamarin.androidbinderator.tool': '0.5.4'
-  - 'Cake.Tool': '3.0.0'
+  - 'Cake.Tool': '2.3.0'
   - 'boots': '1.1.0.712-preview2'
   - 'api-tools': '1.3.4'
 
