@@ -90,6 +90,10 @@
         Java.Lang.Object
     </attr>
 
+    <!-- Remove a problematic default interface method -->
+    <remove-node
+      path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='MessageLite']/method[@name='newBuilderForType' and count(parameter)=0]" />
+
     <attr
         path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/interface[@name='Internal.BooleanList']/method[@name='mutableCopyWithCapacity' and count(parameter)=1 and parameter[1][@type='int']]"
         name="managedReturn"
