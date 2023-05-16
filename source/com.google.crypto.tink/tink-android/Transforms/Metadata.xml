@@ -832,5 +832,24 @@
             />
     </add-node>
 
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.proto']/class"
+        name="final"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class"
+        name="final"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='MapFieldLite']"
+        name="final"
+        >
+        false
+    </attr>
+
 
 </metadata>
