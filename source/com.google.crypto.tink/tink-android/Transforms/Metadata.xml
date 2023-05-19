@@ -786,24 +786,6 @@
         Xamarin.Google.Crypto.Tink.Parameters
     </attr>
     <attr
-        path="/api/package[@name='com.google.crypto.tink.streamingaead']/class[@name='StreamingAeadKey']"
-        name="managedReturn"
-        >
-        Xamarin.Google.Crypto.Tink.Parameters
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.crypto.tink.aead']/class[@name='AesCtrHmacAeadKey']"
-        name="managedReturn"
-        >
-        Xamarin.Google.Crypto.Tink.Parameters
-    </attr>
-    <attr
-        path="/api/package[@name='com.google.crypto.tink.streamingaead']/class[@name='StreamingAeadKey']"
-        name="managedReturn"
-        >
-        Xamarin.Google.Crypto.Tink.Parameters
-    </attr>
-    <attr
         path="/api/package[@name='com.google.crypto.tink.aead']/class[@name='AesCtrHmacAeadKey']/method[@name='getParameters' and count(parameter)=0]"
         name="managedReturn"
         >
