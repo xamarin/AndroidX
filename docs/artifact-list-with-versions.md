@@ -12,7 +12,7 @@
 |   5|androidx.ads:ads-identifier-common                                    |1.0.0-alpha04       |Xamarin.AndroidX.Ads.IdentifierCommon                                 |1.0.0.15-alpha04    |
 |   6|androidx.ads:ads-identifier-provider                                  |1.0.0-alpha04       |Xamarin.AndroidX.Ads.IdentifierProvider                               |1.0.0.15-alpha04    |
 |   7|androidx.annotation:annotation                                        |1.6.0               |Xamarin.AndroidX.Annotation                                           |1.6.0.1             |
-<<<<8|androidx.annotation:annotation-jvm                                    |1.6.0               |Xamarin.AndroidX.Annotation.Jvm                                       |1.6.0               |
+|   8|androidx.annotation:annotation-jvm                                    |1.6.0               |Xamarin.AndroidX.Annotation.Jvm                                       |1.6.0               |
 |   9|androidx.annotation:annotation-experimental                           |1.3.0               |Xamarin.AndroidX.Annotation.Experimental                              |1.3.0.3             |
 |  10|androidx.appcompat:appcompat                                          |1.6.1               |Xamarin.AndroidX.AppCompat                                            |1.6.1.1             |
 |  11|androidx.appcompat:appcompat-resources                                |1.6.1               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.6.1.1             |
