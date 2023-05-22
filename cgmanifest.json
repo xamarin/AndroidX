@@ -96,6 +96,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "annotation-jvm",
+          "groupId": "androidx.annotation",
+          "version": "1.6.0",
+          "nuGetId": "Xamarin.AndroidX.Annotation.Jvm",
+          "nuGetVersion": "1.6.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "annotation-experimental",
           "groupId": "androidx.annotation",
           "version": "1.3.0",
