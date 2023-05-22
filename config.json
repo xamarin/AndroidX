@@ -86,6 +86,14 @@
       },
       {
         "groupId": "androidx.annotation",
+        "artifactId": "annotation-jvm",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
+        "nugetId": "Xamarin.AndroidX.Annotation.Jvm",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.annotation",
         "artifactId": "annotation-experimental",
         "version": "1.3.0",
         "nugetVersion": "1.3.0.3",
@@ -1978,8 +1986,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.8.20",
-        "nugetVersion": "1.8.20.1",
+        "version": "1.8.21",
+        "nugetVersion": "1.8.21",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1990,8 +1998,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.8.20",
-        "nugetVersion": "1.8.20.1",
+        "version": "1.8.21",
+        "nugetVersion": "1.8.21",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -1999,8 +2007,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.8.20",
-        "nugetVersion": "1.8.20.1",
+        "version": "1.8.21",
+        "nugetVersion": "1.8.21",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2011,8 +2019,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.8.20",
-        "nugetVersion": "1.8.20.1",
+        "version": "1.8.21",
+        "nugetVersion": "1.8.21",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2023,8 +2031,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.8.20",
-        "nugetVersion": "1.8.20.1",
+        "version": "1.8.21",
+        "nugetVersion": "1.8.21",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
