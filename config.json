@@ -2043,8 +2043,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-android",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2052,8 +2052,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2061,8 +2061,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core-jvm",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2070,8 +2070,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-guava",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Guava",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2079,8 +2079,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-jdk8",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2088,8 +2088,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-play-services",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2097,8 +2097,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-reactive",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Reactive",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2106,8 +2106,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-rx2",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx2",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2115,8 +2115,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-rx3",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx3",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2157,8 +2157,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.2",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": true
       },
