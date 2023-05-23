@@ -29,12 +29,11 @@
     <remove-node
         path="/api/package[@name='kotlin.coroutines.jvm.internal']"
         />
-
     <attr
         path="/api/package[@name='kotlinx.coroutines.selects']/class[@name='OnTimeoutKt']/method[@name='onTimeout-8Mi8wO0' and count(parameter)=3 and parameter[1][@type='kotlinx.coroutines.selects.SelectBuilder&lt;? super R&gt;'] and parameter[2][@type='long'] and parameter[3][@type='kotlin.jvm.functions.Function1&lt;? super kotlin.coroutines.Continuation&lt;? super R&gt;, ? extends java.lang.Object&gt;']]"
         name="managedName"
         >
         OnTimeout2
     </attr>
-    
+
 </metadata>
