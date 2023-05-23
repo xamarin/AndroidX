@@ -11,7 +11,7 @@ namespace Xamarin.Google.Crypto.Tink.Shaded.Protobuf
 	// Metadata.xml XPath class reference: path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='MapFieldLite']"
 	// [global::Android.Runtime.Register ("com/google/crypto/tink/shaded/protobuf/MapFieldLite", DoNotGenerateAcw=true)]
 	// [global::Java.Interop.JavaTypeParameters (new string [] {"K", "V"})]
-	public sealed partial class MapFieldLite // : global::Java.Util.LinkedHashMap 
+	public partial class MapFieldLite // : global::Java.Util.LinkedHashMap 
     {
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.google.crypto.tink.shaded.protobuf']/class[@name='MapFieldLite']/method[@name='entrySet' and count(parameter)=0]"
 		[Register ("entrySet", "()Ljava/util/Set;", "")]
