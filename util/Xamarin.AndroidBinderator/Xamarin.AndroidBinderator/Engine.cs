@@ -319,7 +319,7 @@ namespace AndroidBinderator
 				});
 
 				// Gather maven dependencies to try and map out nuget dependencies
-				foreach (var mavenDep in mavenProject.Dependencies)
+				foreach (var mavenDep in mavenProject.Dependencies.Concat(ParseExtraDependencies(mavenArtifact.ExtraDependencies)))
 				{
 					FixDependency(config, mavenArtifact, mavenDep, mavenProject);
 
@@ -556,6 +556,34 @@ namespace AndroidBinderator
 			parent_poms.Add(key, pom);
 
 			return pom;
+		}
+
+		static IEnumerable<Dependency> ParseExtraDependencies(string dependencies)
+		{
+			if (string.IsNullOrWhiteSpace(dependencies))
+				yield break;
+
+			// Format is: "groupid.artifactid:version"
+			// Version is optional
+			var deps = dependencies.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+			foreach (var dep in deps) {
+				var id = dep;
+				var version = string.Empty;
+
+				if (dep.Contains(':')) {
+					id = dep.Substring(0, dep.IndexOf(':'));
+					version = dep.Substring(dep.IndexOf(':') + 1);
+				}
+
+				var result = new Dependency {
+					GroupId = id.Substring(0, id.LastIndexOf(".")),
+					ArtifactId = id.Substring(id.LastIndexOf(".") + 1),
+					Version = string.IsNullOrWhiteSpace (version) ? "0.0.0" : version
+				};
+
+				yield return result;
+			}
 		}
 	}
 }
