@@ -80,9 +80,10 @@
         "groupId": "androidx.annotation",
         "artifactId": "annotation",
         "version": "1.6.0",
-        "nugetVersion": "1.6.0.2",
+        "nugetVersion": "1.6.0.3",
         "nugetId": "Xamarin.AndroidX.Annotation",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "extraDependencies": "androidx.annotation.annotation-jvm"
       },
       {
         "groupId": "androidx.annotation",
