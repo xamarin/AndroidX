@@ -980,6 +980,11 @@ Task ("api-diff-analysis")
     (
         () =>
         {
+            if ( ! DirectoryExists("./output/api-diff") )
+            {
+                return;
+            }
+
             using (StringReader string_reader = new StringReader(System.IO.File.ReadAllText(@"./config.json")))
             {
                 JsonTextReader jtr = new JsonTextReader(string_reader);
