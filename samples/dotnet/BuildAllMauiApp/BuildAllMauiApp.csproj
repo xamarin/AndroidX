@@ -65,6 +65,6 @@
 	<ItemGroup
 		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
 		>
-		<PackageReference Include="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0-alpha03]" />
+		<PackageReference Include="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0-alpha06]" />
 	</ItemGroup>
 </Project>
