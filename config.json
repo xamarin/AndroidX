@@ -1646,6 +1646,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.window.extensions.core",
+        "artifactId": "core",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Window.Extensions.Core.Core",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
         "version": "2.8.1",
