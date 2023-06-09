@@ -22,7 +22,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.x.x
+        dotnet-version: 7.x.x
         
     - name: Install dotnet-script
       run: dotnet tool install -g dotnet-script
