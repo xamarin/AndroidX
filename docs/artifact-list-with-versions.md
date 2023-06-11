@@ -11,7 +11,7 @@
 |   4|androidx.ads:ads-identifier                                           |1.0.0-alpha04       |Xamarin.AndroidX.Ads.Identifier                                       |1.0.0.16-alpha04    |
 |   5|androidx.ads:ads-identifier-common                                    |1.0.0-alpha04       |Xamarin.AndroidX.Ads.IdentifierCommon                                 |1.0.0.16-alpha04    |
 |   6|androidx.ads:ads-identifier-provider                                  |1.0.0-alpha04       |Xamarin.AndroidX.Ads.IdentifierProvider                               |1.0.0.16-alpha04    |
-|   7|androidx.annotation:annotation                                        |1.6.0               |Xamarin.AndroidX.Annotation                                           |1.6.0.2             |
+|   7|androidx.annotation:annotation                                        |1.6.0               |Xamarin.AndroidX.Annotation                                           |1.6.0.3             |
 |   8|androidx.annotation:annotation-experimental                           |1.3.0               |Xamarin.AndroidX.Annotation.Experimental                              |1.3.0.4             |
 |   9|androidx.annotation:annotation-jvm                                    |1.6.0               |Xamarin.AndroidX.Annotation.Jvm                                       |1.6.0.1             |
 |  10|androidx.appcompat:appcompat                                          |1.6.1               |Xamarin.AndroidX.AppCompat                                            |1.6.1.2             |
@@ -243,7 +243,7 @@
 | 236|io.reactivex.rxjava3:rxjava                                           |3.1.6               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.6.2             |
 | 237|io.reactivex.rxjava3:rxkotlin                                         |3.0.1               |Xamarin.Android.ReactiveX.RxJava3.RxKotlin                            |3.0.1.4             |
 | 238|org.checkerframework:checker-compat-qual                              |2.5.5               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.5.4             |
-| 239|org.checkerframework:checker-qual                                     |3.34.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.34.0.1            |
+| 239|org.checkerframework:checker-qual                                     |3.35.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.35.0              |
 | 240|org.jetbrains:annotations                                             |24.0.1              |Xamarin.Jetbrains.Annotations                                         |24.0.1.2            |
 | 241|org.jetbrains.kotlin:kotlin-reflect                                   |1.8.21              |Xamarin.Kotlin.Reflect                                                |1.8.21.1            |
 | 242|org.jetbrains.kotlin:kotlin-stdlib                                    |1.8.21              |Xamarin.Kotlin.StdLib                                                 |1.8.21.1            |
