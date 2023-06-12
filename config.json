@@ -712,16 +712,16 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.5.7",
-        "nugetVersion": "1.5.7.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment-ktx",
-        "version": "1.5.7",
-        "nugetVersion": "1.5.7.1",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.Fragment.Ktx",
         "dependencyOnly": false
       },
@@ -1008,72 +1008,72 @@
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common-ktx",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-compose",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.2",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Compose",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment-ktx",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime-ktx",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.UI",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui-ktx",
-        "version": "2.5.3",
-        "nugetVersion": "2.5.3.3",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0",
         "nugetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
         "dependencyOnly": false
       },
@@ -1608,8 +1608,8 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.13",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.Window",
         "dependencyOnly": false
       },
@@ -1624,25 +1624,33 @@
       {
         "groupId": "androidx.window",
         "artifactId": "window-java",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.13",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.Window.WindowJava",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.window",
         "artifactId": "window-rxjava2",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.4",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.Window.WindowRxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.window",
         "artifactId": "window-rxjava3",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.4",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.Window.WindowRxJava3",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.window.extensions.core",
+        "artifactId": "core",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Window.Extensions.Core.Core",
         "dependencyOnly": false
       },
       {
@@ -1987,8 +1995,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-reflect",
-        "version": "1.8.21",
-        "nugetVersion": "1.8.21.1",
+        "version": "1.8.22",
+        "nugetVersion": "1.8.22",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -1999,8 +2007,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib",
-        "version": "1.8.21",
-        "nugetVersion": "1.8.21.1",
+        "version": "1.8.22",
+        "nugetVersion": "1.8.22",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
         "templateSet": "kotlin"
@@ -2008,8 +2016,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-common",
-        "version": "1.8.21",
-        "nugetVersion": "1.8.21.1",
+        "version": "1.8.22",
+        "nugetVersion": "1.8.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2020,8 +2028,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk7",
-        "version": "1.8.21",
-        "nugetVersion": "1.8.21.1",
+        "version": "1.8.22",
+        "nugetVersion": "1.8.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
         "templateSet": "kotlin",
@@ -2032,8 +2040,8 @@
       {
         "groupId": "org.jetbrains.kotlin",
         "artifactId": "kotlin-stdlib-jdk8",
-        "version": "1.8.21",
-        "nugetVersion": "1.8.21.1",
+        "version": "1.8.22",
+        "nugetVersion": "1.8.22",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
         "templateSet": "kotlin",
