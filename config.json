@@ -1363,7 +1363,8 @@
         "version": "1.4.1",
         "nugetVersion": "1.4.1.11",
         "nugetId": "Xamarin.AndroidX.Transition",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "extraDependencies": "androidx.fragment.fragment"
       },
       {
         "groupId": "androidx.tvprovider",
