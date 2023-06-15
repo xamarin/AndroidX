@@ -176,36 +176,6 @@
 
       }
     }
-    <!-- some additional fixes -->
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition")
-    {
-        <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Work.Runtime")
-    {
-        <!--
-        Xamarin.AndroidX.Work.Runtime Should Reference Xamarin.AndroidX.Room.Runtime
-        https://github.com/xamarin/AndroidX/issues/86
-        -->
-        <ProjectReference Include="..\androidx.room.room-runtime\androidx.room.room-runtime.csproj" PrivateAssets="none" />
-        <ProjectReference Include="..\androidx.lifecycle.lifecycle-service/androidx.lifecycle.lifecycle-service.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Fragment")
-    {
-        <ProjectReference Include="..\androidx.savedstate.savedstate\androidx.savedstate.savedstate.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.SavedState")
-    {
-        <ProjectReference Include="..\androidx.lifecycle.lifecycle-common\androidx.lifecycle.lifecycle-common.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Window")
-    {
-        <ProjectReference Include="..\androidx.core.core\androidx.core.core.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Lifecycle.Runtime")
-    {
-        <ProjectReference Include="..\androidx.arch.core.core-runtime\androidx.arch.core.core-runtime.csproj" PrivateAssets="none" />
-    }
   </ItemGroup>
 
 
