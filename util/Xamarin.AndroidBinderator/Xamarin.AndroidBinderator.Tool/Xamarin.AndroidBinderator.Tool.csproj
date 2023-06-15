@@ -9,7 +9,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <Nullable>disable</Nullable>
-    <RollForward>LatestMinor</RollForward>
+    <RollForward>Major</RollForward>
   </PropertyGroup>
 
   <PropertyGroup>
