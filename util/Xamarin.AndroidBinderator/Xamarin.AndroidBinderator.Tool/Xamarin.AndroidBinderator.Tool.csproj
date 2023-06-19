@@ -9,12 +9,12 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <Nullable>disable</Nullable>
-    <RollForward>LatestMinor</RollForward>
+    <RollForward>Major</RollForward>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageId>Xamarin.AndroidBinderator.Tool</PackageId>
-    <PackageVersion>0.5.5</PackageVersion>
+    <PackageVersion>0.5.6</PackageVersion>
     <Title>Xamarin Android Binderator</Title>
     <PackageDescription>A tool for generating Xamarin.Android Binding projects from Razor templates and Maven Repository data.</PackageDescription>
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2100525</PackageProjectUrl>
