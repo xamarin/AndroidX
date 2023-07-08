@@ -13,6 +13,7 @@
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.1
 
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 using Mono.Cecil;
 using Newtonsoft.Json;
@@ -1125,6 +1126,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
     .IsDependentOn ("generate-component-governance")
+    .IsDependentOn ("java-resolution-analysis")
     .Does
     (
         () =>
@@ -1664,6 +1666,164 @@ static List<string> FindNamespaces (string assembly)
 
     return list.ToList ();
 }
+
+Task("java-resolution-analysis")
+    .Does
+    (
+        () =>
+        {
+            string[] files = System.IO.Directory.GetFiles
+                                                    (
+                                                        "generated", 
+                                                        "java-resolution-report.log", 
+                                                        System.IO.SearchOption.AllDirectories
+                                                    );
+
+
+            Information(new string('-', 80));
+
+            string dir = "output/java-resolution-analysis";
+            EnsureDirectoryExists(dir);
+            EnsureDirectoryExists($"{dir}/net6.0-android");
+            EnsureDirectoryExists($"{dir}/monoandroid12.0");
+
+            ConcurrentDictionary
+                    <
+                        string,                                     // TFM
+                        ConcurrentDictionary
+                                <
+                                    string,                         // maven artifact
+                                    Dictionary
+                                            <
+                                                string ,             // error
+                                                string[]             // lines
+                                            >
+                                >
+                    > java_resolution_analysis;
+                    
+            java_resolution_analysis =
+                        new ConcurrentDictionary
+                                    <
+                                        string,                     // TFM
+                                        ConcurrentDictionary
+                                                <
+                                                    string,         // maven artifact
+                                                    Dictionary
+                                                            <
+                                                                string,
+                                                                string[]
+                                                            >
+                                                >
+                                    >();
+
+            java_resolution_analysis.TryAdd
+                                        (
+                                            "net6.0-android", 
+                                            new ConcurrentDictionary<string, Dictionary<string, string[]>>()
+                                        );
+            java_resolution_analysis.TryAdd
+                                        (
+                                            "monoandroid12.0", 
+                                            new ConcurrentDictionary<string, Dictionary<string, string[]>>()
+                                        );
+
+            Parallel.ForEach
+                        (
+                            files,
+                            file =>
+                            {
+                                string file_cleaned = file
+                                                        .Replace("generated\\", "")
+                                                        .Replace("obj\\", "")
+                                                        .Replace("Release\\", "")
+                                                        .Replace("Debug\\", "")
+                                                        .Replace("generated/", "")
+                                                        .Replace("obj/", "")
+                                                        .Replace("Release/", "")
+                                                        .Replace("Debug/", "")
+                                                        ;
+
+                                string[] file_parts = file_cleaned.Split
+                                                                    (
+                                                                        new string[] { "\\", "/" }, 
+                                                                        StringSplitOptions. None
+                                                                    ); 
+
+                                string tfm = file_parts[1];
+                                string maven_artifact = file_parts[0];
+
+
+                                string file_new = $"{dir}/{tfm}/{maven_artifact}.log";
+
+                                StringBuilder sb = new StringBuilder();
+                                sb.AppendLine($"  System.IO.File.Copy");
+                                sb.AppendLine($"          file    : {file}");
+                                sb.AppendLine($"          file_new: {file_new}");
+                                Information(sb.ToString());
+
+                                System.IO.File.Copy(file, file_new, true);
+
+                                string[] lines = System.IO.File.ReadAllLines(file);
+
+                                string string_dollar_sign = "was removed because its name contains a dollar sign.";
+                                // was removed because the Java base type '' could not be found.
+                                
+
+                                // List<string> errors_dollar_sign = new List<string>();
+                                List<string> errors_not_dollar_sign = new List<string>();
+    
+                                foreach(string line in lines)
+                                {
+                                    switch(line)
+                                    {
+                                        case string a when a.Contains(string_dollar_sign): 
+                                            break;
+                                        default:
+                                            errors_not_dollar_sign.Add(line);
+                                            break;
+                                    }
+                                }
+                                
+                                Dictionary<string, string[]> error_type_w_lines = new Dictionary<string, string[]>();
+                                error_type_w_lines.Add
+                                                    (
+                                                        "non dollar sign errors", 
+                                                        errors_not_dollar_sign.ToArray()
+                                                    );
+
+                                java_resolution_analysis[tfm].TryAdd
+                                                                (
+                                                                    maven_artifact,
+                                                                    error_type_w_lines
+                                                                );
+
+                                return;
+                            }                   
+                        );
+
+            foreach(var kvp_tfm in java_resolution_analysis)
+            {
+                Information($"TFM: {kvp_tfm.Key}");
+
+                foreach(var kvp_maven_artifact in kvp_tfm.Value)
+                {                    
+                    Information($"      Artifact: {kvp_maven_artifact.Key}");
+
+                    foreach(var kvp_errors in kvp_maven_artifact.Value)
+                    {                    
+                        Information($"          Error: {kvp_errors.Key}");
+
+                        foreach(var lines in kvp_errors.Value)
+                        {                    
+                            Information($"                  : {lines}");
+                        }
+                    }
+                }
+            }
+
+            return;
+        }
+    );
 
 
 Task ("Default")
