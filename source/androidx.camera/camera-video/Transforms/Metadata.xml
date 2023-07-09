@@ -544,20 +544,30 @@
   </attr>
   -->
 
-  <remove-node 
-    path="/api/package[@name='androidx.camera.video']/class[@name='FileDescriptorOutputOptions.Builder']"
-    />
-  <remove-node 
-    path="/api/package[@name='androidx.camera.video']/class[@name='FileOutputOptions.Builder']"
-    />
-  <remove-node 
-    path="/api/package[@name='androidx.camera.video']/class[@name='MediaStoreOutputOptions.Builder']"
-    />
 
-    <attr
-      path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setZslDisabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
-      name="managedReturn"
-      >
-      Java.Lang.Object
-    </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setZslDisabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='MediaStoreOutputOptions.Builder']/method[@name='setFileSizeLimit' and @return='java.lang.Object' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="managedName"
+    >
+    SetFileSizeLimitReturnJavaLangObject
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='FileOutputOptions.Builder']/method[@name='setFileSizeLimit' and @return='java.lang.Object' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="managedName"
+    >
+    SetFileSizeLimitReturnJavaLangObject
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='FileDescriptorOutputOptions.Builder']/method[@name='setFileSizeLimit' and @return='java.lang.Object' and count(parameter)=1 and parameter[1][@type='long']]"    name="managedName"
+    >
+    SetFileSizeLimitReturnJavaLangObject
+  </attr>
+
 </metadata>
