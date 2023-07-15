@@ -16,15 +16,25 @@
         ./samples/BuildAll/ClassLibrary/obj/Debug/lp/167/jl/res/values/values.xml(0,0):
         Error APT2260: resource android:attr/lStar not found. (APT2260) (ClassLibrary)
         -->
+
         <!--
-        in AllPackages.tartgets    
-        <PackageVersion Include="Xamarin.AndroidX.Core">
-            <Version>1.8.0.1</Version>
-        </PackageVersion>
-        <PackageVersion Include="Xamarin.AndroidX.AppCompat" Version="1.4.2.1" />
-        <PackageVersion Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
+
+        https://github.com/dotnet/maui/issues/13666#issuecomment-1468708559
+        
+        THIS WILL MIX 
+        
+            Xamarin.Forms and MAUI
+
+        and cause
+
+        App.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "Application".
+        AppShell.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "Shell".
+        MainPage.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "ContentPage".
+        Resources/Styles/Colors.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "ResourceDictionary".
+        Resources/Styles/Styles.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "ResourceDictionary".
+
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
         -->
-        <PackageVersion Include="Xamarin.Forms" Version="5.0.0.2478"  />
-        <PackageVersion Include="Xamarin.Essentials" Version="1.7.0" />
     </ItemGroup>
 </Project>
