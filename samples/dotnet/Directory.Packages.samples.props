@@ -24,7 +24,25 @@
         <PackageVersion Include="Xamarin.AndroidX.AppCompat" Version="1.4.2.1" />
         <PackageVersion Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
         -->
+
+        <!--
+
+        https://github.com/dotnet/maui/issues/13666#issuecomment-1468708559
+        
+        THIS WILL MIX 
+        
+            Xamarin.Forms and MAUI
+
+        and cause
+
+        App.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "Application".
+        AppShell.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "Shell".
+        MainPage.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "ContentPage".
+        Resources/Styles/Colors.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "ResourceDictionary".
+        Resources/Styles/Styles.xaml : error :  : XamlC error XFC0000 : Cannot resolve type "ResourceDictionary".
+
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
         <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
-        </ItemGroup>
+        -->
+    </ItemGroup>
 </Project>
