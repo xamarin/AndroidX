@@ -1798,8 +1798,9 @@ Task("java-resolution-analysis")
                                 
 
                                 // List<string> errors_dollar_sign = new List<string>();
-                                List<string> errors_not_dollar_sign = new List<string>();
-                                List<string> java_resolution_types = new List<string>();
+                                List<string> errors_not_dollar_sign = new ();
+                                List<string> java_resolution_types = new ();
+                                List<string> java_resolution_types_filtered = new ();
     
                                 foreach(string line in lines)
                                 {
@@ -1816,6 +1817,39 @@ Task("java-resolution-analysis")
                                                                     .Replace("' could not be found.", "")
                                                                     ;
                                                 java_resolution_types.Add(type_java);
+                                                if 
+                                                    (
+                                                        type_java.StartsWith("androidx.") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.android.material") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.assistant.appactions") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.auto.value") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.code.gson") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.crypto.tink") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.flogger") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.guava") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.j2objc") 
+                                                        ||
+                                                        type_java.StartsWith("dev.chrisbanes.snapper") 
+                                                        ||
+                                                        type_java.StartsWith("io.github.aakira") 
+                                                        ||
+                                                        type_java.StartsWith("io.reactivex.rxjava") 
+                                                        ||
+                                                        type_java.StartsWith("com.android.installreferrer.") 
+                                                        ||
+                                                        type_java.StartsWith("com.google.accompanist.") 
+                                                    )
+                                                {
+                                                    java_resolution_types_filtered.Add(type_java);
+                                                }
                                             }
                                             errors_not_dollar_sign.Add(line);
                                             break;
@@ -1852,12 +1886,15 @@ Task("java-resolution-analysis")
 
             StringBuilder sb_java_resolution_analysis = new StringBuilder();
             StringBuilder sb_java_resolution_analysis_types_only = new StringBuilder();
+            StringBuilder sb_java_resolution_analysis_types_only_filtered = new StringBuilder();
 
             foreach(var kvp_tfm in java_resolution_analysis)
             {
                 sb_java_resolution_analysis
                                     .AppendLine($"TFM: {kvp_tfm.Key}");
                 sb_java_resolution_analysis_types_only
+                                    .AppendLine($"TFM: {kvp_tfm.Key}");
+                sb_java_resolution_analysis_types_only_filtered
                                     .AppendLine($"TFM: {kvp_tfm.Key}");
 
                 Information($"TFM: {kvp_tfm.Key}");
@@ -1868,7 +1905,9 @@ Task("java-resolution-analysis")
                                     .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
                     sb_java_resolution_analysis_types_only
                                     .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
-
+                    sb_java_resolution_analysis_types_only_filtered
+                                    .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
+                    
                     Information($"      Artifact: {kvp_maven_artifact.Key}");
 
                     foreach(var kvp_errors in kvp_maven_artifact.Value)
@@ -1877,7 +1916,9 @@ Task("java-resolution-analysis")
                                         .AppendLine($"          Error: {kvp_errors.Key}");
                         sb_java_resolution_analysis_types_only
                                         .AppendLine($"          Error: {kvp_errors.Key}");
-
+                        sb_java_resolution_analysis_types_only_filtered
+                                        .AppendLine($"          Error: {kvp_errors.Key}");
+                        
                         Information($"          Error: {kvp_errors.Key}");
 
                         foreach(string line in kvp_errors.Value.lines)
@@ -1892,6 +1933,8 @@ Task("java-resolution-analysis")
                             sb_java_resolution_analysis
                                             .AppendLine($"                  type : {type}");
                             sb_java_resolution_analysis_types_only
+                                            .AppendLine($"                  type : {type}");
+                        sb_java_resolution_analysis_types_only_filtered
                                             .AppendLine($"                  type : {type}");
 
                             Information($"                  : {type}");
@@ -1919,6 +1962,16 @@ Task("java-resolution-analysis")
                                                                 "types.txt"
                                                             ), 
                                         sb_java_resolution_analysis_types_only.ToString()
+                                    );
+            System.IO.File.WriteAllText
+                                    (
+                                        System.IO.Path.Combine
+                                                            (
+                                                                "output", 
+                                                                "java-resolution-analysis",
+                                                                "types-filtered.txt"
+                                                            ), 
+                                        sb_java_resolution_analysis_types_only_filtered.ToString()
                                     );
 
             return;
