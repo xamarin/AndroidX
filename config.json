@@ -1833,8 +1833,8 @@
       {
         "groupId": "com.google.crypto.tink",
         "artifactId": "tink-android",
-        "version": "1.9.0",
-        "nugetVersion": "1.9.0.2",
+        "version": "1.10.0",
+        "nugetVersion": "1.10.0",
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
         "dependencyOnly": false,
         "templateSet": "tink"
@@ -2160,7 +2160,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-appindex",
         "version": "16.1.0",
-        "nugetVersion": "116.1.0.2",
+        "nugetVersion": "116.1.0.3",
         "nugetId": "Xamarin.GooglePlayServices.AppIndex",
         "dependencyOnly": true
       },
@@ -2168,7 +2168,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "18.2.0",
-        "nugetVersion": "118.2.0.1",
+        "nugetVersion": "118.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": true
       },
@@ -2176,7 +2176,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tasks",
         "version": "18.0.2",
-        "nugetVersion": "118.0.2.2",
+        "nugetVersion": "118.0.2.3",
         "nugetId": "Xamarin.GooglePlayServices.Tasks",
         "dependencyOnly": true
       },
@@ -2184,7 +2184,7 @@
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
         "version": "18.0.0",
-        "nugetVersion": "118.0.0.2",
+        "nugetVersion": "118.0.0.3",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
@@ -2192,7 +2192,7 @@
         "groupId": "com.google.code.findbugs",
         "artifactId": "jsr305",
         "version": "3.0.2",
-        "nugetVersion": "3.0.2.8",
+        "nugetVersion": "3.0.2.9",
         "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
         "dependencyOnly": true
       },
@@ -2200,7 +2200,7 @@
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
         "version": "2.20.0",
-        "nugetVersion": "2.20.0",
+        "nugetVersion": "2.20.0.1",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
