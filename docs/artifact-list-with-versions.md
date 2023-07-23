@@ -228,7 +228,7 @@
 | 221|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.6             |
 | 222|com.google.auto.value:auto-value-annotations                          |1.10.2              |Xamarin.Google.AutoValue.Annotations                                  |1.10.2.1            |
 | 223|com.google.code.gson:gson                                             |2.10.1              |GoogleGson                                                            |2.10.1.4            |
-| 224|com.google.crypto.tink:tink-android                                   |1.9.0               |Xamarin.Google.Crypto.Tink.Android                                    |1.9.0.2             |
+| 224|com.google.crypto.tink:tink-android                                   |1.10.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.10.0              |
 | 225|com.google.flogger:flogger                                            |0.7.4               |Xamarin.Flogger                                                       |0.7.4.5             |
 | 226|com.google.flogger:flogger-system-backend                             |0.7.4               |Xamarin.Flogger.SystemBackend                                         |0.7.4.5             |
 | 227|com.google.guava:failureaccess                                        |1.0.1               |Xamarin.Google.Guava.FailureAccess                                    |1.0.1.12            |
