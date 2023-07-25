@@ -829,12 +829,6 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
-    <attr
-        path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPssPrivateKey']"
-        name="propertyName"
-        >
-        Xamarin.Google.Crypto.Tink.Key
-    </attr>
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPssPublicKey']"
         >
