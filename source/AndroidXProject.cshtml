@@ -172,7 +172,8 @@
     <!-- ProjectReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
-        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
+        var exact_version = dep.MavenArtifact.MavenArtifactVersion.StartsWith('[').ToString();
+        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" ExactVersion="@(exact_version)" />
 
       }
     }
