@@ -79,4 +79,12 @@
         path="/api/package[@name='androidx.paging']/class[@name='PagingSource.LoadParams']/method[@name='getKey' and count(parameter)=0]"
         />
 
+
+    <attr
+        path="/api/package[@name='androidx.paging']/interface[@name='PagingSourceFactory']/method[@name='invoke' and count(parameter)=0]"        
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
 </metadata>

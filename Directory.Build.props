@@ -187,5 +187,6 @@
     <AndroidNamespaceReplacement Include='imagecapture' Replacement='ImageCaptures' />
     <AndroidNamespaceReplacement Include='sidesheet' Replacement='SideSheet' />
     <AndroidNamespaceReplacement Include='watchface' Replacement='WatchFace' />
+    <AndroidNamespaceReplacement Include='keyderivation' Replacement='KeyDerivation' />
   </ItemGroup>
 </Project>
