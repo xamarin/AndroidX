@@ -1,3 +1,4 @@
+// debugging prerequisity
 #tool nuget:?package=Cake.CoreCLR
 /*
      dotnet cake spell-check.cake
@@ -1697,8 +1698,9 @@ Task("java-resolution-analysis")
                                             <
                                                 string,             // error
                                                 (
-                                                    string[] lines, // lines
-                                                    string[] types  // types
+                                                    string[] lines,                         // lines
+                                                    Dictionary<string, int> types,          // types
+                                                    Dictionary<string, int> types_filtered  // types
                                                 )
                                             >
                                 >
@@ -1715,8 +1717,9 @@ Task("java-resolution-analysis")
                                                             <
                                                                 string,             // error
                                                                 (
-                                                                    string[] lines, // lines
-                                                                    string[] types  // types
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
                                                                 )
                                                             >
                                                 >
@@ -1732,8 +1735,9 @@ Task("java-resolution-analysis")
                                                             <
                                                                 string, 
                                                                 (
-                                                                    string[] lines, // lines
-                                                                    string[] types  // types
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
                                                                 )
                                                             >
                                                         >()
@@ -1748,8 +1752,9 @@ Task("java-resolution-analysis")
                                                             <
                                                                 string, 
                                                                 (
-                                                                    string[] lines, // lines
-                                                                    string[] types  // types
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
                                                                 )
                                                             >
                                                         >()
@@ -1798,9 +1803,9 @@ Task("java-resolution-analysis")
                                 
 
                                 // List<string> errors_dollar_sign = new List<string>();
-                                List<string> errors_not_dollar_sign = new ();
-                                List<string> java_resolution_types = new ();
-                                List<string> java_resolution_types_filtered = new ();
+                                List<string>            errors_not_dollar_sign = new ();
+                                Dictionary<string, int> java_resolution_types = new ();
+                                Dictionary<string, int> java_resolution_types_filtered = new ();
     
                                 foreach(string line in lines)
                                 {
@@ -1816,39 +1821,55 @@ Task("java-resolution-analysis")
                                                 type_java = type_java
                                                                     .Replace("' could not be found.", "")
                                                                     ;
-                                                java_resolution_types.Add(type_java);
+
+                                                if (java_resolution_types.ContainsKey(type_java))
+                                                {
+                                                    java_resolution_types[type_java]++;
+                                                }
+                                                else
+                                                {
+                                                    java_resolution_types.Add(type_java, 1);
+                                                }
+
                                                 if 
                                                     (
-                                                        type_java.StartsWith("androidx.") 
+                                                        type_java.Contains("androidx.") 
                                                         ||
-                                                        type_java.StartsWith("com.google.android.material") 
+                                                        type_java.Contains("com.google.android.material") 
                                                         ||
-                                                        type_java.StartsWith("com.google.assistant.appactions") 
+                                                        type_java.Contains("com.google.assistant.appactions") 
                                                         ||
-                                                        type_java.StartsWith("com.google.auto.value") 
+                                                        type_java.Contains("com.google.auto.value") 
                                                         ||
-                                                        type_java.StartsWith("com.google.code.gson") 
+                                                        type_java.Contains("com.google.code.gson") 
                                                         ||
-                                                        type_java.StartsWith("com.google.crypto.tink") 
+                                                        type_java.Contains("com.google.crypto.tink") 
                                                         ||
-                                                        type_java.StartsWith("com.google.flogger") 
+                                                        type_java.Contains("com.google.flogger") 
                                                         ||
-                                                        type_java.StartsWith("com.google.guava") 
+                                                        type_java.Contains("com.google.guava") 
                                                         ||
-                                                        type_java.StartsWith("com.google.j2objc") 
+                                                        type_java.Contains("com.google.j2objc") 
                                                         ||
-                                                        type_java.StartsWith("dev.chrisbanes.snapper") 
+                                                        type_java.Contains("dev.chrisbanes.snapper") 
                                                         ||
-                                                        type_java.StartsWith("io.github.aakira") 
+                                                        type_java.Contains("io.github.aakira") 
                                                         ||
-                                                        type_java.StartsWith("io.reactivex.rxjava") 
+                                                        type_java.Contains("io.reactivex.rxjava") 
                                                         ||
-                                                        type_java.StartsWith("com.android.installreferrer.") 
+                                                        type_java.Contains("com.android.installreferrer.") 
                                                         ||
-                                                        type_java.StartsWith("com.google.accompanist.") 
+                                                        type_java.Contains("com.google.accompanist.") 
                                                     )
                                                 {
-                                                    java_resolution_types_filtered.Add(type_java);
+                                                    if (java_resolution_types_filtered.ContainsKey(type_java))
+                                                    {
+                                                        java_resolution_types_filtered[type_java]++;
+                                                    }
+                                                    else
+                                                    {
+                                                        java_resolution_types_filtered.Add(type_java, 1);
+                                                    }
                                                 }
                                             }
                                             errors_not_dollar_sign.Add(line);
@@ -1861,16 +1882,30 @@ Task("java-resolution-analysis")
                                             string, 
                                             (
                                                 string[] lines,
-                                                string[] types
+                                                Dictionary<string, int> types,
+                                                Dictionary<string, int> types_filtered
                                             )
-                                        > error_type_w_lines;
-                                error_type_w_lines = new Dictionary<string, (string[], string[])>();
+                                        > 
+                                        error_type_w_lines = new();
+
+                                List<KeyValuePair<string, int>> types_sorted;
+                                List<KeyValuePair<string, int>> types_sorted_filtered;
+
+                                types_sorted                    = java_resolution_types.ToList();
+                                types_sorted_filtered           = java_resolution_types_filtered.ToList();
+
+                                types_sorted
+                                            .Sort((x,y)=>x.Value.CompareTo(y.Value));
+                                types_sorted_filtered
+                                            .Sort((x,y)=>x.Value.CompareTo(y.Value));
+
                                 error_type_w_lines.Add
                                                     (
                                                         "non dollar sign errors", 
                                                         (
-                                                            errors_not_dollar_sign.ToArray(),
-                                                            java_resolution_types.Distinct().ToArray()
+                                                            lines: errors_not_dollar_sign.ToArray(),
+                                                            java_resolution_types,
+                                                            java_resolution_types_filtered
                                                         )
                                                     );
 
@@ -1883,6 +1918,20 @@ Task("java-resolution-analysis")
                                 return;
                             }                   
                         );
+
+            java_resolution_analysis.OrderBy(kvp => kvp.Key);
+            foreach(var kvp in java_resolution_analysis)
+            {
+                kvp.Value.OrderBy(kvp2 => kvp2.Key);
+                foreach(var kvp2 in kvp.Value)
+                {
+                    kvp2.Value.OrderBy(kvp3 => kvp3.Key);
+                    foreach(var kvp3 in kvp.Value)
+                    {
+                        kvp3.Value.OrderBy(kvp4 => kvp4.Value);                        
+                    }
+                }
+            }
 
             StringBuilder sb_java_resolution_analysis = new StringBuilder();
             StringBuilder sb_java_resolution_analysis_types_only = new StringBuilder();
@@ -1928,16 +1977,23 @@ Task("java-resolution-analysis")
                             
                             Information($"                  : {line}");
                         }
-                        foreach(string type in kvp_errors.Value.types)
-                        {                    
+                        foreach(KeyValuePair<string, int> type_occurence in kvp_errors.Value.types)
+                        {
                             sb_java_resolution_analysis
-                                            .AppendLine($"                  type : {type}");
+                                            .AppendLine($"                  type : {type_occurence.Key}");
+                            sb_java_resolution_analysis
+                                            .AppendLine($"                      occurence : {type_occurence.Value}");
                             sb_java_resolution_analysis_types_only
-                                            .AppendLine($"                  type : {type}");
-                        sb_java_resolution_analysis_types_only_filtered
-                                            .AppendLine($"                  type : {type}");
+                                            .AppendLine($"                  type : {type_occurence.Key}");
+                            sb_java_resolution_analysis_types_only
+                                            .AppendLine($"                      occurence : {type_occurence.Value}");
+                            sb_java_resolution_analysis_types_only_filtered
+                                            .AppendLine($"                  type : {type_occurence.Key}");
 
-                            Information($"                  : {type}");
+                            sb_java_resolution_analysis_types_only_filtered
+                                            .AppendLine($"                      occurence : {type_occurence.Value}");
+
+                            Information($"                  : {type_occurence.Key} {type_occurence.Value}");
                         }
                     }
                 }
