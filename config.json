@@ -1660,6 +1660,7 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.ProtoLayout.Expression",
+        "excludedRuntimeDependencies": "org.jetbrains.kotlin.kotlin-stdlib",
         "dependencyOnly": false
       },
       {
@@ -2080,6 +2081,16 @@
         "version": "31.1-android",
         "nugetVersion": "31.1.0.8",
         "nugetId": "Xamarin.Google.Guava",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
+        "templateSet": "guava"
+      },
+      {
+        "groupId": "com.google.guava",
+        "artifactId": "guava",
+        "version": "31.1-jre",
+        "nugetVersion": "31.1.0",
+        "nugetId": "Xamarin.Google.Guava.JRE",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
         "templateSet": "guava"
