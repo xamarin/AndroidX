@@ -1,6 +1,7 @@
 // Tools needed by cake addins
 #tool nuget:?package=Cake.CoreCLR
 #tool nuget:?package=vswhere&version=3.1.7
+#tool nuget:?package=Microsoft.Android.Sdk.Windows&version=34.0.0-rc.2.479
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=6.1.3

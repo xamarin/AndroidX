@@ -126,7 +126,10 @@
     <TransformFile Include="..\..\source\Metadata.common.xml" >
       <Link>Transforms/Metadata.common.xml</Link>
     </TransformFile>
-    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml">
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml" Exclude="$(DefaultTransformExcludes)">
+        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+    </TransformFile>
+    <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.$(TargetFramework).xml">
         <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
     <AndroidJavaSource

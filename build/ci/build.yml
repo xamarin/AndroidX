@@ -16,6 +16,7 @@ parameters:
   classicXAPkg:  https://aka.ms/xamarin-android-commercial-d17-4-macos
   classicXAVsix: https://aka.ms/xamarin-android-commercial-d17-4-windows
   skipUnitTests: false                                      # do not run unit test step
+  JICommit: 5adb4d487279d52dc10055f31bd1da9e1efab3ef        # The commit of Java.Interop to use
   
   tools:                                                    # a list of additional .NET global tools needed
   - 'xamarin.androidbinderator.tool': '0.5.7'
@@ -33,7 +34,7 @@ parameters:
   publishOutputSuffix: ''                                   # the artifact suffix to use when publishing the output folder
   signListPath: 'SignList.xml'                              # the path to the SignList.xml to copy into the nuget artifact for signing
   artifactsPath: 'output'                                   # the path to the NuGet packages that need to be signed, verified and published
-
+  
 jobs:
   - job: ${{ parameters.name }}
     strategy:
@@ -66,6 +67,10 @@ jobs:
           dotnetTools: ${{ parameters.tools }}
           classicInstallerUrl: $(classicInstallerUrl)
 
+      #- template: update-generator.yml
+      #  parameters:
+      #    JICommit: ${{ parameters.JICommit }}
+          
       - template: build-and-test.yml
         parameters:
           artifactsPath: ${{ parameters.artifactsPath }}

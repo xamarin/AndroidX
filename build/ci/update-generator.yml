@@ -1,0 +1,28 @@
+parameters:
+  condition: succeeded()
+  JICommit:                              # The commit of Java.Interop to use
+      
+steps:
+- pwsh: git clone --recurse-submodules https://github.com/xamarin/java.interop.git
+    
+- pwsh: git switch androidx-generator
+  workingDirectory: java.interop
+  
+- task: DotNetCoreCLI@2
+  displayName: Prepare Solution
+  inputs:
+    projects: java.interop/Java.Interop.sln
+    arguments: '-c Release -target:Prepare'
+
+- task: DotNetCoreCLI@2
+  displayName: Shut down existing build server
+  inputs:
+    command: custom
+    custom: build-server
+    arguments: shutdown
+
+- task: DotNetCoreCLI@2
+  displayName: Build Solution
+  inputs:
+    projects: java.interop/Java.Interop.sln
+    arguments: '-c Release'
