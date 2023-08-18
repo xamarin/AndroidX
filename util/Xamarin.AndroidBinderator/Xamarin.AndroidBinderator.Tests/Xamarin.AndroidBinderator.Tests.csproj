@@ -5,6 +5,7 @@
     <IsPackable>false</IsPackable>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <Nullable>disable</Nullable>
+    <RollForward>Major</RollForward>
   </PropertyGroup>
 
   <ItemGroup>
