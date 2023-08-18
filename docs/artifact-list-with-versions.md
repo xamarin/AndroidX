@@ -15,7 +15,7 @@
 |   8|androidx.annotation:annotation-experimental                           |1.3.1               |Xamarin.AndroidX.Annotation.Experimental                              |1.3.1.1             |
 |   9|androidx.annotation:annotation-jvm                                    |1.6.0               |Xamarin.AndroidX.Annotation.Jvm                                       |1.6.0.2             |
 |  10|androidx.appcompat:appcompat                                          |1.6.1               |Xamarin.AndroidX.AppCompat                                            |1.6.1.3             |
-|  11|androidx.appcompat:appcompat-resources                                |1.6.1               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.6.1.3             |
+|  11|androidx.appcompat:appcompat-resources                                |1.6.1               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.6.1.4             |
 |  12|androidx.arch.core:core-common                                        |2.2.0               |Xamarin.AndroidX.Arch.Core.Common                                     |2.2.0.3             |
 |  13|androidx.arch.core:core-runtime                                       |2.2.0               |Xamarin.AndroidX.Arch.Core.Runtime                                    |2.2.0.3             |
 |  14|androidx.asynclayoutinflater:asynclayoutinflater                      |1.0.0               |Xamarin.AndroidX.AsyncLayoutInflater                                  |1.0.0.19            |
@@ -244,7 +244,7 @@
 | 237|io.reactivex.rxjava3:rxjava                                           |3.1.6               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.6.3             |
 | 238|io.reactivex.rxjava3:rxkotlin                                         |3.0.1               |Xamarin.Android.ReactiveX.RxJava3.RxKotlin                            |3.0.1.5             |
 | 239|org.checkerframework:checker-compat-qual                              |2.5.5               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.5.5             |
-| 240|org.checkerframework:checker-qual                                     |3.36.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.36.0.1            |
+| 240|org.checkerframework:checker-qual                                     |3.37.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.37.0              |
 | 241|org.jetbrains:annotations                                             |24.0.1              |Xamarin.Jetbrains.Annotations                                         |24.0.1.3            |
 | 242|org.jetbrains.kotlin:kotlin-reflect                                   |1.9.0               |Xamarin.Kotlin.Reflect                                                |1.9.0.1             |
 | 243|org.jetbrains.kotlin:kotlin-stdlib                                    |1.9.0               |Xamarin.Kotlin.StdLib                                                 |1.9.0.1             |
