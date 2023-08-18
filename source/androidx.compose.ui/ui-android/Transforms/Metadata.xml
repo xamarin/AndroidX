@@ -1,4 +1,25 @@
 ﻿<metadata>
 
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.layout']/class[@name='SubcomposeSlotReusePolicy.SlotIdsSet']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.platform']/class[@name='AndroidUiFrameClock']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.node']/class[@name='ModifierNodeElement']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.layout']/class[@name='ScaleFactorKt']"        
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.input.pointer']/class[@name='RequestDisallowInterceptTouchEvent']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui.modifier']/interface[@name='ModifierLocalModifierNode']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.compose.ui']/class[@name='Modifier.Companion']"
+        />
 
 </metadata>
