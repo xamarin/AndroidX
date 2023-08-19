@@ -10,15 +10,15 @@ namespace AndroidX.Compose.Foundation.Layout
 	// [global::Android.Runtime.Register ("androidx/compose/foundation/layout/PaddingValues$Absolute", DoNotGenerateAcw=true)]
 	public sealed partial class PaddingValuesAbsolute //: global::Java.Lang.Object, global::AndroidX.Compose.Foundation.Layout.IPaddingValues 
     {
-		public unsafe float CalculateBottomPadding()
-		{
-            return this.CalculateBottomPadding_D9Ej5fM();
-		}
+		// public unsafe float CalculateBottomPadding()
+		// {
+        //     return this.CalculateBottomPadding_D9Ej5fM();
+		// }
 
-		public unsafe float CalculateTopPadding()
-		{
-            return this.CalculateTopPadding_D9Ej5fM();
-		}
+		// public unsafe float CalculateTopPadding()
+		// {
+        //     return this.CalculateTopPadding_D9Ej5fM();
+		// }
     }
 }
 
