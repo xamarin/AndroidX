@@ -274,7 +274,7 @@
         "artifactId": "animation-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.AnimationAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Animation.Android",
         "dependencyOnly": false
       },
       {
@@ -290,7 +290,7 @@
         "artifactId": "animation-core-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Animation.CoreAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Animation.Core.Android",
         "dependencyOnly": false
       },
       {
@@ -306,7 +306,7 @@
         "artifactId": "animation-graphics-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Animation.GraphicsAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Animation.Graphics.Android",
         "dependencyOnly": false
       },
       {
@@ -322,7 +322,7 @@
         "artifactId": "foundation-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.FoundationAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Foundation.Android",
         "dependencyOnly": false
       },
       {
@@ -338,7 +338,7 @@
         "artifactId": "foundation-layout-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Foundation.LayoutAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Foundation.Layout.Android",
         "dependencyOnly": false
       },
       {
@@ -354,7 +354,7 @@
         "artifactId": "material-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.MaterialAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Material.Android",
         "dependencyOnly": false
       },
       {
@@ -370,7 +370,7 @@
         "artifactId": "material-icons-core-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.CoreAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.Core.Android",
         "dependencyOnly": false
       },
       {
@@ -386,7 +386,7 @@
         "artifactId": "material-icons-extended-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.ExtendedAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Material.Icons.Extended.Android",
         "dependencyOnly": false
       },
       {
@@ -402,7 +402,7 @@
         "artifactId": "material-ripple-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Material.RippleAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Material.Ripple.Android",
         "dependencyOnly": false
       },
       {
@@ -434,7 +434,7 @@
         "artifactId": "runtime-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.RuntimeAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Runtime.Android",
         "dependencyOnly": false
       },
       {
@@ -474,7 +474,7 @@
         "artifactId": "runtime-saveable-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.Runtime.SaveableAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.Runtime.Saveable.Android",
         "dependencyOnly": false
       },
       {
@@ -506,7 +506,7 @@
         "artifactId": "ui-geometry-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.GeometryAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Geometry.Android",
         "dependencyOnly": false
       },
       {
@@ -522,7 +522,7 @@
         "artifactId": "ui-graphics-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.GraphicsAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Graphics.Android",
         "dependencyOnly": false
       },
       {
@@ -538,7 +538,7 @@
         "artifactId": "ui-text-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.TextAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Text.Android",
         "dependencyOnly": false
       },
       {
@@ -554,7 +554,7 @@
         "artifactId": "ui-tooling-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.ToolingAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Android",
         "dependencyOnly": false
       },
       {
@@ -570,7 +570,7 @@
         "artifactId": "ui-tooling-data-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.DataAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Data.Android",
         "dependencyOnly": false
       },
       {
@@ -586,7 +586,7 @@
         "artifactId": "ui-tooling-preview-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.PreviewAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Tooling.Preview.Android",
         "dependencyOnly": false
       },
       {
@@ -602,7 +602,7 @@
         "artifactId": "ui-unit-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.UnitAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Unit.Android",
         "dependencyOnly": false
       },
       {
@@ -618,7 +618,7 @@
         "artifactId": "ui-util-android",
         "version": "1.5.0",
         "nugetVersion": "1.5.0",
-        "nugetId": "Xamarin.AndroidX.Compose.UI.UtilAndroid",
+        "nugetId": "Xamarin.AndroidX.Compose.UI.Util.Android",
         "dependencyOnly": false
       },
       {
@@ -1651,7 +1651,7 @@
         "artifactId": "protolayout",
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.ProtoLayout",
+        "nugetId": "Xamarin.AndroidX.Wear.ProtoLayout",
         "dependencyOnly": false
       },
       {
@@ -1659,7 +1659,7 @@
         "artifactId": "protolayout-expression",
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.ProtoLayout.Expression",
+        "nugetId": "Xamarin.AndroidX.Wear.ProtoLayout.Expression",
         "excludedRuntimeDependencies": "org.jetbrains.kotlin.kotlin-stdlib",
         "dependencyOnly": false
       },
@@ -1668,7 +1668,7 @@
         "artifactId": "protolayout-expression-pipeline",
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.ProtoLayout.Expression.Pipeline",
+        "nugetId": "Xamarin.AndroidX.Wear.ProtoLayout.Expression.Pipeline",
         "dependencyOnly": false
       },
       {
@@ -1676,7 +1676,7 @@
         "artifactId": "protolayout-proto",
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.ProtoLayout.Proto",
+        "nugetId": "Xamarin.AndroidX.Wear.ProtoLayout.Proto",
         "dependencyOnly": false
       },
       {
@@ -1706,10 +1706,10 @@
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles-renderer",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.4",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Renderer",
-        "excludedRuntimeDependencies": "androidx.wear.protolayout.protolayout-renderer",
+        "frozen": true,
         "dependencyOnly": false
       },
       {
