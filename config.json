@@ -1680,14 +1680,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "androidx.wear.protolayout",
-        "artifactId": "protolayout-renderer",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.ProtoLayout.Renderer",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles",
         "version": "1.2.0",
@@ -1717,6 +1709,7 @@
         "version": "1.2.0",
         "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Renderer",
+        "excludedRuntimeDependencies": "androidx.wear.protolayout.protolayout-renderer",
         "dependencyOnly": false
       },
       {
@@ -2081,16 +2074,6 @@
         "version": "31.1-android",
         "nugetVersion": "31.1.0.8",
         "nugetId": "Xamarin.Google.Guava",
-        "dependencyOnly": false,
-        "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
-        "templateSet": "guava"
-      },
-      {
-        "groupId": "com.google.guava",
-        "artifactId": "guava",
-        "version": "31.1-jre",
-        "nugetVersion": "31.1.0",
-        "nugetId": "Xamarin.Google.Guava.JRE",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
         "templateSet": "guava"
