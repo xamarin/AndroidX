@@ -123,7 +123,7 @@ AndroidX.Compose.Material.Icons.Rounded
 AndroidX.Compose.Material.Icons.Sharp
 AndroidX.Compose.Material.Icons.TwoTone
 AndroidX.Compose.Material.Internal
-AndroidX.Compose.Material.Pullrefresh
+AndroidX.Compose.Material.PullRefresh
 AndroidX.Compose.Material.Ripple
 AndroidX.Compose.Runtime
 AndroidX.Compose.Runtime.Collection
@@ -145,7 +145,7 @@ AndroidX.Compose.UI.Geometry
 AndroidX.Compose.UI.Graphics
 AndroidX.Compose.UI.Graphics.Vector
 AndroidX.Compose.UI.Graphics.Vector.Compat
-AndroidX.Compose.UI.Hapticfeedback
+AndroidX.Compose.UI.HapticFeedback
 AndroidX.Compose.UI.Input
 AndroidX.Compose.UI.Input.Key
 AndroidX.Compose.UI.Input.NestedScroll
@@ -158,7 +158,7 @@ AndroidX.Compose.UI.Modifier
 AndroidX.Compose.UI.Node
 AndroidX.Compose.UI.Platform
 AndroidX.Compose.UI.Platform.Accessibility
-AndroidX.Compose.UI.Platform.Coreshims
+AndroidX.Compose.UI.Platform.CoreShims
 AndroidX.Compose.UI.Res
 AndroidX.Compose.UI.Semantics
 AndroidX.Compose.UI.State
@@ -179,9 +179,9 @@ AndroidX.Compose.UI.Tooling.Animation
 AndroidX.Compose.UI.Tooling.Animation.Clock
 AndroidX.Compose.UI.Tooling.Data
 AndroidX.Compose.UI.Tooling.Preview
-AndroidX.Compose.UI.Tooling.Preview.Datasource
+AndroidX.Compose.UI.Tooling.Preview.DataSource
 AndroidX.Compose.UI.Util
-AndroidX.Compose.UI.Viewinterop
+AndroidX.Compose.UI.ViewInterop
 AndroidX.Compose.UI.Window
 AndroidX.Concurrent.Futures
 AndroidX.ConstraintLayout.Core
@@ -345,7 +345,7 @@ AndroidX.Wear.Compose.Foundation
 AndroidX.Wear.Compose.Foundation.Lazy
 AndroidX.Wear.Compose.Material
 AndroidX.Wear.Compose.Material.Dialog
-AndroidX.Wear.Compose.Materialcore
+AndroidX.Wear.Compose.MaterialCore
 AndroidX.Wear.Compose.Navigation
 AndroidX.Wear.Input
 AndroidX.Wear.Internal.Widget
@@ -354,9 +354,9 @@ AndroidX.Wear.Ongoing
 AndroidX.Wear.Phone.Interactions
 AndroidX.Wear.Phone.Interactions.Authentication
 AndroidX.Wear.Phone.Interactions.Notifications
-AndroidX.Wear.Protolayout
-AndroidX.Wear.Protolayout.Expression
-AndroidX.Wear.Protolayout.Expression.Pipeline
+AndroidX.Wear.ProtoLayout
+AndroidX.Wear.ProtoLayout.Expression
+AndroidX.Wear.ProtoLayout.Expression.Pipeline
 AndroidX.Wear.Provider
 AndroidX.Wear.Remote.Interactions
 AndroidX.Wear.Tiles
@@ -372,7 +372,7 @@ AndroidX.Wear.WatchFace
 AndroidX.Wear.WatchFace.Client
 AndroidX.Wear.WatchFace.Complications
 AndroidX.Wear.WatchFace.Complications.Data
-AndroidX.Wear.WatchFace.Complications.Datasource
+AndroidX.Wear.WatchFace.Complications.DataSource
 AndroidX.Wear.WatchFace.Complications.Rendering
 AndroidX.Wear.WatchFace.Complications.Rendering.Utils
 AndroidX.Wear.WatchFace.Control
