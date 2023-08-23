@@ -1,13 +1,13 @@
 ﻿<metadata>
+    <remove-node path="/api/package" />
 
+    <!--
     <attr
         path="/api/package[@name='androidx.compose.ui.unit']/interface[@name='Density']/method[@name='toSp-kPz2Gy4' and count(parameter)=1 and parameter[1][@type='float']]"
         name="managedName"
         >
         ToSp_kPz2Gy4
     </attr>
-
-    <remove-node path="/api/package" />
-
+    -->
 
 </metadata>

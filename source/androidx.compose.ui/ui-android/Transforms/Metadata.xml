@@ -1,5 +1,7 @@
 ﻿<metadata>
+    <remove-node path="/api/package" />
 
+    <!--
     <remove-node
         path="/api/package[@name='androidx.compose.ui.layout']/class[@name='SubcomposeSlotReusePolicy.SlotIdsSet']/implements"
         />
@@ -21,5 +23,6 @@
     <remove-node
         path="/api/package[@name='androidx.compose.ui']/class[@name='Modifier.Companion']"
         />
-
+    -->
+    
 </metadata>

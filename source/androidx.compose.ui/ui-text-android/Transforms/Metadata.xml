@@ -1,4 +1,7 @@
 ﻿<metadata>
+    <remove-node path="/api/package" />
+
+    <!--
     <remove-node
         path="/api/package[@name='androidx.compose.ui.text.intl']/class[@name='LocaleList']/implements"
         />
@@ -11,5 +14,6 @@
     <remove-node
         path="/api/package[@name='androidx.compose.ui.text']/class[@name='AnnotatedString']"
         />
-        
+    -->
+            
 </metadata>
