@@ -575,7 +575,6 @@ Task ("spell-check")
                 "ClientGuava",
                 "Proto",
                 "Renderer",
-                "Datastore",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
