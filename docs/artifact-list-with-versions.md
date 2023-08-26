@@ -62,7 +62,7 @@
 |  55|androidx.compose.runtime:runtime-saveable                             |1.5.0               |Xamarin.AndroidX.Compose.Runtime.Saveable                             |1.5.0               |
 |  56|androidx.compose.runtime:runtime-saveable-android                     |1.5.0               |Xamarin.AndroidX.Compose.Runtime.Saveable.Android                     |1.5.0               |
 |  57|androidx.compose.ui:ui                                                |1.5.0               |Xamarin.AndroidX.Compose.UI                                           |1.5.0               |
-|  58|androidx.compose.ui:ui-android                                        |1.5.0               |Xamarin.AndroidX.Compose.UIAndroid                                    |1.5.0               |
+|  58|androidx.compose.ui:ui-android                                        |1.5.0               |Xamarin.AndroidX.Compose.UI.Android                                   |1.5.0               |
 |  59|androidx.compose.ui:ui-geometry                                       |1.5.0               |Xamarin.AndroidX.Compose.UI.Geometry                                  |1.5.0               |
 |  60|androidx.compose.ui:ui-geometry-android                               |1.5.0               |Xamarin.AndroidX.Compose.UI.Geometry.Android                          |1.5.0               |
 |  61|androidx.compose.ui:ui-graphics                                       |1.5.0               |Xamarin.AndroidX.Compose.UI.Graphics                                  |1.5.0               |
