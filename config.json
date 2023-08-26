@@ -630,54 +630,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "androidx.datastore",
-        "artifactId": "datastore",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Datastore",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.datastore",
-        "artifactId": "datastore-core",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Datastore.Core",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.datastore",
-        "artifactId": "datastore-preferences",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Datastore.Preferences",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.datastore",
-        "artifactId": "datastore-preferences-core",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Datastore.Preferences.Core",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.datastore",
-        "artifactId": "datastore-rxjava2",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Datastore.RxJava2",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.datastore",
-        "artifactId": "datastore-rxjava3",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Datastore.RxJava3",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "androidx.documentfile",
         "artifactId": "documentfile",
         "version": "1.0.1",
