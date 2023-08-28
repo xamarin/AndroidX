@@ -318,14 +318,24 @@ namespace AndroidBinderator
 					MavenArtifactConfig = mavenArtifact
 				});
 
-				// Gather maven dependencies to try and map out nuget dependencies
-				foreach (var mavenDep in mavenProject.Dependencies.Concat(ParseExtraDependencies(mavenArtifact.ExtraDependencies)))
-				{
+				List<Dependency> dependencies = new List<Dependency>();
+
+				// Find all the POM specified dependencies that we need to consider
+				foreach (var mavenDep in mavenProject.Dependencies) {
 					FixDependency(config, mavenArtifact, mavenDep, mavenProject);
 
 					if (!ShouldIncludeDependency(config, mavenArtifact, mavenDep, exceptions))
 						continue;
 
+					dependencies.Add(mavenDep);
+				}
+
+				// Add any "extraDependencies"
+				dependencies.AddRange(ParseExtraDependencies(mavenArtifact.ExtraDependencies));
+
+				// Try and map out nuget dependencies
+				foreach (var mavenDep in dependencies)
+				{
 					mavenDep.GroupId = mavenDep.GroupId.Replace ("${project.groupId}", mavenProject.GroupId);
 					mavenDep.Version = mavenDep.Version?.Replace ("${project.version}", mavenProject.Version);
 
