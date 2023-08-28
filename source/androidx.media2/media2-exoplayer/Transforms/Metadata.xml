@@ -283,12 +283,14 @@
         >
         AndroidX.Media2.ExoPlayer.External.Upstream.IDataSource
     </attr>
+    <!--
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='HttpDataSource.BaseFactory']/method[@name='createDataSource' and count(parameter)=0]"
         name="managedReturn"
         >
         AndroidX.Media2.ExoPlayer.External.Upstream.IDataSource
     </attr>
+    -->
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='PriorityDataSourceFactory']/method[@name='createDataSource' and count(parameter)=0]"
         name="managedReturn"
@@ -359,5 +361,78 @@
         Java.Lang.Object
     </attr>
 
+
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='LoopingMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Void'] and parameter[2][@type='androidx.media2.exoplayer.external.source.MediaSource'] and parameter[3][@type='androidx.media2.exoplayer.external.Timeline']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Void'] and parameter[2][@type='androidx.media2.exoplayer.external.source.MediaSource'] and parameter[3][@type='androidx.media2.exoplayer.external.Timeline']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MergingMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='androidx.media2.exoplayer.external.source.MediaSource'] and parameter[3][@type='androidx.media2.exoplayer.external.Timeline']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+    <!--
+        174 errors
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class/method"
+        name="propertyName"></attr>
+
+    -->
+
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onAudioAttributesChanged' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='androidx.media2.exoplayer.external.audio.AudioAttributes']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onAudioSessionId' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onRenderedFirstFrame' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='android.view.Surface']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onSurfaceSizeChanged' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int']]"        
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onVideoSizeChanged' and count(parameter)=5 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='float']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onVolumeChanged' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='float']]"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.extractor']/interface[@name='BinarySearchSeeker.SeekTimestampConverter']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaSource']/method[@name='createPeriod' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.source.MediaSource.MediaPeriodId'] and parameter[2][@type='androidx.media2.exoplayer.external.upstream.Allocator'] and parameter[3][@type='long']]"
+        name="managedReturn"
+        >
+        AndroidX.Media2.ExoPlayer.External.Source.IMediaPeriod
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaSource']/method[@name='createPeriod' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.source.MediaSource.MediaPeriodId'] and parameter[2][@type='androidx.media2.exoplayer.external.upstream.Allocator'] and parameter[3][@type='long']]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.Media2.ExoPlayer.External.Source.MediaSourceMediaPeriodId
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/interface[@name='MediaSource']/method[@name='createPeriod' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.source.MediaSource.MediaPeriodId'] and parameter[2][@type='androidx.media2.exoplayer.external.upstream.Allocator'] and parameter[3][@type='long']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ExtractorMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]"
+        />
 
 </metadata>
