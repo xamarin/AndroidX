@@ -1,3 +1,4 @@
+// debugging prerequisity
 #tool nuget:?package=Cake.CoreCLR
 /*
      dotnet cake spell-check.cake
@@ -13,6 +14,7 @@
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.1
 
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 using Mono.Cecil;
 using Newtonsoft.Json;
@@ -1125,6 +1127,7 @@ Task ("read-analysis-files")
     .IsDependentOn ("generate-markdown-publish-log")
     .IsDependentOn ("tools-executive-order")
     .IsDependentOn ("generate-component-governance")
+    .IsDependentOn ("java-resolution-analysis")
     .Does
     (
         () =>
@@ -1664,6 +1667,372 @@ static List<string> FindNamespaces (string assembly)
 
     return list.ToList ();
 }
+
+Task("java-resolution-analysis")
+    .Does
+    (
+        () =>
+        {
+            string[] files = System.IO.Directory.GetFiles
+                                                    (
+                                                        "generated", 
+                                                        "java-resolution-report.log", 
+                                                        System.IO.SearchOption.AllDirectories
+                                                    );
+
+
+            Information(new string('-', 80));
+
+            string dir = "output/java-resolution-analysis";
+            EnsureDirectoryExists(dir);
+            EnsureDirectoryExists($"{dir}/net6.0-android");
+            EnsureDirectoryExists($"{dir}/monoandroid12.0");
+
+            ConcurrentDictionary
+                    <
+                        string,                                     // TFM
+                        ConcurrentDictionary
+                                <
+                                    string,                         // maven artifact
+                                    Dictionary
+                                            <
+                                                string,             // error
+                                                (
+                                                    string[] lines,                         // lines
+                                                    Dictionary<string, int> types,          // types
+                                                    Dictionary<string, int> types_filtered  // types
+                                                )
+                                            >
+                                >
+                    > java_resolution_analysis;
+                    
+            java_resolution_analysis =
+                        new ConcurrentDictionary
+                                    <
+                                        string,                                     // TFM
+                                        ConcurrentDictionary
+                                                <
+                                                    string,                         // maven artifact
+                                                    Dictionary
+                                                            <
+                                                                string,             // error
+                                                                (
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
+                                                                )
+                                                            >
+                                                >
+                                    >();
+
+            java_resolution_analysis.TryAdd
+                                        (
+                                            "net6.0-android", 
+                                            new ConcurrentDictionary
+                                                        <
+                                                            string, 
+                                                            Dictionary
+                                                            <
+                                                                string, 
+                                                                (
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
+                                                                )
+                                                            >
+                                                        >()
+                                        );
+            java_resolution_analysis.TryAdd
+                                        (
+                                            "monoandroid12.0",
+                                            new ConcurrentDictionary
+                                                        <
+                                                            string, 
+                                                            Dictionary
+                                                            <
+                                                                string, 
+                                                                (
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
+                                                                )
+                                                            >
+                                                        >()
+                                        );
+
+            Parallel.ForEach
+                        (
+                            files,
+                            file =>
+                            {
+                                string file_cleaned = file
+                                                        .Replace("generated\\", "")
+                                                        .Replace("obj\\", "")
+                                                        .Replace("Release\\", "")
+                                                        .Replace("Debug\\", "")
+                                                        .Replace("generated/", "")
+                                                        .Replace("obj/", "")
+                                                        .Replace("Release/", "")
+                                                        .Replace("Debug/", "")
+                                                        ;
+
+                                string[] file_parts = file_cleaned.Split
+                                                                    (
+                                                                        new string[] { "\\", "/" }, 
+                                                                        StringSplitOptions. None
+                                                                    ); 
+
+                                string tfm = file_parts[1];
+                                string maven_artifact = file_parts[0];
+
+
+                                string file_new = $"{dir}/{tfm}/{maven_artifact}.log";
+
+                                StringBuilder sb = new StringBuilder();
+                                sb.AppendLine($"  System.IO.File.Copy");
+                                sb.AppendLine($"          file    : {file}");
+                                sb.AppendLine($"          file_new: {file_new}");
+                                Information(sb.ToString());
+
+                                System.IO.File.Copy(file, file_new, true);
+
+                                string[] lines = System.IO.File.ReadAllLines(file);
+
+                                string string_dollar_sign = "was removed because its name contains a dollar sign.";
+                                // was removed because the Java base type '' could not be found.
+                                
+
+                                // List<string> errors_dollar_sign = new List<string>();
+                                List<string>            errors_not_dollar_sign = new ();
+                                Dictionary<string, int> java_resolution_types = new ();
+                                Dictionary<string, int> java_resolution_types_filtered = new ();
+    
+                                foreach(string line in lines)
+                                {
+                                    switch(line)
+                                    {
+                                        case string a when a.Contains(string_dollar_sign): 
+                                            break;
+                                        default:
+                                            int idx = line.IndexOf("type '");
+                                            if(idx != -1)
+                                            {
+                                                string type_java = line.Substring(idx + 6);
+                                                type_java = type_java
+                                                                    .Replace("' could not be found.", "")
+                                                                    ;
+
+                                                if (java_resolution_types.ContainsKey(type_java))
+                                                {
+                                                    java_resolution_types[type_java]++;
+                                                }
+                                                else
+                                                {
+                                                    java_resolution_types.Add(type_java, 1);
+                                                }
+
+                                                if 
+                                                    (
+                                                        type_java.Contains("androidx.") 
+                                                        ||
+                                                        type_java.Contains("com.google.android.material") 
+                                                        ||
+                                                        type_java.Contains("com.google.assistant.appactions") 
+                                                        ||
+                                                        type_java.Contains("com.google.auto.value") 
+                                                        ||
+                                                        type_java.Contains("com.google.code.gson") 
+                                                        ||
+                                                        type_java.Contains("com.google.crypto.tink") 
+                                                        ||
+                                                        type_java.Contains("com.google.flogger") 
+                                                        ||
+                                                        type_java.Contains("com.google.guava") 
+                                                        ||
+                                                        type_java.Contains("com.google.j2objc") 
+                                                        ||
+                                                        type_java.Contains("dev.chrisbanes.snapper") 
+                                                        ||
+                                                        type_java.Contains("io.github.aakira") 
+                                                        ||
+                                                        type_java.Contains("io.reactivex.rxjava") 
+                                                        ||
+                                                        type_java.Contains("com.android.installreferrer.") 
+                                                        ||
+                                                        type_java.Contains("com.google.accompanist.") 
+                                                    )
+                                                {
+                                                    if (java_resolution_types_filtered.ContainsKey(type_java))
+                                                    {
+                                                        java_resolution_types_filtered[type_java]++;
+                                                    }
+                                                    else
+                                                    {
+                                                        java_resolution_types_filtered.Add(type_java, 1);
+                                                    }
+                                                }
+                                            }
+                                            errors_not_dollar_sign.Add(line);
+                                            break;
+                                    }
+                                }
+                                
+                                Dictionary
+                                        <
+                                            string, 
+                                            (
+                                                string[] lines,
+                                                Dictionary<string, int> types,
+                                                Dictionary<string, int> types_filtered
+                                            )
+                                        > 
+                                        error_type_w_lines = new();
+
+                                List<KeyValuePair<string, int>> types_sorted;
+                                List<KeyValuePair<string, int>> types_sorted_filtered;
+
+                                types_sorted                    = java_resolution_types.ToList();
+                                types_sorted_filtered           = java_resolution_types_filtered.ToList();
+
+                                types_sorted
+                                            .Sort((x,y)=>x.Value.CompareTo(y.Value));
+                                types_sorted_filtered
+                                            .Sort((x,y)=>x.Value.CompareTo(y.Value));
+
+                                error_type_w_lines.Add
+                                                    (
+                                                        "non dollar sign errors", 
+                                                        (
+                                                            lines: errors_not_dollar_sign.ToArray(),
+                                                            java_resolution_types,
+                                                            java_resolution_types_filtered
+                                                        )
+                                                    );
+
+                                java_resolution_analysis[tfm].TryAdd
+                                                                (
+                                                                    maven_artifact,
+                                                                    error_type_w_lines                                                                        
+                                                                );
+
+                                return;
+                            }                   
+                        );
+
+            java_resolution_analysis.OrderBy(kvp => kvp.Key);
+            foreach(var kvp in java_resolution_analysis)
+            {
+                kvp.Value.OrderBy(kvp2 => kvp2.Key);
+                foreach(var kvp2 in kvp.Value)
+                {
+                    kvp2.Value.OrderBy(kvp3 => kvp3.Key);
+                    foreach(var kvp3 in kvp.Value)
+                    {
+                        kvp3.Value.OrderBy(kvp4 => kvp4.Value);                        
+                    }
+                }
+            }
+
+            StringBuilder sb_java_resolution_analysis = new StringBuilder();
+            StringBuilder sb_java_resolution_analysis_types_only = new StringBuilder();
+            StringBuilder sb_java_resolution_analysis_types_only_filtered = new StringBuilder();
+
+            foreach(var kvp_tfm in java_resolution_analysis)
+            {
+                sb_java_resolution_analysis
+                                    .AppendLine($"TFM: {kvp_tfm.Key}");
+                sb_java_resolution_analysis_types_only
+                                    .AppendLine($"TFM: {kvp_tfm.Key}");
+                sb_java_resolution_analysis_types_only_filtered
+                                    .AppendLine($"TFM: {kvp_tfm.Key}");
+
+                Information($"TFM: {kvp_tfm.Key}");
+
+                foreach(var kvp_maven_artifact in kvp_tfm.Value)
+                {                    
+                    sb_java_resolution_analysis
+                                    .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
+                    sb_java_resolution_analysis_types_only
+                                    .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
+                    sb_java_resolution_analysis_types_only_filtered
+                                    .AppendLine($"      Artifact: {kvp_maven_artifact.Key}");
+                    
+                    Information($"      Artifact: {kvp_maven_artifact.Key}");
+
+                    foreach(var kvp_errors in kvp_maven_artifact.Value)
+                    {
+                        sb_java_resolution_analysis
+                                        .AppendLine($"          Error: {kvp_errors.Key}");
+                        sb_java_resolution_analysis_types_only
+                                        .AppendLine($"          Error: {kvp_errors.Key}");
+                        sb_java_resolution_analysis_types_only_filtered
+                                        .AppendLine($"          Error: {kvp_errors.Key}");
+                        
+                        Information($"          Error: {kvp_errors.Key}");
+
+                        foreach(string line in kvp_errors.Value.lines)
+                        {                    
+                            sb_java_resolution_analysis
+                                            .AppendLine($"                  line : {line}");
+                            
+                            Information($"                  : {line}");
+                        }
+                        foreach(KeyValuePair<string, int> type_occurence in kvp_errors.Value.types)
+                        {
+                            sb_java_resolution_analysis
+                                            .AppendLine($"                  type : {type_occurence.Key}");
+                            sb_java_resolution_analysis
+                                            .AppendLine($"                      occurence : {type_occurence.Value}");
+                            sb_java_resolution_analysis_types_only
+                                            .AppendLine($"                  type : {type_occurence.Key}");
+                            sb_java_resolution_analysis_types_only
+                                            .AppendLine($"                      occurence : {type_occurence.Value}");
+                            sb_java_resolution_analysis_types_only_filtered
+                                            .AppendLine($"                  type : {type_occurence.Key}");
+
+                            sb_java_resolution_analysis_types_only_filtered
+                                            .AppendLine($"                      occurence : {type_occurence.Value}");
+
+                            Information($"                  : {type_occurence.Key} {type_occurence.Value}");
+                        }
+                    }
+                }
+            }
+
+            System.IO.File.WriteAllText
+                                    (
+                                        System.IO.Path.Combine
+                                                            (
+                                                                "output", 
+                                                                "java-resolution-analysis",
+                                                                "errors-types.txt"
+                                                            ), 
+                                        sb_java_resolution_analysis.ToString()
+                                    );
+            System.IO.File.WriteAllText
+                                    (
+                                        System.IO.Path.Combine
+                                                            (
+                                                                "output", 
+                                                                "java-resolution-analysis",
+                                                                "types.txt"
+                                                            ), 
+                                        sb_java_resolution_analysis_types_only.ToString()
+                                    );
+            System.IO.File.WriteAllText
+                                    (
+                                        System.IO.Path.Combine
+                                                            (
+                                                                "output", 
+                                                                "java-resolution-analysis",
+                                                                "types-filtered.txt"
+                                                            ), 
+                                        sb_java_resolution_analysis_types_only_filtered.ToString()
+                                    );
+
+            return;
+        }
+    );
 
 
 Task ("Default")
