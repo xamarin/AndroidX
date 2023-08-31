@@ -1661,6 +1661,7 @@
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Wear.ProtoLayout.Expression",
         "excludedRuntimeDependencies": "org.jetbrains.kotlin.kotlin-stdlib",
+        "extraDependencies": "org.jetbrains.kotlin.kotlin-stdlib",
         "dependencyOnly": false
       },
       {
