@@ -188,6 +188,5 @@
     <AndroidNamespaceReplacement Include='sidesheet' Replacement='SideSheet' />
     <AndroidNamespaceReplacement Include='watchface' Replacement='WatchFace' />
     <AndroidNamespaceReplacement Include='keyderivation' Replacement='KeyDerivation' />
-    <AndroidNamespaceReplacement Include='datastore' Replacement='DataStore' />
   </ItemGroup>
 </Project>
