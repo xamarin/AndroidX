@@ -1,3 +1,22 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences']"
+        name="managedName"
+        >
+        AndroidX.DataStore.Preferences
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.core']"
+        name="managedName"
+        >
+        AndroidX.DataStore.Preferences.Core
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']"
+        name="managedName"
+        >
+        AndroidX.DataStore.Preferences.Protobuf
+    </attr>
+
     <remove-node path="/api/package" />
 </metadata>
