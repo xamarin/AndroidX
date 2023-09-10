@@ -1,0 +1,14 @@
+<metadata>
+
+    <remove-node
+        path="/api/package[@name='androidx.wear.protolayout.expression.proto']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.protolayout.proto']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.protolayout.protobuf']"
+        />
+
+ 
+</metadata>
