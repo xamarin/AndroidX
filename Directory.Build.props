@@ -194,6 +194,7 @@
     <AndroidNamespaceReplacement Include='viewinterop' Replacement='ViewInterop' />
     <AndroidNamespaceReplacement Include='materialcore' Replacement='MaterialCore' />
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
+    <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
 
   </ItemGroup>
 </Project>
