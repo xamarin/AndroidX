@@ -189,5 +189,11 @@
     <AndroidNamespaceReplacement Include='watchface' Replacement='WatchFace' />
     <AndroidNamespaceReplacement Include='keyderivation' Replacement='KeyDerivation' />
     <AndroidNamespaceReplacement Include='datastore' Replacement='DataStore' />
+    <AndroidNamespaceReplacement Include='pullrefresh' Replacement='PullRefresh' />
+    <AndroidNamespaceReplacement Include='hapticfeedback' Replacement='HapticFeedback' />
+    <AndroidNamespaceReplacement Include='coreshims' Replacement='CoreShims' />
+    <AndroidNamespaceReplacement Include='viewinterop' Replacement='ViewInterop' />
+    <AndroidNamespaceReplacement Include='materialcore' Replacement='MaterialCore' />
+    <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
   </ItemGroup>
 </Project>

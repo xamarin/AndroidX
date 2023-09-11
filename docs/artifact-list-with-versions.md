@@ -21,7 +21,7 @@
 |  14|androidx.asynclayoutinflater:asynclayoutinflater                      |1.0.0               |Xamarin.AndroidX.AsyncLayoutInflater                                  |1.0.0.19            |
 |  15|androidx.autofill:autofill                                            |1.1.0               |Xamarin.AndroidX.AutoFill                                             |1.1.0.18            |
 |  16|androidx.biometric:biometric                                          |1.1.0               |Xamarin.AndroidX.Biometric                                            |1.1.0.15            |
-|  17|androidx.browser:browser                                              |1.5.0               |Xamarin.AndroidX.Browser                                              |1.5.0.3             |
+|  17|androidx.browser:browser                                              |1.6.0               |Xamarin.AndroidX.Browser                                              |1.6.0               |
 |  18|androidx.camera:camera-camera2                                        |1.2.3               |Xamarin.AndroidX.Camera.Camera2                                       |1.2.3.1             |
 |  19|androidx.camera:camera-core                                           |1.2.3               |Xamarin.AndroidX.Camera.Core                                          |1.2.3.1             |
 |  20|androidx.camera:camera-extensions                                     |1.2.3               |Xamarin.AndroidX.Camera.Extensions                                    |1.2.3.1             |
