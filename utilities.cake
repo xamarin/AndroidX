@@ -577,6 +577,7 @@ Task ("spell-check")
                 "ClientGuava",
                 "Proto",
                 "Renderer",
+                "DataStore",
                 "AnimationAndroid",
                 "CoreAndroid",
                 "GraphicsAndroid",
