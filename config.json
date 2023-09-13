@@ -347,8 +347,7 @@
         "version": "1.5.1",
         "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Compose.Material",
-        "dependencyOnly": false,
-        "extraDependencies": "androidx.compose.material.material-android"
+        "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.material",
