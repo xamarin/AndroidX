@@ -196,5 +196,6 @@
     <AndroidNamespaceReplacement Include='materialcore' Replacement='MaterialCore' />
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
+    <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
   </ItemGroup>
 </Project>
