@@ -275,8 +275,7 @@
         "version": "1.5.1",
         "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Compose.Animation.Android",
-        "dependencyOnly": false,
-        "extraDependencies": "androidx.compose.ui.ui-util-android"
+        "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.animation",
@@ -292,8 +291,7 @@
         "version": "1.5.1",
         "nugetVersion": "1.5.1",
         "nugetId": "Xamarin.AndroidX.Compose.Animation.Core.Android",
-        "dependencyOnly": false,
-        "extraDependencies": "androidx.compose.ui.ui-util-android"
+        "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.animation",
