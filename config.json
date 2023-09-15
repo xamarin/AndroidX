@@ -1708,9 +1708,9 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Wear.ProtoLayout.Expression",
+        "dependencyOnly": false,
         "excludedRuntimeDependencies": "org.jetbrains.kotlin.kotlin-stdlib",
-        "extraDependencies": "org.jetbrains.kotlin.kotlin-stdlib",
-        "dependencyOnly": false
+        "extraDependencies": "org.jetbrains.kotlin.kotlin-stdlib"
       },
       {
         "groupId": "androidx.wear.protolayout",
@@ -1731,24 +1731,24 @@
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.3",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles-material",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.3",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Material",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles-proto",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.3",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Proto",
         "dependencyOnly": false
       },
@@ -1758,8 +1758,8 @@
         "version": "1.1.0",
         "nugetVersion": "1.1.0.4",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Renderer",
-        "frozen": true,
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "frozen": true
       },
       {
         "groupId": "androidx.wear.watchface",
@@ -2066,8 +2066,8 @@
       {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
-        "version": "1.10.3",
-        "nugetVersion": "1.10.3",
+        "version": "1.10.4",
+        "nugetVersion": "1.10.4",
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
         "dependencyOnly": false,
         "templateSet": "auto-value"
