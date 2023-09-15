@@ -5,9 +5,9 @@
     dotnet cake spell-check.cake -t=spell-check
  */
 #addin nuget:?package=WeCantSpell.Hunspell&version=3.0.1
-#addin nuget:?package=Newtonsoft.Json&version=12.0.3
-#addin nuget:?package=Cake.FileHelpers&version=3.2.1
-#addin nuget:?package=Mono.Cecil&version=0.11.4
+#addin nuget:?package=Newtonsoft.Json&version=13.0.3
+#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Mono.Cecil&version=0.11.5
 
 #addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.2
 #addin nuget:?package=HolisticWare.Core.Net.HTTP&version=0.0.1

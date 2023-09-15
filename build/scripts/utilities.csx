@@ -1,6 +1,6 @@
 #! "net6.0"
 
-#r "nuget: Newtonsoft.Json, 13.0.1"
+#r "nuget: Newtonsoft.Json, 13.0.3"
 
 #r "nuget: HolisticWare.Xamarin.Tools.ComponentGovernance, 0.0.1.1"
 #r "nuget: HolisticWare.Core.Net.HTTP, 0.0.1"
