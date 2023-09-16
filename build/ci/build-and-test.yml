@@ -41,6 +41,9 @@ steps:
   - pwsh: dotnet cake utilities.cake -t=verify-namespace-file
     displayName: Verify published namespaces
 
+  - pwsh: dotnet cake utilities.cake -t=tools-executive-order
+    displayName: Generate Executive Order Build Inventory
+
   - pwsh: |
       dotnet cake build.cake `
         --target=ci-samples `
