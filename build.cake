@@ -977,7 +977,6 @@ Task ("full-run")
     .IsDependentOn ("nuget")
     .IsDependentOn ("samples")
     .IsDependentOn ("samples-dotnet")
-    .IsDependentOn ("tools-executive-order")
     ;
 
 Task ("ci")
@@ -991,7 +990,6 @@ Task ("ci-build")
     .IsDependentOn ("inject-variables")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("tools-executive-order")
     ;
 
 // Runs samples without building packages
