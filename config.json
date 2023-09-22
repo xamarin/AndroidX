@@ -25,6 +25,10 @@
       {
         "templateFile": "source/AndroidXSolutionFilter.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+      },
+      {
+        "templateFile": "source/AndroidXNuGetReadMe.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
       }
     ],
     "artifacts": [
