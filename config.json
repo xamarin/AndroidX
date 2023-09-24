@@ -2392,27 +2392,19 @@
         "templateSet": "reactive-streams"
       },
       {
-        "groupId": "androidx.navigation",
-        "artifactId": "navigation-common-ktx",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0",
-        "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.4",
+        "nugetId": "Xamarin.AndroidX.Wear.Tiles",
         "dependencyOnly": true
       },
       {
-        "groupId": "androidx.navigation",
-        "artifactId": "navigation-runtime-ktx",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0",
-        "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "androidx.preference",
-        "artifactId": "preference",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.7",
-        "nugetId": "Xamarin.AndroidX.Preference",
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles-proto",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.4",
+        "nugetId": "Xamarin.AndroidX.Wear.Tiles.Proto",
         "dependencyOnly": true
       },
       {
