@@ -618,9 +618,9 @@
         "maven": {
           "artifactId": "material3",
           "groupId": "androidx.compose.material3",
-          "version": "1.1.1",
+          "version": "1.1.2",
           "nuGetId": "Xamarin.AndroidX.Compose.Material3",
-          "nuGetVersion": "1.1.1.2"
+          "nuGetVersion": "1.1.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -631,9 +631,9 @@
         "maven": {
           "artifactId": "material3-window-size-class",
           "groupId": "androidx.compose.material3",
-          "version": "1.1.1",
+          "version": "1.1.2",
           "nuGetId": "Xamarin.AndroidX.Compose.Material3.WindowSizeClass",
-          "nuGetVersion": "1.1.1.2"
+          "nuGetVersion": "1.1.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1905,9 +1905,9 @@
         "maven": {
           "artifactId": "mediarouter",
           "groupId": "androidx.mediarouter",
-          "version": "1.4.0",
+          "version": "1.6.0",
           "nuGetId": "Xamarin.AndroidX.MediaRouter",
-          "nuGetVersion": "1.4.0.3"
+          "nuGetVersion": "1.6.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1931,9 +1931,9 @@
         "maven": {
           "artifactId": "navigation-common",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Common",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1944,9 +1944,9 @@
         "maven": {
           "artifactId": "navigation-common-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1957,9 +1957,9 @@
         "maven": {
           "artifactId": "navigation-compose",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Compose",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1970,9 +1970,9 @@
         "maven": {
           "artifactId": "navigation-fragment",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Fragment",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1983,9 +1983,9 @@
         "maven": {
           "artifactId": "navigation-fragment-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1996,9 +1996,9 @@
         "maven": {
           "artifactId": "navigation-runtime",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Runtime",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2009,9 +2009,9 @@
         "maven": {
           "artifactId": "navigation-runtime-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2022,9 +2022,9 @@
         "maven": {
           "artifactId": "navigation-ui",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.UI",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2035,9 +2035,9 @@
         "maven": {
           "artifactId": "navigation-ui-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.2",
+          "version": "2.7.3",
           "nuGetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
-          "nuGetVersion": "2.7.2.1"
+          "nuGetVersion": "2.7.3"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2763,9 +2763,9 @@
         "maven": {
           "artifactId": "tiles",
           "groupId": "androidx.wear.tiles",
-          "version": "1.1.0",
+          "version": "1.2.0",
           "nuGetId": "Xamarin.AndroidX.Wear.Tiles",
-          "nuGetVersion": "1.1.0.4"
+          "nuGetVersion": "1.2.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2776,9 +2776,9 @@
         "maven": {
           "artifactId": "tiles-material",
           "groupId": "androidx.wear.tiles",
-          "version": "1.1.0",
+          "version": "1.2.0",
           "nuGetId": "Xamarin.AndroidX.Wear.Tiles.Material",
-          "nuGetVersion": "1.1.0.4"
+          "nuGetVersion": "1.2.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2789,9 +2789,9 @@
         "maven": {
           "artifactId": "tiles-proto",
           "groupId": "androidx.wear.tiles",
-          "version": "1.1.0",
+          "version": "1.2.0",
           "nuGetId": "Xamarin.AndroidX.Wear.Tiles.Proto",
-          "nuGetVersion": "1.1.0.4"
+          "nuGetVersion": "1.2.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3280,9 +3280,9 @@
         "maven": {
           "artifactId": "auto-value-annotations",
           "groupId": "com.google.auto.value",
-          "version": "1.10.3",
+          "version": "1.10.4",
           "nuGetId": "Xamarin.Google.AutoValue.Annotations",
-          "nuGetVersion": "1.10.3.1"
+          "nuGetVersion": "1.10.4"
         }
       },
       "license": "The Apache Software License, Version 2.0"
