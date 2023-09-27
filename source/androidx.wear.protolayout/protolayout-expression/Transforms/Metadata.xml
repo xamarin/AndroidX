@@ -1,0 +1,16 @@
+<metadata>
+
+    <attr
+        path="/api/package[@name='androidx.wear.protolayout.expression']/class[@name='ConditionScopes.ConditionScope']/method[@name='use' and count(parameter)=1 and parameter[1][@type='RawT']]"
+        name="managedName"
+        >
+        UseRawT
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.protolayout.expression']/class[@name='ConditionScopes.IfTrueScope']/method[@name='elseUse' and count(parameter)=1 and parameter[1][@type='RawT']]"
+        name="managedName"
+        >
+        ElseUseRawT
+    </attr>
+
+</metadata>
