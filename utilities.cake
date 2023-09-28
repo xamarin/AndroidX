@@ -1021,18 +1021,26 @@ Task ("api-diff-analysis")
                 Information( $"Directory    = {d}");
                 Information( $"     nugetId    = {d.GetDirectoryName()}");
 
-                string groupId      = null;
-                string artifactId   = null;
-                string nugetId      = null;
-                string nugetVersion = null;
+                bool    dependencyOnly  = true;
+                string  groupId         = null;
+                string  artifactId      = null;
+                string  nugetId         = null;
+                string  nugetVersion    = null;
                 // no guarantees thta config.json is sorted, so linear "search"
                 // TODO: sort + (LINQ or binary serch)
                 foreach(JObject jo in binderator_json_array[0]["artifacts"])
                 {
-                    groupId      = (string) jo["groupId"];
-                    artifactId   = (string) jo["artifactId"];
-                    nugetId      = (string) jo["nugetId"];
-                    nugetVersion = (string) jo["nugetVersion"];
+                    dependencyOnly  = (bool)    jo["dependencyOnly"];
+
+                    if ( dependencyOnly == true)
+                    {
+                        continue;
+                    }
+                    
+                    groupId         = (string)  jo["groupId"];
+                    artifactId      = (string)  jo["artifactId"];
+                    nugetId         = (string)  jo["nugetId"];
+                    nugetVersion    = (string)  jo["nugetVersion"];
 
                     if (nugetId == d_name)
                     {
