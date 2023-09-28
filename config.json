@@ -25,6 +25,10 @@
       {
         "templateFile": "source/AndroidXSolutionFilter.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+      },
+      {
+        "templateFile": "source/AndroidXNuGetReadMe.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
       }
     ],
     "artifacts": [
@@ -2474,6 +2478,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/guava/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2490,6 +2498,10 @@
           {
             "templateFile": "templates/no-bindings/Targets.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
+            "templateFile": "templates/no-bindings/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2514,6 +2526,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
           },
           {
+            "templateFile": "templates/kotlin/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2532,6 +2548,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
           },
           {
+            "templateFile": "templates/kotlinx/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2544,6 +2564,10 @@
           {
             "templateFile": "templates/reactive-streams/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/reactive-streams/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2560,6 +2584,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/gson/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2572,6 +2600,10 @@
           {
             "templateFile": "templates/auto-value/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/auto-value/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2588,6 +2620,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/rxjava/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2600,6 +2636,10 @@
           {
             "templateFile": "templates/tink/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/tink/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2616,6 +2656,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/flogger/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2628,6 +2672,10 @@
           {
             "templateFile": "templates/installreferrer/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/installreferrer/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2644,6 +2692,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/napier/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2658,6 +2710,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/dev-chrisbanes-snapper/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2670,6 +2726,10 @@
           {
             "templateFile": "templates/accompanist/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/accompanist/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
