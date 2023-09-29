@@ -25,6 +25,10 @@
       {
         "templateFile": "source/AndroidXSolutionFilter.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+      },
+      {
+        "templateFile": "source/AndroidXNuGetReadMe.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
       }
     ],
     "artifacts": [
@@ -408,16 +412,16 @@
       {
         "groupId": "androidx.compose.material3",
         "artifactId": "material3",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2",
         "nugetId": "Xamarin.AndroidX.Compose.Material3",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.compose.material3",
         "artifactId": "material3-window-size-class",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2",
         "nugetId": "Xamarin.AndroidX.Compose.Material3.WindowSizeClass",
         "dependencyOnly": false
       },
@@ -1200,8 +1204,8 @@
       {
         "groupId": "androidx.mediarouter",
         "artifactId": "mediarouter",
-        "version": "1.4.0",
-        "nugetVersion": "1.4.0.3",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0",
         "nugetId": "Xamarin.AndroidX.MediaRouter",
         "dependencyOnly": false
       },
@@ -1216,72 +1220,72 @@
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-common-ktx",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-compose",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Compose",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-fragment-ktx",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-runtime-ktx",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.UI",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.navigation",
         "artifactId": "navigation-ui-ktx",
-        "version": "2.7.2",
-        "nugetVersion": "2.7.2.1",
+        "version": "2.7.3",
+        "nugetVersion": "2.7.3",
         "nugetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
         "dependencyOnly": false
       },
@@ -1731,24 +1735,24 @@
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.4",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles-material",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.4",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Material",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles-proto",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.4",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Proto",
         "dependencyOnly": false
       },
@@ -2066,8 +2070,8 @@
       {
         "groupId": "com.google.auto.value",
         "artifactId": "auto-value-annotations",
-        "version": "1.10.3",
-        "nugetVersion": "1.10.3.1",
+        "version": "1.10.4",
+        "nugetVersion": "1.10.4",
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
         "dependencyOnly": false,
         "templateSet": "auto-value"
@@ -2392,27 +2396,19 @@
         "templateSet": "reactive-streams"
       },
       {
-        "groupId": "androidx.navigation",
-        "artifactId": "navigation-common-ktx",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0",
-        "nugetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.4",
+        "nugetId": "Xamarin.AndroidX.Wear.Tiles",
         "dependencyOnly": true
       },
       {
-        "groupId": "androidx.navigation",
-        "artifactId": "navigation-runtime-ktx",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0",
-        "nugetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "androidx.preference",
-        "artifactId": "preference",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.7",
-        "nugetId": "Xamarin.AndroidX.Preference",
+        "groupId": "androidx.wear.tiles",
+        "artifactId": "tiles-proto",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.4",
+        "nugetId": "Xamarin.AndroidX.Wear.Tiles.Proto",
         "dependencyOnly": true
       },
       {
@@ -2482,6 +2478,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/guava/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2498,6 +2498,10 @@
           {
             "templateFile": "templates/no-bindings/Targets.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
+            "templateFile": "templates/no-bindings/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2522,6 +2526,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
           },
           {
+            "templateFile": "templates/kotlin/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2540,6 +2548,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
           },
           {
+            "templateFile": "templates/kotlinx/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2552,6 +2564,10 @@
           {
             "templateFile": "templates/reactive-streams/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/reactive-streams/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2568,6 +2584,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/gson/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2580,6 +2600,10 @@
           {
             "templateFile": "templates/auto-value/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/auto-value/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2596,6 +2620,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/rxjava/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2608,6 +2636,10 @@
           {
             "templateFile": "templates/tink/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/tink/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2624,6 +2656,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/flogger/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2636,6 +2672,10 @@
           {
             "templateFile": "templates/installreferrer/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/installreferrer/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
@@ -2652,6 +2692,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/napier/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2666,6 +2710,10 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
+            "templateFile": "templates/dev-chrisbanes-snapper/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
           }
@@ -2678,6 +2726,10 @@
           {
             "templateFile": "templates/accompanist/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/accompanist/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
