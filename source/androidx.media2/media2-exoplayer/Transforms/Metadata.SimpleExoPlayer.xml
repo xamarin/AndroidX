@@ -44,6 +44,11 @@
         DANGER!!!!
         TODO: get rid of this
     -->
-
-
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.audio']/interface[@name='AudioRendererEventListener']/method"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.video']/interface[@name='VideoRendererEventListener']/method"
+        />
+    
 </metadata>
