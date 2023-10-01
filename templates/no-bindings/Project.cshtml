@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
   </PropertyGroup>
 
@@ -42,6 +42,10 @@
     <!-- This is needed because the `lib/{TFM}` folders tell NuGet what frameworks this package supports,
          and we aren't writing anything to those folders because we have no managed assemblies (NU5127) -->
     <None Include="..\..\templates\no-bindings\_._" Pack="True" PackagePath="@@(AndroidXNuGetLibFolders)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
 </Project>

@@ -47,5 +47,11 @@
         path="/api/package[@name='androidx.core.animation']/class[@name='FloatArrayEvaluator']/implements"
         >        
     </remove-node>
-    
+
+    <!-- Remove some problematic default interface methods -->
+    <remove-node
+      path="/api/package[@name='androidx.core.animation']/interface[@name='Animator.AnimatorListener']/method[@name='onAnimationStart' and count(parameter)=2 and parameter[1][@type='androidx.core.animation.Animator'] and parameter[2][@type='boolean']]" />
+    <remove-node
+      path="/api/package[@name='androidx.core.animation']/interface[@name='Animator.AnimatorListener']/method[@name='onAnimationEnd' and count(parameter)=2 and parameter[1][@type='androidx.core.animation.Animator'] and parameter[2][@type='boolean']]" />
+
 </metadata>

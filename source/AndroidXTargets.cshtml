@@ -21,7 +21,7 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
       if (art.ProguardFile != null) {
-    <ProguardConfiguration Include="$(MSBuildThisFileDirectory)..\..\proguard\proguard.txt">
+    <ProguardConfiguration Condition=" '$(AndroidApplication)' == 'true' " Include="$(MSBuildThisFileDirectory)..\..\proguard\proguard.txt">
       <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
     </ProguardConfiguration>
       }

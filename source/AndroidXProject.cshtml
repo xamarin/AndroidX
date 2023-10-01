@@ -2,7 +2,7 @@
 @using System.Linq
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
     <AssemblyName>@(Model.AssemblyName)</AssemblyName>
@@ -93,6 +93,7 @@
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
     <None Include="..\..\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
   @if (@Model.MavenArtifacts.Count > 0) {
@@ -175,36 +176,6 @@
         <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" />
 
       }
-    }
-    <!-- some additional fixes -->
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Transition")
-    {
-        <ProjectReference Include="..\androidx.fragment.fragment\androidx.fragment.fragment.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Work.Runtime")
-    {
-        <!--
-        Xamarin.AndroidX.Work.Runtime Should Reference Xamarin.AndroidX.Room.Runtime
-        https://github.com/xamarin/AndroidX/issues/86
-        -->
-        <ProjectReference Include="..\androidx.room.room-runtime\androidx.room.room-runtime.csproj" PrivateAssets="none" />
-        <ProjectReference Include="..\androidx.lifecycle.lifecycle-service/androidx.lifecycle.lifecycle-service.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Fragment")
-    {
-        <ProjectReference Include="..\androidx.savedstate.savedstate\androidx.savedstate.savedstate.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.SavedState")
-    {
-        <ProjectReference Include="..\androidx.lifecycle.lifecycle-common\androidx.lifecycle.lifecycle-common.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Window")
-    {
-        <ProjectReference Include="..\androidx.core.core\androidx.core.core.csproj" PrivateAssets="none" />
-    }
-    @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Lifecycle.Runtime")
-    {
-        <ProjectReference Include="..\androidx.arch.core.core-runtime\androidx.arch.core.core-runtime.csproj" PrivateAssets="none" />
     }
   </ItemGroup>
 

@@ -10,6 +10,6 @@ Error MSB4236: The SDK 'Microsoft.Android.Sdk' specified could not be found.
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Google.Android.Material" />
+    <PackageReference Update="Xamarin.Google.Android.Material" Version="1.9.0.2" />
   </ItemGroup>
 </Project>

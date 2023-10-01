@@ -7,7 +7,7 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>Xamarin.Kotlin</RootNamespace>
     @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
@@ -82,6 +82,10 @@
   <ItemGroup>
     <None Include="..\..\templates\kotlin\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
     <None Include="..\..\templates\kotlin\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
 </Project>

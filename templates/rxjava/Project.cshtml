@@ -9,7 +9,7 @@
 
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>ReactiveX</RootNamespace>
     <AssemblyName>@(assembly_name)</AssemblyName>
@@ -83,6 +83,10 @@
   <ItemGroup>
     <None Include="..\..\templates\rxjava\License.md" Pack="true" PackagePath="LICENSE.md" />
     <None Include="..\..\templates\rxjava\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
 </Project>

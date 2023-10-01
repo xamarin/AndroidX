@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>Annotations</RootNamespace>
     <AssemblyName>Xamarin.Google.Android.InstallReferrer</AssemblyName>
@@ -64,6 +64,10 @@
   <ItemGroup>
     <None Include="..\..\templates\installreferrer\License.md" Pack="true" PackagePath="License.md" />
     <None Include="..\..\templates\installreferrer\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
 </Project>

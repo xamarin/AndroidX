@@ -1,6 +1,6 @@
 <Project Sdk="Xamarin.Legacy.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <RootNamespace>Annotations</RootNamespace>
     <AssemblyName>Xamarin.Google.AutoValue.Annotations</AssemblyName>
@@ -58,6 +58,10 @@
   <ItemGroup>
     <None Include="..\..\templates\auto-value\License.md" Pack="true" PackagePath="License.md" />
     <None Include="..\..\templates\auto-value\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
 </Project>

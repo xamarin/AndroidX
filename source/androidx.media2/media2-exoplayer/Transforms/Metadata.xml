@@ -410,6 +410,12 @@
         />
 
     <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.extractor']/interface[@name='BinarySearchSeeker.SeekTimestampConverter']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaSource']/method[@name='createPeriod' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.source.MediaSource.MediaPeriodId'] and parameter[2][@type='androidx.media2.exoplayer.external.upstream.Allocator'] and parameter[3][@type='long']]"
         name="managedReturn"
         >
@@ -550,7 +556,6 @@
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/interface[@name='TrackSelection']/method[@name='updateSelectedTrack' and count(parameter)=5 and parameter[1][@type='long'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.util.List&lt;? extends androidx.media2.exoplayer.external.source.chunk.MediaChunk&gt;'] and parameter[5][@type='androidx.media2.exoplayer.external.source.chunk.MediaChunkIterator[]']]"
         />
-
 
 
 

@@ -5,10 +5,15 @@
     <RepositoryBranch>$(BUILD_SOURCEBRANCH)</RepositoryBranch>
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
 
+    <!-- Default TFM's we build for -->
+    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
+
+    <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
+    <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
+    
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
-    <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>false</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
 
     <!-- .NET 6+ generates Resource.designer.cs files for bindings projects which we do not want -->
     <AndroidGenerateResourceDesigner>false</AndroidGenerateResourceDesigner>
@@ -182,5 +187,15 @@
     <AndroidNamespaceReplacement Include='imagecapture' Replacement='ImageCaptures' />
     <AndroidNamespaceReplacement Include='sidesheet' Replacement='SideSheet' />
     <AndroidNamespaceReplacement Include='watchface' Replacement='WatchFace' />
+    <AndroidNamespaceReplacement Include='keyderivation' Replacement='KeyDerivation' />
+    <AndroidNamespaceReplacement Include='datastore' Replacement='DataStore' />
+    <AndroidNamespaceReplacement Include='pullrefresh' Replacement='PullRefresh' />
+    <AndroidNamespaceReplacement Include='hapticfeedback' Replacement='HapticFeedback' />
+    <AndroidNamespaceReplacement Include='coreshims' Replacement='CoreShims' />
+    <AndroidNamespaceReplacement Include='viewinterop' Replacement='ViewInterop' />
+    <AndroidNamespaceReplacement Include='materialcore' Replacement='MaterialCore' />
+    <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
+    <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
+    <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
   </ItemGroup>
 </Project>
