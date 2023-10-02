@@ -1,12 +1,84 @@
 ﻿<metadata>
     <attr
-        path="/api/package[@name='androidx.media3.common']/class[@name='StreamKey']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.StreamKey']]/parameter[1]"
+        path="/api/package[@name='androidx.media3.datasource.cache']/class[@name='CacheSpan']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.media3.datasource.cache.CacheSpan']]/parameter[1]"
         name="managedType"
         >
         Java.Lang.Object
     </attr>
     <remove-node
-        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/method[@name='getExtrapolating' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='float']]"
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='HttpDataSource.BaseFactory']"
         />
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/interface[@name='HttpDataSource.Factory']"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='DefaultHttpDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='ResolvingDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='PriorityDataSourceFactory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cache']/class[@name='CacheDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/interface[@name='HttpDataSource.Factory']"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='DefaultDataSourceFactory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='PriorityDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='FileDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='DefaultDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/interface[@name='HttpDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource']/class[@name='DefaultHttpDataSource.Factory']/method[@name='setDefaultRequestProperties' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Datasource.IHttpDataSourceFactory
+    </attr>
 
 </metadata>

@@ -1227,6 +1227,14 @@
       },
       {
         "groupId": "androidx.media3",
+        "artifactId": "media3-database",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0",
+        "nugetId": "Xamarin.AndroidX.Media3.Database",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
         "artifactId": "media3-datasource",
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
@@ -1287,14 +1295,6 @@
         "version": "1.0.0",
         "nugetVersion": "1.0.0",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.WorkManager",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.media3",
-        "artifactId": "media3-database",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0",
-        "nugetId": "Xamarin.AndroidX.Media3.Database",
         "dependencyOnly": false
       },
       {
