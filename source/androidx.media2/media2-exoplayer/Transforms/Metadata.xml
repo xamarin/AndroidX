@@ -1,5 +1,5 @@
 ﻿<metadata>
-    
+
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.text.subrip']/class[@name='SubripSubtitle']"
         name="visibility"
@@ -24,12 +24,12 @@
         >
         public
     </attr>
-    
+
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.video']/interface[@name='VideoRendererEventListener']/method[@name='onVideoSizeChanged' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='float']]"
         name="managedName"
         >
-        VideoRendererSizeChangedEventArgs    
+        VideoRendererSizeChangedEventArgs
     </attr>
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='BaseMediaSource']/method[@name='prepareSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.TransferListener']]"
@@ -43,72 +43,72 @@
         >
         public
     </attr>
-    
+
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/class[@name='AnalyticsCollector']/implements"
         />
-    
+
     <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.text.dvb']/class[@name='DvbDecoder']"
         >
-        <method 
-            visibility="protected" static="false" abstract="false" return="java.lang.Throwable" name="createUnexpectedDecodeException" 
-            deprecated="not deprecated" final="false" bridge="false" native="false" 
-            synchronized="false" synthetic="false" 
+        <method
+            visibility="protected" static="false" abstract="false" return="java.lang.Throwable" name="createUnexpectedDecodeException"
+            deprecated="not deprecated" final="false" bridge="false" native="false"
+            synchronized="false" synthetic="false"
             >
-            <parameter 
-                type="java.lang.Throwable" name="error"  
+            <parameter
+                type="java.lang.Throwable" name="error"
                 >
             </parameter>
         </method>
-        <method 
-            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleInputBuffer" name="createInputBuffer" 
-            deprecated="not deprecated" final="false" bridge="false" native="false" 
-            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" 
-            synchronized="false" synthetic="false" 
+        <method
+            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleInputBuffer" name="createInputBuffer"
+            deprecated="not deprecated" final="false" bridge="false" native="false"
+            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;"
+            synchronized="false" synthetic="false"
             >
         </method>
-        <method 
-            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleOutputBuffer" name="createOutputBuffer" 
-            deprecated="not deprecated" final="false" bridge="false" native="false" 
-            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" 
-            synchronized="false" synthetic="false" 
+        <method
+            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleOutputBuffer" name="createOutputBuffer"
+            deprecated="not deprecated" final="false" bridge="false" native="false"
+            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;"
+            synchronized="false" synthetic="false"
             >
         </method>
     </add-node>
     <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.text.pgs']/class[@name='PgsDecoder']"
         >
-        <method 
-            visibility="protected" static="false" abstract="true" return="java.lang.Throwable" name="createUnexpectedDecodeException" 
-            deprecated="not deprecated" final="false" bridge="false" native="false" 
-            synchronized="false" synthetic="false" 
+        <method
+            visibility="protected" static="false" abstract="true" return="java.lang.Throwable" name="createUnexpectedDecodeException"
+            deprecated="not deprecated" final="false" bridge="false" native="false"
+            synchronized="false" synthetic="false"
             >
-            <parameter 
-                type="java.lang.Throwable" name="error"  
+            <parameter
+                type="java.lang.Throwable" name="error"
                 >
             </parameter>
         </method>
     </add-node>
-    
+
     <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.drm']/class[@name='DrmInitData']"
         >
-        <method 
-            visibility="public" static="false" abstract="false" return="int" name="Compare" 
-            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+        <method
+            visibility="public" static="false" abstract="false" return="int" name="Compare"
+            native="false" synchronized="false" final="false" deprecated="not deprecated"
             >
             <parameter type="java.lang.Object" name="lhs" />
             <parameter type="java.lang.Object" name="rhs" />
         </method>
     </add-node>
-    
+
     <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.offline']/class[@name='StreamKey']"
         >
-        <method 
-            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
-            native="false" synchronized="false"  final="false" deprecated="not deprecated" 
+        <method
+            visibility="public" static="false" abstract="false" return="int" name="compareTo"
+            native="false" synchronized="false"  final="false" deprecated="not deprecated"
             >
             <parameter name="p0" type="java.lang.Object" />
         </method>
@@ -116,9 +116,9 @@
     <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ConcatenatingMediaSource']"
         >
-        <method 
-            visibility="public" static="false" abstract="false" return="int" name="compare" 
-            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+        <method
+            visibility="public" static="false" abstract="false" return="int" name="compare"
+            native="false" synchronized="false" final="false" deprecated="not deprecated"
             >
             <parameter type="java.lang.Object" name="lhs" />
             <parameter type="java.lang.Object" name="rhs" />
@@ -127,21 +127,21 @@
     <add-node
         path="/api/package[@name='androidx.media2.exoplayer.external.source.hls.playlist']/class[@name='HlsMediaPlaylist.Segment']"
         >
-        <method 
-            visibility="public" static="false" abstract="false" return="int" name="compare" 
-            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+        <method
+            visibility="public" static="false" abstract="false" return="int" name="compare"
+            native="false" synchronized="false" final="false" deprecated="not deprecated"
             >
             <parameter type="java.lang.Object" name="lhs" />
             <parameter type="java.lang.Object" name="rhs" />
         </method>
     </add-node>
 
-    
-    <remove-node 
+
+    <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.decoder']/class[@name='SimpleDecoder']"
         />
 
-        
+
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/class[@name='FixedTrackSelection']/method[@name='updateSelectedTrack' and count(parameter)=5 and parameter[1][@type='long'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.util.List&lt;? extends androidx.media2.exoplayer.external.source.chunk.MediaChunk&gt;'] and parameter[5][@type='androidx.media2.exoplayer.external.source.chunk.MediaChunkIterator[]']]/parameter[4]"
         name="managedType"
@@ -209,7 +209,7 @@
         >
         false
     </attr>
-    
+
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.source.hls']/class[@name='HlsMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media2.exoplayer.external.offline.StreamKey&gt;']]"
         name="managedReturn"
@@ -218,7 +218,7 @@
     </attr>
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ProgressiveMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
-        name="managedReturn"
+        name="managedType"
         >
         System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Offline.StreamKey &gt;
     </attr>
@@ -400,7 +400,7 @@
         path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onRenderedFirstFrame' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='android.view.Surface']]"
         />
     <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onSurfaceSizeChanged' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int']]"        
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onSurfaceSizeChanged' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
         />
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onVideoSizeChanged' and count(parameter)=5 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='float']]"
@@ -421,7 +421,7 @@
         >
         AndroidX.Media2.ExoPlayer.External.Source.MediaSourceMediaPeriodId
     </attr>
-    
+
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/interface[@name='MediaSource']/method[@name='createPeriod' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.source.MediaSource.MediaPeriodId'] and parameter[2][@type='androidx.media2.exoplayer.external.upstream.Allocator'] and parameter[3][@type='long']]"
         />
@@ -462,18 +462,6 @@
     </attr>
 
     <attr
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DummyDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
-        name="managedReturn"
-        >
-        System.Collections.Generic.IDictionary &lt; string, System.Collections.Generic.IList &lt; string &gt; &gt;
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='BaseDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
-        name="managedReturn"
-        >
-        System.Collections.Generic.IDictionary &lt; string, System.Collections.Generic.IList &lt; string &gt; &gt;
-    </attr>
-    <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ClippingMediaPeriod']/method[@name='onContinueLoadingRequested' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.source.MediaPeriod']]/parameter[1]"
         name="managedType"
         >
@@ -500,10 +488,10 @@
         path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultHttpDataSourceFactory']/method[@name='createDataSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.HttpDataSource.RequestProperties']]"
         />
     <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='HttpDataSource.BaseFactory']/method[@name='createDataSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.HttpDataSource.RequestProperties']]" 
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='HttpDataSource.BaseFactory']/method[@name='createDataSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.HttpDataSource.RequestProperties']]"
         />
     <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='HttpDataSource.BaseFactory']/method[@name='createDataSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.HttpDataSource.RequestProperties']]"   
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='HttpDataSource.BaseFactory']/method[@name='createDataSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.HttpDataSource.RequestProperties']]"
         />
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='CompositeMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='T'] and parameter[2][@type='androidx.media2.exoplayer.external.source.MediaSource'] and parameter[3][@type='androidx.media2.exoplayer.external.Timeline']]"
@@ -515,12 +503,20 @@
         OnAudioSinkAudioSessionId
     </attr>
 
+    <!--
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ExtractorMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
         name="managedType"
         >
         System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Offline.StreamKey &gt;
     </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ExtractorMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ExtractorMediaSource']"
+        />
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.extractor']/interface[@name='ExtractorOutput']/method[@name='seekMap' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.extractor.SeekMap']]"
         />
@@ -551,6 +547,182 @@
         path="/api/package[@name='androidx.media2.exoplayer.external.trackselection']/interface[@name='TrackSelection']/method[@name='updateSelectedTrack' and count(parameter)=5 and parameter[1][@type='long'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.util.List&lt;? extends androidx.media2.exoplayer.external.source.chunk.MediaChunk&gt;'] and parameter[5][@type='androidx.media2.exoplayer.external.source.chunk.MediaChunkIterator[]']]"
         />
 
+    <!--
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ClippingMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]"
+        />
+    -->
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ClippingMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/interface[@name='MediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media2.exoplayer.external.trackselection.TrackSelection&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source.hls']/class[@name='HlsMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media2.exoplayer.external.trackselection.TrackSelection&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.IList
+    </attr>
 
 
+
+
+    <!--
+        System.Collections.Generic.IDictionary &lt; string, System.Collections.Generic.IList &lt; string &gt; &gt;
+    -->
+    <!--
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/interface[@name='DataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='BaseDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DummyDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream.crypto']/class[@name='AesCipherDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/interface[@name='HttpDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='PriorityDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='StatsDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='TeeDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='ResolvingDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IDictionary
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/interface[@name='DataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='BaseDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DummyDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream.crypto']/class[@name='AesCipherDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='DefaultDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/interface[@name='HttpDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='PriorityDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='StatsDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='TeeDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.upstream']/class[@name='ResolvingDataSource']/method[@name='getResponseHeaders' and count(parameter)=0]"
+        />
+    <!--
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ProgressiveMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]"
+        />
+    -->
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/interface[@name='MediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media2.exoplayer.external.trackselection.TrackSelection&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Trackselection.ITrackSelection &gt;
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source.hls']/class[@name='HlsMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media2.exoplayer.external.trackselection.TrackSelection&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Trackselection.ITrackSelection &gt;
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ProgressiveMediaSource.Factory']/method[@name='setStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Offline.StreamKey &gt;
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Trackselection.ITrackSelection &gt;
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ClippingMediaPeriod']/method[@name='getStreamKeys' and count(parameter)=1 and parameter[1][@type='java.util.List']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media2.ExoPlayer.External.Trackselection.ITrackSelection &gt;
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source.hls.playlist']/class[@name='HlsPlaylist']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ClippingMediaPeriod']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ProgressiveMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='MaskingMediaPeriod']"
+        />
+
+        
 </metadata>

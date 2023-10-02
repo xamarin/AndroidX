@@ -1,0 +1,42 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='StreamKey']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.StreamKey']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onCues' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
+        name="managedName"
+        >
+        OnCuesDeprecated
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        OnPositionDiscontinuityDeprecated
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='DrmInitData']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.DrmInitData.SchemeData'] and parameter[2][@type='androidx.media3.common.DrmInitData.SchemeData']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='DrmInitData']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.DrmInitData.SchemeData'] and parameter[2][@type='androidx.media3.common.DrmInitData.SchemeData']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/field[@name='ZERO']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/method[@name='getConstant' and count(parameter)=1 and parameter[1][@type='long']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/method[@name='getExtrapolating' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='float']]"
+        />
+
+</metadata>
