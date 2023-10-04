@@ -1,3 +1,33 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='GlEffectsFrameProcessor.Factory']/method[@name='create' and count(parameter)=6 and parameter[1][@type='android.content.Context'] and parameter[2][@type='androidx.media3.common.FrameProcessor.Listener'] and parameter[3][@type='java.util.List&lt;androidx.media3.common.Effect&gt;'] and parameter[4][@type='androidx.media3.common.DebugViewProvider'] and parameter[5][@type='androidx.media3.common.ColorInfo'] and parameter[6][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Common.IFrameProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='SingleColorLut']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"    
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='RgbFilter']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='HslAdjustment']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='Contrast']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
 
 </metadata>
