@@ -1235,14 +1235,6 @@
       },
       {
         "groupId": "androidx.media3",
-        "artifactId": "media3-container",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1",
-        "nugetId": "Xamarin.AndroidX.Media3.Container",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.media3",
         "artifactId": "media3-database",
         "version": "1.0.2",
         "nugetVersion": "1.0.2",
@@ -1263,22 +1255,6 @@
         "version": "1.0.2",
         "nugetVersion": "1.0.2",
         "nugetId": "Xamarin.AndroidX.Media3.DataSource.CroNet",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.media3",
-        "artifactId": "media3-datasource-okhttp",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
-        "nugetId": "Xamarin.AndroidX.Media3.DataSource.OkHttp",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.media3",
-        "artifactId": "media3-datasource-rtmp",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
-        "nugetId": "Xamarin.AndroidX.Media3.DataSource.Rtmp",
         "dependencyOnly": false
       },
       {
@@ -2665,6 +2641,22 @@
         "version": "18.2.0",
         "nugetVersion": "118.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cast-framework",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cronet",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.5",
+        "nugetId": "Xamarin.GooglePlayServices.CroNet",
         "dependencyOnly": true
       },
       {
