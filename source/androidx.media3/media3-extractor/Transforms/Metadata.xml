@@ -1,3 +1,48 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.extractor.metadata.id3']/class[@name='TextInformationFrame']"
+        name="final"
+        >
+        false
+    </attr>
+
+    <add-node
+        path="/api/package[@name='androidx.media3.extractor.text.webvtt']/class[@name='WebvttDecoder']"
+        >
+        <method 
+            visibility="protected" static="false" override="true" abstract="false" return="java.lang.Object" name="createInputBuffer" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false" 
+            />
+        <method 
+            visibility="protected" static="false" override="true" abstract="false" return="java.lang.Object" name="createOutputBuffer"
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false" 
+            />
+  
+    </add-node>
+    <!--
+    <attr
+        path="/api/package[@name='androidx.media3.extractor.text.webvtt']/class[@name='Mp4WebvttDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.extractor.text.webvtt']/class[@name='Mp4WebvttDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='int'] and parameter[3][@type='boolean']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    -->
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.extractor']/interface[@name='BinarySearchSeeker.SeekTimestampConverter']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.extractor.text.cea']/class[@name='Cea608Decoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.extractor.metadata.id3']/class[@name='ApicFrame']/method[@name='populateMediaMetadata' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaMetadata.Builder']]"
+        />
 
 </metadata>
