@@ -259,6 +259,14 @@
       },
       {
         "groupId": "androidx.collection",
+        "artifactId": "collection-jvm",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0",
+        "nugetId": "Xamarin.AndroidX.Collection.Jvm",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.collection",
         "artifactId": "collection-ktx",
         "version": "1.3.0",
         "nugetVersion": "1.3.0",
