@@ -29,5 +29,31 @@
         >
         AndroidX.Media3.Effect.IGlTextureProcessor
     </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/interface[@name='RgbMatrix']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/interface[@name='ColorLut']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/interface[@name='GlMatrixTransformation']/method[@name='toGlTextureProcessor' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Effect.IGlTextureProcessor
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='Contrast']/field[@name='contrast']"
+        name="managedName"
+        >
+        ContrastField
+    </attr>
+
 
 </metadata>

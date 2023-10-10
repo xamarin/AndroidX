@@ -1,3 +1,13 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BasePlayer']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/class/method[@name='addMediaItems']"
+        />
 
 </metadata>
