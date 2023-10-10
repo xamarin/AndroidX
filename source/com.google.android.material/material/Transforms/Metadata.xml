@@ -255,4 +255,11 @@
       path="/api/package[@name='com.google.android.material.sidesheet']/class[@name='SideSheetBehavior']/implements"
       />
 
+    <attr
+      path="/api/package[@name='com.google.android.material.button']/class[@name='MaterialButton.InspectionCompanion']/method[@name='readProperties' and count(parameter)=2 and parameter[1][@type='com.google.android.material.button.MaterialButton'] and parameter[2][@type='android.view.inspector.PropertyReader']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+    </attr>
+
  </metadata>
