@@ -38,5 +38,117 @@
     <remove-node
         path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/method[@name='getExtrapolating' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='float']]"
         />
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='addMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]"
+        name="abstract"
+        >
+        false
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='BasePlayer']/method[@name='addMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='BasePlayer']/method[@name='addMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='ForwardingPlayer']/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='ForwardingPlayer']/method[@name='addMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='SimpleBasePlayer']/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='setMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='setMediaItems' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='setMediaItems' and count(parameter)=3 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='BasePlayer']/method[@name='setMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='SimpleBasePlayer']/method[@name='setMediaItems' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='ForwardingPlayer']/method[@name='setMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='ForwardingPlayer']/method[@name='setMediaItems' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='SimpleBasePlayer']/method[@name='setMediaItems' and count(parameter)=3 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='SimpleBasePlayer']/method[@name='handleSetMediaItems' and count(parameter)=3 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/class[@name='ForwardingPlayer']/method[@name='setMediaItems' and count(parameter)=3 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[1]"
+        name="type"
+        >
+        java.util.List
+    </attr>
 
 </metadata>
