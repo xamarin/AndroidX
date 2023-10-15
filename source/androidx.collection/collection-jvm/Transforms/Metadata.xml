@@ -1,0 +1,32 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.collection']/class[@name='ArraySet']/method[@name='containsAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.collection']/class[@name='ArraySet']/method[@name='removeAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.collection']/class[@name='ArraySet']/method[@name='retainAll' and count(parameter)=1 and parameter[1][@type='java.util.Collection&lt;? extends java.lang.Object&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.ICollection
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.collection']/class[@name='ArraySet']/method[@name='getSize' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+
+    <attr 
+        path="/api/package[@name='androidx.collection']/class[@name='ArrayMap']/method[@name='entrySet' and count(parameter)=0]"
+        name="managedName"
+        >
+        _EntrySet
+    </attr>
+
+</metadata>
