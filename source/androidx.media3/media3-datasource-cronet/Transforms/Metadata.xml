@@ -19,5 +19,23 @@
         AndroidX.Media3.DataSource.IHttpDataSourceFactory
     </attr>
 
-
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetDataSource']"
+        name="managedName"
+        >
+        CroNetDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetUtil']"
+        name="managedName"
+        >
+        CroNetUtil
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetEngineWrapper']"
+        name="managedName"
+        >
+        CroNetEngineWrapper
+    </attr>
+    
 </metadata>
