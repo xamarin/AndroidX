@@ -197,5 +197,7 @@
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
+    <AndroidNamespaceReplacement Include='datasource' Replacement='DataSource' />
+    <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
   </ItemGroup>
 </Project>
