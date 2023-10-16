@@ -5,9 +5,11 @@
         >
         public
     </attr>
-
-    <remove-node
-        path="/api/package[@name='androidx.media3.exoplayer']/class/method[@name='addMediaItems']"
-        />
-
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='Renderer']/method[@name='getName' and count(parameter)=0]"
+        name="managedName"
+        >
+        NameRenderer
+    </attr>
+    
 </metadata>
