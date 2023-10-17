@@ -1,8 +1,8 @@
 **Xamarin is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may require or install dependencies which are governed by additional licenses.**
 
-Note: This component depends on ReactiveX [RxJava](https://github.com/ReactiveX/RxJava) which is subject to the [Apache 2.0](https://github.com/ReactiveX/RxJava/blob/2.x/LICENSE) and ReactiveX [RxAndroid](https://github.com/ReactiveX/RxAndroid) which are subject to the [Apache 2.0](https://github.com/ReactiveX/RxAndroid/blob/2.x/LICENSE)
+Note: This component depends on Google Tink [Google Tink](https://github.com/google/tink) which is subject to the [Apache 2.0](https://github.com/ReactiveX/RxJava/blob/2.x/LICENSE)
 
-### Xamarin Component for ReactiveX RxJava and RxAndroid for Xamarin.Android
+### Xamarin Component for Google Tink for Xamarin.Android
 
 **The MIT License (MIT)**
 
