@@ -5,11 +5,124 @@
         >
         public
     </attr>
+    <!--
     <attr
         path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='Renderer']/method[@name='getName' and count(parameter)=0]"
         name="managedName"
         >
         NameRenderer
     </attr>
-    
-</metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']/method[@name='getName' and count(parameter)=0]"
+        name="managedName"
+        >
+        NameRenderer
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='TextRenderer']/method[@name='getName' and count(parameter)=0]"
+        name="managedName"
+        >
+        NameRenderer
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.audio']/class[@name='MediaCodecAudioRenderer']/method[@name='getName' and count(parameter)=0]"
+        name="managedName"
+        >
+        NameRenderer
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.video.spherical']/class[@name='CameraMotionRenderer']/method[@name='getName' and count(parameter)=0]"
+        name="managedName"
+        >
+        NameRenderer
+    </attr>        
+    -->
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']/method[@name='getName' and count(parameter)=0]"
+        name="abstract"
+        >
+        false
+    </attr>        
+
+
+
+    <attr
+        path="/api/package/class/method[@name='queueInputBuffer' and count(parameter)=1]/parameter[1]"    
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package/interface/method[@name='queueInputBuffer' and count(parameter)=1]/parameter[1]"    
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package/class/method[@name='dequeueInputBuffer' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package/intetface/method[@name='dequeueInputBuffer' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package/class/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package/interface/method[@name='setLoadErrorHandlingPolicy' and count(parameter)=1]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSourceFactory
+    </attr>
+    <attr
+        path="/api/package/class/method[@name='setLoadErrorHandlingPolicy' and count(parameter)=1]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSourceFactory
+    </attr>
+    <attr
+        path="/api/package/interface/method[@name='setDrmSessionManagerProvider' and count(parameter)=1]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSourceFactory
+    </attr>
+    <attr
+        path="/api/package/class/method[@name='setDrmSessionManagerProvider' and count(parameter)=1]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSourceFactory
+    </attr>
+    <attr
+        path="/api/package/interface/method[@name='CreateMediaSource' and count(parameter)=1]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSource
+    </attr>
+    <attr
+        path="/api/package/class/method[@name='CreateMediaSource' and count(parameter)=1]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSource
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/interface[@name='MediaSource.Factory']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='LoopingMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MaskingMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink']"
+        />
+
+    </metadata>
