@@ -49,12 +49,16 @@ AndroidX.Camera.Camera2.Internal.Annotation
 AndroidX.Camera.Camera2.Internal.Compat
 AndroidX.Camera.Camera2.Internal.Compat.Quirk
 AndroidX.Camera.Camera2.Internal.Compat.Workaround
+AndroidX.Camera.Camera2.Internal.Concurrent
 AndroidX.Camera.Camera2.InterOp
 AndroidX.Camera.Camera2Internal.Compat.Params
 AndroidX.Camera.Core
+AndroidX.Camera.Core.Concurrent
 AndroidX.Camera.Core.ImageCaptures
 AndroidX.Camera.Core.Impl
 AndroidX.Camera.Core.Impl.Annotation
+AndroidX.Camera.Core.Impl.Compat
+AndroidX.Camera.Core.Impl.Quirk
 AndroidX.Camera.Core.Impl.Utils
 AndroidX.Camera.Core.Impl.Utils.Executors
 AndroidX.Camera.Core.Impl.Utils.Futures
@@ -63,6 +67,8 @@ AndroidX.Camera.Core.Internal.Compat.Quirk
 AndroidX.Camera.Core.Internal.Compat.Workaround
 AndroidX.Camera.Core.Internal.Utils
 AndroidX.Camera.Core.Processing
+AndroidX.Camera.Core.Resolutionselector
+AndroidX.Camera.Core.Streamsharing
 AndroidX.Camera.Extensions
 AndroidX.Camera.Extensions.Internal
 AndroidX.Camera.Extensions.Internal.Compat.Quirk
@@ -71,6 +77,7 @@ AndroidX.Camera.Lifecycle
 AndroidX.Camera.Video
 AndroidX.Camera.Video.Impl
 AndroidX.Camera.Video.Internal
+AndroidX.Camera.Video.Internal.Audio
 AndroidX.Camera.Video.Internal.Compat
 AndroidX.Camera.Video.Internal.Compat.Quirk
 AndroidX.Camera.Video.Internal.Configs
