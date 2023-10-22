@@ -819,4 +819,96 @@
     </add-node>
 
 
+
+    <add-node
+        path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPssPrivateKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="com.google.crypto.tink.Key" name="getPublicKey"
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            synchronized="false" synthetic="false" 
+            />
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPssPublicKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="com.google.crypto.tink.Parameters" name="getParameters"
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            synchronized="false" synthetic="false" 
+            />
+    </add-node>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtSignaturePrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtSignaturePrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtSignaturePublicKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtSignaturePrivateKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='EciesPublicKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='HpkePublicKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.keyderivation']/class[@name='PrfBasedKeyDerivationKey']/method[@name='getParameters' and count(parameter)=0]"        
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.keyderivation']/class[@name='KeyDerivationKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtEcdsaPublicKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtEcdsaPrivateKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='HpkePrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtEcdsaPrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
 </metadata>
