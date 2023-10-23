@@ -197,5 +197,7 @@
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
+    <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
+    <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
   </ItemGroup>
 </Project>
