@@ -16,4 +16,11 @@
         path="/api/package[@name='androidx.camera.extensions.internal.sessionprocessor']"
         />
 
+    <attr
+        path="/api/package[@name='androidx.camera.extensions.internal']/class[@name='ImageAnalysisConfigProvider']/method[@name='getConfig' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
 </metadata>

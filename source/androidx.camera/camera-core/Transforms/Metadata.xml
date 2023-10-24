@@ -93,8 +93,33 @@
         >
         public
     </attr>
-
     <remove-node 
         path="/api/package[@name='androidx.camera.core.processing']/interface[@name='Node']/typeParameters"
         />
+
+    <attr
+        path="/api/package[@name='androidx.camera.core.streamsharing']/class[@name='StreamSharing']/method[@name='getSupportedEffectTargets' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core']/class[@name='ImageCapture']/method[@name='getSupportedEffectTargets' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core']/class[@name='Preview']/method[@name='getSupportedEffectTargets' and count(parameter)=0]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core.impl.utils']/class[@name='AspectRatioUtil.CompareAspectRatiosByMappingAreaInFullFovAspectRatioSpace']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='android.util.Rational'] and parameter[2][@type='android.util.Rational']]/parameter"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
 </metadata>
