@@ -562,7 +562,7 @@
         KeyFormatData
     </attr>
 
-
+    <!-- 
     <attr
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='SignaturePrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
         name="managedReturn"
@@ -579,6 +579,7 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    -->
 
     <attr
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='SignaturePrivateKey']/method[@name='getParameters' and count(parameter)=0]"
@@ -593,6 +594,7 @@
         Xamarin.Google.Crypto.Tink.Parameters
     </attr>
 
+    <!-- 
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='EcdsaPublicKey']"
         >
@@ -601,7 +603,8 @@
             deprecated="not deprecated" final="false" bridge="false" native="false" 
             synchronized="false" synthetic="false" 
             />
-    </add-node>
+    </add-node>        
+    -->
     <attr
         path="/api/package[@name='com.google.crypto.tink.aead']/class[@name='XChaCha20Poly1305Key']/method[@name='getParameters' and count(parameter)=0]"
         name="managedReturn"
@@ -679,7 +682,13 @@
         >
         Xamarin.Google.Crypto.Tink.Parameters
     </attr>
-
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='HybridPrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <!-- 
     <add-node
         path="/api/package[@name='com.google.crypto.tink.streamingaead']/class[@name='AesGcmHkdfStreamingKey']"
         >
@@ -707,12 +716,6 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
-    <attr
-        path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='HybridPrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
-        name="managedReturn"
-        >
-        Xamarin.Google.Crypto.Tink.Key
-    </attr>
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPkcs1PrivateKey']"
         >
@@ -722,9 +725,6 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
-
-
-
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='Ed25519PrivateKey']"
         >
@@ -743,6 +743,7 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    -->
     <attr
         path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='HybridPrivateKey']/method[@name='getParameters' and count(parameter)=0]"
         name="managedReturn"
@@ -798,7 +799,7 @@
         Xamarin.Google.Crypto.Tink.Parameters
     </attr>
 
-
+    <!-- 
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='Ed25519PrivateKey']"
         >
@@ -816,9 +817,7 @@
             deprecated="not deprecated" final="false" bridge="false" native="false"  
             synchronized="false" synthetic="false" 
             />
-    </add-node>
-
-
+    </add-node>        
 
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPssPrivateKey']"
@@ -838,6 +837,7 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    -->
     <attr
         path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtSignaturePrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
         name="managedReturn"
@@ -911,4 +911,20 @@
         >
         Xamarin.Google.Crypto.Tink.Key
     </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='SignaturePrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <add-node
+        path="/api/package[@name='com.google.crypto.tink.prf']/class[@name='PrfKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="true" return="com.google.crypto.tink.Parameters" name="getParameters"
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            synchronized="false" synthetic="false" 
+            />
+    </add-node>
+
 </metadata>
