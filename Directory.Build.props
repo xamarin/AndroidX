@@ -199,5 +199,7 @@
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
     <AndroidNamespaceReplacement Include='datasource' Replacement='DataSource' />
     <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
+    <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
+    <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
   </ItemGroup>
 </Project>
