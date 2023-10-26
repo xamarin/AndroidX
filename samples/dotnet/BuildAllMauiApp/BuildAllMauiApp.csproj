@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android</TargetFrameworks>
+		<TargetFramework>net8.0-android</TargetFramework>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -46,7 +46,7 @@
 	</ItemGroup>
 
 	<Import 
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('net8.0-android')) == true"
 		Project="..\..\..\output\AllPackages.targets" 
 		/>
 
@@ -63,7 +63,7 @@
 	[./samples/dotnet/BuildAllMauiApp.sln]
 	-->
 	<ItemGroup
-		Condition="$(TargetFramework.StartsWith('net6.0-android')) == true"
+		Condition="$(TargetFramework.StartsWith('net8.0-android')) == true"
 		>
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0.1-alpha06]" />
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.1-alpha06]" />

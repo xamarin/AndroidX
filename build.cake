@@ -762,11 +762,10 @@ Task("samples-only")
 
     string[] solutions = new string[]
     {
-        "./samples/BuildAll/BuildAll.sln",
         "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
         "./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
-        //"./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
-        //"./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+        // "./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
+        // "./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
     };
 
     foreach(string solution in solutions)
