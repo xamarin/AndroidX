@@ -2132,8 +2132,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "31.1-android",
-        "nugetVersion": "31.1.0.10",
+        "version": "32.0.1-android",
+        "nugetVersion": "32.0.1",
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
@@ -2462,8 +2462,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.20.0",
-        "nugetVersion": "2.20.0.1",
+        "version": "2.21.1",
+        "nugetVersion": "2.21.1",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
