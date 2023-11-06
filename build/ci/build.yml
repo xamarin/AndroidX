@@ -11,7 +11,7 @@ parameters:
   # Tool Parameters
   dotnetVersion: '8.0.100-rc.2.23502.2'                     # the version of .NET to use
   dotnetWorkloadRollbackFile: 'workloads.json'
-  dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'
+  dotnetWorkloadSource: 'https://api.nuget.org/v3/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
   classicXAPkg:  https://aka.ms/xamarin-android-commercial-d17-4-macos
   classicXAVsix: https://aka.ms/xamarin-android-commercial-d17-4-windows
