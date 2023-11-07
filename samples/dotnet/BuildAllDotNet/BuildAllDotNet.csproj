@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-android;net7.0-android</TargetFramework>
+    <TargetFrameworks>net6.0-android;net7.0-android</TargetFrameworks>
     
     <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
     <SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
