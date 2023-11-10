@@ -97,10 +97,10 @@
 |  90|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.21            |
 |  91|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.20            |
 |  92|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0.7             |
-|  93|androidx.databinding:databinding-adapters                             |8.1.2               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |8.1.2.1             |
-|  94|androidx.databinding:databinding-common                               |8.1.2               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |8.1.2.1             |
-|  95|androidx.databinding:databinding-runtime                              |8.1.2               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |8.1.2.1             |
-|  96|androidx.databinding:viewbinding                                      |8.1.2               |Xamarin.AndroidX.DataBinding.ViewBinding                              |8.1.2.1             |
+|  93|androidx.databinding:databinding-adapters                             |8.1.3               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |8.1.3               |
+|  94|androidx.databinding:databinding-common                               |8.1.3               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |8.1.3               |
+|  95|androidx.databinding:databinding-runtime                              |8.1.3               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |8.1.3               |
+|  96|androidx.databinding:viewbinding                                      |8.1.3               |Xamarin.AndroidX.DataBinding.ViewBinding                              |8.1.3               |
 |  97|androidx.datastore:datastore                                          |1.0.0               |Xamarin.AndroidX.DataStore                                            |1.0.0.2             |
 |  98|androidx.datastore:datastore-core                                     |1.0.0               |Xamarin.AndroidX.DataStore.Core                                       |1.0.0.2             |
 |  99|androidx.datastore:datastore-preferences                              |1.0.0               |Xamarin.AndroidX.DataStore.Preferences                                |1.0.0.2             |
@@ -260,7 +260,7 @@
 | 253|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.8             |
 | 254|com.google.auto.value:auto-value-annotations                          |1.10.4              |Xamarin.Google.AutoValue.Annotations                                  |1.10.4.1            |
 | 255|com.google.code.gson:gson                                             |2.10.1              |GoogleGson                                                            |2.10.1.6            |
-| 256|com.google.crypto.tink:tink-android                                   |1.10.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.10.0.2            |
+| 256|com.google.crypto.tink:tink-android                                   |1.11.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.11.0              |
 | 257|com.google.flogger:flogger                                            |0.8                 |Xamarin.Flogger                                                       |0.8.0               |
 | 258|com.google.flogger:flogger-system-backend                             |0.8                 |Xamarin.Flogger.SystemBackend                                         |0.8.0               |
 | 259|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2               |
