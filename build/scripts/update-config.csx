@@ -1,8 +1,8 @@
 #! "net6.0"
 
-#r "nuget: MavenNet, 2.2.13"
-#r "nuget: Newtonsoft.Json, 13.0.1"
-#r "nuget: NuGet.Versioning, 5.11.0"
+#r "nuget: MavenNet, 2.2.14"
+#r "nuget: Newtonsoft.Json, 13.0.3"
+#r "nuget: NuGet.Versioning, 6.7.0"
 
 // Usage:
 //   dotnet tool install -g dotnet-script
