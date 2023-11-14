@@ -926,5 +926,47 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.hybrid']/class[@name='EciesPrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtRsaSsaPkcs1PublicKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtRsaSsaPssPublicKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtRsaSsaPssPrivateKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.jwt']/class[@name='JwtRsaSsaPssPrivateKey']/method[@name='getPublicKey' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Key
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.aead']/class[@name='LegacyKmsEnvelopeAeadKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.crypto.tink.aead']/class[@name='LegacyKmsAeadKey']/method[@name='getParameters' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Crypto.Tink.Parameters
+    </attr>
 
 </metadata>
