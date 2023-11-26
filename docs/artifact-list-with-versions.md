@@ -5,9 +5,9 @@
 
 |    |                                                                      |                    |                                                                      |                    |
 |----|----------------------------------------------------------------------|--------------------|----------------------------------------------------------------------|--------------------|
-|   1|androidx.activity:activity                                            |1.8.0               |Xamarin.AndroidX.Activity                                             |1.8.0.1             |
-|   2|androidx.activity:activity-compose                                    |1.8.0               |Xamarin.AndroidX.Activity.Compose                                     |1.8.0.1             |
-|   3|androidx.activity:activity-ktx                                        |1.8.0               |Xamarin.AndroidX.Activity.Ktx                                         |1.8.0.1             |
+|   1|androidx.activity:activity                                            |1.8.1               |Xamarin.AndroidX.Activity                                             |1.8.1               |
+|   2|androidx.activity:activity-compose                                    |1.8.1               |Xamarin.AndroidX.Activity.Compose                                     |1.8.1               |
+|   3|androidx.activity:activity-ktx                                        |1.8.1               |Xamarin.AndroidX.Activity.Ktx                                         |1.8.1               |
 |   4|androidx.ads:ads-identifier                                           |1.0.0-alpha05       |Xamarin.AndroidX.Ads.Identifier                                       |1.0.0.20-alpha05    |
 |   5|androidx.ads:ads-identifier-common                                    |1.0.0-alpha05       |Xamarin.AndroidX.Ads.IdentifierCommon                                 |1.0.0.20-alpha05    |
 |   6|androidx.ads:ads-identifier-provider                                  |1.0.0-alpha05       |Xamarin.AndroidX.Ads.IdentifierProvider                               |1.0.0.20-alpha05    |
@@ -21,7 +21,7 @@
 |  14|androidx.asynclayoutinflater:asynclayoutinflater                      |1.0.0               |Xamarin.AndroidX.AsyncLayoutInflater                                  |1.0.0.21            |
 |  15|androidx.autofill:autofill                                            |1.1.0               |Xamarin.AndroidX.AutoFill                                             |1.1.0.20            |
 |  16|androidx.biometric:biometric                                          |1.1.0               |Xamarin.AndroidX.Biometric                                            |1.1.0.17            |
-|  17|androidx.browser:browser                                              |1.6.0               |Xamarin.AndroidX.Browser                                              |1.6.0.2             |
+|  17|androidx.browser:browser                                              |1.7.0               |Xamarin.AndroidX.Browser                                              |1.7.0               |
 |  18|androidx.camera:camera-camera2                                        |1.3.0               |Xamarin.AndroidX.Camera.Camera2                                       |1.3.0               |
 |  19|androidx.camera:camera-core                                           |1.3.0               |Xamarin.AndroidX.Camera.Core                                          |1.3.0               |
 |  20|androidx.camera:camera-extensions                                     |1.3.0               |Xamarin.AndroidX.Camera.Extensions                                    |1.3.0               |
@@ -97,10 +97,10 @@
 |  90|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.21            |
 |  91|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.20            |
 |  92|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0.7             |
-|  93|androidx.databinding:databinding-adapters                             |8.1.3               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |8.1.3               |
-|  94|androidx.databinding:databinding-common                               |8.1.3               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |8.1.3               |
-|  95|androidx.databinding:databinding-runtime                              |8.1.3               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |8.1.3               |
-|  96|androidx.databinding:viewbinding                                      |8.1.3               |Xamarin.AndroidX.DataBinding.ViewBinding                              |8.1.3               |
+|  93|androidx.databinding:databinding-adapters                             |8.1.4               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |8.1.4               |
+|  94|androidx.databinding:databinding-common                               |8.1.4               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |8.1.4               |
+|  95|androidx.databinding:databinding-runtime                              |8.1.4               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |8.1.4               |
+|  96|androidx.databinding:viewbinding                                      |8.1.4               |Xamarin.AndroidX.DataBinding.ViewBinding                              |8.1.4               |
 |  97|androidx.datastore:datastore                                          |1.0.0               |Xamarin.AndroidX.DataStore                                            |1.0.0.2             |
 |  98|androidx.datastore:datastore-core                                     |1.0.0               |Xamarin.AndroidX.DataStore.Core                                       |1.0.0.2             |
 |  99|androidx.datastore:datastore-preferences                              |1.0.0               |Xamarin.AndroidX.DataStore.Preferences                                |1.0.0.2             |
@@ -234,11 +234,11 @@
 | 227|androidx.wear.watchface:watchface-guava                               |1.1.1               |Xamarin.AndroidX.Wear.WatchFace.Guava                                 |1.1.1.5             |
 | 228|androidx.wear.watchface:watchface-style                               |1.1.1               |Xamarin.AndroidX.Wear.WatchFace.Style                                 |1.1.1.5             |
 | 229|androidx.webkit:webkit                                                |1.8.0               |Xamarin.AndroidX.WebKit                                               |1.8.0.2             |
-| 230|androidx.window:window                                                |1.1.0               |Xamarin.AndroidX.Window                                               |1.1.0.3             |
+| 230|androidx.window:window                                                |1.2.0               |Xamarin.AndroidX.Window                                               |1.2.0               |
 | 231|androidx.window:window-extensions                                     |1.0.0-alpha01       |Xamarin.AndroidX.Window.WindowExtensions                              |1.0.0.16-alpha01    |
-| 232|androidx.window:window-java                                           |1.1.0               |Xamarin.AndroidX.Window.WindowJava                                    |1.1.0.3             |
-| 233|androidx.window:window-rxjava2                                        |1.1.0               |Xamarin.AndroidX.Window.WindowRxJava2                                 |1.1.0.3             |
-| 234|androidx.window:window-rxjava3                                        |1.1.0               |Xamarin.AndroidX.Window.WindowRxJava3                                 |1.1.0.3             |
+| 232|androidx.window:window-java                                           |1.2.0               |Xamarin.AndroidX.Window.WindowJava                                    |1.2.0               |
+| 233|androidx.window:window-rxjava2                                        |1.2.0               |Xamarin.AndroidX.Window.WindowRxJava2                                 |1.2.0               |
+| 234|androidx.window:window-rxjava3                                        |1.2.0               |Xamarin.AndroidX.Window.WindowRxJava3                                 |1.2.0               |
 | 235|androidx.window.extensions.core:core                                  |1.0.0               |Xamarin.AndroidX.Window.Extensions.Core.Core                          |1.0.0.3             |
 | 236|androidx.work:work-runtime                                            |2.8.1               |Xamarin.AndroidX.Work.Runtime                                         |2.8.1.5             |
 | 237|androidx.work:work-runtime-ktx                                        |2.8.1               |Xamarin.AndroidX.Work.Work.Runtime.Ktx                                |2.8.1.5             |
@@ -277,7 +277,7 @@
 | 270|io.reactivex.rxjava3:rxkotlin                                         |3.0.1               |Xamarin.Android.ReactiveX.RxJava3.RxKotlin                            |3.0.1.7             |
 | 271|org.checkerframework:checker-compat-qual                              |2.5.6               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.6               |
 | 272|org.checkerframework:checker-qual                                     |3.40.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.40.0              |
-| 273|org.jetbrains:annotations                                             |24.0.1              |Xamarin.Jetbrains.Annotations                                         |24.0.1.5            |
+| 273|org.jetbrains:annotations                                             |24.1.0              |Xamarin.Jetbrains.Annotations                                         |24.1.0              |
 | 274|org.jetbrains.kotlin:kotlin-reflect                                   |1.9.20              |Xamarin.Kotlin.Reflect                                                |1.9.20              |
 | 275|org.jetbrains.kotlin:kotlin-stdlib                                    |1.9.20              |Xamarin.Kotlin.StdLib                                                 |1.9.20              |
 | 276|org.jetbrains.kotlin:kotlin-stdlib-common                             |1.9.20              |Xamarin.Kotlin.StdLib.Common                                          |1.9.20              |

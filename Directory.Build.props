@@ -196,5 +196,6 @@
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
   </ItemGroup>
 </Project>
