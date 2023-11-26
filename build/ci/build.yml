@@ -9,7 +9,7 @@ parameters:
   windowsImage: 'windows-latest'                            # the name of the Windows VM image
 
   # Tool Parameters
-  dotnetVersion: '7.0.306'                                  # the version of .NET to use
+  dotnetVersion: '7.0.403'                                  # the version of .NET to use
   dotnetWorkloadRollbackFile: 'workloads.json'
   dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
@@ -19,7 +19,7 @@ parameters:
   
   tools:                                                    # a list of additional .NET global tools needed
   - 'xamarin.androidbinderator.tool': '0.5.7'
-  - 'Cake.Tool': '3.1.0'
+  - 'Cake.Tool': '3.2.0'
   - 'boots': '1.1.0.712-preview2'
   - 'api-tools': '1.3.5'
 

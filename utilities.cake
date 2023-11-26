@@ -6,7 +6,7 @@
  */
 #addin nuget:?package=WeCantSpell.Hunspell&version=4.0.0
 #addin nuget:?package=Newtonsoft.Json&version=13.0.3
-#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Cake.FileHelpers&version=6.1.3
 #addin nuget:?package=Mono.Cecil&version=0.11.5
 
 #addin nuget:?package=HolisticWare.Xamarin.Tools.ComponentGovernance&version=0.0.1.4
@@ -1216,7 +1216,7 @@ Task("generate-markdown-publish-log")
                 Error("No log file found");
                 Error($"     save ci log to {ci_publish_log_file}");
 
-                FileWriteText
+                System.IO.File.WriteAllText
                         (
                             ci_publish_log_file,
                             $"dotnet cake utilities.cake -t=generate-markdown-publish-log"
@@ -1715,6 +1715,7 @@ Task("java-resolution-analysis")
 
             string dir = "output/java-resolution-analysis";
             EnsureDirectoryExists(dir);
+            EnsureDirectoryExists($"{dir}/net7.0-android");
             EnsureDirectoryExists($"{dir}/net6.0-android");
             EnsureDirectoryExists($"{dir}/monoandroid12.0");
 
@@ -1755,6 +1756,23 @@ Task("java-resolution-analysis")
                                                 >
                                     >();
 
+            java_resolution_analysis.TryAdd
+                                        (
+                                            "net7.0-android", 
+                                            new ConcurrentDictionary
+                                                        <
+                                                            string, 
+                                                            Dictionary
+                                                            <
+                                                                string, 
+                                                                (
+                                                                    string[] lines,                         // lines
+                                                                    Dictionary<string, int> types,          // types
+                                                                    Dictionary<string, int> types_filtered  // types
+                                                                )
+                                                            >
+                                                        >()
+                                        );
             java_resolution_analysis.TryAdd
                                         (
                                             "net6.0-android", 

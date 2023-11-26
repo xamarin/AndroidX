@@ -570,4 +570,105 @@
     SetFileSizeLimitReturnJavaLangObject
   </attr>
 
+
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setHighResolutionDisabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setCaptureType' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.impl.UseCaseConfigFactory.CaptureType']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setResolutionSelector' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.resolutionselector.ResolutionSelector']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='MimeInfo.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioEncoderConfigAudioProfileResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioSettingsAudioProfileResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='VideoMimeInfo.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioMimeInfo.Builder']/method[@name='build' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioSettingsDefaultResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setMirrorMode' and count(parameter)=1 and parameter[1][@type='int']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setCustomOrderedResolutions' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;android.util.Size&gt;']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setDynamicRange' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.DynamicRange']]"
+    name="managedReturn" 
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture.Builder']/method[@name='setDynamicRange' and count(parameter)=1 and parameter[1][@type='androidx.camera.core.DynamicRange']]"
+    name="managedReturn" 
+    >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='VideoEncoderConfigVideoProfileResolver']/method[@name='get' and count(parameter)=0]"
+    name="managedReturn" 
+  >
+    Java.Lang.Object
+  </attr>
+  
+  <remove-node
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='VideoMimeInfo.Builder']/method[@name='build' and count(parameter)=0]"
+    />
+  <attr
+    path="/api/package[@name='androidx.camera.video']/class[@name='VideoCapture']/method[@name='getSupportedEffectTargets' and count(parameter)=0]"
+    name="visibility"
+    >
+    protected
+  </attr>
+  <remove-node
+    path="/api/package[@name='androidx.camera.video.internal.config']/class[@name='AudioMimeInfo.Builder']/method[@name='build' and count(parameter)=0]"
+    />
+  <remove-node
+    path="/api/package[@name='androidx.camera.video.internal']/class[@name='VideoValidatedEncoderProfilesProxy']"
+    />
 </metadata>

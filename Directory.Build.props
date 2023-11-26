@@ -6,7 +6,7 @@
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android;net7.0-android</_DefaultTargetFrameworks>
 
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
@@ -43,14 +43,17 @@
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="build\net6.0-android31.0" />
+    <AndroidXNuGetTargetFolders Include="build\net7.0-android33.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
+    <AndroidXNuGetTargetFolders Include="buildTransitive\net7.0-android33.0" />
   </ItemGroup>
 
   <!-- Folders that _._ files need to go into for packages without managed libraries -->
   <ItemGroup>
     <AndroidXNuGetLibFolders Include="lib\monoandroid12.0" />
     <AndroidXNuGetLibFolders Include="lib\net6.0-android31.0" />
+    <AndroidXNuGetLibFolders Include="lib\net7.0-android33.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -197,5 +200,8 @@
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
+    <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
+    <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
   </ItemGroup>
 </Project>

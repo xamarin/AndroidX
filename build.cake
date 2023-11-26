@@ -1,8 +1,11 @@
 // Tools needed by cake addins
 #tool nuget:?package=vswhere&version=3.1.4
 
+#tool nuget:?package=Cake.CoreCLR
+#tool nuget:?package=vswhere&version=3.1.7
+
 // Cake Addins
-#addin nuget:?package=Cake.FileHelpers&version=5.0.0
+#addin nuget:?package=Cake.FileHelpers&version=6.1.3
 #addin nuget:?package=Newtonsoft.Json&version=13.0.3
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=30.0.1
