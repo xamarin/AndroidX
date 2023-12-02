@@ -746,6 +746,22 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.credentials",
+        "artifactId": "credentials",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
+        "nugetId": "Xamarin.AndroidX.Credentials",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.credentials",
+        "artifactId": "credentials-play-services-auth",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
+        "nugetId": "Xamarin.AndroidX.Credentials.PlayServicesAuth",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.cursoradapter",
         "artifactId": "cursoradapter",
         "version": "1.0.0",
@@ -1392,6 +1408,14 @@
         "nugetVersion": "1.0.0.22",
         "nugetId": "Xamarin.AndroidX.Print",
         "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.privacysandbox.ads",
+        "artifactId": "ads-adservices-java",
+        "version": "1.0.0-beta05",
+        "nugetVersion": "1.0.0-beta05",
+        "nugetId": "Xamarin.AndroidX.PrivacySandbox.Ads.AdsServices.Java",
+        "dependencyOnly": true
       },
       {
         "groupId": "androidx.profileinstaller",
@@ -2429,10 +2453,26 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-auth",
+        "version": "20.7.0",
+        "nugetVersion": "120.7.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Auth",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "18.2.0",
         "nugetVersion": "118.2.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-fido",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0",
+        "nugetId": "v",
         "dependencyOnly": true
       },
       {
