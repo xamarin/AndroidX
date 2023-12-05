@@ -38,14 +38,29 @@ if (!nupkgs.Any()) {
 				.Append("--prerelease")
 				.Append("--group-ids")
 				.Append("--ignore-unchanged")
+				.Append("--compare-nuget-structure")
 				.AppendSwitchQuoted("--output", OUTPUT_DIR.FullPath)
 				.AppendSwitchQuoted("--cache", CACHE_DIR.Combine("package-cache").FullPath)
 		});
 		if (exitCode != 0)
-			throw new Exception ($"api-tools exited with error code {exitCode}.");
+			throw new Exception ($"api-tools exited with error code {exitCode} ({nupkg.FullPath}).");
 	});
 }
 
+// SECTION: Create combined nuget-diff.md
+
+var nu_diffs = GetFiles($"{OUTPUT_DIR.FullPath}/**/nuget-diff.md");
+
+if (nu_diffs.Any()) {
+  using (var output = System.IO.File.Create(System.IO.Path.Combine(OUTPUT_DIR.FullPath, "all-nuget-diffs.md"))) {
+    foreach (var file in nu_diffs) {
+      using (var input = System.IO.File.OpenRead(file.FullPath)) {
+          input.CopyTo(output);
+          Console.WriteLine();
+      }
+    }
+  }
+}
 
 // SECTION: Upload Diffs
 
