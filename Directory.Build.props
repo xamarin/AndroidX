@@ -209,6 +209,10 @@
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
-    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
+    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
+    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
+    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
+    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
+
   </ItemGroup>
 </Project>
