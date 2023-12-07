@@ -762,14 +762,6 @@
         "dependencyOnly": false
       },
       {
-        "groupId": "androidx.credentials",
-        "artifactId": "credentials-play-services-auth",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
-        "nugetId": "Xamarin.AndroidX.Credentials.PlayServicesAuth",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "androidx.customview",
         "artifactId": "customview",
         "version": "1.1.0",
@@ -2445,26 +2437,10 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-auth",
-        "version": "20.7.0",
-        "nugetVersion": "120.7.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Auth",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
         "version": "18.2.0",
         "nugetVersion": "118.2.0.4",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-fido",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
-        "nugetId": "Xamarin.GooglePlayServices.Fido",
         "dependencyOnly": true
       },
       {
