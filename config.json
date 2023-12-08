@@ -772,32 +772,32 @@
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-adapters",
-        "version": "8.1.4",
-        "nugetVersion": "8.1.4.1",
+        "version": "8.2.0",
+        "nugetVersion": "8.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-common",
-        "version": "8.1.4",
-        "nugetVersion": "8.1.4.1",
+        "version": "8.2.0",
+        "nugetVersion": "8.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "databinding-runtime",
-        "version": "8.1.4",
-        "nugetVersion": "8.1.4.1",
+        "version": "8.2.0",
+        "nugetVersion": "8.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.databinding",
         "artifactId": "viewbinding",
-        "version": "8.1.4",
-        "nugetVersion": "8.1.4.1",
+        "version": "8.2.0",
+        "nugetVersion": "8.2.0",
         "nugetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
         "dependencyOnly": false
       },
@@ -1180,8 +1180,8 @@
       {
         "groupId": "androidx.media",
         "artifactId": "media",
-        "version": "1.6.0",
-        "nugetVersion": "1.6.0.9",
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0",
         "nugetId": "Xamarin.AndroidX.Media",
         "dependencyOnly": false
       },
@@ -1436,48 +1436,48 @@
       {
         "groupId": "androidx.room",
         "artifactId": "room-common",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.1",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
         "nugetId": "Xamarin.AndroidX.Room.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-guava",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.1",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
         "nugetId": "Xamarin.AndroidX.Room.Guava",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-ktx",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.1",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-runtime",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.1",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
         "nugetId": "Xamarin.AndroidX.Room.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava2",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.1",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava2",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.room",
         "artifactId": "room-rxjava3",
-        "version": "2.6.0",
-        "nugetVersion": "2.6.0.1",
+        "version": "2.6.1",
+        "nugetVersion": "2.6.1",
         "nugetId": "Xamarin.AndroidX.Room.Room.RxJava3",
         "dependencyOnly": false
       },
@@ -1572,8 +1572,8 @@
       {
         "groupId": "androidx.tracing",
         "artifactId": "tracing",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.9",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Tracing.Tracing",
         "dependencyOnly": false
       },
@@ -1776,96 +1776,96 @@
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-client",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Client",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-client-guava",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.ClientGuava",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-complications",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-complications-data",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-complications-data-source",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data.Source",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-complications-data-source-ktx",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Data.Source.Ktx",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-complications-rendering",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Complications.Rendering",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-data",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Data",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-guava",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Guava",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.wear.watchface",
         "artifactId": "watchface-style",
-        "version": "1.1.1",
-        "nugetVersion": "1.1.1.6",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Wear.WatchFace.Style",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.webkit",
         "artifactId": "webkit",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0.3",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.AndroidX.WebKit",
         "dependencyOnly": false
       },
@@ -1920,16 +1920,16 @@
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime",
-        "version": "2.8.1",
-        "nugetVersion": "2.8.1.6",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
         "nugetId": "Xamarin.AndroidX.Work.Runtime",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.work",
         "artifactId": "work-runtime-ktx",
-        "version": "2.8.1",
-        "nugetVersion": "2.8.1.6",
+        "version": "2.9.0",
+        "nugetVersion": "2.9.0",
         "nugetId": "Xamarin.AndroidX.Work.Work.Runtime.Ktx",
         "dependencyOnly": false
       },
@@ -2096,8 +2096,8 @@
       {
         "groupId": "com.google.crypto.tink",
         "artifactId": "tink-android",
-        "version": "1.11.0",
-        "nugetVersion": "1.11.0.1",
+        "version": "1.12.0",
+        "nugetVersion": "1.12.0",
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
         "dependencyOnly": false,
         "templateSet": "tink"
@@ -2241,8 +2241,8 @@
       {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
-        "version": "3.40.0",
-        "nugetVersion": "3.40.0.1",
+        "version": "3.41.0",
+        "nugetVersion": "3.41.0",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
