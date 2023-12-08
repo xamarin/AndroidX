@@ -8,6 +8,10 @@
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
 
+    <!-- Use an updated 'generator' -->
+    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
+    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
+    
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
     
@@ -37,8 +41,11 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
-  </PropertyGroup>
 
+    <!-- Exclude TF-specific transform files by default -->
+    <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
+  </PropertyGroup>
+  
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\net8.0-android34.0" />

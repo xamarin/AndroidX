@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <remove-node path="/api/package[@name='kotlin.collections.builders']/class[@name='AbstractMapBuilderEntrySet']/method[@name='contains' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" />
+</metadata>
