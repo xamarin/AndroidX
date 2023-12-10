@@ -185,12 +185,11 @@ AndroidX.Core.View.InputMethod
 AndroidX.Core.Widget
 AndroidX.Credentials
 AndroidX.Credentials.Exceptions
-AndroidX.Credentials.Exceptions.Domerrors
-AndroidX.Credentials.Exceptions.Publickeycredential
-AndroidX.Credentials.Playservices
+AndroidX.Credentials.Exceptions.DomErrors
+AndroidX.Credentials.Exceptions.PublicKeyCredential
 AndroidX.Credentials.Provider
 AndroidX.Credentials.Provider.Utils
-AndroidX.Credentials.Webauthn
+AndroidX.Credentials.WebAuthn
 AndroidX.CursorAdapter.Widget
 AndroidX.CustomView.PoolingContainer
 AndroidX.CustomView.View
@@ -347,7 +346,7 @@ AndroidX.WebKit.ChromiumLibBoundary.Util
 AndroidX.WebKit.Internal
 AndroidX.Window
 AndroidX.Window.Area
-AndroidX.Window.Area.ReflectionGuard
+AndroidX.Window.Area.Reflectionguard
 AndroidX.Window.Core
 AndroidX.Window.Embedding
 AndroidX.Window.Extensions
@@ -373,7 +372,6 @@ AndroidX.Work.Impl.Utils.TaskExecutor
 AndroidX.Work.Impl.Workers
 AndroidX.Work.MultiProcess
 Google.Android.Libraries.AppActions.Service
-Google.Android.Libraries.Identity.Googleid
 Google.Android.Material.Animation
 Google.Android.Material.AppBar
 Google.Android.Material.Badge
