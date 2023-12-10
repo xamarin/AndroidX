@@ -1,9 +1,6 @@
 <metadata>
-    <attr
+    <remove-node
         path="/api/package[@name='androidx.wear.watchface.complications.data']/class[@name='ComplicationData.BaseBuilder']/method[@name='build' and count(parameter)=0]"
-        name="abstract"
-        >
-        false
-    </attr>
+        />
 
 </metadata>
