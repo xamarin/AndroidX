@@ -1,0 +1,34 @@
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.complications.data']/class[@name='SmallImageComplicationData.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Support.Wearable.Complications.ComplicationData    
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.complications.data']/class[@name='PhotoImageComplicationData.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Support.Wearable.Complications.ComplicationData    
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.complications.data']/class[@name='LongTextComplicationData.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Support.Wearable.Complications.ComplicationData    
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.complications.data']/class[@name='WeightedElementsComplicationData.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Support.Wearable.Complications.ComplicationData    
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.complications.data']/class[@name='ShortTextComplicationData.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Support.Wearable.Complications.ComplicationData    
+    </attr>
+
+</metadata>
