@@ -213,6 +213,7 @@
     <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
     <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
     <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
-
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
+    
   </ItemGroup>
 </Project>
