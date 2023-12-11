@@ -162,4 +162,16 @@
         Java.Lang.Object
     </attr>
 
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.LargeCustomValueUserStyleSetting.CustomValueOption']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.OptionWireFormat
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.style']/class[@name='UserStyleSetting.LargeCustomValueUserStyleSetting']/method[@name='toWireFormat' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.WatchFace.Style.Data.UserStyleSettingWireFormat
+    </attr>
 </metadata>
