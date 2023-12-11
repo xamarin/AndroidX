@@ -1,0 +1,8 @@
+<metadata>    
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.style.data']/class[@name='ComplicationsUserStyleSettingWireFormat']/constructor[@name='ComplicationsUserStyleSettingWireFormat' and count(parameter)=10 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.CharSequence'] and parameter[3][@type='java.lang.CharSequence'] and parameter[4][@type='android.graphics.drawable.Icon'] and parameter[5][@type='java.util.List&lt;androidx.wear.watchface.style.data.OptionWireFormat&gt;'] and parameter[6][@type='int'] and parameter[7][@type='java.util.List&lt;java.lang.Integer&gt;'] and parameter[8][@type='android.os.Bundle'] and parameter[9][@type='java.util.List&lt;android.os.Bundle&gt;'] and parameter[10][@type='java.util.List&lt;java.lang.CharSequence&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.style.data']/class[@name='ListUserStyleSettingWireFormat']/constructor[@name='ListUserStyleSettingWireFormat' and count(parameter)=10 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.CharSequence'] and parameter[3][@type='java.lang.CharSequence'] and parameter[4][@type='android.graphics.drawable.Icon'] and parameter[5][@type='java.util.List&lt;androidx.wear.watchface.style.data.OptionWireFormat&gt;'] and parameter[6][@type='int'] and parameter[7][@type='java.util.List&lt;java.lang.Integer&gt;'] and parameter[8][@type='android.os.Bundle'] and parameter[9][@type='java.util.List&lt;android.os.Bundle&gt;'] and parameter[10][@type='java.util.List&lt;java.lang.CharSequence&gt;']]"
+        />
+</metadata>

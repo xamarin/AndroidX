@@ -181,4 +181,23 @@
         AndroidX.Work.Impl.Utils.TaskExecutor.ISerialExecutor
     </attr>
 
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.trackers']/class[@name='BatteryChargingTracker']/method[@name='readSystemState' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.trackers']/class[@name='BatteryNotLowTracker']/method[@name='readSystemState' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.work.impl.constraints.trackers']/class[@name='StorageNotLowTracker']/method[@name='readSystemState' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
 </metadata>
