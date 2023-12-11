@@ -1,2 +1,8 @@
 <metadata>
+    <attr
+        path="/api/package[@name='androidx.wear.watchface.client']/interface[@name='InteractiveWatchFaceClient.ClientDisconnectListener']/method[@name='onClientDisconnected' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        OnClientDisconnectedWithParam
+    </attr>
 </metadata>
