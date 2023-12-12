@@ -762,6 +762,14 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.credentials",
+        "artifactId": "credentials-play-services-auth",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
+        "nugetId": "Xamarin.AndroidX.Credentials.PlayServicesAuth",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.customview",
         "artifactId": "customview",
         "version": "1.1.0",
@@ -2433,6 +2441,14 @@
         "version": "16.1.0",
         "nugetVersion": "116.1.0.5",
         "nugetId": "Xamarin.GooglePlayServices.AppIndex",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-auth",
+        "version": "20.7.0",
+        "nugetVersion": "120.7.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Auth",
         "dependencyOnly": true
       },
       {
