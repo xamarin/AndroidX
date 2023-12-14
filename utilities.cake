@@ -602,7 +602,10 @@ Task ("spell-check")
                 "PlayServicesAuth",
                 "GoogleAndroid",
                 "GoogleId",
-
+                "PrivacySandbox",
+                "AdsServices",
+                "PrivacySandbox",
+                "AdsServices",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
