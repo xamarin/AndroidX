@@ -1,7 +1,7 @@
 parameters:
   # Environment Parameters
   name: 'build'                                             # the name of the build job for dependency purposes
-  timeoutInMinutes: 150                                     # the timeout in minutes
+  timeoutInMinutes: 180                                     # the timeout in minutes
   mainBranchName: 'main'                                    # the "main" branch that should be used - can be something other than "main"
   macosAgentPoolName: 'Azure Pipelines'                     # the name of the macOS VM pool
   macosImage: internal-macos12                              # macOS VM image name, must be "internal" locked down image
@@ -48,6 +48,7 @@ jobs:
           imageName: ${{ parameters.windowsImage }}
           classicInstallerUrl: ${{ parameters.classicXAVsix }}
           runCodeQL: true
+          runAPIScan: true
     displayName: Build
     timeoutInMinutes: ${{ parameters.timeoutInMinutes }}
     variables:
@@ -72,6 +73,10 @@ jobs:
           verbosity: ${{ parameters.verbosity }}
           configuration: ${{ parameters.configuration }}
           skipUnitTests: ${{ parameters.skipUnitTests }}
+
+      - template: api-scan.yml
+        parameters:
+          mainBranchName: ${{ parameters.mainBranchName }}
 
       # after the build is complete
       - pwsh: |
