@@ -8,6 +8,10 @@
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android;net7.0-android</_DefaultTargetFrameworks>
 
+    <!-- Use an updated 'generator' -->
+    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
+    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
+    
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
     
@@ -37,8 +41,11 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
-  </PropertyGroup>
 
+    <!-- Exclude TF-specific transform files by default -->
+    <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
+  </PropertyGroup>
+  
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
@@ -204,6 +211,11 @@
     <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
+    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
+    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
+    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
+    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
     <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
+    
   </ItemGroup>
 </Project>

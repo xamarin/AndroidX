@@ -54,7 +54,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TransformFile Include="..\..\source\@(Model.NuGetPackageId)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+    <TransformFile Include="..\..\source\@(Model.NuGetPackageId)\Transforms\*.xml" Exclude="$(DefaultTransformExcludes)" Link="Transforms\%(Filename)%(Extension)" />
+    <TransformFile Include="..\..\source\@(Model.NuGetPackageId)\Transforms\*.$(TargetFramework).xml" Link="Transforms\%(Filename)%(Extension)" />
     <TransformFile Include="..\..\templates\kotlin\Metadata.shared.xml" Link="Transforms\Metadata.shared.xml" />
   </ItemGroup>
 
