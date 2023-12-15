@@ -263,7 +263,7 @@
 | 256|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.9             |
 | 257|com.google.auto.value:auto-value-annotations                          |1.10.4              |Xamarin.Google.AutoValue.Annotations                                  |1.10.4.2            |
 | 258|com.google.code.gson:gson                                             |2.10.1              |GoogleGson                                                            |2.10.1.7            |
-| 259|com.google.crypto.tink:tink-android                                   |1.11.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.11.0.1            |
+| 259|com.google.crypto.tink:tink-android                                   |1.12.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.12.0              |
 | 260|com.google.flogger:flogger                                            |0.8                 |Xamarin.Flogger                                                       |0.8.0.1             |
 | 261|com.google.flogger:flogger-system-backend                             |0.8                 |Xamarin.Flogger.SystemBackend                                         |0.8.0.1             |
 | 262|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2.1             |
@@ -279,7 +279,7 @@
 | 272|io.reactivex.rxjava3:rxjava                                           |3.1.8               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.8.2             |
 | 273|io.reactivex.rxjava3:rxkotlin                                         |3.0.1               |Xamarin.Android.ReactiveX.RxJava3.RxKotlin                            |3.0.1.8             |
 | 274|org.checkerframework:checker-compat-qual                              |2.5.6               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.6.1             |
-| 275|org.checkerframework:checker-qual                                     |3.40.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.40.0.1            |
+| 275|org.checkerframework:checker-qual                                     |3.41.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.41.0              |
 | 276|org.jetbrains:annotations                                             |24.1.0              |Xamarin.Jetbrains.Annotations                                         |24.1.0.1            |
 | 277|org.jetbrains.kotlin:kotlin-reflect                                   |1.9.21              |Xamarin.Kotlin.Reflect                                                |1.9.21.1            |
 | 278|org.jetbrains.kotlin:kotlin-stdlib                                    |1.9.21              |Xamarin.Kotlin.StdLib                                                 |1.9.21.1            |
