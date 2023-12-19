@@ -1,0 +1,37 @@
+parameters:
+  apiScanDirectory: $(Agent.TempDirectory)\APIScanFiles         # The directory to copy and scan assemblies
+  mainBranchName:                                               # The "main" branch that should be used - can be something other than "main"
+
+steps:
+
+ ### Copy .dll and .pdb files for APIScan
+- task: CopyFiles@2
+  displayName: 'Collect Files for APIScan'
+  inputs:
+    Contents: |
+      generated\**\bin\Release\**\?(*.dll|*.pdb)
+      util\**\bin\Release\**\?(*.dll|*.pdb)
+    TargetFolder: ${{ parameters.apiScanDirectory }}
+    OverWrite: true
+    flattenFolders: true
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+
+- task: CmdLine@2
+  displayName: 'List Files for APIScan'
+  inputs:
+    script: |
+      tree ${{ parameters.apiScanDirectory }} /f        
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+        
+ ### Run latest version of APIScan listed at https://www.1eswiki.com/wiki/APIScan_Build_Task
+- task: APIScan@2
+  displayName: Run APIScan
+  inputs:
+    softwareFolder: ${{ parameters.apiScanDirectory }}
+    softwareName: $(ApiScanName)
+    softwareVersionNum: '$(Build.BuildId)'
+    isLargeApp: true
+    toolVersion: Latest
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+  env:
+    AzureServicesAuthConnectionString: runAs=App;AppId=$(ApiScanClientId);TenantId=$(ApiScanTenant);AppKey=$(ApiScanSecret)
