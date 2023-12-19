@@ -599,6 +599,10 @@ Task ("spell-check")
                 "UnitAndroid",
                 "UtilAndroid",
                 "ProtoLayout",
+                "PlayServicesAuth",
+                "GoogleAndroid",
+                "GoogleId",
+
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
