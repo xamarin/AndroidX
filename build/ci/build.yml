@@ -48,6 +48,7 @@ jobs:
           imageName: ${{ parameters.windowsImage }}
           classicInstallerUrl: ${{ parameters.classicXAVsix }}
           runCodeQL: true
+          runAPIScan: true
     displayName: Build
     timeoutInMinutes: ${{ parameters.timeoutInMinutes }}
     variables:
@@ -72,6 +73,10 @@ jobs:
           verbosity: ${{ parameters.verbosity }}
           configuration: ${{ parameters.configuration }}
           skipUnitTests: ${{ parameters.skipUnitTests }}
+
+      - template: api-scan.yml
+        parameters:
+          mainBranchName: ${{ parameters.mainBranchName }}
 
       # after the build is complete
       - pwsh: |
