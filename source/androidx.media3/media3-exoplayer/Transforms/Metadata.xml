@@ -35,25 +35,25 @@
         name="managedName"
         >
         NameRenderer
-    </attr>        
+    </attr>
     -->
     <attr
         path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']/method[@name='getName' and count(parameter)=0]"
         name="abstract"
         >
         false
-    </attr>        
+    </attr>
 
 
 
     <attr
-        path="/api/package/class/method[@name='queueInputBuffer' and count(parameter)=1]/parameter[1]"    
+        path="/api/package/class/method[@name='queueInputBuffer' and count(parameter)=1]/parameter[1]"
         name="managedType"
         >
         Java.Lang.Object
     </attr>
     <attr
-        path="/api/package/interface/method[@name='queueInputBuffer' and count(parameter)=1]/parameter[1]"    
+        path="/api/package/interface/method[@name='queueInputBuffer' and count(parameter)=1]/parameter[1]"
         name="managedType"
         >
         Java.Lang.Object
@@ -125,4 +125,33 @@
         path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink']"
         />
 
-    </metadata>
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer.AudioComponent']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='TextRenderer']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SingleSampleMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ClippingMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']"
+        />
+        
+        
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.video']/class[@name='MediaCodecVideoRenderer']"
+        />
+
+
+</metadata>
