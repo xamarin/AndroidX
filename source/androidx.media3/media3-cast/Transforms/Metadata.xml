@@ -2,20 +2,28 @@
 
     <attr
         path="/api/package[@name='androidx.media3.cast']/class[@name='CastPlayer']/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
-        name="type"
+        name="managedType"
         >
-        java.util.List
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.cast']/class[@name='CastPlayer']/method[@name='setMediaItems' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='boolean']]/parameter[1]"
-        name="type"
-        >
-        java.util.List
+        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
     </attr>
     <attr
         path="/api/package[@name='androidx.media3.cast']/class[@name='CastPlayer']/method[@name='setMediaItems' and count(parameter)=3 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='int'] and parameter[3][@type='long']]/parameter[1]"
-        name="type"
+        name="managedType"
         >
-        java.util.List
+        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
     </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.cast']/class[@name='CastPlayer']/method[@name='setMediaItems' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='boolean']]/parameter[1]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.cast']/class[@name='CastPlayer']/method[@name='setMediaItems' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;'] and parameter[2][@type='boolean']]"
+        name="override"
+        >
+        true
+    </attr>
+        
 </metadata>
