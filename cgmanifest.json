@@ -1188,6 +1188,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "credentials-play-services-auth",
+          "groupId": "androidx.credentials",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Credentials.PlayServicesAuth",
+          "nuGetVersion": "1.2.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "customview",
           "groupId": "androidx.customview",
           "version": "1.1.0",
