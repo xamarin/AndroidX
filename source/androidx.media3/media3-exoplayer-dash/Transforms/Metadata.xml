@@ -1,3 +1,24 @@
 ﻿<metadata>
 
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.dash.manifest']/class[@name='DashManifestParser']/method[@name='parse' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='java.io.InputStream']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.dash.manifest']/class[@name='DashManifest']/method[@name='copy' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.StreamKey&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <!--
+        Aritiy problem
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.dash']/interface[@name='DashChunkSource']"
+        />
+
+
 </metadata>
