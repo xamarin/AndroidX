@@ -76,6 +76,7 @@
         >
         Java.Lang.Object
     </attr>
+    <!--
     <attr
         path="/api/package/interface/method[@name='setLoadErrorHandlingPolicy' and count(parameter)=1]"
         name="managedReturn"
@@ -99,7 +100,8 @@
         name="managedReturn"
         >
         AndroidX.Media3.ExoPlayer.Source.IMediaSourceFactory
-    </attr>
+    </attr>        
+    -->
     <attr
         path="/api/package/interface/method[@name='CreateMediaSource' and count(parameter)=1]"
         name="managedReturn"
@@ -112,6 +114,18 @@
         >
         AndroidX.Media3.ExoPlayer.Source.IMediaSource
     </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='FrameworkMediaDrm']/method[@name='createCryptoConfig' and count(parameter)=1 and parameter[1][@type='byte[]']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Decoder.ICryptoConfig
+    </attr>
+
+
+    <!--
+        TODO: rework this
+    -->
+
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.source']/interface[@name='MediaSource.Factory']"
         />
@@ -128,9 +142,7 @@
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer.AudioComponent']"
         />
-    <remove-node
-        path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='TextRenderer']"
-        />
+
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']"
         />
@@ -147,11 +159,85 @@
         path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']"
         />
         
-        
-
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='TextRenderer']"
+        />
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.video']/class[@name='MediaCodecVideoRenderer']"
         />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.video']/interface[@name='VideoRendererEventListener']"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='DefaultMediaSourceFactory']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MaskingMediaPeriod']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ClippingMediaPeriod']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource2']"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.metadata']/class[@name='MetadataRenderer']"
+        />
+    <!--
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
+        />
+    -->    
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='DrmSessionEventListener.EventDispatcher']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.audio']/class[@name='AudioRendererEventListener.EventDispatcher']"
+        />
+        
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='NoSampleRenderer']"
+        />
+        
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.drm']/interface[@name='DrmSessionEventListener']/method[@name='onDrmSessionAcquired' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource.MediaPeriodId']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioRendererEventListener']/method[@name='onAudioInputFormatChanged' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.Format']]"        
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.offline']/class[@name='SegmentDownloader']/method[@name='getSegments' and count(parameter)=3 and parameter[1][@type='androidx.media3.datasource.DataSource'] and parameter[2][@type='M'] and parameter[3][@type='boolean']]"
+        />
+        
+    <!--
+        For the future
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.common']/interface[@name='Player']/method[@name='addMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]"
+		[Register ("addMediaItems", "(Ljava/util/List;)V", "GetAddMediaItems_Ljava_util_List_Handler:AndroidX.Media3.Common.IPlayerInvoker, Xamarin.AndroidX.Media3.Common")]
+		void AddMediaItems (global::System.Collections.Generic.IList <global:: AndroidX.Media3.Common.MediaItem >? p0);
+    -->
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']/method[@name='getPlayerError' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Common.PlaybackException
+    </attr>
 
 
-</metadata>
+</metadata> 

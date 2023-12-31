@@ -688,6 +688,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			}
 		}
 
+		/*
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='androidx.media3.exoplayer']/class[@name='ExoPlayer.Builder']/constructor[@name='ExoPlayer.Builder' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='androidx.media3.exoplayer.RenderersFactory']]"
 		[Register (".ctor", "(Landroid/content/Context;Landroidx/media3/exoplayer/RenderersFactory;)V", "")]
 		public unsafe ExoPlayerBuilder (global::Android.Content.Context? context, global::AndroidX.Media3.ExoPlayer.IRenderersFactory? renderersFactory) : base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
@@ -709,6 +710,7 @@ namespace AndroidX.Media3.ExoPlayer {
 				global::System.GC.KeepAlive (renderersFactory);
 			}
 		}
+		*/
 
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/class[@name='ExoPlayer.Builder']/method[@name='build' and count(parameter)=0]"
 		[Register ("build", "()Landroidx/media3/exoplayer/ExoPlayer;", "")]
@@ -736,6 +738,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			}
 		}
 
+		/*
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/class[@name='ExoPlayer.Builder']/method[@name='setAnalyticsCollector' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsCollector']]"
 		[Register ("setAnalyticsCollector", "(Landroidx/media3/exoplayer/analytics/AnalyticsCollector;)Landroidx/media3/exoplayer/ExoPlayer$Builder;", "")]
 		public unsafe global::AndroidX.Media3.ExoPlayer.ExoPlayerBuilder? SetAnalyticsCollector (global::AndroidX.Media3.ExoPlayer.Analytics.IAnalyticsCollector? analyticsCollector)
@@ -750,6 +753,7 @@ namespace AndroidX.Media3.ExoPlayer {
 				global::System.GC.KeepAlive (analyticsCollector);
 			}
 		}
+		*/
 
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/class[@name='ExoPlayer.Builder']/method[@name='setAudioAttributes' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.AudioAttributes'] and parameter[2][@type='boolean']]"
 		[Register ("setAudioAttributes", "(Landroidx/media3/common/AudioAttributes;Z)Landroidx/media3/exoplayer/ExoPlayer$Builder;", "")]
@@ -928,6 +932,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			}
 		}
 
+		/*
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/class[@name='ExoPlayer.Builder']/method[@name='setRenderersFactory' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.RenderersFactory']]"
 		[Register ("setRenderersFactory", "(Landroidx/media3/exoplayer/RenderersFactory;)Landroidx/media3/exoplayer/ExoPlayer$Builder;", "")]
 		public unsafe global::AndroidX.Media3.ExoPlayer.ExoPlayerBuilder? SetRenderersFactory (global::AndroidX.Media3.ExoPlayer.IRenderersFactory? renderersFactory)
@@ -942,6 +947,7 @@ namespace AndroidX.Media3.ExoPlayer {
 				global::System.GC.KeepAlive (renderersFactory);
 			}
 		}
+		*/
 
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/class[@name='ExoPlayer.Builder']/method[@name='setSeekBackIncrementMs' and count(parameter)=1 and parameter[1][@type='long']]"
 		[Register ("setSeekBackIncrementMs", "(J)Landroidx/media3/exoplayer/ExoPlayer$Builder;", "")]
@@ -2164,11 +2170,13 @@ namespace AndroidX.Media3.ExoPlayer {
 	// Metadata.xml XPath interface reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']"
 	[Register ("androidx/media3/exoplayer/ExoPlayer", "", "AndroidX.Media3.ExoPlayer.IExoPlayerInvoker")]
 	public partial interface IExoPlayer : global::AndroidX.Media3.Common.IPlayer {
+		/*
 		global::AndroidX.Media3.ExoPlayer.Analytics.IAnalyticsCollector? AnalyticsCollector {
 			// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='getAnalyticsCollector' and count(parameter)=0]"
 			[Register ("getAnalyticsCollector", "()Landroidx/media3/exoplayer/analytics/AnalyticsCollector;", "GetGetAnalyticsCollectorHandler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
 			get; 
 		}
+		*/
 
 		global::AndroidX.Media3.ExoPlayer.IExoPlayerAudioComponent? AudioComponent {
 			// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='getAudioComponent' and count(parameter)=0]"
@@ -2244,7 +2252,8 @@ namespace AndroidX.Media3.ExoPlayer {
 			get; 
 		}
 
-		global::AndroidX.Media3.ExoPlayer.ExoPlaybackException? PlayerError {
+		// global::AndroidX.Media3.ExoPlayer.ExoPlaybackException? PlayerError {
+		global::AndroidX.Media3.Common.PlaybackException? PlayerError {
 			// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='getPlayerError' and count(parameter)=0]"
 			[Register ("getPlayerError", "()Landroidx/media3/exoplayer/ExoPlaybackException;", "GetGetPlayerErrorHandler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
 			get; 
@@ -2326,9 +2335,11 @@ namespace AndroidX.Media3.ExoPlayer {
 			set; 
 		}
 
+		/*
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='addAnalyticsListener' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener']]"
 		[Register ("addAnalyticsListener", "(Landroidx/media3/exoplayer/analytics/AnalyticsListener;)V", "GetAddAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_Handler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
 		void AddAnalyticsListener (global::AndroidX.Media3.ExoPlayer.Analytics.IAnalyticsListener? p0);
+		*/
 
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='addAudioOffloadListener' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.ExoPlayer.AudioOffloadListener']]"
 		[Register ("addAudioOffloadListener", "(Landroidx/media3/exoplayer/ExoPlayer$AudioOffloadListener;)V", "GetAddAudioOffloadListener_Landroidx_media3_exoplayer_ExoPlayer_AudioOffloadListener_Handler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
@@ -2392,9 +2403,11 @@ namespace AndroidX.Media3.ExoPlayer {
 		[Register ("prepare", "(Landroidx/media3/exoplayer/source/MediaSource;ZZ)V", "GetPrepare_Landroidx_media3_exoplayer_source_MediaSource_ZZHandler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
 		void Prepare (global::AndroidX.Media3.ExoPlayer.Source.IMediaSource? p0, bool p1, bool p2);
 
+		/*
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='removeAnalyticsListener' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener']]"
 		[Register ("removeAnalyticsListener", "(Landroidx/media3/exoplayer/analytics/AnalyticsListener;)V", "GetRemoveAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_Handler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
 		void RemoveAnalyticsListener (global::AndroidX.Media3.ExoPlayer.Analytics.IAnalyticsListener? p0);
+		*/
 
 		// Metadata.xml XPath method reference: path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='removeAudioOffloadListener' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.ExoPlayer.AudioOffloadListener']]"
 		[Register ("removeAudioOffloadListener", "(Landroidx/media3/exoplayer/ExoPlayer$AudioOffloadListener;)V", "GetRemoveAudioOffloadListener_Landroidx_media3_exoplayer_ExoPlayer_AudioOffloadListener_Handler:AndroidX.Media3.ExoPlayer.IExoPlayerInvoker, Xamarin.AndroidX.Media3.ExoPlayer")]
@@ -2531,6 +2544,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
 
+		/*
 		static Delegate? cb_getAnalyticsCollector;
 #pragma warning disable 0169
 		static Delegate GetGetAnalyticsCollectorHandler ()
@@ -2555,6 +2569,7 @@ namespace AndroidX.Media3.ExoPlayer {
 				return global::Java.Lang.Object.GetObject<global::AndroidX.Media3.ExoPlayer.Analytics.IAnalyticsCollector> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getAnalyticsCollector), JniHandleOwnership.TransferLocalRef);
 			}
 		}
+		*/
 
 		static Delegate? cb_getAudioComponent;
 #pragma warning disable 0169
@@ -2904,7 +2919,8 @@ namespace AndroidX.Media3.ExoPlayer {
 #pragma warning restore 0169
 
 		IntPtr id_getPlayerError;
-		public unsafe global::AndroidX.Media3.ExoPlayer.ExoPlaybackException? PlayerError {
+		// public unsafe global::AndroidX.Media3.ExoPlayer.ExoPlaybackException? PlayerError {
+		public unsafe global::AndroidX.Media3.Common.PlaybackException? PlayerError {
 			get {
 				if (id_getPlayerError == IntPtr.Zero)
 					id_getPlayerError = JNIEnv.GetMethodID (class_ref, "getPlayerError", "()Landroidx/media3/exoplayer/ExoPlaybackException;");
@@ -3263,6 +3279,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			}
 		}
 
+		/*
 		static Delegate? cb_addAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_;
 #pragma warning disable 0169
 		static Delegate GetAddAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_Handler ()
@@ -3289,6 +3306,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			__args [0] = new JValue ((p0 == null) ? IntPtr.Zero : ((global::Java.Lang.Object) p0).Handle);
 			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_addAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_, __args);
 		}
+		*/
 
 		static Delegate? cb_addAudioOffloadListener_Landroidx_media3_exoplayer_ExoPlayer_AudioOffloadListener_;
 #pragma warning disable 0169
@@ -3700,6 +3718,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_prepare_Landroidx_media3_exoplayer_source_MediaSource_ZZ, __args);
 		}
 
+		/*
 		static Delegate? cb_removeAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_;
 #pragma warning disable 0169
 		static Delegate GetRemoveAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_Handler ()
@@ -3726,6 +3745,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			__args [0] = new JValue ((p0 == null) ? IntPtr.Zero : ((global::Java.Lang.Object) p0).Handle);
 			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_removeAnalyticsListener_Landroidx_media3_exoplayer_analytics_AnalyticsListener_, __args);
 		}
+		*/
 
 		static Delegate? cb_removeAudioOffloadListener_Landroidx_media3_exoplayer_ExoPlayer_AudioOffloadListener_;
 #pragma warning disable 0169
@@ -6062,13 +6082,15 @@ namespace AndroidX.Media3.ExoPlayer {
 		static void n_AddMediaItems_LSystem_Collections_Generic_IList_1_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
 		{
 			var __this = global::Java.Lang.Object.GetObject<global::AndroidX.Media3.ExoPlayer.IExoPlayer> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
-			var p0 = (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>?)global::Java.Lang.Object.GetObject</* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>> (native_p0, JniHandleOwnership.DoNotTransfer);
+			// var p0 = (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>?)global::Java.Lang.Object.GetObject</* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>> (native_p0, JniHandleOwnership.DoNotTransfer);
+			var p0 = (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.Common.MediaItem>?)global::Java.Lang.Object.GetObject</* global::System.Collections.Generic.IList`1 */ Java.Lang.Object> (native_p0, JniHandleOwnership.DoNotTransfer);
 			__this.AddMediaItems (p0);
 		}
 #pragma warning restore 0169
 
 		IntPtr id_addMediaItems_LSystem_Collections_Generic_IList_1_;
-		public unsafe void AddMediaItems (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>? p0)
+		// public unsafe void AddMediaItems (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>? p0)
+		public unsafe void AddMediaItems (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.Common.MediaItem>? p0)
 		{
 			if (id_addMediaItems_LSystem_Collections_Generic_IList_1_ == IntPtr.Zero)
 				id_addMediaItems_LSystem_Collections_Generic_IList_1_ = JNIEnv.GetMethodID (class_ref, "addMediaItems", "(LSystem/Collections/Generic/IList`1;)V");
@@ -6076,7 +6098,7 @@ namespace AndroidX.Media3.ExoPlayer {
 			__args [0] = new JValue ((p0 == null) ? IntPtr.Zero : ((global::Java.Lang.Object) p0).Handle);
 			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_addMediaItems_LSystem_Collections_Generic_IList_1_, __args);
 		}
-
+		
 		static Delegate? cb_canAdvertiseSession;
 #pragma warning disable 0169
 		static Delegate GetCanAdvertiseSessionHandler ()
@@ -7034,13 +7056,15 @@ namespace AndroidX.Media3.ExoPlayer {
 		static void n_SetMediaItems_LSystem_Collections_Generic_IList_1_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
 		{
 			var __this = global::Java.Lang.Object.GetObject<global::AndroidX.Media3.ExoPlayer.IExoPlayer> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
-			var p0 = (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>?)global::Java.Lang.Object.GetObject</* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>> (native_p0, JniHandleOwnership.DoNotTransfer);
+			// var p0 = (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>?)global::Java.Lang.Object.GetObject</* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>> (native_p0, JniHandleOwnership.DoNotTransfer);
+			var p0 = (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.Common.MediaItem>?)global::Java.Lang.Object.GetObject</* global::System.Collections.Generic.IList`1 */ Java.Lang.Object> (native_p0, JniHandleOwnership.DoNotTransfer);
 			__this.SetMediaItems (p0);
 		}
 #pragma warning restore 0169
 
 		IntPtr id_setMediaItems_LSystem_Collections_Generic_IList_1_;
-		public unsafe void SetMediaItems (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>? p0)
+		// public unsafe void SetMediaItems (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.ExoPlayer.Source.IMediaSource>? p0)
+		public unsafe void SetMediaItems (/* global::System.Collections.Generic.IList`1 */ global::System.Collections.Generic.IList<global::AndroidX.Media3.Common.MediaItem>? p0)
 		{
 			if (id_setMediaItems_LSystem_Collections_Generic_IList_1_ == IntPtr.Zero)
 				id_setMediaItems_LSystem_Collections_Generic_IList_1_ = JNIEnv.GetMethodID (class_ref, "setMediaItems", "(LSystem/Collections/Generic/IList`1;)V");
