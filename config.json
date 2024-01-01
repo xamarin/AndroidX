@@ -2709,6 +2709,14 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-fido",
+        "version": "20.1.0",
+        "nugetVersion": "120.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Fido",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-tasks",
         "version": "18.0.2",
         "nugetVersion": "118.0.2.5",
