@@ -1,3 +1,58 @@
 ﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsMediaPlaylist.SegmentBase']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='DefaultHlsPlaylistTracker']/method[@name='onLoadCanceled' and count(parameter)=4 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.hls.playlist.HlsPlaylist&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='boolean']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='DefaultHlsPlaylistTracker']/method[@name='onLoadCompleted' and count(parameter)=3 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.hls.playlist.HlsPlaylist&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='DefaultHlsPlaylistTracker']/method[@name='onLoadError' and count(parameter)=5 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.hls.playlist.HlsPlaylist&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.io.IOException'] and parameter[5][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='DefaultHlsPlaylistTracker']/method[@name='onLoadError' and count(parameter)=5 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.hls.playlist.HlsPlaylist&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.io.IOException'] and parameter[5][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Upstream.Loader.LoadErrorAction
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsPlaylistParser']/method[@name='parse' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='java.io.InputStream']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
 
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls']/class[@name='DefaultHlsExtractorFactory']/method[@name='createExtractor' and count(parameter)=7 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='androidx.media3.common.Format'] and parameter[3][@type='java.util.List&lt;androidx.media3.common.Format&gt;'] and parameter[4][@type='androidx.media3.common.util.TimestampAdjuster'] and parameter[5][@type='java.util.Map&lt;java.lang.String, java.util.List&lt;java.lang.String&gt;&gt;'] and parameter[6][@type='androidx.media3.extractor.ExtractorInput'] and parameter[7][@type='androidx.media3.exoplayer.analytics.PlayerId']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Hls.IHlsMediaChunkExtractor
+    </attr>
+
+    <add-node
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsPlaylist']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="copy"
+            deprecated="not deprecated" final="false"  bridge="false" native="false"  
+            synchronized="false" synthetic="false" 
+            >
+            <parameter type="java.util.List&lt;androidx.media3.common.StreamKey&gt;" name="streamKeys" />
+          </method>
+    
+    </add-node>
 </metadata>
