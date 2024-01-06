@@ -1,3 +1,31 @@
 ﻿<metadata>
+    <!-- 
+    <add-node
+        path="/api/package[@name='androidx.health.services.client.proto']/class[@name='DataProto.Value']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="androidx.health.services.client.proto.DataProto.Value.ValueCase" name="getValueCase"
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            />
+    </add-node>
+    -->
+    <attr
+        path="/api/package[@name='androidx.health.services.client.proto']/class[@name='DataProto.Value']/method[@name='getValueCase' and count(parameter)=0]"
+        name="propertyName"
+        >
+        ValuseCase
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.proto']/class[contains(@name,'DataProto.')] /implements"
+        />
+    <!-- 
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.proto']/class[@name='DataProto.ExerciseUpdate']/implements"
+        />        
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.proto']/class[contains(@name,'EventsProto.')] /implements"
+        />
 
 </metadata>
