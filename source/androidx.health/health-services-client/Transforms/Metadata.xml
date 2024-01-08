@@ -28,4 +28,24 @@
         path="/api/package[@name='androidx.health.services.client.proto']/class[contains(@name,'EventsProto.')] /implements"
         />
 
+    <attr
+        path="/api/package[@name='androidx.health.services.client.impl.response']/class[@name='ExerciseCapabilitiesResponse']/method[@name='getProto' and count(parameter)=0]"
+        name="managedName"
+        >
+        RawProto
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.data']/class[@name='ProtoParcelable']/method[@name='getProto' and count(parameter)=0]"
+        />        
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.impl.ipc']/interface[@name='Client.ServiceGetter']"
+        />        
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.impl']/interface[@name='IMeasureCallback']"
+        />        
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.impl.internal']"
+        />        
+
 </metadata>
