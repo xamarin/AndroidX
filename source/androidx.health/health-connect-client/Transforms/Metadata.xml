@@ -1,3 +1,131 @@
 ﻿<metadata>
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']/class[@name='DataProto.AggregateDataRow.Builder']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']/class[@name='ResponseProto.ReadDataResponse']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']/class[@name='Empty']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']/class[@name='Timestamp']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']/class[@name='Struct']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']/class[@name='TimeProto.TimeSpec']"
+        />
+
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.proto']"
+        />
+    <!-- 
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />
+        <remove-node
+        />        
+    -->
+
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Velocity']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Velocity']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Mass']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Mass']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Power']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Power']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Percentage']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Percentage']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Temperature']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Temperature']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Pressure']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Pressure']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Volume']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Volume']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Length']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Length']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.units']/class[@name='Energy']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.health.connect.client.units.Energy']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.platform.client.impl.sdkservice']/class[@name='HealthDataSdkService']"
+        name="final"
+        >
+        false
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.impl.ipc']/interface[@name='Client.ServiceGetter']"
+        />
+    <attr
+        path="/api/package[@name='androidx.health.platform.client.impl.sdkservice']/interface[@name='IHealthDataSdkService']"
+        name="managedName"
+        >
+        IHealthDataSdkServiceInterface
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.health.connect.client.permission']/class[@name='HealthDataRequestPermissions']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <!-- 
+    <remove-node
+        path="/api/package[@name='androidx.health.connect.client.permission']/class[@name='HealthDataRequestPermissions']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.util.Set&lt;androidx.health.connect.client.permission.Permission&gt;']]"
+        />        
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.health.connect.client.permission']/class[@name='HealthDataRequestPermissions']"
+        />        
 
 </metadata>
