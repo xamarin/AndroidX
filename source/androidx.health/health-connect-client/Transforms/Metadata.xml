@@ -112,7 +112,12 @@
         >
         IHealthDataSdkServiceInterface
     </attr>
-    <attr
+    <remove-node
+        path="/api/package[@name='androidx.health.platform.client.impl']"
+        />
+
+
+        <attr
         path="/api/package[@name='androidx.health.connect.client.permission']/class[@name='HealthDataRequestPermissions']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
         name="managedReturn"
         >
