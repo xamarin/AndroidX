@@ -34,5 +34,11 @@
     <remove-node
         path="/api/package[@name='androidx.health.services.client.impl']"
         />        
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.impl.internal']"
+        />        
+    <remove-node
+        path="/api/package[@name='androidx.health.services.client.impl.ipc']"
+        />        
 
 </metadata>
