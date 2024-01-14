@@ -75,4 +75,24 @@
     <!-- Same method as base class, except with a covariant return type -->
     <remove-node path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setConnectionHints' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" />
 
+    <attr
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaController']"
+        name="managedName"
+        >
+        IMediaControllerInterface
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSession']"
+        name="managedName"
+        >
+        IMediaSessionInterface
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSessionService']"
+        name="managedName"
+        >
+        IMediaSessionServiceInterface
+    </attr>
+
+    
 </metadata>
