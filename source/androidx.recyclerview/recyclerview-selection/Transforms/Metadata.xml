@@ -14,4 +14,11 @@
         AndroidX.RecyclerView.Selection.MutableSelection
     </attr>
 
+    <attr 
+        path="/api/package[@name='androidx.recyclerview.selection']/class[@name='SelectionTracker']/method[@name='getSelection' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+
 </metadata>
