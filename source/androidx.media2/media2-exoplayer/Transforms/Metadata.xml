@@ -170,16 +170,16 @@
         OnAudioSessionIdNative
     </attr>
     <attr
-        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onRenderedFirstFrame' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='android.view.Surface']]"
-        name="managedName"
-        >
-        OnRenderedFirstFrameNative
-    </attr>
-    <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onSurfaceSizeChanged' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
         name="managedName"
         >
         OnSurfaceSizeChangedNative
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onRenderedFirstFrame' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='android.view.Surface']]"
+        name="managedName"
+        >
+        OnRenderedFirstFrameNative
     </attr>
     -->
 
@@ -395,9 +395,6 @@
         />
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onAudioSessionId' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onRenderedFirstFrame' and count(parameter)=2 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='android.view.Surface']]"
         />
     <remove-node
         path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']/method[@name='onSurfaceSizeChanged' and count(parameter)=3 and parameter[1][@type='androidx.media2.exoplayer.external.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
@@ -730,4 +727,10 @@
         OnTimelineChangedDeprecated
     </attr>
         
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.video']/interface[@name='VideoListener']/method[@name='onRenderedFirstFrame' and count(parameter)=0]"
+        name="managedName"
+        >
+        OnRenderedFirstFrameVideoListener
+    </attr>
 </metadata>
