@@ -75,24 +75,29 @@
     <!-- Same method as base class, except with a covariant return type -->
     <remove-node path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setConnectionHints' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" />
 
-    <attr
-        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaController']"
-        name="managedName"
+    <!-- 
+        Static fields on interfaces cause us to generate a 'MediaController' class to hold the static 
+        fields, but that conflicts with actual 'MediaController' class 
+    -->
+    <attr 
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaController']" 
+        name="no-alternatives"
         >
-        IMediaControllerInterface
+        true
     </attr>
-    <attr
-        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSession']"
-        name="managedName"
+    <attr 
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSession']" 
+        name="no-alternatives"
         >
-        IMediaSessionInterface
+        true
     </attr>
-    <attr
-        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSessionService']"
-        name="managedName"
+    <attr 
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSessionService']" 
+        name="no-alternatives"
         >
-        IMediaSessionServiceInterface
+        true
     </attr>
+
 
     
 </metadata>
