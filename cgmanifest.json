@@ -7,9 +7,9 @@
         "maven": {
           "artifactId": "activity",
           "groupId": "androidx.activity",
-          "version": "1.8.1",
+          "version": "1.8.2",
           "nuGetId": "Xamarin.AndroidX.Activity",
-          "nuGetVersion": "1.8.1.1"
+          "nuGetVersion": "1.8.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -20,9 +20,9 @@
         "maven": {
           "artifactId": "activity-compose",
           "groupId": "androidx.activity",
-          "version": "1.8.1",
+          "version": "1.8.2",
           "nuGetId": "Xamarin.AndroidX.Activity.Compose",
-          "nuGetVersion": "1.8.1.1"
+          "nuGetVersion": "1.8.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -33,9 +33,9 @@
         "maven": {
           "artifactId": "activity-ktx",
           "groupId": "androidx.activity",
-          "version": "1.8.1",
+          "version": "1.8.2",
           "nuGetId": "Xamarin.AndroidX.Activity.Ktx",
-          "nuGetVersion": "1.8.1.1"
+          "nuGetVersion": "1.8.2"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -85,9 +85,9 @@
         "maven": {
           "artifactId": "annotation",
           "groupId": "androidx.annotation",
-          "version": "1.7.0",
+          "version": "1.7.1",
           "nuGetId": "Xamarin.AndroidX.Annotation",
-          "nuGetVersion": "1.7.0.3"
+          "nuGetVersion": "1.7.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -111,9 +111,9 @@
         "maven": {
           "artifactId": "annotation-jvm",
           "groupId": "androidx.annotation",
-          "version": "1.7.0",
+          "version": "1.7.1",
           "nuGetId": "Xamarin.AndroidX.Annotation.Jvm",
-          "nuGetVersion": "1.7.0.3"
+          "nuGetVersion": "1.7.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -228,9 +228,9 @@
         "maven": {
           "artifactId": "camera-camera2",
           "groupId": "androidx.camera",
-          "version": "1.3.0",
+          "version": "1.3.1",
           "nuGetId": "Xamarin.AndroidX.Camera.Camera2",
-          "nuGetVersion": "1.3.0.1"
+          "nuGetVersion": "1.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -241,9 +241,9 @@
         "maven": {
           "artifactId": "camera-core",
           "groupId": "androidx.camera",
-          "version": "1.3.0",
+          "version": "1.3.1",
           "nuGetId": "Xamarin.AndroidX.Camera.Core",
-          "nuGetVersion": "1.3.0.1"
+          "nuGetVersion": "1.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -254,9 +254,9 @@
         "maven": {
           "artifactId": "camera-extensions",
           "groupId": "androidx.camera",
-          "version": "1.3.0",
+          "version": "1.3.1",
           "nuGetId": "Xamarin.AndroidX.Camera.Extensions",
-          "nuGetVersion": "1.3.0.1"
+          "nuGetVersion": "1.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -267,9 +267,9 @@
         "maven": {
           "artifactId": "camera-lifecycle",
           "groupId": "androidx.camera",
-          "version": "1.3.0",
+          "version": "1.3.1",
           "nuGetId": "Xamarin.AndroidX.Camera.Lifecycle",
-          "nuGetVersion": "1.3.0.1"
+          "nuGetVersion": "1.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -280,9 +280,9 @@
         "maven": {
           "artifactId": "camera-video",
           "groupId": "androidx.camera",
-          "version": "1.3.0",
+          "version": "1.3.1",
           "nuGetId": "Xamarin.AndroidX.Camera.Video",
-          "nuGetVersion": "1.3.0.1"
+          "nuGetVersion": "1.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -293,9 +293,9 @@
         "maven": {
           "artifactId": "camera-view",
           "groupId": "androidx.camera",
-          "version": "1.3.0",
+          "version": "1.3.1",
           "nuGetId": "Xamarin.AndroidX.Camera.View",
-          "nuGetVersion": "1.3.0.1"
+          "nuGetVersion": "1.3.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1162,11 +1162,11 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "cursoradapter",
-          "groupId": "androidx.cursoradapter",
-          "version": "1.0.0",
-          "nuGetId": "Xamarin.AndroidX.CursorAdapter",
-          "nuGetVersion": "1.0.0.22"
+          "artifactId": "credentials",
+          "groupId": "androidx.credentials",
+          "version": "1.2.0",
+          "nuGetId": "Xamarin.AndroidX.Credentials",
+          "nuGetVersion": "1.2.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1175,11 +1175,24 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "credentials",
+          "artifactId": "credentials-play-services-auth",
           "groupId": "androidx.credentials",
           "version": "1.2.0",
-          "nuGetId": "Xamarin.AndroidX.Credentials",
+          "nuGetId": "Xamarin.AndroidX.Credentials.PlayServicesAuth",
           "nuGetVersion": "1.2.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "cursoradapter",
+          "groupId": "androidx.cursoradapter",
+          "version": "1.0.0",
+          "nuGetId": "Xamarin.AndroidX.CursorAdapter",
+          "nuGetVersion": "1.0.0.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1216,9 +1229,9 @@
         "maven": {
           "artifactId": "databinding-adapters",
           "groupId": "androidx.databinding",
-          "version": "8.2.0",
+          "version": "8.2.1",
           "nuGetId": "Xamarin.AndroidX.DataBinding.DataBindingAdapters",
-          "nuGetVersion": "8.2.0"
+          "nuGetVersion": "8.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1229,9 +1242,9 @@
         "maven": {
           "artifactId": "databinding-common",
           "groupId": "androidx.databinding",
-          "version": "8.2.0",
+          "version": "8.2.1",
           "nuGetId": "Xamarin.AndroidX.DataBinding.DataBindingCommon",
-          "nuGetVersion": "8.2.0"
+          "nuGetVersion": "8.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1242,9 +1255,9 @@
         "maven": {
           "artifactId": "databinding-runtime",
           "groupId": "androidx.databinding",
-          "version": "8.2.0",
+          "version": "8.2.1",
           "nuGetId": "Xamarin.AndroidX.DataBinding.DataBindingRuntime",
-          "nuGetVersion": "8.2.0"
+          "nuGetVersion": "8.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1255,9 +1268,9 @@
         "maven": {
           "artifactId": "viewbinding",
           "groupId": "androidx.databinding",
-          "version": "8.2.0",
+          "version": "8.2.1",
           "nuGetId": "Xamarin.AndroidX.DataBinding.ViewBinding",
-          "nuGetVersion": "8.2.0"
+          "nuGetVersion": "8.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1463,9 +1476,9 @@
         "maven": {
           "artifactId": "exifinterface",
           "groupId": "androidx.exifinterface",
-          "version": "1.3.6",
+          "version": "1.3.7",
           "nuGetId": "Xamarin.AndroidX.ExifInterface",
-          "nuGetVersion": "1.3.6.6"
+          "nuGetVersion": "1.3.7"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1632,9 +1645,9 @@
         "maven": {
           "artifactId": "lifecycle-common",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.Common",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1645,9 +1658,9 @@
         "maven": {
           "artifactId": "lifecycle-common-java8",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1671,9 +1684,9 @@
         "maven": {
           "artifactId": "lifecycle-livedata",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1684,9 +1697,9 @@
         "maven": {
           "artifactId": "lifecycle-livedata-core",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1697,9 +1710,9 @@
         "maven": {
           "artifactId": "lifecycle-livedata-core-ktx",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1710,9 +1723,9 @@
         "maven": {
           "artifactId": "lifecycle-livedata-ktx",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1723,9 +1736,9 @@
         "maven": {
           "artifactId": "lifecycle-process",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.Process",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1736,9 +1749,9 @@
         "maven": {
           "artifactId": "lifecycle-reactivestreams",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1749,9 +1762,9 @@
         "maven": {
           "artifactId": "lifecycle-reactivestreams-ktx",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1762,9 +1775,9 @@
         "maven": {
           "artifactId": "lifecycle-runtime",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.Runtime",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1775,9 +1788,9 @@
         "maven": {
           "artifactId": "lifecycle-runtime-ktx",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1788,9 +1801,9 @@
         "maven": {
           "artifactId": "lifecycle-service",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.Service",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1801,9 +1814,9 @@
         "maven": {
           "artifactId": "lifecycle-viewmodel",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1814,9 +1827,9 @@
         "maven": {
           "artifactId": "lifecycle-viewmodel-compose",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1827,9 +1840,9 @@
         "maven": {
           "artifactId": "lifecycle-viewmodel-ktx",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1840,9 +1853,9 @@
         "maven": {
           "artifactId": "lifecycle-viewmodel-savedstate",
           "groupId": "androidx.lifecycle",
-          "version": "2.6.2",
+          "version": "2.7.0",
           "nuGetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
-          "nuGetVersion": "2.6.2.3"
+          "nuGetVersion": "2.7.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1892,9 +1905,9 @@
         "maven": {
           "artifactId": "media2-common",
           "groupId": "androidx.media2",
-          "version": "1.2.1",
+          "version": "1.3.0",
           "nuGetId": "Xamarin.AndroidX.Media2.Common",
-          "nuGetVersion": "1.2.1.10"
+          "nuGetVersion": "1.3.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1905,9 +1918,9 @@
         "maven": {
           "artifactId": "media2-session",
           "groupId": "androidx.media2",
-          "version": "1.2.1",
+          "version": "1.3.0",
           "nuGetId": "Xamarin.AndroidX.Media2.Session",
-          "nuGetVersion": "1.2.1.10"
+          "nuGetVersion": "1.3.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1918,9 +1931,9 @@
         "maven": {
           "artifactId": "media2-widget",
           "groupId": "androidx.media2",
-          "version": "1.2.1",
+          "version": "1.3.0",
           "nuGetId": "Xamarin.AndroidX.Media2.Widget",
-          "nuGetVersion": "1.2.1.10"
+          "nuGetVersion": "1.3.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1957,9 +1970,9 @@
         "maven": {
           "artifactId": "navigation-common",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Common",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1970,9 +1983,9 @@
         "maven": {
           "artifactId": "navigation-common-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Common.Ktx",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1983,9 +1996,9 @@
         "maven": {
           "artifactId": "navigation-compose",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Compose",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -1996,9 +2009,9 @@
         "maven": {
           "artifactId": "navigation-fragment",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Fragment",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2009,9 +2022,9 @@
         "maven": {
           "artifactId": "navigation-fragment-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Fragment.Ktx",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2022,9 +2035,9 @@
         "maven": {
           "artifactId": "navigation-runtime",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Runtime",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2035,9 +2048,9 @@
         "maven": {
           "artifactId": "navigation-runtime-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.Runtime.Ktx",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2048,9 +2061,9 @@
         "maven": {
           "artifactId": "navigation-ui",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.UI",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2061,9 +2074,9 @@
         "maven": {
           "artifactId": "navigation-ui-ktx",
           "groupId": "androidx.navigation",
-          "version": "2.7.5",
+          "version": "2.7.6",
           "nuGetId": "Xamarin.AndroidX.Navigation.UI.Ktx",
-          "nuGetVersion": "2.7.5.1"
+          "nuGetVersion": "2.7.6"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2607,9 +2620,9 @@
         "maven": {
           "artifactId": "versionedparcelable",
           "groupId": "androidx.versionedparcelable",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "nuGetId": "Xamarin.AndroidX.VersionedParcelable",
-          "nuGetVersion": "1.1.1.22"
+          "nuGetVersion": "1.2.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3461,9 +3474,9 @@
         "maven": {
           "artifactId": "napier",
           "groupId": "io.github.aakira",
-          "version": "2.6.1",
+          "version": "2.7.1",
           "nuGetId": "Xamarin.AAkira.Napier",
-          "nuGetVersion": "2.6.1.8"
+          "nuGetVersion": "2.7.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3565,9 +3578,9 @@
         "maven": {
           "artifactId": "checker-qual",
           "groupId": "org.checkerframework",
-          "version": "3.41.0",
+          "version": "3.42.0",
           "nuGetId": "Xamarin.CheckerFramework.CheckerQual",
-          "nuGetVersion": "3.41.0"
+          "nuGetVersion": "3.42.0"
         }
       },
       "license": "MIT"
@@ -3591,9 +3604,9 @@
         "maven": {
           "artifactId": "kotlin-reflect",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.9.21",
+          "version": "1.9.22",
           "nuGetId": "Xamarin.Kotlin.Reflect",
-          "nuGetVersion": "1.9.21.1"
+          "nuGetVersion": "1.9.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3604,9 +3617,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.9.21",
+          "version": "1.9.22",
           "nuGetId": "Xamarin.Kotlin.StdLib",
-          "nuGetVersion": "1.9.21.1"
+          "nuGetVersion": "1.9.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3617,9 +3630,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-common",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.9.21",
+          "version": "1.9.22",
           "nuGetId": "Xamarin.Kotlin.StdLib.Common",
-          "nuGetVersion": "1.9.21.1"
+          "nuGetVersion": "1.9.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3630,9 +3643,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-jdk7",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.9.21",
+          "version": "1.9.22",
           "nuGetId": "Xamarin.Kotlin.StdLib.Jdk7",
-          "nuGetVersion": "1.9.21.1"
+          "nuGetVersion": "1.9.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3643,9 +3656,9 @@
         "maven": {
           "artifactId": "kotlin-stdlib-jdk8",
           "groupId": "org.jetbrains.kotlin",
-          "version": "1.9.21",
+          "version": "1.9.22",
           "nuGetId": "Xamarin.Kotlin.StdLib.Jdk8",
-          "nuGetVersion": "1.9.21.1"
+          "nuGetVersion": "1.9.22"
         }
       },
       "license": "The Apache Software License, Version 2.0"

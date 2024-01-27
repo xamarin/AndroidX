@@ -5,15 +5,15 @@
 
 |    |                                                                      |                    |                                                                      |                    |
 |----|----------------------------------------------------------------------|--------------------|----------------------------------------------------------------------|--------------------|
-|   1|androidx.activity:activity                                            |1.8.1               |Xamarin.AndroidX.Activity                                             |1.8.1.1             |
-|   2|androidx.activity:activity-compose                                    |1.8.1               |Xamarin.AndroidX.Activity.Compose                                     |1.8.1.1             |
-|   3|androidx.activity:activity-ktx                                        |1.8.1               |Xamarin.AndroidX.Activity.Ktx                                         |1.8.1.1             |
+|   1|androidx.activity:activity                                            |1.8.2               |Xamarin.AndroidX.Activity                                             |1.8.2               |
+|   2|androidx.activity:activity-compose                                    |1.8.2               |Xamarin.AndroidX.Activity.Compose                                     |1.8.2               |
+|   3|androidx.activity:activity-ktx                                        |1.8.2               |Xamarin.AndroidX.Activity.Ktx                                         |1.8.2               |
 |   4|androidx.ads:ads-identifier                                           |1.0.0-alpha05       |Xamarin.AndroidX.Ads.Identifier                                       |1.0.0.21-alpha05    |
 |   5|androidx.ads:ads-identifier-common                                    |1.0.0-alpha05       |Xamarin.AndroidX.Ads.IdentifierCommon                                 |1.0.0.21-alpha05    |
 |   6|androidx.ads:ads-identifier-provider                                  |1.0.0-alpha05       |Xamarin.AndroidX.Ads.IdentifierProvider                               |1.0.0.21-alpha05    |
-|   7|androidx.annotation:annotation                                        |1.7.0               |Xamarin.AndroidX.Annotation                                           |1.7.0.3             |
+|   7|androidx.annotation:annotation                                        |1.7.1               |Xamarin.AndroidX.Annotation                                           |1.7.1               |
 |   8|androidx.annotation:annotation-experimental                           |1.3.1               |Xamarin.AndroidX.Annotation.Experimental                              |1.3.1.4             |
-|   9|androidx.annotation:annotation-jvm                                    |1.7.0               |Xamarin.AndroidX.Annotation.Jvm                                       |1.7.0.3             |
+|   9|androidx.annotation:annotation-jvm                                    |1.7.1               |Xamarin.AndroidX.Annotation.Jvm                                       |1.7.1               |
 |  10|androidx.appcompat:appcompat                                          |1.6.1               |Xamarin.AndroidX.AppCompat                                            |1.6.1.6             |
 |  11|androidx.appcompat:appcompat-resources                                |1.6.1               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.6.1.7             |
 |  12|androidx.arch.core:core-common                                        |2.2.0               |Xamarin.AndroidX.Arch.Core.Common                                     |2.2.0.6             |
@@ -22,12 +22,12 @@
 |  15|androidx.autofill:autofill                                            |1.1.0               |Xamarin.AndroidX.AutoFill                                             |1.1.0.21            |
 |  16|androidx.biometric:biometric                                          |1.1.0               |Xamarin.AndroidX.Biometric                                            |1.1.0.18            |
 |  17|androidx.browser:browser                                              |1.7.0               |Xamarin.AndroidX.Browser                                              |1.7.0.1             |
-|  18|androidx.camera:camera-camera2                                        |1.3.0               |Xamarin.AndroidX.Camera.Camera2                                       |1.3.0.1             |
-|  19|androidx.camera:camera-core                                           |1.3.0               |Xamarin.AndroidX.Camera.Core                                          |1.3.0.1             |
-|  20|androidx.camera:camera-extensions                                     |1.3.0               |Xamarin.AndroidX.Camera.Extensions                                    |1.3.0.1             |
-|  21|androidx.camera:camera-lifecycle                                      |1.3.0               |Xamarin.AndroidX.Camera.Lifecycle                                     |1.3.0.1             |
-|  22|androidx.camera:camera-video                                          |1.3.0               |Xamarin.AndroidX.Camera.Video                                         |1.3.0.1             |
-|  23|androidx.camera:camera-view                                           |1.3.0               |Xamarin.AndroidX.Camera.View                                          |1.3.0.1             |
+|  18|androidx.camera:camera-camera2                                        |1.3.1               |Xamarin.AndroidX.Camera.Camera2                                       |1.3.1               |
+|  19|androidx.camera:camera-core                                           |1.3.1               |Xamarin.AndroidX.Camera.Core                                          |1.3.1               |
+|  20|androidx.camera:camera-extensions                                     |1.3.1               |Xamarin.AndroidX.Camera.Extensions                                    |1.3.1               |
+|  21|androidx.camera:camera-lifecycle                                      |1.3.1               |Xamarin.AndroidX.Camera.Lifecycle                                     |1.3.1               |
+|  22|androidx.camera:camera-video                                          |1.3.1               |Xamarin.AndroidX.Camera.Video                                         |1.3.1               |
+|  23|androidx.camera:camera-view                                           |1.3.1               |Xamarin.AndroidX.Camera.View                                          |1.3.1               |
 |  24|androidx.car:car                                                      |1.0.0-alpha7        |Xamarin.AndroidX.Car.Car                                              |1.0.0.20-alpha7     |
 |  25|androidx.car:car-cluster                                              |1.0.0-alpha5        |Xamarin.AndroidX.Car.Cluster                                          |1.0.0.20-alpha5     |
 |  26|androidx.car.app:app                                                  |1.2.0               |Xamarin.AndroidX.Car.App.App                                          |1.2.0.7             |
