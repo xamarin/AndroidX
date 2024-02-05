@@ -24,12 +24,5 @@ namespace Kotlin.Collections.Builders
 
 		global::System.Collections.ICollection IMap.Values () => Values;
 	}
-
-	public partial class MapBuilderEntries
-	{
-		public override bool Add (Object? element) => Add ((IMapEntry) element!);
-
-		public override int GetSize () => Size;
-	}
 }
 #endif
