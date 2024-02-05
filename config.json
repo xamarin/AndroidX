@@ -1956,8 +1956,8 @@
         "nugetVersion": "1.0.0.8",
         "nugetId": "Xamarin.Google.Android.InstallReferrer",
         "dependencyOnly": false,
-        "templateSet": "installreferrer",
-        "frozen": true
+        "frozen": true,
+        "templateSet": "installreferrer"
       },
       {
         "groupId": "com.google.accompanist",
