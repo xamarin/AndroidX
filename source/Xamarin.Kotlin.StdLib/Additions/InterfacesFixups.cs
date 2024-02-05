@@ -15,7 +15,7 @@ namespace Kotlin.Collections
 	}
 }
 
-#if NET7_0_OR_GREATER
+#if NET8_0_OR_GREATER
 namespace Kotlin.Collections.Builders
 {
 	public partial class MapBuilder
