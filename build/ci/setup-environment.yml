@@ -41,7 +41,3 @@ steps:
         
   - pwsh: boots --url $(classicInstallerUrl) --downgrade-first
     displayName: 'Install Classic XA'
-
-  - pwsh: |
-      dotnet tool uninstall --global Cake.Tool 
-      dotnet tool install --global Cake.Tool --add-source https://pkgs.dev.azure.com/cake-build/Cake/_packaging/cake/nuget/v3/index.json --version 3.2.0-alpha0025

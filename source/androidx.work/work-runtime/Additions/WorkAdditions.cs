@@ -181,16 +181,16 @@ namespace AndroidX.Work
 
 namespace AndroidX.Work.Impl.Constraints.Trackers
 {
-    public partial class BatteryChargingTracker
-    {
-        protected override global::Java.Lang.Object RawInitialState
-        {
-            get
-            {
-                return this.InitialState;
-            }
-        }
-    }
+    // public partial class BatteryChargingTracker
+    // {
+    //     protected override global::Java.Lang.Object RawInitialState
+    //     {
+    //         get
+    //         {
+    //             return this.InitialState;
+    //         }
+    //     }
+    // }
 
     // public partial class NetworkStateTracker
     // {
@@ -203,25 +203,25 @@ namespace AndroidX.Work.Impl.Constraints.Trackers
     //     }
     // }
 
-    public partial class BatteryNotLowTracker
-    {
-        protected override global::Java.Lang.Object RawInitialState
-        {
-            get
-            {
-                return this.InitialState;
-            }
-        }
-    }
+    // public partial class BatteryNotLowTracker
+    // {
+    //     protected override global::Java.Lang.Object RawInitialState
+    //     {
+    //         get
+    //         {
+    //             return this.InitialState;
+    //         }
+    //     }
+    // }
 
-    public partial class StorageNotLowTracker
-    {
-        protected override global::Java.Lang.Object RawInitialState
-        {
-            get
-            {
-                return this.InitialState;
-            }
-        }
-    }
+    // public partial class StorageNotLowTracker
+    // {
+    //     protected override global::Java.Lang.Object RawInitialState
+    //     {
+    //         get
+    //         {
+    //             return this.InitialState;
+    //         }
+    //     }
+    // }
 }
