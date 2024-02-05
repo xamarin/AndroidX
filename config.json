@@ -1956,8 +1956,8 @@
         "nugetVersion": "1.0.0.8",
         "nugetId": "Xamarin.Google.Android.InstallReferrer",
         "dependencyOnly": false,
-        "frozen": true,
-        "templateSet": "installreferrer"
+        "templateSet": "installreferrer",
+        "frozen": true
       },
       {
         "groupId": "com.google.accompanist",
@@ -2070,9 +2070,10 @@
       {
         "groupId": "com.google.android.material",
         "artifactId": "material",
-        "version": "1.11.0",
-        "nugetVersion": "1.11.0",
+        "version": "1.10.0",
+        "nugetVersion": "1.10.0.2",
         "nugetId": "Xamarin.Google.Android.Material",
+        "frozen" : true,
         "dependencyOnly": false
       },
       {
