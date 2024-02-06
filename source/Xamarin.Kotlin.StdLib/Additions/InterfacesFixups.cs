@@ -15,7 +15,7 @@ namespace Kotlin.Collections
 	}
 }
 
-#if NET7_0_OR_GREATER
+#if NET8_0_OR_GREATER
 namespace Kotlin.Collections.Builders
 {
 	public partial class MapBuilder
@@ -23,13 +23,6 @@ namespace Kotlin.Collections.Builders
 		int IMap.Size () => Size;
 
 		global::System.Collections.ICollection IMap.Values () => Values;
-	}
-
-	public partial class MapBuilderEntries
-	{
-		public override bool Add (Object? element) => Add ((IMapEntry) element!);
-
-		public override int GetSize () => Size;
 	}
 }
 #endif
