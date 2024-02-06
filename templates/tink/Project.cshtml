@@ -39,7 +39,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" Link="Transforms\%(Filename)%(Extension)" />
+    <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.xml" Exclude="$(DefaultTransformExcludes)" Link="Transforms\%(Filename)%(Extension)" />
+    <TransformFile Include="..\..\source\@(Model.MavenArtifacts[0].MavenGroupId)\@(Model.MavenArtifacts[0].MavenArtifactId)\Transforms\*.$(TargetFramework).xml" Link="Transforms\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>
