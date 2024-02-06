@@ -9,7 +9,7 @@ parameters:
   windowsImage: 'windows-latest'                            # the name of the Windows VM image
 
   # Tool Parameters
-  dotnetVersion: '8.0.100'                                  # the version of .NET to use
+  dotnetVersion: '8.0.101'                                  # the version of .NET to use
   dotnetWorkloadRollbackFile: 'workloads.json'
   dotnetWorkloadSource: 'https://api.nuget.org/v3/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
