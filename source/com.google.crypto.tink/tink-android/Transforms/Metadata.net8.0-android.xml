@@ -1,4 +1,5 @@
 <metadata>
+    <!-- 
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='EcdsaPrivateKey']"
         >
@@ -17,6 +18,8 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    -->
+
     <add-node
         path="/api/package[@name='com.google.crypto.tink.prf']/class[@name='HkdfPrfKey']"
         >
@@ -26,6 +29,7 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    <!--
     <add-node
         path="/api/package[@name='com.google.crypto.tink.streamingaead']/class[@name='AesGcmHkdfStreamingKey']"
         >
@@ -43,7 +47,7 @@
             deprecated="not deprecated" final="false" bridge="false" native="false" 
             synchronized="false" synthetic="false" 
             />
-    </add-node>
+    </add-node>        
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='RsaSsaPkcs1PublicKey']"
         >
@@ -61,7 +65,8 @@
             deprecated="not deprecated" final="false" bridge="false" native="false" 
             synchronized="false" synthetic="false" 
             />
-    </add-node>
+    </add-node>        
+    -->
     <add-node
         path="/api/package[@name='com.google.crypto.tink.prf']/class[@name='AesCmacPrfKey']"
         >
@@ -80,6 +85,7 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    <!--         
     <add-node
         path="/api/package[@name='com.google.crypto.tink.signature']/class[@name='Ed25519PrivateKey']"
         >
@@ -116,4 +122,5 @@
             synchronized="false" synthetic="false" 
             />
     </add-node>
+    -->
 </metadata>
