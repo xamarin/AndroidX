@@ -1,4 +1,7 @@
 <Project>
+    <PropertyGroup>
+        <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>        
+    </PropertyGroup>
     <ItemGroup>
         <!--
         in AllPackages.tartgets

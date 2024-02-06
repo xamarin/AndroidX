@@ -12,6 +12,11 @@
     <PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.16" />
     <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.6.0.2" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\BuildAllXamarinForms\BuildAllXamarinForms.csproj" />
   </ItemGroup>
