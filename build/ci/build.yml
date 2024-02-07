@@ -5,7 +5,7 @@ parameters:
   mainBranchName: 'main'                                    # the "main" branch that should be used - can be something other than "main"
   macosAgentPoolName: 'Azure Pipelines'                     # the name of the macOS VM pool
                                                             # https://github.com/actions/runner-images
-  macosImage: internal-macos13                              # macOS VM image name, must be "internal" locked down image
+  macosImage: internal-macos12                              # macOS VM image name, must be "internal" locked down image
   windowsAgentPoolName: android-win-2022                    # the name of the Windows VM pool
   windowsImage: 'windows-latest'                            # the name of the Windows VM image
 
