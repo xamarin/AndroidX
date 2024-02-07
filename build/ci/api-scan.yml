@@ -1,0 +1,71 @@
+parameters:
+  apiScanDirectory: $(Agent.TempDirectory)\APIScanFiles         # The directory to copy and scan assemblies
+  mainBranchName:                                               # The "main" branch that should be used - can be something other than "main"
+
+steps:
+
+ ### Copy .dll and .pdb files for APIScan
+- task: CopyFiles@2
+  displayName: 'Collect Files for APIScan'
+  inputs:
+    Contents: |
+      generated\**\bin\Release\**\?(*.dll|*.pdb)
+      util\**\bin\Release\**\?(*.dll|*.pdb)
+    TargetFolder: ${{ parameters.apiScanDirectory }}
+    OverWrite: true
+    flattenFolders: true
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+ 
+- task: CmdLine@2
+  displayName: 'Remove System assemblies from APIScan'
+  inputs:
+    script: |
+      del ${{ parameters.apiScanDirectory }}\System.*
+      del ${{ parameters.apiScanDirectory }}\mscorlib.dll
+      del ${{ parameters.apiScanDirectory }}\netstandard.dll
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+
+- task: CmdLine@2
+  displayName: 'List Files for APIScan'
+  inputs:
+    script: |
+      tree ${{ parameters.apiScanDirectory }} /f        
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+       
+ ### Run latest version of APIScan listed at https://www.1eswiki.com/wiki/APIScan_Build_Task
+- task: APIScan@2
+  displayName: Run APIScan
+  inputs:
+    softwareFolder: ${{ parameters.apiScanDirectory }}
+    softwareName: $(ApiScanName)
+    softwareVersionNum: '$(Build.BuildId)'
+    isLargeApp: true
+    toolVersion: Latest
+  condition: and(succeeded(), eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+  env:
+    AzureServicesAuthConnectionString: runAs=App;AppId=$(ApiScanClientId);TenantId=$(ApiScanTenant);AppKey=$(ApiScanSecret)
+
+- task: SdtReport@2
+  displayName: Guardian Export - Security Report
+  inputs:
+    GdnExportAllTools: false
+    GdnExportGdnToolApiScan: true
+    GdnExportOutputSuppressionFile: source.gdnsuppress
+  condition: and(eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+
+- task: PublishSecurityAnalysisLogs@3
+  displayName: Publish Guardian Artifacts
+  inputs:
+    ArtifactName: APIScan Logs
+    ArtifactType: Container
+    AllTools: false
+    APIScan: true
+    ToolLogsNotFoundAction: Warning
+  condition: and(eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
+
+- task: PostAnalysis@2
+  displayName: Fail Build on Guardian Issues
+  inputs:
+    GdnBreakAllTools: false
+    GdnBreakGdnToolApiScan: true
+  condition: and(eq(variables['runAPIScan'], 'true'), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))

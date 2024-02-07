@@ -183,6 +183,14 @@ AndroidX.Core.View.AutoFill
 AndroidX.Core.View.ContentCapture
 AndroidX.Core.View.InputMethod
 AndroidX.Core.Widget
+AndroidX.Credentials
+AndroidX.Credentials.Exceptions
+AndroidX.Credentials.Exceptions.DomErrors
+AndroidX.Credentials.Exceptions.PublicKeyCredential
+AndroidX.Credentials.PlayServices
+AndroidX.Credentials.Provider
+AndroidX.Credentials.Provider.Utils
+AndroidX.Credentials.WebAuthn
 AndroidX.CursorAdapter.Widget
 AndroidX.CustomView.PoolingContainer
 AndroidX.CustomView.View
@@ -339,6 +347,7 @@ AndroidX.WebKit.ChromiumLibBoundary.Util
 AndroidX.WebKit.Internal
 AndroidX.Window
 AndroidX.Window.Area
+AndroidX.Window.Area.ReflectionGuard
 AndroidX.Window.Core
 AndroidX.Window.Embedding
 AndroidX.Window.Extensions
@@ -578,6 +587,7 @@ Xamarin.Google.Crypto.Tink.Annotations
 Xamarin.Google.Crypto.Tink.Configs
 Xamarin.Google.Crypto.Tink.Configs.Internal
 Xamarin.Google.Crypto.Tink.DAead
+Xamarin.Google.Crypto.Tink.DAead.Internal
 Xamarin.Google.Crypto.Tink.Hybrid
 Xamarin.Google.Crypto.Tink.Hybrid.Internal
 Xamarin.Google.Crypto.Tink.Hybrid.Subtle
@@ -590,11 +600,13 @@ Xamarin.Google.Crypto.Tink.Mac
 Xamarin.Google.Crypto.Tink.Mac.Internal
 Xamarin.Google.Crypto.Tink.Monitoring
 Xamarin.Google.Crypto.Tink.Prf
+Xamarin.Google.Crypto.Tink.Prf.Internal
 Xamarin.Google.Crypto.Tink.Proto
 Xamarin.Google.Crypto.Tink.Shaded.Protobuf
 Xamarin.Google.Crypto.Tink.Signature
 Xamarin.Google.Crypto.Tink.Signature.Internal
 Xamarin.Google.Crypto.Tink.StreamingAead
+Xamarin.Google.Crypto.Tink.StreamingAead.Internal
 Xamarin.Google.Crypto.Tink.Subtle
 Xamarin.Google.Crypto.Tink.Subtle.Prf
 Xamarin.Google.Crypto.Tink.Tinkkey

@@ -6,8 +6,12 @@
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android</_DefaultTargetFrameworks>
+    <_DefaultTargetFrameworks>MonoAndroid12.0;net6.0-android;net7.0-android</_DefaultTargetFrameworks>
 
+    <!-- Use an updated 'generator' -->
+    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
+    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
+    
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
     
@@ -37,20 +41,26 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
-  </PropertyGroup>
 
+    <!-- Exclude TF-specific transform files by default -->
+    <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
+  </PropertyGroup>
+  
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="build\net6.0-android31.0" />
+    <AndroidXNuGetTargetFolders Include="build\net7.0-android33.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid12.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
+    <AndroidXNuGetTargetFolders Include="buildTransitive\net7.0-android33.0" />
   </ItemGroup>
 
   <!-- Folders that _._ files need to go into for packages without managed libraries -->
   <ItemGroup>
     <AndroidXNuGetLibFolders Include="lib\monoandroid12.0" />
     <AndroidXNuGetLibFolders Include="lib\net6.0-android31.0" />
+    <AndroidXNuGetLibFolders Include="lib\net7.0-android33.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -199,5 +209,11 @@
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
+    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
+    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
+    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
+    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
+    
   </ItemGroup>
 </Project>
