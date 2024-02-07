@@ -1,4 +1,4 @@
-#! "net6.0"
+#! "net7.0"
 
 #r "nuget: Newtonsoft.Json, 13.0.3"
 
