@@ -1,5 +1,10 @@
 <metadata>
-  <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" />
-  <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" />
-  <remove-node path="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" />
+  <!-- Remove unnecessary interface implementation -->
+  <remove-node classToRemove="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.ThreadConfig']" />
+  
+  <!-- Remove interface implementation for UseCaseConfig.Builder -->
+  <remove-node classToRemove="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.UseCaseConfig.Builder']" />
+  
+  <!-- Remove interface implementation for TargetConfig.Builder -->
+  <remove-node classToRemove="/api/package[@name='androidx.camera.core']/class/implements[@name='androidx.camera.core.TargetConfig.Builder']" />
 </metadata>
