@@ -1,122 +1,80 @@
 parameters:
   # Environment Parameters
-  name: 'build'                                             # the name of the build job for dependency purposes
-  timeoutInMinutes: 300                                     # the timeout in minutes
-  mainBranchName: 'main'                                    # the "main" branch that should be used - can be something other than "main"
-  macosAgentPoolName: 'Azure Pipelines'                     # the name of the macOS VM pool
-                                                            # https://github.com/actions/runner-images
-  macosImage: internal-macos12                              # macOS VM image name, must be "internal" locked down image
-  windowsAgentPoolName: android-win-2022                    # the name of the Windows VM pool
-  windowsImage: 'windows-latest'                            # the name of the Windows VM image
+  name:                                                             # Job display name
+  buildPool:                                                        # VM pool information
+  classicInstallerUrl:                                              # URL to retrieve the Classic XA installer
 
-  # Tool Parameters
-  dotnetVersion: '7.0.405'                                  # the version of .NET to use
-  dotnetWorkloadRollbackFile: 'workloads.json'
-  dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'
-  dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
-  classicXAPkg:  https://aka.ms/xamarin-android-commercial-d17-4-macos
-  classicXAVsix: https://aka.ms/xamarin-android-commercial-d17-4-windows
-  skipUnitTests: false                                      # do not run unit test step
+  # Build Parameters
+  mainBranchName: 'main'                                            # Name of Git "main" branch
+  configuration: 'Release'                                          # Build configuration: 'Debug', 'Release'
+  verbosity: 'normal'                                               # Build verbosity: 'minimal', 'normal', 'diagnostic'
+  timeoutInMinutes: 300                                             # Max job runtime in minutes
+  runAPIScan: false                                                 # Run APIScan analysis
   
-  tools:                                                    # a list of additional .NET global tools needed
+  # Tool Parameters
+  dotnetVersion: '7.0.406'                                          # .NET version to install on agent
+  dotnetWorkloadRollbackFile: 'workloads.json'                      # Rollback file specifying workload versions to install
+  dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'       # NuGet.org URL to find workloads
+  dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'   # .NET engineering URL to find workloads
+  skipUnitTests: false                                              # Skip running unit tests
+  
+  tools:                                                            # Additional .NET global tools to install
   - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
   - 'boots': '1.1.0.712-preview2'
   - 'private-api-tools': '1.0.1'
-
-  # Build Parameters
-  verbosity: 'normal'                                       # the build verbosity: 'minimal', 'normal', 'diagnostic'
-  configuration: 'Release'                                  # the build configuration: 'Debug', 'Release'
   
   # Reporting/Analysis Parameters
-  areaPath: 'DevDiv\VS Client - Runtime SDKs\Android'       # the areaPath to log any issues
-  publishJob: ''                                            # the job to use as the source of the 'nuget' artifact: '', 'windows', 'macos', 'linux'
-  publishOutputSuffix: ''                                   # the artifact suffix to use when publishing the output folder
-  signListPath: 'SignList.xml'                              # the path to the SignList.xml to copy into the nuget artifact for signing
-  artifactsPath: 'output'                                   # the path to the NuGet packages that need to be signed, verified and published
+  artifactsPath: 'output'                                           # Path to the NuGet packages that need to be signed, verified and published
+  signListPath: 'SignList.xml'                                      # Path to 'SignList.xml' used for signing NuGet packages
 
 jobs:
-  - job: ${{ parameters.name }}
-    strategy:
-      matrix:
-        macos:
-          poolName: ${{ parameters.macosAgentPoolName }}
-          imageName: ${{ parameters.macosImage }}
-          classicInstallerUrl: ${{ parameters.classicXAPkg }}
-          runCodeQL: false
-        windows:
-          poolName: ${{ parameters.windowsAgentPoolName }}
-          imageName: ${{ parameters.windowsImage }}
-          classicInstallerUrl: ${{ parameters.classicXAVsix }}
-          runCodeQL: true
-          runAPIScan: true
-    displayName: Build
-    timeoutInMinutes: ${{ parameters.timeoutInMinutes }}
-    variables:
-      Codeql.Enabled: $(runCodeQL)
-    pool:
-      name: $(poolName)
-      vmImage: $(imageName)
+- job: build_${{ parameters.name }}
+  displayName: ${{ parameters.name }}
+  timeoutInMinutes: ${{ parameters.timeoutInMinutes }}
+  pool: ${{ parameters.buildPool }}
+  
+  templateContext:
+    sdl:
+      spotBugs:
+        enabled: false
+    outputs:
+    - output: pipelineArtifact
+      targetPath: ${{ parameters.artifactsPath }}
+      artifactName: output-${{ parameters.name }}
+      
+  steps:
+    - template: setup-environment.yml
+      parameters:
+        dotnetVersion: ${{ parameters.dotnetVersion }}
+        dotnetWorkloadRollbackFile: ${{ parameters.dotnetWorkloadRollbackFile }}
+        dotnetWorkloadSource: ${{ parameters.dotnetWorkloadSource }}
+        dotnetNuGetOrgSource: ${{ parameters.dotnetNuGetOrgSource }}
+        dotnetTools: ${{ parameters.tools }}
+        classicInstallerUrl: ${{ parameters.classicInstallerUrl }}
 
-    steps:
-      - template: setup-environment.yml
-        parameters:
-          dotnetVersion: ${{ parameters.dotnetVersion }}
-          dotnetWorkloadRollbackFile: ${{ parameters.dotnetWorkloadRollbackFile }}
-          dotnetWorkloadSource: ${{ parameters.dotnetWorkloadSource }}
-          dotnetNuGetOrgSource: ${{ parameters.dotnetNuGetOrgSource }}
-          dotnetTools: ${{ parameters.tools }}
-          classicInstallerUrl: $(classicInstallerUrl)
+    - template: build-and-test.yml
+      parameters:
+        artifactsPath: ${{ parameters.artifactsPath }}
+        verbosity: ${{ parameters.verbosity }}
+        configuration: ${{ parameters.configuration }}
+        skipUnitTests: ${{ parameters.skipUnitTests }}
 
-      - template: build-and-test.yml
-        parameters:
-          artifactsPath: ${{ parameters.artifactsPath }}
-          verbosity: ${{ parameters.verbosity }}
-          configuration: ${{ parameters.configuration }}
-          skipUnitTests: ${{ parameters.skipUnitTests }}
-
+    - ${{ if eq(parameters.runAPIScan, true) }}:
       - template: api-scan.yml
         parameters:
           mainBranchName: ${{ parameters.mainBranchName }}
 
-      # after the build is complete
-      - pwsh: |
-          $srcExists = (Test-Path "${{ parameters.signListPath }}")
-          $dstExists = (Test-Path "${{ parameters.artifactsPath }}\SignList.xml")
-          if ($srcExists -and !$dstExists) {
-            Copy-Item "${{ parameters.signListPath }}" "${{ parameters.artifactsPath }}\SignList.xml"
-            Write-Host "Copied ${{ parameters.signListPath }} to ${{ parameters.artifactsPath }}\SignList.xml"
-          } elseif (!$srcExists) {
-            Write-Host "${{ parameters.signListPath }} did not exist, nothing copied."
-          } elseif ($dstExists) {
-            Write-Host "${{ parameters.artifactsPath }}\SignList.xml already existed, nothing copied."
-          }
-        displayName: 'Copy SignList.xml to the nuget artifact'
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish artifacts'
-        condition: or(eq('${{ parameters.publishJob }}', ''), eq('${{ parameters.publishJob }}', variables['System.JobName']))
-        inputs:
-          PathToPublish: ${{ parameters.artifactsPath }}
-          ArtifactName: nuget
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish platform artifacts'
-        condition: always()
-        inputs:
-          PathToPublish: output
-          ArtifactName: output-$(System.JobName)${{ parameters.publishOutputSuffix }}
-      # run any required checks
-      - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-        - task: ComponentGovernanceComponentDetection@0
-          displayName: 'Run component detection'
-          condition: and(always(), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
-          inputs:
-            scanType: 'Register'
-            verbosity: 'Verbose'
-            alertWarningLevel: 'High'
-
-  - template: code-analysis.yml
-    parameters:
-      name: ${{ parameters.name }}
-      mainBranchName: ${{ parameters.mainBranchName }}
-      areaPath: ${{ parameters.areaPath }}
-      configuration: ${{ parameters.configuration }}
+    # Copy SignList.xml to output
+    - pwsh: |
+        $srcExists = (Test-Path "${{ parameters.signListPath }}")
+        $dstExists = (Test-Path "${{ parameters.artifactsPath }}\SignList.xml")
+        if ($srcExists -and !$dstExists) {
+          Copy-Item "${{ parameters.signListPath }}" "${{ parameters.artifactsPath }}\SignList.xml"
+          Write-Host "Copied ${{ parameters.signListPath }} to ${{ parameters.artifactsPath }}\SignList.xml"
+        } elseif (!$srcExists) {
+          Write-Host "${{ parameters.signListPath }} did not exist, nothing copied."
+        } elseif ($dstExists) {
+          Write-Host "${{ parameters.artifactsPath }}\SignList.xml already existed, nothing copied."
+        }
+      displayName: Copy SignList.xml to output
