@@ -1,0 +1,36 @@
+﻿@using System
+@using System.IO
+@using System.Linq
+@using System.Xml.Linq
+
+  @{
+      string[] artifact_version_parts = Model.NuGetVersion
+                                              .Split(new string[] { "-" }, StringSplitOptions.None);
+      string artifact_version = null;
+
+      string artifact_version_release = artifact_version_parts[0];
+      string[] artifact_version_release_parts = artifact_version_release.Split(new string[] { "." }, StringSplitOptions.None);
+      artifact_version = string.Join(".", artifact_version_release_parts, 0, 3);
+
+      if (artifact_version_parts.Length == 1)
+      {
+          // release
+      }
+      if (artifact_version_parts.Length == 2)
+      {
+          artifact_version += "-" + artifact_version_parts[1];
+      }
+  }
+
+/Restore
+/ConsoleLoggerParameters:Verbosity=Minimal;Summary;ForceNoAlign
+/MaxCPUCount
+/NodeReuse:false
+
+
+artifact=@(Model.MavenGroupId):@(Model.Name) 
+
+artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)
+
+nuget=@(Model.Name).@(Model.NuGetVersion)
+
