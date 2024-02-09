@@ -810,7 +810,7 @@ Task("samples-only-dotnet")
                                     .WithProperty("RestorePackagesPath", packagesPath)
                                     .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
     };
-
+  
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
