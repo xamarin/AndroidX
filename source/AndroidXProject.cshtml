@@ -157,7 +157,9 @@
     {
       if (art.MavenArtifactPackaging == "aar")
       {
-    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
+    <InputJar 
+      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar')"
+      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
     <!-- For those artifacts with lib/ folder -->
     <InputJar
       Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
