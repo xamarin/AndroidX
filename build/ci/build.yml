@@ -4,12 +4,13 @@ parameters:
   timeoutInMinutes: 300                                     # the timeout in minutes
   mainBranchName: 'main'                                    # the "main" branch that should be used - can be something other than "main"
   macosAgentPoolName: 'Azure Pipelines'                     # the name of the macOS VM pool
+                                                            # https://github.com/actions/runner-images
   macosImage: internal-macos12                              # macOS VM image name, must be "internal" locked down image
   windowsAgentPoolName: android-win-2022                    # the name of the Windows VM pool
   windowsImage: 'windows-latest'                            # the name of the Windows VM image
 
   # Tool Parameters
-  dotnetVersion: '7.0.403'                                  # the version of .NET to use
+  dotnetVersion: '7.0.405'                                  # the version of .NET to use
   dotnetWorkloadRollbackFile: 'workloads.json'
   dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
@@ -19,7 +20,7 @@ parameters:
   
   tools:                                                    # a list of additional .NET global tools needed
   - 'xamarin.androidbinderator.tool': '0.5.7'
-  - 'Cake.Tool': '3.2.0'
+  - 'Cake.Tool': '4.0.0'
   - 'boots': '1.1.0.712-preview2'
   - 'private-api-tools': '1.0.0'
 

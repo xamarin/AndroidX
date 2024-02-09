@@ -6,4 +6,12 @@
     <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='extendProvisionalRange' and count(parameter)=1 and parameter[1][@type='int']]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='mergeProvisionalSelection' and count(parameter)=0]" name="visibility">protected</attr>
     <attr path="/api/package[@name='androidx.recyclerview.selection']/class[@name='DefaultSelectionTracker']/method[@name='setProvisionalSelection' and count(parameter)=1 and parameter[1][@type='java.util.Set&lt;K&gt;']]" name="visibility">protected</attr>
+
+    <attr 
+        path="/api/package[@name='androidx.recyclerview.selection']/class[@name='MutableSelection']/method[@name='copySelection' and count(parameter)=1]/parameter[1]"
+        name="managedType"
+        >
+        AndroidX.RecyclerView.Selection.MutableSelection
+    </attr>
+
 </metadata>
