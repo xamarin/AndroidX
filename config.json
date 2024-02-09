@@ -29,6 +29,10 @@
       {
         "templateFile": "source/AndroidXNuGetReadMe.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+      },
+      {
+        "templateFile": "source/AndroidXDirectoryBuildRsp.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/Directory.Build.rsp"
       }
     ],
     "artifacts": [
