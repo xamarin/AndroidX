@@ -635,6 +635,7 @@ Task("libs")
         .SetMaxCpuCount(0)
         .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
         .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("Verbosity", VERBOSITY.ToString())
         .WithProperty("DesignTimeBuild", "false")
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
@@ -646,7 +647,14 @@ Task("libs")
         MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
     });
 
-    DotNetMSBuild("./generated/AndroidX.sln", settings);
+    DotNetBuild
+        (
+            "./generated/AndroidX.sln", 
+            new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+            }
+        );
 });
 
 Task("libs-native")
@@ -681,7 +689,14 @@ Task("nuget")
     if (!string.IsNullOrEmpty(ANDROID_HOME))
         settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetMSBuild("./generated/AndroidX.sln", settings);
+    DotNetBuild
+        (
+            "./generated/AndroidX.sln", 
+            new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+            }
+        );
 });
 
 Task("samples-generate-all-targets")
@@ -799,6 +814,7 @@ Task("samples-only-dotnet")
 
     var settings = new DotNetMSBuildSettings()
         .SetConfiguration("Debug") // We don't need to run linking
+        .WithProperty("Verbosity", VERBOSITY.ToString())
         .WithProperty("RestorePackagesPath", packagesPath)
         .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
@@ -817,7 +833,7 @@ Task("samples-only-dotnet")
         FilePath fp_solution = new FilePath(solution);
         string filename = fp_solution.GetFilenameWithoutExtension().ToString();
         Information($"=====================================================================================================");
-        Information($"DotNetMSBuild        {solution} / {filename}");    
+        Information($"DotNetBuild           {solution} / {filename}");    
         DotNetBuild(solution, new DotNetBuildSettings
         {
             MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
