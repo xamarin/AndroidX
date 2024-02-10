@@ -18,7 +18,7 @@
     <!-- Prevent linking, since that would remove ~everything -->
     <PublishTrimmed>False</PublishTrimmed>
     <RunAOTCompilation>False</RunAOTCompilation>
-    <JavaMaximumHeapSize Condition=" '$(JavaMaximumHeapSize)' == '' ">1G</JavaMaximumHeapSize>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
   </PropertyGroup>
   
   <Import Project="..\..\..\output\AllPackages.targets" />

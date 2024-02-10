@@ -7,7 +7,7 @@
   <PropertyGroup
 		Condition="$(TargetFramework.EndsWith('-android')) == true"
 		>
-		<JavaMaximumHeapSize Condition=" '$(JavaMaximumHeapSize)' == '' ">1G</JavaMaximumHeapSize>
+		<JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
 	</PropertyGroup>
 
   <ItemGroup>
