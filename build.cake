@@ -302,11 +302,40 @@ Task ("binderate")
             }
         }
     }
+
+    DirectoryPath dp = Context.Environment.WorkingDirectory;
+    Information($"WorkingDirectory: {dp}");
+    foreach (FilePath fp in GetFiles("./externals/**/repackaged.jar"))
+    {
+        string relative = fp.ToString().Replace(dp.ToString(), "");
+        relative =  relative.Replace(@"/externals", "");
+        relative =  relative.Replace(@"/libs", "");
+        Information($"      Renaming: {relative}");
+        string[] parts = relative.Split(new string[]{"/"}, StringSplitOptions.RemoveEmptyEntries);
+        Information($"          1 : {parts[0]}");
+        Information($"          2 : {parts[1]}");
+
+        string version = artifacts_by_version[(parts[0], parts[1])];
+
+        MoveFile
+            (
+                fp, 
+                fp.ToString().Replace
+                                (
+                                    "repackaged.jar", 
+                                    $"repackaged-{parts[0]}-{parts[1]}-{version}.jar"
+                                )
+            );
+        // find ./externals -type f -iname "*repack*"
+    }
+
+    return;   
 });
 
 string version_suffix = "";
 string nuget_version_template = $"x.y.z.w{version_suffix}";
 JArray binderator_json_array = null;
+Dictionary<(string gid, string aid), string> artifacts_by_version = new Dictionary<(string gid, string aid), string>();
 
 Task("binderate-config-verify")
     .IsDependentOn("binderate-fix")
@@ -331,7 +360,11 @@ Task("binderate-config-verify")
                 {
                     continue;
                 }
+
+                string group_id         = (string) jo["groupId"];
+                string artifact_id      = (string) jo["artifactId"];
                 string artifact_version = (string) jo["version"];
+                string nuget_id  	    = (string) jo["nugetId"];
                 string nuget_version  	= (string) jo["nugetVersion"];
 
                 string[] artifact_version_parts = artifact_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
@@ -351,15 +384,15 @@ Task("binderate-config-verify")
                     artifact_version_suffix  = artifact_version_parts[1];
                 }
 
-                Information($"groupId                   = {jo["groupId"]}");
-                Information($"artifactId                = {jo["artifactId"]}");
+                Information($"groupId                   = {group_id}");
+                Information($"artifactId                = {artifact_id}");
                 Information($"artifact_version          = {artifact_version}");
                 Information($"artifact_version_prefix   = {artifact_version_prefix}");
                 Information($"artifact_version_suffix   = {artifact_version_suffix}");
                 Information($"nuget_version             = {nuget_version}");
                 Information($"nuget_version_prefix      = {nuget_version_prefix}");
                 Information($"nuget_version_suffix      = {nuget_version_suffix}");
-                Information($"nugetId                   = {jo["nugetId"]}");
+                Information($"nugetId                   = {nuget_id}");
 
 
                 string[] artifact_version_prefix_parts = artifact_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
@@ -395,17 +428,19 @@ Task("binderate-config-verify")
                     )
                 {
                     Error("check config.json for nuget id");
-                    Error  ($"		groupId           = {jo["groupId"]}");
-                    Error  ($"		artifactId        = {jo["artifactId"]}");
+                    Error  ($"		groupId           = {group_id}");
+                    Error  ($"		artifactId        = {artifact_id}");
                     Error  ($"		artifact_version  = {artifact_version}");
                     Error  ($"		nuget_version     = {nuget_version}");
                     Error  ($"		nuget_version_new = {nuget_version_new}");
-                    Error  ($"		nugetId           = {jo["nugetId"]}");
+                    Error  ($"		nugetId           = {nuget_id}");
 
                     Warning($"	expected : ");
                     Warning($"		nuget_version = {nuget_version_new}");
                     throw new Exception("check config.json for nuget id");
                 }
+
+                artifacts_by_version.Add((group_id, artifact_id), artifact_version);    
             }
 
             return;
