@@ -285,13 +285,16 @@ Task ("binderate")
     }
 
     // different lint.jar files in artifacts causing R8 errors
-    foreach (var file in GetFiles("./externals/**/lint.jar")) {
+    foreach (var file in GetFiles("./externals/**/lint.jar")) 
+    {
         Information($"Deleting: {file}");
         DeleteFile(file);
 
-        foreach (var aar in GetFiles($"{file.GetDirectory()}/../*.aar")) {
+        foreach (var aar in GetFiles($"{file.GetDirectory()}/../*.aar")) 
+        {
             Information($"Deleting: lint.jar from {aar}");
-            using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) {
+            using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) 
+            {
                 zipFile.BeginUpdate();
                 var entry = zipFile.GetEntry("lint.jar");
                 if (entry != null) {
@@ -312,21 +315,86 @@ Task ("binderate")
         relative =  relative.Replace(@"/libs", "");
         Information($"      Renaming: {relative}");
         string[] parts = relative.Split(new string[]{"/"}, StringSplitOptions.RemoveEmptyEntries);
-        Information($"          1 : {parts[0]}");
-        Information($"          2 : {parts[1]}");
+        string group_id = parts[0];
+        string artifact_id = parts[1];
+        Information($"          1 : {group_id}");
+        Information($"          2 : {artifact_id}");
 
         string version = artifacts_by_version[(parts[0], parts[1])];
-
+        string name_old = "repackaged.jar";
+        string name_new = $"repackaged-{parts[0]}-{parts[1]}-{version}.jar";
         MoveFile
             (
-                fp, 
-                fp.ToString().Replace
-                                (
-                                    "repackaged.jar", 
-                                    $"repackaged-{parts[0]}-{parts[1]}-{version}.jar"
-                                )
+                $"externals/{group_id}/{artifact_id}/libs/{name_old}", 
+                $"externals/{group_id}/{artifact_id}/libs/{name_new}"
+            );
+        MoveFile
+            (
+                $"externals/{group_id}/{artifact_id}.aar", 
+                $"externals/{group_id}/{artifact_id}.original.aar"
+            );
+        Zip
+            (
+                $"externals/{group_id}/{artifact_id}/", 
+                $"externals/{group_id}/{artifact_id}.aar"
             );
         // find ./externals -type f -iname "*repack*"
+
+        foreach (var aar in GetFiles($"{fp.GetDirectory()}/../*.aar")) 
+        {
+            Information($"Renaming: repackaged.jar from {aar}");
+            /*
+            Cannot rename
+            using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) 
+            {
+                zipFile.BeginUpdate();
+                CSharpCode.SharpZipLib.Zip.ZipEntry entry_old = zipFile.GetEntry("repackaged.jar");
+                CSharpCode.SharpZipLib.Zip.ZipEntry entry_new = zipFile.Clone();
+                if (entry != null) 
+                {
+                    Information($"		Renaming {name_old} from {aar} to {name_new}");
+                    zipFile.Delete(entry_old);
+                    zipFile.Add(entry_new);
+                }
+                zipFile.CommitUpdate();
+            }
+            */
+            /*
+            using 
+                (
+                    var archive = new System.IO.Compression.ZipArchive
+                                                                (
+                                                                    System.IO.File.Open
+                                                                                    (
+                                                                                        fp.ToString(), 
+                                                                                        FileMode.Open, 
+                                                                                        FileAccess.ReadWrite
+                                                                                    ), 
+                                                                    System.IO.Compression.ZipArchiveMode.Update
+                                                                )
+                )
+            {
+                var entries = archive.Entries.ToArray();
+                foreach (var entry_old in entries)
+                {
+                    if(entry_old.Name.Contains(name_old))
+                    {
+                        Information($"          Zip updating {fp.ToString()}");
+                        var entry_new = archive.CreateEntry(entry_old.Name.Replace(name_old, name_new));
+                        using (var entry_old_opened = entry_old.Open())
+                        {
+                            using (var entry_new_opened = entry_new.Open())
+                            {
+                                entry_old_opened.CopyTo(entry_new_opened);
+                                entry_old.Delete();
+                            }
+                        }
+                    }
+                }
+            }
+            */
+        }
+
     }
 
     return;   
