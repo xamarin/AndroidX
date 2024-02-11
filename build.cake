@@ -22,6 +22,60 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CsvHelper;
 
+System.Diagnostics.Stopwatch stopwatch;
+List<(DateTime timestamp, string task, TimeSpan duration)> TimingDataStopwatch;
+List<(DateTime timestamp, string task, TimeSpan duration)> TimingDataCake;
+
+Setup
+    (
+        context =>
+        {
+            // Executed BEFORE the first task.
+            stopwatch = new System.Diagnostics.Stopwatch();
+            TimingDataStopwatch = new List<(DateTime timestampt, string task, TimeSpan duration)>();
+            TimingDataCake      = new List<(DateTime timestampt, string task, TimeSpan duration)>();
+
+            return;
+        }
+    );
+
+Teardown
+    (
+        context =>
+        {
+            // Executed AFTER the last task.
+            foreach(var data in TimingDataStopwatch)
+            {                
+                Information($" TimingDataStopwatch      {data.timestamp},{data.task},{data.duration}");
+            }
+            foreach(var data in TimingDataCake)
+            {                
+                Information($" TimingDataCake           {data.timestamp},{data.task},{data.duration}");
+            }
+        }
+    );
+
+TaskSetup
+    (
+        context =>
+        {
+            // Executed BEFORE the first task.
+            stopwatch.Start();
+
+            return;
+        }
+    );
+
+TaskTeardown
+    (
+        context =>
+        {
+            stopwatch.Stop();
+            TimingDataStopwatch.Add( (DateTime.Now, context.Task.Name, stopwatch.Elapsed) );
+            TimingDataCake.Add( (DateTime.Now, context.Task.Name, context.Duration) );
+        }
+    );
+
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
