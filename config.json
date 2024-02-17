@@ -431,10 +431,26 @@
       },
       {
         "groupId": "androidx.compose.material3",
+        "artifactId": "material3-android",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
+        "nugetId": "Xamarin.AndroidX.Compose.Material3Android",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.compose.material3",
         "artifactId": "material3-window-size-class",
         "version": "1.2.0",
         "nugetVersion": "1.2.0",
         "nugetId": "Xamarin.AndroidX.Compose.Material3.WindowSizeClass",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.compose.material3",
+        "artifactId": "material3-window-size-class-android",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0",
+        "nugetId": "Xamarin.AndroidX.Compose.Material3.WindowSizeClassAndroid",
         "dependencyOnly": false
       },
       {
