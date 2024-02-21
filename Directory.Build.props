@@ -216,6 +216,7 @@
     <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
     <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
     <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
+    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
     
   </ItemGroup>
 </Project>
