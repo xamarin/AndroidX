@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
+		<TargetFramework>$(_DefaultTargetFrameworks)</TargetFramework>
     <!-- 
     <TargetFramework>net8.0-android34</TargetFramework>
     -->
