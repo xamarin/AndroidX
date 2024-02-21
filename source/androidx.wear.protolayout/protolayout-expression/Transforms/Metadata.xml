@@ -12,5 +12,11 @@
         >
         ElseUseRawT
     </attr>
+    <attr
+        path="/api/package[@name='androidx.wear.protolayout.expression']/class[@name='VersionBuilders.VersionInfo']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='androidx.wear.protolayout.expression.VersionBuilders.VersionInfo']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
 
 </metadata>
