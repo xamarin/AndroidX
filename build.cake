@@ -397,13 +397,25 @@ Task ("binderate")
 
     }
 
+    // foreach (FilePath file in GetFiles("./externals/**/repackaged.jar")) 
+    // {
+    //     string[] parts = file.ToString().Split(new char[]{'/', '\\'}, StringSplitOptions.None);
+    //     string aid = parts[parts.Length - 3];
+    //     string gid = parts[parts.Length - 4].Replace(".", "-");
+    //     string v = artifacts_with_verions[(gid, aid)];
+    //     string file_new = file.ToString().Replace("repackaged", $"repackaged-{gid}-{aid}");
+    //     Information($"Renaming: {file}");
+    //     Information($"      to: {file_new}");
+    //     MoveFile(file, file_new);
+    // }
+
     return;   
 });
 
 string version_suffix = "";
 string nuget_version_template = $"x.y.z.w{version_suffix}";
 JArray binderator_json_array = null;
-Dictionary<(string gid, string aid), string> artifacts_by_version = new Dictionary<(string gid, string aid), string>();
+Dictionary<(string gid, string aid), string> artifacts_with_verions = null;
 
 Task("binderate-config-verify")
     .IsDependentOn("binderate-fix")
@@ -420,6 +432,8 @@ Task("binderate-config-verify")
                 }
             }
 
+            artifacts_with_verions = new Dictionary<(string gid, string aid), string >();
+
             Information("config.json verification...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
@@ -434,6 +448,9 @@ Task("binderate-config-verify")
                 string artifact_version = (string) jo["version"];
                 string nuget_id  	    = (string) jo["nugetId"];
                 string nuget_version  	= (string) jo["nugetVersion"];
+
+                Information($"Verifying  : {group_id}:{artifact_id}:{artifact_version}");
+                artifacts_with_verions.Add( (group_id, artifact_id), artifact_version);
 
                 string[] artifact_version_parts = artifact_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
                 string[] nuget_version_parts = nuget_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
@@ -507,7 +524,7 @@ Task("binderate-config-verify")
                     Warning($"		nuget_version = {nuget_version_new}");
                     throw new Exception("check config.json for nuget id");
                 }
-
+                
                 artifacts_by_version.Add((group_id, artifact_id), artifact_version);    
             }
 
@@ -552,7 +569,7 @@ Task("binderate-fix")
                 }
             }
 
-            Warning("config.json fixing missing folder strucutre ...");
+            Warning("config.json fixing missing folder structure ...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
                 string groupId      = (string) jo["groupId"];
