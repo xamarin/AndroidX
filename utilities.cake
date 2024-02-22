@@ -602,7 +602,8 @@ Task ("spell-check")
                 "PlayServicesAuth",
                 "GoogleAndroid",
                 "GoogleId",
-
+                "Material3Android",
+                "WindowSizeClassAndroid",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
