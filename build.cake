@@ -733,7 +733,7 @@ Task("samples-generate-all-targets")
             continue;
         }
 
-        itemGroup.Add(new XElement(xmlns + "PackageReference",
+        itemGroup.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
 
