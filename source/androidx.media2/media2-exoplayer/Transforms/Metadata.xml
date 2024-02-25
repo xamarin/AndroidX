@@ -726,11 +726,23 @@
         >
         OnTimelineChangedDeprecated
     </attr>
-        
+
     <attr
         path="/api/package[@name='androidx.media2.exoplayer.external.video']/interface[@name='VideoListener']/method[@name='onRenderedFirstFrame' and count(parameter)=0]"
         name="managedName"
         >
         OnRenderedFirstFrameVideoListener
     </attr>
+
+
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.video']/interface[@name='VideoRendererEventListener']"
+        />
+    <remove-node
+	    path="/api/package[@name='androidx.media2.exoplayer.external.audio']/interface[@name='AudioRendererEventListener']"
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/interface[@name='AnalyticsListener']"
+        />
+        
 </metadata>
