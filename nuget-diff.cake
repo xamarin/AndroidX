@@ -36,6 +36,7 @@ if (!nupkgs.Any()) {
 				.AppendQuoted(nupkg.FullPath)
 				.Append(version)
 				.Append("--prerelease")
+				.Append("--prefer-released")
 				.Append("--group-ids")
 				.Append("--ignore-unchanged")
 				.Append("--compare-nuget-structure")
