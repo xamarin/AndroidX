@@ -22,7 +22,7 @@ parameters:
   - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
   - 'boots': '1.1.0.712-preview2'
-  - 'private-api-tools': '1.0.0'
+  - 'private-api-tools': '1.0.1'
 
   # Build Parameters
   verbosity: 'normal'                                       # the build verbosity: 'minimal', 'normal', 'diagnostic'
