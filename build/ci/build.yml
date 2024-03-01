@@ -38,6 +38,8 @@ jobs:
     sdl:
       spotBugs:
         enabled: false
+      binskim:
+        scanOutputDirectoryOnly: true
     outputs:
     - output: pipelineArtifact
       targetPath: ${{ parameters.artifactsPath }}

@@ -18,6 +18,7 @@ variables:
 
   # Windows specific variables
   windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
+  windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
   windowsClassicInstaller: https://aka.ms/xamarin-android-commercial-d17-4-windows      # Windows Classic XA installer URL
   
   # macOS specific variables
@@ -54,6 +55,7 @@ extends:
           name: windows
           buildPool:
             name: $(windowsAgentPoolName)
+            image: $(windowsImage)
             os: windows
           classicInstallerUrl: $(windowsClassicInstaller)
           mainBranchName: $(mainBranchName)
