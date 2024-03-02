@@ -606,6 +606,8 @@ Task ("spell-check")
                 "AdsServices",
                 "PrivacySandbox",
                 "AdsServices",
+                "Material3Android",
+                "WindowSizeClassAndroid",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -1520,21 +1522,28 @@ Task("tools-executive-oreder-csv-and-markdown")
                 Arguments = process_args,
                 RedirectStandardOutput = true,
             };
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            foreach (string line in redirectedStandardOutput.ToList())
+            try
             {
-                string tool = null;
-                string version = null;
-
-                if
-                    (
-                        line.Contains("NuGet Version: ")
-                    )
+                exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+                foreach (string line in redirectedStandardOutput.ToList())
                 {
-                    tool = line.Replace("NuGet Version: ", "");
-                    version = tool;
-                    sb.AppendLine($"nuget, {version}");
+                    string tool = null;
+                    string version = null;
+
+                    if
+                        (
+                            line.Contains("NuGet Version: ")
+                        )
+                    {
+                        tool = line.Replace("NuGet Version: ", "");
+                        version = tool;
+                        sb.AppendLine($"nuget, {version}");
+                    }
                 }
+            }
+            catch
+            {
+                sb.AppendLine($"NuGet package manager, Not installed");
             }
 
             /*
