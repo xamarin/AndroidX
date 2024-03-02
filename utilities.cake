@@ -1539,7 +1539,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             }
             catch
             {
-                sb.AppendLine($"NuGet, Not installed");
+                sb.AppendLine($"NuGet package manager, Not installed");
             }
 
             /*
