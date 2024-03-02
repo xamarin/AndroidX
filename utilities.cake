@@ -1520,7 +1520,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             };
             try
             {
-    			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+                exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
                 foreach (string line in redirectedStandardOutput.ToList())
                 {
                     string tool = null;
@@ -1539,7 +1539,7 @@ Task("tools-executive-oreder-csv-and-markdown")
             }
             catch
             {
-                sb.AppendLine($"NuGet, Not installed");
+                sb.AppendLine($"NuGet package manager, Not installed");
             }
 
             /*
