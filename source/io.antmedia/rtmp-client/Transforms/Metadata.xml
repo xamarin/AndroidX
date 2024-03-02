@@ -1,3 +1,8 @@
 <metadata>
-
+    <attr
+        path="/api/package[@name='io.antmedia.rtmp_client']"
+        name="managedName"
+        >
+        Xamarin.IO.Antmedia.RTMP.Client
+    </attr>
 </metadata>
