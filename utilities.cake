@@ -604,6 +604,22 @@ Task ("spell-check")
                 "GoogleId",
                 "Material3Android",
                 "WindowSizeClassAndroid",
+                "ExoPlayer",
+                "Media3",
+                "DataSource",
+                "CroNet",
+                "OkHttp",
+                "Rtmp",
+                "Hls",
+                "Ima",
+                "Rtsp",
+                "SmoothStreaming",
+                "WorkManager",
+                "Ui",
+                "InteractiveMedia",
+                "V3",
+                "AntMedia",
+                "RtmpClient",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
