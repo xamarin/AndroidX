@@ -2281,14 +2281,6 @@
         "frozen": true
       },
       {
-        "groupId": "com.google.ads.interactivemedia.v3",
-        "artifactId": "interactivemedia",
-        "version": "3.29.0",
-        "nugetVersion": "3.29.0",
-        "nugetId": "Xamarin.Google.Ads.InteractiveMedia.V3",
-        "dependencyOnly": false
-      },
-      {
         "groupId": "com.google.assistant.appactions",
         "artifactId": "suggestions",
         "version": "1.0.0",
@@ -2800,6 +2792,14 @@
         "nugetVersion": "1.0.10",
         "nugetId": "Xamarin.AndroidX.Migration",
         "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.ads.interactivemedia.v3",
+        "artifactId": "interactivemedia",
+        "version": "3.29.0",
+        "nugetVersion": "3.29.0",
+        "nugetId": "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia",
+        "dependencyOnly": false
       }
     ],
     "templateSets": [
