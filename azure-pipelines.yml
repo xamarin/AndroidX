@@ -9,27 +9,74 @@ variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
 
+  # Build variables
+  mainBranchName: main                                                                  # Name of Git "main" branch
+  configuration: Release                                                                # Build configuration: 'Debug', 'Release'
+
+  # Reporting variables
+  areaPath: DevDiv\VS Client - Runtime SDKs\Android                                     # AzDo area path to log any issues
+
+  # Windows specific variables
+  windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
+  windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
+  windowsClassicInstaller: https://aka.ms/xamarin-android-commercial-d17-4-windows      # Windows Classic XA installer URL
+  
+  # macOS specific variables
+  macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
+  macosImage: internal-macos12                                                          # macOS VM image name
+  macosClassicInstaller:  https://aka.ms/xamarin-android-commercial-d17-4-macos         # macOS Classic XA installer URL
+
 resources:
   repositories:
+    - repository: 1esPipelines
+      type: git
+      name: 1ESPipelineTemplates/1ESPipelineTemplates
+      ref: refs/tags/release
     - repository: internal-templates
       type: github
       name: xamarin/yaml-templates
       endpoint: xamarin
       ref: refs/heads/main
 
-jobs:
-  - template: build/ci/build.yml
-        
-  - ${{ if eq(variables['System.TeamProject'], 'devdiv') }}:
-    - template: sign-artifacts/jobs/v2.yml@internal-templates
-      parameters:
-        dependsOn: [ 'build' ]
-        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+extends:
+  template: v1/1ES.Official.PipelineTemplate.yml@1esPipelines
+  parameters:   
+    pool:
+      name: AzurePipelines-EO
+      image: 1ESPT-Windows2022
+      os: windows
+      
+    stages:
+    - stage: Build
 
-    - template: compliance/sbom/job.v1.yml@internal-templates
-      parameters:
-        dependsOn: signing
-        condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
-        artifactNames: [ nuget-signed ]
-        packageName: androidx
-        packageFilter: '*.nupkg'
+      jobs:
+      - template: build/ci/build.yml@self
+        parameters:
+          name: windows
+          buildPool:
+            name: $(windowsAgentPoolName)
+            image: $(windowsImage)
+            os: windows
+          classicInstallerUrl: $(windowsClassicInstaller)
+          mainBranchName: $(mainBranchName)
+          configuration: $(configuration)
+          runAPIScan: true
+
+      - template: build/ci/build.yml@self
+        parameters:
+          name: macos
+          buildPool:
+            name: $(macosAgentPoolName)
+            vmImage: $(macosImage)
+            os: macOS
+          classicInstallerUrl: $(macosClassicInstaller)
+          mainBranchName: $(mainBranchName)
+          configuration: $(configuration)
+
+      - template: sign-artifacts/jobs/v2.yml@internal-templates
+        parameters:
+          dependsOn: [ 'build_windows' ]
+          artifactName: output-windows
+          usePipelineArtifactTasks: true
+          use1ESTemplate: true
+          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
