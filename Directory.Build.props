@@ -11,10 +11,10 @@
     <!-- Use an updated 'generator' -->
     <!-- It's ok to use "Windows" here because we only use managed code from this package -->
     <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
-    
+
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
-    
+
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
@@ -45,7 +45,7 @@
     <!-- Exclude TF-specific transform files by default -->
     <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
   </PropertyGroup>
-  
+
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
@@ -211,12 +211,19 @@
     <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
-    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
-    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
-    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
-    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
-    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
-    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
-    
+    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />
+    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />
+    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />
+    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />
+    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />
+    <AndroidNamespaceReplacement Include='Mediacodec' Replacement='MediaCodec' />
+    <AndroidNamespaceReplacement Include='Smoothstreaming' Replacement='SmoothStreaming' />
+    <AndroidNamespaceReplacement Include='Mediaparser' Replacement='MediaParser' />
+    <AndroidNamespaceReplacement Include='Workmanager' Replacement='WorkManager' />
+    <AndroidNamespaceReplacement Include='Interactivemedia' Replacement='InteractiveMedia' />
+    <AndroidNamespaceReplacement Include='Antmedia' Replacement='AntMedia' />
+    <AndroidNamespaceReplacement Include='RTMP' Replacement='Rtmp' />
+
   </ItemGroup>
 </Project>
