@@ -1,0 +1,16 @@
+﻿<metadata>
+
+    <attr
+    path="/api/package[@name='androidx.media3.datasource.rtmp']/class[@name='RtmpDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.DataSource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.rtmp']/class[@name='RtmpDataSourceFactory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.DataSource.IDataSource
+    </attr>
+
+</metadata>
