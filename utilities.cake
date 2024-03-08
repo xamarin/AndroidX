@@ -1015,7 +1015,9 @@ Task ("api-diff-analysis")
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
-            DirectoryPathCollection directories = GetSubDirectories("./output/api-diff");
+            string dir = "./output/api-diff";
+            EnsureDirectoryExists(dir);
+            DirectoryPathCollection directories = GetSubDirectories(dir);
             Dictionary<string, string>  nugets_modified = new Dictionary<string, string>();
             Dictionary<string, int[]>   api_changes_breaking_removed = new Dictionary<string, int[]>();
 
@@ -1518,21 +1520,28 @@ Task("tools-executive-oreder-csv-and-markdown")
                 Arguments = process_args,
                 RedirectStandardOutput = true,
             };
-			exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
-            foreach (string line in redirectedStandardOutput.ToList())
+            try
             {
-                string tool = null;
-                string version = null;
-
-                if
-                    (
-                        line.Contains("NuGet Version: ")
-                    )
+                exitCodeWithoutArguments = StartProcess(process, process_settings, out redirectedStandardOutput);
+                foreach (string line in redirectedStandardOutput.ToList())
                 {
-                    tool = line.Replace("NuGet Version: ", "");
-                    version = tool;
-                    sb.AppendLine($"nuget, {version}");
+                    string tool = null;
+                    string version = null;
+
+                    if
+                        (
+                            line.Contains("NuGet Version: ")
+                        )
+                    {
+                        tool = line.Replace("NuGet Version: ", "");
+                        version = tool;
+                        sb.AppendLine($"nuget, {version}");
+                    }
                 }
+            }
+            catch
+            {
+                sb.AppendLine($"NuGet package manager, Not installed");
             }
 
             /*
