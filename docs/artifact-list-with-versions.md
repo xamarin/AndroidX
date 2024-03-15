@@ -270,7 +270,7 @@
 | 263|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2.2             |
 | 264|com.google.guava:guava                                                |32.0.1-android      |Xamarin.Google.Guava                                                  |32.0.1.2            |
 | 265|com.google.guava:listenablefuture                                     |1.0                 |Xamarin.Google.Guava.ListenableFuture                                 |1.0.0.18            |
-| 266|com.google.j2objc:j2objc-annotations                                  |2.8                 |Xamarin.Google.J2Objc.Annotations                                     |2.8.0.8             |
+| 266|com.google.j2objc:j2objc-annotations                                  |3.0.0               |Xamarin.Google.J2Objc.Annotations                                     |3.0.0               |
 | 267|dev.chrisbanes.snapper:snapper                                        |0.3.0               |Xamarin.Dev.ChrisBanes.Snapper                                        |0.3.0.9             |
 | 268|io.github.aakira:napier                                               |2.7.1               |Xamarin.AAkira.Napier                                                 |2.7.1.1             |
 | 269|io.reactivex.rxjava2:rxandroid                                        |2.1.1               |Xamarin.Android.ReactiveX.RxAndroid                                   |2.1.1.9             |
