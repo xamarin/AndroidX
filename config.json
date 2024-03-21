@@ -257,7 +257,7 @@
         "groupId": "androidx.collection",
         "artifactId": "collection",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Collection",
         "dependencyOnly": false
       },
@@ -2372,8 +2372,8 @@
       {
         "groupId": "com.google.j2objc",
         "artifactId": "j2objc-annotations",
-        "version": "2.8",
-        "nugetVersion": "2.8.0.8",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
         "nugetId": "Xamarin.Google.J2Objc.Annotations",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
