@@ -1015,7 +1015,9 @@ Task ("api-diff-analysis")
                 binderator_json_array = (JArray)JToken.ReadFrom(jtr);
             }
 
-            DirectoryPathCollection directories = GetSubDirectories("./output/api-diff");
+            string dir = "./output/api-diff";
+            EnsureDirectoryExists(dir);
+            DirectoryPathCollection directories = GetSubDirectories(dir);
             Dictionary<string, string>  nugets_modified = new Dictionary<string, string>();
             Dictionary<string, int[]>   api_changes_breaking_removed = new Dictionary<string, int[]>();
 
