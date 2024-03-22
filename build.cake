@@ -320,9 +320,9 @@ Task ("binderate")
         Information($"          1 : {group_id}");
         Information($"          2 : {artifact_id}");
 
-        string version = artifacts_by_version[(parts[0], parts[1])];
+        string version = artifacts_with_verions[(group_id, artifact_id)];
         string name_old = "repackaged.jar";
-        string name_new = $"repackaged-{parts[0]}-{parts[1]}-{version}.jar";
+        string name_new = $"repackaged-{artifact_id.Replace(".", "-")}-{parts[1]}-{version.Replace(".", "-")}.jar";
         MoveFile
             (
                 $"externals/{group_id}/{artifact_id}/libs/{name_old}", 
@@ -338,6 +338,7 @@ Task ("binderate")
                 $"externals/{group_id}/{artifact_id}/", 
                 $"externals/{group_id}/{artifact_id}.aar"
             );
+
         // find ./externals -type f -iname "*repack*"
 
         foreach (var aar in GetFiles($"{fp.GetDirectory()}/../*.aar")) 
@@ -358,8 +359,7 @@ Task ("binderate")
                 }
                 zipFile.CommitUpdate();
             }
-            */
-            /*
+
             using 
                 (
                     var archive = new System.IO.Compression.ZipArchive
@@ -450,7 +450,6 @@ Task("binderate-config-verify")
                 string nuget_version  	= (string) jo["nugetVersion"];
 
                 Information($"Verifying  : {group_id}:{artifact_id}:{artifact_version}");
-                artifacts_with_verions.Add( (group_id, artifact_id), artifact_version);
 
                 string[] artifact_version_parts = artifact_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
                 string[] nuget_version_parts = nuget_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
@@ -525,7 +524,7 @@ Task("binderate-config-verify")
                     throw new Exception("check config.json for nuget id");
                 }
                 
-                artifacts_by_version.Add((group_id, artifact_id), artifact_version);    
+                artifacts_with_verions.Add((group_id, artifact_id), artifact_version);    
             }
 
             return;
