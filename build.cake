@@ -733,7 +733,7 @@ Task("samples-generate-all-targets")
             continue;
         }
 
-        itemGroup.Add(new XElement(xmlns + "PackageReference",
+        itemGroup.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
 
@@ -779,11 +779,10 @@ Task("samples-only")
 
     string[] solutions = new string[]
     {
-        "./samples/BuildAll/BuildAll.sln",
-        "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
-        "./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
-        //"./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
-        //"./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
+        // "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
+        //"./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
+        // "./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
+        // "./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
     };
 
     foreach(string solution in solutions)

@@ -1,12 +1,10 @@
 {
-  "microsoft.net.sdk.android": "33.0.95/7.0.100",
-  "microsoft.net.sdk.ios": "16.4.7090/7.0.100",
-  "microsoft.net.sdk.maccatalyst": "16.4.7090/7.0.100",
-  "microsoft.net.sdk.macos": "13.3.7090/7.0.100",
-  "microsoft.net.sdk.maui": "7.0.92/7.0.100",
-  "microsoft.net.sdk.tvos": "16.4.7090/7.0.100",
-  "microsoft.net.workload.mono.toolchain.net6": "7.0.10/7.0.100",
-  "microsoft.net.workload.mono.toolchain.net7": "7.0.10/7.0.100",
-  "microsoft.net.workload.emscripten.net6": "7.0.10/7.0.100",
-  "microsoft.net.workload.emscripten.net7": "7.0.10/7.0.100"
+  "microsoft.net.sdk.android": "34.99.0-preview.1.151/9.0.100-preview.1",
+  "microsoft.net.sdk.ios": "17.2.9088-net9-p1/9.0.100-preview.1",
+  "microsoft.net.sdk.maccatalyst": "17.2.9088-net9-p1/9.0.100-preview.1",
+  "microsoft.net.sdk.macos": "14.2.9088-net9-p1/9.0.100-preview.1",
+  "microsoft.net.sdk.maui": "9.0.0-preview.1.9973/9.0.100-preview.1",
+  "microsoft.net.sdk.tvos": "17.2.9088-net9-p1/9.0.100-preview.1",
+  "microsoft.net.workload.mono.toolchain.current": "9.0.0-preview.1.24080.9/9.0.100-preview.1",
+  "microsoft.net.workload.emscripten.current": "9.0.0-preview.1.24072.2/9.0.100-preview.1"
 }
