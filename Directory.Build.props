@@ -216,5 +216,11 @@
     <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
     <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
     
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppsetId' />    
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
   </ItemGroup>
 </Project>

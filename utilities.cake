@@ -602,6 +602,10 @@ Task ("spell-check")
                 "PlayServicesAuth",
                 "GoogleAndroid",
                 "GoogleId",
+                "PrivacySandbox",
+                "AdsServices",
+                "PrivacySandbox",
+                "AdsServices",
                 "Material3Android",
                 "WindowSizeClassAndroid",
            };
