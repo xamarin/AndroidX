@@ -1,0 +1,21 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='androidx.media3.decoder']/class[@name='SimpleDecoder']/method[@name='createInputBuffer' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.decoder']/class[@name='SimpleDecoder']/method[@name='createOutputBuffer' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.decoder']/class[@name='SimpleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='I'] and parameter[2][@type='O'] and parameter[3][@type='boolean']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.decoder']/class[@name='SimpleDecoder']/method[@name='createUnexpectedDecodeException' and count(parameter)=1 and parameter[1][@type='java.lang.Throwable']]"
+        />
+
+    <!--
+    <remove-node
+        path="/api/package[@name='androidx.media3.decoder']/class[@name='SimpleDecoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
+        />
+    -->
+    
+</metadata>
