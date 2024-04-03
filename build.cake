@@ -14,6 +14,8 @@
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
 
+#load "build/cake/update-config.cake"
+
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;

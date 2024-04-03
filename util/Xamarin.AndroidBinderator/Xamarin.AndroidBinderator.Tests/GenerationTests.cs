@@ -524,14 +524,14 @@ namespace Xamarin.AndroidBinderator.Tests
 </Project>");
 		}
 
-		public async Task ProcessAndAssertTemplate(string input, BindingConfig config, string output, Dictionary<string, string> metadata = null)
+		async Task ProcessAndAssertTemplate(string input, BindingConfig config, string output, Dictionary<string, string> metadata = null)
 		{
 			var generated = Path.Combine(RootDirectory, "generated");
 			var outputFile = Path.Combine(generated, "Generated.csproj");
 			var templateFile = CreateTemplate(input);
 
 			config.BasePath = RootDirectory;
-			config.Templates.Add(new TemplateConfig(templateFile, outputFile) { Metadata = metadata });
+			config.Templates.Add(new TemplateConfig(templateFile, outputFile) { Metadata = metadata ?? [] });
 
 			await Engine.BinderateAsync(config);
 

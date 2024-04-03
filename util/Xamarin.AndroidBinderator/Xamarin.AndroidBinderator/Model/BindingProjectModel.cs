@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace AndroidBinderator
@@ -7,22 +7,22 @@ namespace AndroidBinderator
 	{
 		public string Id { get; private set; } = Guid.NewGuid().ToString().ToUpperInvariant();
 
-		public string Name { get; set; }
+		public string? Name { get; set; }
 
-		public string MavenGroupId { get; set; }
+		public string? MavenGroupId { get; set; }
 
 		public List<MavenArtifactModel> MavenArtifacts { get; set; } = new List<MavenArtifactModel>();
 
-		public string NuGetPackageId { get; set; }
-		public string NuGetVersionBase { get; set; }
-		public string NuGetVersionSuffix { get; set; }
+		public string? NuGetPackageId { get; set; }
+		public string? NuGetVersionBase { get; set; }
+		public string? NuGetVersionSuffix { get; set; }
 
-		public string NuGetVersion =>
+		public string? NuGetVersion =>
 			string.IsNullOrWhiteSpace(NuGetVersionSuffix)
 				? NuGetVersionBase
 				: NuGetVersionBase + NuGetVersionSuffix;
 
-		public string AssemblyName { get; set; }
+		public string? AssemblyName { get; set; }
 
 		public List<NuGetDependencyModel> NuGetDependencies { get; set; } = new List<NuGetDependencyModel>();
 
@@ -30,6 +30,6 @@ namespace AndroidBinderator
 
 		public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string>();
 
-		public BindingConfig Config { get; set; }
+		public BindingConfig? Config { get; set; }
 	}
 }
