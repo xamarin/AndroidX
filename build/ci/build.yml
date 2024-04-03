@@ -22,7 +22,7 @@ parameters:
   - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
   - 'boots': '1.1.0.712-preview2'
-  - 'private-api-tools': '1.0.2'
+  - 'private-api-tools': '1.0.3'
   
   # Reporting/Analysis Parameters
   artifactsPath: 'output'                                           # Path to the NuGet packages that need to be signed, verified and published
