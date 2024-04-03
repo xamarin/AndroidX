@@ -43,7 +43,7 @@ steps:
     toolVersion: Latest
   condition: and(succeeded(), eq('refs/heads/${{ parameters.mainBranchName }}', variables['Build.SourceBranch']))
   env:
-    AzureServicesAuthConnectionString: runAs=App;AppId=$(ApiScanClientId);TenantId=$(ApiScanTenant);AppKey=$(ApiScanSecret)
+    AzureServicesAuthConnectionString: runAs=App;AppId=$(ApiScanMAUI1ESPTManagedId)
 
 - task: SdtReport@2
   displayName: Guardian Export - Security Report
