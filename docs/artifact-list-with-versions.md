@@ -237,10 +237,10 @@
 | 230|androidx.wear:wear-ongoing                                            |1.0.0               |Xamarin.AndroidX.Wear.Ongoing                                         |1.0.0.13            |
 | 231|androidx.wear:wear-phone-interactions                                 |1.0.1               |Xamarin.AndroidX.Wear.PhoneInteractions                               |1.0.1.11            |
 | 232|androidx.wear:wear-remote-interactions                                |1.0.0               |Xamarin.AndroidX.Wear.RemoteInteractions                              |1.0.0.13            |
-| 233|androidx.wear.compose:compose-foundation                              |1.3.0               |Xamarin.AndroidX.Wear.Compose.Foundation                              |1.3.0.1             |
-| 234|androidx.wear.compose:compose-material                                |1.3.0               |Xamarin.AndroidX.Wear.Compose.Material                                |1.3.0.1             |
-| 235|androidx.wear.compose:compose-material-core                           |1.3.0               |Xamarin.AndroidX.Wear.Compose.Material.Core                           |1.3.0.1             |
-| 236|androidx.wear.compose:compose-navigation                              |1.3.0               |Xamarin.AndroidX.Wear.Compose.Navigation                              |1.3.0.1             |
+| 233|androidx.wear.compose:compose-foundation                              |1.3.1               |Xamarin.AndroidX.Wear.Compose.Foundation                              |1.3.1               |
+| 234|androidx.wear.compose:compose-material                                |1.3.1               |Xamarin.AndroidX.Wear.Compose.Material                                |1.3.1               |
+| 235|androidx.wear.compose:compose-material-core                           |1.3.1               |Xamarin.AndroidX.Wear.Compose.Material.Core                           |1.3.1               |
+| 236|androidx.wear.compose:compose-navigation                              |1.3.1               |Xamarin.AndroidX.Wear.Compose.Navigation                              |1.3.1               |
 | 237|androidx.wear.protolayout:protolayout                                 |1.1.0               |Xamarin.AndroidX.Wear.ProtoLayout                                     |1.1.0.1             |
 | 238|androidx.wear.protolayout:protolayout-expression                      |1.1.0               |Xamarin.AndroidX.Wear.ProtoLayout.Expression                          |1.1.0.1             |
 | 239|androidx.wear.protolayout:protolayout-expression-pipeline             |1.1.0               |Xamarin.AndroidX.Wear.ProtoLayout.Expression.Pipeline                 |1.1.0.1             |
@@ -287,7 +287,7 @@
 | 280|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.10            |
 | 281|com.google.auto.value:auto-value-annotations                          |1.10.4              |Xamarin.Google.AutoValue.Annotations                                  |1.10.4.3            |
 | 282|com.google.code.gson:gson                                             |2.10.1              |GoogleGson                                                            |2.10.1.8            |
-| 283|com.google.crypto.tink:tink-android                                   |1.12.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.12.0.1            |
+| 283|com.google.crypto.tink:tink-android                                   |1.13.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.13.0              |
 | 284|com.google.flogger:flogger                                            |0.8                 |Xamarin.Flogger                                                       |0.8.0.2             |
 | 285|com.google.flogger:flogger-system-backend                             |0.8                 |Xamarin.Flogger.SystemBackend                                         |0.8.0.2             |
 | 286|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2.2             |
