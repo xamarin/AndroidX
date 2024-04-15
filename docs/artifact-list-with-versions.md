@@ -101,10 +101,10 @@
 |  94|androidx.cursoradapter:cursoradapter                                  |1.0.0               |Xamarin.AndroidX.CursorAdapter                                        |1.0.0.23            |
 |  95|androidx.customview:customview                                        |1.1.0               |Xamarin.AndroidX.CustomView                                           |1.1.0.22            |
 |  96|androidx.customview:customview-poolingcontainer                       |1.0.0               |Xamarin.AndroidX.CustomView.PoolingContainer                          |1.0.0.9             |
-|  97|androidx.databinding:databinding-adapters                             |8.3.1               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |8.3.1               |
-|  98|androidx.databinding:databinding-common                               |8.3.1               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |8.3.1               |
-|  99|androidx.databinding:databinding-runtime                              |8.3.1               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |8.3.1               |
-| 100|androidx.databinding:viewbinding                                      |8.3.1               |Xamarin.AndroidX.DataBinding.ViewBinding                              |8.3.1               |
+|  97|androidx.databinding:databinding-adapters                             |8.3.2               |Xamarin.AndroidX.DataBinding.DataBindingAdapters                      |8.3.2               |
+|  98|androidx.databinding:databinding-common                               |8.3.2               |Xamarin.AndroidX.DataBinding.DataBindingCommon                        |8.3.2               |
+|  99|androidx.databinding:databinding-runtime                              |8.3.2               |Xamarin.AndroidX.DataBinding.DataBindingRuntime                       |8.3.2               |
+| 100|androidx.databinding:viewbinding                                      |8.3.2               |Xamarin.AndroidX.DataBinding.ViewBinding                              |8.3.2               |
 | 101|androidx.datastore:datastore                                          |1.0.0               |Xamarin.AndroidX.DataStore                                            |1.0.0.4             |
 | 102|androidx.datastore:datastore-core                                     |1.0.0               |Xamarin.AndroidX.DataStore.Core                                       |1.0.0.4             |
 | 103|androidx.datastore:datastore-preferences                              |1.0.0               |Xamarin.AndroidX.DataStore.Preferences                                |1.0.0.4             |
