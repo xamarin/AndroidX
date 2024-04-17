@@ -749,56 +749,6 @@ Task("samples-generate-all-targets")
     System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
 });
 
-Task("samples")
-    .IsDependentOn("nuget")
-    .IsDependentOn("samples-only");
-
-Task("samples-only")
-    .IsDependentOn("samples-generate-all-targets")
-    .Does(() =>
-{
-    // clear the packages folder so we always use the latest
-    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
-    EnsureDirectoryExists(packagesPath);
-    CleanDirectories(packagesPath);
-
-    // build the samples
-    MSBuildSettings settings_msbuild = new MSBuildSettings()
-        .SetConfiguration("Debug") // We don't need to run linking
-        .SetVerbosity(VERBOSITY)
-        .SetMaxCpuCount(0)
-        .WithRestore()
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings_msbuild.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings_msbuild.ToolPath = MSBUILD_PATH;
-
-    string[] solutions = new string[]
-    {
-        "./samples/BuildAll/BuildAll.sln",
-        "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
-        "./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
-        //"./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
-        //"./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
-    };
-
-    foreach(string solution in solutions)
-    {
-        FilePath fp_solution = new FilePath(solution);
-        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
-        Information($"=====================================================================================================");
-        Information($"MSBuild          {solution} / {filename}");    
-        MSBuild(solution, settings_msbuild.EnableBinaryLogger($"./output/samples.{filename}.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog"));
-    }
-
-    return;
-});
-
-
 Task("samples-dotnet")
     .IsDependentOn("nuget")
     .IsDependentOn("samples-only-dotnet");
@@ -825,7 +775,6 @@ Task("samples-only-dotnet")
     {
         "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
-        "./samples/dotnet/BuildAllXamarinForms.sln",
     };
 
     foreach(string solution in solutions)
@@ -1012,7 +961,6 @@ Task ("packages")
 Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples")
     .IsDependentOn ("samples-dotnet")
     .IsDependentOn ("tools-executive-order")
     ;
@@ -1033,7 +981,6 @@ Task ("ci-build")
 
 // Runs samples without building packages
 Task ("ci-samples")
-    .IsDependentOn ("samples-only")
     .IsDependentOn ("samples-only-dotnet")
     ;
 
