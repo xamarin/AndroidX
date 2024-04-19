@@ -44,6 +44,7 @@ jobs:
     - output: pipelineArtifact
       targetPath: ${{ parameters.artifactsPath }}
       artifactName: output-${{ parameters.name }}
+      condition: always()
       
   steps:
     - template: setup-environment.yml
