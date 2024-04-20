@@ -88,4 +88,10 @@
         path="/api/package[@name='androidx.datastore.preferences']/class[@name='PreferencesProto.Value']/implements"
         />
 
+    <remove-node
+        path="/api/package[@name='androidx.datastore.core']/interface[@name='DataMigration']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.datastore']/class[@name='DataStoreDelegateKt']"
+        />
 </metadata>
