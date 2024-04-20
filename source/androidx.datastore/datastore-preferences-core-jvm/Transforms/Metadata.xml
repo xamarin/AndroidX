@@ -1,0 +1,91 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='Internal']"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/interface/method"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class/method"
+        name="abstract"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/interface/method[@name='getDefaultInstanceForType']"
+        name="managedReturn"
+        >
+        AndroidX.DataStore.Preferences.Protobuf.IMessageLite
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class/method[@name='getDefaultInstanceForType']"
+        name="managedReturn"
+        >
+        AndroidX.DataStore.Preferences.Protobuf.IMessageLite
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/interface/method[@name='iterator']"
+        name="managedReturn"
+        >
+        Java.Lang.IIterable
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class/method[@name='iterator']"
+        name="managedReturn"
+        >
+        Java.Util.IIterator
+    </attr>
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='LazyStringArrayList']"
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='UnmodifiableLazyStringList']"
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='NullValue']"
+        />
+
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.core']/class[@name='PreferencesSerializer']/method[@name='getDefaultValue' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='GeneratedMessageLite.Builder']/method[@name='getDefaultInstanceForType' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.core']/class[@name='PreferencesSerializer']/method[@name='writeTo' and count(parameter)=3 and parameter[1][@type='androidx.datastore.preferences.core.Preferences'] and parameter[2][@type='okio.BufferedSink'] and parameter[3][@type='kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt;']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='GeneratedMessageLite']/method[@name='getDefaultInstanceForType' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences.protobuf']/class[@name='GeneratedMessageLite.ExtendableMessage']/field[@name='extensions']"
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences']/class[@name='PreferencesProto.Value.Builder']/method[@name='getValueCase' and count(parameter)=0]"
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences']/class[@name='PreferencesProto.Value.Builder']/implements"
+        />
+    <remove-node 
+        path="/api/package[@name='androidx.datastore.preferences']/class[@name='PreferencesProto.Value']/implements"
+        />
+
+</metadata>
