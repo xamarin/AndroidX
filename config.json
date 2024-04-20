@@ -911,18 +911,18 @@
       },
       {
         "groupId": "androidx.datastore",
-        "artifactId": "datastore-preferences-core-jvm",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0",
-        "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core.JVM",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.datastore",
         "artifactId": "datastore-preferences-core",
         "version": "1.1.0",
         "nugetVersion": "1.1.0",
         "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.datastore",
+        "artifactId": "datastore-preferences-core-jvm",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core.JVM",
         "dependencyOnly": false
       },
       {
