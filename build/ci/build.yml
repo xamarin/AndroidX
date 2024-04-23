@@ -12,7 +12,7 @@ parameters:
   runAPIScan: false                                                 # Run APIScan analysis
   
   # Tool Parameters
-  dotnetVersion: '8.0.201'                                          # the version of .NET to use
+  dotnetVersion: '8.0.204'                                          # the version of .NET to use
   dotnetWorkloadRollbackFile: 'workloads.json'
   dotnetWorkloadSource: 'https://api.nuget.org/v3/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
@@ -23,7 +23,7 @@ parameters:
   tools:                                                            # Additional .NET global tools to install
   - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
-  - 'boots': '1.1.0.712-preview2'
+  - 'boots': '1.1.0.36'
   - 'private-api-tools': '1.0.3'
   
   # Reporting/Analysis Parameters
@@ -46,6 +46,7 @@ jobs:
     - output: pipelineArtifact
       targetPath: ${{ parameters.artifactsPath }}
       artifactName: output-${{ parameters.name }}
+      condition: always()
       
   steps:
     - template: setup-environment.yml
