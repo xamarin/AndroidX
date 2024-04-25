@@ -8,5 +8,11 @@
     <remove-node
         path="/api/package[@name='androidx.datastore.core.handlers']/class[@name='ReplaceFileCorruptionHandler']"
         />
+
+
+
+    <remove-node
+        path="/api/package[@name='androidx.datastore.core']/interface[@name='IDataStore']"
+        />
         
 </metadata>
