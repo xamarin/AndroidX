@@ -17,7 +17,8 @@ namespace AndroidX.DataStore.Core.Internal
     /// </summary> <summary>
     /// 
     /// </summary>
-    internal partial interface IDataMigration : AndroidX.DataStore.Core.IDataMigration
+    internal partial class IDataMigration
     {
+        private AndroidX.DataStore.Core.IDataMigration fail_if_removed; 
     }
 }

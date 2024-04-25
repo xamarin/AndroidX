@@ -22,7 +22,8 @@ namespace AndroidX.DataStore.Core.Internal
     /// </summary> <summary>
     /// 
     /// </summary>
-    internal partial interface ISerializer : AndroidX.DataStore.Core.ISerializer
+    internal partial class ISerializer
     {
+        private AndroidX.DataStore.Core.ISerializer fail_if_removed;
     }
 }

@@ -16,7 +16,8 @@ namespace AndroidX.DataStore.Core.Internal
     /// </summary> <summary>
     /// 
     /// </summary>
-    internal partial interface ReplaceFileCorruptionHandler : AndroidX.DataStore.Core.Handlers.ReplaceFileCorruptionHandler
+    internal partial class ReplaceFileCorruptionHandler
     {
+        private AndroidX.DataStore.Core.Handlers.ReplaceFileCorruptionHandler fail_if_removed;
     }
 }
