@@ -874,7 +874,7 @@
         "artifactId": "datastore-core-jvm",
         "version": "1.1.0",
         "nugetVersion": "1.1.0",
-        "nugetId": "Xamarin.AndroidX.DataStore.Core.JVM",
+        "nugetId": "Xamarin.AndroidX.DataStore.Core.Jvm",
         "dependencyOnly": false
       },
       {
@@ -890,7 +890,7 @@
         "artifactId": "datastore-core-okio-jvm",
         "version": "1.1.0",
         "nugetVersion": "1.1.0",
-        "nugetId": "Xamarin.AndroidX.DataStore.Core.OkIo.JVM",
+        "nugetId": "Xamarin.AndroidX.DataStore.Core.OkIo.Jvm",
         "dependencyOnly": false
       },
       {
@@ -922,7 +922,7 @@
         "artifactId": "datastore-preferences-core-jvm",
         "version": "1.1.0",
         "nugetVersion": "1.1.0",
-        "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core.JVM",
+        "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core.Jvm",
         "dependencyOnly": false
       },
       {
@@ -2438,7 +2438,7 @@
         "artifactId": "atomicfu-jvm",
         "version": "0.17.0",
         "nugetVersion": "0.17.0",
-        "nugetId": "Xamarin.KotlinX.AtomICFU.JVM",
+        "nugetId": "Xamarin.KotlinX.AtomICFU.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
       },
@@ -2537,7 +2537,7 @@
         "artifactId": "kotlinx-serialization-core-jvm",
         "version": "1.6.3",
         "nugetVersion": "1.6.3",
-        "nugetId": "Xamarin.KotlinX.Serialization.Core.JVM",
+        "nugetId": "Xamarin.KotlinX.Serialization.Core.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
       },
@@ -2555,7 +2555,7 @@
         "artifactId": "kotlinx-serialization-protobuf-jvm",
         "version": "1.6.3",
         "nugetVersion": "1.6.3",
-        "nugetId": "Xamarin.KotlinX.Serialization.Protobuf.JVM",
+        "nugetId": "Xamarin.KotlinX.Serialization.Protobuf.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
       },
