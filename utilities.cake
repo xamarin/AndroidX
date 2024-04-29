@@ -606,7 +606,7 @@ Task ("spell-check")
                 "WindowSizeClassAndroid",
                 "OkIo",
                 "Parcelize",
-                "AtomICFU",
+                "AtomicFU",
                 "Protobuf",
            };
 
