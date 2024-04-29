@@ -208,7 +208,7 @@ AndroidX.DataStore
 AndroidX.DataStore.Core
 AndroidX.DataStore.Core.Handlers
 AndroidX.DataStore.Core.Internal
-AndroidX.DataStore.Core.Okio
+AndroidX.DataStore.Core.OkIo
 AndroidX.DataStore.Migrations
 AndroidX.DataStore.Preferences
 AndroidX.DataStore.Preferences.Core
@@ -499,8 +499,8 @@ Kotlin.Time
 Kotlin.Time.Jdk8
 KotlinX.Android.Extensions
 KotlinX.Android.Parcel
-KotlinX.Atomicfu
-KotlinX.Atomicfu.Locks
+KotlinX.AtomicFU
+KotlinX.AtomicFU.Locks
 KotlinX.Parcelize
 KotlinX.Serialization
 KotlinX.Serialization.Builtins
