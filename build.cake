@@ -724,7 +724,12 @@ Task("samples-generate-all-targets")
         if (nupkg.FullPath.Contains("Xamarin.AndroidBinderator"))
             continue;
         // skip because of multiple classes
-        if (nupkg.FullPath.Contains("Xamarin.AndroidX.DataStore.Core.Jvm"))
+        if 
+            (
+                nupkg.FullPath.Contains("Xamarin.AndroidX.DataStore.")
+                &&
+                ( nupkg.FullPath.Contains(".Jvm") || nupkg.FullPath.Contains(".Android") )
+            )
             continue;
 
         var filename = nupkg.GetFilenameWithoutExtension();
