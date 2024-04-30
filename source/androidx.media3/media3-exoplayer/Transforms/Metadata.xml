@@ -122,10 +122,42 @@
     </attr>
 
 
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']/method[@name='getPlayerError' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Common.PlaybackException
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/interface/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
+        name="managedType"
+        >
+        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
+    </attr>
+
+    <!--
+        obsoleted
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
+        />
+
+
+
     <!--
         TODO: rework this
     -->
 
+    <!--
+    -->
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.source']/interface[@name='MediaSource.Factory']"
         />
@@ -191,14 +223,6 @@
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.metadata']/class[@name='MetadataRenderer']"
         />
-    <!--
-    <remove-node
-        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
-        />
-    -->    
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']"
         />
@@ -232,12 +256,11 @@
 		void AddMediaItems (global::System.Collections.Generic.IList <global:: AndroidX.Media3.Common.MediaItem >? p0);
     -->
 
-    <attr
-        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']/method[@name='getPlayerError' and count(parameter)=0]"
-        name="managedReturn"
-        >
-        AndroidX.Media3.Common.PlaybackException
-    </attr>
 
+    <!--
+    <remove-node 
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
+        />
+    -->
 
 </metadata> 
