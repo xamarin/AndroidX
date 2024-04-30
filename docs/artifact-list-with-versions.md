@@ -296,8 +296,8 @@
 | 289|org.jetbrains.kotlin:kotlin-stdlib-common                             |1.9.23              |Xamarin.Kotlin.StdLib.Common                                          |1.9.23              |
 | 290|org.jetbrains.kotlin:kotlin-stdlib-jdk7                               |1.9.23              |Xamarin.Kotlin.StdLib.Jdk7                                            |1.9.23              |
 | 291|org.jetbrains.kotlin:kotlin-stdlib-jdk8                               |1.9.23              |Xamarin.Kotlin.StdLib.Jdk8                                            |1.9.23              |
-| 292|org.jetbrains.kotlinx:atomicfu                                        |0.17.0              |Xamarin.KotlinX.AtomICFU                                              |0.17.0              |
-| 293|org.jetbrains.kotlinx:atomicfu-jvm                                    |0.17.0              |Xamarin.KotlinX.AtomICFU.Jvm                                          |0.17.0              |
+| 292|org.jetbrains.kotlinx:atomicfu                                        |0.17.0              |Xamarin.KotlinX.AtomicFU                                              |0.17.0              |
+| 293|org.jetbrains.kotlinx:atomicfu-jvm                                    |0.17.0              |Xamarin.KotlinX.AtomicFU.Jvm                                          |0.17.0              |
 | 294|org.jetbrains.kotlinx:kotlinx-coroutines-android                      |1.8.0               |Xamarin.KotlinX.Coroutines.Android                                    |1.8.0.1             |
 | 295|org.jetbrains.kotlinx:kotlinx-coroutines-core                         |1.8.0               |Xamarin.KotlinX.Coroutines.Core                                       |1.8.0.1             |
 | 296|org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm                     |1.8.0               |Xamarin.KotlinX.Coroutines.Core.Jvm                                   |1.8.0.1             |
