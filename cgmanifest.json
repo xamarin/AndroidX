@@ -1942,32 +1942,6 @@
       "component": {
         "type": "maven",
         "maven": {
-          "artifactId": "media2-exoplayer",
-          "groupId": "androidx.media2",
-          "version": "1.3.0",
-          "nuGetId": "Xamarin.AndroidX.Media2.ExoPlayer",
-          "nuGetVersion": "1.3.0.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
-          "artifactId": "media2-player",
-          "groupId": "androidx.media2",
-          "version": "1.3.0",
-          "nuGetId": "Xamarin.AndroidX.Media2.Player",
-          "nuGetVersion": "1.3.0.1"
-        }
-      },
-      "license": "The Apache Software License, Version 2.0"
-    },
-    {
-      "component": {
-        "type": "maven",
-        "maven": {
           "artifactId": "media2-session",
           "groupId": "androidx.media2",
           "version": "1.3.0",
