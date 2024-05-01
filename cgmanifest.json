@@ -1373,7 +1373,7 @@
           "artifactId": "datastore-core-okio",
           "groupId": "androidx.datastore",
           "version": "1.1.0",
-          "nuGetId": "Xamarin.AndroidX.DataStore.Core.OkIo",
+          "nuGetId": "Xamarin.AndroidX.DataStore.Core.OkIO",
           "nuGetVersion": "1.1.0"
         }
       },
@@ -1386,7 +1386,7 @@
           "artifactId": "datastore-core-okio-jvm",
           "groupId": "androidx.datastore",
           "version": "1.1.0",
-          "nuGetId": "Xamarin.AndroidX.DataStore.Core.OkIo.Jvm",
+          "nuGetId": "Xamarin.AndroidX.DataStore.Core.OkIO.Jvm",
           "nuGetVersion": "1.1.0"
         }
       },
@@ -3231,9 +3231,9 @@
         "maven": {
           "artifactId": "installreferrer",
           "groupId": "com.android.installreferrer",
-          "version": "1.0",
+          "version": "1.1.2",
           "nuGetId": "Xamarin.Google.Android.InstallReferrer",
-          "nuGetVersion": "1.0.0.9"
+          "nuGetVersion": "1.1.2"
         }
       }
     },

@@ -110,8 +110,8 @@
 | 103|androidx.datastore:datastore-core                                     |1.1.0               |Xamarin.AndroidX.DataStore.Core                                       |1.1.0               |
 | 104|androidx.datastore:datastore-core-android                             |1.1.0               |Xamarin.AndroidX.DataStore.Core.Android                               |1.1.0               |
 | 105|androidx.datastore:datastore-core-jvm                                 |1.1.0               |Xamarin.AndroidX.DataStore.Core.Jvm                                   |1.1.0               |
-| 106|androidx.datastore:datastore-core-okio                                |1.1.0               |Xamarin.AndroidX.DataStore.Core.OkIo                                  |1.1.0               |
-| 107|androidx.datastore:datastore-core-okio-jvm                            |1.1.0               |Xamarin.AndroidX.DataStore.Core.OkIo.Jvm                              |1.1.0               |
+| 106|androidx.datastore:datastore-core-okio                                |1.1.0               |Xamarin.AndroidX.DataStore.Core.OkIO                                  |1.1.0               |
+| 107|androidx.datastore:datastore-core-okio-jvm                            |1.1.0               |Xamarin.AndroidX.DataStore.Core.OkIO.Jvm                              |1.1.0               |
 | 108|androidx.datastore:datastore-preferences                              |1.1.0               |Xamarin.AndroidX.DataStore.Preferences                                |1.1.0               |
 | 109|androidx.datastore:datastore-preferences-android                      |1.1.0               |Xamarin.AndroidX.DataStore.Preferences.Android                        |1.1.0               |
 | 110|androidx.datastore:datastore-preferences-core                         |1.1.0               |Xamarin.AndroidX.DataStore.Preferences.Core                           |1.1.0               |
@@ -253,7 +253,7 @@
 | 246|androidx.window.extensions.core:core                                  |1.0.0               |Xamarin.AndroidX.Window.Extensions.Core.Core                          |1.0.0.5             |
 | 247|androidx.work:work-runtime                                            |2.9.0               |Xamarin.AndroidX.Work.Runtime                                         |2.9.0.1             |
 | 248|androidx.work:work-runtime-ktx                                        |2.9.0               |Xamarin.AndroidX.Work.Work.Runtime.Ktx                                |2.9.0.1             |
-| 249|com.android.installreferrer:installreferrer                           |1.0                 |Xamarin.Google.Android.InstallReferrer                                |1.0.0.9             |
+| 249|com.android.installreferrer:installreferrer                           |1.1.2               |Xamarin.Google.Android.InstallReferrer                                |1.1.2               |
 | 250|com.google.accompanist:accompanist-appcompat-theme                    |0.34.0              |Xamarin.Google.Accompanist.AppCompat.Theme                            |0.34.0.1            |
 | 251|com.google.accompanist:accompanist-drawablepainter                    |0.34.0              |Xamarin.Google.Accompanist.DrawablePainter                            |0.34.0.1            |
 | 252|com.google.accompanist:accompanist-flowlayout                         |0.34.0              |Xamarin.Google.Accompanist.FlowLayout                                 |0.34.0.1            |
