@@ -604,7 +604,7 @@ Task ("spell-check")
                 "GoogleId",
                 "Material3Android",
                 "WindowSizeClassAndroid",
-                "OkIo",
+                "OkIO",
                 "Parcelize",
                 "AtomicFU",
                 "Protobuf",
