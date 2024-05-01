@@ -840,4 +840,8 @@
         Xamarin.Google.Crypto.Tink.Parameters
     </attr>
 
+    <remove-node 
+        path="/api/package[@name='com.google.crypto.tink.internal']/class[@name='PrimitiveSet']"
+        />
+
 </metadata>
