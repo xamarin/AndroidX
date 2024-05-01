@@ -1,8 +1,15 @@
 ﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationCompleted' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-        />
-    <remove-node
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationCompleted' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationResult']]"
+        name="managedName"
+        >
+        OnTransformationCompletedDefault
+    </attr>
+    <attr
         path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationError' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationException']]"
-        />
+        name="managedName"
+        >
+        OnTransformationErrorDefault
+    </attr>
+
 </metadata>
