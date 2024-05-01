@@ -275,7 +275,7 @@
 | 268|com.google.flogger:flogger                                            |0.8                 |Xamarin.Flogger                                                       |0.8.0.2             |
 | 269|com.google.flogger:flogger-system-backend                             |0.8                 |Xamarin.Flogger.SystemBackend                                         |0.8.0.2             |
 | 270|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2.2             |
-| 271|com.google.guava:guava                                                |32.0.1-android      |Xamarin.Google.Guava                                                  |32.0.1.2            |
+| 271|com.google.guava:guava                                                |33.1.0-android      |Xamarin.Google.Guava                                                  |33.1.0              |
 | 272|com.google.guava:listenablefuture                                     |1.0                 |Xamarin.Google.Guava.ListenableFuture                                 |1.0.0.18            |
 | 273|com.google.j2objc:j2objc-annotations                                  |3.0.0               |Xamarin.Google.J2Objc.Annotations                                     |3.0.0               |
 | 274|dev.chrisbanes.snapper:snapper                                        |0.3.0               |Xamarin.Dev.ChrisBanes.Snapper                                        |0.3.0.9             |
