@@ -604,6 +604,10 @@ Task ("spell-check")
                 "GoogleId",
                 "Material3Android",
                 "WindowSizeClassAndroid",
+                "OkIO",
+                "Parcelize",
+                "AtomicFU",
+                "Protobuf",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
