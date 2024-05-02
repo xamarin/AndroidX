@@ -48,18 +48,12 @@
   
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
-    <AndroidXNuGetTargetFolders Include="build\monoandroid12.0" />
-    <AndroidXNuGetTargetFolders Include="build\net6.0-android31.0" />
     <AndroidXNuGetTargetFolders Include="build\net7.0-android33.0" />
-    <AndroidXNuGetTargetFolders Include="buildTransitive\monoandroid12.0" />
-    <AndroidXNuGetTargetFolders Include="buildTransitive\net6.0-android31.0" />
     <AndroidXNuGetTargetFolders Include="buildTransitive\net7.0-android33.0" />
   </ItemGroup>
 
   <!-- Folders that _._ files need to go into for packages without managed libraries -->
   <ItemGroup>
-    <AndroidXNuGetLibFolders Include="lib\monoandroid12.0" />
-    <AndroidXNuGetLibFolders Include="lib\net6.0-android31.0" />
     <AndroidXNuGetLibFolders Include="lib\net7.0-android33.0" />
   </ItemGroup>
 
