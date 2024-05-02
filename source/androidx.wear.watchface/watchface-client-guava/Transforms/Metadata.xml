@@ -1,2 +1,36 @@
 <metadata>
+    <!-- 
+    Google.Common.Util.Concurrent.IListenableFuture
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceControlClient.Companion']/method[@name='createWatchFaceControlClient' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceControlClient.Companion']/method[@name='createWatchFaceRuntimeControlClientAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceControlClient']/method[@name='createWatchFaceControlClient' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceControlClient']/method[@name='createWatchFaceRuntimeControlClientAsync' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceControlClient']/method[@name='listenableGetOrCreateInteractiveWatchFaceClient' and count(parameter)=5 and parameter[1][@type='java.lang.String'] and parameter[2][@type='androidx.wear.watchface.client.DeviceConfig'] and parameter[3][@type='androidx.wear.watchface.client.WatchUiState'] and parameter[4][@type='androidx.wear.watchface.style.UserStyleData'] and parameter[5][@type='java.util.Map&lt;java.lang.Integer, ? extends androidx.wear.watchface.complications.data.ComplicationData&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceControlClient']/method[@name='listenableGetOrCreateInteractiveWatchFaceClient' and count(parameter)=7 and parameter[1][@type='java.lang.String'] and parameter[2][@type='androidx.wear.watchface.client.DeviceConfig'] and parameter[3][@type='androidx.wear.watchface.client.WatchUiState'] and parameter[4][@type='androidx.wear.watchface.style.UserStyleData'] and parameter[5][@type='java.util.Map&lt;java.lang.Integer, ? extends androidx.wear.watchface.complications.data.ComplicationData&gt;'] and parameter[6][@type='java.util.concurrent.Executor'] and parameter[7][@type='androidx.core.util.Consumer&lt;java.lang.String&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceMetadataClient.Companion']/method[@name='create' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.content.ComponentName']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceMetadataClient.Companion']/method[@name='createForRuntime' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.content.ComponentName'] and parameter[3][@type='java.lang.String']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceMetadataClient']/method[@name='create' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.content.ComponentName']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.wear.watchface.client']/class[@name='ListenableWatchFaceMetadataClient']/method[@name='createForRuntime' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.content.ComponentName'] and parameter[3][@type='java.lang.String']]"
+        />
+        
 </metadata>
