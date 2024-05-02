@@ -1,0 +1,25 @@
+﻿<metadata>
+    <remove-node 
+        path="/api/package[@name='kotlinx.serialization.internal']" 
+        />
+    <attr
+        path="/api/package[@name='kotlinx.serialization.builtins']/class/method[@name='deserialize']" 
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <remove-node
+        path="/api/package[@name='kotlinx.serialization.encoding']/interface/method[@name='getSerializersModule' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='kotlinx.serialization.encoding']/class/method[@name='getSerializersModule' and count(parameter)=0]"
+        />
+    <attr
+        path="/api/package[@name='kotlinx.serialization.builtins']/class[@name='LongAsStringSerializer']/method[@name='serialize' and count(parameter)=2 and parameter[1][@type='kotlinx.serialization.encoding.Encoder'] and parameter[2][@type='long']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+</metadata>
