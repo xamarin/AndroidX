@@ -10,7 +10,7 @@
 
     <!-- Use an updated 'generator' -->
     <!-- It's ok to use "Windows" here because we only use managed code from this package -->
-    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.43/tools/</_BindingsToolsLocation>
+    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.95/tools/</_BindingsToolsLocation>
     
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
@@ -215,6 +215,9 @@
     <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
     <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
     <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
+    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
+    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
+    
     
     <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
     <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
