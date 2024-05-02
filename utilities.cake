@@ -620,6 +620,10 @@ Task ("spell-check")
                 "V3",
                 "AntMedia",
                 "RtmpClient",
+                "OkIO",
+                "Parcelize",
+                "AtomicFU",
+                "Protobuf",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

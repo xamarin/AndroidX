@@ -225,6 +225,8 @@
     <AndroidNamespaceReplacement Include='Interactivemedia' Replacement='InteractiveMedia' />
     <AndroidNamespaceReplacement Include='Antmedia' Replacement='AntMedia' />
     <AndroidNamespaceReplacement Include='RTMP' Replacement='Rtmp' />
+    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
+    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
   </ItemGroup>
   
 </Project>

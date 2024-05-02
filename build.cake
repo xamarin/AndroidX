@@ -714,6 +714,14 @@ Task("samples-generate-all-targets")
         // Skip Binderator because it is not a binding package
         if (nupkg.FullPath.Contains("Xamarin.AndroidBinderator"))
             continue;
+        // skip because of multiple classes
+        if 
+            (
+                nupkg.FullPath.Contains("Xamarin.AndroidX.DataStore.")
+                &&
+                ( nupkg.FullPath.Contains(".Jvm") || nupkg.FullPath.Contains(".Android") )
+            )
+            continue;
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
