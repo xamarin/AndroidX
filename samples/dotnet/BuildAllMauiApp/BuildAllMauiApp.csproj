@@ -56,7 +56,13 @@
 		Project="..\..\..\output\AllPackages.targets" 
 		/>
 
-	<!--
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+	</ItemGroup>
+
+		<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
 	error NU1605: Detected package downgrade: Xamarin.AndroidX.Security.SecurityCrypto from 1.1.0-alpha03 to 1.0.0.7. 
 	Reference the package directly from the project to select a different version.  
