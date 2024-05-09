@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0-android</TargetFramework>
+		<TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
+
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
 		<UseMaui>true</UseMaui>
