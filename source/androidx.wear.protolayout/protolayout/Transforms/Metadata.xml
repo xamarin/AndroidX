@@ -96,4 +96,11 @@
     <remove-node
         path="/api/package[@name='androidx.wear.protolayout']/class[@name='DimensionBuilders']"
         />
+    <attr
+        path="/api/package[@name='androidx.wear.protolayout']/class[@name='ColorBuilders.SweepGradient.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Wear.ProtoLayout.ColorBuilders.IBrush
+    </attr>
+
 </metadata>

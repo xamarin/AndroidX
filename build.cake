@@ -2,13 +2,13 @@
 #tool nuget:?package=vswhere&version=3.1.7
 
 #tool nuget:?package=Cake.CoreCLR
-#tool nuget:?package=Microsoft.Android.Sdk.Windows&version=34.0.43
+#tool nuget:?package=Microsoft.Android.Sdk.Windows&version=34.0.95
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=7.0.0
 #addin nuget:?package=Newtonsoft.Json&version=13.0.3
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
-#addin nuget:?package=CsvHelper&version=30.1.0
+#addin nuget:?package=CsvHelper&version=31.0.3
 #addin nuget:?package=SharpZipLib&version=1.4.2
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
@@ -777,6 +777,14 @@ Task("samples-generate-all-targets")
         // Skip Binderator because it is not a binding package
         if (nupkg.FullPath.Contains("Xamarin.AndroidBinderator"))
             continue;
+        // skip because of multiple classes
+        if 
+            (
+                nupkg.FullPath.Contains("Xamarin.AndroidX.DataStore.")
+                &&
+                ( nupkg.FullPath.Contains(".Jvm") || nupkg.FullPath.Contains(".Android") )
+            )
+            continue;
 
         var filename = nupkg.GetFilenameWithoutExtension();
         var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
@@ -802,56 +810,6 @@ Task("samples-generate-all-targets")
     string content_new      = content_original.Replace("PackageReference", "PackageVersion");
     System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
 });
-
-Task("samples")
-    .IsDependentOn("nuget")
-    .IsDependentOn("samples-only");
-
-Task("samples-only")
-    .IsDependentOn("samples-generate-all-targets")
-    .Does(() =>
-{
-    // clear the packages folder so we always use the latest
-    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages").FullPath;
-    EnsureDirectoryExists(packagesPath);
-    CleanDirectories(packagesPath);
-
-    // build the samples
-    MSBuildSettings settings_msbuild = new MSBuildSettings()
-        .SetConfiguration("Debug") // We don't need to run linking
-        .SetVerbosity(VERBOSITY)
-        .SetMaxCpuCount(0)
-        .WithRestore()
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings_msbuild.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    if (!string.IsNullOrEmpty(MSBUILD_PATH))
-        settings_msbuild.ToolPath = MSBUILD_PATH;
-
-    string[] solutions = new string[]
-    {
-        "./samples/BuildAll/BuildAll.sln",
-        "./samples/BuildXamarinFormsApp/BuildXamarinFormsApp.sln",
-        "./samples/BuildMinimalMaterial/BuildMinimalMaterial.sln",
-        //"./samples/BuildMinimalMaterialAppCompat/BuildMinimalMaterialAppCompat.sln",
-        //"./samples/dotnet/BuildAllDotNet.sln", //MSBuild cannot handle net6 projects
-    };
-
-    foreach(string solution in solutions)
-    {
-        FilePath fp_solution = new FilePath(solution);
-        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
-        Information($"=====================================================================================================");
-        Information($"MSBuild          {solution} / {filename}");    
-        MSBuild(solution, settings_msbuild.EnableBinaryLogger($"./output/samples.{filename}.{CONFIGURATION}.msbuild.{DateTime.Now.ToString("yyyyMMddHHmmss")}.binlog"));
-    }
-
-    return;
-});
-
 
 Task("samples-dotnet")
     .IsDependentOn("nuget")
@@ -879,7 +837,6 @@ Task("samples-only-dotnet")
     {
         "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
-        "./samples/dotnet/BuildAllXamarinForms.sln",
     };
 
     foreach(string solution in solutions)
@@ -1066,7 +1023,6 @@ Task ("packages")
 Task ("full-run")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
-    .IsDependentOn ("samples")
     .IsDependentOn ("samples-dotnet")
     .IsDependentOn ("tools-executive-order")
     ;
@@ -1087,7 +1043,6 @@ Task ("ci-build")
 
 // Runs samples without building packages
 Task ("ci-samples")
-    .IsDependentOn ("samples-only")
     .IsDependentOn ("samples-only-dotnet")
     ;
 

@@ -9,8 +9,10 @@ namespace AndroidX.Browser.CustomTabs
 {
     public class CustomTabsActivityManager
     {
-        static CustomTabsActivityManager instance;
-        public static CustomTabsActivityManager From (Activity parentActivity, string servicePackageName = null)
+        static CustomTabsActivityManager? instance;
+
+        [Obsolete ("This method only supports a single parentActivity and caches a reference to it forever. It is recommended to use the CustomTabsActivityManager constructor instead and implement any desired caching in the consuming application.")]
+        public static CustomTabsActivityManager From (Activity parentActivity, string? servicePackageName = null)
         {
             if (instance == null) {
                 instance = new CustomTabsActivityManager (parentActivity);
@@ -22,8 +24,8 @@ namespace AndroidX.Browser.CustomTabs
         public Activity ParentActivity { get; private set; }
         public CustomTabsClient Client { get; private set; }
 
-        CustomTabsSession session = null;
-        public CustomTabsSession Session { 
+        CustomTabsSession? session = null;
+        public CustomTabsSession? Session { 
             get {
                 if (Client == null) {
                     return null;
