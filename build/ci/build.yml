@@ -2,7 +2,6 @@ parameters:
   # Environment Parameters
   name:                                                             # Job display name
   buildPool:                                                        # VM pool information
-  classicInstallerUrl:                                              # URL to retrieve the Classic XA installer
 
   # Build Parameters
   mainBranchName: 'main'                                            # Name of Git "main" branch
@@ -21,7 +20,6 @@ parameters:
   tools:                                                            # Additional .NET global tools to install
   - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
-  - 'boots': '1.1.0.36'
   - 'private-api-tools': '1.0.3'
   
   # Reporting/Analysis Parameters
@@ -54,7 +52,6 @@ jobs:
         dotnetWorkloadSource: ${{ parameters.dotnetWorkloadSource }}
         dotnetNuGetOrgSource: ${{ parameters.dotnetNuGetOrgSource }}
         dotnetTools: ${{ parameters.tools }}
-        classicInstallerUrl: ${{ parameters.classicInstallerUrl }}
 
     - template: build-and-test.yml
       parameters:
