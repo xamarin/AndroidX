@@ -999,6 +999,30 @@
       },
       {
         "groupId": "androidx.emoji2",
+        "artifactId": "emoji2-bundled",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0.5",
+        "nugetId": "Xamarin.AndroidX.Emoji2.Bundled",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.emoji2",
+        "artifactId": "emoji2-emojipicker",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0.5",
+        "nugetId": "Xamarin.AndroidX.Emoji2.EmojiPicker",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.emoji2",
+        "artifactId": "emoji2-views",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0.5",
+        "nugetId": "Xamarin.AndroidX.Emoji2.Views",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.emoji2",
         "artifactId": "emoji2-views-helper",
         "version": "1.4.0",
         "nugetVersion": "1.4.0.5",
