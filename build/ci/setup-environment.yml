@@ -5,7 +5,6 @@ parameters:
   dotnetWorkloadSource: ''
   dotnetNuGetOrgSource: ''
   dotnetTools: []
-  classicInstallerUrl: ''
   
 steps:
   # before the build starts, make sure the tooling is as expected
@@ -37,6 +36,3 @@ steps:
     - ${{ each pair in tool }}:
       - pwsh: dotnet tool update -g ${{ pair.key }} --version ${{ pair.value }}
         displayName: 'Install tool: ${{ pair.key }}'
-        
-  - pwsh: boots --url ${{ parameters.classicInstallerUrl }} --downgrade-first
-    displayName: 'Install Classic XA'
