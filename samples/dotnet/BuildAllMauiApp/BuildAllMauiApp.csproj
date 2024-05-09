@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>$(_DefaultTargetFrameworks)</TargetFramework>
+		<TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
 		<UseMaui>true</UseMaui>

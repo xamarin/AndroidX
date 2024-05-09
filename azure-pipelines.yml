@@ -19,12 +19,10 @@ variables:
   # Windows specific variables
   windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
   windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
-  windowsClassicInstaller: https://aka.ms/xamarin-android-commercial-d17-8-windows      # Windows Classic XA installer URL
   
   # macOS specific variables
   macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
   macosImage: internal-macos12                                                          # macOS VM image name
-  macosClassicInstaller:  https://aka.ms/xamarin-android-commercial-d17-8-macos         # macOS Classic XA installer URL
 
 resources:
   repositories:
@@ -57,7 +55,6 @@ extends:
             name: $(windowsAgentPoolName)
             image: $(windowsImage)
             os: windows
-          classicInstallerUrl: $(windowsClassicInstaller)
           mainBranchName: $(mainBranchName)
           configuration: $(configuration)
           runAPIScan: true
@@ -69,7 +66,6 @@ extends:
             name: $(macosAgentPoolName)
             vmImage: $(macosImage)
             os: macOS
-          classicInstallerUrl: $(macosClassicInstaller)
           mainBranchName: $(mainBranchName)
           configuration: $(configuration)
 
