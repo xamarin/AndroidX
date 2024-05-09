@@ -266,7 +266,7 @@
 | 259|com.google.accompanist:accompanist-systemuicontroller                 |0.34.0              |Xamarin.Google.Accompanist.SystemUIController                         |0.34.0.1            |
 | 260|com.google.android.material:compose-theme-adapter                     |1.1.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter                 |1.1.18.9            |
 | 261|com.google.android.material:compose-theme-adapter-3                   |1.0.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter3                |1.0.18.8            |
-| 262|com.google.android.material:material                                  |1.10.0              |Xamarin.Google.Android.Material                                       |1.10.0.3            |
+| 262|com.google.android.material:material                                  |1.11.0              |Xamarin.Google.Android.Material                                       |1.11.0              |
 | 263|com.google.assistant.appactions:suggestions                           |1.0.0               |Xamarin.Google.Assistant.AppActions.Suggestions                       |1.0.0.9             |
 | 264|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.10            |
 | 265|com.google.auto.value:auto-value-annotations                          |1.10.4              |Xamarin.Google.AutoValue.Annotations                                  |1.10.4.3            |
