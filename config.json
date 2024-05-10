@@ -2593,6 +2593,14 @@
         "templateSet": "reactive-streams"
       },
       {
+        "groupId": "androidx.emoji2",
+        "artifactId": "emoji2",
+        "version": "1.2.0",
+        "nugetVersion": "1.2.0.2",
+        "nugetId": "Xamarin.AndroidX.Emoji2",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "androidx.wear.tiles",
         "artifactId": "tiles",
         "version": "1.1.0",
