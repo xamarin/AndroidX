@@ -289,7 +289,7 @@
 | 282|org.checkerframework:checker-compat-qual                              |2.5.6               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.6.3             |
 | 283|org.checkerframework:checker-qual                                     |3.42.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.42.0.2            |
 | 284|org.jetbrains:annotations                                             |24.1.0              |Xamarin.Jetbrains.Annotations                                         |24.1.0.3            |
-| 285|org.jetbrains.kotlin:kotlin-android-extensions-runtime                |1.9.23              |Xamarin.Kotlin.Android.Extensions.Runtime                             |1.9.23.1            |
+| 285|org.jetbrains.kotlin:kotlin-android-extensions-runtime                |1.9.23              |Xamarin.Kotlin.Android.Extensions.Runtime.Library                     |1.9.23.1            |
 | 286|org.jetbrains.kotlin:kotlin-parcelize-runtime                         |1.9.23              |Xamarin.Kotlin.Parcelize.Runtime                                      |1.9.23.1            |
 | 287|org.jetbrains.kotlin:kotlin-reflect                                   |1.9.23              |Xamarin.Kotlin.Reflect                                                |1.9.23.1            |
 | 288|org.jetbrains.kotlin:kotlin-stdlib                                    |1.9.23              |Xamarin.Kotlin.StdLib                                                 |1.9.23.1            |
