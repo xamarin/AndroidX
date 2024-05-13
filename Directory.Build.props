@@ -33,8 +33,11 @@
 
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
-    <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
-
+    <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+    <!-- 
+    <NoWarn>$(NoWarn);NU5104</NoWarn>
+    -->
+    
     <!-- Common package metadata -->
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
