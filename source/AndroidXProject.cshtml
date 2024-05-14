@@ -61,17 +61,25 @@
     <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
-  @if (@Model.MavenArtifacts.Count > 0) {
-  <ItemGroup>
+  <!-- For some reason, having a different .aar name from our legacy packages causes AAPT2 errors.
+       Use this for now to rename them back to the previous format: '{GroupId}.{ArtifactId}.[aar|jar]'.
+       Eventually this should probably move into binderator. -->
+  <Target 
+    Name="_RenameLibraries" 
+    BeforeTargets="_CategorizeAndroidLibraries">
+    
     @foreach (var art in @Model.MavenArtifacts) {
-      if (art.ProguardFile != null) {
-    <None Include="..\..\@(art.ProguardFile)" Pack="True" PackagePath="proguard/" />
-      }
-    }
-  </ItemGroup>
-  }
-
-  <ItemGroup>
+    <Copy 
+      SourceFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" 
+      DestinationFiles="..\..\externals\@(art.MavenGroupId)\@(art.MavenGroupId).@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" />
+      
+    <ItemGroup>  
+      <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenGroupId).@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" />
+    </ItemGroup>
+    }  
+  </Target>
+  
+  <ItemGroup>    
     <!-- Include AssemblyInfo.cs -->
     <Compile Include="..\..\source\AssemblyInfo.cs" />
     
@@ -95,40 +103,6 @@
       <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
   </ItemGroup>
-
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-      if (art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar" />
-      } else {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" />
-      }
-    }
-  </ItemGroup>
-
-
-  @if (@Model.MavenArtifacts.Count > 0) {
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts)
-    {
-      if (art.MavenArtifactPackaging == "aar")
-      {
-    <InputJar 
-      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar')"
-      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
-    <!-- For those artifacts with lib/ folder -->
-    <InputJar
-      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
-      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar"
-      />
-      }
-      else
-      {
-    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
-      }
-    }
-  </ItemGroup>
-  }
 
   <ItemGroup>
     <!-- ProjectReference -->
