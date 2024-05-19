@@ -22,6 +22,11 @@
     <NoWarn>0618;0109;0114;0628;0108;0809;1572</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>moderate</NuGetAuditLevel>
+  </PropertyGroup>
+  
   @{
       string[] artifact_version_parts = Model.NuGetVersion
                                               .Split(new string[] { "-" }, StringSplitOptions.None);
