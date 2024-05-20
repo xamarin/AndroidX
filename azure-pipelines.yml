@@ -5,6 +5,10 @@ trigger:
 pr:
   - main
   
+parameters:
+- name: RunExtendedTests
+  default: true
+  
 variables:
   BUILD_NUMBER: $(Build.BuildNumber)
   BUILD_COMMIT: $(Build.SourceVersion)
@@ -76,3 +80,12 @@ extends:
           usePipelineArtifactTasks: true
           use1ESTemplate: true
           condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+
+    - template: build/ci/stage-extended-tests.yml@self
+      parameters:
+        stageCondition: and(succeeded(), eq('${{ parameters.RunExtendedTests }}', 'true'))
+        configuration: $(configuration)
+        buildPool:
+          name: $(windowsAgentPoolName)
+          image: $(windowsImage)
+          os: windows
