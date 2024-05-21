@@ -1047,17 +1047,9 @@
       },
       {
         "groupId": "androidx.health",
-        "artifactId": "health-connect-client",
-        "version": "1.0.0-alpha03",
-        "nugetVersion": "1.0.0-alpha03",
-        "nugetId": "Xamarin.AndroidX.Health.ConnectClient",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.health",
         "artifactId": "health-services-client",
-        "version": "1.0.0-rc01",
-        "nugetVersion": "1.0.0-rc01",
+        "version": "1.0.0-rc02",
+        "nugetVersion": "1.0.0-rc02",
         "nugetId": "Xamarin.AndroidX.Health.ServicesClient",
         "dependencyOnly": false
       },
