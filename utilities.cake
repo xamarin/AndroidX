@@ -608,6 +608,8 @@ Task ("spell-check")
                 "Parcelize",
                 "AtomicFU",
                 "Protobuf",
+                "ServicesClient",
+                "ConnectClient",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
