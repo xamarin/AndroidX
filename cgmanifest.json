@@ -1643,6 +1643,32 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "health-services-client",
+          "groupId": "androidx.health",
+          "version": "1.0.0-rc02",
+          "nuGetId": "Xamarin.AndroidX.Health.ServicesClient",
+          "nuGetVersion": "1.0.0-rc02"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "connect-client",
+          "groupId": "androidx.health.connect",
+          "version": "1.0.0-alpha11",
+          "nuGetId": "Xamarin.AndroidX.Health.Connect.ConnectClient",
+          "nuGetVersion": "1.0.0-alpha11"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "heifwriter",
           "groupId": "androidx.heifwriter",
           "version": "1.0.0",
@@ -3696,7 +3722,7 @@
           "artifactId": "kotlin-android-extensions-runtime",
           "groupId": "org.jetbrains.kotlin",
           "version": "1.9.23",
-          "nuGetId": "Xamarin.Kotlin.Android.Extensions.Runtime",
+          "nuGetId": "Xamarin.Kotlin.Android.Extensions.Runtime.Library",
           "nuGetVersion": "1.9.23.1"
         }
       },
