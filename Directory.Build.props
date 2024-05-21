@@ -33,7 +33,7 @@
 
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
-    <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+    <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
     <!-- 
     <NoWarn>$(NoWarn);NU5104</NoWarn>
     -->
