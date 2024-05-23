@@ -7,26 +7,17 @@ pr:
   
 parameters:
 - name: RunExtendedTests
-  default: true
+  displayName: Run Extended Tests?
+  type: boolean
+  default: false
   
 variables:
-  BUILD_NUMBER: $(Build.BuildNumber)
-  BUILD_COMMIT: $(Build.SourceVersion)
-
-  # Build variables
-  mainBranchName: main                                                                  # Name of Git "main" branch
-  configuration: Release                                                                # Build configuration: 'Debug', 'Release'
-
-  # Reporting variables
-  areaPath: DevDiv\VS Client - Runtime SDKs\Android                                     # AzDo area path to log any issues
-
-  # Windows specific variables
-  windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
-  windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
+  # Variables used by both AndroidX/GPS go in the template
+  - template: build/ci/variables.yml@self
   
-  # macOS specific variables
-  macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
-  macosImage: internal-macos12                                                          # macOS VM image name
+  # Variables only used by AndroidX go here
+  - name: skipUnitTests
+    value: false
 
 resources:
   repositories:
@@ -60,8 +51,6 @@ extends:
             name: $(windowsAgentPoolName)
             image: $(windowsImage)
             os: windows
-          mainBranchName: $(mainBranchName)
-          configuration: $(configuration)
           runAPIScan: true
 
       - template: sign-artifacts/jobs/v2.yml@internal-templates
@@ -83,13 +72,10 @@ extends:
             name: $(macosAgentPoolName)
             vmImage: $(macosImage)
             os: macOS
-          mainBranchName: $(mainBranchName)
-          configuration: $(configuration)
 
     - template: build/ci/stage-extended-tests.yml@self
       parameters:
         stageCondition: and(succeeded(), eq('${{ parameters.RunExtendedTests }}', 'true'))
-        configuration: $(configuration)
         buildPool:
           name: $(windowsAgentPoolName)
           image: $(windowsImage)

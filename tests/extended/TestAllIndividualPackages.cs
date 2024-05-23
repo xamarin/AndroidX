@@ -11,8 +11,8 @@ public class TestAllIndividualPackages
 	static string base_dir = "";
 	static string test_dir = @"output\tests";
 	static string configuration = "Release";
-	static string platform_version = "28";
-	static string net_version = "net7.0";
+	static string platform_version = "29";
+	static string net_version = "net8.0";
 
 	static TestAllIndividualPackages ()
 	{
@@ -23,13 +23,24 @@ public class TestAllIndividualPackages
 		// Create the test directory
 		Directory.CreateDirectory (Path.Combine (base_dir, test_dir));
 
-		// We need an empty Directory.Build.props file so we don't use the root one
+		// We need a Directory.Build.props file so we don't use the root one, it also
+		// needs to turn off NuGet Central Package Management.
 		var directory_props = Path.Combine (base_dir, test_dir, "Directory.Build.props");
 
-		if (!File.Exists (directory_props))
-			File.WriteAllText (directory_props, "<Project />");
+		var props_content = """
+		<Project>
+		  <PropertyGroup>
+		    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+		  </PropertyGroup>
+		</Project>
+		""";
 
-		// Set up a NuGet.config file to force using the locally built NuGet packages
+		if (!File.Exists (directory_props))
+			File.WriteAllText (directory_props, props_content);
+
+		// Set up a NuGet.config file that allows us to use the locally built NuGet packages.
+		// Note we also need to allow things to come from NuGet.org (*) in order to test when
+		// NuGet resolves a mix of the new local packages and existing ones published on NuGet.org.
 		var nuget_config_src = Path.Combine (base_dir, "samples", "NuGet.config");
 		var nuget_config_dst = Path.Combine (base_dir, test_dir, "NuGet.config");
 
@@ -43,14 +54,16 @@ public class TestAllIndividualPackages
 	}
 
 	[Test]
+	[Category ("Android")]
 	[TestCaseSource (nameof (GetPackagesToTest))]
 	public Task TestAndroidDotNetPackage (string id, string version)
 		=> TestPackage (id, version, "android");
 
-	//[Test]
-	//[TestCaseSource (nameof (GetPackagesToTest))]
-	//public Task TestMauiPackage (string id, string version)
-	//	=> TestPackage (id, version, "maui");
+	[Test]
+	[Category ("MAUI")]
+	[TestCaseSource (nameof (GetPackagesToTest))]
+	public Task TestMauiPackage (string id, string version)
+		=> TestPackage (id, version, "maui");
 
 	public static object [] GetPackagesToTest ()
 	{

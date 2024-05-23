@@ -3,19 +3,7 @@
 parameters:
   stageCondition:                    # When to run this stage
   buildPool:                         # VM pool information
-  configuration: Debug               # the build configuration: 'Debug', 'Release'
-  testAssembly: tests/extended/bin/Release/net7.0/ExtendedTests.dll
-  agentCount: 10
   
-  # Tool Parameters
-  dotnetVersion: '7.0.408'                                          # .NET version to install on agent
-  dotnetWorkloadRollbackFile: 'workloads.json'                      # Rollback file specifying workload versions to install
-  dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'       # NuGet.org URL to find workloads
-  dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'   # .NET engineering URL to find workloads
-  
-  tools:                                                            # Additional .NET global tools to install
-  - 'dotnet-test-slicer' : '0.1.0-alpha7'
-
 stages:
 - stage: extended_tests
   displayName: Extended Tests
@@ -23,55 +11,17 @@ stages:
   condition: ${{ parameters.stageCondition }}
   
   jobs:
-  - job: package_tests
-    displayName: Individual Package Tests
-    strategy:
-      parallel: ${{ parameters.agentCount }}
-    pool: ${{ parameters.buildPool }}
-    timeoutInMinutes: 480
-    
-    steps:
-    - template: setup-environment.yml
-      parameters:
-        dotnetVersion: ${{ parameters.dotnetVersion }}
-        dotnetWorkloadRollbackFile: ${{ parameters.dotnetWorkloadRollbackFile }}
-        dotnetWorkloadSource: ${{ parameters.dotnetWorkloadSource }}
-        dotnetNuGetOrgSource: ${{ parameters.dotnetNuGetOrgSource }}
-        dotnetTools: ${{ parameters.tools }}
-
-    - task: DownloadPipelineArtifact@2
-      inputs:
-        artifactName: output-windows
-        downloadPath: output
-        
-    # Build test assembly
-    - task: DotNetCoreCLI@2
-      displayName: Build unit tests
-      inputs:
-        command: build
-        projects: tests/extended/ExtendedTests.csproj
-        arguments: '-c ${{ parameters.configuration }}'
-    
-    # Figure out which tests this slice is running
-    - pwsh: >-
-        dotnet-test-slicer 
-        slice
-        --test-assembly="${{ parameters.testAssembly }}"
-        --slice-number=$(System.JobPositionInPhase)
-        --total-slices=$(System.TotalJobsInPhase)
-        --outfile="${{ parameters.testAssembly }}.runsettings"
-      displayName: Slice unit tests
-      failOnStderr: true      
-      
-    # Run unit tests
-    - task: DotNetCoreCLI@2
-      inputs:
-        command: test
-        projects: ${{ parameters.testAssembly }}
-        arguments: >-
-          --settings "${{ parameters.testAssembly }}.runsettings"
-        publishTestResults: true
-        testRunTitle: Individual Package Tests - $(System.JobPositionInPhase)
-      displayName: Run unit tests
-      continueOnError: true
-      timeoutInMinutes: 480
+  
+  - template: job-extended-tests.yml
+    parameters:
+      jobName: Android
+      agentCount: 6
+      testFilter: cat = Android
+      buildPool: ${{ parameters.buildPool }}
+  
+  - template: job-extended-tests.yml
+    parameters:
+      jobName: MAUI
+      agentCount: 10
+      testFilter: cat = MAUI
+      buildPool: ${{ parameters.buildPool }}
