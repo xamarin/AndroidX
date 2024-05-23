@@ -19,7 +19,7 @@ parameters:
 stages:
 - stage: extended_tests
   displayName: Extended Tests
-  dependsOn: Build
+  dependsOn: build_windows
   condition: ${{ parameters.stageCondition }}
   
   jobs:

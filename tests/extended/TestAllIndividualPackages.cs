@@ -37,19 +37,20 @@ public class TestAllIndividualPackages
 			var contents = File.ReadAllText (nuget_config_src);
 			contents = contents.Replace ("../output", "..");
 			contents = contents.Replace ("../packages", "packages");
+			contents = contents.Replace ("Microsoft.Android.Ref.*", "*");
 			File.WriteAllText (nuget_config_dst, contents);
 		}
 	}
 
-	//[Test]
-	//[TestCaseSource (nameof (GetPackagesToTest))]
-	//public Task TestAndroidDotNetPackage (string id, string version)
-	//	=> TestPackage (id, version, "android");
-
 	[Test]
 	[TestCaseSource (nameof (GetPackagesToTest))]
-	public Task TestMauiPackage (string id, string version)
-		=> TestPackage (id, version, "maui");
+	public Task TestAndroidDotNetPackage (string id, string version)
+		=> TestPackage (id, version, "android");
+
+	//[Test]
+	//[TestCaseSource (nameof (GetPackagesToTest))]
+	//public Task TestMauiPackage (string id, string version)
+	//	=> TestPackage (id, version, "maui");
 
 	public static object [] GetPackagesToTest ()
 	{

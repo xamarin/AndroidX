@@ -49,7 +49,8 @@ extends:
       os: windows
       
     stages:
-    - stage: Build
+    - stage: build_windows
+      displayName: Build - Windows
 
       jobs:
       - template: build/ci/build.yml@self
@@ -63,6 +64,18 @@ extends:
           configuration: $(configuration)
           runAPIScan: true
 
+      - template: sign-artifacts/jobs/v2.yml@internal-templates
+        parameters:
+          artifactName: output-windows
+          usePipelineArtifactTasks: true
+          use1ESTemplate: true
+          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          
+    - stage: build_mac
+      displayName: Build - Mac
+      dependsOn:
+      
+      jobs:
       - template: build/ci/build.yml@self
         parameters:
           name: macos
@@ -72,14 +85,6 @@ extends:
             os: macOS
           mainBranchName: $(mainBranchName)
           configuration: $(configuration)
-
-      - template: sign-artifacts/jobs/v2.yml@internal-templates
-        parameters:
-          dependsOn: [ 'build_windows' ]
-          artifactName: output-windows
-          usePipelineArtifactTasks: true
-          use1ESTemplate: true
-          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
 
     - template: build/ci/stage-extended-tests.yml@self
       parameters:
