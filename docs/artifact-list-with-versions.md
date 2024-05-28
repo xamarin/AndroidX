@@ -256,7 +256,7 @@
 | 249|androidx.window.extensions.core:core                                  |1.0.0               |Xamarin.AndroidX.Window.Extensions.Core.Core                          |1.0.0.6             |
 | 250|androidx.work:work-runtime                                            |2.9.0               |Xamarin.AndroidX.Work.Runtime                                         |2.9.0.2             |
 | 251|androidx.work:work-runtime-ktx                                        |2.9.0               |Xamarin.AndroidX.Work.Work.Runtime.Ktx                                |2.9.0.2             |
-| 252|com.android.installreferrer:installreferrer                           |2.0                 |Xamarin.Google.Android.InstallReferrer                                |2.0.0               |
+| 252|com.android.installreferrer:installreferrer                           |1.1.2               |Xamarin.Google.Android.InstallReferrer                                |1.1.2.1             |
 | 253|com.google.accompanist:accompanist-appcompat-theme                    |0.34.0              |Xamarin.Google.Accompanist.AppCompat.Theme                            |0.34.0.2            |
 | 254|com.google.accompanist:accompanist-drawablepainter                    |0.34.0              |Xamarin.Google.Accompanist.DrawablePainter                            |0.34.0.2            |
 | 255|com.google.accompanist:accompanist-flowlayout                         |0.34.0              |Xamarin.Google.Accompanist.FlowLayout                                 |0.34.0.2            |
