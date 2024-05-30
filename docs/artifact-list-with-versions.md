@@ -211,7 +211,7 @@
 | 204|androidx.tracing:tracing                                              |1.2.0               |Xamarin.AndroidX.Tracing.Tracing                                      |1.2.0.2             |
 | 205|androidx.transition:transition                                        |1.4.1               |Xamarin.AndroidX.Transition                                           |1.4.1.17            |
 | 206|androidx.tvprovider:tvprovider                                        |1.0.0               |Xamarin.AndroidX.TvProvider                                           |1.0.0.26            |
-| 207|androidx.vectordrawable:vectordrawable                                |1.1.0               |Xamarin.AndroidX.VectorDrawable                                       |1.1.0.24            |
+| 207|androidx.vectordrawable:vectordrawable                                |1.2.0               |Xamarin.AndroidX.VectorDrawable                                       |1.2.0               |
 | 208|androidx.vectordrawable:vectordrawable-animated                       |1.1.0               |Xamarin.AndroidX.VectorDrawable.Animated                              |1.1.0.24            |
 | 209|androidx.versionedparcelable:versionedparcelable                      |1.2.0               |Xamarin.AndroidX.VersionedParcelable                                  |1.2.0.2             |
 | 210|androidx.viewpager:viewpager                                          |1.0.0               |Xamarin.AndroidX.ViewPager                                            |1.0.0.24            |
@@ -289,7 +289,7 @@
 | 282|org.checkerframework:checker-compat-qual                              |2.5.6               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.6.3             |
 | 283|org.checkerframework:checker-qual                                     |3.42.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.42.0.2            |
 | 284|org.jetbrains:annotations                                             |24.1.0              |Xamarin.Jetbrains.Annotations                                         |24.1.0.3            |
-| 285|org.jetbrains.kotlin:kotlin-android-extensions-runtime                |1.9.23              |Xamarin.Kotlin.Android.Extensions.Runtime                             |1.9.23.1            |
+| 285|org.jetbrains.kotlin:kotlin-android-extensions-runtime                |1.9.23              |Xamarin.Kotlin.Android.Extensions.Runtime.Library                     |1.9.23.1            |
 | 286|org.jetbrains.kotlin:kotlin-parcelize-runtime                         |1.9.23              |Xamarin.Kotlin.Parcelize.Runtime                                      |1.9.23.1            |
 | 287|org.jetbrains.kotlin:kotlin-reflect                                   |1.9.23              |Xamarin.Kotlin.Reflect                                                |1.9.23.1            |
 | 288|org.jetbrains.kotlin:kotlin-stdlib                                    |1.9.23              |Xamarin.Kotlin.StdLib                                                 |1.9.23.1            |
