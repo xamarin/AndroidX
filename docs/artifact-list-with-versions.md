@@ -91,7 +91,7 @@
 |  84|androidx.contentpager:contentpager                                    |1.0.0               |Xamarin.AndroidX.ContentPager                                         |1.0.0.24            |
 |  85|androidx.coordinatorlayout:coordinatorlayout                          |1.2.0               |Xamarin.AndroidX.CoordinatorLayout                                    |1.2.0.12            |
 |  86|androidx.core:core                                                    |1.13.1              |Xamarin.AndroidX.Core                                                 |1.13.1              |
-|  87|androidx.core:core-animation                                          |1.0.0-alpha02       |Xamarin.AndroidX.Core.Animation                                       |1.0.0.22-alpha02    |
+|  87|androidx.core:core-animation                                          |1.0.0               |Xamarin.AndroidX.Core.Animation                                       |1.0.0               |
 |  88|androidx.core:core-google-shortcuts                                   |1.1.0               |Xamarin.AndroidX.Core.GoogleShortcuts                                 |1.1.0.9             |
 |  89|androidx.core:core-ktx                                                |1.13.1              |Xamarin.AndroidX.Core.Core.Ktx                                        |1.13.1              |
 |  90|androidx.core:core-role                                               |1.0.0               |Xamarin.AndroidX.Core.Role                                            |1.0.0.22            |
@@ -214,7 +214,7 @@
 | 207|androidx.tracing:tracing                                              |1.2.0               |Xamarin.AndroidX.Tracing.Tracing                                      |1.2.0.2             |
 | 208|androidx.transition:transition                                        |1.5.0               |Xamarin.AndroidX.Transition                                           |1.5.0               |
 | 209|androidx.tvprovider:tvprovider                                        |1.0.0               |Xamarin.AndroidX.TvProvider                                           |1.0.0.26            |
-| 210|androidx.vectordrawable:vectordrawable                                |1.1.0               |Xamarin.AndroidX.VectorDrawable                                       |1.1.0.24            |
+| 210|androidx.vectordrawable:vectordrawable                                |1.2.0               |Xamarin.AndroidX.VectorDrawable                                       |1.2.0               |
 | 211|androidx.vectordrawable:vectordrawable-animated                       |1.1.0               |Xamarin.AndroidX.VectorDrawable.Animated                              |1.1.0.24            |
 | 212|androidx.versionedparcelable:versionedparcelable                      |1.2.0               |Xamarin.AndroidX.VersionedParcelable                                  |1.2.0.2             |
 | 213|androidx.viewpager:viewpager                                          |1.0.0               |Xamarin.AndroidX.ViewPager                                            |1.0.0.24            |
