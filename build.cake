@@ -770,31 +770,55 @@ Task("samples-only-dotnet")
     EnsureDirectoryExists(packagesPath);
     CleanDirectories(packagesPath);
 
-    var settings = new DotNetMSBuildSettings()
-        .SetConfiguration("Debug") // We don't need to run linking
-        .WithProperty("Verbosity", VERBOSITY.ToString())
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
     string[] solutions = new string[]
     {
         "./samples/dotnet/BuildAllDotNet.sln",
         "./samples/dotnet/BuildAllMauiApp.sln",
     };
 
+    string url_r8 = "https://maven.google.com/com/android/tools/r8/8.3.37/r8-8.3.37.jar";
+    DownloadFile(url_r8, "./externals/r8.jar");
+
     foreach(string solution in solutions)
     {
+        var settings = new DotNetMSBuildSettings()
+            .SetConfiguration("Debug") // We don't need to run linking
+            .WithProperty("Verbosity", VERBOSITY.ToString())
+            .WithProperty("RestorePackagesPath", packagesPath)
+            .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
+        if (!string.IsNullOrEmpty(ANDROID_HOME))
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
         FilePath fp_solution = new FilePath(solution);
         string filename = fp_solution.GetFilenameWithoutExtension().ToString();
         Information($"=====================================================================================================");
-        Information($"DotNetBuild           {solution} / {filename}");    
-        DotNetBuild(solution, new DotNetBuildSettings
+        Information($"DotNetBuild           {solution} / {filename}");
+
+        DotNetBuildSettings dbs = null;
+        string path;
+
+        if (solution == "./samples/dotnet/BuildAllDotNet.sln")
         {
-            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
-        });
+            path = "../../../externals/r8.jar";
+            dbs = new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+                                    .EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+                                    .WithProperty("AndroidR8JarPath", path)
+            };        
+        }  
+        else if (solution == "./samples/dotnet/BuildAllMauiApp.sln")
+        {
+            path = "../../../externals/r8.jar";
+            dbs = new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+                                    .EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+                                    .WithProperty("AndroidR8JarPath", path)
+            };        
+        }
+
+        DotNetBuild(solution, dbs);
     }
 });
 
