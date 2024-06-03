@@ -1710,7 +1710,7 @@ static List<string> FindNamespaces (string assembly)
 
     foreach (var module in asm.Modules)
         foreach (var type in module.Types)
-            if (!string.IsNullOrWhiteSpace (type.Namespace))
+            if (!string.IsNullOrWhiteSpace (type.Namespace) && type.Namespace != "_Microsoft.Android.Resource.Designer")
                 list.Add (type.Namespace);
 
     return list.ToList ();
