@@ -624,6 +624,7 @@ Task ("spell-check")
                 "Parcelize",
                 "AtomicFU",
                 "Protobuf",
+                "EmojiPicker",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
