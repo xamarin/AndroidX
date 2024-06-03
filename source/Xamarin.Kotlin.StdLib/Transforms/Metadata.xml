@@ -442,42 +442,6 @@
       Kotlin.Time.ITimeMark
     </attr>
 
-    <remove-node 
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='AbstractMapBuilderEntrySet']/typeParameters"
-      />
-
-    <attr
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilder']/method[@name='getSize' and count(parameter)=0]"
-      name="propertyName"></attr>
-
-    <attr
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']/method[@name='add' and count(parameter)=1 and parameter[1][@type='java.util.Map.Entry&lt;K, V&gt;']]/parameter[1]"
-      name="managedType"
-      >
-      Java.Lang.Object
-    </attr>
-    <add-node
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']"
-      >
-      <method 
-        visibility="public" static="false" abstract="false" return="java.util.Collection" name="getValues"
-        deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false"  
-        />
-    </add-node>
-    <attr
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']/method[@name='getSize' and count(parameter)=0]"
-      name="propertyName"></attr>
-    <attr
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']/method[@name='getValues' and count(parameter)=0]"
-      name="propertyName"></attr>
-    <attr
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']/method[@name='getValues' and count(parameter)=0]"
-      name="managedName"
-      >
-      Values
-    </attr>
-    <attr
-      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilder']/method[@name='getValues' and count(parameter)=0]"
-      name="propertyName"></attr>
+    <remove-node path="/api/package[@name='kotlin.collections.builders']/class[@name='AbstractMapBuilderEntrySet']/method[@name='contains' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" />
 
   </metadata>
