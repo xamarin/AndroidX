@@ -272,6 +272,8 @@ Task ("binderate")
     var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
     var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
+    Information("xamarin-android-binderator" +
+        $"--config=\"{configFile}\" --basepath=\"{basePath}\"");
     // Run the dotnet tool for binderator
     RunProcess("xamarin-android-binderator",
         $"--config=\"{configFile}\" --basepath=\"{basePath}\"");
