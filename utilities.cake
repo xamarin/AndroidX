@@ -610,6 +610,7 @@ Task ("spell-check")
                 "Protobuf",
                 "ServicesClient",
                 "ConnectClient",
+                "EmojiPicker",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
