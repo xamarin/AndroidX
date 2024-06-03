@@ -704,7 +704,8 @@ Task("samples-generate-all-targets")
 {
     // make a big .targets file that pulls in everything
     var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-    var itemGroup = new XElement(xmlns + "ItemGroup");
+    var itemGroup1 = new XElement(xmlns + "ItemGroup");
+    var itemGroup2 = new XElement(xmlns + "ItemGroup");
     foreach (var nupkg in GetFiles("./output/*.nupkg").OrderBy(fp => fp.FullPath)) {
         Information($"NuGet package = {nupkg}");
 
@@ -741,20 +742,19 @@ Task("samples-generate-all-targets")
             continue;
         }
 
-        itemGroup.Add(new XElement(xmlns + "PackageReference",
+        itemGroup1.Add(new XElement(xmlns + "PackageVersion",
             new XAttribute("Include", match.Groups[1]),
             new XAttribute("Version", match.Groups[2])));
+        itemGroup2.Add(new XElement(xmlns + "PackageReference",
+            new XAttribute("Include", match.Groups[1])));
 
     }
 
-    var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
-    xdoc.Save("./output/AllPackages.targets");
+    var xdoc1 = new XDocument(new XElement(xmlns + "Project", itemGroup1));
+    xdoc1.Save("./output/Directory.Packages.props");
 
-    // ... and Directory.packages.props for central package management
-    // 
-    string content_original = System.IO.File.ReadAllText("./output/AllPackages.targets");
-    string content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
+    var xdoc2 = new XDocument(new XElement(xmlns + "Project", itemGroup2));
+    xdoc2.Save("./output/Directory.Packages.targets");
 });
 
 
