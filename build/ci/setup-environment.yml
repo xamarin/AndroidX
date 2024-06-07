@@ -17,7 +17,7 @@ steps:
     condition: ne('${{ parameters.dotnetVersion }}', '')
 
   - pwsh: |
-      dotnet workload install android --verbosity diag --from-rollback-file ${{ parameters.dotnetWorkloadRollbackFile }} --source ${{ parameters.dotnetWorkloadSource }} --source ${{ parameters.dotnetNuGetOrgSource }}
+      dotnet workload install android --verbosity diag --from-rollback-file ${{ parameters.dotnetWorkloadRollbackFile }} --source ${{ parameters.dotnetWorkloadSource }} --source ${{ parameters.dotnetNuGetOrgSource }}      dotnet workload install android --verbosity diag --from-rollback-file ${{ parameters.dotnetWorkloadRollbackFile }} --source ${{ parameters.dotnetWorkloadSource }} --source ${{ parameters.dotnetNuGetOrgSource }}
       dotnet workload install maui --verbosity diag --from-rollback-file ${{ parameters.dotnetWorkloadRollbackFile }} --source ${{ parameters.dotnetWorkloadSource }} --source ${{ parameters.dotnetNuGetOrgSource }}
       if ($LASTEXITCODE -ne 0) {
           Write-Host "##vso[task.logissue type=error]Failed to install workloads."
