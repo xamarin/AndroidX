@@ -1,19 +1,20 @@
 BuildToolName,BuildToolVersion
-dotnet sdk, 7.0.408
+dotnet sdk, 9.0.100-preview.4.24267.6
 dotnet sdk, patch
 msbuild-sdks MSBuild.Sdk.Extras, 3.0.44
 msbuild-sdks Microsoft.Build.Traversal, 4.1.0
 msbuild-sdks Microsoft.Build.NoTargets, 3.7.56
 msbuild-sdks Xamarin.Legacy.Sdk, 0.2.0-alpha4
-Mono JIT compiler, 6.12.0.188 (2020-02/ca8abcb6bc4 Thu Oct 13 14:26:22 EDT 2022)
-nuget, 6.3.1.1
-boots,1.1.0.36
-private-api-tools,1.0.3
+Mono JIT compiler, 6.12.0 ((no/0cbf0e290c3 Wed Apr 24 13:57:50 UTC 2024)
+nuget, 6.10.0.107
+boots,1.1.0.712-preview2
+private-api-tools,1.0.2
 xamarin.androidbinderator.tool,0.5.7
-Gradle, 8.7
+xamarin.androidx.migration.tool,1.0.10
+Gradle, 8.8
 Kotlin, 1.9.22
-Groovy, 3.0.17
+Groovy, 3.0.21
 Ant, Apache Ant(TM) version 1.10.13 compiled on January 4 2023
-JVM, 11.0.22 (Eclipse Adoptium 11.0.22+7)
-openjdk, 11.0.22 2024-01-16
-javac, 11.0.22
+JVM, 11.0.16.1 (Microsoft 11.0.16.1+1-LTS)
+openjdk, 11.0.16.1 2022-08-12 LTS
+javac, 11.0.16.1
