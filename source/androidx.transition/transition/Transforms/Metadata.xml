@@ -48,5 +48,17 @@
         >
         Java.Lang.Object
     </attr>
-    
+    <attr
+        path="/api/package[@name='androidx.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionEnd' and count(parameter)=2 and parameter[1][@type='androidx.transition.Transition'] and parameter[2][@type='boolean']]"
+        name="managedName"
+        >
+        OnTransitionEndReversed
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.transition']/interface[@name='Transition.TransitionListener']/method[@name='onTransitionStart' and count(parameter)=2 and parameter[1][@type='androidx.transition.Transition'] and parameter[2][@type='boolean']]"
+        name="managedName"
+        >
+        OnTransitionStartReversed
+    </attr>
+
 </metadata>

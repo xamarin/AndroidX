@@ -33,10 +33,8 @@
 
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
-    <!-- 
     <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
-    -->
-    <WarningsAsErrors>$(WarningsAsErrors)</WarningsAsErrors>
+    
 
     <!-- Common package metadata -->
     <Authors>Microsoft</Authors>
@@ -214,7 +212,7 @@
     <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
     <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
     <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
-    
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />    
     
   </ItemGroup>
 </Project>
