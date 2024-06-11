@@ -1,0 +1,14 @@
+<Project>
+
+    <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
+  
+    <!-- Default TFM's we build for -->
+    <PropertyGroup>
+      <_DefaultDotNetSampleTargetFrameworks>$(_DefaultTargetFrameworks)</_DefaultDotNetSampleTargetFrameworks>
+    </PropertyGroup>
+  
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    </PropertyGroup>
+  
+  </Project>
