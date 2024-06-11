@@ -19,4 +19,7 @@
         Java.Lang.Object
     </attr>
 
+    <remove-node
+        path="/api/package[@name='androidx.wear.protolayout.expression']/interface[@name='DynamicBuilders.DynamicZonedDateTime']"
+        />
 </metadata>
