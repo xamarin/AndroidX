@@ -181,8 +181,9 @@ public static SemanticVersion GetLatestVersion (Artifact artifact, bool includeP
 {
 	var versions = artifact.Versions.Select(v => GetVersion (v));
 
+	// Handle 'com.google.guava.guava' which ships its release packages as ex: '33.1.0-android'
 	if (!includePrerelease)
-		versions = versions.Where (v => !v.IsPrerelease);
+		versions = versions.Where (v => !v.IsPrerelease || v.Release == "android");
 
 	if (!versions.Any ())
 		return null;

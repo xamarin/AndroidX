@@ -1,16 +1,14 @@
 ﻿@using System
 @using System.Linq
-<Project Sdk="Xamarin.Legacy.Sdk">
+
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
-    @if (!string.IsNullOrEmpty(Model.AssemblyName)) {
-    <AssemblyName>@(Model.AssemblyName)</AssemblyName>
-    } else {
     <AssemblyName>@(Model.NuGetPackageId)</AssemblyName>
-    }
     <AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
     <RootNamespace>@(Model.NuGetPackageId.Replace("Xamarin.", ""))</RootNamespace>
+    
     <!--
       No warnings for:
        - CS0618: 'member' is obsolete: 'text'
@@ -55,39 +53,6 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <AndroidClassParser>class-parse</AndroidClassParser>
-    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
-    <AndroidFragmentType>AndroidX.Fragment.App.Fragment</AndroidFragmentType>
-  </PropertyGroup>
-
-  <ItemGroup>
-      @foreach (var art in @Model.MavenArtifacts) {
-      <TransformFile Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.xml')" />
-      }
-  </ItemGroup>
-
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts)
-    {
-    <JavaSourceJar
-          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar"
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar')"
-          />
-    <JavaDocJar
-          Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar"
-          Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar')"
-          />
-    }
-  </ItemGroup>
-
-
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-    <_AndroidDocumentationPath Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt" Condition="Exists('..\..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-paramnames.txt')" />
-    }
-  </ItemGroup>
-
   <ItemGroup>
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
@@ -107,37 +72,28 @@
   }
 
   <ItemGroup>
-    <Folder Include="Additions\" />
-    <Folder Include="Jars\" />
-    <Folder Include="Transforms\" />
-    @if (@Model.NuGetPackageId == "Xamarin.Google.Android.Material")
-    {
-    <Folder Include="Java\" />
-    }
-  </ItemGroup>
-  <ItemGroup>
+    <!-- Include AssemblyInfo.cs -->
     <Compile Include="..\..\source\AssemblyInfo.cs" />
+    
+    <!-- Include any Additions .cs file(s) -->
     <Compile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Additions\*.cs">
-        <Link>Additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+      <Link>Additions/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </Compile>
-  </ItemGroup>
 
-  <ItemGroup>
+    <!-- Include common metadata file -->
     <TransformFile Include="..\..\source\Metadata.common.xml" >
       <Link>Transforms/Metadata.common.xml</Link>
     </TransformFile>
+    
+    <!-- Include any transform file(s) that are not TargetFramework specific -->
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml" Exclude="$(DefaultTransformExcludes)">
-        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+      <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
+    
+    <!-- Include any TargetFramework specific transform file(s) for this TF -->
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.$(TargetFramework).xml">
-        <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
+      <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
-    <AndroidJavaSource
-      Condition="Exists('..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java')"
-      Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\java\*.java"
-      >
-      <Link>Java/%(RecursiveDir)/%(Filename)%(Extension)</Link>
-    </AndroidJavaSource>
   </ItemGroup>
 
   <ItemGroup>
@@ -192,13 +148,6 @@
       }
     }
   </ItemGroup>
-
-  @if (@Model.NuGetPackageId == "Xamarin.AndroidX.Annotation")
-  {
-    <ItemGroup>
-      <PackageReference Include="Xamarin.AndroidX.Migration" Version="1.0.10" PrivateAssets="none" Condition=" '$(TargetFramework)' == 'MonoAndroid12.0' " />
-    </ItemGroup>
-  }
 
   <!-- Compose nuget package details until Compose support is implemented -->
   @if (@Model.NuGetPackageId.StartsWith("Xamarin.AndroidX.Compose"))
