@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android</TargetFrameworks>
+		<TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
 
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
@@ -52,10 +52,11 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<Import 
-		Condition="$(TargetFramework.StartsWith('net8.0-android')) == true"
-		Project="..\..\..\output\AllPackages.targets" 
-		/>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" VersionOverride="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" VersionOverride="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" VersionOverride="8.0.0" />
+	</ItemGroup>
 
 	<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
@@ -75,4 +76,7 @@
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0.1-alpha06]" />
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.1-alpha06]" />
 	</ItemGroup>
+
+  <Import Project="../../../output/Directory.Packages.targets" />
+
 </Project>
