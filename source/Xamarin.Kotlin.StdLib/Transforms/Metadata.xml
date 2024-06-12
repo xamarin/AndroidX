@@ -444,4 +444,14 @@
 
     <remove-node path="/api/package[@name='kotlin.collections.builders']/class[@name='AbstractMapBuilderEntrySet']/method[@name='contains' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" />
 
+    <attr
+      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']/method[@name='add' and count(parameter)=1 and parameter[1][@type='java.util.Map.Entry&lt;K, V&gt;']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+    </attr>
+    <attr
+      path="/api/package[@name='kotlin.collections.builders']/class[@name='MapBuilderEntries']/method[@name='getSize' and count(parameter)=0]"
+      name="propertyName"
+      ></attr>
   </metadata>
