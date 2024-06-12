@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
+    <TargetFramework>$(_DefaultDotNetSampleTargetFrameworks)</TargetFramework>
     
     <!-- Some packages specify a minimum of 28 (eg: Xamarin.AndroidX.HeifWriter) -->
     <SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
@@ -21,6 +21,6 @@
     <JavaMaximumHeapSize>4G</JavaMaximumHeapSize>
   </PropertyGroup>
   
-  <Import Project="..\..\..\output\AllPackages.targets" />
-    
+  <Import Project="../../../output/Directory.Packages.targets" />
+
 </Project>
