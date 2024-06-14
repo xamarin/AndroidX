@@ -1887,7 +1887,8 @@
         "nugetVersion": "1.1.0.11",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Renderer",
         "dependencyOnly": false,
-        "frozen": true
+        "frozen": true,
+        "comments": "Needs androidx.wear.protolayout.protolayout-renderer:1.1.0"
       },
       {
         "groupId": "androidx.wear.watchface",
@@ -2057,7 +2058,8 @@
         "nugetId": "Xamarin.Google.Android.InstallReferrer",
         "dependencyOnly": false,
         "frozen": true,
-        "templateSet": "installreferrer"
+        "templateSet": "installreferrer",
+        "comments": "Changed from Apache to Android SDK License"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2156,7 +2158,8 @@
         "nugetVersion": "1.1.18.12",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter",
         "dependencyOnly": false,
-        "frozen": true
+        "frozen": true,
+        "comments": "Needs com.google.android.material.compose-theme-adapter-core:1.0.1"
       },
       {
         "groupId": "com.google.android.material",
@@ -2165,7 +2168,8 @@
         "nugetVersion": "1.0.18.11",
         "nugetId": "Xamarin.Google.Android.Material.Compose.Theme.Adapter3",
         "dependencyOnly": false,
-        "frozen": true
+        "frozen": true,
+        "comments": "Needs com.google.android.material.compose-theme-adapter-core:1.0.1"
       },
       {
         "groupId": "com.google.android.material",
@@ -2174,7 +2178,8 @@
         "nugetVersion": "1.11.0",
         "nugetId": "Xamarin.Google.Android.Material",
         "dependencyOnly": false,
-        "frozen": true
+        "frozen": true,
+        "comments": "Requires API-34"
       },
       {
         "groupId": "com.google.assistant.appactions",

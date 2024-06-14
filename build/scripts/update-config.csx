@@ -389,6 +389,9 @@ public class ArtifactModel
 	[JsonProperty ("templateSet")]
 	public string TemplateSet { get; set; }
 
+	[JsonProperty ("comments")]
+	public string Comments { get; set; }
+
 	[JsonProperty ("metadata")]
 	public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string> ();
 
