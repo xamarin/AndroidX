@@ -1,0 +1,61 @@
+# Runs test(s) that are too expensive to run on every commit
+
+parameters:
+  jobName:                                        # Job display name ('Android' or 'MAUI')
+  buildPool:                                      # VM pool information
+  agentCount:                                     # Agents to run in parallel
+  testFilter:                                     # Test category filter 
+  
+  tools:                                          # Additional .NET global tools to install
+  - 'dotnet-test-slicer' : '0.1.0-alpha7'
+  
+jobs:
+- job: ${{ parameters.jobName }}_package_tests
+  displayName: ${{ parameters.jobName }} Package Tests
+  strategy:
+    parallel: ${{ parameters.agentCount }}
+  pool: ${{ parameters.buildPool }}
+  timeoutInMinutes: 480
+  
+  steps:
+  - template: setup-environment.yml
+    parameters:
+      dotnetTools: ${{ parameters.tools }}
+
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      artifactName: output-windows
+      downloadPath: output
+      
+  # Build test assembly
+  - task: DotNetCoreCLI@2
+    displayName: Build unit tests
+    inputs:
+      command: build
+      projects: $(testAssemblyProject)
+      arguments: -c $(configuration)
+  
+  # Figure out which tests this slice is running
+  - pwsh: >-
+      dotnet-test-slicer 
+      slice
+      --test-assembly="$(testAssembly)"
+      --test-filter="${{ parameters.testFilter }}"
+      --slice-number=$(System.JobPositionInPhase)
+      --total-slices=$(System.TotalJobsInPhase)
+      --outfile="$(testAssembly).runsettings"
+    displayName: Slice unit tests
+    failOnStderr: true      
+    
+  # Run unit tests
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: test
+      projects: $(testAssembly)
+      arguments: >-
+        --settings "$(testAssembly).runsettings"
+      publishTestResults: true
+      testRunTitle: ${{ parameters.jobName }} Package Tests - $(System.JobPositionInPhase)
+    displayName: Run unit tests
+    continueOnError: true
+    timeoutInMinutes: 480
