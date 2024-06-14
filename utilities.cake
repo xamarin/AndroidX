@@ -604,8 +604,6 @@ Task ("spell-check")
                 "GoogleId",
                 "PrivacySandbox",
                 "AdsServices",
-                "PrivacySandbox",
-                "AdsServices",
                 "Material3Android",
                 "WindowSizeClassAndroid",
                 "OkIO",
