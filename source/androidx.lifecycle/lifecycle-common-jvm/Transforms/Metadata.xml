@@ -1,4 +1,20 @@
-﻿﻿<metadata>
+﻿<metadata>
+    <!--
+    mc++
+	<remove-node path="/api/package[@name='androidx.lifecycle']/interface[@name='LifecycleRegistryOwner']" />
+
+	<remove-node path="/api/package[@name='androidx.lifecycle']/interface[@name='ReportFragment.ActivityInitializationListener']" />
+    -->
+    
+    <!--    
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+    -->
+
     <remove-node path="/api/package[@name='androidx.lifecycle']/*[@name='OnLifecycleEvent']" />
 
     <attr 
@@ -13,6 +29,5 @@
         >
         public
     </attr>
-    
-    
+
 </metadata>
