@@ -21,5 +21,14 @@ namespace AndroidBinderator
 			return project.DependencyManagement?.Dependencies?.FirstOrDefault (
 				d => d.GroupAndArtifactId () == dependency.GroupAndArtifactId () && d.Classifier != "sources");
 		}
+
+		public static bool IsDependencyVersionLocked (this MavenArtifactConfig artifact, Dependency dependency)
+		{
+			if (string.IsNullOrWhiteSpace (artifact.VersionLockedDependencies))
+				return false;
+
+			var lockedDependencies = artifact.VersionLockedDependencies.Split (',');
+			return lockedDependencies.Any (d => d == dependency.GroupAndArtifactId ());
+		}
 	}
 }

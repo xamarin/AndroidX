@@ -26,6 +26,7 @@ using CsvHelper;
 var TARGET = Argument ("t", Argument ("target", "Default"));
 var CONFIGURATION = Argument ("c", Argument ("configuration", "Release"));
 var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
+var LOCAL_BINDERATOR = HasArgument ("local-binderator");
 
 // Lists all the artifacts and their versions for com.android.support.*
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
@@ -273,8 +274,10 @@ Task ("binderate")
     var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
     // Run the dotnet tool for binderator
-    RunProcess("xamarin-android-binderator",
-        $"--config=\"{configFile}\" --basepath=\"{basePath}\"");
+    if (LOCAL_BINDERATOR)
+      RunProcess("dotnet", $"run --project=\"./util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool\" --framework=net6.0 -- --config=\"{configFile}\" --basepath=\"{basePath}\"");
+    else
+      RunProcess("xamarin-android-binderator", $"--config=\"{configFile}\" --basepath=\"{basePath}\"");
 
     // format the targets file so they are pretty in the package
     var targetsFiles = GetFiles("generated/**/*.targets");

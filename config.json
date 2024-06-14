@@ -3,6 +3,7 @@
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
+    "downloadExternals": true,
     "additionalProjects": [
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj",
       "util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.csproj",
@@ -259,6 +260,7 @@
         "version": "1.4.0",
         "nugetVersion": "1.4.0.5",
         "nugetId": "Xamarin.AndroidX.Collection",
+        "versionLockedDependencies": "androidx.collection.collection-jvm",
         "dependencyOnly": false
       },
       {
@@ -859,6 +861,7 @@
         "version": "1.1.1",
         "nugetVersion": "1.1.1.2",
         "nugetId": "Xamarin.AndroidX.DataStore.Core",
+        "versionLockedDependencies": "androidx.datastore.datastore-core-android",
         "dependencyOnly": false
       },
       {
