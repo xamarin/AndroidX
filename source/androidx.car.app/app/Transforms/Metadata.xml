@@ -1,3 +1,14 @@
 ﻿<metadata>
-
+    <attr
+        path="/api/package[@name='androidx.car.app']/interface[@name='IAppManager']"
+        name="managedName"
+        >
+        IAppManagerInterface
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.car.app.navigation']/interface[@name='INavigationManager']"
+        name="managedName"
+        >
+        INavigationManagerInterface
+    </attr>
 </metadata>
