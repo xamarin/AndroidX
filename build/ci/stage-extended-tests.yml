@@ -1,0 +1,27 @@
+# Runs test(s) that are too expensive to run on every commit
+
+parameters:
+  stageCondition:                    # When to run this stage
+  buildPool:                         # VM pool information
+  
+stages:
+- stage: extended_tests
+  displayName: Extended Tests
+  dependsOn: build_windows
+  condition: ${{ parameters.stageCondition }}
+  
+  jobs:
+  
+  - template: job-extended-tests.yml
+    parameters:
+      jobName: Android
+      agentCount: 6
+      testFilter: cat = Android
+      buildPool: ${{ parameters.buildPool }}
+  
+  - template: job-extended-tests.yml
+    parameters:
+      jobName: MAUI
+      agentCount: 10
+      testFilter: cat = MAUI
+      buildPool: ${{ parameters.buildPool }}
