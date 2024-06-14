@@ -1,4 +1,4 @@
-﻿<metadata>
+﻿﻿<metadata>
     <remove-node path="/api/package[@name='androidx.lifecycle']/*[@name='OnLifecycleEvent']" />
 
     <attr 
