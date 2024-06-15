@@ -1,23 +1,18 @@
 parameters:
-  condition: succeeded()
-  dotnetVersion: ''
-  dotnetWorkloadRollbackFile: ''
-  dotnetWorkloadSource: ''
-  dotnetNuGetOrgSource: ''
   dotnetTools: []
   
 steps:
   # before the build starts, make sure the tooling is as expected
   - task: UseDotNet@2
-    displayName: 'Use dotnet ${{ parameters.dotnetVersion }}'
+    displayName: 'Use dotnet $(dotnetVersion)'
     inputs:
-      version: ${{ parameters.dotnetVersion }}
+      version: $(dotnetVersion)
       performMultiLevelLookup: true
       includePreviewVersions: true
-    condition: ne('${{ parameters.dotnetVersion }}', '')
+    condition: ne('$(dotnetVersion)', '')
 
   - pwsh: |
-      dotnet workload install maui --verbosity diag --from-rollback-file ${{ parameters.dotnetWorkloadRollbackFile }} --source ${{ parameters.dotnetWorkloadSource }} --source ${{ parameters.dotnetNuGetOrgSource }}
+      dotnet workload install maui --verbosity diag --from-rollback-file $(dotnetWorkloadRollbackFile) --source $(dotnetWorkloadSource) --source $(dotnetNuGetOrgSource)
       if ($LASTEXITCODE -ne 0) {
           Write-Host "##vso[task.logissue type=error]Failed to install workloads."
           Write-Host "##vso[task.complete result=Failed;]"
