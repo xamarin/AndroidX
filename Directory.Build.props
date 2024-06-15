@@ -202,6 +202,8 @@
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
+    <AndroidNamespaceReplacement Include='datasource' Replacement='DataSource' />
+    <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
     <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
@@ -209,10 +211,15 @@
     <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
     <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
     <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
-    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
+    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />
+    <AndroidNamespaceReplacement Include='Mediacodec' Replacement='MediaCodec' />
+    <AndroidNamespaceReplacement Include='Smoothstreaming' Replacement='SmoothStreaming' />
+    <AndroidNamespaceReplacement Include='Mediaparser' Replacement='MediaParser' />
+    <AndroidNamespaceReplacement Include='Workmanager' Replacement='WorkManager' />
+    <AndroidNamespaceReplacement Include='Interactivemedia' Replacement='InteractiveMedia' />
+    <AndroidNamespaceReplacement Include='Antmedia' Replacement='AntMedia' />
     <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
     <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
     <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />    
-    
   </ItemGroup>
 </Project>
