@@ -1125,9 +1125,9 @@
         "maven": {
           "artifactId": "core-animation",
           "groupId": "androidx.core",
-          "version": "1.0.0",
+          "version": "1.0.0-alpha02",
           "nuGetId": "Xamarin.AndroidX.Core.Animation",
-          "nuGetVersion": "1.0.0"
+          "nuGetVersion": "1.0.0.24-alpha02"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -2776,9 +2776,9 @@
         "maven": {
           "artifactId": "viewpager2",
           "groupId": "androidx.viewpager2",
-          "version": "1.1.0-rc01",
+          "version": "1.0.0",
           "nuGetId": "Xamarin.AndroidX.ViewPager2",
-          "nuGetVersion": "1.1.0-rc01"
+          "nuGetVersion": "1.0.0.28"
         }
       },
       "license": "The Apache Software License, Version 2.0"

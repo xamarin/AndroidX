@@ -91,7 +91,7 @@
 |  84|androidx.contentpager:contentpager                                    |1.0.0               |Xamarin.AndroidX.ContentPager                                         |1.0.0.26            |
 |  85|androidx.coordinatorlayout:coordinatorlayout                          |1.2.0               |Xamarin.AndroidX.CoordinatorLayout                                    |1.2.0.14            |
 |  86|androidx.core:core                                                    |1.13.1              |Xamarin.AndroidX.Core                                                 |1.13.1.2            |
-|  87|androidx.core:core-animation                                          |1.0.0               |Xamarin.AndroidX.Core.Animation                                       |1.0.0               |
+|  87|androidx.core:core-animation                                          |1.0.0-alpha02       |Xamarin.AndroidX.Core.Animation                                       |1.0.0.24-alpha02    |
 |  88|androidx.core:core-google-shortcuts                                   |1.1.0               |Xamarin.AndroidX.Core.GoogleShortcuts                                 |1.1.0.11            |
 |  89|androidx.core:core-ktx                                                |1.13.1              |Xamarin.AndroidX.Core.Core.Ktx                                        |1.13.1.2            |
 |  90|androidx.core:core-role                                               |1.0.0               |Xamarin.AndroidX.Core.Role                                            |1.0.0.24            |
@@ -218,7 +218,7 @@
 | 211|androidx.vectordrawable:vectordrawable-animated                       |1.1.0               |Xamarin.AndroidX.VectorDrawable.Animated                              |1.1.0.26            |
 | 212|androidx.versionedparcelable:versionedparcelable                      |1.2.0               |Xamarin.AndroidX.VersionedParcelable                                  |1.2.0.4             |
 | 213|androidx.viewpager:viewpager                                          |1.0.0               |Xamarin.AndroidX.ViewPager                                            |1.0.0.26            |
-| 214|androidx.viewpager2:viewpager2                                        |1.1.0-rc01          |Xamarin.AndroidX.ViewPager2                                           |1.1.0-rc01          |
+| 214|androidx.viewpager2:viewpager2                                        |1.0.0               |Xamarin.AndroidX.ViewPager2                                           |1.0.0.28            |
 | 215|androidx.wear:wear                                                    |1.3.0               |Xamarin.AndroidX.Wear                                                 |1.3.0.7             |
 | 216|androidx.wear:wear-input                                              |1.1.0               |Xamarin.AndroidX.Wear.Input                                           |1.0.0.16            |
 | 217|androidx.wear:wear-ongoing                                            |1.0.0               |Xamarin.AndroidX.Wear.Ongoing                                         |1.0.0.16            |
