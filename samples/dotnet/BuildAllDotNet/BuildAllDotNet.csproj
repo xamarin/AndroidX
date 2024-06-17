@@ -16,8 +16,8 @@
     <AndroidGenerateResourceDesigner>true</AndroidGenerateResourceDesigner>
 
     <!-- Prevent linking, since that would remove ~everything -->
-    <PublishTrimmed>True</PublishTrimmed>
-    <RunAOTCompilation>True</RunAOTCompilation>    
+    <PublishTrimmed>False</PublishTrimmed>
+    <RunAOTCompilation>False</RunAOTCompilation>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
   </PropertyGroup>
   
