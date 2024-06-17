@@ -220,9 +220,15 @@
     <AndroidNamespaceReplacement Include='Interactivemedia' Replacement='InteractiveMedia' />
     <AndroidNamespaceReplacement Include='Antmedia' Replacement='AntMedia' />
     <AndroidNamespaceReplacement Include='RTMP' Replacement='Rtmp' />
-    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
-    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
-    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />    
+    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />
+    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />   
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
   </ItemGroup>
   
 </Project>

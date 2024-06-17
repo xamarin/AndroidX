@@ -602,6 +602,8 @@ Task ("spell-check")
                 "PlayServicesAuth",
                 "GoogleAndroid",
                 "GoogleId",
+                "PrivacySandbox",
+                "AdsServices",
                 "Material3Android",
                 "WindowSizeClassAndroid",
                 "ExoPlayer",
