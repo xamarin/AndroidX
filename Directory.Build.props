@@ -215,6 +215,12 @@
     <AndroidNamespaceReplacement Include='Datanotification' Replacement='DataNotification' />    
     <AndroidNamespaceReplacement Include='Foregroundstate' Replacement='ForegroundState' />    
     <AndroidNamespaceReplacement Include='Sdkservice' Replacement='SdkService' />        
-    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />    
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />        
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
   </ItemGroup>
 </Project>
