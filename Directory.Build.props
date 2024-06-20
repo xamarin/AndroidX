@@ -7,6 +7,7 @@
 
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
+    <_DefaultNetTargetFrameworks>net8.0</_DefaultNetTargetFrameworks>
 
     <!-- Use an updated 'generator' -->
     <!-- It's ok to use "Windows" here because we only use managed code from this package -->
@@ -213,5 +214,11 @@
     <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
     <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />    
     
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
   </ItemGroup>
 </Project>
