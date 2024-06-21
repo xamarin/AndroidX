@@ -1,0 +1,17 @@
+using System.Runtime.CompilerServices;
+
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.Lifecycle))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.CompositeGeneratedAdaptersObserver))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.IDefaultLifecycleObserver))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.IGeneratedAdapter))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.IGenericLifecycleObserver))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.ILifecycleEventObserver))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.ILifecycleObserver))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.ILifecycleOwner))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.LifecycleCoroutineScope))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.LifecycleKt))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.LifecycleOwnerKt))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.Lifecycling))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.MethodCallsLogger))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.PausingDispatcherKt))]
+[assembly:TypeForwardedTo (typeof (AndroidX.Lifecycle.SingleGeneratedAdapterObserver))]
