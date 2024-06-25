@@ -8,7 +8,7 @@
     <remove-node 
         path="/api/package[@name='kotlinx.serialization.protobuf']/class[@name='ProtoNumber.Impl']"
         />        
-        <remove-node 
+    <remove-node 
         path="/api/package[@name='kotlinx.serialization.protobuf']/class[@name='ProtoOneOf.Impl']"
         />        
 </metadata>
