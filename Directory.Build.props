@@ -8,10 +8,6 @@
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>net9.0-android</_DefaultTargetFrameworks>
     <_DefaultNetTargetFrameworks>net9.0</_DefaultNetTargetFrameworks>
-
-    <!-- Use an updated 'generator' -->
-    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
-    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.95/tools/</_BindingsToolsLocation>
     
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
@@ -214,5 +210,11 @@
     <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
     <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />    
     
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
   </ItemGroup>
 </Project>
