@@ -11,7 +11,8 @@ steps:
       dotnet cake build.cake `
         --target=ci-build `
         --configuration="$(configuration)" `
-        --verbosity="$(verbosity)"
+        --verbosity="$(verbosity)" `
+        --local-binderator
     displayName: 'Build packages'
     env:
       JavaSdkDirectory: $(JAVA_HOME)
