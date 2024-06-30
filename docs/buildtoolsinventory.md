@@ -6,7 +6,7 @@
 {
     "sdk": 
     {
-        "version": "7.0.408",
+        "version": "9.0.100-preview.4.24267.6",
         "rollForward": "patch"
     },
     "msbuild-sdks": 
@@ -19,5 +19,5 @@
 }
 
 ```
-version7.0.408
+version9.0.100-preview.4.24267.6
 rollForwardpatch
