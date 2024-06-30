@@ -841,7 +841,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore",
         "dependencyOnly": false
       },
@@ -849,7 +849,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-android",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Android",
         "dependencyOnly": false
       },
@@ -857,7 +857,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-core",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Core",
         "dependencyOnly": false
       },
@@ -865,7 +865,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-core-android",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Core.Android",
         "dependencyOnly": false
       },
@@ -873,15 +873,17 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-core-jvm",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Core.Jvm",
-        "dependencyOnly": false
+        "extraDependencies": "androidx.datastore.datastore-core-android",
+        "dependencyOnly": false,
+        "comments": "Empty package we want to redirect to Xamarin.AndroidX.DataStore.Core.Android because it is a superset of this package, causing conflicts."
       },
       {
         "groupId": "androidx.datastore",
         "artifactId": "datastore-core-okio",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Core.OkIO",
         "dependencyOnly": false
       },
@@ -889,7 +891,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-core-okio-jvm",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Core.OkIO.Jvm",
         "dependencyOnly": false
       },
@@ -897,7 +899,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-preferences",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Preferences",
         "dependencyOnly": false
       },
@@ -905,7 +907,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-preferences-android",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Android",
         "dependencyOnly": false
       },
@@ -913,7 +915,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-preferences-core",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core",
         "dependencyOnly": false
       },
@@ -921,7 +923,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-preferences-core-jvm",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.Preferences.Core.Jvm",
         "dependencyOnly": false
       },
@@ -929,7 +931,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-rxjava2",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.RxJava2",
         "dependencyOnly": false
       },
@@ -937,7 +939,7 @@
         "groupId": "androidx.datastore",
         "artifactId": "datastore-rxjava3",
         "version": "1.1.1",
-        "nugetVersion": "1.1.1.2",
+        "nugetVersion": "1.1.1.3",
         "nugetId": "Xamarin.AndroidX.DataStore.RxJava3",
         "dependencyOnly": false
       },
@@ -1145,7 +1147,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common",
         "dependencyOnly": false
       },
@@ -1153,7 +1155,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common-java8",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Java8",
         "dependencyOnly": false
       },
@@ -1161,7 +1163,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-common-jvm",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Common.Jvm",
         "dependencyOnly": false
       },
@@ -1177,7 +1179,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData",
         "dependencyOnly": false
       },
@@ -1185,7 +1187,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-core",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core",
         "dependencyOnly": false
       },
@@ -1193,7 +1195,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-core-ktx",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx",
         "dependencyOnly": false
       },
@@ -1201,7 +1203,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-livedata-ktx",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.LiveData.Ktx",
         "dependencyOnly": false
       },
@@ -1209,7 +1211,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-process",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Process",
         "dependencyOnly": false
       },
@@ -1217,7 +1219,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-reactivestreams",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams",
         "dependencyOnly": false
       },
@@ -1225,7 +1227,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-reactivestreams-ktx",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx",
         "dependencyOnly": false
       },
@@ -1233,7 +1235,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime",
         "dependencyOnly": false
       },
@@ -1241,7 +1243,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime-android",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime.Android",
         "dependencyOnly": false
       },
@@ -1249,7 +1251,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime-ktx",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx",
         "dependencyOnly": false
       },
@@ -1257,7 +1259,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-runtime-ktx-android",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Runtime.Ktx.Android",
         "dependencyOnly": false
       },
@@ -1265,7 +1267,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-service",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.Service",
         "dependencyOnly": false
       },
@@ -1273,7 +1275,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel",
         "dependencyOnly": false
       },
@@ -1281,7 +1283,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-android",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Android",
         "dependencyOnly": false
       },
@@ -1289,7 +1291,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-compose",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose",
         "dependencyOnly": false
       },
@@ -1297,7 +1299,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-compose-android",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Compose.Android",
         "dependencyOnly": false
       },
@@ -1305,7 +1307,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-ktx",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModel.Ktx",
         "dependencyOnly": false
       },
@@ -1313,7 +1315,7 @@
         "groupId": "androidx.lifecycle",
         "artifactId": "lifecycle-viewmodel-savedstate",
         "version": "2.8.2",
-        "nugetVersion": "2.8.2",
+        "nugetVersion": "2.8.2.1",
         "nugetId": "Xamarin.AndroidX.Lifecycle.ViewModelSavedState",
         "dependencyOnly": false
       },
