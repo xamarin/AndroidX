@@ -25,6 +25,9 @@ if (!nupkgs.Any()) {
 	Warning($"##vso[task.logissue type=warning]No NuGet packages were found.");
 } else {
 	Parallel.ForEach (nupkgs, nupkg => {
+		// See https://github.com/xamarin/AndroidX/issues/916
+		if (nupkg.FullPath.Contains ("Xamarin.AndroidX.Car.App.App"))
+		  return;
 		var version = "--latest";
 		var versionFile = nupkg.FullPath + ".baseversion";
 		if (FileExists(versionFile)) {
