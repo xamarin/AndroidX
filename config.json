@@ -1409,14 +1409,6 @@
       },
       {
         "groupId": "androidx.media3",
-        "artifactId": "media3-datasource-okhttp",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
-        "nugetId": "Xamarin.AndroidX.Media3.DataSource.OkHttp",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.media3",
         "artifactId": "media3-datasource-rtmp",
         "version": "1.0.2",
         "nugetVersion": "1.0.2",
@@ -1461,14 +1453,6 @@
         "version": "1.0.2",
         "nugetVersion": "1.0.2",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Hls",
-        "dependencyOnly": false
-      },
-      {
-        "groupId": "androidx.media3",
-        "artifactId": "media3-exoplayer-ima",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
-        "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Ima",
         "dependencyOnly": false
       },
       {
