@@ -131,8 +131,8 @@
 | 124|androidx.emoji2:emoji2-views-helper                                   |1.4.0               |Xamarin.AndroidX.Emoji2.ViewsHelper                                   |1.4.0.7             |
 | 125|androidx.enterprise:enterprise-feedback                               |1.1.0               |Xamarin.AndroidX.Enterprise.Feedback                                  |1.1.0.12            |
 | 126|androidx.exifinterface:exifinterface                                  |1.3.7               |Xamarin.AndroidX.ExifInterface                                        |1.3.7.4             |
-| 127|androidx.fragment:fragment                                            |1.8.0               |Xamarin.AndroidX.Fragment                                             |1.8.0               |
-| 128|androidx.fragment:fragment-ktx                                        |1.8.0               |Xamarin.AndroidX.Fragment.Ktx                                         |1.8.0               |
+| 127|androidx.fragment:fragment                                            |1.8.1               |Xamarin.AndroidX.Fragment                                             |1.8.1               |
+| 128|androidx.fragment:fragment-ktx                                        |1.8.1               |Xamarin.AndroidX.Fragment.Ktx                                         |1.8.1               |
 | 129|androidx.gridlayout:gridlayout                                        |1.0.0               |Xamarin.AndroidX.GridLayout                                           |1.0.0.26            |
 | 130|androidx.health:health-services-client                                |1.0.0-rc02          |Xamarin.AndroidX.Health.ServicesClient                                |1.0.0-rc02          |
 | 131|androidx.health.connect:connect-client                                |1.1.0-alpha07       |Xamarin.AndroidX.Health.Connect.ConnectClient                         |1.0.0-alpha11       |

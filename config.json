@@ -240,8 +240,8 @@
       {
         "groupId": "androidx.car.app",
         "artifactId": "app",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.11",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0",
         "nugetId": "Xamarin.AndroidX.Car.App.App",
         "dependencyOnly": false
       },
@@ -1050,16 +1050,16 @@
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0",
+        "version": "1.8.1",
+        "nugetVersion": "1.8.1",
         "nugetId": "Xamarin.AndroidX.Fragment",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.fragment",
         "artifactId": "fragment-ktx",
-        "version": "1.8.0",
-        "nugetVersion": "1.8.0",
+        "version": "1.8.1",
+        "nugetVersion": "1.8.1",
         "nugetId": "Xamarin.AndroidX.Fragment.Ktx",
         "dependencyOnly": false
       },
@@ -2637,8 +2637,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-serialization-core",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Serialization.Core",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2646,8 +2646,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-serialization-core-jvm",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Serialization.Core.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2655,8 +2655,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-serialization-protobuf",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Serialization.Protobuf",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
@@ -2664,8 +2664,8 @@
       {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-serialization-protobuf-jvm",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.7.1",
+        "nugetVersion": "1.7.1",
         "nugetId": "Xamarin.KotlinX.Serialization.Protobuf.Jvm",
         "dependencyOnly": false,
         "templateSet": "kotlinx"
