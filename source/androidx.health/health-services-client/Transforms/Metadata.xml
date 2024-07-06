@@ -1,4 +1,4 @@
-﻿<metadata>
+<metadata>
     <!-- 
     <add-node
         path="/api/package[@name='androidx.health.services.client.proto']/class[@name='DataProto.Value']"
@@ -39,6 +39,7 @@
         />        
     <remove-node
         path="/api/package[@name='androidx.health.services.client.impl.ipc']"
-        />        
-
+        />
+    <remove-node path="/api/package[@name='androidx.health.services.client.data']/class[@name='DebouncedDataTypeCondition.Companion']/method[@name='createDebouncedDataTypeCondition' and count(parameter)=5 and parameter[1][@type='D'] and parameter[2][@type='T'] and parameter[3][@type='androidx.health.services.client.data.ComparisonType'] and parameter[4][@type='int'] and parameter[5][@type='int']]" />
+    <remove-node path="/api/package[@name='androidx.health.services.client.data']/class[@name='DebouncedDataTypeCondition']/method[@name='createDebouncedDataTypeCondition' and count(parameter)=5 and parameter[1][@type='D'] and parameter[2][@type='T'] and parameter[3][@type='androidx.health.services.client.data.ComparisonType'] and parameter[4][@type='int'] and parameter[5][@type='int']]" />
 </metadata>

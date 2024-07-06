@@ -134,8 +134,8 @@
 | 127|androidx.fragment:fragment                                            |1.8.1               |Xamarin.AndroidX.Fragment                                             |1.8.1               |
 | 128|androidx.fragment:fragment-ktx                                        |1.8.1               |Xamarin.AndroidX.Fragment.Ktx                                         |1.8.1               |
 | 129|androidx.gridlayout:gridlayout                                        |1.0.0               |Xamarin.AndroidX.GridLayout                                           |1.0.0.26            |
-| 130|androidx.health:health-services-client                                |1.0.0-rc02          |Xamarin.AndroidX.Health.ServicesClient                                |1.0.0-rc02          |
-| 131|androidx.health.connect:connect-client                                |1.1.0-alpha07       |Xamarin.AndroidX.Health.Connect.ConnectClient                         |1.0.0-alpha11       |
+| 130|androidx.health:health-services-client                                |1.1.0-alpha03       |Xamarin.AndroidX.Health.ServicesClient                                |1.1.0-alpha03       |
+| 131|androidx.health.connect:connect-client                                |1.1.0-alpha07       |Xamarin.AndroidX.Health.Connect.ConnectClient                         |1.1.0-alpha07       |
 | 132|androidx.heifwriter:heifwriter                                        |1.0.0               |Xamarin.AndroidX.HeifWriter                                           |1.0.0.26            |
 | 133|androidx.interpolator:interpolator                                    |1.0.0               |Xamarin.AndroidX.Interpolator                                         |1.0.0.26            |
 | 134|androidx.leanback:leanback                                            |1.0.0               |Xamarin.AndroidX.Leanback                                             |1.0.0.28            |
