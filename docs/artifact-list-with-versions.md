@@ -30,7 +30,7 @@
 |  23|androidx.camera:camera-view                                           |1.3.4               |Xamarin.AndroidX.Camera.View                                          |1.3.4               |
 |  24|androidx.car:car                                                      |1.0.0-alpha7        |Xamarin.AndroidX.Car.Car                                              |1.0.0.24-alpha7     |
 |  25|androidx.car:car-cluster                                              |1.0.0-alpha5        |Xamarin.AndroidX.Car.Cluster                                          |1.0.0.24-alpha5     |
-|  26|androidx.car.app:app                                                  |1.2.0               |Xamarin.AndroidX.Car.App.App                                          |1.2.0.11            |
+|  26|androidx.car.app:app                                                  |1.4.0               |Xamarin.AndroidX.Car.App.App                                          |1.4.0               |
 |  27|androidx.cardview:cardview                                            |1.0.0               |Xamarin.AndroidX.CardView                                             |1.0.0.28            |
 |  28|androidx.collection:collection                                        |1.4.0               |Xamarin.AndroidX.Collection                                           |1.4.0.5             |
 |  29|androidx.collection:collection-jvm                                    |1.4.0               |Xamarin.AndroidX.Collection.Jvm                                       |1.4.0.4             |
