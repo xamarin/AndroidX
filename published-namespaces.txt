@@ -243,6 +243,7 @@ AndroidX.GridLayout.Widget
 AndroidX.Health.Connect.Client
 AndroidX.Health.Connect.Client.Aggregate
 AndroidX.Health.Connect.Client.Changes
+AndroidX.Health.Connect.Client.Contracts
 AndroidX.Health.Connect.Client.DataNotification
 AndroidX.Health.Connect.Client.Impl
 AndroidX.Health.Connect.Client.Impl.Converters.Aggregate
@@ -253,6 +254,9 @@ AndroidX.Health.Connect.Client.Impl.Converters.Records
 AndroidX.Health.Connect.Client.Impl.Converters.Request
 AndroidX.Health.Connect.Client.Impl.Converters.Response
 AndroidX.Health.Connect.Client.Impl.Converters.Time
+AndroidX.Health.Connect.Client.Impl.Platform
+AndroidX.Health.Connect.Client.Impl.Platform.Records
+AndroidX.Health.Connect.Client.Impl.Platform.Response
 AndroidX.Health.Connect.Client.Permission
 AndroidX.Health.Connect.Client.Records
 AndroidX.Health.Connect.Client.Records.Metadata
