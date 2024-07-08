@@ -44,7 +44,14 @@
       {
           artifact_version += "-" + artifact_version_parts[1];
       }
+      
+      // Whether to bind the Java .jar/.aar
+      var bind_native_lib = Model.NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
+      
+      // Whether to include the Java .jar/.aar
+      var include_native_lib = Model.NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
   }
+  
   <PropertyGroup>
     <PackageId>@(Model.NuGetPackageId)</PackageId>
     <Title>.NET for Android (formerly Xamarin.Android) AndroidX - @(Model.Name)</Title>
@@ -59,7 +66,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    @if (include_native_lib) {
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
+    }
     <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
     <None Include="..\..\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
@@ -103,6 +112,10 @@
 
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
+      if (!bind_native_lib) {
+        continue;
+      }
+      
       if (art.MavenArtifactPackaging == "aar") {
     <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar" />
       } else {
@@ -116,6 +129,10 @@
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts)
     {
+      if (!include_native_lib) {
+        continue;
+      }
+      
       if (art.MavenArtifactPackaging == "aar")
       {
     <InputJar 
