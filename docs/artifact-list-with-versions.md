@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 # Artifacts with versions supported
 
 
@@ -136,7 +134,7 @@
 | 127|androidx.fragment:fragment                                            |1.8.1               |Xamarin.AndroidX.Fragment                                             |1.8.1               |
 | 128|androidx.fragment:fragment-ktx                                        |1.8.1               |Xamarin.AndroidX.Fragment.Ktx                                         |1.8.1               |
 | 129|androidx.gridlayout:gridlayout                                        |1.0.0               |Xamarin.AndroidX.GridLayout                                           |1.0.0.26            |
-| 130|androidx.health:health-services-client                                |1.0.0-rc02          |Xamarin.AndroidX.Health.ServicesClient                                |1.0.0-rc02          |
+| 130|androidx.health:health-services-client                                |1.1.0-alpha03       |Xamarin.AndroidX.Health.ServicesClient                                |1.1.0-alpha03       |
 | 131|androidx.health.connect:connect-client                                |1.1.0-alpha07       |Xamarin.AndroidX.Health.Connect.ConnectClient                         |1.1.0-alpha07       |
 | 132|androidx.heifwriter:heifwriter                                        |1.0.0               |Xamarin.AndroidX.HeifWriter                                           |1.0.0.26            |
 | 133|androidx.interpolator:interpolator                                    |1.0.0               |Xamarin.AndroidX.Interpolator                                         |1.0.0.26            |
@@ -147,28 +145,28 @@
 | 138|androidx.legacy:legacy-support-core-utils                             |1.0.0               |Xamarin.AndroidX.Legacy.Support.Core.Utils                            |1.0.0.26            |
 | 139|androidx.legacy:legacy-support-v13                                    |1.0.0               |Xamarin.AndroidX.Legacy.Support.V13                                   |1.0.0.26            |
 | 140|androidx.legacy:legacy-support-v4                                     |1.0.0               |Xamarin.AndroidX.Legacy.Support.V4                                    |1.0.0.26            |
-| 141|androidx.lifecycle:lifecycle-common                                   |2.8.2               |Xamarin.AndroidX.Lifecycle.Common                                     |2.8.2.1             |
-| 142|androidx.lifecycle:lifecycle-common-java8                             |2.8.2               |Xamarin.AndroidX.Lifecycle.Common.Java8                               |2.8.2.1             |
-| 143|androidx.lifecycle:lifecycle-common-jvm                               |2.8.2               |Xamarin.AndroidX.Lifecycle.Common.Jvm                                 |2.8.2.1             |
+| 141|androidx.lifecycle:lifecycle-common                                   |2.8.3               |Xamarin.AndroidX.Lifecycle.Common                                     |2.8.3               |
+| 142|androidx.lifecycle:lifecycle-common-java8                             |2.8.3               |Xamarin.AndroidX.Lifecycle.Common.Java8                               |2.8.3               |
+| 143|androidx.lifecycle:lifecycle-common-jvm                               |2.8.3               |Xamarin.AndroidX.Lifecycle.Common.Jvm                                 |2.8.3               |
 | 144|androidx.lifecycle:lifecycle-extensions                               |2.2.0               |Xamarin.AndroidX.Lifecycle.Extensions                                 |2.2.0.26            |
-| 145|androidx.lifecycle:lifecycle-livedata                                 |2.8.2               |Xamarin.AndroidX.Lifecycle.LiveData                                   |2.8.2.1             |
-| 146|androidx.lifecycle:lifecycle-livedata-core                            |2.8.2               |Xamarin.AndroidX.Lifecycle.LiveData.Core                              |2.8.2.1             |
-| 147|androidx.lifecycle:lifecycle-livedata-core-ktx                        |2.8.2               |Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx                          |2.8.2.1             |
-| 148|androidx.lifecycle:lifecycle-livedata-ktx                             |2.8.2               |Xamarin.AndroidX.Lifecycle.LiveData.Ktx                               |2.8.2.1             |
-| 149|androidx.lifecycle:lifecycle-process                                  |2.8.2               |Xamarin.AndroidX.Lifecycle.Process                                    |2.8.2.1             |
-| 150|androidx.lifecycle:lifecycle-reactivestreams                          |2.8.2               |Xamarin.AndroidX.Lifecycle.ReactiveStreams                            |2.8.2.1             |
-| 151|androidx.lifecycle:lifecycle-reactivestreams-ktx                      |2.8.2               |Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx                        |2.8.2.1             |
-| 152|androidx.lifecycle:lifecycle-runtime                                  |2.8.2               |Xamarin.AndroidX.Lifecycle.Runtime                                    |2.8.2.1             |
-| 153|androidx.lifecycle:lifecycle-runtime-android                          |2.8.2               |Xamarin.AndroidX.Lifecycle.Runtime.Android                            |2.8.2.1             |
-| 154|androidx.lifecycle:lifecycle-runtime-ktx                              |2.8.2               |Xamarin.AndroidX.Lifecycle.Runtime.Ktx                                |2.8.2.1             |
-| 155|androidx.lifecycle:lifecycle-runtime-ktx-android                      |2.8.2               |Xamarin.AndroidX.Lifecycle.Runtime.Ktx.Android                        |2.8.2.1             |
-| 156|androidx.lifecycle:lifecycle-service                                  |2.8.2               |Xamarin.AndroidX.Lifecycle.Service                                    |2.8.2.1             |
-| 157|androidx.lifecycle:lifecycle-viewmodel                                |2.8.2               |Xamarin.AndroidX.Lifecycle.ViewModel                                  |2.8.2.1             |
-| 158|androidx.lifecycle:lifecycle-viewmodel-android                        |2.8.2               |Xamarin.AndroidX.Lifecycle.ViewModel.Android                          |2.8.2.1             |
-| 159|androidx.lifecycle:lifecycle-viewmodel-compose                        |2.8.2               |Xamarin.AndroidX.Lifecycle.ViewModel.Compose                          |2.8.2.1             |
-| 160|androidx.lifecycle:lifecycle-viewmodel-compose-android                |2.8.2               |Xamarin.AndroidX.Lifecycle.ViewModel.Compose.Android                  |2.8.2.1             |
-| 161|androidx.lifecycle:lifecycle-viewmodel-ktx                            |2.8.2               |Xamarin.AndroidX.Lifecycle.ViewModel.Ktx                              |2.8.2.1             |
-| 162|androidx.lifecycle:lifecycle-viewmodel-savedstate                     |2.8.2               |Xamarin.AndroidX.Lifecycle.ViewModelSavedState                        |2.8.2.1             |
+| 145|androidx.lifecycle:lifecycle-livedata                                 |2.8.3               |Xamarin.AndroidX.Lifecycle.LiveData                                   |2.8.3               |
+| 146|androidx.lifecycle:lifecycle-livedata-core                            |2.8.3               |Xamarin.AndroidX.Lifecycle.LiveData.Core                              |2.8.3               |
+| 147|androidx.lifecycle:lifecycle-livedata-core-ktx                        |2.8.3               |Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx                          |2.8.3               |
+| 148|androidx.lifecycle:lifecycle-livedata-ktx                             |2.8.3               |Xamarin.AndroidX.Lifecycle.LiveData.Ktx                               |2.8.3               |
+| 149|androidx.lifecycle:lifecycle-process                                  |2.8.3               |Xamarin.AndroidX.Lifecycle.Process                                    |2.8.3               |
+| 150|androidx.lifecycle:lifecycle-reactivestreams                          |2.8.3               |Xamarin.AndroidX.Lifecycle.ReactiveStreams                            |2.8.3               |
+| 151|androidx.lifecycle:lifecycle-reactivestreams-ktx                      |2.8.3               |Xamarin.AndroidX.Lifecycle.ReactiveStreams.Ktx                        |2.8.3               |
+| 152|androidx.lifecycle:lifecycle-runtime                                  |2.8.3               |Xamarin.AndroidX.Lifecycle.Runtime                                    |2.8.3               |
+| 153|androidx.lifecycle:lifecycle-runtime-android                          |2.8.3               |Xamarin.AndroidX.Lifecycle.Runtime.Android                            |2.8.3               |
+| 154|androidx.lifecycle:lifecycle-runtime-ktx                              |2.8.3               |Xamarin.AndroidX.Lifecycle.Runtime.Ktx                                |2.8.3               |
+| 155|androidx.lifecycle:lifecycle-runtime-ktx-android                      |2.8.3               |Xamarin.AndroidX.Lifecycle.Runtime.Ktx.Android                        |2.8.3               |
+| 156|androidx.lifecycle:lifecycle-service                                  |2.8.3               |Xamarin.AndroidX.Lifecycle.Service                                    |2.8.3               |
+| 157|androidx.lifecycle:lifecycle-viewmodel                                |2.8.3               |Xamarin.AndroidX.Lifecycle.ViewModel                                  |2.8.3               |
+| 158|androidx.lifecycle:lifecycle-viewmodel-android                        |2.8.3               |Xamarin.AndroidX.Lifecycle.ViewModel.Android                          |2.8.3               |
+| 159|androidx.lifecycle:lifecycle-viewmodel-compose                        |2.8.3               |Xamarin.AndroidX.Lifecycle.ViewModel.Compose                          |2.8.3               |
+| 160|androidx.lifecycle:lifecycle-viewmodel-compose-android                |2.8.3               |Xamarin.AndroidX.Lifecycle.ViewModel.Compose.Android                  |2.8.3               |
+| 161|androidx.lifecycle:lifecycle-viewmodel-ktx                            |2.8.3               |Xamarin.AndroidX.Lifecycle.ViewModel.Ktx                              |2.8.3               |
+| 162|androidx.lifecycle:lifecycle-viewmodel-savedstate                     |2.8.3               |Xamarin.AndroidX.Lifecycle.ViewModelSavedState                        |2.8.3               |
 | 163|androidx.loader:loader                                                |1.1.0               |Xamarin.AndroidX.Loader                                               |1.1.0.26            |
 | 164|androidx.localbroadcastmanager:localbroadcastmanager                  |1.1.0               |Xamarin.AndroidX.LocalBroadcastManager                                |1.1.0.14            |
 | 165|androidx.media:media                                                  |1.7.0               |Xamarin.AndroidX.Media                                                |1.7.0.4             |
@@ -286,7 +284,7 @@
 | 277|com.google.assistant.appactions:widgets                               |0.0.1               |Xamarin.Google.Assistant.AppActions.Widgets                           |0.0.1.13            |
 | 278|com.google.auto.value:auto-value-annotations                          |1.11.0              |Xamarin.Google.AutoValue.Annotations                                  |1.11.0              |
 | 279|com.google.code.gson:gson                                             |2.11.0              |GoogleGson                                                            |2.11.0              |
-| 280|com.google.crypto.tink:tink-android                                   |1.13.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.13.0.3            |
+| 280|com.google.crypto.tink:tink-android                                   |1.14.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.14.0              |
 | 281|com.google.flogger:flogger                                            |0.8                 |Xamarin.Flogger                                                       |0.8.0.5             |
 | 282|com.google.flogger:flogger-system-backend                             |0.8                 |Xamarin.Flogger.SystemBackend                                         |0.8.0.5             |
 | 283|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2.5             |
@@ -302,7 +300,7 @@
 | 293|io.reactivex.rxjava3:rxjava                                           |3.1.8               |Xamarin.Android.ReactiveX.RxJava3.RxJava                              |3.1.8.6             |
 | 294|io.reactivex.rxjava3:rxkotlin                                         |3.0.1               |Xamarin.Android.ReactiveX.RxJava3.RxKotlin                            |3.0.1.12            |
 | 295|org.checkerframework:checker-compat-qual                              |2.5.6               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.6.5             |
-| 296|org.checkerframework:checker-qual                                     |3.44.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.44.0              |
+| 296|org.checkerframework:checker-qual                                     |3.45.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.45.0              |
 | 297|org.jetbrains:annotations                                             |24.1.0              |Xamarin.Jetbrains.Annotations                                         |24.1.0.5            |
 | 298|org.jetbrains.kotlin:kotlin-android-extensions-runtime                |2.0.0               |Xamarin.Kotlin.Android.Extensions.Runtime.Library                     |2.0.0               |
 | 299|org.jetbrains.kotlin:kotlin-parcelize-runtime                         |2.0.0               |Xamarin.Kotlin.Parcelize.Runtime                                      |2.0.0               |
@@ -311,8 +309,8 @@
 | 302|org.jetbrains.kotlin:kotlin-stdlib-common                             |2.0.0               |Xamarin.Kotlin.StdLib.Common                                          |2.0.0               |
 | 303|org.jetbrains.kotlin:kotlin-stdlib-jdk7                               |2.0.0               |Xamarin.Kotlin.StdLib.Jdk7                                            |2.0.0               |
 | 304|org.jetbrains.kotlin:kotlin-stdlib-jdk8                               |2.0.0               |Xamarin.Kotlin.StdLib.Jdk8                                            |2.0.0               |
-| 305|org.jetbrains.kotlinx:atomicfu                                        |0.24.0              |Xamarin.KotlinX.AtomicFU                                              |0.24.0              |
-| 306|org.jetbrains.kotlinx:atomicfu-jvm                                    |0.24.0              |Xamarin.KotlinX.AtomicFU.Jvm                                          |0.24.0              |
+| 305|org.jetbrains.kotlinx:atomicfu                                        |0.25.0              |Xamarin.KotlinX.AtomicFU                                              |0.25.0              |
+| 306|org.jetbrains.kotlinx:atomicfu-jvm                                    |0.25.0              |Xamarin.KotlinX.AtomicFU.Jvm                                          |0.25.0              |
 | 307|org.jetbrains.kotlinx:kotlinx-coroutines-android                      |1.8.1               |Xamarin.KotlinX.Coroutines.Android                                    |1.8.1               |
 | 308|org.jetbrains.kotlinx:kotlinx-coroutines-core                         |1.8.1               |Xamarin.KotlinX.Coroutines.Core                                       |1.8.1               |
 | 309|org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm                     |1.8.1               |Xamarin.KotlinX.Coroutines.Core.Jvm                                   |1.8.1               |
@@ -327,4 +325,3 @@
 | 318|org.jetbrains.kotlinx:kotlinx-serialization-protobuf                  |1.7.1               |Xamarin.KotlinX.Serialization.Protobuf                                |1.7.1               |
 | 319|org.jetbrains.kotlinx:kotlinx-serialization-protobuf-jvm              |1.7.1               |Xamarin.KotlinX.Serialization.Protobuf.Jvm                            |1.7.1               |
 | 320|org.reactivestreams:reactive-streams                                  |1.0.4               |Xamarin.Android.ReactiveStreams                                       |1.0.4.13            |
->>>>>>> Stashed changes
