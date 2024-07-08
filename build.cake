@@ -629,26 +629,31 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    DotNetBuildSettings settings = new DotNetBuildSettings()
-    {
-        Configuration = CONFIGURATION,
-        MSBuildSettings = new DotNetMSBuildSettings()
-                                .SetMaxCpuCount(0)
-                                .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
-                                .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-                                .WithProperty("DesignTimeBuild", "false")
-                                .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")            
-    };
+    DotNetMSBuildSettings settings = new DotNetMSBuildSettings()
+        .SetConfiguration(CONFIGURATION)
+        .SetMaxCpuCount(0)
+        .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
+        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("Verbosity", VERBOSITY.ToString())
+        .WithProperty("DesignTimeBuild", "false")
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     DotNetRestore("./generated/AndroidX.sln", new DotNetRestoreSettings
     {
-        MSBuildSettings = settings.MSBuildSettings.EnableBinaryLogger("./output/restore.binlog")
+        MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
     });
 
-    DotNetBuild("./generated/AndroidX.sln", settings);
+    DotNetBuild
+        (
+            "./generated/AndroidX.sln", 
+            new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+            }
+        );
 });
 
 Task("libs-native")
@@ -670,23 +675,27 @@ Task("nuget")
     .IsDependentOn("libs")
     .Does(() =>
 {
-    DotNetBuildSettings settings = new DotNetBuildSettings()
-    {
-        Configuration = CONFIGURATION,
-        MSBuildSettings = new DotNetMSBuildSettings()
-                                        .SetMaxCpuCount(0)
-                                        .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
-                                        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-                                        .WithProperty("NoBuild", "true")
-                                        .WithProperty("PackageRequireLicenseAcceptance", "true")
-                                        .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
-                                        .WithTarget("Pack")
-    };
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration(CONFIGURATION)
+        .SetMaxCpuCount(0)
+        .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
+        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("NoBuild", "true")
+        .WithProperty("PackageRequireLicenseAcceptance", "true")
+        .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
+        .WithTarget("Pack");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetBuild("./generated/AndroidX.sln", settings);
+    DotNetBuild
+        (
+            "./generated/AndroidX.sln", 
+            new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+            }
+        );
 });
 
 Task("samples-generate-all-targets")
@@ -761,16 +770,14 @@ Task("samples-only-dotnet")
     EnsureDirectoryExists(packagesPath);
     CleanDirectories(packagesPath);
 
-    DotNetBuildSettings settings = new DotNetBuildSettings()
-    {
-        Configuration = "Debug",
-        MSBuildSettings = new DotNetMSBuildSettings()
-                                    .WithProperty("RestorePackagesPath", packagesPath)
-                                    .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
-    };
-  
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration("Debug") // We don't need to run linking
+        .WithProperty("Verbosity", VERBOSITY.ToString())
+        .WithProperty("RestorePackagesPath", packagesPath)
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
+
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     string[] solutions = new string[]
     {
@@ -783,10 +790,10 @@ Task("samples-only-dotnet")
         FilePath fp_solution = new FilePath(solution);
         string filename = fp_solution.GetFilenameWithoutExtension().ToString();
         Information($"=====================================================================================================");
-        Information($"DotNetBuild        {solution} / {filename}");    
+        Information($"DotNetBuild           {solution} / {filename}");    
         DotNetBuild(solution, new DotNetBuildSettings
         {
-            MSBuildSettings = settings.MSBuildSettings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
         });
     }
 });
