@@ -284,16 +284,13 @@ Task ("binderate")
     }
 
     // different lint.jar files in artifacts causing R8 errors
-    foreach (var file in GetFiles("./externals/**/lint.jar")) 
-    {
+    foreach (var file in GetFiles("./externals/**/lint.jar")) {
         Information($"Deleting: {file}");
         DeleteFile(file);
 
-        foreach (var aar in GetFiles($"{file.GetDirectory()}/../*.aar")) 
-        {
+        foreach (var aar in GetFiles($"{file.GetDirectory()}/../*.aar")) {
             Information($"Deleting: lint.jar from {aar}");
-            using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) 
-            {
+            using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) {
                 zipFile.BeginUpdate();
                 var entry = zipFile.GetEntry("lint.jar");
                 if (entry != null) {
@@ -304,117 +301,11 @@ Task ("binderate")
             }
         }
     }
-
-    DirectoryPath dp = Context.Environment.WorkingDirectory;
-    Information($"WorkingDirectory: {dp}");
-    foreach (FilePath fp in GetFiles("./externals/**/repackaged.jar"))
-    {
-        string relative = fp.ToString().Replace(dp.ToString(), "");
-        relative =  relative.Replace(@"/externals", "");
-        relative =  relative.Replace(@"/libs", "");
-        Information($"      Renaming: {relative}");
-        string[] parts = relative.Split(new string[]{"/"}, StringSplitOptions.RemoveEmptyEntries);
-        string group_id = parts[0];
-        string artifact_id = parts[1];
-        Information($"          1 : {group_id}");
-        Information($"          2 : {artifact_id}");
-
-        string version = artifacts_with_verions[(group_id, artifact_id)];
-        string name_old = "repackaged.jar";
-        string name_new = $"repackaged-{artifact_id.Replace(".", "-")}-{parts[1]}-{version.Replace(".", "-")}.jar";
-        MoveFile
-            (
-                $"externals/{group_id}/{artifact_id}/libs/{name_old}", 
-                $"externals/{group_id}/{artifact_id}/libs/{name_new}"
-            );
-        MoveFile
-            (
-                $"externals/{group_id}/{artifact_id}.aar", 
-                $"externals/{group_id}/{artifact_id}.original.aar"
-            );
-        Zip
-            (
-                $"externals/{group_id}/{artifact_id}/", 
-                $"externals/{group_id}/{artifact_id}.aar"
-            );
-
-        // find ./externals -type f -iname "*repack*"
-
-        foreach (var aar in GetFiles($"{fp.GetDirectory()}/../*.aar")) 
-        {
-            Information($"Renaming: repackaged.jar from {aar}");
-            /*
-            Cannot rename
-            using (var zipFile = new ICSharpCode.SharpZipLib.Zip.ZipFile(aar.ToString())) 
-            {
-                zipFile.BeginUpdate();
-                CSharpCode.SharpZipLib.Zip.ZipEntry entry_old = zipFile.GetEntry("repackaged.jar");
-                CSharpCode.SharpZipLib.Zip.ZipEntry entry_new = zipFile.Clone();
-                if (entry != null) 
-                {
-                    Information($"		Renaming {name_old} from {aar} to {name_new}");
-                    zipFile.Delete(entry_old);
-                    zipFile.Add(entry_new);
-                }
-                zipFile.CommitUpdate();
-            }
-
-            using 
-                (
-                    var archive = new System.IO.Compression.ZipArchive
-                                                                (
-                                                                    System.IO.File.Open
-                                                                                    (
-                                                                                        fp.ToString(), 
-                                                                                        FileMode.Open, 
-                                                                                        FileAccess.ReadWrite
-                                                                                    ), 
-                                                                    System.IO.Compression.ZipArchiveMode.Update
-                                                                )
-                )
-            {
-                var entries = archive.Entries.ToArray();
-                foreach (var entry_old in entries)
-                {
-                    if(entry_old.Name.Contains(name_old))
-                    {
-                        Information($"          Zip updating {fp.ToString()}");
-                        var entry_new = archive.CreateEntry(entry_old.Name.Replace(name_old, name_new));
-                        using (var entry_old_opened = entry_old.Open())
-                        {
-                            using (var entry_new_opened = entry_new.Open())
-                            {
-                                entry_old_opened.CopyTo(entry_new_opened);
-                                entry_old.Delete();
-                            }
-                        }
-                    }
-                }
-            }
-            */
-        }
-
-    }
-
-    // foreach (FilePath file in GetFiles("./externals/**/repackaged.jar")) 
-    // {
-    //     string[] parts = file.ToString().Split(new char[]{'/', '\\'}, StringSplitOptions.None);
-    //     string aid = parts[parts.Length - 3];
-    //     string gid = parts[parts.Length - 4].Replace(".", "-");
-    //     string v = artifacts_with_verions[(gid, aid)];
-    //     string file_new = file.ToString().Replace("repackaged", $"repackaged-{gid}-{aid}");
-    //     Information($"Renaming: {file}");
-    //     Information($"      to: {file_new}");
-    //     MoveFile(file, file_new);
-    // }
-
-    return;   
 });
 
 string version_suffix = "";
 string nuget_version_template = $"x.y.z.w{version_suffix}";
 JArray binderator_json_array = null;
-Dictionary<(string gid, string aid), string> artifacts_with_verions = null;
 
 Task("binderate-config-verify")
     .IsDependentOn("binderate-fix")
@@ -431,8 +322,6 @@ Task("binderate-config-verify")
                 }
             }
 
-            artifacts_with_verions = new Dictionary<(string gid, string aid), string >();
-
             Information("config.json verification...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
@@ -441,14 +330,8 @@ Task("binderate-config-verify")
                 {
                     continue;
                 }
-
-                string group_id         = (string) jo["groupId"];
-                string artifact_id      = (string) jo["artifactId"];
                 string artifact_version = (string) jo["version"];
-                string nuget_id  	    = (string) jo["nugetId"];
                 string nuget_version  	= (string) jo["nugetVersion"];
-
-                Information($"Verifying  : {group_id}:{artifact_id}:{artifact_version}");
 
                 string[] artifact_version_parts = artifact_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
                 string[] nuget_version_parts = nuget_version.Split(new string[]{ "-" }, StringSplitOptions.RemoveEmptyEntries);
@@ -467,15 +350,15 @@ Task("binderate-config-verify")
                     artifact_version_suffix  = artifact_version_parts[1];
                 }
 
-                Information($"groupId                   = {group_id}");
-                Information($"artifactId                = {artifact_id}");
+                Information($"groupId                   = {jo["groupId"]}");
+                Information($"artifactId                = {jo["artifactId"]}");
                 Information($"artifact_version          = {artifact_version}");
                 Information($"artifact_version_prefix   = {artifact_version_prefix}");
                 Information($"artifact_version_suffix   = {artifact_version_suffix}");
                 Information($"nuget_version             = {nuget_version}");
                 Information($"nuget_version_prefix      = {nuget_version_prefix}");
                 Information($"nuget_version_suffix      = {nuget_version_suffix}");
-                Information($"nugetId                   = {nuget_id}");
+                Information($"nugetId                   = {jo["nugetId"]}");
 
 
                 string[] artifact_version_prefix_parts = artifact_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
@@ -511,19 +394,17 @@ Task("binderate-config-verify")
                     )
                 {
                     Error("check config.json for nuget id");
-                    Error  ($"		groupId           = {group_id}");
-                    Error  ($"		artifactId        = {artifact_id}");
+                    Error  ($"		groupId           = {jo["groupId"]}");
+                    Error  ($"		artifactId        = {jo["artifactId"]}");
                     Error  ($"		artifact_version  = {artifact_version}");
                     Error  ($"		nuget_version     = {nuget_version}");
                     Error  ($"		nuget_version_new = {nuget_version_new}");
-                    Error  ($"		nugetId           = {nuget_id}");
+                    Error  ($"		nugetId           = {jo["nugetId"]}");
 
                     Warning($"	expected : ");
                     Warning($"		nuget_version = {nuget_version_new}");
                     throw new Exception("check config.json for nuget id");
                 }
-                
-                artifacts_with_verions.Add((group_id, artifact_id), artifact_version);    
             }
 
             return;
@@ -567,7 +448,7 @@ Task("binderate-fix")
                 }
             }
 
-            Warning("config.json fixing missing folder structure ...");
+            Warning("config.json fixing missing folder strucutre ...");
             foreach(JObject jo in binderator_json_array[0]["artifacts"])
             {
                 string groupId      = (string) jo["groupId"];
@@ -748,26 +629,31 @@ Task("libs")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
-    DotNetBuildSettings settings = new DotNetBuildSettings()
-    {
-        Configuration = CONFIGURATION,
-        MSBuildSettings = new DotNetMSBuildSettings()
-                                .SetMaxCpuCount(0)
-                                .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
-                                .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-                                .WithProperty("DesignTimeBuild", "false")
-                                .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")            
-    };
+    DotNetMSBuildSettings settings = new DotNetMSBuildSettings()
+        .SetConfiguration(CONFIGURATION)
+        .SetMaxCpuCount(0)
+        .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
+        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("Verbosity", VERBOSITY.ToString())
+        .WithProperty("DesignTimeBuild", "false")
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     DotNetRestore("./generated/AndroidX.sln", new DotNetRestoreSettings
     {
-        MSBuildSettings = settings.MSBuildSettings.EnableBinaryLogger("./output/restore.binlog")
+        MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
     });
 
-    DotNetBuild("./generated/AndroidX.sln", settings);
+    DotNetBuild
+        (
+            "./generated/AndroidX.sln", 
+            new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+            }
+        );
 });
 
 Task("libs-native")
@@ -789,23 +675,27 @@ Task("nuget")
     .IsDependentOn("libs")
     .Does(() =>
 {
-    DotNetBuildSettings settings = new DotNetBuildSettings()
-    {
-        Configuration = CONFIGURATION,
-        MSBuildSettings = new DotNetMSBuildSettings()
-                                        .SetMaxCpuCount(0)
-                                        .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
-                                        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-                                        .WithProperty("NoBuild", "true")
-                                        .WithProperty("PackageRequireLicenseAcceptance", "true")
-                                        .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
-                                        .WithTarget("Pack")
-    };
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration(CONFIGURATION)
+        .SetMaxCpuCount(0)
+        .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
+        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
+        .WithProperty("NoBuild", "true")
+        .WithProperty("PackageRequireLicenseAcceptance", "true")
+        .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
+        .WithTarget("Pack");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
-    DotNetBuild("./generated/AndroidX.sln", settings);
+    DotNetBuild
+        (
+            "./generated/AndroidX.sln", 
+            new DotNetBuildSettings
+            {
+                MSBuildSettings = settings
+            }
+        );
 });
 
 Task("samples-generate-all-targets")
@@ -880,16 +770,14 @@ Task("samples-only-dotnet")
     EnsureDirectoryExists(packagesPath);
     CleanDirectories(packagesPath);
 
-    DotNetBuildSettings settings = new DotNetBuildSettings()
-    {
-        Configuration = "Debug",
-        MSBuildSettings = new DotNetMSBuildSettings()
-                                    .WithProperty("RestorePackagesPath", packagesPath)
-                                    .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}")
-    };
+    var settings = new DotNetMSBuildSettings()
+        .SetConfiguration("Debug") // We don't need to run linking
+        .WithProperty("Verbosity", VERBOSITY.ToString())
+        .WithProperty("RestorePackagesPath", packagesPath)
+        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
 
     if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.MSBuildSettings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
+        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
 
     string[] solutions = new string[]
     {
@@ -902,10 +790,10 @@ Task("samples-only-dotnet")
         FilePath fp_solution = new FilePath(solution);
         string filename = fp_solution.GetFilenameWithoutExtension().ToString();
         Information($"=====================================================================================================");
-        Information($"DotNetBuild        {solution} / {filename}");    
+        Information($"DotNetBuild           {solution} / {filename}");    
         DotNetBuild(solution, new DotNetBuildSettings
         {
-            MSBuildSettings = settings.MSBuildSettings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
+            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
         });
     }
 });
