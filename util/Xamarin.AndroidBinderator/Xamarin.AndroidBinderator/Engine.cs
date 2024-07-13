@@ -524,6 +524,10 @@ namespace AndroidBinderator
 			if (!version.Contains("."))
 				version += ".0";
 
+			// See if we should override the version to be locked (add square brackets)
+			if (mavenArtifact.IsDependencyVersionLocked(dependency) && !version.StartsWith("["))
+				version = $"[{version}]";
+
 			dependency.Version = version;
 		}
 

@@ -386,6 +386,9 @@ public class ArtifactModel
 	[JsonProperty("extraDependencies")]
 	public string ExtraDependencies { get; set; }
 
+	[JsonProperty ("versionLockedDependencies")]
+	public string VersionLockedDependencies { get; set; }
+
 	[JsonProperty ("templateSet")]
 	public string TemplateSet { get; set; }
 
