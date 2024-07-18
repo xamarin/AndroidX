@@ -43,16 +43,34 @@
         AndroidX.Media3.ExoPlayer.Hls.IHlsMediaChunkExtractor
     </attr>
 
-    <add-node
-        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsPlaylist']"
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsMediaPlaylist']/method[@name='copy' and count(parameter)=1]"
+        name="managedOverride"
         >
-        <method 
-            visibility="public" static="false" abstract="false" return="java.lang.Object" name="copy"
-            deprecated="not deprecated" final="false"  bridge="false" native="false"  
-            synchronized="false" synthetic="false" 
-            >
-            <parameter type="java.util.List&lt;androidx.media3.common.StreamKey&gt;" name="streamKeys" />
-          </method>
-    
-    </add-node>
+        override
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsMediaPlaylist']/method[@name='copy' and count(parameter)=1]"
+        name="managedReturn"
+        >
+      Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsMultivariantPlaylist']/method[@name='copy' and count(parameter)=1]"
+        name="managedOverride"
+        >
+        override
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.playlist']/class[@name='HlsMultivariantPlaylist']/method[@name='copy' and count(parameter)=1]"
+        name="managedReturn"
+        >
+      Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.hls.offline']/class[@name='HlsDownloader']/method[@name='getSegments' and count(parameter)=3 and parameter[1][@type='androidx.media3.datasource.DataSource'] and parameter[2][@type='androidx.media3.exoplayer.hls.playlist.HlsPlaylist'] and parameter[3][@type='boolean']]/parameter[2]"
+        name="managedType"
+          >
+      Java.Lang.Object
+    </attr>
 </metadata>

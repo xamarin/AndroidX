@@ -1,36 +1,80 @@
 ﻿<metadata>
-    <attr
-        path="/api/package[@name='androidx.media3.extractor.metadata.id3']/class[@name='TextInformationFrame']"
-        name="final"
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='createInputBuffer' and count(parameter)=0]"
+    name="managedReturn"
         >
-        false
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.extractor.text.cea']/class[@name='Cea608Decoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0 and @return='androidx.media3.extractor.text.SubtitleOutputBuffer']"
-        name="managedName"
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='createOutputBuffer' and count(parameter)=0]"
+    name="managedReturn"
         >
-        DequeueOutputBufferSubtitleOutputBuffer
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.extractor.metadata.id3']/class[@name='ApicFrame']"
-        name="final"
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='createUnexpectedDecodeException' and count(parameter)=1 and parameter[1][@type='java.lang.Throwable']]"
+    name="managedReturn"
         >
-        false
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.extractor.text.cea']/class[@name='Cea608Decoder']" 
-        name="skipInvokerMethods"
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.metadata.id3']/class[@name='TextInformationFrame']/method[@name='populateMediaMetadata' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaMetadata.Builder']]"
+    name="managedOverride"
         >
-        dequeueInputBuffer.()Ljava/lang/Object;dequeueOutputBuffer.()Ljava/lang/Object;
-    </attr>
-    <remove-node
-        path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']"
+    none
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.metadata.id3']/class[@name='ApicFrame']/method[@name='populateMediaMetadata' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaMetadata.Builder']]"
+    name="managedOverride"
+        >
+    none
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer'] and parameter[2][@type='androidx.media3.extractor.text.SubtitleOutputBuffer'] and parameter[3][@type='boolean']]/parameter[1]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer'] and parameter[2][@type='androidx.media3.extractor.text.SubtitleOutputBuffer'] and parameter[3][@type='boolean']]/parameter[2]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer'] and parameter[2][@type='androidx.media3.extractor.text.SubtitleOutputBuffer'] and parameter[3][@type='boolean']]"
+    name="managedReturn"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer'] and parameter[2][@type='androidx.media3.extractor.text.SubtitleOutputBuffer'] and parameter[3][@type='boolean']]"
+    name="managedOverride"
+        >
+    override
+  </attr>
+  <remove-node
+      path="/api/package[@name='androidx.media3.extractor.text.cea']/class[@name='Cea608Decoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
         />
-    <remove-node
-        path="/api/package[@name='androidx.media3.extractor.text.cea']/class[@name='Cea608Decoder']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.extractor']/class[@name='BinarySearchSeeker.BinarySearchSeekMap']/constructor[@name='BinarySearchSeeker.BinarySearchSeekMap' and count(parameter)=7 and parameter[1][@type='androidx.media3.extractor.BinarySearchSeeker.SeekTimestampConverter'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='long'] and parameter[5][@type='long'] and parameter[6][@type='long'] and parameter[7][@type='long']]"
-        />
+  <remove-node
+      path="/api/package[@name='androidx.media3.extractor']/interface[@name='BinarySearchSeeker.SeekTimestampConverter']"
+      />
+
+  <!-- These methods override a default interface method and mark it sealed, generator can't handle that and generates invokers -->
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']"
+    name="skipInvokerMethods"
+        >
+    androidx/media3/decoder/Decoder.dequeueInputBuffer()Ljava/lang/Object;
+    androidx/media3/decoder/Decoder.dequeueOutputBuffer()Ljava/lang/Object;
+    androidx/media3/decoder/SimpleDecoder.createInputBuffer()Landroidx/media3/decoder/DecoderInputBuffer;
+    androidx/media3/decoder/SimpleDecoder.createOutputBuffer()Landroidx/media3/decoder/DecoderOutputBuffer;
+    androidx/media3/decoder/SimpleDecoder.createUnexpectedDecodeException(Ljava/lang/Throwable;)Landroidx/media3/decoder/DecoderException;
+    androidx/media3/decoder/SimpleDecoder.decode(Ljava/lang/Object;Ljava/lang/Object;Z)Landroidx/media3/decoder/DecoderException;
+  </attr>
+  
+  <remove-node 
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer'] and parameter[2][@type='androidx.media3.extractor.text.SubtitleOutputBuffer'] and parameter[3][@type='boolean']]"
+    />
 
 </metadata>

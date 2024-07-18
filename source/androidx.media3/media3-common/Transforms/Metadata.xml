@@ -6,18 +6,6 @@
         Java.Lang.Object
     </attr>
     <attr
-        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onCues' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
-        name="managedName"
-        >
-        OnCuesDeprecated
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=1 and parameter[1][@type='int']]"
-        name="managedName"
-        >
-        OnPositionDiscontinuityDeprecated
-    </attr>
-    <attr
         path="/api/package[@name='androidx.media3.common']/class[@name='DrmInitData']/method[@name='compare' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.DrmInitData.SchemeData'] and parameter[2][@type='androidx.media3.common.DrmInitData.SchemeData']]/parameter[1]"
         name="managedType"
         >
@@ -29,44 +17,18 @@
         >
         Java.Lang.Object
     </attr>
-    <remove-node
-        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/field[@name='ZERO']"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/method[@name='getConstant' and count(parameter)=1 and parameter[1][@type='long']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.common']/interface[@name='SimpleBasePlayer.PositionSupplier']/method[@name='getExtrapolating' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='float']]"
-        />
 
-    <!--
-        cannot use
 
-        Java.Lang.Object
-    -->
     <attr
-        path="/api/package[@name='androidx.media3.common']/interface/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
-        name="managedType"
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onCues' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
+        name="managedName"
         >
-        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
+        OnCuesDeprecated
     </attr>
     <attr
-        path="/api/package[@name='androidx.media3.common']/class/method[@name='addMediaItems' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[2]"
-        name="managedType"
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
         >
-        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
+        OnPositionDiscontinuityDeprecated
     </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.common']/interface/method[@name='setMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
-        name="managedType"
-        >
-        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
-    </attr>
-    <attr
-        path="/api/package[@name='androidx.media3.common']/class/method[@name='setMediaItems' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]/parameter[1]"
-        name="managedType"
-        >
-        System.Collections.Generic.IList &lt; AndroidX.Media3.Common.MediaItem &gt;
-    </attr>
-
 </metadata>

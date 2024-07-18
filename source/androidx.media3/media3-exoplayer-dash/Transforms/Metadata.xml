@@ -1,5 +1,5 @@
 ﻿<metadata>
-
+    <!-- Covariant return type -->
     <attr
         path="/api/package[@name='androidx.media3.exoplayer.dash.manifest']/class[@name='DashManifestParser']/method[@name='parse' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='java.io.InputStream']]"
         name="managedReturn"
@@ -13,12 +13,16 @@
         Java.Lang.Object
     </attr>
 
-    <!--
-        Aritiy problem
-    -->
+    <!-- Erased parameter -->
+    <attr
+       path="/api/package[@name='androidx.media3.exoplayer.dash.offline']/class[@name='DashDownloader']/method[@name='getSegments' and count(parameter)=3 and parameter[1][@type='androidx.media3.datasource.DataSource'] and parameter[2][@type='androidx.media3.exoplayer.dash.manifest.DashManifest'] and parameter[3][@type='boolean']]/parameter[2]"
+       name="managedType"
+          >
+      Java.Lang.Object
+    </attr>
+
+  <!-- Generics arity problem -->
     <remove-node
         path="/api/package[@name='androidx.media3.exoplayer.dash']/interface[@name='DashChunkSource']"
         />
-
-
 </metadata>

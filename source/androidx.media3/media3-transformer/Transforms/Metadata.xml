@@ -1,15 +1,15 @@
 ﻿<metadata>
+    <!-- Obsolete duplicated listener methods -->
     <attr
-        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationCompleted' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationResult']]"
+        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationCompleted' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
         name="managedName"
         >
-        OnTransformationCompletedDefault
+        OnTransformationCompletedDeprecated
     </attr>
     <attr
-        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationError' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationException']]"
+        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationError' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='java.lang.Exception']]"
         name="managedName"
         >
-        OnTransformationErrorDefault
+        OnTransformationErrorDeprecated
     </attr>
-
 </metadata>
