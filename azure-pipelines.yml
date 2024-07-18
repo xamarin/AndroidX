@@ -5,24 +5,19 @@ trigger:
 pr:
   - main
   
-variables:
-  BUILD_NUMBER: $(Build.BuildNumber)
-  BUILD_COMMIT: $(Build.SourceVersion)
-
-  # Build variables
-  mainBranchName: main                                                                  # Name of Git "main" branch
-  configuration: Release                                                                # Build configuration: 'Debug', 'Release'
-
-  # Reporting variables
-  areaPath: DevDiv\VS Client - Runtime SDKs\Android                                     # AzDo area path to log any issues
-
-  # Windows specific variables
-  windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
-  windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
+parameters:
+- name: RunExtendedTests
+  displayName: Run Extended Tests?
+  type: boolean
+  default: false
   
-  # macOS specific variables
-  macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
-  macosImage: internal-macos12                                                          # macOS VM image name
+variables:
+  # Variables used by both AndroidX/GPS go in the template
+  - template: build/ci/variables.yml@self
+  
+  # Variables only used by AndroidX go here
+  - name: skipUnitTests
+    value: false
 
 resources:
   repositories:
@@ -45,7 +40,8 @@ extends:
       os: windows
       
     stages:
-    - stage: Build
+    - stage: build_windows
+      displayName: Build - Windows
 
       jobs:
       - template: build/ci/build.yml@self
@@ -55,10 +51,20 @@ extends:
             name: $(windowsAgentPoolName)
             image: $(windowsImage)
             os: windows
-          mainBranchName: $(mainBranchName)
-          configuration: $(configuration)
           runAPIScan: true
 
+      - template: sign-artifacts/jobs/v2.yml@internal-templates
+        parameters:
+          artifactName: output-windows
+          usePipelineArtifactTasks: true
+          use1ESTemplate: true
+          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          
+    - stage: build_mac
+      displayName: Build - Mac
+      dependsOn:
+      
+      jobs:
       - template: build/ci/build.yml@self
         parameters:
           name: macos
@@ -66,13 +72,11 @@ extends:
             name: $(macosAgentPoolName)
             vmImage: $(macosImage)
             os: macOS
-          mainBranchName: $(mainBranchName)
-          configuration: $(configuration)
 
-      - template: sign-artifacts/jobs/v2.yml@internal-templates
-        parameters:
-          dependsOn: [ 'build_windows' ]
-          artifactName: output-windows
-          usePipelineArtifactTasks: true
-          use1ESTemplate: true
-          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+    - template: build/ci/stage-extended-tests.yml@self
+      parameters:
+        stageCondition: and(succeeded(), eq('${{ parameters.RunExtendedTests }}', 'true'))
+        buildPool:
+          name: $(windowsAgentPoolName)
+          image: $(windowsImage)
+          os: windows
