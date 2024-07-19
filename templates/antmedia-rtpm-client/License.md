@@ -1,8 +1,8 @@
 **Xamarin is not responsible for, nor does it grant any licenses to, third-party packages. Some packages may require or install dependencies which are governed by additional licenses.**
 
-Note: This component depends on Google Tink [Google Tink](https://github.com/google/tink) which is subject to the [Apache 2.0](https://github.com/ReactiveX/RxJava/blob/2.x/LICENSE)
+Note: This component depends on Ant-Media Librtmp Clent for Android [Ant-Media Librtmp Clent for Android](https://github.com/ant-media/Librtmp-Client-for-Android) which is subject to the [Apache 2.0](https://github.com/ant-media/LibRtmp-Client-for-Android/blob/master/LICENSE)
 
-### Xamarin Component for Google Tink for Xamarin.Android
+### Xamarin Component for Ant-Media Librtmp Clent for Xamarin.Android
 
 **The MIT License (MIT)**
 
