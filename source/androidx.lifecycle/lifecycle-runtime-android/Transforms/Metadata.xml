@@ -1,0 +1,9 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.lifecycle']/interface[@name='LifecycleRegistryOwner']/method[@name='getLifecycle' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Lifecycle.Lifecycle
+    </attr>
+    
+</metadata>
