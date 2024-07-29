@@ -1,0 +1,33 @@
+﻿<metadata>
+    
+    <attr
+        path="/api/package[@name='androidx.media2.player.subtitle']/class[@name='ClosedCaptionWidget']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.player.subtitle']/class[@name='SubtitleView']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.player.subtitle']/class[@name='SubtitleTrack']/method[@name='onData' and count(parameter)=3 and parameter[1][@type='byte[]'] and parameter[2][@type='boolean'] and parameter[3][@type='long']]"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.media2.player.subtitle']/class[@name='SubtitleTrack.CueList.EntryIterator']/method[@name='next' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='androidx.media2.player']/class[@name='MediaPlayer']/method[@name='setPlaylist' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;androidx.media2.common.MediaItem&gt;'] and parameter[2][@type='androidx.media2.common.MediaMetadata']]"
+        />
+    
+</metadata>

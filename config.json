@@ -1344,6 +1344,30 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.media2",
+        "artifactId": "media2-common",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0.5",
+        "nugetId": "Xamarin.AndroidX.Media2.Common",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media2",
+        "artifactId": "media2-session",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0.5",
+        "nugetId": "Xamarin.AndroidX.Media2.Session",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media2",
+        "artifactId": "media2-widget",
+        "version": "1.3.0",
+        "nugetVersion": "1.3.0.5",
+        "nugetId": "Xamarin.AndroidX.Media2.Widget",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.media3",
         "artifactId": "media3-cast",
         "version": "1.0.2",

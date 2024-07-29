@@ -1,0 +1,103 @@
+﻿<metadata>
+
+    <!--
+    mc++    
+    prevent surfacing public interfaces    
+    <attr
+        path="/api/package[@name='androidx.media2.session']/interface[@name='RemoteResult']"
+        name="visibility"
+        >
+        public
+    </attr>
+    -->
+    <attr
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media2.session.MediaSession.ControllerInfo']]"
+        name="managedReturn"
+        >
+        AndroidX.Media2.Session.MediaSession
+    </attr>
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaSession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media2.session.MediaSession.ControllerInfo']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setControllerCallback' and count(parameter)=2 and parameter[1][@type='java.util.concurrent.Executor'] and parameter[2][@type='androidx.media2.session.MediaController.ControllerCallback']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setSessionCompatToken' and count(parameter)=1 and parameter[1][@type='android.support.v4.media.session.MediaSessionCompat.Token']]"
+        />
+    
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setSessionToken' and count(parameter)=1 and parameter[1][@type='androidx.media2.session.SessionToken']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaBrowser.Builder']/method[@name='setConnectionHints' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaBrowser.Builder']/method[@name='setSessionCompatToken' and count(parameter)=1 and parameter[1][@type='android.support.v4.media.session.MediaSessionCompat.Token']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaBrowser.Builder']/method[@name='setSessionToken' and count(parameter)=1 and parameter[1][@type='androidx.media2.session.SessionToken']]"
+        />
+      
+    <!--
+    Workaround for issue
+    
+    https://github.com/xamarin/java.interop/issues/424
+    
+    androidx.media2.media2-session/obj/Debug/monoandroid90/generated/src/Androidx.Media2.Session.RemoteSessionPlayer.cs(66,66): 
+    Error CS1519: 
+    Invalid token 
+        '`' in class, struct, or interface member declaration
+    
+    
+    -->
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='RemoteSessionPlayer']"
+        />        
+        
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='MediaBrowser']"    
+        />        
+
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='SessionResult']/implements[@name='androidx.media2.session.RemoteResult']"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media2.session']/class[@name='LibraryResult']/implements[@name='androidx.media2.session.RemoteResult']"
+        />
+
+    <!-- Same method as base class, except with a covariant return type -->
+    <remove-node path="/api/package[@name='androidx.media2.session']/class[@name='MediaController.Builder']/method[@name='setConnectionHints' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" />
+
+    <!-- 
+        Static fields on interfaces cause us to generate a 'MediaController' class to hold the static 
+        fields, but that conflicts with actual 'MediaController' class 
+    -->
+    <attr 
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaController']" 
+        name="no-alternatives"
+        >
+        true
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSession']" 
+        name="no-alternatives"
+        >
+        true
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.media2.session']/interface[@name='IMediaSessionService']" 
+        name="no-alternatives"
+        >
+        true
+    </attr>
+
+
+    
+</metadata>

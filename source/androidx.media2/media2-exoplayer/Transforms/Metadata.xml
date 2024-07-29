@@ -1,0 +1,145 @@
+﻿<metadata>
+    
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.subrip']/class[@name='SubripSubtitle']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.webvtt']/class[@name='WebvttSubtitle']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.ttml']/class[@name='TtmlSubtitle']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.dvb']/class[@name='DvbSubtitle']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.video']/interface[@name='VideoRendererEventListener']/method[@name='onVideoSizeChanged' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='float']]"
+        name="managedName"
+        >
+        VideoRendererSizeChangedEventArgs    
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='BaseMediaSource']/method[@name='prepareSourceInternal' and count(parameter)=1 and parameter[1][@type='androidx.media2.exoplayer.external.upstream.TransferListener']]"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='BaseMediaSource']/method[@name='releaseSourceInternal' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.analytics']/class[@name='AnalyticsCollector']/implements"
+        />
+    
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.dvb']/class[@name='DvbDecoder']"
+        >
+        <method 
+            visibility="protected" static="false" abstract="false" return="E" name="createUnexpectedDecodeException" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="(Ljava/lang/Throwable;)Ljava/lang/Exception;" jni-return="TE;" 
+            synchronized="false" synthetic="false" 
+            >
+            <parameter 
+                type="java.lang.Throwable" name="error"  
+                jni-type="Ljava/lang/Throwable;"
+                >
+            </parameter>
+        </method>
+        <method 
+            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleInputBuffer" name="createInputBuffer" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleInputBuffer;" 
+            synchronized="false" synthetic="false" 
+            >
+        </method>
+        <method 
+            visibility="protected" static="false" abstract="false" return="androidx.media2.exoplayer.external.text.SubtitleOutputBuffer" name="createOutputBuffer" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="()Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" jni-return="Landroidx/media2/exoplayer/external/text/SubtitleOutputBuffer;" 
+            synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.text.pgs']/class[@name='PgsDecoder']"
+        >
+        <method 
+            visibility="protected" static="false" abstract="true" return="E" name="createUnexpectedDecodeException" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            jni-signature="(Ljava/lang/Throwable;)Ljava/lang/Exception;" jni-return="TE;" 
+            synchronized="false" synthetic="false" 
+            >
+            <parameter 
+                type="java.lang.Throwable" name="error"  
+                jni-type="Ljava/lang/Throwable;"
+                >
+            </parameter>
+        </method>
+    </add-node>
+    
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.drm']/class[@name='DrmInitData']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="Compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
+    
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.offline']/class[@name='StreamKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false"  final="false" deprecated="not deprecated" 
+            >
+            <parameter name="p0" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source']/class[@name='ConcatenatingMediaSource']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='androidx.media2.exoplayer.external.source.hls.playlist']/class[@name='HlsMediaPlaylist.Segment']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs" />
+            <parameter type="java.lang.Object" name="rhs" />
+        </method>
+    </add-node>
+
+    
+    
+</metadata>
