@@ -219,5 +219,6 @@
     <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
     <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
     <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />    
+    <AndroidNamespaceReplacement Include='datatype' Replacement='DataType' />    
   </ItemGroup>
 </Project>
