@@ -18,6 +18,8 @@ variables:
   # Variables only used by AndroidX go here
   - name: skipUnitTests
     value: false
+  - name: skipSamplesTests
+    value: true
 
 resources:
   repositories:
@@ -73,9 +75,16 @@ extends:
             vmImage: $(macosImage)
             os: macOS
 
+    - template: build/ci/stage-standard-tests.yml@self
+      parameters:
+        buildPool:
+          name: $(windowsAgentPoolName)
+          image: $(windowsImage)
+          os: windows
+
     - template: build/ci/stage-extended-tests.yml@self
       parameters:
-        stageCondition: and(succeeded(), eq('${{ parameters.RunExtendedTests }}', 'true'))
+        stageCondition: and(succeeded(), ne('$(skipUnitTests)', 'true'), eq('${{ parameters.RunExtendedTests }}', 'true'))
         buildPool:
           name: $(windowsAgentPoolName)
           image: $(windowsImage)
