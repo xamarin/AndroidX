@@ -11,7 +11,7 @@
     
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
-    
+
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
@@ -42,7 +42,7 @@
     <!-- Exclude TF-specific transform files by default -->
     <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
   </PropertyGroup>
-  
+
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
     <AndroidXNuGetTargetFolders Include="build\net8.0-android34.0" />
@@ -198,16 +198,27 @@
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
+    <AndroidNamespaceReplacement Include='datasource' Replacement='DataSource' />
+    <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
-    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
-    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
-    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
-    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
-    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
-    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
-    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
-    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
+    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />
+    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />
+    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />
+    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />
+    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />
+    <AndroidNamespaceReplacement Include='Mediacodec' Replacement='MediaCodec' />
+    <AndroidNamespaceReplacement Include='Smoothstreaming' Replacement='SmoothStreaming' />
+    <AndroidNamespaceReplacement Include='Trackselection' Replacement='TrackSelection' />
+    <AndroidNamespaceReplacement Include='Mediaparser' Replacement='MediaParser' />
+    <AndroidNamespaceReplacement Include='Workmanager' Replacement='WorkManager' />
+    <AndroidNamespaceReplacement Include='Interactivemedia' Replacement='InteractiveMedia' />
+    <AndroidNamespaceReplacement Include='Antmedia' Replacement='AntMedia' />
+    <AndroidNamespaceReplacement Include='RTMP' Replacement='Rtmp' />
+    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />
+    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />   
     <AndroidNamespaceReplacement Include='Datanotification' Replacement='DataNotification' />    
     <AndroidNamespaceReplacement Include='Foregroundstate' Replacement='ForegroundState' />    
     <AndroidNamespaceReplacement Include='Sdkservice' Replacement='SdkService' />        
@@ -221,4 +232,5 @@
     <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />    
     <AndroidNamespaceReplacement Include='datatype' Replacement='DataType' />    
   </ItemGroup>
+  
 </Project>

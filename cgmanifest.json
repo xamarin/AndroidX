@@ -2189,6 +2189,253 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "media3-cast",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Cast",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-common",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Common",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-database",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Database",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-datasource",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.DataSource",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-datasource-cronet",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.DataSource.CroNet",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-datasource-rtmp",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.DataSource.Rtmp",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-decoder",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Decoder",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-effect",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Effect",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-exoplayer",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.ExoPlayer",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-exoplayer-dash",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.ExoPlayer.Dash",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-exoplayer-hls",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.ExoPlayer.Hls",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-exoplayer-rtsp",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-exoplayer-smoothstreaming",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.ExoPlayer.SmoothStreaming",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-exoplayer-workmanager",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.ExoPlayer.WorkManager",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-extractor",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Extractor",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-session",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Session",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-transformer",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Transformer",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-ui",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Ui",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "media3-ui-leanback",
+          "groupId": "androidx.media3",
+          "version": "1.0.2",
+          "nuGetId": "Xamarin.AndroidX.Media3.Ui.Leanback",
+          "nuGetVersion": "1.0.2"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "mediarouter",
           "groupId": "androidx.mediarouter",
           "version": "1.7.0",
@@ -3818,6 +4065,18 @@
         }
       },
       "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "rtmp-client",
+          "groupId": "io.antmedia",
+          "version": "3.2.0",
+          "nuGetId": "Xamarin.Android.AntMedia.RtmpClient",
+          "nuGetVersion": "3.2.0"
+        }
+      }
     },
     {
       "component": {

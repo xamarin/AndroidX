@@ -1,0 +1,64 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming.manifest']/class[@name='SsManifestParser']/method[@name='parse' and count(parameter)=2 and parameter[1][@type='android.net.Uri'] and parameter[2][@type='java.io.InputStream']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming.manifest']/class[@name='SsManifest.StreamElement']/method[@name='copy' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.Format[]']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming.manifest']/class[@name='SsManifest']/method[@name='copy' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.StreamKey&gt;']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='onLoadError' and count(parameter)=5 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.smoothstreaming.manifest.SsManifest&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.io.IOException'] and parameter[5][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='onLoadCanceled' and count(parameter)=4 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.smoothstreaming.manifest.SsManifest&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='boolean']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='onLoadCompleted' and count(parameter)=3 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.smoothstreaming.manifest.SsManifest&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='onLoadError' and count(parameter)=5 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.smoothstreaming.manifest.SsManifest&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.io.IOException'] and parameter[5][@type='int']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='onLoadError' and count(parameter)=5 and parameter[1][@type='androidx.media3.exoplayer.upstream.ParsingLoadable&lt;androidx.media3.exoplayer.smoothstreaming.manifest.SsManifest&gt;'] and parameter[2][@type='long'] and parameter[3][@type='long'] and parameter[4][@type='java.io.IOException'] and parameter[5][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Upstream.Loader.LoadErrorAction
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming.offline']/class[@name='SsDownloader']/method[@name='getSegments' and count(parameter)=3 and parameter[1][@type='androidx.media3.datasource.DataSource'] and parameter[2][@type='androidx.media3.exoplayer.smoothstreaming.manifest.SsManifest'] and parameter[3][@type='boolean']]/parameter[2]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+
+    <!-- arity -->
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/interface[@name='SsChunkSource']"
+        />   
+
+</metadata>
