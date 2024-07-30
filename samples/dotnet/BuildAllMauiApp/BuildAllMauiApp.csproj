@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
-
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuildAllMauiApp</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -52,13 +51,18 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<Import 
+		Condition="$(TargetFramework.StartsWith('net8.0-android')) == true"
+		Project="..\..\..\output\AllPackages.targets" 
+		/>
+
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" VersionOverride="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" VersionOverride="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" VersionOverride="8.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" />
 	</ItemGroup>
 
-	<!--
+		<!--
 	./samples/dotnet/BuildAllMauiApp/BuildAllMauiApp.csproj : 
 	error NU1605: Detected package downgrade: Xamarin.AndroidX.Security.SecurityCrypto from 1.1.0-alpha03 to 1.0.0.7. 
 	Reference the package directly from the project to select a different version.  
@@ -76,7 +80,4 @@
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto" Version="[1.1.0.1-alpha06]" />
 		<PackageReference Update="Xamarin.AndroidX.Security.SecurityCrypto.Ktx" Version="[1.1.0.1-alpha06]" />
 	</ItemGroup>
-
-  <Import Project="../../../output/Directory.Packages.targets" />
-
 </Project>
