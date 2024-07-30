@@ -1072,6 +1072,22 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "androidx.health",
+        "artifactId": "health-services-client",
+        "version": "1.1.0-alpha03",
+        "nugetVersion": "1.1.0-alpha03",
+        "nugetId": "Xamarin.AndroidX.Health.ServicesClient",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.health.connect",
+        "artifactId": "connect-client",
+        "version": "1.1.0-alpha07",
+        "nugetVersion": "1.1.0-alpha07",
+        "nugetId": "Xamarin.AndroidX.Health.Connect.ConnectClient",
+        "dependencyOnly": false
+      },
+      {
         "groupId": "androidx.heifwriter",
         "artifactId": "heifwriter",
         "version": "1.0.0",
@@ -2969,6 +2985,30 @@
         "dependencyOnly": true
       },
       {
+        "groupId": "com.google.android.libraries.identity.googleid",
+        "artifactId": "googleid",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Identity.GoogleId",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-javalite",
+        "version": "3.24.4",
+        "nugetVersion": "3.24.4.1",
+        "nugetId": "Xamarin.Protobuf.JavaLite",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.xamarin.androidx",
+        "artifactId": "migration",
+        "version": "1.0",
+        "nugetVersion": "1.0.10",
+        "nugetId": "Xamarin.AndroidX.Migration",
+        "dependencyOnly": true
+      },
+      {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
         "version": "3.6.0",
@@ -3003,7 +3043,7 @@
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
-            "templateFile": "templates/guava/NuGetReadMe.cshtml",
+             "templateFile": "templates/guava/NuGetReadMe.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
           },
           {

@@ -219,6 +219,10 @@
     <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />
     <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />
     <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />   
+    <AndroidNamespaceReplacement Include='Datanotification' Replacement='DataNotification' />    
+    <AndroidNamespaceReplacement Include='Foregroundstate' Replacement='ForegroundState' />    
+    <AndroidNamespaceReplacement Include='Sdkservice' Replacement='SdkService' />        
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />        
     <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
     <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
     <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
@@ -226,6 +230,7 @@
     <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
     <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
     <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />    
+    <AndroidNamespaceReplacement Include='datatype' Replacement='DataType' />    
   </ItemGroup>
   
 </Project>
