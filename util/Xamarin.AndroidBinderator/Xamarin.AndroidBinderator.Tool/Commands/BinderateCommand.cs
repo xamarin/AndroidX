@@ -39,7 +39,7 @@ static class BinderateCommand
 		Console.WriteLine ($"- Default Base Path: {basePath}");
 		Console.WriteLine ();
 
-		basePath ??= "AppDomain.CurrentDomain.BaseDirectory";
+		basePath ??= AppDomain.CurrentDomain.BaseDirectory;
 
 		try {
 			foreach (var config in configFiles) {

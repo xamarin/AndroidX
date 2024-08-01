@@ -1,6 +1,5 @@
 // Contains tasks for updating/modifying the config.json used by binderator
 
-var binderator_project = "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool/Xamarin.AndroidBinderator.Tool.csproj";
 var gps_config = "https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/main/config.json";
 
 // Updates config.json to the latest versions found in Maven

@@ -296,10 +296,19 @@ namespace AndroidBinderator
 					NuGetVersionSuffix = config.NugetVersionSuffix,
 					MavenGroupId = mavenArtifact.GroupId,
 					AssemblyName = mavenArtifact.AssemblyName,
-					Config = config
+					Config = config,
+					MavenDescription = mavenProject.Description,
+					MavenUrl = mavenProject.Url,
+					JavaSourceRepository = mavenProject.Scm?.Url
 				};
-				projectModels.Add(projectModel);
 
+				foreach (var license in mavenProject.Licenses)
+					projectModel.Licenses.Add (new MavenArtifactLicense (license.Name, license.Url));
+
+				foreach (var developer in mavenProject.Developers)
+					projectModel.Developers.Add (new MavenArtifactDeveloper (developer.Name));
+
+				projectModels.Add (projectModel);
 
 				var artifactDir = Path.Combine(config.BasePath!, config.ExternalsDir, mavenArtifact.GroupId!);
 				var artifactFile = Path.Combine(artifactDir, $"{mavenArtifact.ArtifactId}.{mavenProject.Packaging}");
