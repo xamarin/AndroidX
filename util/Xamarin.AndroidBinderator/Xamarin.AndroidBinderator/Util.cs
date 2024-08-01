@@ -13,9 +13,11 @@ namespace AndroidBinderator
     {
         internal static string HashMd5(Stream value)
         {
-            using (var md5 = MD5.Create())
-                return BitConverter.ToString(md5.ComputeHash(value)).Replace("-", "").ToLowerInvariant();
-        }
+#pragma warning disable CA5351 // Do Not Use Broken Cryptographic Algorithms - This is not used for cryptographic purposes
+	    using (var md5 = MD5.Create())
+	        return BitConverter.ToString(md5.ComputeHash(value)).Replace("-", "").ToLowerInvariant();
+#pragma warning restore CA5351 // Do Not Use Broken Cryptographic Algorithms
+	}
 
         internal static string HashSha256(string value)
         {
@@ -24,6 +26,7 @@ namespace AndroidBinderator
 
         internal static string HashSha256(byte[] value)
         {
+#pragma warning disable SYSLIB0021 // Type or member is obsolete
             using (var sha256 = new SHA256Managed())
             {
                 var hash = new StringBuilder();
@@ -33,10 +36,12 @@ namespace AndroidBinderator
 
                 return hash.ToString();
             }
-        }
+#pragma warning restore SYSLIB0021 // Type or member is obsolete
+		}
 
         internal static string HashSha256(Stream value)
         {
+#pragma warning disable SYSLIB0021 // Type or member is obsolete
             using (var sha256 = new SHA256Managed())
             {
                 var hash = new StringBuilder();
@@ -46,6 +51,7 @@ namespace AndroidBinderator
 
                 return hash.ToString();
             }
-        }
+#pragma warning restore SYSLIB0021 // Type or member is obsolete
+		}
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -18,13 +18,15 @@ namespace AndroidBinderator
 		}
 
 		[JsonProperty("templateFile")]
-		public string TemplateFile { get; set; }
+		public string TemplateFile { get; set; } = string.Empty;
 
 		[JsonProperty("outputFileRule")]
-		public string OutputFileRule { get; set; }
+		public string OutputFileRule { get; set; } = string.Empty;
 
 		[JsonProperty("metadata")]
 		public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string>();
+
+		public bool ShouldSerializeMetadata () => Metadata.Count > 0;
 
 		public string GetOutputFile(BindingConfig config, BindingProjectModel model)
 		{
@@ -35,7 +37,7 @@ namespace AndroidBinderator
 					 .Replace("{name}", model.Name)
 					 .Replace("{nugetid}", model.NuGetPackageId);
 
-			return System.IO.Path.Combine(config.BasePath, p);
+			return System.IO.Path.Combine(config.BasePath!, p);
 		}
 	}
 }

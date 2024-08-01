@@ -48,16 +48,16 @@ namespace AndroidBinderator
 			var template = config.GetTemplateSet(artifact.TemplateSet);
 
 			if (template.MavenRepositoryType.HasValue)
-				return (template.MavenRepositoryType.Value, template.MavenRepositoryLocation);
+				return (template.MavenRepositoryType.Value, template.MavenRepositoryLocation!);
 
-			return (config.MavenRepositoryType, config.MavenRepositoryLocation);
+			return (config.MavenRepositoryType, config.MavenRepositoryLocation!);
 		}
 
 		static MavenRepository GetOrCreateRepository(MavenRepoType type, string location)
 		{
 			var key = $"{type}|{location}";
 
-			if (repositories.TryGetValue(key, out MavenRepository repository))
+			if (repositories.TryGetValue(key, out MavenRepository? repository))
 				return repository;
 
 			MavenRepository maven;
