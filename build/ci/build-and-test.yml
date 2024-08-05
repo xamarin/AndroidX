@@ -43,6 +43,7 @@ steps:
         --configuration="$(configuration)" `
         --verbosity="$(verbosity)"
     displayName: 'Build samples'
+    condition: ne(variables['skipSamplesTests'], 'true')
     env:
       JavaSdkDirectory: $(JAVA_HOME)
       RepositoryCommit: $(Build.SourceVersion)

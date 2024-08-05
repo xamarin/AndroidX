@@ -1,15 +1,16 @@
 using System.Text;
+using System.Xml;
 using CliWrap;
 using CliWrap.Buffered;
 using NUnit.Framework;
 
-namespace ExtendedTests;
+namespace AllPackagesTests;
 
 [TestFixture]
 public class TestAllIndividualPackages
 {
 	static string base_dir = "";
-	static string test_dir = @"output\tests";
+	static string test_dir = @"output\tests\allpackages";
 	static string configuration = "Release";
 	static string platform_version = "29";
 	static string net_version = "net8.0";
@@ -39,48 +40,37 @@ public class TestAllIndividualPackages
 			File.WriteAllText (directory_props, props_content);
 
 		// Set up a NuGet.config file that allows us to use the locally built NuGet packages.
-		// Note we also need to allow things to come from NuGet.org (*) in order to test when
-		// NuGet resolves a mix of the new local packages and existing ones published on NuGet.org.
 		var nuget_config_src = Path.Combine (base_dir, "samples", "NuGet.config");
 		var nuget_config_dst = Path.Combine (base_dir, test_dir, "NuGet.config");
 
 		if (!File.Exists (nuget_config_dst)) {
 			var contents = File.ReadAllText (nuget_config_src);
-			contents = contents.Replace ("../output", "..");
-			contents = contents.Replace ("../packages", "packages");
-			contents = contents.Replace ("Microsoft.Android.Ref.*", "*");
+			contents = contents.Replace ("../output", "../..");
 			File.WriteAllText (nuget_config_dst, contents);
 		}
 	}
 
 	[Test]
 	[Category ("Android")]
-	[TestCaseSource (nameof (GetPackagesToTest))]
-	public Task TestAndroidDotNetPackage (string id, string version)
-		=> TestPackage (id, version, "android");
+	public Task TestAndroidDotNetAllPackages ()
+		=> TestAllPackages ("android");
 
 	[Test]
 	[Category ("MAUI")]
-	[TestCaseSource (nameof (GetPackagesToTest))]
-	public Task TestMauiPackage (string id, string version)
-		=> TestPackage (id, version, "maui");
+	public Task TestMauiAllPackages ()
+		=> TestAllPackages ("maui");
 
-	public static object [] GetPackagesToTest ()
+	async Task TestAllPackages (string template)
 	{
-		var config_file = Path.Combine (base_dir, "config.json");
-		var config = BinderatorConfigFileParser.ParseConfigurationFile (config_file).Result;
-
-		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly).Select (a => new object [] { a.NugetId, a.NugetVersion }).ToArray () ?? Array.Empty<object> ();
-	}
-
-	async Task TestPackage (string id, string version, string template)
-	{
-		var case_dir = Path.Combine (base_dir, test_dir, template, $"{id}Test");
+		var case_dir = Path.Combine (base_dir, test_dir, template, $"AllPackagesTest");
 
 		// Test the package
-		if (Directory.Exists (case_dir))
-			Directory.Delete (case_dir, true);
-
+		try {
+			if (Directory.Exists (case_dir))
+				Directory.Delete (case_dir, true);
+		} catch {
+			// Ignore
+		}
 		Directory.CreateDirectory (case_dir);
 
 		// Create new dotnet project
@@ -90,22 +80,22 @@ public class TestAllIndividualPackages
 		// - Remove the target frameworks that are not 'android'
 		var proj_file = Directory.GetFiles (case_dir, "*.csproj").FirstOrDefault ();
 
-		if (proj_file is not null) {
-			ReplaceInFile (proj_file, ">21</SupportedOSPlatformVersion>", $">{platform_version}</SupportedOSPlatformVersion>");
-			ReplaceInFile (proj_file, ">21.0</SupportedOSPlatformVersion>", $">{platform_version}</SupportedOSPlatformVersion>");
-			ReplaceInFile (proj_file, $";{net_version}-ios", "");
-			ReplaceInFile (proj_file, $";{net_version}-maccatalyst", "");
-			ReplaceInFile (proj_file, $";{net_version}-windows10.0.19041.0", "");
+		if (proj_file is null) {
+			Assert.Fail ("Could not find the project file.");
+			return;
 		}
 
-		// Fully qualify the Activity class name, as it conflicts with 'Xamarin.AndroidX.Activity.Ktx'.
-		var activity_file = Path.Combine (case_dir, "MainActivity.cs");
+		ReplaceInFile (proj_file, ">21</SupportedOSPlatformVersion>", $">{platform_version}</SupportedOSPlatformVersion>");
+		ReplaceInFile (proj_file, ">21.0</SupportedOSPlatformVersion>", $">{platform_version}</SupportedOSPlatformVersion>");
+		ReplaceInFile (proj_file, $";{net_version}-ios", "");
+		ReplaceInFile (proj_file, $";{net_version}-maccatalyst", "");
+		ReplaceInFile (proj_file, $";{net_version}-windows10.0.19041.0", "");
 
-		if (File.Exists (activity_file))
-			ReplaceInFile (activity_file, "public class MainActivity : Activity", "public class MainActivity : global::Android.App.Activity");
+		// Get all packages to test
+		var packages = GetAllPackages ();
 
 		// Add the package
-		await RunAndAssertSuccess ($"add package {id} --version {version}", case_dir);
+		AddPackagesToProjectFile (proj_file, packages.ToArray ());
 
 		// Build the project
 		await RunAndAssertSuccess ($"build -c {configuration} -bl", case_dir, true);
@@ -118,11 +108,51 @@ public class TestAllIndividualPackages
 		}
 	}
 
+	static IEnumerable<BinderatorConfigFileParser.ArtifactModel> GetAllPackages ()
+	{
+		var config_file = Path.Combine (base_dir, "config.json");
+		var config = BinderatorConfigFileParser.ParseConfigurationFile (config_file).Result;
+
+		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly) ?? Enumerable.Empty<BinderatorConfigFileParser.ArtifactModel> ();
+	}
+
 	static void ReplaceInFile (string filename, string oldValue, string newValue)
 	{
 		var contents = File.ReadAllText (filename);
 		contents = contents.Replace (oldValue, newValue);
 		File.WriteAllText (filename, contents);
+	}
+
+	static void AddPackagesToProjectFile (string filename, BinderatorConfigFileParser.ArtifactModel [] packages)
+	{
+		var xml = new XmlDocument ();
+		xml.Load (filename);
+
+		var root = xml.DocumentElement!;
+		var item_group = xml.CreateElement ("ItemGroup");
+		root.AppendChild (item_group);
+
+		foreach (var package in packages) {
+			if (package.NugetId == "Xamarin.Google.Guava.ListenableFuture")
+				continue;
+
+			var package_ref = xml.CreateElement ("PackageReference");
+			package_ref.SetAttribute ("Include", package.NugetId);
+			package_ref.SetAttribute ("Version", package.NugetVersion);
+			item_group.AppendChild (package_ref);
+		}
+
+		// Add <NoWarn> and <JavaMaximumHeapSize>
+		var property_group = root ["PropertyGroup"]!;
+		var no_warn = xml.CreateElement ("NoWarn");
+		no_warn.InnerText = "NU1603;NU1605;NU1608";
+		property_group.AppendChild (no_warn);
+
+		var heap_size = xml.CreateElement ("JavaMaximumHeapSize");
+		heap_size.InnerText = "4G";
+		property_group.AppendChild (heap_size);
+
+		xml.Save (filename);
 	}
 
 	static async Task RunAndAssertSuccess (string arguments, string workingDir, bool isMSBuild = false)
