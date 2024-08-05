@@ -38,6 +38,7 @@
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
+    <PackageReadmeFile Condition="Exists('$(MSBuildProjectDirectory)/readme.md')">readme.md</PackageReadmeFile>
 
     <!-- Exclude TF-specific transform files by default -->
     <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>

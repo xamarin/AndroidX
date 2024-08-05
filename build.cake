@@ -33,6 +33,8 @@ var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
 
+var binderator_project = "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool/Xamarin.AndroidBinderator.Tool.csproj";
+
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/androidx.zip";
 
 var JAVA_INTEROP_ZIP_URL = "https://github.com/xamarin/java.interop/archive/d17-2.zip";
@@ -273,9 +275,15 @@ Task ("binderate")
     var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
     var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
-    // Run the dotnet tool for binderator
-    RunProcess("xamarin-android-binderator",
-        $"--config=\"{configFile}\" --basepath=\"{basePath}\"");
+    // Run the binderator project
+    var args = new ProcessArgumentBuilder ()
+        .Append ("binderate")
+        .Append ("--config-file")
+        .Append (configFile)
+        .Append ("--base-path")
+        .Append (basePath);
+    
+    DotNetRun (binderator_project, args);
 
     // format the targets file so they are pretty in the package
     var targetsFiles = GetFiles("generated/**/*.targets");
