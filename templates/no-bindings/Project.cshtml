@@ -36,7 +36,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\License.md" Pack="true" PackagePath="License.md" />
+    <None Include="..\..\source\PackageLicense.md" Pack="True" PackagePath="LICENSE.md" />
     <None Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\External-Dependency-Info.txt" Pack="true" PackagePath="THIRD-PARTY-NOTICES.txt" />
     
     <!-- This is needed because the `lib/{TFM}` folders tell NuGet what frameworks this package supports,
