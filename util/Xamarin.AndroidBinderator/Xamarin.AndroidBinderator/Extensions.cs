@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using MavenNet.Models;
@@ -8,6 +9,8 @@ namespace AndroidBinderator
 {
 	public static class Extensions
 	{
+		public static bool HasValue ([NotNullWhen (true)] this string? str) => !string.IsNullOrWhiteSpace (str);
+
 		public static string OrEmpty (this string? value) => value ?? string.Empty;
 
 		public static string GroupAndArtifactId (this Dependency dependency) => $"{dependency.GroupId}.{dependency.ArtifactId}";
