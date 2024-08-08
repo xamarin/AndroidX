@@ -62,6 +62,14 @@ if (nu_diffs.Any()) {
           input.CopyTo(output);
           Console.WriteLine();
       }
+      
+      // Delete the individual file because it makes the assembly diffs hard to find
+      System.IO.File.Delete(file.FullPath);
+      
+      var dir = System.IO.Path.GetDirectoryName(file.FullPath);
+      
+      if (System.IO.Directory.GetFileSystemEntries(dir).Length == 0)
+          System.IO.Directory.Delete(dir);
     }
   }
 }

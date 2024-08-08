@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AndroidBinderator
 {
@@ -39,6 +40,26 @@ namespace AndroidBinderator
 		public List<MavenArtifactLicense> Licenses { get; } = new List<MavenArtifactLicense> ();
 
 		public List<MavenArtifactDeveloper> Developers { get; } = new List<MavenArtifactDeveloper> ();
+
+		public string GetAssemblyName () => AssemblyName.HasValue () ? AssemblyName : NuGetPackageId ?? string.Empty;
+
+		public string GetArtifactVersion () => MavenArtifacts.FirstOrDefault ()?.MavenArtifactVersion ?? string.Empty;
+
+		public string GetRootNamespace ()
+		{
+			if (Metadata.TryGetValue ("rootNamespace", out var rootNamespace))
+				return rootNamespace;
+
+			return NuGetPackageId!.Replace ("Xamarin.", "");
+		}
+
+		// TODO: Move this to config.json
+		// Whether to bind the Java .jar/.aar
+		public bool ShouldBindArtifact => NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
+
+		// TODO: Move this to config.json
+		// Whether to include the Java .jar/.aar in the NuGet package
+		public bool ShouldIncludeArtifact => NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
 	}
 
 	public class MavenArtifactLicense
