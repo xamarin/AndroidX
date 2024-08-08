@@ -15,6 +15,7 @@
 // #addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
 
 #load "build/cake/update-config.cake"
+#load "build/cake/tests.cake"
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -708,106 +709,6 @@ Task("nuget")
         );
 });
 
-Task("samples-generate-all-targets")
-    .Does(() =>
-{
-    // make a big .targets file that pulls in everything
-    var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-    var itemGroup1 = new XElement(xmlns + "ItemGroup");
-    var itemGroup2 = new XElement(xmlns + "ItemGroup");
-    foreach (var nupkg in GetFiles("./output/*.nupkg").OrderBy(fp => fp.FullPath)) {
-        Information($"NuGet package = {nupkg}");
-
-        // Skip Wear as it has special implications requiring more packages to be used properly in an app
-        if (nupkg.FullPath.Contains(".Wear."))
-            continue;
-        // Skip the migration packages as that is not meant forto be used here
-        if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
-            continue;
-        // Skip Guava.ListenableFuture as it cannot be used in the same project as Guava itself
-        if (nupkg.FullPath.Contains("Xamarin.Google.Guava.ListenableFuture"))
-            continue;
-        // Skip XBD because packages do not automatically reference the in-tree version
-        if (nupkg.FullPath.Contains("Xamarin.Build.Download"))
-            continue;
-        // Skip Binderator because it is not a binding package
-        if (nupkg.FullPath.Contains("Xamarin.AndroidBinderator"))
-            continue;
-        // skip because of multiple classes
-        if 
-            (
-                nupkg.FullPath.Contains("Xamarin.AndroidX.DataStore.")
-                &&
-                ( nupkg.FullPath.Contains(".Jvm") || nupkg.FullPath.Contains(".Android") )
-            )
-            continue;
-
-        var filename = nupkg.GetFilenameWithoutExtension();
-        var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-
-        if ( match.Groups[1].Value == "Xamarin.AndroidX.Security.SecurityCrypto" )
-        {
-            // MAUI uses pinned/locked/exact preview version 1.1.0-alpha03 - skipit
-            continue;
-        }
-
-        itemGroup1.Add(new XElement(xmlns + "PackageVersion",
-            new XAttribute("Include", match.Groups[1]),
-            new XAttribute("Version", match.Groups[2])));
-        itemGroup2.Add(new XElement(xmlns + "PackageReference",
-            new XAttribute("Include", match.Groups[1])));
-
-    }
-
-    var xdoc1 = new XDocument(new XElement(xmlns + "Project", itemGroup1));
-    xdoc1.Save("./output/Directory.Packages.props");
-
-    var xdoc2 = new XDocument(new XElement(xmlns + "Project", itemGroup2));
-    xdoc2.Save("./output/Directory.Packages.targets");
-});
-
-
-Task("samples-dotnet")
-    .IsDependentOn("nuget")
-    .IsDependentOn("samples-only-dotnet");
-
-Task("samples-only-dotnet")
-    .IsDependentOn("samples-generate-all-targets")
-    .Does(() =>
-{
-    // clear the packages folder so we always use the latest
-    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
-    EnsureDirectoryExists(packagesPath);
-    CleanDirectories(packagesPath);
-
-    var settings = new DotNetMSBuildSettings()
-        .SetConfiguration("Debug") // We don't need to run linking
-        .WithProperty("Verbosity", VERBOSITY.ToString())
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    string[] solutions = new string[]
-    {
-        "./samples/dotnet/BuildAllDotNet.sln",
-        "./samples/dotnet/BuildAllMauiApp.sln",
-    };
-
-    foreach(string solution in solutions)
-    {
-        FilePath fp_solution = new FilePath(solution);
-        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
-        Information($"=====================================================================================================");
-        Information($"DotNetBuild           {solution} / {filename}");    
-        DotNetBuild(solution, new DotNetBuildSettings
-        {
-            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
-        });
-    }
-});
-
 Task("tools-executive-order")
     .Does
     (
@@ -995,11 +896,6 @@ Task ("ci-build")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("tools-executive-order")
-    ;
-
-// Runs samples without building packages
-Task ("ci-samples")
-    .IsDependentOn ("samples-only-dotnet")
     ;
 
 // for local builds, conditionally do the first binderate
