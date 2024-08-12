@@ -41,7 +41,7 @@ public class TestAllIndividualPackages
 		// Set up a NuGet.config file that allows us to use the locally built NuGet packages.
 		// Note we also need to allow things to come from NuGet.org (*) in order to test when
 		// NuGet resolves a mix of the new local packages and existing ones published on NuGet.org.
-		var nuget_config_src = Path.Combine (base_dir, "samples", "NuGet.config");
+		var nuget_config_src = Path.Combine (base_dir, "tests", "common", "NuGet.config");
 		var nuget_config_dst = Path.Combine (base_dir, test_dir, "NuGet.config");
 
 		if (!File.Exists (nuget_config_dst)) {
