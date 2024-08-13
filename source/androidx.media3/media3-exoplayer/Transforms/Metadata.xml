@@ -9,6 +9,8 @@
     androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;)V
     androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;Z)V
     androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;IJ)V    
+    androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;IJ)V    
+    androidx/media3/common/Player.replaceMediaItems(IILSystem/Collections/Generic/IList`1;)V
   </attr>
 
   <!-- Deprecated -->
