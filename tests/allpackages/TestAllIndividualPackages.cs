@@ -40,7 +40,7 @@ public class TestAllIndividualPackages
 			File.WriteAllText (directory_props, props_content);
 
 		// Set up a NuGet.config file that allows us to use the locally built NuGet packages.
-		var nuget_config_src = Path.Combine (base_dir, "samples", "NuGet.config");
+		var nuget_config_src = Path.Combine (base_dir, "tests", "common", "NuGet.config");
 		var nuget_config_dst = Path.Combine (base_dir, test_dir, "NuGet.config");
 
 		if (!File.Exists (nuget_config_dst)) {

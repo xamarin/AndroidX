@@ -89,18 +89,14 @@ dotnet cake -t=clean && dotnet cake -t=ci && dotnet cake nuget-diff.cake && dotn
 *   `nuget`
 
     Generates (packaging) NuGet packages for projects.
+    
+*   `all-packages-tests`
 
-*   `samples-generate-all-targets`
+    Runs 'AllPackagesTests' test suite without first building packages.
+    
+*   `build-run-all-packages-tests`
 
-    Generates list of locally built packages which are tested during samples builds.
-
-*   `samples`
-
-    Builds samples
-
-*   `samples-dotnet`
-
-    Builds samples - `net6` target.
+    Builds NuGet packages first and then runs 'AllPackagesTests' test suite.
 
 *   `api-diff`
 

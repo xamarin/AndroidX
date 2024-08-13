@@ -1,4 +1,11 @@
-The MIT License (MIT)
+Note: This package may contain or install third-party dependencies which are 
+governed by additional license(s). Microsoft is not responsible for, nor 
+does it grant any licenses to, third-party packages. See THIRD-PARTY-NOTICES.txt
+for any third-party licensing information.
+
+Microsoft bindings included in this package are licensed under The MIT License.
+
+**The MIT License (MIT)**
 
 Copyright (c) .NET Foundation Contributors
 
