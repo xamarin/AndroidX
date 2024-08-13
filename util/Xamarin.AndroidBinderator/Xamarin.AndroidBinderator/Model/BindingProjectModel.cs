@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace AndroidBinderator
@@ -60,43 +61,38 @@ namespace AndroidBinderator
 		// TODO: Move this to config.json
 		// Whether to include the Java .jar/.aar in the NuGet package
 		public bool ShouldIncludeArtifact => NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
+
+		// Proprietary licenses aren't supported by SPDX
+		public bool CanUseSpdx => !Licenses.Any (s => string.IsNullOrWhiteSpace (s.Spdx));
+
+		public string GetSpdxExpression ()
+		{
+			if (!CanUseSpdx)
+				throw new InvalidOperationException ("One or more licenses do not have an SPDX expression");
+
+			// Our SPDX expression is MIT for Microsoft code, plus any
+			// other licenses that govern the artifact.
+			var licenses = new string [] { "MIT" }.Concat (Licenses.Select (s => s.Spdx)).Distinct ().ToList ();
+
+			return string.Join (" AND ", licenses);
+		}
 	}
 
 	public class MavenArtifactLicense
 	{
 		public string Name { get; set; }
 		public string Url { get; set; }
+		public string Spdx { get; set; }
+		public string? Text { get; set; }
 
-		public MavenArtifactLicense (string name, string url)
+		public LicenseConfig LicenseConfig { get; set; }
+
+		public MavenArtifactLicense (string name, string url, LicenseConfig licenseConfig)
 		{
 			Name = name;
 			Url = url;
-		}
-
-		public string GetSpdxExpression ()
-		{
-			switch (Name) {
-				case "The Apache Software License, Version 2.0":
-				case "Apache License, Version 2.0":
-				case "The Apache License, Version 2.0":
-				case "Apache-2.0":
-				case "Apache 2.0":
-					return "Apache-2.0";
-				case "BSD License":
-					return "BSD-3-Clause";
-				case "The MIT License":
-					return "MIT";
-				case "MIT-0":
-					return "MIT-0";
-				case "SIL Open Font License, Version 1.1":
-					return "OFL-1.1";
-				case "Unicode, Inc. License":
-					return "Unicode-3.0";
-				case "Android Software Development Kit License":
-					return "";
-			}
-
-			throw new ArgumentException ($"Unknown license: '{Name}', '{Url}'");
+			LicenseConfig = licenseConfig;
+			Spdx = licenseConfig.Spdx;
 		}
 	}
 

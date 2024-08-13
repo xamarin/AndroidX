@@ -1,22 +1,16 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
-using System.Text.RegularExpressions;
+using System.Text;
 using System.Threading.Tasks;
-using MavenNet;
 using MavenNet.Models;
-using Microsoft.AspNetCore.Razor.Language;
-using Microsoft.AspNetCore.Razor.Language.Extensions;
 using RazorLight;
 using MavenGroup = MavenNet.Models.Group;
-using System.Security.Cryptography;
-using System.Text;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
 
 namespace AndroidBinderator
 {
@@ -302,8 +296,41 @@ namespace AndroidBinderator
 					JavaSourceRepository = mavenProject.Scm?.Url
 				};
 
-				foreach (var license in mavenProject.Licenses)
-					projectModel.Licenses.Add (new MavenArtifactLicense (license.Name, license.Url));
+				var licenses = mavenProject.Licenses;
+
+				// Override licenses ignore any licenses in the POM
+				if (mavenArtifact.OverrideLicenses.Count > 0) {
+					licenses = new List<License> ();
+
+					foreach (var l in mavenArtifact.OverrideLicenses) {
+						var parts = l.Split ('|');
+						licenses.Add (new License {
+							Name = parts [0],
+							Url = parts.Length > 1 ? parts [1] : string.Empty
+						});
+					}
+				}
+
+				// Verify that we have known licenses
+				foreach (var license in licenses) {
+					var license_config = config.Licenses.FirstOrDefault (l => l.Name == license.Name);
+
+					if (license_config is null) {
+						exceptions.Add (new Exception ($"Unknown license '{license.Name}' for artifact '{mavenArtifact.GroupAndArtifactId}'. This license must be added to 'config.json'."));
+						continue;
+					}
+
+					projectModel.Licenses.Add (new MavenArtifactLicense (license.Name, license.Url, license_config));
+				}
+
+				if (projectModel.Licenses.Count == 0)
+					exceptions.Add (new Exception ($"No license(s) could be found for artifact '{mavenArtifact.GroupAndArtifactId}'. Use 'overrideLicenses' in 'config.json' to specify with format 'name|url' ('url' is optional)."));
+
+				// Load license text
+				foreach (var license in projectModel.Licenses) {
+					var license_file = Path.Combine (config.BasePath!, license.LicenseConfig.File);
+					license.Text = File.ReadAllText (license_file);
+				}
 
 				foreach (var developer in mavenProject.Developers)
 					projectModel.Developers.Add (new MavenArtifactDeveloper (developer.Name));

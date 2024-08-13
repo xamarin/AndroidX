@@ -87,6 +87,9 @@ namespace AndroidBinderator
 		[JsonProperty ("metadata")]
 		public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string>();
 
+		[JsonProperty ("licenses")]
+		public List<LicenseConfig> Licenses { get; set; } = new List<LicenseConfig> ();
+
 		[JsonProperty("templateSets")]
 		public List<TemplateSetModel> TemplateSets { get; set; } = new List<TemplateSetModel>();
 
@@ -132,6 +135,9 @@ namespace AndroidBinderator
 			// - groupid
 			// - artifactid
 			config.MavenArtifacts.Sort ((MavenArtifactConfig a, MavenArtifactConfig b) => string.Compare ($"{a.DependencyOnly}-{a.GroupId} {a.ArtifactId}", $"{b.DependencyOnly}-{b.GroupId} {b.ArtifactId}"));
+
+			// Licenses are sorted by name
+			config.Licenses.Sort ((LicenseConfig a, LicenseConfig b) => string.Compare (a.Name, b.Name));
 
 			return config;
 		}
