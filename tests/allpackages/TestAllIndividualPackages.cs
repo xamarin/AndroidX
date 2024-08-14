@@ -10,7 +10,7 @@ namespace AllPackagesTests;
 public class TestAllIndividualPackages
 {
 	static string base_dir = "";
-	static string test_dir = @"output\tests\allpackages";
+	static string test_dir = Path.Combine ("output", "tests" , "allpackages");
 	static string configuration = "Release";
 	static string platform_version = "29";
 	static string net_version = "net8.0";

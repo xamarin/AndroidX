@@ -9,7 +9,7 @@ namespace ExtendedTests;
 public class TestAllIndividualPackages
 {
 	static string base_dir = "";
-	static string test_dir = @"output\tests";
+	static string test_dir = Path.Combine ("output", "tests");
 	static string configuration = "Release";
 	static string platform_version = "29";
 	static string net_version = "net8.0";
