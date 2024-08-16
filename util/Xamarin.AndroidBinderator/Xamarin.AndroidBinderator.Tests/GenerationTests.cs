@@ -32,7 +32,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			};
 
 			await Engine.BinderateAsync(config);
@@ -87,7 +88,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			};
 
 			await Engine.BinderateAsync(config);
@@ -125,7 +127,8 @@ namespace Xamarin.AndroidBinderator.Tests
 							{ "More", "Yay!" }
 						}
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -170,7 +173,8 @@ namespace Xamarin.AndroidBinderator.Tests
 							{ "Again", "Good Value" },
 						}
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -222,7 +226,8 @@ namespace Xamarin.AndroidBinderator.Tests
 							{ "Again", "Good Value" },
 						}
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -256,7 +261,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
 						NugetVersion = "1.2.3",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -287,7 +293,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -318,7 +325,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -350,7 +358,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
 						NugetVersion = "1.2.3",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -394,7 +403,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						Version = "2.0.1",
 						NugetPackageId = "Xamarin.AndroidX.Arch.Core.Common",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -443,7 +453,8 @@ namespace Xamarin.AndroidBinderator.Tests
 						Version = "2.0.1",
 						NugetPackageId = "Xamarin.AndroidX.Arch.Core.Common",
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -509,7 +520,8 @@ namespace Xamarin.AndroidBinderator.Tests
 							{ "Second", "2" },
 						},
 					}
-				}
+				},
+				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
@@ -539,6 +551,21 @@ namespace Xamarin.AndroidBinderator.Tests
 
 			var actual = File.ReadAllText(outputFile);
 			Assert.Equal(output, actual);
+		}
+
+		LicenseConfig CreateLicense ()
+		{
+			var path = Path.Combine (RootDirectory, "licenses");
+			Directory.CreateDirectory (path);
+			path = Path.Combine (path, "LICENSE.txt");
+
+			if (!File.Exists (path))
+				File.WriteAllText (path, "Apache License 2.0 Example Text");
+
+			return new LicenseConfig {
+				Name = "The Apache Software License, Version 2.0",
+				File = path
+			};
 		}
 	}
 }
