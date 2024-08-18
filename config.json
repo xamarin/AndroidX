@@ -33,6 +33,10 @@
       {
         "templateFile": "source/AndroidXDirectoryBuildRsp.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/Directory.Build.rsp"
+      },
+      {
+        "templateFile": "source/ThirdPartyNotices.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/External-Dependency-Info.txt"
       }
     ],
     "artifacts": [
@@ -2438,7 +2442,11 @@
         "nugetVersion": "1.11.0.1",
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
         "dependencyOnly": false,
-        "templateSet": "auto-value"
+        "templateSet": "auto-value",
+        "overrideLicenses": [
+          "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
       },
       {
         "groupId": "com.google.code.gson",
@@ -2483,7 +2491,11 @@
         "nugetVersion": "1.0.2.6",
         "nugetId": "Xamarin.Google.Guava.FailureAccess",
         "dependencyOnly": false,
-        "templateSet": "guava"
+        "templateSet": "guava",
+        "overrideLicenses": [
+          "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
       },
       {
         "groupId": "com.google.guava",
@@ -2493,7 +2505,11 @@
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
-        "templateSet": "guava"
+        "templateSet": "guava",
+        "overrideLicenses": [
+          "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
       },
       {
         "groupId": "com.google.guava",
@@ -2502,7 +2518,11 @@
         "nugetVersion": "1.0.0.22",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": false,
-        "templateSet": "guava"
+        "templateSet": "guava",
+        "overrideLicenses": [
+          "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
       },
       {
         "groupId": "com.google.j2objc",
@@ -3007,6 +3027,63 @@
         "nugetVersion": "1.0.10",
         "nugetId": "Xamarin.AndroidX.Migration",
         "dependencyOnly": true
+      }
+    ],
+    "licenses": [
+      {
+        "name": "Android Software Development Kit License",
+        "file": "templates/licenses/android-sdk.txt",
+        "proprietary": true
+      },
+      {
+        "name": "Apache 2.0",
+        "file": "templates/licenses/apache-2.0.txt",
+        "spdx": "Apache-2.0"
+      },
+      {
+        "name": "Apache License, Version 2.0",
+        "file": "templates/licenses/apache-2.0.txt",
+        "spdx": "Apache-2.0"
+      },
+      {
+        "name": "Apache-2.0",
+        "file": "templates/licenses/apache-2.0.txt",
+        "spdx": "Apache-2.0"
+      },
+      {
+        "name": "BSD License",
+        "file": "templates/licenses/bsd.txt",
+        "spdx": "BSD-3-Clause"
+      },
+      {
+        "name": "MIT-0",
+        "file": "templates/licenses/mit-0.txt",
+        "spdx": "MIT-0"
+      },
+      {
+        "name": "SIL Open Font License, Version 1.1",
+        "file": "templates/licenses/sil-1.1.txt",
+        "spdx": "OFL-1.1"
+      },
+      {
+        "name": "The Apache License, Version 2.0",
+        "file": "templates/licenses/apache-2.0.txt",
+        "spdx": "Apache-2.0"
+      },
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "file": "templates/licenses/apache-2.0.txt",
+        "spdx": "Apache-2.0"
+      },
+      {
+        "name": "The MIT License",
+        "file": "templates/licenses/mit.txt",
+        "spdx": "MIT"
+      },
+      {
+        "name": "Unicode, Inc. License",
+        "file": "templates/licenses/unicode.txt",
+        "comments": "spdx is 'Unicode-3.0', but .NET 8 NuGet 'pack' doesn't support it yet"
       }
     ],
     "templateSets": [

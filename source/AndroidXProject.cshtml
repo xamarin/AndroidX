@@ -35,7 +35,13 @@
 @(!string.IsNullOrWhiteSpace(Model.MavenDescription) ? $"Library description: {Model.MavenDescription}" : string.Empty)
     </Description>
     <PackageTags>xamarin artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.GetArtifactVersion())</PackageTags>
-    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+@if (Model.CanUseSpdx)
+{
+    <PackageLicenseExpression>@Model.GetSpdxExpression()</PackageLicenseExpression>
+} else
+{
+  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+}
     <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
@@ -48,7 +54,7 @@
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
     }
     <None Include="..\..\source\PackageLicense.md" Pack="True" PackagePath="LICENSE.md" />
-    <None Include="..\..\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include=".\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="..\..\build\icon.png" Pack="True" PackagePath="icon.png" />
     <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
