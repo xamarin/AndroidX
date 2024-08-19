@@ -293,7 +293,8 @@ namespace AndroidBinderator
 					Config = config,
 					MavenDescription = mavenProject.Description,
 					MavenUrl = mavenProject.Url,
-					JavaSourceRepository = mavenProject.Scm?.Url
+					JavaSourceRepository = mavenProject.Scm?.Url,
+					Type = mavenArtifact.BindingsType ?? config.DefaultBindingsType,
 				};
 
 				var licenses = mavenProject.Licenses;

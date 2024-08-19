@@ -55,6 +55,15 @@ namespace AndroidBinderator
 		[JsonProperty("extraDependencies")]
 		public string? ExtraDependencies { get; set; }
 
+		[JsonProperty ("type")]
+		public BindingType? BindingsType { get; set; }
+
+		[JsonProperty ("mavenRepositoryType")]
+		public MavenRepoType? MavenRepositoryType { get; set; } 
+
+		[JsonProperty ("mavenRepositoryLocation")]
+		public string? MavenRepositoryLocation { get; set; } = null;
+
 		[JsonProperty("templateSet")]
 		public string? TemplateSet { get; set; }
 
