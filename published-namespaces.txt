@@ -276,6 +276,7 @@ AndroidX.Media3.Common
 AndroidX.Media3.Common.Audio
 AndroidX.Media3.Common.Text
 AndroidX.Media3.Common.Util
+AndroidX.Media3.Container
 AndroidX.Media3.Database
 AndroidX.Media3.DataSource
 AndroidX.Media3.DataSource.Cache
@@ -309,6 +310,7 @@ AndroidX.Media3.ExoPlayer.Source.MediaParser
 AndroidX.Media3.ExoPlayer.Text
 AndroidX.Media3.ExoPlayer.TrackSelection
 AndroidX.Media3.ExoPlayer.Upstream
+AndroidX.Media3.ExoPlayer.Upstream.Experimental
 AndroidX.Media3.ExoPlayer.Util
 AndroidX.Media3.ExoPlayer.Video
 AndroidX.Media3.ExoPlayer.Video.Spherical
@@ -343,6 +345,7 @@ AndroidX.Media3.Extractor.Text.Tx3g
 AndroidX.Media3.Extractor.Text.Webvtt
 AndroidX.Media3.Extractor.TS
 AndroidX.Media3.Extractor.Wav
+AndroidX.Media3.Muxer
 AndroidX.Media3.Session
 AndroidX.Media3.Transformer
 AndroidX.Media3.UI

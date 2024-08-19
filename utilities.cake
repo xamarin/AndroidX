@@ -627,6 +627,7 @@ Task ("spell-check")
                 "AtomicFU",
                 "Protobuf",
                 "EmojiPicker",
+                "Muxer",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);

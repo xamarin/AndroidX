@@ -20,7 +20,7 @@ Information("");
 
 // SECTION: Diff NuGets
 
-var nupkgs = GetFiles($"{ARTIFACTS_DIR}/**/*.nupkg");
+var nupkgs = GetFiles($"{ARTIFACTS_DIR}/*.nupkg");
 if (!nupkgs.Any()) {
 	Warning($"##vso[task.logissue type=warning]No NuGet packages were found.");
 } else {

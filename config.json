@@ -3,7 +3,6 @@
     "mavenRepositoryType": "Google",
     "slnFile": "generated/AndroidX.sln",
     "strictRuntimeDependencies": true,
-    "downloadExternals": true,
     "additionalProjects": [
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj",
       "util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.csproj",
@@ -1375,152 +1374,168 @@
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-cast",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Cast",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-common",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Common",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
+        "artifactId": "media3-container",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
+        "nugetId": "Xamarin.AndroidX.Media3.Container",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
         "artifactId": "media3-database",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Database",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-datasource",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.DataSource",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-datasource-cronet",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.DataSource.CroNet",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-datasource-rtmp",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.DataSource.Rtmp",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-decoder",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Decoder",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-effect",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Effect",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-exoplayer",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-exoplayer-dash",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Dash",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-exoplayer-hls",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Hls",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-exoplayer-rtsp",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-exoplayer-smoothstreaming",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.SmoothStreaming",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-exoplayer-workmanager",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.ExoPlayer.WorkManager",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-extractor",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Extractor",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
+        "artifactId": "media3-muxer",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
+        "nugetId": "Xamarin.AndroidX.Media3.Muxer",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.media3",
         "artifactId": "media3-session",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Session",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-transformer",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Transformer",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-ui",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Ui",
         "dependencyOnly": false
       },
       {
         "groupId": "androidx.media3",
         "artifactId": "media3-ui-leanback",
-        "version": "1.0.2",
-        "nugetVersion": "1.0.2",
+        "version": "1.1.1",
+        "nugetVersion": "1.1.1",
         "nugetId": "Xamarin.AndroidX.Media3.Ui.Leanback",
         "dependencyOnly": false
       },
@@ -2445,8 +2460,8 @@
       {
         "groupId": "com.google.crypto.tink",
         "artifactId": "tink-android",
-        "version": "1.14.0",
-        "nugetVersion": "1.14.0.1",
+        "version": "1.14.1",
+        "nugetVersion": "1.14.1",
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
         "dependencyOnly": false,
         "templateSet": "tink"
@@ -2528,6 +2543,15 @@
         "templateSet": "dev-chrisbanes-snapper"
       },
       {
+        "groupId": "io.antmedia",
+        "artifactId": "rtmp-client",
+        "version": "3.2.0",
+        "nugetVersion": "3.2.0",
+        "nugetId": "Xamarin.Android.AntMedia.RtmpClient",
+        "dependencyOnly": false,
+        "templateSet": "antmedia-rtpm-client"
+      },
+      {
         "groupId": "io.github.aakira",
         "artifactId": "napier",
         "version": "2.7.1",
@@ -2591,15 +2615,6 @@
         "templateSet": "rxjava"
       },
       {
-        "groupId": "io.antmedia",
-        "artifactId": "rtmp-client",
-        "version": "3.2.0",
-        "nugetVersion": "3.2.0",
-        "nugetId": "Xamarin.Android.AntMedia.RtmpClient",
-        "dependencyOnly": false,
-        "templateSet": "antmedia-rtpm-client"
-      },
-      {
         "groupId": "org.checkerframework",
         "artifactId": "checker-compat-qual",
         "version": "2.5.6",
@@ -2611,8 +2626,8 @@
       {
         "groupId": "org.checkerframework",
         "artifactId": "checker-qual",
-        "version": "3.45.0",
-        "nugetVersion": "3.45.0.1",
+        "version": "3.46.0",
+        "nugetVersion": "3.46.0",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
@@ -2928,11 +2943,11 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast-framework",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0.1",
+        "version": "21.5.1",
+        "nugetVersion": "121.5.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
         "dependencyOnly": true
-      },
+      },      
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cronet",
