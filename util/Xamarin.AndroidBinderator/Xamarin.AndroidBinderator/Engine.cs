@@ -357,7 +357,8 @@ namespace AndroidBinderator
 					MavenArtifactMd5 = md5,
 					MavenArtifactSha256 = sha256,
 					ProguardFile = File.Exists(proguardFile) ? GetRelativePath(proguardFile, config.BasePath ?? "").Replace("/", "\\") : null,
-					MavenArtifactConfig = mavenArtifact
+					MavenArtifactConfig = mavenArtifact,
+					DocumentationType = mavenArtifact.DocumentationType,
 				});
 
 				List<Dependency> dependencies = new List<Dependency>();

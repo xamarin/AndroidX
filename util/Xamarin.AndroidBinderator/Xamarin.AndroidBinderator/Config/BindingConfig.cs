@@ -181,4 +181,14 @@ namespace AndroidBinderator
 		[EnumMember (Value = "no-bindings")]
 		NoBindings
 	}
+
+	public enum DocumentationType
+	{
+		[EnumMember (Value = "none")]
+		None,
+		[EnumMember (Value = "javadoc")]
+		JavaDoc,
+		[EnumMember (Value = "javasource")]
+		JavaSource
+	}
 }
