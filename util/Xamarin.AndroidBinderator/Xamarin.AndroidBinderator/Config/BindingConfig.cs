@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -30,6 +31,9 @@ namespace AndroidBinderator
 		/// True to consider 'Runtime' dependencies from a POM file, False to ignore them.
 		[JsonProperty ("strictRuntimeDependencies")]
 		public bool StrictRuntimeDependencies { get; set; }
+
+		[JsonProperty ("defaultBindingsType")]
+		public BindingType DefaultBindingsType { get; set; } = BindingType.Targets;
 
 		[JsonProperty ("excludedRuntimeDependencies")]
 		public string? ExcludedRuntimeDependencies { get; set; }
@@ -166,5 +170,15 @@ namespace AndroidBinderator
 		Directory,
 		Google,
 		MavenCentral
+	}
+
+	public enum BindingType
+	{
+		[EnumMember (Value = "targets")]
+		Targets,
+		[EnumMember (Value = "androidlibrary")]
+		AndroidLibrary,
+		[EnumMember (Value = "no-bindings")]
+		NoBindings
 	}
 }

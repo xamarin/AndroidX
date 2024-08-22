@@ -2455,7 +2455,8 @@
         "nugetVersion": "2.11.0.1",
         "nugetId": "GoogleGson",
         "dependencyOnly": false,
-        "templateSet": "gson"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.crypto.tink",
@@ -2947,7 +2948,7 @@
         "nugetVersion": "121.5.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
         "dependencyOnly": true
-      },      
+      },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cronet",
@@ -3181,24 +3182,6 @@
         "templates": [
           {
             "templateFile": "templates/reactive-streams/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "gson",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/gson/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {

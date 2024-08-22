@@ -13,6 +13,8 @@ namespace AndroidBinderator
 
 		public string? MavenGroupId { get; set; }
 
+		public BindingType Type { get; set; }
+
 		public List<MavenArtifactModel> MavenArtifacts { get; set; } = new List<MavenArtifactModel>();
 
 		public string? NuGetPackageId { get; set; }
