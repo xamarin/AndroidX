@@ -65,10 +65,6 @@ public class ConfigUpdater
 
 	static bool HasUpdate (MavenArtifactConfig model, Artifact artifact)
 	{
-		// Don't update package if it's "Frozen"
-		if (model.Frozen)
-			return false;
-
 		// Get latest stable version
 		var latest = GetLatestVersion (artifact);
 
