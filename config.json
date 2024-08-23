@@ -2913,63 +2913,63 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-identifier",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.3",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-ads-identifier",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.3",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-appindex",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.6",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0.1",
         "nugetId": "Xamarin.GooglePlayServices.AppIndex",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-appset",
-        "version": "16.0.2",
-        "nugetVersion": "16.0.2.3",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.AppSet",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-auth",
-        "version": "20.7.0",
-        "nugetVersion": "120.7.0.2",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Auth",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-base",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.1",
+        "version": "18.5.0",
+        "nugetVersion": "118.5.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Base",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.5",
+        "version": "18.4.0",
+        "nugetVersion": "118.4.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cast-framework",
-        "version": "21.5.1",
+        "version": "21.5.0",
         "nugetVersion": "121.5.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
         "dependencyOnly": true
@@ -2977,32 +2977,32 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-cronet",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.5",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.CroNet",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-fido",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0.1",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Fido",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tasks",
-        "version": "18.0.2",
-        "nugetVersion": "118.0.2.6",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Tasks",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.2",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0.1",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "dependencyOnly": true
       },
@@ -3010,7 +3010,7 @@
         "groupId": "com.google.android.libraries.identity.googleid",
         "artifactId": "googleid",
         "version": "1.1.0",
-        "nugetVersion": "1.1.0.1",
+        "nugetVersion": "1.1.0.5",
         "nugetId": "Xamarin.GoogleAndroid.Libraries.Identity.GoogleId",
         "dependencyOnly": true
       },
@@ -3018,31 +3018,31 @@
         "groupId": "com.google.code.findbugs",
         "artifactId": "jsr305",
         "version": "3.0.2",
-        "nugetVersion": "3.0.2.11",
+        "nugetVersion": "3.0.2.15",
         "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.27.1",
-        "nugetVersion": "2.27.1",
+        "version": "2.29.2",
+        "nugetVersion": "2.29.2",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": true
       },
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
-        "version": "3.6.0",
-        "nugetVersion": "3.6.0.2",
+        "version": "3.9.0",
+        "nugetVersion": "3.9.0.1",
         "nugetId": "Square.OkIO",
         "dependencyOnly": true
       },
       {
         "groupId": "com.squareup.okio",
         "artifactId": "okio-jvm",
-        "version": "3.6.0",
-        "nugetVersion": "3.6.0.2",
+        "version": "3.9.0",
+        "nugetVersion": "3.9.0.1",
         "nugetId": "Square.OkIO.JVM",
         "dependencyOnly": true
       },
