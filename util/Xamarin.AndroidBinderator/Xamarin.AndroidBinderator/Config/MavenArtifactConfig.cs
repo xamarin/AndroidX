@@ -64,6 +64,10 @@ namespace AndroidBinderator
 		[JsonProperty ("mavenRepositoryLocation")]
 		public string? MavenRepositoryLocation { get; set; } = null;
 
+		[JsonProperty ("documentationType")]
+		[DefaultValue (DocumentationType.None)]
+		public DocumentationType DocumentationType { get; set; } = DocumentationType.None;
+
 		[JsonProperty("templateSet")]
 		public string? TemplateSet { get; set; }
 

@@ -2306,7 +2306,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.AppCompat.Theme",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2315,7 +2316,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.DrawablePainter",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2324,7 +2326,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.FlowLayout",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2333,7 +2336,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.Pager",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2342,7 +2346,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.Pager.Indicators",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2351,7 +2356,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.Permissions",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2360,7 +2366,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.Placeholder",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2369,7 +2376,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.Placeholder.Material",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2378,7 +2386,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.SwipeRefresh",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2387,7 +2396,8 @@
         "nugetVersion": "0.34.0.5",
         "nugetId": "Xamarin.Google.Accompanist.SystemUIController",
         "dependencyOnly": false,
-        "templateSet": "accompanist"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.android.material",
@@ -2442,7 +2452,8 @@
         "nugetVersion": "1.11.0.1",
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
         "dependencyOnly": false,
-        "templateSet": "auto-value",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "overrideLicenses": [
           "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
         ],
@@ -2465,7 +2476,8 @@
         "nugetVersion": "1.14.1",
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
         "dependencyOnly": false,
-        "templateSet": "tink"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.flogger",
@@ -2474,7 +2486,8 @@
         "nugetVersion": "0.8.0.6",
         "nugetId": "Xamarin.Flogger",
         "dependencyOnly": false,
-        "templateSet": "flogger"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.flogger",
@@ -2483,7 +2496,8 @@
         "nugetVersion": "0.8.0.6",
         "nugetId": "Xamarin.Flogger.SystemBackend",
         "dependencyOnly": false,
-        "templateSet": "flogger"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.guava",
@@ -2541,7 +2555,8 @@
         "nugetVersion": "0.3.0.13",
         "nugetId": "Xamarin.Dev.ChrisBanes.Snapper",
         "dependencyOnly": false,
-        "templateSet": "dev-chrisbanes-snapper"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.antmedia",
@@ -2550,7 +2565,8 @@
         "nugetVersion": "3.2.0",
         "nugetId": "Xamarin.Android.AntMedia.RtmpClient",
         "dependencyOnly": false,
-        "templateSet": "antmedia-rtpm-client"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.github.aakira",
@@ -2559,7 +2575,8 @@
         "nugetVersion": "2.7.1.5",
         "nugetId": "Xamarin.AAkira.Napier",
         "dependencyOnly": false,
-        "templateSet": "napier"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -2568,7 +2585,8 @@
         "nugetVersion": "2.1.1.13",
         "nugetId": "Xamarin.Android.ReactiveX.RxAndroid",
         "dependencyOnly": false,
-        "templateSet": "rxjava"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -2577,7 +2595,9 @@
         "nugetVersion": "2.2.21.20",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava",
         "dependencyOnly": false,
-        "templateSet": "rxjava"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "documentationType": "javasource"
       },
       {
         "groupId": "io.reactivex.rxjava2",
@@ -2586,7 +2606,8 @@
         "nugetVersion": "2.4.0.13",
         "nugetId": "Xamarin.Android.ReactiveX.RxKotlin",
         "dependencyOnly": false,
-        "templateSet": "rxjava"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.reactivex.rxjava3",
@@ -2595,7 +2616,8 @@
         "nugetVersion": "3.0.2.12",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxAndroid",
         "dependencyOnly": false,
-        "templateSet": "rxjava"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.reactivex.rxjava3",
@@ -2604,7 +2626,8 @@
         "nugetVersion": "3.1.8.7",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxJava",
         "dependencyOnly": false,
-        "templateSet": "rxjava"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "io.reactivex.rxjava3",
@@ -2613,7 +2636,8 @@
         "nugetVersion": "3.0.1.13",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxKotlin",
         "dependencyOnly": false,
-        "templateSet": "rxjava"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.checkerframework",
@@ -2859,7 +2883,8 @@
         "nugetVersion": "1.0.4.14",
         "nugetId": "Xamarin.Android.ReactiveStreams",
         "dependencyOnly": false,
-        "templateSet": "reactive-streams"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "androidx.emoji2",
@@ -3177,173 +3202,11 @@
         ]
       },
       {
-        "name": "reactive-streams",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/reactive-streams/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "auto-value",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/auto-value/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "rxjava",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/rxjava/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "tink",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/tink/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "flogger",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/flogger/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
         "name": "installreferrer",
         "mavenRepositoryType": "Google",
         "templates": [
           {
             "templateFile": "templates/installreferrer/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "napier",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/napier/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "dev-chrisbanes-snapper",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/dev-chrisbanes-snapper/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "accompanist",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/accompanist/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "antmedia-rtpm-client",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/antmedia-rtpm-client/Project.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {

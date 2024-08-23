@@ -14,6 +14,7 @@ namespace AndroidBinderator
 
 		public string? DownloadedArtifact { get; set; }
 		public string? ProguardFile { get; set; }
+		public DocumentationType DocumentationType { get; set; }
 
 		public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string>();
 	}
