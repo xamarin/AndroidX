@@ -38,7 +38,7 @@ static class UpdateCommand
 		OutputDependencyTable (config);
 
 		// Write updated values back to original locations so they get serialized
-		foreach (var a in config.MavenArtifacts) {
+		foreach (var a in config.MavenArtifacts.Where (a => !a.Frozen)) {
 			a.Version = a.LatestVersion;
 			a.NugetVersion = a.LatestNuGetVersion;
 		}
@@ -48,21 +48,23 @@ static class UpdateCommand
 
 	static void OutputArtifactTable (BindingConfig config)
 	{
-		var column1 = "Package (* = Has Update)".PadRight (58);
+		var bound_artifacts = config.MavenArtifacts.Where (a => !a.DependencyOnly);
+
+		var column1 = $"{bound_artifacts.Count ()} Packages (* = Has Update)".PadRight (58);
 		var column2 = "Currently Bound".PadRight (17);
 		var column3 = "Latest Stable".PadRight (15);
 
 		Console.WriteLine ($"| {column1} | {column2} | {column3} |");
 		Console.WriteLine ("|------------------------------------------------------------|-------------------|-----------------|");
 
-		foreach (var art in config.MavenArtifacts.Where (a => !a.DependencyOnly)) {
+		foreach (var art in bound_artifacts) {
 			var package_name = $"{art.GroupId}.{art.ArtifactId}";
 
 			if (art.NewVersionAvailable)
 				package_name = "* " + package_name;
 
 			if (art.Frozen)
-				package_name = "# " + package_name;
+				package_name = (package_name.StartsWith ('*') ? "#" : "# ") + package_name;
 
 			Console.WriteLine ($"| {package_name.PadRight (58)} | {art.Version.PadRight (17)} | {art.LatestVersion.PadRight (15)} |");
 		}
@@ -70,14 +72,16 @@ static class UpdateCommand
 
 	static void OutputDependencyTable (BindingConfig config)
 	{
-		var column1 = "Dependencies (* = Has Update)".PadRight (58);
+		var dependency_artifacts = config.MavenArtifacts.Where (a => a.DependencyOnly);
+
+		var column1 = $"{dependency_artifacts.Count ()} Dependencies (* = Has Update)".PadRight (58);
 		var column2 = "Current Reference".PadRight (17);
 		var column3 = "Latest Publish".PadRight (15);
 
 		Console.WriteLine ($"| {column1} | {column2} | {column3} |");
 		Console.WriteLine ("|------------------------------------------------------------|-------------------|-----------------|");
 
-		foreach (var art in config.MavenArtifacts.Where (a => a.DependencyOnly)) {
+		foreach (var art in dependency_artifacts) {
 			var package_name = art.NugetPackageId ?? $"{art.GroupId}.{art.ArtifactId}";
 
 			if (art.NewNuGetVersionAvailable)
