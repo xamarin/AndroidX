@@ -27,15 +27,7 @@
 
     <!-- Remove these as they cause issues with Media3.ExoPlayer-->
     <remove-node
-        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=3 and parameter[1][@type='androidx.media3.common.Player.PositionInfo'] and parameter[2][@type='androidx.media3.common.Player.PositionInfo'] and parameter[3][@type='int']]"
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=1  and parameter[1][@type='int']]"
         />
-
-  <!-- Abstract Player.Listener so that interface members have to be implemented.-->
-   <attr 
-		    path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@abstract='false']" 
-		    name="abstract"
-		    >
-		    PlayerListenerAbstract
-	</attr>
 
 </metadata>
