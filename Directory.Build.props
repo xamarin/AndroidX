@@ -62,6 +62,13 @@
     <AndroidNamespaceReplacement Include='com.google.common.flogger' Replacement='Xamarin.Google.Flogger' />
     <AndroidNamespaceReplacement Include='com.google.inject' Replacement='Xamarin.Google.Inject' />
     <AndroidNamespaceReplacement Include='com.google.errorprone' Replacement='Xamarin.Google.ErrorProne' />
+    <AndroidNamespaceReplacement Include='com.google.protobuf' Replacement='Xamarin.Protobuf.Lite' />
+    <AndroidNamespaceReplacement Include='com.google.android.datatransport' Replacement='Xamarin.Google.Android.DataTransport' />    
+    <AndroidNamespaceReplacement Include='com.google.android.finsky' Replacement='Xamarin.Google.Android.Finsky' />    
+    <AndroidNamespaceReplacement Include='com.google.flatbuffers' Replacement='Xamarin.Google.FlatBuffers' />
+    
+    <!-- Yes, this is spelled incorrectly  :( -->
+    <AndroidNamespaceReplacement Include='com.google.android.ump' Replacement='Xamarin.Google.UserMesssagingPlatform' />
 
     <!-- Company namespace changes -->
     <AndroidNamespaceReplacement Include='androidx.' Replacement='AndroidX' />
@@ -72,7 +79,9 @@
     <AndroidNamespaceReplacement Include='org.reactivestreams.' Replacement='ReactiveStreams' />
     <AndroidNamespaceReplacement Include='org.intellij' Replacement='IntelliJ' />
     <AndroidNamespaceReplacement Include='org.jetbrains' Replacement='JetBrains' />
-    <AndroidNamespaceReplacement Include='org.chromium' Replacement='AndroidX.WebKit' />
+    <AndroidNamespaceReplacement Include='org.chromium.net.' Replacement='Xamarin.Chromium.CroNet' />
+    <AndroidNamespaceReplacement Include='org.chromium.support_lib_boundary' Replacement='AndroidX.WebKit.ChromiumLibBoundary' />
+    <AndroidNamespaceReplacement Include='org.chromium' Replacement='Xamarin.Chromium' />
     <AndroidNamespaceReplacement Include='com.xamarin' Replacement='Xamarin' />
     <AndroidNamespaceReplacement Include='io.reactivex.' Replacement='ReactiveX' />
     <AndroidNamespaceReplacement Include='kotlinx' Replacement='KotlinX' />
@@ -80,6 +89,26 @@
     <AndroidNamespaceReplacement Include='org.aopalliance.' Replacement='Xamarin.AopAlliance' />
     <AndroidNamespaceReplacement Include='org.objectweb.' Replacement='Xamarin.ObjectWeb' />
     <AndroidNamespaceReplacement Include='javax.inject' Replacement='JavaX.Inject' />
+    <AndroidNamespaceReplacement Include='okhttp3.' Replacement='Square.OkHttp3' />
+    <AndroidNamespaceReplacement Include='okio.' Replacement='Square.OkIO' />
+    <AndroidNamespaceReplacement Include='com.squareup.picasso.' Replacement='Square.Picasso' />
+    <AndroidNamespaceReplacement Include='retrofit.' Replacement='Square.Retrofit' />
+    <AndroidNamespaceReplacement Include='retrofit2.' Replacement='Square.Retrofit2' />
+    <AndroidNamespaceReplacement Include='com.squareup.javapoet.' Replacement='Square.JavaPoet' />
+    <AndroidNamespaceReplacement Include='com.squareup.okhttp.' Replacement='Square.OkHttp' />
+    <AndroidNamespaceReplacement Include='io.grpc.okhttp.' Replacement='Xamarin.Grpc.OkHttp' />
+    <AndroidNamespaceReplacement Include='io.grpc.protobuf.lite.' Replacement='Xamarin.Grpc.Protobuf.Lite' />
+    <AndroidNamespaceReplacement Include='io.grpc.util.' Replacement='Xamarin.Grpc.Core.Util' />
+    <AndroidNamespaceReplacement Include='io.grpc.' Replacement='Xamarin.Grpc' />
+    <AndroidNamespaceReplacement Include='protobuf.lite.' Replacement='Xamarin.Grpc.Protobuf.Lite' />
+    <AndroidNamespaceReplacement Include='io.opencensus.' Replacement='Xamarin.Io.OpenCensus' />
+    <AndroidNamespaceReplacement Include='io.perfmark.' Replacement='Xamarin.Io.Perfmark' />
+    <AndroidNamespaceReplacement Include='org.brotli.' Replacement='Xamarin.Brotli' />
+    <AndroidNamespaceReplacement Include='org.codehaus.' Replacement='Xamarin.CodeHaus' />
+    <AndroidNamespaceReplacement Include='org.tensorflow.lite.task.gms.vision.' Replacement='Xamarin.TensorFlow.Lite.Gms.Vision' />
+    <AndroidNamespaceReplacement Include='org.tensorflow.' Replacement='Xamarin.TensorFlow' />
+    <AndroidNamespaceReplacement Include='com.android.' Replacement='Xamarin.Android' />
+    <AndroidNamespaceReplacement Include='io.antmedia.' Replacement='Xamarin.IO.AntMedia' />
 
     <!-- Remove some redundant words -->
     <AndroidNamespaceReplacement Include='androidx.dynamicanimation.animation' Replacement='AndroidX.DynamicAnimation' />
@@ -96,6 +125,7 @@
     <!-- Un-capitalization of 2-letter abbreviations -->
     <AndroidNamespaceReplacement Include='tv' Replacement='Tv' />
     <AndroidNamespaceReplacement Include='db' Replacement='Db' />
+    <AndroidNamespaceReplacement Include='qa' Replacement='Qa' />
 
     <!-- Preferred capitalization for combined words -->
     <AndroidNamespaceReplacement Include='accessibilityservice' Replacement='AccessibilityService' />
@@ -232,6 +262,32 @@
     <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
     <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
     <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />    
+    <AndroidNamespaceReplacement Include='jobscheduling' Replacement='JobScheduling' />    
+    <AndroidNamespaceReplacement Include='consent_sdk' Replacement='ConsentSDK' />    
+    <AndroidNamespaceReplacement Include='ump' Replacement='UserMessagingPlatform' />    
+    <AndroidNamespaceReplacement Include='flatbuffers' Replacement='FlatBuffers' />    
+    <AndroidNamespaceReplacement Include='tls' Replacement='TLS' />    
+    <AndroidNamespaceReplacement Include='appengine' Replacement='AppEngine' />    
+    <AndroidNamespaceReplacement Include='inprocess' Replacement='InProcess' />    
+    <AndroidNamespaceReplacement Include='apihelpers' Replacement='ApiHelpers' />    
+    <AndroidNamespaceReplacement Include='urlconnection' Replacement='UrlConnection' />    
+    <AndroidNamespaceReplacement Include='animal_sniffer' Replacement='AnimalSnifferAnnotations' />    
+    <AndroidNamespaceReplacement Include='gpu' Replacement='GPU' />    
+    <AndroidNamespaceReplacement Include='tensorbuffer' Replacement='TensorBuffer' />    
+    <AndroidNamespaceReplacement Include='bertclu' Replacement='BertClu' />    
+    <AndroidNamespaceReplacement Include='nlclassifier' Replacement='NLClassifier' />    
+    <AndroidNamespaceReplacement Include='zxing' Replacement='ZXing' />    
+    <AndroidNamespaceReplacement Include='reedsolomon' Replacement='ReedSolomon' />    
+    <AndroidNamespaceReplacement Include='datamatrix' Replacement='DataMatrix' />    
+    <AndroidNamespaceReplacement Include='maxicode' Replacement='MaxiCode' />    
+    <AndroidNamespaceReplacement Include='qrcode' Replacement='QRCode' />    
+    <AndroidNamespaceReplacement Include='oned' Replacement='OneD' />    
+    <AndroidNamespaceReplacement Include='rss' Replacement='RSS' />    
+    <AndroidNamespaceReplacement Include='pdf417' Replacement='PDF417' />    
+    <AndroidNamespaceReplacement Include='rtmp_client' Replacement='Rtmp.Client' />    
+    <AndroidNamespaceReplacement Include='rxkotlin' Replacement='RxKotlin' />    
+    <AndroidNamespaceReplacement Include='native_test' Replacement='Native_Test' />    
+    <AndroidNamespaceReplacement Include='httpflags' Replacement='HttpFlags' />    
   </ItemGroup>
   
 </Project>

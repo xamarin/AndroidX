@@ -101,6 +101,9 @@ public class ConfigUpdater
 		var version = hyphen >= 0 ? s.Substring (0, hyphen) : s;
 		var tag = hyphen >= 0 ? s.Substring (hyphen) : string.Empty;
 
+		if (tag.Contains ("_"))
+			tag = string.Empty;
+
 		// Stuff like: 1.1.1d-alpha-1
 		if (version.Any (c => char.IsLetter (c)))
 			return new SemanticVersion (0, 0, 0);
@@ -113,6 +116,10 @@ public class ConfigUpdater
 
 		// SemanticVersion can't handle more than 3 parts, like '0.11.91.1'
 		if (version.Count (c => c == '.') > 2)
+			return new SemanticVersion (0, 0, 0);
+
+		// Leading zeros are forbidden in SemanticVersion
+		if (version == "22.12.06")
 			return new SemanticVersion (0, 0, 0);
 
 		return SemanticVersion.Parse (version + tag);

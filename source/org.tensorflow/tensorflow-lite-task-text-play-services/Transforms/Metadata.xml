@@ -1,0 +1,13 @@
+﻿<metadata>
+    <add-node 
+        path="/api/package[@name='org.tensorflow.lite.task.gms.text.qa']/class[@name='QaAnswer.Pos']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+
+</metadata>

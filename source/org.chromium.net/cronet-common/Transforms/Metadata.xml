@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+    <attr
+        path="/api/package[@name='org.chromium.net']/class[@name='ExperimentalBidirectionalStream.Builder']/method[@name='addHeader' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.BidirectionalStream.Builder
+    </attr>
+
+
+    <!--
+        inheritance from cronet-api
+    <remove-node
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']"
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='RequestFinishedInfoImpl']"
+        />
+    -->
+
+    <attr
+        path="/api/package[@name='org.chromium.net']/class[@name='ExperimentalBidirectionalStream.Builder']/method[@name='addHeader' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='setLibraryLoader' and count(parameter)=1 and parameter[1][@type='org.chromium.net.CronetEngine.Builder.LibraryLoader']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='setUserAgent' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='enablePublicKeyPinningBypassForLocalTrustAnchors' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='enableHttpCache' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='long']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='enableHttp2' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='addQuicHint' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int'] and parameter[3][@type='int']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='enableQuic' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='enableSdch' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='setExperimentalOptions' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBuilderImpl']/method[@name='setStoragePath' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedReturn"
+        >
+        Xamarin.Chromium.CroNet.ICronetEngineBuilder
+    </attr>
+
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='RequestFinishedInfoImpl']/method[@name='getMetrics' and count(parameter)=0]"
+        name="propertyName"
+        >
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBase']/method[@name='createBidirectionalStream' ]"
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetEngineBase']/method[@name='createRequest' ]"
+        />
+
+</metadata>

@@ -1,0 +1,8 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.flatbuffers']/class[@name='FlexBuffersBuilder']/method[@name='getBuffer' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+</metadata>
