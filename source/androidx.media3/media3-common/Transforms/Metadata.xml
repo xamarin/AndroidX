@@ -18,7 +18,6 @@
         Java.Lang.Object
     </attr>
 
-
     <attr
         path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onCues' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
         name="managedName"
@@ -30,11 +29,8 @@
     <remove-node
         path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=3 and parameter[1][@type='androidx.media3.common.Player.PositionInfo'] and parameter[2][@type='androidx.media3.common.Player.PositionInfo'] and parameter[3][@type='int']]"
         />
-    <remove-node
-        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onCues' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
-        />
 
-   <!-- Abstract Player.Listener so that interface members have to be implemented.-->
+  <!-- Abstract Player.Listener so that interface members have to be implemented.-->
    <attr 
 		    path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@abstract='false']" 
 		    name="abstract"
