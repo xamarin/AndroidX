@@ -184,4 +184,62 @@
   <remove-node
       path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='WrappingMediaSource']"
         />
+
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink.Listener']/method[@name='onAudioTrackInitialized' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.audio.AudioSink.AudioTrackConfig']]"
+      name="argsType"
+      >
+      AudioSinkListenerOnAudioTrackInitializedEventArgs
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink.Listener']/method[@name='onAudioTrackReleased' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.audio.AudioSink.AudioTrackConfig']]"
+      name="argsType"
+      >
+      AudioSinkListenerOnAudioTrackReleasedEventArgs
+  </attr>
+
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+      name="managedOverride"
+      >
+      override
+  </attr>
+  <remove-node
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+      />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
+
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.image']/class[@name='BitmapFactoryImageDecoder.Factory']/method[@name='createImageDecoder' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Image.IImageDecoder
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MediaParserExtractorAdapter.Factory']/method[@name='createProgressiveMediaExtractor' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.analytics.PlayerId']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IProgressiveMediaExtractor
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.image']/interface[@name='ImageDecoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Java.Lang.Object
+  </attr>
+
 </metadata> 
