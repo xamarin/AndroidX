@@ -73,4 +73,13 @@
           >
       Java.Lang.Object
     </attr>
+
+
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.hls']/class[@name='HlsMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.exoplayer.hls']/class[@name='HlsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        />
+
 </metadata>

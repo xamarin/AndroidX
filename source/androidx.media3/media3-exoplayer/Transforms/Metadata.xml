@@ -3,7 +3,7 @@
   <attr
     path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']"
     name="skipInvokerMethods"
-        >
+    >
     androidx/media3/common/Player.addMediaItems(ILSystem/Collections/Generic/IList`1;)V
     androidx/media3/common/Player.addMediaItems(LSystem/Collections/Generic/IList`1;)V
     androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;)V
@@ -11,6 +11,7 @@
     androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;IJ)V    
     androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;IJ)V    
     androidx/media3/common/Player.replaceMediaItems(IILSystem/Collections/Generic/IList`1;)V
+    androidx/media3/exoplayer/ExoPlayer.replaceMediaItems(IILjava/util/List;)V
   </attr>
 
   <!-- Deprecated -->
@@ -222,7 +223,12 @@
   <remove-node
     path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
     />
-
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+    />
   <attr 
       path="/api/package[@name='androidx.media3.exoplayer.image']/class[@name='BitmapFactoryImageDecoder.Factory']/method[@name='createImageDecoder' and count(parameter)=0]"
       name="managedReturn"
@@ -241,5 +247,18 @@
       >
       Java.Lang.Object
   </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.image']/interface[@name='ImageDecoder']/method[@name='queueInputBuffer' and count(parameter)=1 and parameter[1][@type='androidx.media3.decoder.DecoderInputBuffer']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='replaceMediaItems' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]"
+      name="managedType"
+      >
+      ReplaceMediaItems2
+  </attr>
+
 
 </metadata> 
