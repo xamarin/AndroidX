@@ -45,6 +45,10 @@ namespace AndroidBinderator
 
 		static (MavenRepoType type, string location) GetMavenInfoForArtifact(BindingConfig config, MavenArtifactConfig artifact)
 		{
+			// Precendence: Artifact > TemplateSet > Config
+			if (artifact.MavenRepositoryType.HasValue)
+				return (artifact.MavenRepositoryType.Value, artifact.MavenRepositoryLocation!);
+
 			var template = config.GetTemplateSet(artifact.TemplateSet);
 
 			if (template.MavenRepositoryType.HasValue)
