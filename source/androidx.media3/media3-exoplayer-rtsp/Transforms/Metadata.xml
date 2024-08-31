@@ -1,9 +1,15 @@
 ﻿<metadata>
-    <remove-node
+    <attr
         path="/api/package[@name='androidx.media3.exoplayer.rtsp']/class[@name='RtspMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-        />
-    <remove-node
+        name="final"
+        >
+      true
+    </attr>
+    <attr
         path="/api/package[@name='androidx.media3.exoplayer.rtsp']/class[@name='RtspMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-        />
+        name="final"
+        >
+      true
+    </attr>
 
 </metadata>

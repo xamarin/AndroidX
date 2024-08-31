@@ -200,36 +200,6 @@
   </attr>
 
   <attr 
-      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-      name="managedOverride"
-      >
-      override
-  </attr>
-  <remove-node
-      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-      />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
-    />
-  <attr 
       path="/api/package[@name='androidx.media3.exoplayer.image']/class[@name='BitmapFactoryImageDecoder.Factory']/method[@name='createImageDecoder' and count(parameter)=0]"
       name="managedReturn"
       >
@@ -259,6 +229,57 @@
       >
       ReplaceMediaItems2
   </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
 
 
 </metadata> 
