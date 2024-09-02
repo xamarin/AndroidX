@@ -32,11 +32,50 @@
         AndroidX.Media3.Transformer.IMuxer
     </attr>
 
-    <remove-node
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/class[@name='DefaultDecoderFactory']/method[@name='createForAudioDecoding' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.Format']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Transformer.ICodec
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/class[@name='DefaultDecoderFactory']/method[@name='createForVideoDecoding' and count(parameter)=3 and parameter[1][@type='androidx.media3.common.Format'] and parameter[2][@type='android.view.Surface'] and parameter[3][@type='boolean']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Transformer.ICodec
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/class[@name='DefaultAudioMixer.Factory']/method[@name='create' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Transformer.IAudioMixer
+    </attr>
+
+
+    <attr
         path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onFallbackApplied' and count(parameter)=3 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationRequest'] and parameter[3][@type='androidx.media3.transformer.TransformationRequest']]"
-        />
-    <remove-node
+        name="managedName"
+        >
+        OnFallbackAppliedDeprecated
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationError' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='java.lang.Exception']]"
+        name="managedName"
+        >
+        OnTransformationError1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationError' and count(parameter)=3 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationResult'] and parameter[3][@type='androidx.media3.transformer.TransformationException']]"
+        name="managedName"
+        >
+        OnTransformationError2
+    </attr>
+    <attr
         path="/api/package[@name='androidx.media3.transformer']/interface[@name='Transformer.Listener']/method[@name='onTransformationError' and count(parameter)=2 and parameter[1][@type='androidx.media3.common.MediaItem'] and parameter[2][@type='androidx.media3.transformer.TransformationException']]"
-        />
+        name="managedName"
+        >
+        OnTransformationError3
+    </attr>
 
 </metadata>

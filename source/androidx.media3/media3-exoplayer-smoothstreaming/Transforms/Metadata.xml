@@ -61,4 +61,19 @@
         path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/interface[@name='SsChunkSource']"
         />   
 
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.smoothstreaming']/class[@name='SsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
+
 </metadata>

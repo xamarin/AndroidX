@@ -18,16 +18,82 @@
         Java.Lang.Object
     </attr>
 
+
     <attr
         path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onCues' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
         name="managedName"
         >
         OnCuesDeprecated
-	  </attr>
-
-    <!-- Remove these as they cause issues with Media3.ExoPlayer-->
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedName"
+        >
+        OnPositionDiscontinuityDeprecated
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common.util']/class[@name='ConstantRateTimestampIterator']/method[@name='copyOf' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Common.Util.ITimestampIterator
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onError' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.VideoFrameProcessingException']]/parameter[1]"
+        name="managedName"
+        >
+        exc
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onOutputSizeChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[1]"
+        name="managedName"
+        >
+        size1
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onOutputSizeChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]/parameter[2]"
+        name="managedName"
+        >
+        size2
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onOutputFrameAvailableForRendering' and count(parameter)=1 and parameter[1][@type='long']]/parameter[1]"
+        name="managedName"
+        >
+        frame
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onError' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.VideoFrameProcessingException']]"
+        name="argsType"
+        >
+        VideoGraphListenerErrorEventArgs
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onOutputFrameAvailableForRendering' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="argsType"
+        >
+        VideoGraphListenerOutputFrameAvailableForRenderingEventArgs
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.media3.common']/interface[@name='VideoGraph.Listener']/method[@name='onOutputSizeChanged' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
+        name="argsType"
+        >
+        VideoGraphListenerOutputSizeChangedEventArgs
+    </attr>
+	<!-- Remove these as they cause issues with Media3.ExoPlayer-->
     <remove-node
         path="/api/package[@name='androidx.media3.common']/interface[@name='Player.Listener']/method[@name='onPositionDiscontinuity' and count(parameter)=1  and parameter[1][@type='int']]"
         />
+    <!--
+    Trying to fix IExoPlayer issue, but adding this metadata causes the following error:
+    
+    ./generated/androidx.media3.media3-common/obj/Debug/net8.0-android/generated/src/AndroidX.Media3.Common.IPlayer.cs(5160,68): 
+    error CS0535: 'IPlayerInvoker' does not implement interface member 'IPlayer.ReplaceMediaItems(int, int, IList<MediaItem>?)' [./generated/androidx.media3.media3-common/androidx.media3.media3-common.csproj::TargetFramework=net8.0-android]
 
+    <attr
+        path="/api/package[@name='androidx.media3.common']/interface[@name='Player']"
+        name="skipInvokerMethods"
+        >
+        androidx/media3/common/Player.replaceMediaItems(IILjava/util/List;)V
+    </attr>
+    -->
 </metadata>

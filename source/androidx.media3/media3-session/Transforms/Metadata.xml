@@ -53,5 +53,60 @@
         >
         SetBitmapLoaderAsMediaSessionBuilder
     </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetPeriodicPositionUpdateEnabledBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setSessionExtras' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedName"
+        >
+        SetSessionExtrasBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setShowPlayButtonIfPlaybackIsSuppressed' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetShowPlayButtonIfPlaybackIsSuppressedBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetPeriodicPositionUpdateEnabledBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.Builder']/method[@name='setSessionExtras' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedName"
+        >
+        SetSessionExtrasBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.Builder']/method[@name='setShowPlayButtonIfPlaybackIsSuppressed' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetShowPlayButtonIfPlaybackIsSuppressedBuilder
+    </attr>
+    
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetPeriodicPositionUpdateEnabledBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setSessionExtras' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedName"
+        >
+        SetSessionExtrasBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setShowPlayButtonIfPlaybackIsSuppressed' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetShowPlayButtonIfPlaybackIsSuppressedBuilder
+    </attr>
 
 </metadata>
