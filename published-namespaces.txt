@@ -294,6 +294,7 @@ AndroidX.Media3.ExoPlayer.Drm
 AndroidX.Media3.ExoPlayer.Hls
 AndroidX.Media3.ExoPlayer.Hls.Offline
 AndroidX.Media3.ExoPlayer.Hls.Playlist
+AndroidX.Media3.ExoPlayer.Image
 AndroidX.Media3.ExoPlayer.MediaCodec
 AndroidX.Media3.ExoPlayer.Metadata
 AndroidX.Media3.ExoPlayer.Offline
@@ -318,8 +319,10 @@ AndroidX.Media3.ExoPlayer.WorkManager
 AndroidX.Media3.Extractor
 AndroidX.Media3.Extractor.Amr
 AndroidX.Media3.Extractor.Avi
+AndroidX.Media3.Extractor.Bmp
 AndroidX.Media3.Extractor.Flac
 AndroidX.Media3.Extractor.Flv
+AndroidX.Media3.Extractor.Heif
 AndroidX.Media3.Extractor.Jpeg
 AndroidX.Media3.Extractor.Metadata
 AndroidX.Media3.Extractor.Metadata.Dvbsi
@@ -334,6 +337,7 @@ AndroidX.Media3.Extractor.Mkv
 AndroidX.Media3.Extractor.Mp3
 AndroidX.Media3.Extractor.Mp4
 AndroidX.Media3.Extractor.Ogg
+AndroidX.Media3.Extractor.Png
 AndroidX.Media3.Extractor.Text
 AndroidX.Media3.Extractor.Text.Cea
 AndroidX.Media3.Extractor.Text.Dvb
@@ -345,6 +349,7 @@ AndroidX.Media3.Extractor.Text.Tx3g
 AndroidX.Media3.Extractor.Text.Webvtt
 AndroidX.Media3.Extractor.TS
 AndroidX.Media3.Extractor.Wav
+AndroidX.Media3.Extractor.Webp
 AndroidX.Media3.Muxer
 AndroidX.Media3.Session
 AndroidX.Media3.Transformer
