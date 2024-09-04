@@ -1,9 +1,5 @@
 parameters:
-  condition: succeeded()
-  verbosity:                                       # the build verbosity: 'minimal', 'normal', 'diagnostic'
-  configuration:                                   # the build configuration: 'Debug', 'Release'
   artifactsPath:
-  skipUnitTests: false                             # do not run unit test step
   
   validPackagePrefixes:                            # any NuGet prefixes that should pass validation
   - Xamarin
@@ -14,8 +10,8 @@ steps:
   - pwsh: |
       dotnet cake build.cake `
         --target=ci-build `
-        --configuration="${{ parameters.configuration }}" `
-        --verbosity="${{ parameters.verbosity }}"
+        --configuration="$(configuration)" `
+        --verbosity="$(verbosity)"
     displayName: 'Build packages'
     env:
       JavaSdkDirectory: $(JAVA_HOME)
@@ -27,7 +23,7 @@ steps:
   - pwsh: |
       dotnet cake validation.cake `
         --namespaces="${{ join(',', parameters.validPackagePrefixes) }}" `
-        --verbosity="${{ parameters.verbosity }}"
+        --verbosity="$(verbosity)"
     displayName: 'Run NuGet package validation'
     
   - pwsh: |
@@ -35,7 +31,7 @@ steps:
         --artifacts="${{ parameters.artifactsPath }}" `
         --output="${{ parameters.artifactsPath }}/api-diff" `
         --cache="$(Agent.TempDirectory)/api-diff" `
-        --verbosity="${{ parameters.verbosity }}"
+        --verbosity="$(verbosity)"
     displayName: 'Generate API diff'
 
   - pwsh: dotnet cake utilities.cake -t=verify-namespace-file
@@ -44,9 +40,10 @@ steps:
   - pwsh: |
       dotnet cake build.cake `
         --target=ci-samples `
-        --configuration="${{ parameters.configuration }}" `
-        --verbosity="${{ parameters.verbosity }}"
+        --configuration="$(configuration)" `
+        --verbosity="$(verbosity)"
     displayName: 'Build samples'
+    condition: ne(variables['skipSamplesTests'], 'true')
     env:
       JavaSdkDirectory: $(JAVA_HOME)
       RepositoryCommit: $(Build.SourceVersion)
@@ -56,8 +53,8 @@ steps:
     
   - task: DotNetCoreCLI@2
     displayName: Run unit tests
-    condition: ne(${{ parameters.skipUnitTests }}, 'true')
+    condition: ne(variables['skipUnitTests'], 'true')
     inputs:
       command: test
       projects: util/**/*.Tests.csproj
-      arguments: '-c ${{ parameters.configuration }}'
+      arguments: '-c $(configuration)'

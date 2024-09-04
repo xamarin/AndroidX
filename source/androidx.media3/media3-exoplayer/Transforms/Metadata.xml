@@ -1,0 +1,285 @@
+﻿<metadata>
+  <!-- Invalid generic types (arity) -->
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']"
+    name="skipInvokerMethods"
+    >
+    androidx/media3/common/Player.addMediaItems(ILSystem/Collections/Generic/IList`1;)V
+    androidx/media3/common/Player.addMediaItems(LSystem/Collections/Generic/IList`1;)V
+    androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;)V
+    androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;Z)V
+    androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;IJ)V    
+    androidx/media3/common/Player.setMediaItems(LSystem/Collections/Generic/IList`1;IJ)V    
+    androidx/media3/common/Player.replaceMediaItems(IILSystem/Collections/Generic/IList`1;)V
+    androidx/media3/exoplayer/ExoPlayer.replaceMediaItems(IILjava/util/List;)V
+  </attr>
+
+  <!-- Deprecated -->
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
+        />
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer.source']/interface[@name='MediaSourceFactory']"
+        />
+
+  <!-- Duplicate inherited interface methods -->
+  <remove-node
+    path="/api/package[@name='androidx.media3.exoplayer']/class[@name='BaseRenderer']"
+        />
+  <remove-node
+      path="/api/package[@name='androidx.media3.exoplayer']/class[@name='NoSampleRenderer']"
+        />
+
+  <!-- Duplicate EventArgs classes -->
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioRendererEventListener']/method[@name='onAudioSinkError' and count(parameter)=1 and parameter[1][@type='java.lang.Exception']]"
+    name="argsType"
+        >
+    AudioRendererAudioSinkErrorEventArgs
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioRendererEventListener']/method[@name='onSkipSilenceEnabledChanged' and count(parameter)=1 and parameter[1][@type='boolean']]"
+    name="argsType"
+        >
+    AudioRendererSkipSilenceEnabledChangedEventArgs
+  </attr>
+
+  <!-- Covariant return types -->
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='FrameworkMediaDrm']/method[@name='createCryptoConfig' and count(parameter)=1 and parameter[1][@type='byte[]']]"
+    name="managedReturn"
+        >
+    AndroidX.Media3.Decoder.ICryptoConfig
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='ExoplayerCuesDecoder']/method[@name='dequeueInputBuffer' and count(parameter)=0]"
+    name="managedReturn"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='ExoplayerCuesDecoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
+    name="managedReturn"
+        >
+    Java.Lang.Object
+  </attr>
+
+  <!-- Erased generics -->
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='androidx.media3.exoplayer.source.MediaSource.MediaPeriodId'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource'] and parameter[3][@type='androidx.media3.common.Timeline']]/parameter[1]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ClippingMediaPeriod']/method[@name='onContinueLoadingRequested' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.source.MediaPeriod']]/parameter[1]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='WrappingMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Void'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource'] and parameter[3][@type='androidx.media3.common.Timeline']]/parameter[1]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MaskingMediaPeriod']/method[@name='onContinueLoadingRequested' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.source.MediaPeriod']]/parameter[1]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.text']/class[@name='ExoplayerCuesDecoder']/method[@name='queueInputBuffer' and count(parameter)=1 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer']]/parameter[1]"
+    name="managedType"
+        >
+    Java.Lang.Object
+  </attr>
+
+  <!-- Public cannot override protected -->
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MaskingMediaSource']/method[@name='releaseSourceInternal' and count(parameter)=0]"
+    name="visibility"
+        >
+    protected
+  </attr>
+
+  <!-- Overloaded listener methods -->
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onAudioDecoderInitialized' and count(parameter)=3 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='long']]"
+    name="managedName"
+        >
+    OnAudioDecoderInitializedDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onAudioInputFormatChanged' and count(parameter)=2 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='androidx.media3.common.Format']]"
+    name="managedName"
+        >
+    OnAudioInputFormatChangedDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onCues' and count(parameter)=2 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='java.util.List&lt;androidx.media3.common.text.Cue&gt;']]"
+    name="managedName"
+        >
+    OnCuesDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onDrmSessionAcquired' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime']]"
+    name="managedName"
+        >
+    OnDrmSessionAcquiredDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onPositionDiscontinuity' and count(parameter)=2 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int']]"
+    name="managedName"
+        >
+    OnPositionDiscontinuityDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onVideoDecoderInitialized' and count(parameter)=3 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='long']]"
+    name="managedName"
+        >
+    OnVideoDecoderInitializedDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onVideoInputFormatChanged' and count(parameter)=2 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='androidx.media3.common.Format']]"
+    name="managedName"
+        >
+    OnVideoInputFormatChangedDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.analytics']/interface[@name='AnalyticsListener']/method[@name='onVideoSizeChanged' and count(parameter)=5 and parameter[1][@type='androidx.media3.exoplayer.analytics.AnalyticsListener.EventTime'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='float']]"
+    name="managedName"
+        >
+    OnVideoSizeChangedDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.video']/interface[@name='VideoRendererEventListener']/method[@name='onVideoInputFormatChanged' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.Format']]"
+    name="managedName"
+        >
+    OnVideoInputFormatChangedDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.drm']/interface[@name='DrmSessionEventListener']/method[@name='onDrmSessionAcquired' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource.MediaPeriodId']]"
+    name="managedName"
+        >
+    OnDrmSessionAcquiredDeprecated
+  </attr>
+  <attr
+    path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioRendererEventListener']/method[@name='onAudioInputFormatChanged' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.Format']]"
+    name="managedName"
+        >
+    OnAudioInputFormatChangedDeprecated
+  </attr>
+
+  <!-- Missing inherited abstract member OnChildSourceInfoRefreshed, could probably be fixed if these turn out to be important types -->
+  <remove-node
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource']"
+        />
+  <remove-node
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource2']"
+        />
+  <remove-node
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']"
+        />
+  <remove-node
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='WrappingMediaSource']"
+        />
+
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink.Listener']/method[@name='onAudioTrackInitialized' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.audio.AudioSink.AudioTrackConfig']]"
+      name="argsType"
+      >
+      AudioSinkListenerOnAudioTrackInitializedEventArgs
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink.Listener']/method[@name='onAudioTrackReleased' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.audio.AudioSink.AudioTrackConfig']]"
+      name="argsType"
+      >
+      AudioSinkListenerOnAudioTrackReleasedEventArgs
+  </attr>
+
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.image']/class[@name='BitmapFactoryImageDecoder.Factory']/method[@name='createImageDecoder' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Image.IImageDecoder
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MediaParserExtractorAdapter.Factory']/method[@name='createProgressiveMediaExtractor' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.analytics.PlayerId']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IProgressiveMediaExtractor
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.image']/interface[@name='ImageDecoder']/method[@name='dequeueOutputBuffer' and count(parameter)=0]"
+      name="managedReturn"
+      >
+      Java.Lang.Object
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.image']/interface[@name='ImageDecoder']/method[@name='queueInputBuffer' and count(parameter)=1 and parameter[1][@type='androidx.media3.decoder.DecoderInputBuffer']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+  </attr>
+  <attr 
+      path="/api/package[@name='androidx.media3.exoplayer']/interface[@name='ExoPlayer']/method[@name='replaceMediaItems' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='java.util.List&lt;androidx.media3.common.MediaItem&gt;']]"
+      name="managedType"
+      >
+      ReplaceMediaItems2
+  </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='SilenceMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='AdsMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source.ads']/class[@name='ServerSideAdInsertionMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
+
+
+</metadata> 

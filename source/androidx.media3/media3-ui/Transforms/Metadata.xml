@@ -1,0 +1,6 @@
+﻿<metadata>
+    <!-- This method is obsolete and causes a conflict with event generation -->
+    <remove-node
+        path="/api/package[@name='androidx.media3.ui']/class[@name='PlayerView']/method[@name='setControllerVisibilityListener' and count(parameter)=1 and parameter[1][@type='androidx.media3.ui.PlayerControlView.VisibilityListener']]"
+        />
+</metadata>

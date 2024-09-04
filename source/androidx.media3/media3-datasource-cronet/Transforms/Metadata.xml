@@ -1,0 +1,41 @@
+﻿<metadata>
+
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetDataSource.Factory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.DataSource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.rtmp']/class[@name='RtmpDataSourceFactory']/method[@name='createDataSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.DataSource.IDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetDataSource.Factory']/method[@name='setDefaultRequestProperties' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.DataSource.IHttpDataSourceFactory
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetDataSource']"
+        name="managedName"
+        >
+        CroNetDataSource
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetUtil']"
+        name="managedName"
+        >
+        CroNetUtil
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.datasource.cronet']/class[@name='CronetEngineWrapper']"
+        name="managedName"
+        >
+        CroNetEngineWrapper
+    </attr>
+
+</metadata>

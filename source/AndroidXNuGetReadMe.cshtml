@@ -1,131 +1,43 @@
-﻿@using System
-@using System.IO
+@model AndroidBinderator.BindingProjectModel
+@using System
 @using System.Linq
-@using System.Xml.Linq
+@using Microsoft.AspNetCore.Html
+@{
+    var licenses = string.Join("<br/>", Model.Licenses.Select(l => string.IsNullOrWhiteSpace(l.Url) ? new HtmlString(l.Name).Value : new HtmlString($"[{l.Name}]({l.Url})").Value).ToArray());
+    var developers = string.Join("<br/>", Model.Developers.Select(d => new HtmlString(d.Name).Value).ToArray());
+}
+This package provides .NET for Android bindings for the Java library `@(Model.MavenGroupId):@(Model.Name)`.
 
-  @{
-      string[] artifact_version_parts = Model.NuGetVersion
-                                              .Split(new string[] { "-" }, StringSplitOptions.None);
-      string artifact_version = null;
+## Java Library
 
-      string artifact_version_release = artifact_version_parts[0];
-      string[] artifact_version_release_parts = artifact_version_release.Split(new string[] { "." }, StringSplitOptions.None);
-      artifact_version = string.Join(".", artifact_version_release_parts, 0, 3);
+| | |
+|-|-|
+| **Group ID** | @(Model.MavenGroupId) |
+| **Artifact ID** | @(Model.Name) |
+| **Version** | @(Model.MavenArtifacts.FirstOrDefault ()?.MavenArtifactVersion) |
+@if (!string.IsNullOrWhiteSpace(developers))
+{
+@:| **Developer(s)** | @Raw(developers) |
+}
+@if (!string.IsNullOrWhiteSpace(licenses))
+{
+@:| **License(s)** | @Raw(licenses) |
+}
+@if (!string.IsNullOrWhiteSpace(Model.MavenUrl))
+{
+@:| **Project URL** | @(Model.MavenUrl) |
+}
+@if (!string.IsNullOrWhiteSpace(Model.MavenDescription))
+{
+@:| **Description** | @(Model.MavenDescription) |
+}
 
-      if (artifact_version_parts.Length == 1)
-      {
-          // release
-      }
-      if (artifact_version_parts.Length == 2)
-      {
-          artifact_version += "-" + artifact_version_parts[1];
-      }
-  }
+## Bindings
 
-## About
+These bindings are provided by Microsoft under the [MIT License](https://opensource.org/licenses/MIT). The Java
+library may be licensed under a different license as specified above.
 
-<!-- 
-    A description of the package and where one can find more documentation 
--->
+To report issues with this package or the bindings, please visit our [GitHub repository](https://aka.ms/androidx).
 
-AndroidX Bindings NuGet Package @(Model.NuGetPackageId) 
-
-.NET for Android (formerly Xamarin.Android) AndroidX bindings NuGet Package @(Model.NuGetPackageId) 
-for Maven artifact:
-
-artifact=@(Model.MavenGroupId):@(Model.Name) 
-
-artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)
-
-nuget=@(Model.Name).@(Model.NuGetVersion)
-
-For more info please visit: 
-
-https://github.com/xamarin/AndroidX/
-
-
-## How to Use
-
-<!-- 
-    A compelling example on how to use this package with code 
--->
-
-See samples:
-
-https://github.com/xamarin/AndroidX/tree/main/samples
-
-## Key Features
-
-<!-- 
-    The key features of this package 
--->
-
-## Main Types
-
-<!-- 
-    The main types provided in this library 
--->
-
-## Addtional Documentation
-
-<!--
-    Provide links to more resources: List links such as detailed documentation, tutorial videos, blog posts, or any other relevant documentation to help users get the most out of your package
--->
-### What is AndroidX
-
-AndroidX (also called Jetpack) is a de-facto standard for Android application development and major 
-improvement to the original [Android Support Library](https://github.com/xamarin/AndroidSupportComponents). 
-AndroidX packages fully replace the Android Support Library by providing feature parity and new libraries.
-
-From: https://developer.android.com/jetpack
-
-Jetpack is a suite of libraries to help developers follow best practices, reduce boilerplate code, and 
-write code that works consistently across Android versions and devices so that developers can focus on 
-the code they care about.
-
-From: https://developer.android.com/jetpack/getting-started
-
-Jetpack encompasses a collection of Android libraries that incorporate best practices and provide backwards 
-compatibility in your Android apps.
-
-The Jetpack guide to app architecture provides an overview of the best practices and recommended architecture 
-to consider as you build your Android app.
-
-## Related Packages
-
-<!-- 
-    The related packages associated with this package 
--->
-
-https://github.com/xamarin/AndroidX/blob/main/docs/artifact-list.md
-
-https://github.com/xamarin/AndroidX/blob/main/docs/artifact-list-with-versions.md
-
-https://www.nuget.org/packages?q=Xamarin.AndroidX
-
-## Feedback & Contributing
-
-<!-- 
-    How to provide feedback on this package and contribute to it 
--->
-https://github.com/xamarin/AndroidX/issues
-
-<!-- 
-    Links to a GitHub repository where could open issues, Twitter, a Discord channel, bug tracker, or other platforms where a package consumer can connect with the package author 
--->
-https://github.com/xamarin/AndroidX/issues
-
-https://discord.com/channels/732297728826277939/732297837953679412
-
-
-### More Info
-
-
-## Issues
-
-Please report any issues:
-
-https://github.com/xamarin/AndroidX/issues
-
-MIT license
-
+Note that Microsoft only provides support for the bindings. For support on
+usage or issues with the Java library itself, please visit the library's project page.

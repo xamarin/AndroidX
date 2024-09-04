@@ -602,12 +602,32 @@ Task ("spell-check")
                 "PlayServicesAuth",
                 "GoogleAndroid",
                 "GoogleId",
+                "PrivacySandbox",
+                "AdsServices",
                 "Material3Android",
                 "WindowSizeClassAndroid",
+                "ExoPlayer",
+                "Media3",
+                "DataSource",
+                "CroNet",
+                "OkHttp",
+                "Rtmp",
+                "Hls",
+                "Ima",
+                "Rtsp",
+                "SmoothStreaming",
+                "WorkManager",
+                "Ui",
+                "InteractiveMedia",
+                "V3",
+                "AntMedia",
+                "RtmpClient",
                 "OkIO",
                 "Parcelize",
                 "AtomicFU",
                 "Protobuf",
+                "EmojiPicker",
+                "Muxer",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -1710,7 +1730,7 @@ static List<string> FindNamespaces (string assembly)
 
     foreach (var module in asm.Modules)
         foreach (var type in module.Types)
-            if (!string.IsNullOrWhiteSpace (type.Namespace))
+            if (!string.IsNullOrWhiteSpace (type.Namespace) && type.Namespace != "_Microsoft.Android.Resource.Designer" )
                 list.Add (type.Namespace);
 
     return list.ToList ();
@@ -1733,9 +1753,7 @@ Task("java-resolution-analysis")
 
             string dir = "output/java-resolution-analysis";
             EnsureDirectoryExists(dir);
-            EnsureDirectoryExists($"{dir}/net7.0-android");
-            EnsureDirectoryExists($"{dir}/net6.0-android");
-            EnsureDirectoryExists($"{dir}/monoandroid12.0");
+            EnsureDirectoryExists($"{dir}/net8.0-android");
 
             ConcurrentDictionary
                     <
@@ -1776,41 +1794,7 @@ Task("java-resolution-analysis")
 
             java_resolution_analysis.TryAdd
                                         (
-                                            "net7.0-android", 
-                                            new ConcurrentDictionary
-                                                        <
-                                                            string, 
-                                                            Dictionary
-                                                            <
-                                                                string, 
-                                                                (
-                                                                    string[] lines,                         // lines
-                                                                    Dictionary<string, int> types,          // types
-                                                                    Dictionary<string, int> types_filtered  // types
-                                                                )
-                                                            >
-                                                        >()
-                                        );
-            java_resolution_analysis.TryAdd
-                                        (
-                                            "net6.0-android", 
-                                            new ConcurrentDictionary
-                                                        <
-                                                            string, 
-                                                            Dictionary
-                                                            <
-                                                                string, 
-                                                                (
-                                                                    string[] lines,                         // lines
-                                                                    Dictionary<string, int> types,          // types
-                                                                    Dictionary<string, int> types_filtered  // types
-                                                                )
-                                                            >
-                                                        >()
-                                        );
-            java_resolution_analysis.TryAdd
-                                        (
-                                            "monoandroid12.0",
+                                            "net8.0-android", 
                                             new ConcurrentDictionary
                                                         <
                                                             string, 
@@ -1860,6 +1844,11 @@ Task("java-resolution-analysis")
                                 sb.AppendLine($"          file_new: {file_new}");
                                 Information(sb.ToString());
 
+                                if ( !System.IO.File.Exists(file) )
+                                {
+                                    return;
+                                }
+                                    
                                 System.IO.File.Copy(file, file_new, true);
 
                                 string[] lines = System.IO.File.ReadAllLines(file);

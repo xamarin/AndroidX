@@ -1,0 +1,35 @@
+variables:
+
+  BUILD_NUMBER: $(Build.BuildNumber)
+  BUILD_COMMIT: $(Build.SourceVersion)
+
+  # Build variables
+  mainBranchName: main                                                                  # Name of Git "main" branch
+  configuration: Release                                                                # Build configuration: 'Debug', 'Release'
+  verbosity: 'normal'                                                                   # Build verbosity: 'minimal', 'normal', 'diagnostic'
+
+  # Reporting variables
+  areaPath: DevDiv\VS Client - Runtime SDKs\Android                                     # AzDo area path to log any issues
+
+  # Windows specific variables
+  windowsAgentPoolName: Maui-1ESPT                                                      # Windows VM pool name
+  windowsImage: 1ESPT-Windows2022                                                       # Windows VM image name
+  
+  # macOS specific variables
+  macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
+  macosImage: internal-macos12                                                          # macOS VM image name
+  
+  # Tool variables
+  dotnetVersion: '8.0.400'                                                              # .NET version to install on agent
+  dotnetWorkloadRollbackFile: 'workloads.json'                                          # Rollback file specifying workload versions to install
+  dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'                           # NuGet.org URL to find workloads
+  dotnetWorkloadSource: 'https://aka.ms/dotnet6/nuget/index.json'                       # .NET engineering URL to find workloads
+
+  # Standard test variables
+  standardTestProject: tests/allpackages/AllPackagesTests.csproj                              # Standard tests project file
+  standardTestAssembly: tests/allpackages/bin/$(configuration)/net8.0/AllPackagesTests.dll    # Standard tests compiled binary
+
+  # Extended test variables
+  extendedTestProject: tests/extended/ExtendedTests.csproj                              # Extended tests project file
+  extendedTestAssembly: tests/extended/bin/$(configuration)/net8.0/ExtendedTests.dll    # Extended tests compiled binary
+

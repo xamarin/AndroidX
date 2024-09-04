@@ -20,11 +20,14 @@ Information("");
 
 // SECTION: Diff NuGets
 
-var nupkgs = GetFiles($"{ARTIFACTS_DIR}/**/*.nupkg");
+var nupkgs = GetFiles($"{ARTIFACTS_DIR}/*.nupkg");
 if (!nupkgs.Any()) {
 	Warning($"##vso[task.logissue type=warning]No NuGet packages were found.");
 } else {
 	Parallel.ForEach (nupkgs, nupkg => {
+		// See https://github.com/xamarin/AndroidX/issues/916
+		if (nupkg.FullPath.Contains ("Xamarin.AndroidX.Car.App.App"))
+		  return;
 		var version = "--latest";
 		var versionFile = nupkg.FullPath + ".baseversion";
 		if (FileExists(versionFile)) {
@@ -59,6 +62,14 @@ if (nu_diffs.Any()) {
           input.CopyTo(output);
           Console.WriteLine();
       }
+      
+      // Delete the individual file because it makes the assembly diffs hard to find
+      System.IO.File.Delete(file.FullPath);
+      
+      var dir = System.IO.Path.GetDirectoryName(file.FullPath);
+      
+      if (System.IO.Directory.GetFileSystemEntries(dir).Length == 0)
+          System.IO.Directory.Delete(dir);
     }
   }
 }

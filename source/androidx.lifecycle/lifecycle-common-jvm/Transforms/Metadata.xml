@@ -1,0 +1,33 @@
+﻿<metadata>
+    <!--
+    mc++
+	<remove-node path="/api/package[@name='androidx.lifecycle']/interface[@name='LifecycleRegistryOwner']" />
+
+	<remove-node path="/api/package[@name='androidx.lifecycle']/interface[@name='ReportFragment.ActivityInitializationListener']" />
+    -->
+    
+    <!--    
+    <attr
+        path="//class[@visibility='']"
+        name="visibility"
+        >
+        public
+    </attr>
+    -->
+
+    <remove-node path="/api/package[@name='androidx.lifecycle']/*[@name='OnLifecycleEvent']" />
+
+    <attr 
+        path="/api/package[@name='androidx.lifecycle']/class[@name='SingleGeneratedAdapterObserver']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr 
+        path="/api/package[@name='androidx.lifecycle']/class[@name='CompositeGeneratedAdaptersObserver']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+</metadata>

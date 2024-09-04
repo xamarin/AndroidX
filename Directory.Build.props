@@ -6,15 +6,12 @@
     <RepositoryCommit>$(BUILD_SOURCEVERSION)</RepositoryCommit>
 
     <!-- Default TFM's we build for -->
-    <_DefaultTargetFrameworks>net7.0-android</_DefaultTargetFrameworks>
-
-    <!-- Use an updated 'generator' -->
-    <!-- It's ok to use "Windows" here because we only use managed code from this package -->
-    <_BindingsToolsLocation>$(MSBuildThisFileDirectory)/tools/Microsoft.Android.Sdk.Windows.34.0.95/tools/</_BindingsToolsLocation>
+    <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
+    <_DefaultNetTargetFrameworks>net8.0</_DefaultNetTargetFrameworks>
     
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
-    
+
     <!-- Opt out of C#8 features to maintain compatibility with legacy -->
     <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
     <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
@@ -34,27 +31,28 @@
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
     <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
-
+    
     <!-- Common package metadata -->
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
+    <PackageReadmeFile Condition="Exists('$(MSBuildProjectDirectory)/readme.md')">readme.md</PackageReadmeFile>
 
     <!-- Exclude TF-specific transform files by default -->
     <DefaultTransformExcludes>**/*.MonoAndroid*.0.xml;**/*.net*.0-android.xml</DefaultTransformExcludes>
   </PropertyGroup>
-  
+
   <!-- Folders that .targets files need to go into -->
   <ItemGroup>
-    <AndroidXNuGetTargetFolders Include="build\net7.0-android33.0" />
-    <AndroidXNuGetTargetFolders Include="buildTransitive\net7.0-android33.0" />
+    <AndroidXNuGetTargetFolders Include="build\net8.0-android34.0" />
+    <AndroidXNuGetTargetFolders Include="buildTransitive\net8.0-android34.0" />
   </ItemGroup>
 
   <!-- Folders that _._ files need to go into for packages without managed libraries -->
   <ItemGroup>
-    <AndroidXNuGetLibFolders Include="lib\net7.0-android33.0" />
+    <AndroidXNuGetLibFolders Include="lib\net8.0-android34.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -201,17 +199,34 @@
     <AndroidNamespaceReplacement Include='protolayout' Replacement='ProtoLayout' />
     <AndroidNamespaceReplacement Include='quicksettings' Replacement='QuickSettings' />
     <AndroidNamespaceReplacement Include='contentcapture' Replacement='ContentCapture' />
+    <AndroidNamespaceReplacement Include='datasource' Replacement='DataSource' />
+    <AndroidNamespaceReplacement Include='cronet' Replacement='CroNet' />
     <AndroidNamespaceReplacement Include='resolutionselector' Replacement='ResolutionSelector' />
     <AndroidNamespaceReplacement Include='streamsharing' Replacement='StreamSharing' />
-    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />    
-    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />    
-    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />    
-    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />    
-    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />    
-    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />    
-    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />    
-    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />    
-    
-    
+    <AndroidNamespaceReplacement Include='domerrors' Replacement='DomErrors' />
+    <AndroidNamespaceReplacement Include='publickeycredential' Replacement='PublicKeyCredential' />
+    <AndroidNamespaceReplacement Include='playservices' Replacement='PlayServices' />
+    <AndroidNamespaceReplacement Include='webauthn' Replacement='WebAuthn' />
+    <AndroidNamespaceReplacement Include='reflectionguard' Replacement='ReflectionGuard' />
+    <AndroidNamespaceReplacement Include='Pulltorefresh' Replacement='PullToRefresh' />
+    <AndroidNamespaceReplacement Include='Mediacodec' Replacement='MediaCodec' />
+    <AndroidNamespaceReplacement Include='Smoothstreaming' Replacement='SmoothStreaming' />
+    <AndroidNamespaceReplacement Include='Trackselection' Replacement='TrackSelection' />
+    <AndroidNamespaceReplacement Include='Mediaparser' Replacement='MediaParser' />
+    <AndroidNamespaceReplacement Include='Workmanager' Replacement='WorkManager' />
+    <AndroidNamespaceReplacement Include='Interactivemedia' Replacement='InteractiveMedia' />
+    <AndroidNamespaceReplacement Include='Antmedia' Replacement='AntMedia' />
+    <AndroidNamespaceReplacement Include='RTMP' Replacement='Rtmp' />
+    <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />
+    <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />   
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
+    <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />    
   </ItemGroup>
+  
 </Project>
