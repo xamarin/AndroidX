@@ -19,7 +19,65 @@ public class TestAllIndividualPackages
 	// other packages, which causes a conflict when building the project.
 	static List<string> ignored_packages = [
 		"Xamarin.Google.Guava.ListenableFuture",
-		"Xamarin.Protobuf.Lite"
+		"Xamarin.Protobuf.Lite",
+		"Xamarin.GoogleAndroid.Libraries.Places.Compat",
+
+		// PlayServices packages
+		// - Duplicate managed types (due to Games.V2)
+		"Xamarin.GooglePlayServices.Games",
+
+		// - Duplicate Java types
+		"Xamarin.GooglePlayServices.Ads.Base",
+		"Xamarin.GooglePlayServices.Ads.Lite",
+		"Xamarin.GooglePlayServices.Gass",
+		"Xamarin.GooglePlayServices.Measurement.Base",
+		"Xamarin.GooglePlayServices.Measurement.Sdk",
+
+		// Firebase packages
+		// - Duplicate managed types (due to Xamarin.AndroidX.DataStore.Core.Android and Xamarin.AndroidX.DataStore.Core.Jvm)
+		"Xamarin.Firebase.Crashlytics",
+		"Xamarin.Firebase.Crashlytics.Ktx",
+		"Xamarin.Firebase.Crashlytics.NDK",
+		"Xamarin.Firebase.Perf",
+		"Xamarin.Firebase.Perf.Ktx",
+		"Xamarin.Firebase.Sessions",
+
+		// - Duplicate Java types
+		"Xamarin.Firebase.Analytics",
+		"Xamarin.Firebase.Analytics.Impl",
+		"Xamarin.Firebase.Analytics.Ktx",
+		"Xamarin.Firebase.AppIndexing",
+		"Xamarin.Firebase.Firestore",
+		"Xamarin.Firebase.Firestore.Ktx",
+		"Xamarin.Firebase.InAppMessaging",
+		"Xamarin.Firebase.InAppMessaging.Display",
+		"Xamarin.Firebase.InAppMessaging.Display.Ktx",
+		"Xamarin.Firebase.InAppMessaging.Ktx",
+		"Xamarin.Firebase.ML.Vision",
+		"Xamarin.Firebase.ML.Vision.AutoML",
+		"Xamarin.Firebase.ML.Vision.BarCode.Model",
+		"Xamarin.Firebase.ML.Vision.Face.Model",
+		"Xamarin.Firebase.ML.Vision.Image.Label.Model",
+		"Xamarin.Firebase.ML.Vision.Internal.Vkp",
+		"Xamarin.Firebase.ML.Vision.Object.Detection.Model",
+		"Xamarin.Firebase.ProtoliteWellKnownTypes",
+
+		// MLKit packages
+		// - Duplicate Java types
+		"Xamarin.Google.MLKit.FaceDetection",
+
+		// Google Play packages
+		// - Split into separate packages, these older ones cause duplicate bound types
+		"Xamarin.Google.Android.Play.Core",
+		"Xamarin.Google.Android.Play.Core.Common",
+		"Xamarin.Google.Android.Play.Core.Ktx",
+
+		// - Causes Kotlin.Stdlib version conflicts
+		"Xamarin.Google.Android.Play.App.Update.Ktx",
+		"Xamarin.Google.Android.Play.Asset.Delivery.Ktx",
+		"Xamarin.Google.Android.Play.Core.Ktx",
+		"Xamarin.Google.Android.Play.Feature.Delivery.Ktx",
+		"Xamarin.Google.Android.Play.Review.Ktx",
 	];
 
 	static TestAllIndividualPackages ()
@@ -60,16 +118,26 @@ public class TestAllIndividualPackages
 	[Test]
 	[Category ("Android")]
 	public Task TestAndroidDotNetAllPackages ()
-		=> TestAllPackages ("android");
+		=> TestAllPackages ("android", false);
+
+	[Test]
+	[Category ("Android")]
+	public Task TestAndroidDotNetAllGPSPackages ()
+		=> TestAllPackages ("android", true);
 
 	[Test]
 	[Category ("MAUI")]
 	public Task TestMauiAllPackages ()
-		=> TestAllPackages ("maui");
+		=> TestAllPackages ("maui", false);
 
-	async Task TestAllPackages (string template)
+	[Test]
+	[Category ("MAUI")]
+	public Task TestMauiAllGPSPackages ()
+		=> TestAllPackages ("maui", true);
+
+	async Task TestAllPackages (string template, bool isGps)
 	{
-		var case_dir = Path.Combine (base_dir, test_dir, template, $"AllPackagesTest");
+		var case_dir = Path.Combine (base_dir, test_dir, template, $"AllPackagesTest{(isGps ? "-GPS" : "")}");
 
 		// Test the package
 		try {
@@ -99,7 +167,7 @@ public class TestAllIndividualPackages
 		ReplaceInFile (proj_file, $";{net_version}-windows10.0.19041.0", "");
 
 		// Get all packages to test
-		var packages = GetAllPackages ();
+		var packages = GetAllPackages (isGps);
 
 		// Add the package
 		AddPackagesToProjectFile (proj_file, packages.ToArray ());
@@ -115,12 +183,17 @@ public class TestAllIndividualPackages
 		}
 	}
 
-	static IEnumerable<BinderatorConfigFileParser.ArtifactModel> GetAllPackages ()
+	static IEnumerable<BinderatorConfigFileParser.ArtifactModel> GetAllPackages (bool isGps)
 	{
 		var config_file = Path.Combine (base_dir, "config.json");
 		var config = BinderatorConfigFileParser.ParseConfigurationFile (config_file).Result;
 
-		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly) ?? Enumerable.Empty<BinderatorConfigFileParser.ArtifactModel> ();
+		var packages = config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly) ?? [];
+
+		if (isGps)
+			return packages.Where (p => p.TemplateSet == "gps");
+
+		return packages.Where (p => p.TemplateSet != "gps");
 	}
 
 	static void ReplaceInFile (string filename, string oldValue, string newValue)

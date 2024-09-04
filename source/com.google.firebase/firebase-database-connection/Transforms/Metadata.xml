@@ -1,0 +1,21 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.database.connection.idl']" name="managedName">Firebase.Database.Connection.Idl</attr>
+	<remove-node path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.firebase_database']" ></remove-node>
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase_database']"></remove-node>
+    
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<remove-node path="/api/package[@name='com.google.firebase.database.connection.idl']/class[@name='ConnectionConfig']/constructor[@name='ConnectionConfig' and count(parameter)=7 and parameter[1][@type='int'] and parameter[2][@type='com.google.firebase.database.connection.idl.HostInfoParcelable'] and parameter[3][@type='int'] and parameter[4][@type='java.util.List&lt;java.lang.String&gt;'] and parameter[5][@type='boolean'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='java.lang.String']]" />
+</metadata>

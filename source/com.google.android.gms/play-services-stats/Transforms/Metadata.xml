@@ -1,0 +1,7 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.stats']" name="managedName">Android.Gms.Stats</attr>
+    <attr path="/api/package[@name='com.google.android.gms.stats.internal']" name="managedName">Android.Gms.Stats.Internal</attr>
+    <attr path="/api/package[@name='com.google.android.gms.stats.netstats']" name="managedName">Android.Gms.Stats.NetStats</attr>
+
+</metadata>

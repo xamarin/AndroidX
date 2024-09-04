@@ -1,0 +1,5 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+
+</metadata>

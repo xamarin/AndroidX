@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.nl.smartreply.component']/class[@name='SmartReplyComponentRegistrar']/implements"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.mlkit.nl.smartreply.bundled.internal']/class[@name='ThickSmartReplyRegistrar']"
+        />
+</metadata>

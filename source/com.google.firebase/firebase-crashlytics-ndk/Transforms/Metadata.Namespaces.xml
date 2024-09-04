@@ -1,0 +1,15 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.firebase.crashlytics.ndk']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.NDK
+    </attr>
+	<attr
+        path="/api/package[@name='com.google.firebase']" 
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    
+</metadata>

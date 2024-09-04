@@ -1,0 +1,40 @@
+﻿<metadata>
+
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.compat']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Compat
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.compat.internal']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Compat.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.compat.ui']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Compat.UI
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget.internal']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.places.widget.internal.ui']"
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
+    </attr>    
+
+</metadata>

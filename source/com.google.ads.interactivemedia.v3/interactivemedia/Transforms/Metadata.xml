@@ -1,0 +1,18 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl']/class[@name='AdsRequestImpl']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl.data']/class[@name='AdsRenderingSettingsImpl']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl.util']/class[@name='IdentifierInfoFactory']"
+        />
+    <remove-node 
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl']/class[@name='JavaScriptMessageRouter']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.ads.interactivemedia.v3.impl.data']/class[@name='NetworkResponseData']"
+        />
+
+</metadata>

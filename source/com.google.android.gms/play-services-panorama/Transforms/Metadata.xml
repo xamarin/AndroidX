@@ -1,0 +1,24 @@
+﻿<metadata>
+
+	<attr path="/api/package[@name='com.google.android.gms.panorama']" name="managedName">Android.Gms.Panorama</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.panorama']/class[@name='Panorama']" name="managedName">PanoramaClass</attr>
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.panorama']/class[@name='Panorama']/field[@name='API']" name="managedName">API</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+<!--	<remove-node path="/api/package/class[contains(@name, 'zz')]" />-->
+<!--	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />-->
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+</metadata>

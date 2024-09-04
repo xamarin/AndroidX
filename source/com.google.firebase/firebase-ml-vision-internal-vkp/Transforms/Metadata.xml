@@ -1,0 +1,23 @@
+﻿<metadata>
+    <!-- Rename Namespaces -->
+    <attr 
+        path="/api/package[@name='com.google.firebase']" 
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.FirebaseML
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline']" 
+        name="managedName"
+        >
+        Android.Libraries.Vision.VisionKit.Pipeline
+    </attr>
+    
+    
+</metadata>

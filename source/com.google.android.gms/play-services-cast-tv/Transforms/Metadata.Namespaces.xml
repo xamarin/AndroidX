@@ -1,0 +1,45 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.cast.tv']" 
+        name="managedName"
+        >
+        Android.Gms.Cast.TV
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.cast.tv.auth']" 
+        name="managedName"
+        >
+        Android.Gms.Cast.TV.Auth
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.cast.tv.cac']" 
+        name="managedName"
+        >
+        Android.Gms.Cast.TV.CAC
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.cast.tv.internal']" 
+        name="managedName"
+        >
+        Android.Gms.Cast.TV.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.cast.tv.media']" 
+        name="managedName"
+        >
+        Android.Gms.Cast.TV.Media
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.cast_tv_dynamite']" 
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Descriptors.Gms.CastTVDynamite
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.cast_tv']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.CastTV
+    </attr>
+
+</metadata>

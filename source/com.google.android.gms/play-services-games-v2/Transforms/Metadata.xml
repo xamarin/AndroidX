@@ -1,0 +1,219 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardVariantEntity']/implements"
+        />
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GameRef']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="false" bridge="false" native="false"  
+            return-not-null="true" synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardRef']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="false" bridge="false" native="false"  
+            return-not-null="true" synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardEntity']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="false" bridge="false" native="false"  
+            return-not-null="true" synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageRef']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="false" bridge="false" native="false"  
+            return-not-null="true" synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+    <attr
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventRef']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="false" bridge="false" native="false"  
+            return-not-null="true" synchronized="false" synthetic="false" 
+            >
+        </method>
+    </add-node>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.stats']/class[@name='PlayerStatsBuffer']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+    </add-node>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardBuffer']"
+        >
+        <method
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get"
+            override="false" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+        <method
+            visibility="protected" static="false" abstract="false" return="java.lang.Object" name="getEntry" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            override="false"
+            >
+            <parameter type="int" name="p0">
+            </parameter>
+            <parameter type="int" name="p1">
+            </parameter>
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventBuffer']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardScoreBuffer']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataBuffer']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="get" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+            <parameter type="int" name="position">
+            </parameter>
+        </method>
+    </add-node>
+    <attr
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/class[@name='RoomEntity']"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/class[@name='RoomEntity']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="describeContents" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false"
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeEntity']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="describeContents" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false"
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerEntity']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="describeContents" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false"
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="describeContents" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false"
+            >
+        </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantEntity']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="describeContents" 
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false"
+            >
+        </method>
+    </add-node>
+    <attr
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']/method[@name='freeze' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+</metadata>

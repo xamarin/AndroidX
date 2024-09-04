@@ -1,0 +1,35 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_digitalink']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionDigitalInk
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.digitalink']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.DigitalInk
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.digitalink.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.DigitalInk.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.digitalink.downloading']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.DigitalInk.Downloading
+    </attr>
+
+</metadata>

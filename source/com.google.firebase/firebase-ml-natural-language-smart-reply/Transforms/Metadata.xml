@@ -1,0 +1,21 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.common']"
+        name="managedName"
+        >
+        Firebase.ML.Common
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml_naturallanguage']"
+        name="managedName"
+        >
+        Android.Gms.Internal.FirebaseMLNaturalLanguage
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.predictondevice']"
+        name="managedName"
+        >
+        Android.Gms.PredictOnDevice
+    </attr>
+    
+</metadata>

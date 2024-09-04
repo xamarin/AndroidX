@@ -1,0 +1,15 @@
+﻿<metadata>
+  <!-- namespaces -->
+  <attr path="/api/package[@name='com.android.billingclient']" name="managedName">Android.BillingClient</attr>
+  <attr path="/api/package[@name='com.android.billingclient.api']" name="managedName">Android.BillingClient.Api</attr>
+
+  <!-- These just produce warnings but aren't part of the public API -->
+  <remove-node path="/api/package[@name='com.android.billingclient.api']/class[@name='QueryProductDetailsParams']/method[@name='zza' and count(parameter)=0]" />
+  <remove-node path="/api/package[@name='com.google.android.gms.internal.play_billing']" />
+  
+  <attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='consumeAsync']" name="managedName">Consume</attr>
+  <attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='queryPurchaseHistoryAsync']" name="managedName">QueryPurchaseHistory</attr>
+  <attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='querySkuDetailsAsync']" name="managedName">QuerySkuDetails</attr>
+  <attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='queryProductDetailsAsync']" name="managedName">QueryProductDetails</attr>
+  <attr path="/api/package[@name='com.android.billingclient.api']/class[@name='BillingClient']/method[@name='queryPurchasesAsync']" name="managedName">QueryPurchases</attr>
+</metadata>

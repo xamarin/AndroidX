@@ -1,0 +1,27 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_text_bundled_common']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionTextBundledCommon
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Vision.VisionKit.Pipeline
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline.alt']" 
+        name="managedName"
+        >
+        Xamarin.GoogleAndroid.Libraries.Vision.VisionKit.Pipeline.Alt
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text.pipeline']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text.Pipeline
+    </attr>
+
+</metadata>

@@ -1,0 +1,36 @@
+﻿<metadata>
+
+	<attr path="/api/package[@name='com.google.android.gms.gcm']" name="managedName">Android.Gms.Gcm</attr>
+	<attr path="/api/package[@name='com.google.android.gms.iid']" name="managedName">Android.Gms.Gcm.Iid</attr>
+
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Android.Gms.Gcm.Task</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setPersisted' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setRequiredNetwork' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setRequiresCharging' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setService' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;? extends com.google.android.gms.gcm.GcmTaskService&gt;']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setTag' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='OneoffTask.Builder']/method[@name='setUpdateCurrent' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='build' and count(parameter)=0]" name="managedReturn">Android.Gms.Gcm.Task</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setPersisted' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setRequiredNetwork' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setRequiresCharging' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setService' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;? extends com.google.android.gms.gcm.GcmTaskService&gt;']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setTag' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.gcm']/class[@name='PeriodicTask.Builder']/method[@name='setUpdateCurrent' and count(parameter)=1 and parameter[1][@type='boolean']]" name="managedReturn">Android.Gms.Gcm.Task.Builder</attr>
+   
+
+</metadata>

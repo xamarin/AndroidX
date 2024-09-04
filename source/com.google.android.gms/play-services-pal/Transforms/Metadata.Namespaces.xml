@@ -1,0 +1,23 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.ads.interactivemedia.pal']" 
+        name="managedName"
+        >
+        Google.Ads.InteractiveMedia.PAL
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.pal']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.PAL
+    </attr>
+
+    <attr 
+    path="/api/package[@name='com.google.ads.interactivemedia.pal.utils']"
+        name="managedName"
+        >
+        Google.Ads.InteractiveMedia.PAL.Utils
+    </attr>
+
+
+</metadata>

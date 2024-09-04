@@ -1,0 +1,81 @@
+﻿
+<metadata>
+
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.drive']" name="managedName">Android.Gms.Drive</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']" name="managedName">Android.Gms.Drive.Events</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.metadata']" name="managedName">Android.Gms.Drive.MetadataTypes</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.query']" name="managedName">Android.Gms.Drive.Query</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.widget']" name="managedName">Android.Gms.Drive.Widget</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='Drive']" name="managedName">DriveClass</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.query']/class[@name='Query']" name="managedName">QueryClass</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='Drive']/field[@name='API']" name="managedName">API</attr>
+
+
+        <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='OnChangeListener']/method[@name='onChange']" name="argsType">ChangeEventEventArgs</attr>
+
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" name="argsType">OnChangeEventEventArgs</attr>
+
+    
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.events.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.query.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.metadata.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.drive.realtime.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzf' and @name != 'zzc' and @name != 'zzh']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<!-- The ctor here takes an internal type as a parameter, so assuming the ctor isn't meant to be publicly used -->
+	<remove-node path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataChangeSet']/constructor[@name='MetadataChangeSet']" />
+
+	<!-- Fix up inheritence from covariant types -->
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='MetadataBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+<!--	<attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='zzh']" name="obfuscated">false</attr>-->
+<!--	<attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='zzi']" name="obfuscated">false</attr>-->
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.drive.events']/*[@extends='com.google.android.gms.drive.events.zzi']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.drive.events']/*/implements[@name='com.google.android.gms.drive.events.zzi']" />
+
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']/*[@extends='com.google.android.gms.drive.events.zzh']" name="extends">java.lang.Thread</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']/*[@extends='com.google.android.gms.drive.events.zzh']" name="extends-generic-aware">java.lang.Thread</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']/*/implements[@name='com.google.android.gms.drive.events.zzh']" name="name">java.lang.Thread</attr>
+	<attr path="/api/package[@name='com.google.android.gms.drive.events']/*/implements[@name='com.google.android.gms.drive.events.zzh']" name="name-generic-aware">java.lang.Thread</attr>
+
+    <!-- From CreateFileActivityOptions -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzq']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.internal.zzq']" name="extends-generic-aware">java.lang.Object</attr>
+
+    <attr path="/api/package/*[@extends='com.google.android.gms.drive.zzi']" name="extends">java.lang.Object</attr>
+
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='OnChangeListener']/method[@name='onChange']" name="argsType">SomeOtherTypeEventArgs</attr>
+    <!--<attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']" name="managedName">DeprecatedChangeListener</attr>-->
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" name="argsType">SomeTypeEventArgs</attr>
+    <attr path="/api/package[@name='com.google.android.gms.drive.events']/interface[@name='ChangeListener']/method[@name='onChange']" name="eventName"></attr>
+
+    <attr path="/api/package[@name='com.google.android.gms.drive']/class[@name='CreateFileActivityOptions.Builder']/field[@name='builder']" name="managedName">FileBuilder</attr>
+
+
+</metadata>

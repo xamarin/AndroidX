@@ -1,0 +1,11 @@
+﻿<metadata>
+  <attr path="/api/package[@name='com.google.firebase.annotations']" name="managedName">Firebase.Annotations</attr>
+
+  <attr 
+    path="/api/package[@name='com.google.firebase.annotations.concurrent']" 
+    name="managedName"
+    >
+    Firebase.Annotations.Concurrent
+  </attr>
+
+</metadata>

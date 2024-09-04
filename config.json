@@ -5,6 +5,7 @@
     "strictRuntimeDependencies": true,
     "additionalProjects": [
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj",
+      "source/com.google.android.gms/play-services-basement/buildtasks/Basement-BuildTasks.csproj",
       "util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.csproj",
       "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.csproj",
       "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool/Xamarin.AndroidBinderator.Tool.csproj"
@@ -2331,6 +2332,24 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "com.android.billingclient",
+        "artifactId": "billing",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0.1",
+        "nugetId": "Xamarin.Android.Google.BillingClient",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.android.billingclient",
+        "artifactId": "billing-ktx",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0.1",
+        "nugetId": "Xamarin.Android.Google.BillingClient.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
         "groupId": "com.android.installreferrer",
         "artifactId": "installreferrer",
         "version": "1.1.2",
@@ -2340,6 +2359,69 @@
         "frozen": true,
         "templateSet": "installreferrer",
         "comments": "Changed from Apache to Android SDK License"
+      },
+      {
+        "groupId": "com.android.volley",
+        "artifactId": "volley",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1.12",
+        "nugetId": "Xamarin.Android.Volley",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.android.volley",
+        "artifactId": "volley-cronet",
+        "version": "1.2.1",
+        "nugetVersion": "1.2.1.12",
+        "nugetId": "Xamarin.Android.Volley.CroNet",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "annotations",
+        "version": "4.16.0",
+        "nugetVersion": "4.16.0.6",
+        "nugetId": "Xamarin.Android.Glide.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "disklrucache",
+        "version": "4.16.0",
+        "nugetVersion": "4.16.0.6",
+        "nugetId": "Xamarin.Android.Glide.DiskLruCache",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "gifdecoder",
+        "version": "4.16.0",
+        "nugetVersion": "4.16.0.6",
+        "nugetId": "Xamarin.Android.Glide.GifDecoder",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "glide",
+        "version": "4.16.0",
+        "nugetVersion": "4.16.0.6",
+        "nugetId": "Xamarin.Android.Glide",
+        "dependencyOnly": false,
+        "templateSet": "glide"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
+        "artifactId": "recyclerview-integration",
+        "version": "4.16.0",
+        "nugetVersion": "4.16.0.6",
+        "nugetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
+        "dependencyOnly": false,
+        "templateSet": "glide"
       },
       {
         "groupId": "com.google.accompanist",
@@ -2442,6 +2524,15 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "com.google.ads.interactivemedia.v3",
+        "artifactId": "interactivemedia",
+        "version": "3.33.0",
+        "nugetVersion": "3.33.0",
+        "nugetId": "Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
         "groupId": "com.google.android",
         "artifactId": "annotations",
         "version": "4.1.1.4",
@@ -2479,6 +2570,814 @@
         "type": "androidlibrary"
       },
       {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "extraDependencies": "androidx.lifecycle.lifecycle-livedata-core,androidx.lifecycle.lifecycle-runtime",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-base",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-identifier",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-ads-lite",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
+        "dependencyOnly": false,
+        "extraDependencies": "androidx.lifecycle.lifecycle-livedata-core,androidx.lifecycle.lifecycle-runtime",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-afs-native",
+        "version": "19.1.0",
+        "nugetVersion": "119.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.AFS.Native",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-analytics",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Analytics",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-analytics-impl",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Analytics.Impl",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appindex",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.AppIndex",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appinvite",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.AppInvite",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-appset",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.AppSet",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-audience",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Audience",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-auth",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Auth",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-auth-api-phone",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Auth.Api.Phone",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-auth-base",
+        "version": "18.0.13",
+        "nugetVersion": "118.0.13.1",
+        "nugetId": "Xamarin.GooglePlayServices.Auth.Base",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-auth-blockstore",
+        "version": "16.4.0",
+        "nugetVersion": "116.4.0",
+        "nugetId": "Xamarin.GooglePlayServices.Auth.Blockstore",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-awareness",
+        "version": "19.1.0",
+        "nugetVersion": "119.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Awareness",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-base",
+        "version": "18.5.0",
+        "nugetVersion": "118.5.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Base",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-basement",
+        "version": "18.4.0",
+        "nugetVersion": "118.4.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Basement",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cast",
+        "version": "21.5.0",
+        "nugetVersion": "121.5.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Cast",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cast-framework",
+        "version": "21.5.0",
+        "nugetVersion": "121.5.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cast-tv",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Cast.TV",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-clearcut",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Clearcut",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cloud-messaging",
+        "version": "17.3.0",
+        "nugetVersion": "117.3.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.CloudMessaging",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-code-scanner",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.7",
+        "nugetId": "Xamarin.GooglePlayServices.Code.Scanner",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-cronet",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.CroNet",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-deviceperformance",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.DevicePerformance",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-drive",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.18",
+        "nugetId": "Xamarin.GooglePlayServices.Drive",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-fido",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Fido",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-fitness",
+        "version": "21.2.0",
+        "nugetVersion": "121.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Fitness",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-flags",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Flags",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-games",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Games",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-games-v2",
+        "version": "20.1.2",
+        "nugetVersion": "120.1.2.1",
+        "nugetId": "Xamarin.GooglePlayServices.Games.V2",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-gass",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Gass",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-gcm",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Gcm",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-home",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.10",
+        "nugetId": "Xamarin.GooglePlayServices.Home",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-identity",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Identity",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-iid",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Iid",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-instantapps",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.InstantApps",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-location",
+        "version": "21.3.0",
+        "nugetVersion": "121.3.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Location",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-maps",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Maps",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-api",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-base",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-impl",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-sdk",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-measurement-sdk-api",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-barcode-scanning",
+        "version": "18.3.0",
+        "nugetVersion": "118.3.0.7",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.BarcodeScanning",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-face-detection",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.10",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.FaceDetection",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-image-labeling",
+        "version": "16.0.8",
+        "nugetVersion": "116.0.8.10",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.ImageLabeling",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-language-id",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.12",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.LanguageId",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-chinese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Chinese",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-common",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Common",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-devanagari",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Devanagari",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-japanese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Japanese",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-mlkit-text-recognition-korean",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.GooglePlayServices.MLKit.Text.Recognition.Korean",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-nearby",
+        "version": "19.3.0",
+        "nugetVersion": "119.3.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Nearby",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-oss-licenses",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Oss.Licenses",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-pal",
+        "version": "20.3.0",
+        "nugetVersion": "120.3.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.PAL",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-panorama",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.7",
+        "nugetId": "Xamarin.GooglePlayServices.Panorama",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-password-complexity",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.PasswordComplexity",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-pay",
+        "version": "16.5.0",
+        "nugetVersion": "116.5.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Pay",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-phenotype",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Phenotype",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-places",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Places",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-places-placereport",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Places.PlaceReport",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-plus",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.18",
+        "nugetId": "Xamarin.GooglePlayServices.Plus",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-recaptcha",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Recaptcha",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-safetynet",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.SafetyNet",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-stats",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Stats",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-streamprotect",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.StreamProtect",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tagmanager",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.TagManager",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tagmanager-api",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.TagManager.Api",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tagmanager-v4-impl",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.TagManager.V4.Impl",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tasks",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Tasks",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-gpu",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Gpu",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-impl",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-java",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Java",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-support",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Support",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-threadnetwork",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1.1",
+        "nugetId": "Xamarin.GooglePlayServices.ThreadNetwork",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-vision",
+        "version": "20.1.3",
+        "nugetVersion": "120.1.3.17",
+        "nugetId": "Xamarin.GooglePlayServices.Vision",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-vision-common",
+        "version": "19.1.3",
+        "nugetVersion": "119.1.3.19",
+        "nugetId": "Xamarin.GooglePlayServices.Vision.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-vision-face-contour-internal",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Vision.Face.Contour.Internal",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-vision-image-label",
+        "version": "18.1.1",
+        "nugetVersion": "118.1.1.17",
+        "nugetId": "Xamarin.GooglePlayServices.Vision.ImageLabel",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-vision-image-labeling-internal",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.17",
+        "nugetId": "Xamarin.GooglePlayServices.Vision.ImageLabelingInternal",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-wallet",
+        "version": "19.4.0",
+        "nugetVersion": "119.4.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Wallet",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.gms",
+        "artifactId": "play-services-wearable",
+        "version": "18.2.0",
+        "nugetVersion": "118.2.0.1",
+        "nugetId": "Xamarin.GooglePlayServices.Wearable",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.libraries.identity.googleid",
+        "artifactId": "googleid",
+        "version": "1.1.0",
+        "nugetVersion": "1.1.0.5",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Identity.GoogleId",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.libraries.places",
+        "artifactId": "places",
+        "version": "3.5.0",
+        "nugetVersion": "3.5.0.1",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Places",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.libraries.places",
+        "artifactId": "places-compat",
+        "version": "2.6.0",
+        "nugetVersion": "2.6.0.9",
+        "nugetId": "Xamarin.GoogleAndroid.Libraries.Places.Compat",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
         "version": "1.1.18",
@@ -2507,6 +3406,141 @@
         "dependencyOnly": false,
         "frozen": true,
         "comments": "Requires API-34"
+      },
+      {
+        "groupId": "com.google.android.odml",
+        "artifactId": "image",
+        "version": "1.0.0-beta1",
+        "nugetVersion": "1.0.0.11-beta1",
+        "nugetId": "Xamarin.Google.Android.ODML.Image",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "app-update",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0.10",
+        "nugetId": "Xamarin.Google.Android.Play.App.Update",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "app-update-ktx",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0.10",
+        "nugetId": "Xamarin.Google.Android.Play.App.Update.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "asset-delivery",
+        "version": "2.2.2",
+        "nugetVersion": "2.2.2.1",
+        "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "asset-delivery-ktx",
+        "version": "2.2.2",
+        "nugetVersion": "2.2.2.1",
+        "nugetId": "Xamarin.Google.Android.Play.Asset.Delivery.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "core",
+        "version": "1.10.3",
+        "nugetVersion": "1.10.3.13",
+        "nugetId": "Xamarin.Google.Android.Play.Core",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "core-common",
+        "version": "2.0.4",
+        "nugetVersion": "2.0.4.1",
+        "nugetId": "Xamarin.Google.Android.Play.Core.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "core-ktx",
+        "version": "1.8.1",
+        "nugetVersion": "1.8.1.10",
+        "nugetId": "Xamarin.Google.Android.Play.Core.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "feature-delivery",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0.9",
+        "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "feature-delivery-ktx",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0.9",
+        "nugetId": "Xamarin.Google.Android.Play.Feature.Delivery.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "integrity",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0",
+        "nugetId": "Xamarin.Google.Android.Play.Integrity",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "review",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1.10",
+        "nugetId": "Xamarin.Google.Android.Play.Review",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.play",
+        "artifactId": "review-ktx",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1.10",
+        "nugetId": "Xamarin.Google.Android.Play.Review.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.recaptcha",
+        "artifactId": "recaptcha",
+        "version": "18.5.1",
+        "nugetVersion": "18.5.1.1",
+        "nugetId": "Xamarin.Google.Android.Recaptcha",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.android.tv",
+        "artifactId": "tv-ads",
+        "version": "1.0.0",
+        "nugetVersion": "1.0.0.1",
+        "nugetId": "Xamarin.GoogleAndroid.TV.Ads",
+        "dependencyOnly": false,
+        "templateSet": "gps"
       },
       {
         "groupId": "com.google.android.ump",
@@ -2597,6 +3631,712 @@
         "dependencyOnly": false,
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-abt",
+        "version": "22.0.0",
+        "nugetVersion": "122.0.0.1",
+        "nugetId": "Xamarin.Firebase.Abt",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ads",
+        "version": "23.0.0",
+        "nugetVersion": "123.0.0",
+        "nugetId": "Xamarin.Firebase.Ads",
+        "dependencyOnly": false,
+        "extraDependencies": "androidx.lifecycle.lifecycle-livedata-core",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ads-lite",
+        "version": "23.0.0",
+        "nugetVersion": "123.0.0",
+        "nugetId": "Xamarin.Firebase.Ads.Lite",
+        "dependencyOnly": false,
+        "extraDependencies": "androidx.lifecycle.lifecycle-livedata-core,androidx.lifecycle.lifecycle-runtime",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-analytics",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.Firebase.Analytics",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-analytics-impl",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0.17",
+        "nugetId": "Xamarin.Firebase.Analytics.Impl",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-analytics-ktx",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
+        "nugetId": "Xamarin.Firebase.Analytics.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-annotations",
+        "version": "16.2.0",
+        "nugetVersion": "116.2.0.9",
+        "nugetId": "Xamarin.Firebase.Annotations",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.AppCheck",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck-debug",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.AppCheck.Debug",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck-interop",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.5",
+        "nugetId": "Xamarin.Firebase.AppCheck.Interop",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck-ktx",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.AppCheck.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck-playintegrity",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.AppCheck.PlayIntegrity",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appcheck-safetynet",
+        "version": "16.1.2",
+        "nugetVersion": "116.1.2.9",
+        "nugetId": "Xamarin.Firebase.AppCheck.SafetyNet",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-appindexing",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.20",
+        "nugetId": "Xamarin.Firebase.AppIndexing",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-auth",
+        "version": "22.3.1",
+        "nugetVersion": "122.3.1.3",
+        "nugetId": "Xamarin.Firebase.Auth",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-auth-interop",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.17",
+        "nugetId": "Xamarin.Firebase.Auth.Interop",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-auth-ktx",
+        "version": "22.3.1",
+        "nugetVersion": "122.3.1.3",
+        "nugetId": "Xamarin.Firebase.Auth.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-common",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-common-ktx",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Common.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-components",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.Components",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-config",
+        "version": "22.0.0",
+        "nugetVersion": "122.0.0.1",
+        "nugetId": "Xamarin.Firebase.Config",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-config-interop",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1.3",
+        "nugetId": "Xamarin.Firebase.Config.Interop",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-config-ktx",
+        "version": "22.0.0",
+        "nugetVersion": "122.0.0.1",
+        "nugetId": "Xamarin.Firebase.Config.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-core",
+        "version": "21.1.1",
+        "nugetVersion": "121.1.1.10",
+        "nugetId": "Xamarin.Firebase.Core",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-crash",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1.17",
+        "nugetId": "Xamarin.Firebase.Crash",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-crashlytics",
+        "version": "19.0.3",
+        "nugetVersion": "119.0.3.1",
+        "nugetId": "Xamarin.Firebase.Crashlytics",
+        "dependencyOnly": false,
+        "extraDependencies": "com.google.dagger.dagger",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-crashlytics-ktx",
+        "version": "19.0.3",
+        "nugetVersion": "119.0.3.1",
+        "nugetId": "Xamarin.Firebase.Crashlytics.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-crashlytics-ndk",
+        "version": "19.0.3",
+        "nugetVersion": "119.0.3.1",
+        "nugetId": "Xamarin.Firebase.Crashlytics.NDK",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-database",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Database",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-database-collection",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.10",
+        "nugetId": "Xamarin.Firebase.Database.Collection",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-database-connection",
+        "version": "16.0.2",
+        "nugetVersion": "116.0.2.17",
+        "nugetId": "Xamarin.Firebase.Database.Connection",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-database-ktx",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Database.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-datatransport",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0.1",
+        "nugetId": "Xamarin.Firebase.Datatransport",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-dynamic-links",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0.1",
+        "nugetId": "Xamarin.Firebase.Dynamic.Links",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-dynamic-links-ktx",
+        "version": "22.1.0",
+        "nugetVersion": "122.1.0.1",
+        "nugetId": "Xamarin.Firebase.Dynamic.Links.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Firebase.Encoders",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders-json",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.9",
+        "nugetId": "Xamarin.Firebase.Encoders.JSON",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders-proto",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.12",
+        "nugetId": "Xamarin.Firebase.Encoders.Proto",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-firestore",
+        "version": "25.0.0",
+        "nugetVersion": "125.0.0.1",
+        "nugetId": "Xamarin.Firebase.Firestore",
+        "dependencyOnly": false,
+        "extraDependencies": "com.google.guava.guava",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-firestore-ktx",
+        "version": "25.0.0",
+        "nugetVersion": "125.0.0.1",
+        "nugetId": "Xamarin.Firebase.Firestore.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-functions",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Functions",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-functions-ktx",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Functions.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-iid",
+        "version": "21.1.0",
+        "nugetVersion": "121.1.0.17",
+        "nugetId": "Xamarin.Firebase.Iid",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-iid-interop",
+        "version": "17.1.0",
+        "nugetVersion": "117.1.0.17",
+        "nugetId": "Xamarin.Firebase.Iid.Interop",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-inappmessaging",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.InAppMessaging",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-inappmessaging-display",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.InAppMessaging.Display",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-inappmessaging-display-ktx",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.InAppMessaging.Display.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-inappmessaging-ktx",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.InAppMessaging.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-installations",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.Installations",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-installations-interop",
+        "version": "17.2.0",
+        "nugetVersion": "117.2.0.5",
+        "nugetId": "Xamarin.Firebase.Installations.InterOp",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-installations-ktx",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.1",
+        "nugetId": "Xamarin.Firebase.Installations.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-invites",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Firebase.Invites",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-measurement-connector",
+        "version": "20.0.1",
+        "nugetVersion": "120.0.1.5",
+        "nugetId": "Xamarin.Firebase.Measurement.Connector",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-messaging",
+        "version": "24.0.0",
+        "nugetVersion": "124.0.0.1",
+        "nugetId": "Xamarin.Firebase.Messaging",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-messaging-directboot",
+        "version": "24.0.0",
+        "nugetVersion": "124.0.0.1",
+        "nugetId": "Xamarin.Firebase.Messaging.DirectBoot",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-messaging-ktx",
+        "version": "24.0.0",
+        "nugetVersion": "124.0.0.1",
+        "nugetId": "Xamarin.Firebase.Messaging.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-common",
+        "version": "22.1.2",
+        "nugetVersion": "122.1.2.17",
+        "nugetId": "Xamarin.Firebase.ML.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-model-interpreter",
+        "version": "22.0.4",
+        "nugetVersion": "122.0.4.17",
+        "nugetId": "Xamarin.Firebase.ML.Model.Interpreter",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-natural-language",
+        "version": "22.0.1",
+        "nugetVersion": "122.0.1.17",
+        "nugetId": "Xamarin.Firebase.ML.Natural.Language",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-natural-language-language-id-model",
+        "version": "20.0.8",
+        "nugetVersion": "120.0.8.17",
+        "nugetId": "Xamarin.Firebase.ML.Natural.Language.Id.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-natural-language-smart-reply",
+        "version": "18.0.8",
+        "nugetVersion": "118.0.8.17",
+        "nugetId": "Xamarin.Firebase.ML.Natural.Language.Smart.Reply",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-natural-language-smart-reply-model",
+        "version": "20.0.8",
+        "nugetVersion": "120.0.8.17",
+        "nugetId": "Xamarin.Firebase.ML.Natural.Language.Smart.Reply.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-natural-language-translate",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2.16",
+        "nugetId": "Xamarin.Firebase.ML.Natural.Language.Translate",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-natural-language-translate-model",
+        "version": "20.0.9",
+        "nugetVersion": "120.0.9.17",
+        "nugetId": "Xamarin.Firebase.ML.Natural.Language.Translate.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision",
+        "version": "24.1.0",
+        "nugetVersion": "124.1.0.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision-automl",
+        "version": "18.0.6",
+        "nugetVersion": "118.0.6.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision.AutoML",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision-barcode-model",
+        "version": "16.1.2",
+        "nugetVersion": "116.1.2.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision.BarCode.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision-face-model",
+        "version": "20.0.2",
+        "nugetVersion": "120.0.2.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision.Face.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision-image-label-model",
+        "version": "20.0.2",
+        "nugetVersion": "120.0.2.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision.Image.Label.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision-internal-vkp",
+        "version": "17.0.2",
+        "nugetVersion": "117.0.2.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision.Internal.Vkp",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-ml-vision-object-detection-model",
+        "version": "19.0.6",
+        "nugetVersion": "119.0.6.17",
+        "nugetId": "Xamarin.Firebase.ML.Vision.Object.Detection.Model",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-perf",
+        "version": "21.0.1",
+        "nugetVersion": "121.0.1.1",
+        "nugetId": "Xamarin.Firebase.Perf",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-perf-ktx",
+        "version": "21.0.1",
+        "nugetVersion": "121.0.1.1",
+        "nugetId": "Xamarin.Firebase.Perf.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-sessions",
+        "version": "2.0.3",
+        "nugetVersion": "102.0.3.1",
+        "nugetId": "Xamarin.Firebase.Sessions",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-storage",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Storage",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-storage-common",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Firebase.Storage.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-storage-ktx",
+        "version": "21.0.0",
+        "nugetVersion": "121.0.0.1",
+        "nugetId": "Xamarin.Firebase.Storage.Ktx",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "protolite-well-known-types",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.17",
+        "nugetId": "Xamarin.Firebase.ProtoliteWellKnownTypes",
+        "dependencyOnly": false,
+        "templateSet": "gps"
       },
       {
         "groupId": "com.google.flatbuffers",
@@ -2690,6 +4430,307 @@
         "nugetId": "Xamarin.Google.J2Objc.Annotations",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "barcode-scanning",
+        "version": "17.2.0",
+        "nugetVersion": "117.2.0.7",
+        "nugetId": "Xamarin.Google.MLKit.BarcodeScanning",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "barcode-scanning-common",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.12",
+        "nugetId": "Xamarin.Google.MLKit.BarcodeScanning.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "common",
+        "version": "18.10.0",
+        "nugetVersion": "118.10.0.4",
+        "nugetId": "Xamarin.Google.MLKit.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "digital-ink-recognition",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.9",
+        "nugetId": "Xamarin.Google.MLKit.DigitalInk.Recognition",
+        "dependencyOnly": false,
+        "extraDependencies": "androidx.lifecycle.lifecycle-livedata-core,androidx.lifecycle.lifecycle-runtime",
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "face-detection",
+        "version": "16.1.6",
+        "nugetVersion": "116.1.6.1",
+        "nugetId": "Xamarin.Google.MLKit.FaceDetection",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling",
+        "version": "17.0.8",
+        "nugetVersion": "117.0.8.1",
+        "nugetId": "Xamarin.Google.MLKit.ImageLabeling",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-automl",
+        "version": "16.2.1",
+        "nugetVersion": "116.2.1.18",
+        "nugetId": "Xamarin.Google.MLKit.ImageLabeling.AutoML",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-common",
+        "version": "18.1.0",
+        "nugetVersion": "118.1.0.10",
+        "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Common",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-custom",
+        "version": "17.0.2",
+        "nugetVersion": "117.0.2.4",
+        "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Custom",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-custom-common",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.12",
+        "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Custom.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "image-labeling-default-common",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.12",
+        "nugetId": "Xamarin.Google.MLKit.ImageLabeling.Default.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "language-id",
+        "version": "17.0.5",
+        "nugetVersion": "117.0.5.1",
+        "nugetId": "Xamarin.Google.MLKit.Language.Id",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "language-id-common",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.10",
+        "nugetId": "Xamarin.Google.MLKit.Language.Id.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "linkfirebase",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.12",
+        "nugetId": "Xamarin.Google.MLKit.LinkFirebase",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "mediapipe-internal",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.17",
+        "nugetId": "Xamarin.Google.MLKit.MediaPipe.Internal",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "object-detection",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1.1",
+        "nugetId": "Xamarin.Google.MLKit.ObjectDetection",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "object-detection-common",
+        "version": "18.0.0",
+        "nugetVersion": "118.0.0.13",
+        "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Common",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "object-detection-custom",
+        "version": "17.0.1",
+        "nugetVersion": "117.0.1.4",
+        "nugetId": "Xamarin.Google.MLKit.ObjectDetection.Custom",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "pose-detection",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Google.MLKit.PoseDetection",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "pose-detection-accurate",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Google.MLKit.PoseDetection.Accurate",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "pose-detection-common",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Google.MLKit.PoseDetection.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "smart-reply",
+        "version": "17.0.3",
+        "nugetVersion": "117.0.3.1",
+        "nugetId": "Xamarin.Google.MLKit.SmartReply",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "smart-reply-common",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.10",
+        "nugetId": "Xamarin.Google.MLKit.SmartReply.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-bundled-common",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Bundled.Common",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-chinese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Chinese",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-devanagari",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Devanagari",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-japanese",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Japanese",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "text-recognition-korean",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.8",
+        "nugetId": "Xamarin.Google.MLKit.TextRecognition.Korean",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "translate",
+        "version": "17.0.2",
+        "nugetVersion": "117.0.2.4",
+        "nugetId": "Xamarin.Google.MLKit.Translate",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "vision-common",
+        "version": "17.3.0",
+        "nugetVersion": "117.3.0.10",
+        "nugetId": "Xamarin.Google.MLKit.Vision.Common",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "vision-interfaces",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0.4",
+        "nugetId": "Xamarin.Google.MLKit.Vision.Interfaces",
+        "dependencyOnly": false,
+        "templateSet": "gps"
+      },
+      {
+        "groupId": "com.google.mlkit",
+        "artifactId": "vision-internal-vkp",
+        "version": "18.2.2",
+        "nugetVersion": "118.2.2.12",
+        "nugetId": "Xamarin.Google.MLKit.Vision.Internal.Vkp",
+        "dependencyOnly": false,
+        "templateSet": "gps"
       },
       {
         "groupId": "com.google.protobuf",
@@ -3648,146 +5689,26 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-identifier",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
+        "artifactId": "play-services-ads-base",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-identifier",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
+        "artifactId": "play-services-ads-lite",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0",
+        "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
         "dependencyOnly": true
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-appindex",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.AppIndex",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-appset",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.AppSet",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-auth",
-        "version": "21.2.0",
-        "nugetVersion": "121.2.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Auth",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-base",
-        "version": "18.5.0",
-        "nugetVersion": "118.5.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Base",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-basement",
-        "version": "18.4.0",
-        "nugetVersion": "118.4.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Basement",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-cast-framework",
-        "version": "21.5.0",
-        "nugetVersion": "121.5.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Cast.Framework",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-cronet",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.CroNet",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-fido",
-        "version": "21.1.0",
-        "nugetVersion": "121.1.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Fido",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-tasks",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Tasks",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-tflite-impl",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.9",
-        "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
-        "artifactId": "play-services-wearable",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Wearable",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.libraries.identity.googleid",
-        "artifactId": "googleid",
-        "version": "1.1.0",
-        "nugetVersion": "1.1.0.5",
-        "nugetId": "Xamarin.GoogleAndroid.Libraries.Identity.GoogleId",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.odml",
-        "artifactId": "image",
-        "version": "1.0.0-beta1",
-        "nugetVersion": "1.0.0.11-beta1",
-        "nugetId": "Xamarin.Google.Android.ODML.Image",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.firebase",
-        "artifactId": "firebase-encoders",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0.17",
-        "nugetId": "Xamarin.Firebase.Encoders",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.firebase",
-        "artifactId": "firebase-encoders-json",
-        "version": "18.0.1",
-        "nugetVersion": "118.0.1.9",
-        "nugetId": "Xamarin.Firebase.Encoders.JSON",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.firebase",
-        "artifactId": "firebase-encoders-proto",
-        "version": "16.0.0",
-        "nugetVersion": "116.0.0.12",
-        "nugetId": "Xamarin.Firebase.Encoders.Proto",
+        "artifactId": "play-services-measurement-base",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
+        "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "dependencyOnly": true
       },
       {
@@ -3836,13 +5757,13 @@
         "spdx": "BSD-3-Clause"
       },
       {
-        "name": "BSD-3-Clause",
-        "file": "templates/licenses/bsd.txt",
-        "spdx": "BSD-3-Clause"
-      },
-      {
         "name": "Chromium and built-in dependencies",
         "file": "templates/licenses/chromium.txt"
+      },
+      {
+        "name": "Google Maps Platform Terms of Service",
+        "file": "templates/licenses/google-maps.txt",
+        "proprietary": true
       },
       {
         "name": "MIT License",
@@ -3855,6 +5776,21 @@
         "spdx": "MIT-0"
       },
       {
+        "name": "ML Kit Terms of Service",
+        "file": "templates/licenses/mlkit.txt",
+        "proprietary": true
+      },
+      {
+        "name": "Play Core Software Development Kit Terms of Service",
+        "file": "templates/licenses/play-core.txt",
+        "proprietary": true
+      },
+      {
+        "name": "Play Integrity API Terms of Service",
+        "file": "templates/licenses/play-integrity.txt",
+        "proprietary": true
+      },
+      {
         "name": "Public Domain",
         "file": "templates/licenses/public-domain.txt",
         "comments": "There is no spdx for generic 'Public Domain' as it isn't actually a license"
@@ -3863,6 +5799,11 @@
         "name": "SIL Open Font License, Version 1.1",
         "file": "templates/licenses/sil-1.1.txt",
         "spdx": "OFL-1.1"
+      },
+      {
+        "name": "Simplified BSD License",
+        "file": "templates/licenses/bsd-2-clause.txt",
+        "spdx": "BSD-2-Clause"
       },
       {
         "name": "The Apache License, Version 2.0",
@@ -3989,6 +5930,54 @@
           {
             "templateFile": "source/AndroidXSolutionFilter.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "glide",
+        "mavenRepositoryType": "MavenCentral",
+        "templates": [
+          {
+            "templateFile": "templates/glide/Project.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/glide/NuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          }
+        ]
+      },
+      {
+        "name": "gps",
+        "mavenRepositoryType": "Google",
+        "templates": [
+          {
+            "templateFile": "templates/gps/GooglePlayServicesTargets.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
+          },
+          {
+            "templateFile": "templates/gps/GooglePlayServicesProject.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
+          },
+          {
+            "templateFile": "templates/gps/GooglePlayServicesPom.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
+          },
+          {
+            "templateFile": "source/AndroidXSolutionFilter.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
+          },
+          {
+            "templateFile": "templates/gps/GooglePlayServicesNuGetReadMe.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
+          },
+          {
+            "templateFile": "templates/gps/GooglePlayServicesDirectoryBuildRsp.cshtml",
+            "outputFileRule": "generated/{groupid}.{artifactid}/Directory.Build.rsp"
           }
         ]
       }

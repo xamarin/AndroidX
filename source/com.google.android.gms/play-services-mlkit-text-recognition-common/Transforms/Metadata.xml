@@ -1,0 +1,29 @@
+﻿<metadata>
+
+    <!--
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.text.internal']/class[@name='TextRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IList &lt; Firebase.Components.Component &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.text.internal']/class[@name='TextRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        >        
+    </remove-node>
+
+    <add-node
+        path="/api/package[@name='com.google.mlkit.vision.text.internal']/class[@name='TextRecognizerTaskWithResource']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="java.lang.Object" name="run" 
+            deprecated="not deprecated" final="false" bridge="false" native="false"  return-not-null="true" 
+            synchronized="false" synthetic="false" 
+            >
+            <parameter name="p0" type="java.lang.Object" >
+            </parameter>
+        </method>    
+    </add-node>
+
+</metadata>

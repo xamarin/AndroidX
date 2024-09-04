@@ -1,0 +1,14 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+  	<attr path="/api/package[@name='com.google.ads']" name="managedName">Google.Ads</attr>
+    <attr path="/api/package[@name='com.google.android.gms.ads.identifier']" name="managedName">Google.Ads.Identifier</attr>
+ 
+
+    
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.ads.identifier']/class[@name='AdvertisingIdClient']/method[@name='finalize' and count(parameter)=0]"
+        />
+
+</metadata>

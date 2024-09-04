@@ -1,0 +1,39 @@
+﻿<metadata>
+	<attr path="/api/package[@name='com.google.android.gms.plus']" name="managedName">Android.Gms.Plus</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.moments']" name="managedName">Android.Gms.Plus.Model.Moments</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.people']" name="managedName">Android.Gms.Plus.Model.People</attr>
+
+
+	<attr path="/api/package[@name='com.google.android.gms.plus']/class[@name='Plus']" name="managedName">PlusClass</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus']/class[@name='Plus.PlusOptions']" name="managedName">PlusClass.PlusOptions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus']/class[@name='Plus.PlusOptions.Builder']" name="managedName">PlusClass.PlusOptions.Builder</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.plus']/class[@name='Plus']/field[@name='API']" name="managedName">API</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.plus']/class[@name='PlusOneDummyView']/field[@name='TAG']" name="managedName">TagField</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.plus.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.people']/class[@name='PersonBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.people']/class[@name='PersonBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.moments']/class[@name='MomentBuffer']/method[@name='get']" name="visibility">public override</attr>
+	<attr path="/api/package[@name='com.google.android.gms.plus.model.moments']/class[@name='MomentBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+</metadata>

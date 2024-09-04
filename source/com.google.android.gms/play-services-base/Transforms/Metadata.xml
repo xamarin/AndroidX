@@ -1,0 +1,463 @@
+﻿<metadata>
+
+	<!-- Rename Namespaces -->
+  	<attr path="/api/package[@name='com.google.android.gms.common']" name="managedName">Android.Gms.Common</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.api.internal']" name="managedName">Android.Gms.Common.Api.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']" name="managedName">Android.Gms.Common.Data</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.images']" name="managedName">Android.Gms.Common.Images</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.internal']" name="managedName">Android.Gms.Common.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.server']" name="managedName">Android.Gms.Common.Server</attr>
+    <attr path="/api/package[@name='com.google.android.gms.clearcut']" name="managedName">Android.Gms.Clearcut</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin']" name="managedName">Android.Gms.Auth.Api.SignIn</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
+    <attr path="/api/package[@name='com.google.android.gms.phenotype']" name="managedName">Android.Gms.Phenotype</attr>
+
+    <!-- 15.0.1+ mc++ 20180530 -->
+    <attr path="/api/package[@name='com.google.android.gms.common.images.internal']" name="managedName">Android.Gms.Common.Images.Internal</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.oob']" name="managedName">Android.Gms.Common.Oob</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.server.converter']" name="managedName">Android.Gms.Common.Server.Converter</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.server.response']" name="managedName">Android.Gms.Common.Server.Response</attr>
+    <attr path="/api/package[@name='com.google.android.gms.dynamic']" name="managedName">Android.Gms.Dynamic</attr>
+    <attr path="/api/package[@name='com.google.android.gms.signin']" name="managedName">Android.Gms.SignIn</attr>
+    <attr path="/api/package[@name='com.google.android.gms.signin.internal']" name="managedName">Android.Gms.SignIn.Internal</attr>
+
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+    <remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'Api.zzf' and @name != 'zzf' and @name != 'zzb' and @name != 'zzc' and @name != 'zzd' and @name != 'zze' and @name != 'zzg']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[contains(@name, 'zz') and @name != 'zzc' and @name != 'zzf' and @name != 'zzg']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[@name='zzf']" />
+
+	<!-- These CREATOR fields are of some zz* types, so let's remove them -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']/field[@name='CREATOR']" />
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.common.internal')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.signin.internal']" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<!-- Fix types in method calls -->
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApi']/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='GoogleApiClient.Builder']/method[@name='addApiIfAvailable' and count(parameter)=3]/parameter[2]" name="managedType">Android.Gms.Common.Apis.Api.IApiOptionsHasOptions</attr>
+
+
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='zzb']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='zzb']" name="managedName">InternalResponseObject</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzb']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzc']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzs']" name="obfuscated">false</attr>
+
+	<!-- This one for some reason is sitting between some *Buffer implementations and AbstractDataBuffer, so let's name it explicitly and make sure it stays around -->
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzg']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzg']" name="managedName">InternalAbstractDataBuffer</attr>
+
+	<!-- Finalize is marked override, which C# does not like, so manually implement without override -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='DataHolder']/method[@name='finalize' and count(parameter)=0]" />
+
+	<!-- Generator adds unnecessary override here -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common']/class[@name='SignInButton']/method[@name='setEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zzf']" />
+
+
+	<add-node path="/api/package[@name='com.google.android.gms.common.data']/class[@name='BitmapTeleporter']">
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<add-node path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInAccount']">
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<add-node path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInOptions']">
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+
+    <remove-node path="/api/package[@name='com.google.android.gms.phenotype']/class[@name='Configuration']/implements[@name='java.lang.Comparable']" />
+
+    <!-- In Additions -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInAccount']/method[@name='describeContents' and count(parameter)=0]"
+        />
+    <!-- In Additions -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='GoogleSignInOptions']/method[@name='describeContents' and count(parameter)=0]"
+        />
+    <!-- In Additions -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='BitmapTeleporter']/method[@name='describeContents' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Batch']/method[@name='createFailedResult' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.Status']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Batch']/method[@name='createFailedResult' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.Status']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='ExclusionFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='TextFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='ShuffleFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='PositionFilteredDataBuffer']/method[@name='computeRealPosition' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+
+
+
+
+    <!-- mc++ 20180530 make method in derived class protected or in base class public?? -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='FastMapJsonResponse']/method[@name='getValueObject' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='FastSafeParcelableJsonResponse']/method[@name='getValueObject' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='FastSafeParcelableJsonResponse']/method[@name='isPrimitiveFieldSet' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images.internal']/class[@name='CrossFadingDrawable']/method[@name='getConstantState' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images.internal']/class[@name='CrossFadingDrawable']/method[@name='getChangingConfigurations' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='BasePendingResult']/method[@name='createFailedResult' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.Status']]"
+        name="abstract"
+        >
+        false
+    </attr>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='StatusPendingResult']"
+        >
+        <!--
+        <method
+            visibility="protected" static="false" abstract="false" return="java.lang.Object" name="createFailedResultDummy"
+            native="false" deprecated="not deprecated" final="false" synchronized="false"
+            >
+            <parameter type="com.google.android.gms.common.api.Status" name="status" >
+            </parameter>
+        </method>
+        -->
+    </add-node>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='ImageManager.ImageReceiver']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zab']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zai']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zad']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zab']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zak']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='GoogleApiManager.zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']/class[@name='zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zac']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zad']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zae']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zac']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zab']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zac']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zad']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zaa.zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zai']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zaj']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server']/class[@name='zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zan']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zao']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zap']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='StringToIntConverter']/method[@name='zack' and count(parameter)=0]"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='StringToIntConverter']/implements[@name='com.google.android.gms.common.server.response.FastJsonResponse.FieldConverter']"
+        >
+    </remove-node>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zah']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zaj']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zaa']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zak']"
+        >
+    </remove-node>
+
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin.internal']/class[@name='zal']/implements"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zam']/implements"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zab']"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.signin']/class[@name='zab']"
+        >
+    </remove-node>
+
+    <!--
+        Work around a bug in generator where adding this static interface field makes generator think
+        that the base interface HasOptions is ConstSugar and thus it gets removed.
+        https://github.com/xamarin/java.interop/issues/752
+    -->
+    <remove-node path="/api/package[@name='com.google.android.gms.common.api']/interface[@name='Api.ApiOptions']/field[@name='NO_OPTIONS']" />
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.converter']/class[@name='zae']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.images']/class[@name='zah']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zad']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zaq']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='zaq']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zae']/method[@name='zae' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.common.api.internal.zaaa'] and parameter[2][@type='boolean']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zad']/method[@name='zaf' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.internal.zabl&lt;?&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zaf']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zad']/method[@name='zaf' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.common.api.internal.zabl&lt;?&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zah']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zae']"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='SafeParcelResponse']/method[@name='getValueObject' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.server.response']/class[@name='SafeParcelResponse']/method[@name='isPrimitiveFieldSet' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='zaf']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zag']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zaa']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.auth.api.signin']/class[@name='zae']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common']/class[@name='zaa']"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']"
+        name="managedName"
+        >
+        Android.Gms.Common.ModuleInstall
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall.internal']"
+        name="managedName"
+        >
+        Android.Gms.Common.ModuleInstall.Internal
+    </attr>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']/class[@name='zaa']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']/class[@name='zab']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']/class[@name='zad']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']/class[@name='zae']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall.internal']/class[@name='zac']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api.internal']/class[@name='zada']"
+        />
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']/class[@name='ModuleAvailabilityResponse']/method[@name='getAvailabilityStatus' and count(parameter)=0]"
+        name="managedName"
+        >
+        AvailabilityStatusCode
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.moduleinstall']/class[@name='ModuleInstallStatusUpdate']/method[@name='getInstallState' and count(parameter)=0]"
+        name="managedName"
+        >
+        InstallStateCode
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.data']/class[@name='EntityBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="final"
+        >
+        false
+    </attr>
+
+
+</metadata>

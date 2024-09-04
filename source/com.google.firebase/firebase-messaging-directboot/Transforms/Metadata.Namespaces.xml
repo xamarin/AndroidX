@@ -1,0 +1,14 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.firebase.messaging.directboot']" 
+        name="managedName"
+        >
+        Firebase.Messaging.DirectBoot
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.messaging.directboot.threads']" 
+        name="managedName"
+        >
+        Firebase.Messaging.DirectBoot.Threads
+    </attr>
+</metadata>
