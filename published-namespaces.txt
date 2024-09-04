@@ -1,4 +1,5 @@
 _COROUTINE
+Android.Annotation
 Android.Support.CustomTabs
 Android.Support.Customtabs.Trusted
 Android.Support.V4.App
@@ -493,6 +494,10 @@ AndroidX.Work.Impl.Utils.Futures
 AndroidX.Work.Impl.Utils.TaskExecutor
 AndroidX.Work.Impl.Workers
 AndroidX.Work.MultiProcess
+Dagger
+Dagger.Assisted
+Dagger.Internal
+Dagger.Multibindings
 Google.Android.Libraries.AppActions.Service
 Google.Android.Material.Animation
 Google.Android.Material.AppBar
@@ -564,7 +569,12 @@ GoogleGson.Annotations
 GoogleGson.Reflect
 GoogleGson.Stream
 IntelliJ.Lang.Annotations
+Jakarta.Inject
 Java.Interop
+Javax.Annotation
+Javax.Annotation.Concurrent
+Javax.Annotation.Meta
+JavaX.Inject
 JetBrains.Annotations
 Kotlin
 Kotlin.Annotation
@@ -694,6 +704,8 @@ ReactiveX.Subjects
 ReactiveX.Subscribers
 Xamarin.Android.InstallReferrer.Api
 Xamarin.Android.InstallReferrer.Commons
+Xamarin.AopAlliance.Aop
+Xamarin.AopAlliance.Intercept
 Xamarin.Dev.ChrisBanes.Snapper
 Xamarin.Google.Android.Finsky.ExternalReferrer
 Xamarin.Google.Crypto.Tink
@@ -728,6 +740,8 @@ Xamarin.Google.Crypto.Tink.Subtle.Prf
 Xamarin.Google.Crypto.Tink.Tinkkey
 Xamarin.Google.Crypto.Tink.Tinkkey.Internal
 Xamarin.Google.Crypto.Tink.Util
+Xamarin.Google.ErrorProne.Annotations
+Xamarin.Google.ErrorProne.Annotations.Concurrent
 Xamarin.Google.Flogger
 Xamarin.Google.Flogger.Backend
 Xamarin.Google.Flogger.Backend.System
@@ -735,6 +749,15 @@ Xamarin.Google.Flogger.Context
 Xamarin.Google.Flogger.Parameter
 Xamarin.Google.Flogger.Parser
 Xamarin.Google.Flogger.Util
+Xamarin.Google.Inject
+Xamarin.Google.Inject.Binder
+Xamarin.Google.Inject.Internal.Aop
+Xamarin.Google.Inject.Internal.Util
+Xamarin.Google.Inject.Matcher
+Xamarin.Google.Inject.Multibindings
+Xamarin.Google.Inject.Name
+Xamarin.Google.Inject.Spi
+Xamarin.Google.Inject.Util
 Xamarin.IO.AntMedia.Rtmp.Client
 Xamarin.KotlinX.Coroutines
 Xamarin.KotlinX.Coroutines.Channels
@@ -752,3 +775,5 @@ Xamarin.KotlinX.Coroutines.Stream
 Xamarin.KotlinX.Coroutines.Sync
 Xamarin.KotlinX.Coroutines.Tasks
 Xamarin.KotlinX.Coroutines.Time
+Xamarin.ObjectWeb.Asm
+Xamarin.ObjectWeb.Asm.Signature
