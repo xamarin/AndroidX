@@ -2297,6 +2297,16 @@
         "dependencyOnly": false
       },
       {
+        "groupId": "aopalliance",
+        "artifactId": "aopalliance",
+        "version": "1.0",
+        "nugetVersion": "1.0.0.3",
+        "nugetId": "Xamarin.AopAlliance",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
         "groupId": "com.android.installreferrer",
         "artifactId": "installreferrer",
         "version": "1.1.2",
@@ -2408,6 +2418,16 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "com.google.android",
+        "artifactId": "annotations",
+        "version": "4.1.1.4",
+        "nugetVersion": "4.1.1.17",
+        "nugetId": "Xamarin.GoogleAndroid.Annotations",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
         "version": "1.1.18",
@@ -2468,6 +2488,17 @@
         "comments": "License is specified in parent POM"
       },
       {
+        "groupId": "com.google.code.findbugs",
+        "artifactId": "jsr305",
+        "version": "3.0.2",
+        "nugetVersion": "3.0.2.15",
+        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
+        "dependencyOnly": false,
+        "assemblyName": "Jsr305Binding",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
         "groupId": "com.google.code.gson",
         "artifactId": "gson",
         "version": "2.11.0",
@@ -2483,6 +2514,26 @@
         "version": "1.14.1",
         "nugetVersion": "1.14.1.1",
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.google.dagger",
+        "artifactId": "dagger",
+        "version": "2.52",
+        "nugetVersion": "2.52.0",
+        "nugetId": "Xamarin.Google.Dagger",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.google.errorprone",
+        "artifactId": "error_prone_annotations",
+        "version": "2.29.2",
+        "nugetVersion": "2.29.2",
+        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "dependencyOnly": false,
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -2544,6 +2595,20 @@
         "templateSet": "guava",
         "overrideLicenses": [
           "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "com.google.inject",
+        "artifactId": "guice",
+        "version": "7.0.0",
+        "nugetVersion": "7.0.0.1",
+        "nugetId": "Xamarin.Google.Inject.Guice",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "The Apache Software License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
         ],
         "comments": "License is specified in parent POM"
       },
@@ -2643,6 +2708,26 @@
         "version": "3.0.1",
         "nugetVersion": "3.0.1.14",
         "nugetId": "Xamarin.Android.ReactiveX.RxJava3.RxKotlin",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "jakarta.inject",
+        "artifactId": "jakarta.inject-api",
+        "version": "2.0.1",
+        "nugetVersion": "2.0.1.1",
+        "nugetId": "Xamarin.Jakarta.Inject.InjectApi",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "javax.inject",
+        "artifactId": "javax.inject",
+        "version": "1",
+        "nugetVersion": "1.0.0.15",
+        "nugetId": "Xamarin.JavaX.Inject",
         "dependencyOnly": false,
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -2885,6 +2970,16 @@
         "templateSet": "kotlinx"
       },
       {
+        "groupId": "org.ow2.asm",
+        "artifactId": "asm",
+        "version": "9.7",
+        "nugetVersion": "9.7.0.1",
+        "nugetId": "Xamarin.OW2.ASM",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
         "groupId": "org.reactivestreams",
         "artifactId": "reactive-streams",
         "version": "1.0.4",
@@ -3023,22 +3118,6 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.google.code.findbugs",
-        "artifactId": "jsr305",
-        "version": "3.0.2",
-        "nugetVersion": "3.0.2.15",
-        "nugetId": "Xamarin.Google.Code.FindBugs.JSR305",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.errorprone",
-        "artifactId": "error_prone_annotations",
-        "version": "2.29.2",
-        "nugetVersion": "2.29.2",
-        "nugetId": "Xamarin.Google.ErrorProne.Annotations",
-        "dependencyOnly": true
-      },
-      {
         "groupId": "com.squareup.okio",
         "artifactId": "okio",
         "version": "3.9.0",
@@ -3095,9 +3174,19 @@
         "spdx": "BSD-3-Clause"
       },
       {
+        "name": "BSD-3-Clause",
+        "file": "templates/licenses/bsd.txt",
+        "spdx": "BSD-3-Clause"
+      },
+      {
         "name": "MIT-0",
         "file": "templates/licenses/mit-0.txt",
         "spdx": "MIT-0"
+      },
+      {
+        "name": "Public Domain",
+        "file": "templates/licenses/public-domain.txt",
+        "comments": "There is no spdx for generic 'Public Domain' as it isn't actually a license"
       },
       {
         "name": "SIL Open Font License, Version 1.1",

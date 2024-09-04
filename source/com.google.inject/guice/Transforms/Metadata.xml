@@ -1,0 +1,49 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.inject.internal']/class[@name='ProviderMethod']/typeParameters"
+        />
+    <!-- 
+    <attr
+        path="/api/package[@name='com.google.inject.spi']/class[@name='Message']/method[@name='getSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>        
+    -->
+    <remove-node 
+        path="/api/package[@name='com.google.inject.internal']"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.inject.spi']/interface[@name='ConvertedConstantBinding']/method[@name='getDependencies' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.ICollection &lt; Dependency &gt;
+    </attr>
+    <remove-node
+        path="/api/package[@name='com.google.inject.matcher']/class[@name='AbstractMatcher']/typeParameters"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.inject']/interface[@name='PrivateBinder']/method[@name='skipSources' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;?&gt;...']]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Inject.IBinder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.inject']/interface[@name='PrivateBinder']/method[@name='withSource' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]"
+        name="managedReturn"
+        >
+        Xamarin.Google.Inject.IBinder
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.inject.spi']/class[@name='Message']/method[@name='getSource' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+    <remove-node 
+        path="/api/package[@name='com.google.inject.spi']/interface[@name='ConvertedConstantBinding']/typeParameters"
+        />
+
+</metadata>

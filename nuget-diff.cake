@@ -26,7 +26,7 @@ if (!nupkgs.Any()) {
 } else {
 	Parallel.ForEach (nupkgs, nupkg => {
 		// See https://github.com/xamarin/AndroidX/issues/916
-		if (nupkg.FullPath.Contains ("Xamarin.AndroidX.Car.App.App"))
+		if (nupkg.FullPath.Contains ("Xamarin.AndroidX.Car.App.App") || nupkg.FullPath.Contains ("Xamarin.AndroidX.Fragment") || nupkg.FullPath.Contains ("Xamarin.AndroidX.Lifecycle.LiveData.Core"))
 		  return;
 		var version = "--latest";
 		var versionFile = nupkg.FullPath + ".baseversion";
