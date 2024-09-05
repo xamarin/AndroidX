@@ -18,9 +18,6 @@
   <remove-node
     path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
         />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source']/interface[@name='MediaSourceFactory']"
-        />
 
   <!-- Duplicate inherited interface methods -->
   <remove-node
