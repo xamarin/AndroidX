@@ -277,6 +277,18 @@
       true
     </attr>
 
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='DummyExoMediaDrm']/method[@name='getProvisionRequest' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='FrameworkMediaDrm']/method[@name='getProvisionRequest' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+
 
 
     <attr
