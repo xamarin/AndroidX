@@ -1,0 +1,78 @@
+﻿<metadata>
+
+    <add-node
+        path="/api/package[@name='io.grpc.okhttp']/class[@name='OkHttpChannelBuilder']"
+        >
+        <method 
+          visibility="public" static="false"  abstract="false" return="java.lang.Object" name="compressorRegistry" 
+          deprecated="not deprecated" final="false" bridge="false" native="false"  synchronized="false" synthetic="false" 
+          >
+          <parameter name="registry" type="io.grpc.CompressorRegistry" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="decompressorRegistry" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="registry" type="io.grpc.DecompressorRegistry" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="directExecutor" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+        </method>
+        <method abstract="false" deprecated="not deprecated" final="false" name="executor" bridge="false" native="false" return="java.lang.Object" static="false" synchronized="false" synthetic="false" visibility="public">
+          <parameter name="executor" type="java.util.concurrent.Executor" >
+          </parameter>
+        </method>
+
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="idleTimeout" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="value" type="long" >
+          </parameter>
+          <parameter name="unit" type="java.util.concurrent.TimeUnit" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" override="true" abstract="false" return="java.lang.Object" name="intercept"
+          deprecated="not deprecated" final="false" bridge="false" native="false" ssynchronized="false" synthetic="false" 
+          >
+          <parameter name="interceptors" type="io.grpc.ClientInterceptor..." >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="nameResolverFactory" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="resolverFactory" type="io.grpc.NameResolver.Factory" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="overrideAuthority" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="authority" type="java.lang.String" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="userAgent" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="userAgent" type="java.lang.String" >
+          </parameter>
+        </method>
+
+    </add-node>
+
+
+    <attr
+      path="/api/package[@name='io.grpc.okhttp']/class[@name='OkHttpServerProvider']/method[@name='builderForPort' and count(parameter)=1 and parameter[1][@type='int']]"
+      name="managedReturn"
+      >
+      Xamarin.Grpc.ServerBuilder
+    </attr>
+
+</metadata>

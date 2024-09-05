@@ -67,6 +67,10 @@ namespace AndroidBinderator
 			if (config.DownloadExternals)
 				await DownloadArtifacts(config, mavenProjects);
 
+			// This isn't really correct, as it could be .aar, but it'll do until we hit that case and need to fix it
+			foreach (var artifact in mavenProjects.Values.Where (a => a.Packaging == "bundle"))
+				artifact.Packaging = "jar";
+
 			var slnProjModels = new Dictionary<string, BindingProjectModel>();
 			var models = BuildProjectModels(config, mavenProjects);
 
@@ -295,6 +299,7 @@ namespace AndroidBinderator
 					MavenUrl = mavenProject.Url,
 					JavaSourceRepository = mavenProject.Scm?.Url,
 					Type = mavenArtifact.BindingsType ?? config.DefaultBindingsType,
+					AllowPrereleaseDependencies = mavenArtifact.AllowPrereleaseDependencies,
 				};
 
 				var licenses = mavenProject.Licenses;
@@ -314,7 +319,7 @@ namespace AndroidBinderator
 
 				// Verify that we have known licenses
 				foreach (var license in licenses) {
-					var license_config = config.Licenses.FirstOrDefault (l => l.Name == license.Name);
+					var license_config = config.Licenses.FirstOrDefault (l => string.Compare (l.Name, license.Name, true) == 0);
 
 					if (license_config is null) {
 						exceptions.Add (new Exception ($"Unknown license '{license.Name}' for artifact '{mavenArtifact.GroupAndArtifactId}'. This license must be added to 'config.json'."));

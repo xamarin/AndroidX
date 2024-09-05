@@ -2428,6 +2428,33 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-api",
+        "version": "3.2.0",
+        "nugetVersion": "3.2.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-backend-cct",
+        "version": "3.3.0",
+        "nugetVersion": "3.3.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
+        "groupId": "com.google.android.datatransport",
+        "artifactId": "transport-runtime",
+        "version": "3.3.0",
+        "nugetVersion": "3.3.0.1",
+        "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
         "groupId": "com.google.android.material",
         "artifactId": "compose-theme-adapter",
         "version": "1.1.18",
@@ -2456,6 +2483,15 @@
         "dependencyOnly": false,
         "frozen": true,
         "comments": "Requires API-34"
+      },
+      {
+        "groupId": "com.google.android.ump",
+        "artifactId": "user-messaging-platform",
+        "version": "3.0.0",
+        "nugetVersion": "3.0.0",
+        "nugetId": "Xamarin.Google.UserMessagingPlatform",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
       },
       {
         "groupId": "com.google.assistant.appactions",
@@ -2534,6 +2570,16 @@
         "version": "2.29.2",
         "nugetVersion": "2.29.2",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.google.flatbuffers",
+        "artifactId": "flatbuffers-java",
+        "version": "24.3.25",
+        "nugetVersion": "24.3.25.1",
+        "nugetId": "Xamarin.Google.FlatBuffers.Java",
         "dependencyOnly": false,
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -2622,6 +2668,211 @@
         "templateSet": "no-bindings"
       },
       {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-javalite",
+        "version": "4.27.3",
+        "nugetVersion": "4.27.3",
+        "nugetId": "Xamarin.Protobuf.JavaLite",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "BSD-3-Clause|https://opensource.org/licenses/BSD-3-Clause"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "com.google.protobuf",
+        "artifactId": "protobuf-lite",
+        "version": "3.0.1",
+        "nugetVersion": "3.0.1.15",
+        "nugetId": "Xamarin.Protobuf.Lite",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "BSD-3-Clause|https://opensource.org/licenses/BSD-3-Clause"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "com.google.zxing",
+        "artifactId": "core",
+        "version": "3.5.3",
+        "nugetVersion": "3.5.3.3",
+        "nugetId": "Xamarin.Google.ZXing.Core",
+        "dependencyOnly": false,
+        "assemblyName": "Google.ZXing.Core",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "The Apache Software License, Version 2.0|https://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "com.squareup",
+        "artifactId": "javapoet",
+        "version": "1.13.0",
+        "nugetVersion": "1.13.0.11",
+        "nugetId": "Square.JavaPoet",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okhttp",
+        "artifactId": "okhttp",
+        "version": "2.7.5",
+        "nugetVersion": "2.7.5.15",
+        "nugetId": "Square.OkHttp",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "com.squareup.okio.okio,com.google.android.android",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "logging-interceptor",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.5",
+        "nugetId": "Square.OkHttp3.LoggingInterceptor",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "okhttp",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.5",
+        "nugetId": "Square.OkHttp3",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "okhttp-brotli",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Square.OkHttp3.OkHttp.Brotli",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "okhttp-tls",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.3",
+        "nugetId": "Square.OkHttp3.OkHttp.TLS",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okhttp3",
+        "artifactId": "okhttp-urlconnection",
+        "version": "4.12.0",
+        "nugetVersion": "4.12.0.5",
+        "nugetId": "Square.OkHttp3.UrlConnection",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okio",
+        "artifactId": "okio",
+        "version": "3.9.0",
+        "nugetVersion": "3.9.0.1",
+        "nugetId": "Square.OkIO",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.okio",
+        "artifactId": "okio-jvm",
+        "version": "3.9.0",
+        "nugetVersion": "3.9.0.1",
+        "nugetId": "Square.OkIO.JVM",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.picasso",
+        "artifactId": "picasso",
+        "version": "2.8",
+        "nugetVersion": "2.8.0.14",
+        "nugetId": "Square.Picasso",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.retrofit",
+        "artifactId": "retrofit",
+        "version": "1.9.0",
+        "nugetVersion": "1.9.0.15",
+        "nugetId": "Square.Retrofit",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "com.squareup.okhttp.okhttp,com.google.code.gson.gson,com.google.android.android,io.reactivex.rxjava,com.google.appengine.appengine-api-1.0-sdk",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "adapter-rxjava2",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0.1",
+        "nugetId": "Square.Retrofit2.AdapterRxJava2",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "converter-gson",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0.1",
+        "nugetId": "Square.Retrofit2.ConverterGson",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "converter-scalars",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0.1",
+        "nugetId": "Square.Retrofit2.ConverterScalars",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.squareup.retrofit2",
+        "artifactId": "retrofit",
+        "version": "2.11.0",
+        "nugetVersion": "2.11.0.1",
+        "nugetId": "Square.Retrofit2",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
         "groupId": "dev.chrisbanes.snapper",
         "artifactId": "snapper",
         "version": "0.3.0",
@@ -2647,6 +2898,117 @@
         "version": "2.7.1",
         "nugetVersion": "2.7.1.6",
         "nugetId": "Xamarin.AAkira.Napier",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-android",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Android",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-api",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Api",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-context",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Context",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-core",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Core",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-okhttp",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.OkHttp",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-protobuf-lite",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Protobuf.Lite",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-stub",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Stub",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.grpc",
+        "artifactId": "grpc-util",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
+        "nugetId": "Xamarin.Grpc.Util",
+        "dependencyOnly": false,
+        "excludedRuntimeDependencies": "io.grpc.grpc-core,junit.junit,io.grpc.grpc-testing,org.mockito.mockito-core",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.opencensus",
+        "artifactId": "opencensus-api",
+        "version": "0.31.1",
+        "nugetVersion": "0.31.1.8",
+        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusApi",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.opencensus",
+        "artifactId": "opencensus-contrib-grpc-metrics",
+        "version": "0.31.1",
+        "nugetVersion": "0.31.1.8",
+        "nugetId": "Xamarin.Io.OpenCensus.OpenCensusContribGrpcMetrics",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "io.perfmark",
+        "artifactId": "perfmark-api",
+        "version": "0.27.0",
+        "nugetVersion": "0.27.0.3",
+        "nugetId": "Xamarin.Io.PerfMark.PerfMarkApi",
         "dependencyOnly": false,
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -2733,6 +3095,20 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "org.brotli",
+        "artifactId": "dec",
+        "version": "0.1.2",
+        "nugetVersion": "0.1.2.3",
+        "nugetId": "Xamarin.Brotli.Dec",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "MIT License|http://www.opensource.org/licenses/mit-license.php"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
         "groupId": "org.checkerframework",
         "artifactId": "checker-compat-qual",
         "version": "2.5.6",
@@ -2749,6 +3125,56 @@
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
         "templateSet": "no-bindings"
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-api",
+        "version": "119.6045.31",
+        "nugetVersion": "119.6045.31.3",
+        "nugetId": "Xamarin.Chromium.CroNet.Api",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-common",
+        "version": "119.6045.31",
+        "nugetVersion": "119.6045.31.3",
+        "nugetId": "Xamarin.Chromium.CroNet.Common",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-embedded",
+        "version": "119.6045.31",
+        "nugetVersion": "119.6045.31.3",
+        "nugetId": "Xamarin.Chromium.CroNet.Embedded",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
+        "groupId": "org.chromium.net",
+        "artifactId": "cronet-fallback",
+        "version": "119.6045.31",
+        "nugetVersion": "119.6045.31.3",
+        "nugetId": "Xamarin.Chromium.CroNet.Fallback",
+        "dependencyOnly": false,
+        "type": "androidlibrary"
+      },
+      {
+        "groupId": "org.codehaus.mojo",
+        "artifactId": "animal-sniffer-annotations",
+        "version": "1.24",
+        "nugetVersion": "1.24.0.1",
+        "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "MIT license|https://spdx.org/licenses/MIT.txt"
+        ],
+        "comments": "License is specified in parent POM"
       },
       {
         "groupId": "org.jetbrains",
@@ -2990,6 +3416,189 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-android",
+        "version": "1.13.1",
+        "nugetVersion": "1.13.1.9",
+        "nugetId": "Xamarin.TensorFlow.Android",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-android",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "The Apache Software License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
+        ],
+        "comments": "License is specified in parent POM"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-api",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite.Api",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-api",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-gpu",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite.Gpu",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-gpu-api",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite.Gpu.Api",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-gpu-api",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-metadata",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Metadata",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-metadata",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-select-tf-ops",
+        "version": "2.16.1",
+        "nugetVersion": "2.16.1.1",
+        "nugetId": "Xamarin.TensorFlow.Lite.Select.TF.Ops",
+        "dependencyOnly": false,
+        "frozen": true,
+        "assemblyName": "org.tensorflow.tensorflow-lite-select-tf-ops",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-support",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-support",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-support-api",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Support.Api",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "assemblyName": "org.tensorflow.tensorflow-lite-support-api",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "comments": "Depends on Xamarin.Google.Android.ODML.Image which only has a prerelease version."
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-audio",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Audio.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-audio",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-audio-play-services",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Audio.PlayServices.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-audio-play-services",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-base",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Base.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-base",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-text",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-text",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-text-play-services",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Text.PlayServices.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-text-play-services",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-vision",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Vision.Library",
+        "dependencyOnly": false,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-vision",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "org.tensorflow",
+        "artifactId": "tensorflow-lite-task-vision-play-services",
+        "version": "0.4.4",
+        "nugetVersion": "0.4.4.6",
+        "nugetId": "Xamarin.TensorFlow.Lite.Task.Vision.PlayServices.Library",
+        "dependencyOnly": false,
+        "allowPrereleaseDependencies": true,
+        "assemblyName": "org.tensorflow.tensorflow-lite-task-vision-play-services",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "comments": "Depends on Xamarin.Google.Android.ODML.Image which only has a prerelease version."
+      },
+      {
         "groupId": "androidx.emoji2",
         "artifactId": "emoji2",
         "version": "1.2.0",
@@ -3103,6 +3712,14 @@
       },
       {
         "groupId": "com.google.android.gms",
+        "artifactId": "play-services-tflite-impl",
+        "version": "16.1.0",
+        "nugetVersion": "116.1.0.9",
+        "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
         "version": "18.2.0",
         "nugetVersion": "118.2.0.1",
@@ -3118,19 +3735,35 @@
         "dependencyOnly": true
       },
       {
-        "groupId": "com.squareup.okio",
-        "artifactId": "okio",
-        "version": "3.9.0",
-        "nugetVersion": "3.9.0.1",
-        "nugetId": "Square.OkIO",
+        "groupId": "com.google.android.odml",
+        "artifactId": "image",
+        "version": "1.0.0-beta1",
+        "nugetVersion": "1.0.0.11-beta1",
+        "nugetId": "Xamarin.Google.Android.ODML.Image",
         "dependencyOnly": true
       },
       {
-        "groupId": "com.squareup.okio",
-        "artifactId": "okio-jvm",
-        "version": "3.9.0",
-        "nugetVersion": "3.9.0.1",
-        "nugetId": "Square.OkIO.JVM",
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.17",
+        "nugetId": "Xamarin.Firebase.Encoders",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders-json",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.9",
+        "nugetId": "Xamarin.Firebase.Encoders.JSON",
+        "dependencyOnly": true
+      },
+      {
+        "groupId": "com.google.firebase",
+        "artifactId": "firebase-encoders-proto",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.12",
+        "nugetId": "Xamarin.Firebase.Encoders.Proto",
         "dependencyOnly": true
       },
       {
@@ -3150,6 +3783,11 @@
       },
       {
         "name": "Apache 2.0",
+        "file": "templates/licenses/apache-2.0.txt",
+        "spdx": "Apache-2.0"
+      },
+      {
+        "name": "Apache License V2.0",
         "file": "templates/licenses/apache-2.0.txt",
         "spdx": "Apache-2.0"
       },
@@ -3177,6 +3815,15 @@
         "name": "BSD-3-Clause",
         "file": "templates/licenses/bsd.txt",
         "spdx": "BSD-3-Clause"
+      },
+      {
+        "name": "Chromium and built-in dependencies",
+        "file": "templates/licenses/chromium.txt"
+      },
+      {
+        "name": "MIT License",
+        "file": "templates/licenses/mit.txt",
+        "spdx": "MIT"
       },
       {
         "name": "MIT-0",
