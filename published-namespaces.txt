@@ -240,6 +240,7 @@ AndroidX.Enterprise.Feedback
 AndroidX.ExifInterface.Media
 AndroidX.Fragment.App
 AndroidX.Fragment.App.StrictMode
+AndroidX.Graphics.Path
 AndroidX.GridLayout.Widget
 AndroidX.Heifwriter
 AndroidX.Interpolator.View.Animation
@@ -259,6 +260,7 @@ AndroidX.Legacy.App
 AndroidX.Legacy.Content
 AndroidX.Legacy.Widget
 AndroidX.Lifecycle
+AndroidX.Lifecycle.Compose
 AndroidX.Lifecycle.ViewModels
 AndroidX.Lifecycle.ViewModels.Compose
 AndroidX.Lifecycle.ViewModels.Internal
@@ -361,6 +363,7 @@ AndroidX.MediaRouter.Media
 AndroidX.Navigation
 AndroidX.Navigation.Compose
 AndroidX.Navigation.Fragment
+AndroidX.Navigation.Serialization
 AndroidX.Navigation.UI
 AndroidX.Paging
 AndroidX.Paging.Internal
@@ -421,6 +424,7 @@ AndroidX.Wear.Activity
 AndroidX.Wear.Ambient
 AndroidX.Wear.Compose.Foundation
 AndroidX.Wear.Compose.Foundation.Lazy
+AndroidX.Wear.Compose.Foundation.Rotary
 AndroidX.Wear.Compose.Material
 AndroidX.Wear.Compose.Material.Dialog
 AndroidX.Wear.Compose.MaterialCore
