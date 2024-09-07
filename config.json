@@ -1080,7 +1080,7 @@
         "artifactId": "graphics-path",
         "version": "1.0.1",
         "nugetVersion": "1.0.1",
-        "nugetId": "Xamarin.AndroidX.GridLayout",
+        "nugetId": "Xamarin.AndroidX.Graphics.Path",
         "dependencyOnly": false
       },
       {
@@ -2929,8 +2929,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Android",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2939,8 +2939,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Api",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2949,8 +2949,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Context",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2959,8 +2959,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Core",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2969,8 +2969,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2979,8 +2979,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2989,8 +2989,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Stub",
         "dependencyOnly": false,
         "type": "androidlibrary",
@@ -2999,8 +2999,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-util",
-        "version": "1.64.2",
-        "nugetVersion": "1.64.2",
+        "version": "1.63.2",
+        "nugetVersion": "1.63.2",
         "nugetId": "Xamarin.Grpc.Util",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "io.grpc.grpc-core,junit.junit,io.grpc.grpc-testing,org.mockito.mockito-core",
