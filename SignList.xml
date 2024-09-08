@@ -26,6 +26,17 @@
     <FirstParty Include="checker-qual.jar" />
     <FirstParty Include="checker-compat-qual.jar" />
     <FirstParty Include="j2objc-annotations.jar" />  
+
+    <!-- GPS-FB-MLKit SignList.xml -->
+    <!-- Automatically sign all "Xamarin." assemblies, which all packages *should* use -->
+    <FirstParty Include="Xamarin.*.dll" />
+    
+    <!-- Other names shouldn't be used, but we have to support some historical mistakes -->
+    <FirstParty Include="Jsr305Binding.dll" />
+    <FirstParty Include="Square.*.dll" />
+    <FirstParty Include="Google.ZXing.*.dll" />
+    <FirstParty Include="org.tensorflow.*.dll" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +46,10 @@
     <ThirdParty Include="Mono.Cecil.dll" />
     <ThirdParty Include="Mono.Cecil.*.dll" />
     <ThirdParty Include="androidx*.jar" />
+
+    <!-- GPS-FB-MLKit SignList.xml -->    
+    <ThirdParty Include="disklrucache.jar" />
+    <ThirdParty Include="annotations.jar" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +66,8 @@
     <Skip Include="netstandard.dll" />
     <Skip Include="WindowsBase.dll" />
     <Skip Include="mscorlib.dll" />
+
+    <!-- GPS-FB-MLKit SignList.xml -->
   </ItemGroup>
 
 </Project>
