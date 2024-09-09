@@ -139,4 +139,12 @@
     </attr>
 
 
+    <attr
+        path="/api/package[@name='androidx.media3.effect']/class[@name='DefaultVideoFrameProcessor.Factory']/method[@name='create' and count(parameter)=6 and parameter[1][@type='android.content.Context'] and parameter[2][@type='androidx.media3.common.DebugViewProvider'] and parameter[3][@type='androidx.media3.common.ColorInfo'] and parameter[4][@type='boolean'] and parameter[5][@type='java.util.concurrent.Executor'] and parameter[6][@type='androidx.media3.common.VideoFrameProcessor.Listener']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Common.IVideoFrameProcessor
+    </attr>
+
+
 </metadata>

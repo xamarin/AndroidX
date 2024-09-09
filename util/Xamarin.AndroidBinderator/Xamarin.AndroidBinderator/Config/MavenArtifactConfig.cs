@@ -46,6 +46,9 @@ namespace AndroidBinderator
 		[JsonProperty ("frozen")]
 		public bool Frozen { get; set; }
 
+		[JsonProperty ("allowPrereleaseDependencies")]
+		public bool AllowPrereleaseDependencies { get; set; }
+
 		[JsonProperty ("assemblyName")]
 		public string? AssemblyName { get; set; }
 

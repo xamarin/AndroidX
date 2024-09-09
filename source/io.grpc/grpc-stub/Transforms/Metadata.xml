@@ -1,0 +1,50 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='io.grpc.stub']/interface[@name='StreamObserver']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc.stub']/interface[@name='StreamObserver']/method"
+        />
+    <add-node
+        path="/api/package[@name='io.grpc.stub']/interface[@name='StreamObserver']"
+        >
+        <method 
+            visibility="public" abstract="true" static="false" return="void" name="onCompleted"
+            deprecated="not deprecated" final="false"  bridge="false" native="false" synchronized="false" synthetic="false" 
+            >
+        </method>
+        <method 
+            abstract="true" 
+            deprecated="not deprecated" final="false" name="onError" bridge="false" native="false" return="void" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="p0" type="java.lang.Throwable">
+            </parameter>
+        </method>
+        <method 
+            abstract="true" 
+            deprecated="not deprecated" final="false" name="onNext" bridge="false" native="false" return="void" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="p0" type="java.lang.Object">
+            </parameter>
+        </method>
+    </add-node>
+
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ServerCallStreamObserver']/method[@name='request' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ServerCallStreamObserver']/method[@name='setMessageCompression' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ServerCallStreamObserver']/method[@name='setOnReadyHandler' and count(parameter)=1 and parameter[1][@type='java.lang.Runnable']]"
+        />
+        <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ClientCallStreamObserver']/method[@name='request' and count(parameter)=1 and parameter[1][@type='int']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ClientCallStreamObserver']/method[@name='setMessageCompression' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        />
+    <remove-node 
+        path="/api/package[@name='io.grpc.stub']/class[@name='ClientCallStreamObserver']/method[@name='setOnReadyHandler' and count(parameter)=1 and parameter[1][@type='java.lang.Runnable']]"
+        />
+
+        
+</metadata>

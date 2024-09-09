@@ -15,6 +15,13 @@ public class TestAllIndividualPackages
 	static string platform_version = "29";
 	static string net_version = "net8.0";
 
+	// These packages are ignored because they contain the same Java code as
+	// other packages, which causes a conflict when building the project.
+	static List<string> ignored_packages = [
+		"Xamarin.Google.Guava.ListenableFuture",
+		"Xamarin.Protobuf.Lite"
+	];
+
 	static TestAllIndividualPackages ()
 	{
 		// Find the repo base directory
@@ -133,7 +140,7 @@ public class TestAllIndividualPackages
 		root.AppendChild (item_group);
 
 		foreach (var package in packages) {
-			if (package.NugetId == "Xamarin.Google.Guava.ListenableFuture")
+			if (ignored_packages.Contains (package.NugetId))
 				continue;
 
 			var package_ref = xml.CreateElement ("PackageReference");

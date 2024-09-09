@@ -282,4 +282,24 @@
 
 
 
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ExternallyLoadedMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ExternallyLoadedMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ExternallyLoadedMediaSource.Factory']/method[@name='createMediaSource' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.Source.IMediaSource
+      </attr>
+
+
 </metadata> 

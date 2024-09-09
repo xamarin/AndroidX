@@ -1,0 +1,118 @@
+﻿<metadata>
+
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='JavaFeaturesProto.JavaFeaturesOrBuilder']/method[@name='getUtf8Validation' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='JavaFeaturesProto.JavaFeatures.Builder']/method[@name='getUtf8Validation' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getEnumType' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+    path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getEnumType' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getFieldPresence' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getFieldPresence' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getJsonFormat' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getJsonFormat' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getRepeatedFieldEncoding' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getRepeatedFieldEncoding' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getRepeatedFieldEncoding' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getRepeatedFieldEncoding' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FeatureSetOrBuilder']/method[@name='getUtf8Validation' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FeatureSet.Builder']/method[@name='getUtf8Validation' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>    
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FieldDescriptorProtoOrBuilder']/method[@name='getLabel' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FieldDescriptorProto.Builder']/method[@name='getLabel' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>    
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FieldOptionsOrBuilder']/method[@name='getFeatureSupport' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FieldOptions.Builder']/method[@name='getFeatureSupport' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.GeneratedCodeInfo.AnnotationOrBuilder']/method[@name='getSemantic' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.GeneratedCodeInfo.Annotation.Builder']/method[@name='getSemantic' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.MethodOptionsOrBuilder']/method[@name='getIdempotencyLevel' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.MethodOptions.Builder']/method[@name='getIdempotencyLevel' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.UninterpretedOption.NamePartOrBuilder']/method[@name='getNamePart' and count(parameter)=0]"    
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.UninterpretedOption.NamePart.Builder']/method[@name='getNamePart' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/interface[@name='DescriptorProtos.FieldDescriptorProtoOrBuilder']/method[@name='getType' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='DescriptorProtos.FieldDescriptorProto.Builder']/method[@name='getType' and count(parameter)=0]"
+        name="propertyName"
+    ></attr>
+
+
+</metadata>

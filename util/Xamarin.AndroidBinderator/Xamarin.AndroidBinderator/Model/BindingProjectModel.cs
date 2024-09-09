@@ -39,6 +39,7 @@ namespace AndroidBinderator
 		public string? MavenDescription { get; set; }
 		public string? MavenUrl { get; set; }
 		public string? JavaSourceRepository { get; set; }
+		public bool AllowPrereleaseDependencies { get; set; }
 
 		public List<MavenArtifactLicense> Licenses { get; } = new List<MavenArtifactLicense> ();
 

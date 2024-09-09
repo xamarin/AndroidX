@@ -1,0 +1,5 @@
+<metadata>
+    <remove-node 
+        path="/api/package[@name='io.perfmark']/interface[@name='StringFunction']/typeParameters"
+        />    
+</metadata>
