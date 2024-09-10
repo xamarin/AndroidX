@@ -107,7 +107,6 @@
         >
         SetShowPlayButtonIfPlaybackIsSuppressedBuilder
     </attr>
-    
     <attr
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
         name="managedName"
@@ -126,5 +125,4 @@
         >
         SetShowPlayButtonIfPlaybackIsSuppressedBuilder
     </attr>
-
 </metadata>
