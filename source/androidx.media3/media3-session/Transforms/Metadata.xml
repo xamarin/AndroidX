@@ -1,4 +1,4 @@
-﻿<metadata>
+<metadata>
     <remove-node
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setSessionActivity' and count(parameter)=1 and parameter[1][@type='android.app.PendingIntent']]"        
         />
@@ -17,9 +17,12 @@
     <remove-node
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setSessionActivity' and count(parameter)=1 and parameter[1][@type='android.app.PendingIntent']]"
         />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setId' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-        />
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setId' and count(parameter)=1 and parameter[1][@name='p0']]"
+        name="managedName"
+		    >
+		    Id
+	  </attr>
     <remove-node
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
         />
