@@ -3656,14 +3656,6 @@
       },
       {
         "groupId": "com.google.android.gms",
-        "artifactId": "play-services-ads-identifier",
-        "version": "18.1.0",
-        "nugetVersion": "118.1.0.1",
-        "nugetId": "Xamarin.GooglePlayServices.Ads.Identifier",
-        "dependencyOnly": true
-      },
-      {
-        "groupId": "com.google.android.gms",
         "artifactId": "play-services-appindex",
         "version": "16.2.0",
         "nugetVersion": "116.2.0.1",
