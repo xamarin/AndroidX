@@ -1,0 +1,33 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.interop']"
+        name="managedName"
+        >
+        Firebase.RemoteConfig.InterOp
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfiginterop']"
+        name="managedName"
+        >
+        Firebase.RemoteConfigInterOp
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.interop.rollouts']"
+        name="managedName"
+        >
+        Firebase.RemoteConfig.InterOp.Rollouts
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.internal']"
+        name="managedName"
+        >
+        Firebase.RemoteConfig.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.remoteconfig.internal.rollouts']"
+        name="managedName"
+        >
+        Firebase.RemoteConfig.Internal.Rollouts
+    </attr>
+
+</metadata>

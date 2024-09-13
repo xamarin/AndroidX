@@ -1,0 +1,6 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.mediapipe']/interface[@name='Converter']/method[@name='zza' and count(parameter)=1 and parameter[1][@type='java.nio.ByteBuffer']]"
+        />
+
+</metadata>

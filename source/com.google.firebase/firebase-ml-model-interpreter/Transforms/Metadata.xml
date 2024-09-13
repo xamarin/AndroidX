@@ -1,0 +1,12 @@
+﻿<metadata>
+    <!-- Rename Namespaces -->
+    <attr path="/api/package[@name='com.google.firebase.ml.custom']" name="managedName">Firebase.ML.Custom</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.custom.model']" name="managedName">Firebase.ML.Custom.Model</attr>
+    <attr path="/api/package[@name='com.google.android.gms.internal.firebase_ml']" name="managedName">Firebase.ML.Internal</attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.firebase.ml.custom']/class[@name='FirebaseModelInterpreter']/method[@name='finalize' and count(parameter)=0]"
+        >
+    </remove-node>
+    
+</metadata>

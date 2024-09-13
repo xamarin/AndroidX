@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.iid']" name="managedName">Android.Gms.Iid</attr>
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zze']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='zze']" name="obfuscated">false</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.iid']/class[@name='zze']/method[contains(@name, 'zz')]" />
+
+    <!-- Used to be named Zzb, so let's keep it that way -->
+    <attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='zze']" name="managedName">Zzb</attr>
+	
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+	<attr path="/api/package[@name='com.google.android.gms.iid']/class[@name='InstanceIDListenerService']" name="extends">mono.android.Service</attr>
+	<add-node path="/api/package[@name='com.google.android.gms.iid']">
+		<class abstract="false" deprecated="not deprecated" jni-extends="Landroid/app/Service;" extends="android.app.Service" extends-generic-aware="android.App.Service" final="false" name="InstanceIDListenerService" jni-signature="Lcom/google/android/gms/iid/InstanceIDListenerService;" static="false" visibility="public">
+			<constructor deprecated="not deprecated" final="false" name="InstanceIDListenerService" static="false" visibility="public" bridge="false" synthetic="false" jni-signature="()V" />
+			<method abstract="false" deprecated="not deprecated" final="false" name="handleIntent" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
+				bridge="false" synthetic="false" jni-signature="(Landroid/content/Intent;)V">
+				<parameter name="bundle" type="android.content.Intent" jni-type="Landroid/content/Intent;" />
+			</method>
+			<method abstract="false" deprecated="not deprecated" final="false" name="onBind" native="false" return="android.os.IBinder" jni-return="Landroid/os/IBinder;" static="false" synchronized="false" visibility="public"
+				bridge="false" synthetic="false" jni-signature="(Landroid/content/Intent;)Landroid/os/IBinder;">
+				<parameter name="intent" type="android.content.Intent" jni-type="Landroid/content/Intent;" />
+			</method>
+			<method abstract="false" deprecated="not deprecated" final="false" name="onTokenRefresh" native="false" return="void" jni-return="V" static="false" synchronized="false" visibility="public"
+				bridge="false" synthetic="false" jni-signature="()V" />
+		</class>
+	</add-node>
+</metadata>

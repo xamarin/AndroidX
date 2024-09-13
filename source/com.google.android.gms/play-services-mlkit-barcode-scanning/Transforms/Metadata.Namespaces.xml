@@ -1,0 +1,33 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_barcode']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionBarCode
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.barcode']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.BarCode
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.barcode.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.BarCode.Internal
+    </attr>
+
+        
+        
+        
+
+</metadata>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+    <!--
+    TODO: possible problems! return type covariance/contravariance (needs investigation)
+    
+    CustomImageLabelerOptions.Builder.Build()
+    return="com.google.mlkit.vision.label.custom.CustomImageLabelerOptions"
+    return="com.google.mlkit.vision.label.ImageLabelerOptionsBase"    
+    -->
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.label.custom']/class[@name='CustomImageLabelerOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.MLKit.Vision.Label.ImageLabelerOptionsBase
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.custom.internal']/class[@name='CustomLabelRegistrar']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.custom.internal']/class[@name='CustomLabelRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        />
+
+</metadata>

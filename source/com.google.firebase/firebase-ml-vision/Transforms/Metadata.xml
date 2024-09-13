@@ -1,0 +1,215 @@
+﻿<metadata>
+    <!-- Rename Namespaces -->
+    <attr path="/api/package[@name='com.google.android.gms.internal.firebase_ml']" name="managedName">Firebase.ML.Internal</attr>
+    
+    <attr path="/api/package[@name='com.google.firebase.ml.vision']" name="managedName">Firebase.ML.Vision</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.barcode']" name="managedName">Firebase.ML.Vision.Barcode</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.cloud']" name="managedName">Firebase.ML.Vision.Cloud</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.cloud.label']" name="managedName">Firebase.ML.Vision.Cloud.Label</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.cloud.landmark']" name="managedName">Firebase.ML.Vision.Cloud.Landmark</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.cloud.text']" name="managedName">Firebase.ML.Vision.Cloud.Text</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.common']" name="managedName">Firebase.ML.Vision.Common</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.face']" name="managedName">Firebase.ML.Vision.Face</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.label']" name="managedName">Firebase.ML.Vision.Label</attr>
+    <attr path="/api/package[@name='com.google.firebase.ml.vision.text']" name="managedName">Firebase.ML.Vision.Text</attr>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Document
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.automl']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.AutoML
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.automl.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.AutoML.Internal
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.barcode.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Barcode.Internal
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.objects']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Objects
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.objects.internal']"
+        name="managedName"
+        >
+        Firebase.ML.Vision.Objects.Internal
+    </attr>
+    
+    <!--
+    <add-node path="/api/package[@name='com.google.android.gms.internal.firebase_ml']">
+      <class 
+        abstract="false" static="true" visibility="public" name="zzsi" extends="java.lang.Object"
+        deprecated="not deprecated" final="false" >
+      </class>
+    </add-node> 
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.firebase.ml.barcode']/class[@name='FirebaseVisionBarcodeDetector']/implements[@name='java.io.Closeable']"        >
+    </remove-node>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzil']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzis']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzis']/implements"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzis']/typeParameters"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzil']/typeParameters"
+        >
+    </remove-node>
+ 
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Block']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Element']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Element']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.Line']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBlock']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Paragraph']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Symbol']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.Word']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.IList
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="return"
+        >
+        java.util.List        
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']/method[@name='getRecognizedLanguages' and count(parameter)=0]"
+        name="return"
+        >
+        java.util.List        
+    </attr>
+    
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.text']/class[@name='FirebaseVisionText.TextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.vision.document']/class[@name='FirebaseVisionDocumentText.DocumentTextBase']"
+        name="visibility"
+        >
+        public
+    </attr>
+ 
+    <!--
+    FirebaseVisionBarcodeDetector
+    -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzrc']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzri']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml']/class[@name='zzrz']" 
+        name="obfuscated"
+        >
+        false
+    </attr>
+    
+ </metadata>

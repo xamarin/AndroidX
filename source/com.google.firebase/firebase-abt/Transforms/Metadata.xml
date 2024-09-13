@@ -1,0 +1,36 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.abt']" name="managedName">Firebase.Abt</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzanb']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase_abt']" />
+
+    <attr 
+        path="/api/package[@name='com.google.firebase.abt.component']" 
+        name="managedName"
+        >
+        Firebase.Abt.Component
+    </attr>
+    <attr 
+        path="/api/package[@name='developers.mobile.abt']" 
+        name="managedName"
+        >
+        Developers.Mobile.Abt
+    </attr>
+    
+    
+</metadata>

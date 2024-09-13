@@ -1,0 +1,26 @@
+<Project>
+  <!--NOTE: manually importing Sdk.props and Sdk.targets so we can replace the Pack target-->
+  <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>Xamarin.GooglePlayServices.Tasks</RootNamespace>
+    <AssemblyName>Xamarin.GooglePlayServices.Tasks</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build" Version="17.5.0" IncludeAssets="compile" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="17.5.0" IncludeAssets="compile" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="17.5.0" IncludeAssets="compile" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.5.0" IncludeAssets="compile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\merge.targets">
+      <Link>Xamarin.GooglePlayServices.Basement.targets</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
+  <Target Name="Pack" />
+</Project>

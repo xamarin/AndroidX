@@ -1,0 +1,74 @@
+﻿<metadata>
+
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.fitness']" name="managedName">Android.Gms.Fitness</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness.data']" name="managedName">Android.Gms.Fitness.Data</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness.request']" name="managedName">Android.Gms.Fitness.Request</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness.result']" name="managedName">Android.Gms.Fitness.Result</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness.service']" name="managedName">Android.Gms.Fitness.Service</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']" name="managedName">FitnessClass</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.fitness.request']/interface[@name='OnDataPointListener']/method[@name='onDataPoint']/parameter[1]" name="managedName">dataPoint</attr>
+
+		<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.fitness.internal.service')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+<!--	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />-->
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='API']" name="managedName">API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='BLE_API']" name="managedName">BLE_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='CONFIG_API']" name="managedName">CONFIG_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='HISTORY_API']" name="managedName">HISTORY_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='RECORDING_API']" name="managedName">RECORDING_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='SENSORS_API']" name="managedName">SENSORS_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='SESSIONS_API']" name="managedName">SESSIONS_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.fitness']/class[@name='Fitness']/field[@name='RECORDING_API']" name="managedName">RECORDING_API</attr>
+
+	<!-- ctor's aren't really meant to be used, the builder class pattern is instead used and these ctors were causing warnings due to internally typed parameters -->
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='ClaimBleDeviceRequest']/constructor[@name='ClaimBleDeviceRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='UnclaimBleDeviceRequest']/constructor[@name='UnclaimBleDeviceRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='ListClaimedBleDevicesRequest']/constructor[@name='ListClaimedBleDevicesRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='ListSubscriptionsRequest']/constructor[@name='ListSubscriptionsRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='StartBleScanRequest']/constructor[@name='StartBleScanRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='StopBleScanRequest']/constructor[@name='StopBleScanRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DataTypeCreateRequest']/constructor[@name='DataTypeCreateRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DataTypeReadRequest']/constructor[@name='DataTypeReadRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DataDeleteRequest']/constructor[@name='DataDeleteRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DataInsertRequest']/constructor[@name='DataInsertRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DataReadRequest']/constructor[@name='DataReadRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DataSourcesRequest']/constructor[@name='DataSourcesRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SessionInsertRequest']/constructor[@name='SessionInsertRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SessionReadRequest']/constructor[@name='SessionReadRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SessionStartRequest']/constructor[@name='SessionStartRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SessionStopRequest']/constructor[@name='SessionStopRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SessionRegistrationRequest']/constructor[@name='SessionRegistrationRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SessionUnregistrationRequest']/constructor[@name='SessionUnregistrationRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DailyTotalRequest']/constructor[@name='DailyTotalRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SensorRegistrationRequest']/constructor[@name='SensorRegistrationRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SensorUnregistrationRequest']/constructor[@name='SensorUnregistrationRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='SubscribeRequest']/constructor[@name='SubscribeRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='UnsubscribeRequest']/constructor[@name='UnsubscribeRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.request']/class[@name='DisableFitRequest']/constructor[@name='DisableFitRequest']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.result']/class[@name='SessionReadResult']/constructor[@name='SessionReadResult']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.data']/class[@name='DataPoint']/constructor[@name='DataPoint']" />
+
+	<!-- Remove some bad ctor's that expect internally typed parameters -->
+<!--	<remove-node path="/api/package[@name='com.google.android.gms.fitness.data']/class[@name='DataSet']/constructor[parameter[1][@type='com.google.android.gms.internal.zzxd.zzc']]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.fitness.data']/class[@name='Bucket']/constructor[parameter[1][@type='com.google.android.gms.internal.zzxd.zza']]" />-->
+</metadata>

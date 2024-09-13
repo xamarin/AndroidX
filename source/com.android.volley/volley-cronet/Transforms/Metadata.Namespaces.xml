@@ -1,0 +1,17 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+	<attr 
+        path="/api/package[@name='com.android.volley.cronet']" 
+        name="managedName"
+        >
+        Volley.CroNet
+    </attr>
+
+</metadata>

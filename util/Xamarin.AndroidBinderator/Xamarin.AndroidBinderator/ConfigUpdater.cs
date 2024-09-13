@@ -28,7 +28,7 @@ public class ConfigUpdater
 
 			if (HasUpdate (art, a)) {
 				var new_version = GetLatestVersion (a)?.ToString ();
-				var prefix = art.NugetVersion?.StartsWith ("1" + art.Version + ".") == true ? "1" : string.Empty;
+				var prefix = GetThreePartVersion (art.NugetVersion!) == "1" + GetThreePartVersion (art.Version) ? "1" : string.Empty;
 
 				art.LatestVersion = new_version ?? string.Empty;
 				art.LatestNuGetVersion = prefix + new_version;
@@ -123,6 +123,20 @@ public class ConfigUpdater
 			return new SemanticVersion (0, 0, 0);
 
 		return SemanticVersion.Parse (version + tag);
+	}
+
+	static string GetThreePartVersion (string version)
+	{
+		// Change 121.0.0.0-beta1 to 121.0.0
+		var hyphen = version.IndexOf ('-');
+		version = hyphen >= 0 ? version.Substring (0, hyphen) : version;
+
+		var parts = version.Split ('.');
+
+		if (parts.Count () < 3)
+			return version;
+
+		return $"{parts [0]}.{parts [1]}.{parts [2]}";
 	}
 
 	static async Task<List<MavenArtifactConfig>> GetExternalDependencies (List<string> externalFiles)

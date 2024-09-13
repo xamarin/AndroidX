@@ -1,0 +1,33 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.languageid']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.LanguageId
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.ml.languageid.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.ML.LanguageId.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.barcode.common.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Barcode.Common.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.languageid.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.LanguageId.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.languageid.thin.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.LanguageId.Thin.Internal
+    </attr>
+    
+</metadata>

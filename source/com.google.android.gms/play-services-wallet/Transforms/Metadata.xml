@@ -1,0 +1,76 @@
+﻿<metadata>
+	<attr path="/api/package[@name='com.google.android.gms.wallet']" name="managedName">Android.Gms.Wallet</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet.fragment']" name="managedName">Android.Gms.Wallet.Fragment</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet.wobs']" name="managedName">Android.Gms.Wallet.Wobs</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet.firstparty']" name="managedName">Android.Gms.Wallet.FirstParty</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet.callback']" name="managedName">Android.Gms.Wallet.Callback</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='Wallet']" name="managedName">WalletClass</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='Wallet.WalletOptions']" name="managedName">WalletClass.WalletOptions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='Wallet.WalletOptions.Builder']" name="managedName">WalletClass.WalletOptions.Builder</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='Wallet']/field[@name='API']" name="managedName">API</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='NotifyTransactionStatusRequest']/method[@name='getStatus' and count(parameter)=0]" name="managedName">TransactionStatus</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wallet']/class[@name='LineItem']/method[@name='getRole' and count(parameter)=0]" name="managedName">LineItemRole</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.wallet.wobs']/class[@name='LoyaltyPointsBalance']/method[@name='getType' and count(parameter)=0]" name="managedName">LoyaltyPointsBalanceType</attr>
+
+	<attr 
+		path="/api/package[@name='com.google.android.gms.wallet.button']"
+		name="managedName"
+		>
+		Android.Gms.Wallet.Button
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.android.gms.wallet.contract']"
+		name="managedName"
+		>
+		Android.Gms.Wallet.Contract
+	</attr>
+    
+	<remove-node 
+		path="/api/package[@name='com.google.android.gms.wallet.contract']/class[@name='TaskResultContracts.GetApiTaskResult']/method[@name='outputFromTask' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.tasks.Task&lt;T&gt;']]"
+		/>
+
+	<attr
+		path="/api/package[@name='com.google.android.gms.wallet.contract']/class[@name='TaskResultContracts.GetApiTaskResult']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.wallet.contract']/class[@name='TaskResultContracts.GetPaymentData']/method[@name='parseResult' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='android.content.Intent']]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.android.gms.wallet.contract']/class[@name='TaskResultContracts.ResolveApiTaskResult']/method[@name='createIntent' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.google.android.gms.tasks.Task&lt;I&gt;']]/parameter[2]"
+		name="managedType"
+		>
+		Java.Lang.Object
+	</attr>
+	<remove-node 
+		path="/api/package[@name='com.google.android.gms.wallet.contract']/class[@name='TaskResultContracts.ResolveApiTaskResult']/method[@name='outputFromTask' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.tasks.Task&lt;I&gt;']]"
+		/>
+	<remove-node 
+		path="/api/package[@name='com.google.android.gms.wallet.contract']/class[@name='TaskResultContracts.GetApiTaskResult']/method[@name='taskResultFromIntent' and count(parameter)=1 and parameter[1][@type='android.content.Intent']]"
+		/>
+</metadata>

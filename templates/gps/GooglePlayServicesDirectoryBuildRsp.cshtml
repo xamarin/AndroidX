@@ -1,0 +1,46 @@
+@using System
+@using System.IO
+@using System.Linq
+@using System.Xml.Linq
+
+  @{
+      string path_current_directory = System.IO.Directory.GetCurrentDirectory();
+      string[] artifact_version_parts = Model.NuGetVersion
+                                              .Split(new string[] { "-" }, StringSplitOptions.None);
+      string artifact_version = null;
+
+      string artifact_version_release = artifact_version_parts[0];
+      string[] artifact_version_release_parts = artifact_version_release.Split(new string[] { "." }, StringSplitOptions.None);
+      artifact_version = string.Join(".", artifact_version_release_parts, 0, 3);
+
+      if (artifact_version_parts.Length == 1)
+      {
+          // release
+      }
+      if (artifact_version_parts.Length == 2)
+      {
+          artifact_version += "-" + artifact_version_parts[1];
+      }
+  }
+# Directory.Build.rsp
+
+# https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference  
+# https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-response-files
+
+# artifact=@(Model.MavenGroupId):@(Model.Name) 
+
+# artifact_versioned=@(Model.MavenGroupId)-@(Model.Name)-@(artifact_version)
+
+# nuget=@(Model.NuGetPackageId).@(Model.NuGetVersion)
+
+#-ConsoleLoggerParameters:Verbosity=Minimal;Summary
+-clp:Verbosity=Minimal;Summary
+
+#-BinaryLogger:@(Model.MavenGroupId)-@(Model.Name)-@(artifact_version).binlog
+-bl:@(path_current_directory)/output/@(Model.MavenGroupId)-@(Model.Name)-@(artifact_version).binlog
+
+
+#-FileLoggerParameters:Verbosity=Diagnostic
+#/flp:v=diag;logfile=@(path_current_directory)/output/@(Model.MavenGroupId):@(Model.Name):@(artifact_version).diag.log
+-flp1:Verbosity=Diagnostic;errorsonly;logfile=@(path_current_directory)/output/@(Model.MavenGroupId):@(Model.Name):@(artifact_version).errors.diag.log
+-flp2:Verbosity=Diagnostic;warningsonly;logfile=@(path_current_directory)/output/@(Model.MavenGroupId):@(Model.Name):@(artifact_version).warnings.diag.log

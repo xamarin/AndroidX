@@ -1,0 +1,33 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.appupdate']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.AppUpdate
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.appupdate.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.AppUpdate.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.appupdate.testing']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.AppUpdate.Testing
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.install']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.AppUpdate.Install
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.install.model']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.AppUpdate.Install.Model
+    </attr>
+    
+</metadata>

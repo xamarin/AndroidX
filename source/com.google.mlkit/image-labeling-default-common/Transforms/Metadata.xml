@@ -1,0 +1,13 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.label.defaults']/class[@name='ImageLabelerOptions.Builder']/method[@name='build' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Xamarin.Google.MLKit.Vision.Label.ImageLabelerOptionsBase
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.label.defaults']/class[@name='ImageLabelerOptions.Builder']/method[@name='setConfidenceThreshold' and count(parameter)=1 and parameter[1][@type='float' and @return='com.google.mlkit.vision.label.defaults.ImageLabelerOptions.Builder']]"
+        />
+
+</metadata>

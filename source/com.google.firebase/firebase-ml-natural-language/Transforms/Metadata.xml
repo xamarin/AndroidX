@@ -1,0 +1,37 @@
+﻿<metadata>
+	<!-- Rename Namespaces -->
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.firebase_ml_naturallanguage']"
+        name="managedName"
+        >
+        Android.Gms.Internal.FirebaseMLNaturalLanguage
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.naturallanguage']"
+        name="managedName"
+        >
+        Firebase.ML.NaturalLanguage
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.naturallanguage.languageid']"
+        name="managedName"
+        >
+        Firebase.ML.NaturalLanguage.LanguageId
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.naturallanguage.languageid.internal']"
+        name="managedName"
+        >
+        Firebase.ML.NaturalLanguage.LanguageId.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.naturallanguage.smartreply']"
+        name="managedName"
+        >
+        Firebase.ML.NaturalLanguage.SmartReply
+    </attr>
+    
+    
+    
+</metadata>

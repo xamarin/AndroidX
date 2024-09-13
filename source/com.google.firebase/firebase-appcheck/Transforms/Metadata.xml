@@ -1,0 +1,26 @@
+﻿<metadata>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.appcheck']/class[@name='FirebaseAppCheck']/method[@name='getLimitedUseToken' and count(parameter)=0]"
+        name="propertyName"></attr>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.appcheck.internal']/class[@name='DefaultFirebaseAppCheck']/method[@name='getLimitedUseToken' and count(parameter)=0]"
+        name="managedOverride"
+        >
+        virtual
+    </attr>
+
+    <!--
+    <add-node
+        path="/api/package[@name='com.google.firebase.appcheck.internal']/class[@name='DefaultFirebaseAppCheck']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="com.google.android.gms.tasks.Task" name="getLimitedUseToken" 
+            synchronized="false" synthetic="false" deprecated="not deprecated" final="false" bridge="false" native="false"  
+            return-not-null="true" 
+            />
+    </add-node>
+    -->
+
+</metadata>
