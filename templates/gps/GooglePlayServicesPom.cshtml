@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+@using System.Linq
+@using System.IO
+@using System.Xml.Linq
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.xamarin.android.bindings</groupId>
+  <artifactId>@(Model.Name)</artifactId>
+  <version>1.0.0</version>
+  <packaging>aar</packaging>
+  <name>Xamarin.Android Bindings for GooglePlayServicesFirebase - @(Model.Name)</name>
+  <description>Xamarin.Android Bindings for GooglePlayServicesFirebase - @(Model.Name)</description>
+  <url>https://github.com/xamarin/GooglePlayServicesComponents/</url>
+  <inceptionYear>2019</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Xamarin</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://github.com/xamarin/GooglePlayServicesComponents.git</connection>
+    <url>https://github.com/xamarin/GooglePlayServicesComponents/</url>
+  </scm>
+  @if (@Model.MavenArtifacts.Count > 0) {
+  <dependencies>
+    @foreach (var art in @Model.MavenArtifacts) {
+      <dependency>
+        <groupId>@(art.MavenGroupId)</groupId>
+        <artifactId>@(art.MavenArtifactId)</artifactId>
+        <version>@(art.MavenArtifactVersion)</version>
+        <scope>compile</scope>
+      </dependency>
+    }
+  </dependencies>
+  }
+</project>

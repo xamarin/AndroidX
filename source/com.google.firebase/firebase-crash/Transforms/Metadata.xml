@@ -1,0 +1,32 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.crash']" name="managedName">Firebase.Crash</attr>
+	<attr path="/api/package[@name='com.google.firebase.crash.internal']" name="managedName">Firebase.Crash.Internal</attr>
+	<attr path="/api/package[@name='com.google.firebase.crash.internal.config.flag']" name="managedName">Firebase.Crash.Internal.Config.Flag</attr>
+	<attr path="/api/package[@name='com.google.firebase.crash.internal.service']" name="managedName">Firebase.Crash.Internal.Service</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package/class[@extends='android.app.IntentService']" name="extends">mono.android.app.IntentService</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[starts-with(@name, 'm')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[starts-with(@name, 'm')]" />
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.crash.component']"
+        name="managedName"
+        >
+        Firebase.Crash.Component
+    </attr>
+</metadata>

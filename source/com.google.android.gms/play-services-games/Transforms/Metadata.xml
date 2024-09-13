@@ -1,0 +1,534 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.games']" name="managedName">Android.Gms.Games</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']" name="managedName">Android.Gms.Games.Achievement</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.appcontent']" name="managedName">Android.Gms.Games.AppContent</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.event']" name="managedName">Android.Gms.Games.Event</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.leaderboard']" name="managedName">Android.Gms.Games.LeaderBoard</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']" name="managedName">Android.Gms.Games.MultiPlayer</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']" name="managedName">Android.Gms.Games.MultiPlayer.RealTime</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']" name="managedName">Android.Gms.Games.MultiPlayer.TurnBased</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']" name="managedName">Android.Gms.Games.Quest</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.request']" name="managedName">Android.Gms.Games.Request</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']" name="managedName">Android.Gms.Games.Snapshot</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.social']" name="managedName">Android.Gms.Games.Social</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.stats']" name="managedName">Android.Gms.Games.Stats</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.video']" name="managedName">Android.Gms.Games.Video</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal']" name="managedName">Android.Gms.Games.Internal</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.constants']" name="managedName">Android.Gms.Games.Internal.Constants</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.experience']" name="managedName">Android.Gms.Games.Internal.Experience</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.game']" name="managedName">Android.Gms.Games.Internal.Game</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.notification']" name="managedName">Android.Gms.Games.Internal.Notification</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.player']" name="managedName">Android.Gms.Games.Internal.Player</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.api']" name="managedName">Android.Gms.Games.Internal.Api</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.data']" name="managedName">Android.Gms.Games.Internal.Data</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.events']" name="managedName">Android.Gms.Games.Internal.Events</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.internal.request']" name="managedName">Android.Gms.Games.Internal.Request</attr>
+	
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']" name="managedName">GamesClass</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.BaseGamesApiMethodImpl']" name="managedName">GamesClass.BaseGamesApiMethodImpl</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']" name="managedName">GamesClass.GamesOptions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.SignOutImpl']" name="managedName">GamesClass.SignOutImpl</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.appcontent']/interface[@name='AppContentUtils.AppContentRunner']" name="visibility">internal</attr>
+
+<!--	<attr path="/api/package[@name='com.google.android.gms.games']/interface[@name='']/method[@name='']/parameter[]" name="managedName"></attr>-->
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='OnInvitationReceivedListener']/method[@name='onInvitationReceived']/parameter[1]" name="managedName">invitation</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/interface[@name='OnInvitationReceivedListener']/method[@name='onInvitationRemoved']/parameter[1]" name="managedName">invitationId</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RealTimeMessageReceivedListener']/method[@name='onRealTimeMessageReceived']/parameter[1]" name="managedName">message</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onRoomConnecting']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onRoomAutoMatching']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerInvitedToRoom']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerInvitedToRoom']/parameter[2]" name="managedName">participantIds</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerDeclined']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerDeclined']/parameter[2]" name="managedName">participantIds</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerJoined']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerJoined']/parameter[2]" name="managedName">participantIds</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerLeft']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeerLeft']/parameter[2]" name="managedName">participantIds</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onConnectedToRoom']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onDisconnectedFromRoom']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeersConnected']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeersConnected']/parameter[2]" name="managedName">participantIds</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeersDisconnected']/parameter[1]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onPeersDisconnected']/parameter[2]" name="managedName">participantIds</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onP2PConnected']/parameter[1]" name="managedName">participantId</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomStatusUpdateListener']/method[@name='onP2PDisconnected']/parameter[1]" name="managedName">participantId</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onRoomCreated']/parameter[1]" name="managedName">statusCode</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onRoomCreated']/parameter[2]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onJoinedRoom']/parameter[1]" name="managedName">statusCode</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onJoinedRoom']/parameter[2]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onLeftRoom']/parameter[1]" name="managedName">statusCode</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onLeftRoom']/parameter[2]" name="managedName">roomId</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onRoomConnected']/parameter[1]" name="managedName">statusCode</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/interface[@name='RoomUpdateListener']/method[@name='onRoomConnected']/parameter[2]" name="managedName">room</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/interface[@name='OnTurnBasedMatchUpdateReceivedListener']/method[@name='onTurnBasedMatchReceived']/parameter[1]" name="managedName">match</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/interface[@name='OnTurnBasedMatchUpdateReceivedListener']/method[@name='onTurnBasedMatchRemoved']/parameter[1]" name="managedName">matchId</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.quest']/interface[@name='QuestUpdateListener']/method[@name='onQuestCompleted']/parameter[1]" name="managedName">quest</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.request']/interface[@name='OnRequestReceivedListener']/method[@name='onRequestReceived']/parameter[1]" name="managedName">request</attr>
+<attr path="/api/package[@name='com.google.android.gms.games.request']/interface[@name='OnRequestReceivedListener']/method[@name='onRequestRemoved']/parameter[1]" name="managedName">requestId</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='API']" name="managedName">API</attr>
+
+	<!-- Remove some internal namespaces -->
+	<!--<remove-node path="/api/package[contains(@name, 'com.google.android.gms.games.internal')]/class[@name!='GamesDowngradeableSafeParcel']" />-->
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal']/interface[contains(@name, 'GamesContract')]" />
+
+<!--	<attr path="/api/package/class[contains(@extends, 'com.google.android.gms.games.internal.GamesDowngradeableSafeParcel')]" name="extends">android.os.Parcelable</attr>
+  	<attr path="/api/package/class[contains(@extends-generic-aware, 'com.google.android.gms.games.internal.GamesDowngradeableSafeParcel')]" name="extends-generic-aware">android.os.Parcelable</attr>
+-->
+
+
+	<!-- These two will say matched no nodes, but they actually do make a change -->
+<!--	<attr path="//*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']" name="extends">java.lang.Object</attr>
+  	<attr path="//*[@extends-generic-aware='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']" name="extends-generic-aware">java.lang.Object</attr>-->
+
+
+
+	<!-- Remove *zz* obfuscated items -->
+	<!--	<remove-node path="/api/package/class[contains(@name, 'zz')]" />-->
+	<!--	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />-->
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+    
+	<!-- Fix up inheritence from covariant types -->
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardScoreBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardScoreBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteBuffer']/method[@name='get']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerLevelCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerLevelInfoCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentActionEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentAnnotationEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentCardEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentConditionEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentSectionEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentTupleEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='InvitationEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantResultCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/class[@name='RoomEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='QuestEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotContentsEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataChangeCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.social']/class[@name='SocialInviteEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.stats']/class[@name='PlayerStatsEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.video']/class[@name='VideoEntityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.video']/class[@name='VideoConfigurationCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.video']/class[@name='VideoCapabilitiesCreator']/implements[@name='android.os.Parcelable.Creator']" />
+
+
+
+<!--	<remove-node path="/api/package[@name='com.google.android.gms.games.appcontent']/class[@name='AppContentSectionRef']" />-->
+
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='QuestEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestEntity']/method[@name='freeze' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestEntity']/method[@name='freeze' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='QuestEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='QuestRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.event']/class[@name='EventRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='InvitationRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='InvitationEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/class[@name='RoomRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.realtime']/class[@name='RoomEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='GameEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.snapshot']/class[@name='SnapshotMetadataRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementEntity']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.games.achievement']/class[@name='AchievementRef']/method[@name='freeze']" name="managedReturn">Java.Lang.Object</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.BaseGamesApiMethodImpl']" name="extends">Java.Lang.Object</attr>
+
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/interface[@name='OnNearbyPlayerDetectedListener']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.social']/interface[@name='OnSocialInviteUpdateReceivedListener']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PA']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PB']" />
+	<remote-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PC']" />
+	<attr path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='PC']" name="visibility">private</attr>
+	<remove-node path="/api/package[@name='com.google.android.gms.games']/class[@name='Games']/field[@name='Pz']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='ConnectionInfoCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.experience']/class[@name='ExperienceEventRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameBadgeRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameInstanceBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='GameSearchSuggestionBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='ScreenshotEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.game']/class[@name='ScreenshotEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.notification']/class[@name='GameNotificationBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='MostRecentGameInfoEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='MostRecentGameInfoEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='MostRecentGameInfoRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='ProfileSettingsEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageBuffer']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageEntity']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageEntityCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.player']/class[@name='StockProfileImageRef']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='PopupLocationInfoParcelableCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.multiplayer']/class[@name='InvitationClusterCreator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.multiplayer']/class[@name='ZInvitationCluster']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestCluster']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.games.internal.request']/class[@name='GameRequestClusterCreator']" />
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<add-node path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+	</add-node>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.GamesAbstractSafeParcelable']" name="extends-generic-aware">java.lang.Object</attr>
+
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<add-node path="/api/package/*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.GamesDowngradeableSafeParcel']" name="extends-generic-aware">java.lang.Object</attr>
+
+    
+	<add-node path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+	</add-node>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.games.internal.zzc']" name="extends-generic-aware">java.lang.Object</attr>
+
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchBuffer']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="get" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+            <parameter type="int" name="index" ></parameter>
+        </method>        
+    </add-node>    
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GameBuffer']/method[@name='get']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchBuffer']"
+        name="final"
+        >
+        false
+    </attr>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]"
+        >
+    </remove-node>>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games']/interface[@name='Game']/implements[@name='com.google.android.gms.common.data.Freezable']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games.quest']/interface[@name='Quest']/implements[@name='com.google.android.gms.common.data.Freezable']"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardEntity']/implements[@name='com.google.android.gms.common.data.Freezable']"
+        >        
+    </remove-node>
+
+    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='InvitationBuffer']"
+        >
+        <method 
+            visibility="protected" abstract="false" static="false" return="Java.Lang.Object" name="getEntry" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+            <parameter type="int" name="p0"></parameter>
+            <parameter type="int" name="p1"></parameter>
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='QuestBuffer']"
+        >
+        <method 
+            visibility="protected" abstract="false" static="false" return="Java.Lang.Object" name="getEntry" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+            <parameter type="int" name="p0"></parameter>
+            <parameter type="int" name="p1"></parameter>
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestBuffer']"
+        >
+        <method 
+            visibility="protected" abstract="false" static="false" return="Java.Lang.Object" name="getEntry" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+            <parameter type="int" name="p0"></parameter>
+            <parameter type="int" name="p1"></parameter>
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer.turnbased']/class[@name='TurnBasedMatchBuffer']"
+        >
+        <method 
+            visibility="protected" abstract="false" static="false" return="Java.Lang.Object" name="getEntry" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+            <parameter type="int" name="p0"></parameter>
+            <parameter type="int" name="p1"></parameter>
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardBuffer']"
+        >
+        <method 
+            visibility="protected" abstract="false" static="false" return="Java.Lang.Object" name="getEntry" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+            <parameter type="int" name="p0"></parameter>
+            <parameter type="int" name="p1"></parameter>
+        </method>        
+    </add-node>    
+    
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzd']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zze']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zza']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzb']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games.internal']/class[@name='zzab']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.games']/class[@name='zzh']" name="obfuscated">false</attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games.internal']/interface[@name='zzu']"
+        >
+    </remove-node>
+    
+    <attr 
+        path="/api/package/class/implements[@name='com.google.android.gms.games.internal.zzu']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <remove-node
+        path="/api/package/class/implements[@name='com.google.android.gms.games.internal.zzu']"
+        >
+    </remove-node>
+    
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='AchievementsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='EventsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='GamesClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='InvitationsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='LeaderboardsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='NotificationsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayersClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerStatsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='RealTimeMultiplayerClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='SnapshotsClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='TurnBasedMultiplayerClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    <attr 
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='VideosClient']"
+        name="extends"
+        >
+        Java.Lang.Object
+    </attr>     
+    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.quest']/class[@name='MilestoneEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.leaderboard']/class[@name='LeaderboardVariantEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.stats']/class[@name='PlayerStatsEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.request']/class[@name='GameRequestEntity']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+    
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games.multiplayer']/class[@name='ParticipantRef']"
+        >
+      <method 
+            visibility="public" abstract="false" static="false" return="java.lang.Object" name="freeze"
+            deprecated="not deprecated" final="true" bridge="false" native="false" synchronized="false" synthetic="false" 
+            jni-signature="()Lcom/google/android/gms/games/Game;" rjni-return="Lcom/google/android/gms/games/Game;" 
+            >
+      </method>
+    </add-node>
+    <add-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='PlayerRef']"
+        >
+        <method 
+            visibility="public" abstract="false" static="false" return="Java.Lang.Object" name="freeze" 
+            deprecated="not deprecated" final="false" native="false" synchronized="false"
+            >
+        </method>        
+    </add-node>    
+
+    <!--
+        copy/remove-node
+    <attr
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']/method[@name='getImpliedScopes' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IList &lt; Android.Gms.Common.Apis.Scope &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.games']/class[@name='Games.GamesOptions']/method[@name='getImpliedScopes' and count(parameter)=0]"
+         />
+
+</metadata>

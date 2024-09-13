@@ -1,0 +1,57 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.appindexing']" name="managedName">Android.Gms.AppIndexing</attr>
+	<attr path="/api/package[@name='com.google.android.gms.appdatasearch']" name="managedName">Android.Gms.AppDataSearch</attr>
+	<attr path="/api/package[@name='com.google.android.gms.search']" name="managedName">Android.Gms.Search</attr>
+	<attr path="/api/package[@name='com.google.firebase.appindexing']" name="managedName">Firebase.AppIndexing</attr>
+	<attr path="/api/package[@name='com.google.firebase.appindexing.builders']" name="managedName">Firebase.AppIndexing.Builders</attr>
+	<attr path="/api/package[@name='com.google.firebase.appindexing.internal']" name="managedName">Firebase.AppIndexing.Internal</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+<!--	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />-->
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.appindexing']/class[@name='AppIndex']/field[@name='APP_INDEX_API']" name="managedName">APP_INDEX_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.appindexing']/class[@name='AppIndex']/field[@name='API']" name="managedName">API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.search']/class[@name='SearchAuth']/field[@name='API']" name="managedName">API</attr>
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.icing']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Icing
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.libs.punchclock.threads']" 
+        name="managedName"
+        >
+        Android.Gms.Libs.Punchlock.Threads
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.search']" 
+        name="managedName"
+        >
+        Android.Gms.Search
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.icing']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Icing
+    </attr>
+        
+</metadata>

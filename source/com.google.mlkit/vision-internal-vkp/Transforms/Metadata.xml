@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.vkp']/class[@name='VkpRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.vkp']/class[@name='VkpRegistrar']/implements"
+        >        
+    </remove-node>
+
+</metadata>

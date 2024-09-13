@@ -1,0 +1,27 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_pose_bundled']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionPoseBundlee
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.pose']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Pose
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.pose.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Pose.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Pose.Defaults
+    </attr>
+    
+</metadata>

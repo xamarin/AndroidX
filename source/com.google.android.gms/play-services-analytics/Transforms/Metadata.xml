@@ -1,0 +1,29 @@
+﻿<metadata>
+
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.analytics']" name="managedName">Android.Gms.Analytics</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics.internal']" name="managedName">Android.Gms.Analytics.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics.ecommerce']" name="managedName">Android.Gms.Analytics.Ecommerce</attr>
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']" name="managedName">Android.Gms.Tagmanager</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='TagManager']" name="managedName">TagManagerClass</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+<!--	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.analytics']/class[@name='AnalyticsService']/implements[@name='com.google.android.gms.internal.zztc.zza']" />
+
+</metadata>

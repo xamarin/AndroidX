@@ -1,0 +1,14 @@
+﻿<enum-field-mappings>
+  <mapping clr-enum-type="Android.Gms.Vision.CameraFacing" jni-class="com/google/android/gms/vision/CameraSource">
+    <field clr-name="Front" jni-name="CAMERA_FACING_FRONT" value="1" />
+    <field clr-name="Back" jni-name="CAMERA_FACING_BACK" value="0" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.FrameRotation" jni-class="com/google/android/gms/vision/Frame">    
+    <field clr-name="Rotate0" jni-name="ROTATION_0" value="0" />
+    <field clr-name="Rotate180" jni-name="ROTATION_180" value="2" />
+    <field clr-name="Rotate270" jni-name="ROTATION_270" value="3" />
+    <field clr-name="Rotate90" jni-name="ROTATION_90" value="1" />
+  </mapping>
+
+</enum-field-mappings>

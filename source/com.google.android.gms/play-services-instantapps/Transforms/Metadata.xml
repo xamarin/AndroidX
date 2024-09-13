@@ -1,0 +1,41 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.instantapps']" name="managedName">Android.Gms.InstantApp</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.instantapps']/class[@name='InstantApps']/field[@name='API']" name="managedName">API</attr>
+
+	<!-- TODO: Look at Removing these once Cycle 9 is released -->
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzaql']/method[@name='zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzaqm']/method[@name='zza']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.instantapps']/class[@name='zza']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.instantapps']/class[@name='zzb']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqf']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqh']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqk']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqo']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqv']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqz']/implements[@name='android.os.Parcelable.Creator']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzare']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarb']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarg']/implements[@name='android.os.Parcelable.Creator']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzaqy']/method[@name='zza' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.common.api.Status'] and parameter[2][@type='android.content.pm.PackageInfo']]" />
+	<!-- End TODO -->
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqy.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqz.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqz.zza.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqy.zza.zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqx']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqs']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaqu']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzart']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzari']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzaro']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarm']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzarr']" />
+</metadata>

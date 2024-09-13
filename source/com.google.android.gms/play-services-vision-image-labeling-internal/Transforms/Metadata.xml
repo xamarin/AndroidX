@@ -1,0 +1,17 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.vision.label']" name="managedName">Android.Gms.Vision.Label</attr>
+    <attr path="/api/package[@name='com.google.android.gms.vision.label.internal.client']" name="managedName">Android.Gms.Vision.Label.Internal.Client</attr>
+    
+    <attr
+        path="/api/package[@name='com.google.android.gms.vision.label.internal.client']/class[@name='zze']"
+        name="obfuscated">false</attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.vision.label.internal.client']/interface[@name='INativeImageLabeler']/method[@name='zza']"
+        name="obfuscated">false</attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.vision.label.internal.client']/class[@name='zze']"
+        />
+    
+</metadata>

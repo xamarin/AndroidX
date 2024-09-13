@@ -1,0 +1,20 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_pose_common']" 
+        name="managedName"
+        >
+      Android.Gms.Internal.MLKitVisionPoseCommon
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.pose']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Pose
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.pose.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Pose.Internal
+    </attr>
+</metadata>

@@ -1,0 +1,22 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.integrity']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.Integrity
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.integrity.model']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.Integrity.Model
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.integrity.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Integrity.Internal
+    </attr>
+
+
+</metadata>

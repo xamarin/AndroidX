@@ -1,0 +1,61 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth.api.model']" name="managedName">Firebase.Auth.Api.Model</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth.internal']" name="managedName">Firebase.Auth.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.auth']" name="managedName">Android.Gms.Dynamite.Descriptors.Firebase.Auth</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth.api.fallback.service']" name="managedName">Firebase.Auth.Api.Fallback.Service</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth.api.internal']" name="managedName">Firebase.Auth.Api.Internal</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth.api.model.json']" name="managedName">Firebase.Auth.Api.Model.Json</attr>
+    
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+    <!--
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zz']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+    -->
+	<!--<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+    <!--
+    mc++ 20180608 mathced no nodes
+	Remove the implementation of this nonsense obfuscated interface which has no useful methods in it anyway
+	<remove-node path="/api/package[@name='com.google.firebase.auth']/class[@name='FirebaseAuth']/implements[@name='com.google.android.gms.internal.zzbti']" />
+    <remove-node path="/api/package[@name='com.google.firebase.auth']/interface[@name='AuthResult']/implements[@name='com.google.android.gms.internal.zzbgp']" />
+    <remove-node path="/api/package[@name='com.google.firebase.auth']/interface[@name='AdditionalUserInfo']/implements[@name='com.google.android.gms.internal.zzbgp']" />
+    -->
+    
+    <attr path="/api/package[@name='com.google.firebase.auth']/class[@name='zzh']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.firebase.auth']/class[@name='zzh']" name="visibility">public</attr>
+
+    <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zza']" name="visibility">internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzb']" name="visibility">internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.zzc']" name="visibility">internal</attr>
+
+    <attr
+        path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth.AuthStateListener']/method[@name='onAuthStateChanged' and count(parameter)=1 and parameter[1][@type='com.google.firebase.auth.FirebaseAuth']]/parameter[1]"
+        name="managedName">
+        auth
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.auth']/interface[@name='FirebaseAuth']/implements"
+        />
+    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.auth']/class[@name='zzh']"
+        />
+    <attr
+        path="/api/package[@name='com.google.firebase.auth.ktx']"
+        name="managedName"
+        >
+        Firebase.Auth.Ktx
+    </attr>
+    
+</metadata>
