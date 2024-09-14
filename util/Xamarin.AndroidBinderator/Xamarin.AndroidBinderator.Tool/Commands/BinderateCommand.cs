@@ -30,7 +30,7 @@ static class BinderateCommand
 		return binderate_command;
 	}
 
-	public static async Task RunBinderateVerb (string [] configFiles, string? basePath)
+	public static async Task<int> RunBinderateVerb (string [] configFiles, string? basePath)
 	{
 		Console.WriteLine ("Arguments:");
 
@@ -67,6 +67,10 @@ static class BinderateCommand
 			}
 
 			Trace.WriteLine (sb.ToString ());
+
+			return 1;
 		}
+
+		return 0;
 	}
 }

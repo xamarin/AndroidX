@@ -1,0 +1,10 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr 
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.vision.dynamite.ica']"
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Descriptors.Vision.Ica
+    </attr>
+    
+</metadata>

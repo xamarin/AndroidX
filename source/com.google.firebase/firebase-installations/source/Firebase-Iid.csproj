@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B28F65D1-D8DD-45E8-9DD7-74A3BE40B4CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Xamarin.Firebase.Iid</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>Xamarin.Firebase.Iid</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+    <DroidDocPaths>..\..\externals\docs\reference</DroidDocPaths>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AndroidTlsProvider></AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="Jars\AboutJars.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="..\..\Metadata.Common.xml">
+      <Link>Transforms\Metadata.Common.xml</Link>
+    </TransformFile>
+    <TransformFile Include="..\..\Metadata.generated.xml">
+      <Link>Transforms\Metadata.generated.xml</Link>
+    </TransformFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\basement\source\Basement.csproj">
+      <Project>{6A38FACF-F0C5-4A49-8A8A-7CE6634207CE}</Project>
+      <Name>Basement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-common\source\Firebase-Common.csproj">
+      <Project>{865652D3-8D1A-4779-92FC-4C54719286B7}</Project>
+      <Name>Firebase-Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\tasks\source\Tasks.csproj">
+      <Project>{53F87D88-8871-41A2-9F81-B79AB02FEC24}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\stats\source\Stats.csproj">
+      <Project>{B5360982-854F-4DB8-86A2-326041BFC46F}</Project>
+      <Name>Stats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\firebase-iid-interop\source\Firebase-Iid-Interop.csproj">
+      <Project>{9F5638E1-7D20-42B2-8C14-AB815E5A5B7B}</Project>
+      <Name>Firebase-Iid-Interop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InputJar Include="..\..\externals\firebase-iid\classes.jar">
+      <Link>Jars\firebase-iid.jar</Link>
+    </InputJar>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <Import Project="..\..\generated.targets" />
+</Project>

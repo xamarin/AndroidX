@@ -1,0 +1,83 @@
+﻿<metadata>
+
+	<attr path="/api/package[@name='com.google.android.gms.location']" name="managedName">Android.Gms.Location</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.internal']" name="managedName">Android.Gms.Location.Internal</attr>
+<!--	<attr path="/api/package[@name='com.google.android.gms.location.copresence.internal']" name="managedName">Android.Gms.Location.Copresence.Internal</attr>-->
+	<!--<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.personalized']" name="managedName">Android.Gms.Location.Places.Personalized</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']" name="managedName">Android.Gms.Location.Places.UI</attr>
+-->
+	<!-- Fix names the same as the namespace -->
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='Places']" name="managedName">PlacesClass</attr>
+	
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.location.places.internal')]" />
+<!--	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.location.places.personalized.internal')]" />-->
+
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and not(@name = 'zzpr') and not(@name = 'zza') and not(@name = 'zza.zza')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[@name='CREATOR' and contains(@type, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<!-- Allowing zza classes allows a bit too much, so remove these specifically -->
+<!--	<remove-node path="/api/package[@name='com.google.android.gms.location.copresence.internal']/class[@name='zza']" />-->
+	<remove-node path="/api/package[@name='com.google.android.gms.location.places.personalized']/class[@name='zza']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='zza']" />
+
+
+	<attr path="/api/package[@name='com.google.android.gms.location']/interface[@name='LocationListener']/method[@name='onLocationChanged']/parameter[1]" name="managedName">location</attr>
+
+	<!-- Fix private types needed to be public -->
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='zza']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='zza.zza']" name="visibility">public</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places.ui']/class[@name='zza.zza']" name="managedName">Zza.ZzaInner</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='ActivityRecognition']/field[@name='API']" name="managedName">API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='Places']/field[@name='GEO_DATA_API']" name="managedName">GEO_DATA_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='Places']/field[@name='PLACE_DETECTION_API']" name="managedName">PLACE_DETECTION_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationServices']/field[@name='API']" name="managedName">API</attr>
+
+
+	<!-- Fix inheritence -->
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='AutocompletePredictionBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='ActivityRecognitionResultCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='DetectedActivityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationSettingsResultCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationAvailabilityCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationRequestCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationResultCreator']/implements[@name='android.os.Parcelable.Creator']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceReportCreator']/implements[@name='android.os.Parcelable.Creator']" />
+
+
+	<!-- Fix inheritence -->
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceLikelihoodBuffer']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlacePhotoMetadataBuffer']/method[@name='get' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationRequest']/field[@name='CREATOR']" />
+
+	<remove-node path="/api/package[@name='com.google.android.gms.location.places']/class[@name='PlaceFilter']/constructor[count(parameter)=4]" />
+
+	<!-- We don't want to subclass this type, it will change the base type on a bunch of things from past versions -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
+
+	<!-- We are renaming this class so we can create our own subclass which will be used instead of this class and adds some extra functionality -->
+	<attr path="/api/package[@name='com.google.android.gms.location']/class[@name='LocationCallback']" name="managedName">LocationCallbackBase</attr>
+
+</metadata>

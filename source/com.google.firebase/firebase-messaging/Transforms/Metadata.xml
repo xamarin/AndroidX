@@ -1,0 +1,91 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.messaging']" name="managedName">Firebase.Messaging</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+    <!--
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+    -->
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+    
+    <!--
+    There was one in Additions.cs - removed, since seems like it is surfaced now
+    <add-node path="/api/package[@name='com.google.firebase.messaging']/class[@name='FirebaseMessagingService']">
+      <method 
+            visibility="public" static="false"  abstract="false" return="void" name="onNewToken" 
+            jni-signature="(Ljava/lang/String;Ljava/lang/Exception;)V" jni-return="V" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" synthetic="false" synchronized="false" 
+            >
+            <parameter name="message" type="java.lang.String" jni-type="Ljava/lang/String;">
+            </parameter>
+      </method>
+    </add-node>
+    -->
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='FirebaseMessagingService']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='zze']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging']/class[@name='zzf']"
+        name="obfuscated"
+        >
+        false
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.internal.firebase_messaging']"
+        name="managedName"
+        >
+        Android.Gms.Internal.FirebaseMessaging
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.inappmessaging.internal']/class[@name='AbtIntegrationHelper_Factory']/method[@name='get' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+        
+    <attr
+        path="/api/package[@name='com.google.firebase.iid']"
+        name="managedName"
+        >
+        Firebase.Iid
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging.reporting']"
+        name="managedName"
+        >
+        Firebase.Messaging.Reporting
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.messaging.threads']"
+        name="managedName"
+        >
+        Firebase.Messaging.Threads
+    </attr>
+
+	<attr 
+		path="/api/package[@name='com.google.firebase.messaging.ktx']" 
+		name="managedName"
+		>
+		Firebase.Messaging.Ktx
+	</attr>
+
+</metadata>

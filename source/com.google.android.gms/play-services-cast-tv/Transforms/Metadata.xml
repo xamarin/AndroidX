@@ -1,0 +1,8 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.android.gms.cast.tv']/class[@name='SenderDisconnectedEventInfo']/method[@name='getDisconnectReason' and count(parameter)=0]"
+        name="managedName"
+        >
+        DisconnectReasonCode
+    </attr>
+</metadata>

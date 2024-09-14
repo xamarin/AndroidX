@@ -1,0 +1,108 @@
+﻿<enum-field-mappings>
+	<!--
+  This example converts the constants Fragment_id, Fragment_name,
+  and Fragment_tag from android.support.v4.app.FragmentActivity.FragmentTag
+  to an enum called Android.Support.V4.App.FragmentTagType with values
+  Id, Name, and Tag.
+  
+  <mapping clr-enum-type="Android.Gms.Vision.CameraFacing" jni-class="com/google/android/gms/vision/CameraSource">
+    <field clr-name="Front" jni-name="CAMERA_FACING_FRONT" value="1" />
+    <field clr-name="Back" jni-name="CAMERA_FACING_BACK" value="0" />
+  </type>
+
+  Notes:
+  - An optional "bitfield" attribute marks the enum type with [Flags].
+  - For Java interfaces, use "jni-interface" attribute instead of "jni-class" attribute.
+  -->
+
+  <mapping clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" jni-class="com/google/android/gms/vision/barcode/Barcode">    
+    <field clr-name="AllFormats" jni-name="ALL_FORMATS" value="0" />
+    <field clr-name="Code128" jni-name="CODE_128" value="1" />
+    <field clr-name="Code39" jni-name="CODE_39" value="2" />
+    <field clr-name="Code93" jni-name="CODE_93" value="4" />
+    <field clr-name="Codabar" jni-name="CODABAR" value="8" />
+    <field clr-name="DataMatrix" jni-name="DATA_MATRIX" value="16" />
+    <field clr-name="Ean13" jni-name="EAN_13" value="32" />
+    <field clr-name="Ean8" jni-name="EAN_8" value="64" />
+    <field clr-name="Itf" jni-name="ITF" value="128" />
+    <field clr-name="QrCode" jni-name="QR_CODE" value="256" />
+    <field clr-name="UpcA" jni-name="UPC_A" value="512" />
+    <field clr-name="UpcE" jni-name="UPC_E" value="1024" />
+    <field clr-name="Pdf417" jni-name="PDF417" value="2048" />
+    <field clr-name="Aztec" jni-name="AZTEC" value="4096" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeValueFormat" jni-class="com/google/android/gms/vision/barcode/Barcode">    
+    <field clr-name="CalendarEvent" jni-name="CALENDAR_EVENT" value="11" />
+    <field clr-name="ContactInfo" jni-name="CONTACT_INFO" value="1" />
+    <field clr-name="DriverLicense" jni-name="DRIVER_LICENSE" value="12" />
+    <field clr-name="Email" jni-name="EMAIL" value="2" />
+    <field clr-name="Geo" jni-name="GEO" value="10" />
+    <field clr-name="Isbn" jni-name="ISBN" value="3" />
+    <field clr-name="Phone" jni-name="PHONE" value="4" />
+    <field clr-name="Product" jni-name="PRODUCT" value="5" />
+    <field clr-name="Sms" jni-name="SMS" value="6" />
+    <field clr-name="Text" jni-name="TEXT" value="7" />
+    <field clr-name="Url" jni-name="URL" value="8" />
+    <field clr-name="Wifi" jni-name="WIFI" value="9" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Barcodes.AddressType" jni-class="com/google/android/gms/vision/barcode/Barcode$Address">    
+    <field clr-name="Unknown" jni-name="UNKNOWN" value="0" />
+    <field clr-name="Work" jni-name="WORK" value="1" />
+    <field clr-name="Home" jni-name="HOME" value="2" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Barcodes.EmailType" jni-class="com/google/android/gms/vision/barcode/Barcode$Email">    
+    <field clr-name="Unknown" jni-name="UNKNOWN" value="0" />
+    <field clr-name="Work" jni-name="WORK" value="1" />
+    <field clr-name="Home" jni-name="HOME" value="2" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Barcodes.PhoneType" jni-class="com/google/android/gms/vision/barcode/Barcode$Phone">    
+    <field clr-name="Unknown" jni-name="UNKNOWN" value="0" />
+    <field clr-name="Work" jni-name="WORK" value="1" />
+    <field clr-name="Home" jni-name="HOME" value="2" />
+    <field clr-name="Fax" jni-name="FAX" value="3" />
+    <field clr-name="Mobile" jni-name="MOBILE" value="4" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Barcodes.WifiType" jni-class="com/google/android/gms/vision/barcode/Barcode$WiFi">    
+    <field clr-name="Open" jni-name="OPEN" value="1" />
+    <field clr-name="Wpa" jni-name="WPA" value="2" />
+    <field clr-name="Wep" jni-name="WEP" value="3" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Faces.ClassificationType" jni-class="com/google/android/gms/vision/face/FaceDetector">    
+  	<field clr-name="None" jni-name="NO_CLASSIFICATIONS" value="0" />
+    <field clr-name="All" jni-name="ALL_CLASSIFICATIONS" value="1" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Faces.LandmarkDetectionType" jni-class="com/google/android/gms/vision/face/FaceDetector">    
+  	<field clr-name="None" jni-name="NO_LANDMARKS" value="0" />
+    <field clr-name="All" jni-name="ALL_LANDMARKS" value="1" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Faces.FaceDetectionMode" jni-class="com/google/android/gms/vision/face/FaceDetector">    
+  	<field clr-name="Fast" jni-name="FAST_MODE" value="0" />
+    <field clr-name="Accurate" jni-name="ACCURATE_MODE" value="1" />
+  </mapping>
+
+  <mapping clr-enum-type="Android.Gms.Vision.Faces.LandmarkType" jni-class="com/google/android/gms/vision/face/Landmark">    
+  	<field clr-name="BottomMouth" jni-name="BOTTOM_MOUTH" value="0" />
+    <field clr-name="LeftCheek" jni-name="LEFT_CHEEK" value="1" />
+    <field clr-name="LeftEar" jni-name="LEFT_EAR" value="3" />
+    <field clr-name="LeftEarTip" jni-name="LEFT_EAR_TIP" value="2" />
+    <field clr-name="LeftEye" jni-name="LEFT_EYE" value="4" />
+    <field clr-name="LeftMouth" jni-name="LEFT_MOUTH" value="5" />
+    <field clr-name="NoseBase" jni-name="NOSE_BASE" value="6" />
+    <field clr-name="RightCheek" jni-name="RIGHT_CHEEK" value="7" />
+    <field clr-name="RightEar" jni-name="RIGHT_EAR" value="9" />
+    <field clr-name="RightEarTip" jni-name="RIGHT_EAR_TIP" value="8" />
+    <field clr-name="RightEye" jni-name="RIGHT_EYE" value="10" />
+    <field clr-name="RightMouth" jni-name="RIGHT_MOUTH" value="11" />
+  </mapping>
+
+
+
+</enum-field-mappings>

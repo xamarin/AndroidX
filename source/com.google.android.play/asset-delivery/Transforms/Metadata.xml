@@ -1,0 +1,20 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.assetpacks']/class[@name='NativeAssetPackStateUpdateListener']/method[@name='onStateUpdate' and count(parameter)=1 and parameter[1][@type='com.google.android.play.core.assetpacks.AssetPackState']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.play.core.assetpacks']/class[@name='NativeAssetPackStateUpdateListener']/method[@name='onStateUpdate' and count(parameter)=1 and parameter[1][@type='com.google.android.play.core.assetpacks.AssetPackState']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='xamarin.google.android.play.core.assetpacks']/interface[@name='AssetPackStateUpdateListenerWrapper.AssetPackStateListener']/method[@name='OnStateUpdate']/parameter[@name='p0']" 
+        name="name"
+        >
+        state
+    </attr>
+</metadata>

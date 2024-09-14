@@ -1,0 +1,35 @@
+<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr
+        path="/api/package[@name='com.google.firebase']" 
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.components']" 
+        name="managedName"
+        >
+        Firebase.Components
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.dynamicloading']" 
+        name="managedName"
+        >
+        Firebase.DynamicLoading
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.events']" 
+        name="managedName"
+        >
+        Firebase.Events
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.inject']" 
+        name="managedName"
+        >
+        Firebase.Inject
+    </attr>
+    
+</metadata>

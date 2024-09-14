@@ -1,0 +1,25 @@
+﻿<metadata>
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.ml.common']" name="managedName">Firebase.ML.Common</attr>
+    <attr path="/api/package[@name='com.google.android.gms.internal.firebase_ml']" name="managedName">Firebase.ML.Internal</attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.common']"
+        name="managedName"
+        >
+        Firebase.ML.Common
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.common.internal.modeldownload']"
+        name="managedName"
+        >
+        Firebase.ML.Internal.ModelDownload
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.ml.common.modeldownload']"
+        name="managedName"
+        >
+        Firebase.ML.Common.ModelDownload        
+    </attr>
+    
+</metadata>

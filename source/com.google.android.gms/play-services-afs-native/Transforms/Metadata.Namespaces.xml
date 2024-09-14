@@ -1,0 +1,27 @@
+﻿<metadata>
+	<attr 
+		path="/api/package[@name='com.google.android.gms.ads.afsn']"
+		name="managedName"
+		>
+		Android.Gms.Ads.Afsn
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.android.gms.ads.afsn.purchases']"
+		name="managedName"
+		>
+		Android.Gms.Ads.Afsn.Purchase
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.android.gms.ads.afsn.search']"
+		name="managedName"
+		>
+		Android.Gms.Ads.Afsn.Search
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.android.gms.internal.skipjack']"
+		name="managedName"
+		>
+		Android.Gms.Internal.SkipJack
+	</attr>
+
+</metadata>

@@ -1,0 +1,24 @@
+﻿<metadata>
+	<!-- Remove some internal namespaces -->
+	<!--
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	-->
+
+	<!-- Fix params for some inherited parcelable types -->
+	<!--
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	-->
+	<attr
+        path="/api/package[@name='com.google.android.gms.measurement.api']"
+        name="managedName"        
+        >
+        Android.Gms.Measurement.Api
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.analytics']"
+        name="managedName"
+        >
+        Firebase.Analytics
+    </attr>
+    
+</metadata>

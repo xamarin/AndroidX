@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+    <attr
+        path="/api/package[@name='com.google.mlkit.common.sdkinternal']/class[@name='ModelResource']/method[@name='release' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+
+    <!--
+    <attr
+        path="/api/package[@name='com.google.mlkit.common.internal']/class[@name='CommonComponentRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IList &lt; Firebase.Components.Component &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.common.internal']/class[@name='CommonComponentRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        >        
+    </remove-node>
+    
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.common.sdkinternal']/class[@name='OptionalModuleUtils']/field[@name='EMPTY_FEATURES']"
+        >        
+    </remove-node>
+
+</metadata>

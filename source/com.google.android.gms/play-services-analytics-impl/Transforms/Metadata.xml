@@ -1,0 +1,115 @@
+﻿<metadata>
+
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.analytics']" name="managedName">Android.Gms.Analytics</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics.internal']" name="managedName">Android.Gms.Analytics.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics.ecommerce']" name="managedName">Android.Gms.Analytics.Ecommerce</attr>
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']" name="managedName">Android.Gms.Tagmanager</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='TagManager']" name="managedName">TagManagerClass</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+<!--	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/interface[@name='ContainerHolder.ContainerAvailableListener']/method[@name='onContainerAvailable']/parameter[1]" name="managedName">containerHolder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/interface[@name='ContainerHolder.ContainerAvailableListener']/method[@name='onContainerAvailable']/parameter[2]" name="managedName">containerVersion</attr>
+
+	<!-- This ctor is used internally and has parameters of *zz* types so remove it -->
+	<remove-node path="/api/package[@name='com.google.android.gms.analytics']/class[@name='GoogleAnalytics']/constructor[@name='GoogleAnalytics' and count(parameter)=1]" />
+
+	<!-- Fix inheritence to not be internal type -->
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='GoogleAnalytics']" name="extends">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='Tracker']" name="extends">Java.Lang.Object</attr>
+
+	<!-- Fix visibility -->
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']" name="visibility">public</attr>
+
+
+	<attr path="/api/package[@name='com.google.android.gms.internal']/class[@name='zztc']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zztc.zza']" name="obfuscated">false</attr>
+	
+	<!-- Fix return type of HitBuilder builder methods -->
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='addImpression']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='addProduct']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='addPromotion']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='set']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setAll']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setCampaignParamsFromUrl']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setCustomDimension']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setCustomMetric']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setHitType']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setNewSession']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setNonInteraction']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setProductAction']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='setPromotionAction']" name="return">com.google.android.gms.analytics.HitBuilders.HitBuilder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.EventBuilder']/method[@name='setAction']" name="return">com.google.android.gms.analytics.HitBuilders.EventBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.EventBuilder']/method[@name='setCategory']" name="return">com.google.android.gms.analytics.HitBuilders.EventBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.EventBuilder']/method[@name='setLabel']" name="return">com.google.android.gms.analytics.HitBuilders.EventBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.EventBuilder']/method[@name='setValue']" name="return">com.google.android.gms.analytics.HitBuilders.EventBuilder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ExceptionBuilder']/method[@name='setDescription']" name="return">com.google.android.gms.analytics.HitBuilders.ExceptionBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ExceptionBuilder']/method[@name='setFatal']" name="return">com.google.android.gms.analytics.HitBuilders.ExceptionBuilder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setCategory']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setCurrencyCode']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setName']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setPrice']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setQuantity']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setSku']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='setTransactionId']" name="return">com.google.android.gms.analytics.HitBuilders.ItemBuilder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.SocialBuilder']/method[@name='setAction']" name="return">com.google.android.gms.analytics.HitBuilders.SocialBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.SocialBuilder']/method[@name='setNetwork']" name="return">com.google.android.gms.analytics.HitBuilders.SocialBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.SocialBuilder']/method[@name='setTarget']" name="return">com.google.android.gms.analytics.HitBuilders.SocialBuilder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TimingBuilder']/method[@name='setCategory']" name="return">com.google.android.gms.analytics.HitBuilders.TimingBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TimingBuilder']/method[@name='setLabel']" name="return">com.google.android.gms.analytics.HitBuilders.TimingBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TimingBuilder']/method[@name='setValue']" name="return">com.google.android.gms.analytics.HitBuilders.TimingBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TimingBuilder']/method[@name='setVariable']" name="return">com.google.android.gms.analytics.HitBuilders.TimingBuilder</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='setAffiliation']" name="return">com.google.android.gms.analytics.HitBuilders.TransactionBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='setCurrencyCode']" name="return">com.google.android.gms.analytics.HitBuilders.TransactionBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='setRevenue']" name="return">com.google.android.gms.analytics.HitBuilders.TransactionBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='setShipping']" name="return">com.google.android.gms.analytics.HitBuilders.TransactionBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='setTax']" name="return">com.google.android.gms.analytics.HitBuilders.TransactionBuilder</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='setTransactionId']" name="return">com.google.android.gms.analytics.HitBuilders.TransactionBuilder</attr>
+
+
+	<!-- Fix return type for inheritence -->
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.AppViewBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.EventBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ExceptionBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ItemBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.SocialBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TimingBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.TransactionBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.ScreenViewBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='HitBuilders.HitBuilder']/method[@name='build']" name="return">java.util.Map&lt;java.lang.String, java.lang.String&gt;</attr>
+
+	<!-- Fix inheritence of IntentService - Not required for 5.1 -->
+<!--	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='AnalyticsService']" name="extends">mono.android.app.IntentService</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='AnalyticsService']/method[@name='onHandleIntent']" name="visibility">protected</attr>	
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='CampaignTrackingService']" name="extends">mono.android.app.IntentService</attr>
+	<attr path="/api/package[@name='com.google.android.gms.analytics']/class[@name='CampaignTrackingService']/method[@name='onHandleIntent']" name="visibility">protected</attr>
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='InstallReferrerService']" name="extends">mono.android.app.IntentService</attr>
+	<attr path="/api/package[@name='com.google.android.gms.tagmanager']/class[@name='InstallReferrerService']/method[@name='onHandleIntent']" name="visibility">protected</attr>
+-->
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.measurement']"
+        >        
+    </remove-node>
+</metadata>

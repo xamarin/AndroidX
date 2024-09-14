@@ -1,0 +1,14 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.firebase.appcheck']" 
+        name="managedName"
+        >
+        Firebase.AppCheck
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.appcheck.interop']" 
+        name="managedName"
+        >
+        Firebase.AppCheck.Interop
+    </attr>
+</metadata>

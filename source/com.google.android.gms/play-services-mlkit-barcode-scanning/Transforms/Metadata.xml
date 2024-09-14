@@ -1,0 +1,15 @@
+﻿<metadata>
+    <!--
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.barcode.internal']/class[@name='BarcodeRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IList &lt; Firebase.Components.Component &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.barcode.internal']/class[@name='BarcodeRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        >        
+    </remove-node>
+
+</metadata>

@@ -1,0 +1,9 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_text_bundled_common']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline.alt']/class[@name='zbd']"
+        />
+
+</metadata>

@@ -1,0 +1,26 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_text']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionText
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.text.latin']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Text.Latin
+    </attr>
+</metadata>

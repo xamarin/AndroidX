@@ -1,0 +1,26 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.appindex']" 
+        name="managedName"
+        >
+        Android.Gms.AppIndex
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.appindex.builders']" 
+        name="managedName"
+        >
+        Android.Gms.AppIndex.Builders
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.appindex']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.AppIndex
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.appindexing.internal']" 
+        name="managedName"
+        >
+        Firebase.AppIndexing.Internal
+    </attr>
+</metadata>

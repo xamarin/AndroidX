@@ -1,0 +1,17 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.common']/class[@name='SessionReportingCoordinator']/method[@name='finalizeSessionWithNativeEvent' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.List&lt;com.google.firebase.crashlytics.internal.common.NativeSessionFile&gt;']]"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.common']/class[@name='SessionReportingCoordinator']/method[@name='finalizeSessionWithNativeEvent' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.List&lt;com.google.firebase.crashlytics.internal.common.NativeSessionFile&gt;'] and parameter[3][@type='com.google.firebase.crashlytics.internal.model.CrashlyticsReport.ApplicationExitInfo']]"
+        >
+    </remove-node>
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.common']/class[@name='CrashlyticsAppQualitySessionsSubscriber']/method[@name='getSessionSubscriberName' and count(parameter)=0]"
+        name="propertyName"
+        ></attr>
+        
+</metadata>

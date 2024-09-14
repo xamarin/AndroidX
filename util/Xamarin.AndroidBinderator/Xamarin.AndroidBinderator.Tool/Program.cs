@@ -8,7 +8,7 @@ namespace Xamarin.AndroidBinderator.Tool;
 
 class Program
 {
-	static async Task Main (params string [] args)
+	static async Task<int> Main (params string [] args)
 	{
 		Trace.Listeners.Add (new TextWriterTraceListener (Console.Out));
 
@@ -23,9 +23,9 @@ class Program
 		// If not using new command verbs, fallback to old legacy command line handling
 		if (args.Any () && !root_command.Subcommands.Select (c => c.Name).Any (c => c == args [0])) {
 			await LegacyCommandLine.Run (args);
-			return;
+			return 0;
 		}
 
-		await root_command.InvokeAsync (args);
+		return await root_command.InvokeAsync (args);
 	}
 }

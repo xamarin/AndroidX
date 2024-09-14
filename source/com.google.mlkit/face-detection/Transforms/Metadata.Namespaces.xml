@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.face']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Face
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.face']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Face
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.barcode.internal']"
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.Face.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.vision.face']"
+        name="managedName"
+        >
+        Android.Gms.Vision.Face
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.mlkit.dynamite.face']"
+        name="managedName"
+        >
+        Android.Gms.Vision.Dynamite.Descriptors.Google.MLKit.Dynamite.Face
+    </attr>
+
+
+</metadata>

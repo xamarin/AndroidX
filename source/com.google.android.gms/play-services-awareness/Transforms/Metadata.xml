@@ -1,0 +1,30 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.contextmanager.interest']" name="managedName">Android.ContextManager.Interest</attr>
+	<attr path="/api/package[@name='com.google.android.gms.awareness']" name="managedName">Android.Gms.Awareness</attr>
+	<attr path="/api/package[@name='com.google.android.gms.awareness.fence']" name="managedName">Android.Gms.Awareness.Fence</attr>
+	<attr path="/api/package[@name='com.google.android.gms.awareness.snapshot']" name="managedName">Android.Gms.Awareness.Snapshot</attr>
+	<attr path="/api/package[@name='com.google.android.gms.awareness.snapshot.internal']" name="managedName">Android.Gms.Awareness.Snapshot.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.awareness.state']" name="managedName">Android.Gms.Awareness.State</attr>
+	<attr path="/api/package[@name='com.google.android.gms.contextmanager']" name="managedName">Android.Gms.ContextManager</attr>
+	<attr path="/api/package[@name='com.google.android.gms.contextmanager.fence.internal']" name="managedName">Android.Gms.ContextManager.Fence.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.contextmanager.internal']" name="managedName">Android.Gms.ContextManager.Internal</attr>
+	
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.contextmanager.fence.internal']/class[@name='FenceStateMapImpl']" />
+</metadata>

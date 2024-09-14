@@ -15,7 +15,7 @@ stages:
   - template: job-extended-tests.yml
     parameters:
       jobName: Android
-      agentCount: 10
+      agentCount: 20
       testFilter: cat = Android
       testProject: $(extendedTestProject)
       testAssembly: $(extendedTestAssembly)

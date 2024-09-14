@@ -1,0 +1,79 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.storage']" name="managedName">Firebase.Storage</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.storage']/interface[@name='OnPausedListener']/method[@name='onPaused']" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.storage']/interface[@name='OnProgressListener']/method[@name='onProgress']" name="managedName">snapshot</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnFailureListener']" name="managedReturn">Android.Gms.Tasks.Task</attr>
+	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnPausedListener']" name="managedReturn">Firebase.Storage.ControllableTask</attr>
+	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnSuccessListener']" name="managedReturn">Android.Gms.Tasks.Task</attr>
+	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='addOnProgressListener']" name="managedReturn">Firebase.Storage.CancellableTask</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageTask']/method[@name='getResult']" name="visibility">public</attr>
+
+	<remove-node path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageException']/method[@name='getMessage' and count(parameter)=0]" />
+	
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    
+    <add-node 
+        path="/api/package[@name='com.google.firebase.storage']/class[@name='StorageReference']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+        
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.storage']" 
+        name="managedName"
+        >   
+        Firebase.Storage
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.internal']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Internal
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.network']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Network
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.storage.network.connection']" 
+        name="managedName"
+        >   
+        Firebase.Storage.Network.Connection
+    </attr>
+    
+    
+	<attr 
+		path="/api/package[@name='com.google.firebase.storage.ktx']" 
+		name="managedName"
+		>
+		Firebase.Storage.Ktx
+	</attr>
+    
+    
+    
+</metadata>

@@ -1,0 +1,28 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='build' and count(parameter)=0 and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions']"
+        />
+
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
+        />
+
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.pose.defaults.PoseDetectorOptions.Builder']"
+        />
+        
+    <!-- Fix public class inheriting from protected class causing duplicate methods -->
+    <attr
+      path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']"
+      name="extends"
+      >
+      java.lang.Object
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.mlkit.vision.pose.defaults']/class[@name='PoseDetectorOptions.Builder']"
+      name="extends-generic-aware"
+      >
+      java.lang.Object
+    </attr>
+
+</metadata>

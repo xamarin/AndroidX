@@ -1,0 +1,52 @@
+﻿<metadata>
+
+	<attr path="/api/package[@name='com.google.android.gms.vision']" name="managedName">Android.Gms.Vision</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.internal.client']" name="managedName">Android.Gms.Vision.Internal.Client</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']" name="managedName">Android.Gms.Vision.Barcodes</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode.internal.client']" name="managedName">Android.Gms.Vision.Barcodes.Internal.Client</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.face']" name="managedName">Android.Gms.Vision.Faces</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.face.internal.client']" name="managedName">Android.Gms.Vision.Faces.Internal.Client</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.text']" name="managedName">Android.Gms.Vision.Texts</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.text.internal.client']" name="managedName">Android.Gms.Vision.Texts.Internal.Client</attr>
+
+
+	<attr path="/api/package[@name='com.google.android.gms.vision.face']/class[@name='Face']" name="managedName">Face</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']" name="managedName">Barcode</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']/field[@name='format']" name="managedName">_Format</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']/field[@name='format']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']/field[@name='valueFormat']" name="managedName">_ValueFormat</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode']/field[@name='valueFormat']" name="visibility">internal</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.CalendarEvent']" name="managedName">CalendarEventValue</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.ContactInfo']" name="managedName">ContactInfoValue</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.DriverLicense']" name="managedName">DriverLicenseValue</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.Email']" name="managedName">EmailValue</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.GeoPoint']" name="managedName">GeoPointValue</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.Phone']" name="managedName">PhoneValue</attr>
+	<attr path="/api/package[@name='com.google.android.gms.vision.barcode']/class[@name='Barcode.Sms']" name="managedName">SmsValue</attr>
+
+	<!-- We don't want to subclass this type -->
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.vision.face']/class[@name='FaceDetector']/method[@name='finalize' and count(parameter)=0]" />
+
+</metadata>
