@@ -1879,9 +1879,17 @@
       {
         "groupId": "androidx.security",
         "artifactId": "security-crypto",
-        "version": "1.0.0",
-        "nugetVersion": "1.0.0.22",
+        "version": "1.1.0-alpha06",
+        "nugetVersion": "1.1.0.3-alpha06",
         "nugetId": "Xamarin.AndroidX.Security.SecurityCrypto",
+        "dependencyOnly": false
+      },
+      {
+        "groupId": "androidx.security",
+        "artifactId": "security-crypto-ktx",
+        "version": "1.1.0-alpha06",
+        "nugetVersion": "1.1.0.3-alpha06",
+        "nugetId": "Xamarin.AndroidX.Security.SecurityCrypto.Ktx",
         "dependencyOnly": false
       },
       {
