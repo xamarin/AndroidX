@@ -18,9 +18,6 @@
   <remove-node
     path="/api/package[@name='androidx.media3.exoplayer']/class[@name='SimpleExoPlayer']"
         />
-  <remove-node
-    path="/api/package[@name='androidx.media3.exoplayer.source']/interface[@name='MediaSourceFactory']"
-        />
 
   <!-- Duplicate inherited interface methods -->
   <remove-node
@@ -176,16 +173,6 @@
   <remove-node
       path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource']"
         />
-  <remove-node
-      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource2']"
-        />
-  <remove-node
-      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']"
-        />
-  <remove-node
-      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='WrappingMediaSource']"
-        />
-
   <attr 
       path="/api/package[@name='androidx.media3.exoplayer.audio']/interface[@name='AudioSink.Listener']/method[@name='onAudioTrackInitialized' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.audio.AudioSink.AudioTrackConfig']]"
       name="argsType"
@@ -280,7 +267,65 @@
       true
     </attr>
 
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='DummyExoMediaDrm']/method[@name='getProvisionRequest' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
 
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.drm']/class[@name='FrameworkMediaDrm']/method[@name='getProvisionRequest' and count(parameter)=0]"
+      name="propertyName"
+      >
+    </attr>
+
+
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='DefaultMediaSourceFactory']/method[@name='setLoadErrorHandlingPolicy' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IMediaSource.IFactory
+    </attr>
+
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='DefaultMediaSourceFactory']/method[@name='setDrmSessionManagerProvider' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.drm.DrmSessionManagerProvider']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IMediaSource.IFactory
+    </attr>
+
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource.Factory']/method[@name='createMediaSource' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IMediaSource
+    </attr>
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource.Factory']/method[@name='setDrmSessionManagerProvider' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.drm.DrmSessionManagerProvider']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IMediaSource.IFactory
+    </attr>
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ProgressiveMediaSource.Factory']/method[@name='setLoadErrorHandlingPolicy' and count(parameter)=1 and parameter[1][@type='androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy']]"
+      name="managedReturn"
+      >
+      AndroidX.Media3.ExoPlayer.Source.IMediaSource.IFactory
+    </attr>
+    
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource2']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource'] and parameter[3][@type='androidx.media3.common.Timeline']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+    </attr>
+
+    <attr 
+      path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource'] and parameter[3][@type='androidx.media3.common.Timeline']]/parameter[1]"
+      name="managedType"
+      >
+      Java.Lang.Object
+    </attr>
 
     <attr
         path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ExternallyLoadedMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
@@ -289,7 +334,27 @@
         true
     </attr>
     <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource2']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+        true
+    </attr>
+    <attr
         path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ExternallyLoadedMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
+        <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='ConcatenatingMediaSource2']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']/method[@name='canUpdateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
         name="final"
         >
         true
@@ -301,5 +366,17 @@
         AndroidX.Media3.ExoPlayer.Source.IMediaSource
       </attr>
 
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='MergingMediaSource']/method[@name='updateMediaItem' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.MediaItem']]"
+        name="final"
+        >
+      true
+    </attr>
 
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer.source']/class[@name='WrappingMediaSource']/method[@name='onChildSourceInfoRefreshed' and count(parameter)=3 and parameter[1][@type='java.lang.Void'] and parameter[2][@type='androidx.media3.exoplayer.source.MediaSource'] and parameter[3][@type='androidx.media3.common.Timeline']]"
+        name="final"
+        >
+      false
+    </attr>
 </metadata> 

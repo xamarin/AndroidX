@@ -138,7 +138,6 @@
         AndroidX.Media3.Common.IVideoFrameProcessor
     </attr>
 
-
     <attr
         path="/api/package[@name='androidx.media3.effect']/class[@name='DefaultVideoFrameProcessor.Factory']/method[@name='create' and count(parameter)=6 and parameter[1][@type='android.content.Context'] and parameter[2][@type='androidx.media3.common.DebugViewProvider'] and parameter[3][@type='androidx.media3.common.ColorInfo'] and parameter[4][@type='boolean'] and parameter[5][@type='java.util.concurrent.Executor'] and parameter[6][@type='androidx.media3.common.VideoFrameProcessor.Listener']]"
         name="managedReturn"
@@ -146,5 +145,11 @@
         AndroidX.Media3.Common.IVideoFrameProcessor
     </attr>
 
-
+    <!-- Remove this for now as I cant figure this one out, something to do with the event not having the correct parameter, probably because two events need to exist.-->
+    <remove-node
+        path="/api/package[@name='androidx.media3.effect']/interface[@name='VideoCompositor.Listener']/method[@name='onEnded' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='androidx.media3.effect']/interface[@name='VideoCompositor.Listener']/method[@name='onError' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.VideoFrameProcessingException']]"
+        />
 </metadata>

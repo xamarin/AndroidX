@@ -1,4 +1,9 @@
 <Project>
+  <PropertyGroup Condition="'$(MSBuildProjectDirectory.Contains(media3))' == 'false'">
+      <!-- Opt out of C#8 features to maintain compatibility with legacy -->
+      <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
+      <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
+    </PropertyGroup>
   <PropertyGroup>
     <RepositoryUrl>https://github.com/xamarin/AndroidX.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -11,10 +16,6 @@
     
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
-
-    <!-- Opt out of C#8 features to maintain compatibility with legacy -->
-    <AndroidBoundInterfacesContainConstants>false</AndroidBoundInterfacesContainConstants>
-    <AndroidBoundInterfacesContainTypes>false</AndroidBoundInterfacesContainTypes>
 
     <!-- .NET 6+ generates Resource.designer.cs files for bindings projects which we do not want -->
     <AndroidGenerateResourceDesigner>false</AndroidGenerateResourceDesigner>
