@@ -5,5 +5,8 @@
     <remove-node
         path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline.alt']/class[@name='zbd']"
         />
-
+    <remove-node 
+        path="/api/package[@name='com.google.android.libraries.vision.visionkit.pipeline.alt']/class[@name='zbc']"
+        />
+        
 </metadata>
