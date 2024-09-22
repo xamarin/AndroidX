@@ -125,4 +125,30 @@
         >
         SetShowPlayButtonIfPlaybackIsSuppressedBuilder
     </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setContentType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setFlags' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setLegacyStreamType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setUsage' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+
 </metadata>
