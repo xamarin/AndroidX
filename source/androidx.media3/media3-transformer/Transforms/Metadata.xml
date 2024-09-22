@@ -29,7 +29,7 @@
         path="/api/package[@name='androidx.media3.transformer']/class[@name='InAppMuxer.Factory']/method[@name='create' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
         name="managedReturn"
         >
-        AndroidX.Media3.Transformer.IMuxer
+        AndroidX.Media3.Muxer.IMuxer
     </attr>
 
     <attr
@@ -76,6 +76,15 @@
         name="managedName"
         >
         OnTransformationError3
+    </attr>
+
+
+
+
+    <attr
+        path="/api/package[@name='androidx.media3.transformer']/class[@name='CompositionPlayer']/method[@name='getState' and count(parameter)=0]"
+        name="propertyName"
+        >
     </attr>
 
 </metadata>
