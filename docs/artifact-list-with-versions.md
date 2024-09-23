@@ -504,7 +504,7 @@
 | 497|com.google.firebase:firebase-ml-vision-object-detection-model         |19.0.6              |Xamarin.Firebase.ML.Vision.Object.Detection.Model                     |119.0.6.18          |
 | 498|com.google.firebase:firebase-perf                                     |21.0.1              |Xamarin.Firebase.Perf                                                 |121.0.1.2           |
 | 499|com.google.firebase:firebase-perf-ktx                                 |21.0.1              |Xamarin.Firebase.Perf.Ktx                                             |121.0.1.2           |
-| 500|com.google.firebase:firebase-sessions                                 |2.0.4               |Xamarin.Firebase.Sessions                                             |2.0.4               |
+| 500|com.google.firebase:firebase-sessions                                 |2.0.4               |Xamarin.Firebase.Sessions                                             |102.0.4             |
 | 501|com.google.firebase:firebase-storage                                  |21.0.0              |Xamarin.Firebase.Storage                                              |121.0.0.2           |
 | 502|com.google.firebase:firebase-storage-common                           |17.0.0              |Xamarin.Firebase.Storage.Common                                       |117.0.0.18          |
 | 503|com.google.firebase:firebase-storage-ktx                              |21.0.0              |Xamarin.Firebase.Storage.Ktx                                          |121.0.0.2           |
