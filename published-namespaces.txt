@@ -98,6 +98,7 @@ Android.Gms.Dynamite.Descriptors.Firebase.ML.Vision.Barcode
 Android.Gms.Dynamite.Descriptors.Flags
 Android.Gms.Dynamite.Descriptors.Gms.CastTVDynamite
 Android.Gms.Dynamite.Descriptors.MLKit.Barcode
+Android.Gms.Dynamite.Descriptors.MLKit.Dynamite.Text.Common
 Android.Gms.Dynamite.Descriptors.TagManager
 Android.Gms.Dynamite.Descriptors.Vision.Face
 Android.Gms.Dynamite.Descriptors.Vision.Ica
@@ -524,6 +525,7 @@ AndroidX.Media3.ExoPlayer.Source
 AndroidX.Media3.ExoPlayer.Source.Ads
 AndroidX.Media3.ExoPlayer.Source.Chunk
 AndroidX.Media3.ExoPlayer.Source.MediaParser
+AndroidX.Media3.ExoPlayer.Source.Preload
 AndroidX.Media3.ExoPlayer.Text
 AndroidX.Media3.ExoPlayer.TrackSelection
 AndroidX.Media3.ExoPlayer.Upstream
@@ -535,6 +537,7 @@ AndroidX.Media3.ExoPlayer.WorkManager
 AndroidX.Media3.Extractor
 AndroidX.Media3.Extractor.Amr
 AndroidX.Media3.Extractor.Avi
+AndroidX.Media3.Extractor.Avif
 AndroidX.Media3.Extractor.Bmp
 AndroidX.Media3.Extractor.Flac
 AndroidX.Media3.Extractor.Flv
@@ -568,6 +571,7 @@ AndroidX.Media3.Extractor.Wav
 AndroidX.Media3.Extractor.Webp
 AndroidX.Media3.Muxer
 AndroidX.Media3.Session
+AndroidX.Media3.Session.Legacy
 AndroidX.Media3.Transformer
 AndroidX.Media3.UI
 AndroidX.Media3.UI.Leanback
@@ -1124,6 +1128,7 @@ Kotlin.Text
 Kotlin.Text.Jdk8
 Kotlin.Time
 Kotlin.Time.Jdk8
+Kotlin.Uuid
 KotlinX.Android.Extensions
 KotlinX.Android.Parcel
 KotlinX.AtomicFU
@@ -1432,11 +1437,14 @@ Xamarin.Google.UserMesssagingPlatform
 Xamarin.GoogleAndroid.Libraries.Identity.GoogleId
 Xamarin.GoogleAndroid.Libraries.Places.Api
 Xamarin.GoogleAndroid.Libraries.Places.Api.Model
+Xamarin.GoogleAndroid.Libraries.Places.Api.Model.Kotlin
 Xamarin.GoogleAndroid.Libraries.Places.Api.Net
+Xamarin.GoogleAndroid.Libraries.Places.Api.Net.Kotlin
 Xamarin.GoogleAndroid.Libraries.Places.Compat
 Xamarin.GoogleAndroid.Libraries.Places.Compat.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
+Xamarin.GoogleAndroid.Libraries.Places.Widget.Kotlin
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Listener
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
 Xamarin.GoogleAndroid.Libraries.Vision.VisionKit.Pipeline

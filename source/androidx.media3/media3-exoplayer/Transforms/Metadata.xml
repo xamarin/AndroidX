@@ -300,6 +300,11 @@
         >
         AndroidX.Media3.ExoPlayer.Source.IMediaSource
       </attr>
-
+    <attr
+        path="/api/package[@name='androidx.media3.exoplayer']/class[@name='DefaultRendererCapabilitiesList.Factory']/method[@name='createRendererCapabilitiesList' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.ExoPlayer.IRendererCapabilitiesList
+    </attr>
 
 </metadata> 

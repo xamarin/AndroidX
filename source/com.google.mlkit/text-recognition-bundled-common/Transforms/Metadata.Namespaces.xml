@@ -24,4 +24,11 @@
         Xamarin.Google.MLKit.Vision.Text.Pipeline
     </attr>
 
+    <attr 
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.mlkit.dynamite.text.common']" 
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Descriptors.MLKit.Dynamite.Text.Common
+    </attr>
+
 </metadata>
