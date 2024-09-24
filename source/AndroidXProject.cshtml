@@ -180,4 +180,11 @@
     }
   </ItemGroup>
 
+  @if(Model.NuGetPackageId == "Xamarin.Google.Guava") {
+  <ItemGroup>
+    <!-- Reference a version of ListenableFuture that does not contain 'listenablefuture.jar' -->
+    <PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="9999.0.0" />
+  </ItemGroup>
+  }
+
 </Project>
