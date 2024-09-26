@@ -2357,7 +2357,7 @@
         "nugetId": "Xamarin.Google.Android.InstallReferrer",
         "dependencyOnly": false,
         "frozen": true,
-        "templateSet": "installreferrer",
+        "type": "androidlibrary",
         "comments": "Changed from Apache to Android SDK License"
       },
       {
@@ -5905,24 +5905,6 @@
           {
             "templateFile": "templates/kotlinx/Targets.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "installreferrer",
-        "mavenRepositoryType": "Google",
-        "templates": [
-          {
-            "templateFile": "templates/installreferrer/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
           },
           {
             "templateFile": "source/AndroidXNuGetReadMe.cshtml",
