@@ -4377,7 +4377,8 @@
         "nugetVersion": "1.0.2.8",
         "nugetId": "Xamarin.Google.Guava.FailureAccess",
         "dependencyOnly": false,
-        "templateSet": "guava",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "overrideLicenses": [
           "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
         ],
@@ -4391,7 +4392,8 @@
         "nugetId": "Xamarin.Google.Guava",
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
-        "templateSet": "guava",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "overrideLicenses": [
           "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
         ],
@@ -4404,7 +4406,8 @@
         "nugetVersion": "1.0.0.24",
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": false,
-        "templateSet": "guava",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "overrideLicenses": [
           "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
         ],
@@ -5828,24 +5831,6 @@
       }
     ],
     "templateSets": [
-      {
-        "name": "guava",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/guava/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
       {
         "name": "no-bindings",
         "mavenRepositoryType": "MavenCentral",
