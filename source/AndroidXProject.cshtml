@@ -9,6 +9,7 @@
     <IsBindingProject>true</IsBindingProject>
     <AssemblyName>@Model.GetAssemblyName()</AssemblyName>
     <AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
+    <AndroidUseDesignerAssembly>false</AndroidUseDesignerAssembly>   
     <RootNamespace>@Model.GetRootNamespace()</RootNamespace>
     
     <!--
@@ -149,7 +150,7 @@
   <ItemGroup>
       @foreach (var art in @Model.MavenArtifacts)
       {
-    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" />
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" Bind="@(Model.ShouldBindArtifact.ToString())" />
         @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaDoc)
         {
     <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" />

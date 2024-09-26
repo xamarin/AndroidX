@@ -59,7 +59,7 @@ namespace AndroidBinderator
 
 		// TODO: Move this to config.json
 		// Whether to bind the Java .jar/.aar
-		public bool ShouldBindArtifact => NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
+		public bool ShouldBindArtifact => NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm" && NuGetPackageId != "Xamarin.Android.Glide.Annotations";
 
 		// TODO: Move this to config.json
 		// Whether to include the Java .jar/.aar in the NuGet package
