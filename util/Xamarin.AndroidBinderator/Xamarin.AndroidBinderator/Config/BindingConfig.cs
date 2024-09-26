@@ -179,7 +179,9 @@ namespace AndroidBinderator
 		[EnumMember (Value = "androidlibrary")]
 		AndroidLibrary,
 		[EnumMember (Value = "no-bindings")]
-		NoBindings
+		NoBindings,
+		[EnumMember (Value = "xbd")]
+		XamarinBuildDownload
 	}
 
 	public enum DocumentationType
