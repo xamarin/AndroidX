@@ -1,7 +1,5 @@
 // Contains tasks for updating/modifying the config.json used by binderator
 
-var gps_config = "https://raw.githubusercontent.com/xamarin/GooglePlayServicesComponents/main/config.json";
-
 // Updates config.json to the latest versions found in Maven
 Task ("update-config")
     .Does (() =>
@@ -9,9 +7,7 @@ Task ("update-config")
     var args = new ProcessArgumentBuilder ()
         .Append ("update")
         .Append ("--config-file")
-        .Append ("config.json")
-        .Append ("--dependency-file")
-        .Append (gps_config);
+        .Append ("config.json");
     
     DotNetRun (binderator_project, args);
 });
