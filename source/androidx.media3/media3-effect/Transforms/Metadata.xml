@@ -73,9 +73,13 @@
     <remove-node
         path="/api/package[@name='androidx.media3.effect']/class[@name='RgbAdjustment']/implements"
         />
+    <!-- 
+    https://github.com/xamarin/AndroidX/issues/940
+    https://github.com/xamarin/AndroidX/issues/940#issuecomment-2350937220
     <remove-node
         path="/api/package[@name='androidx.media3.effect']/class[@name='Presentation']/implements"
         />
+    -->
     <remove-node
         path="/api/package[@name='androidx.media3.effect']/class[@name='ScaleAndRotateTransformation']/implements"
         />
