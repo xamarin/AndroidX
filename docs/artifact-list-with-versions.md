@@ -310,7 +310,7 @@
 | 303|com.google.accompanist:accompanist-placeholder-material               |0.36.0              |Xamarin.Google.Accompanist.Placeholder.Material                       |0.36.0.1            |
 | 304|com.google.accompanist:accompanist-swiperefresh                       |0.36.0              |Xamarin.Google.Accompanist.SwipeRefresh                               |0.36.0.1            |
 | 305|com.google.accompanist:accompanist-systemuicontroller                 |0.36.0              |Xamarin.Google.Accompanist.SystemUIController                         |0.36.0.1            |
-| 306|com.google.ads.interactivemedia.v3:interactivemedia                   |3.34.0              |Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia               |3.34.0              |
+| 306|com.google.ads.interactivemedia.v3:interactivemedia                   |3.35.1              |Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia               |3.35.1              |
 | 307|com.google.android:annotations                                        |4.1.1.4             |Xamarin.GoogleAndroid.Annotations                                     |4.1.1.18            |
 | 308|com.google.android.datatransport:transport-api                        |3.2.0               |Xamarin.Google.Android.DataTransport.TransportApi                     |3.2.0.2             |
 | 309|com.google.android.datatransport:transport-backend-cct                |3.3.0               |Xamarin.Google.Android.DataTransport.TransportBackendCct              |3.3.0.2             |
@@ -406,7 +406,7 @@
 | 399|com.google.android.libraries.places:places-compat                     |2.6.0               |Xamarin.GoogleAndroid.Libraries.Places.Compat                         |2.6.0.10            |
 | 400|com.google.android.material:compose-theme-adapter                     |1.1.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter                 |1.1.18.15           |
 | 401|com.google.android.material:compose-theme-adapter-3                   |1.0.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter3                |1.0.18.14           |
-| 402|com.google.android.material:material                                  |1.11.0              |Xamarin.Google.Android.Material                                       |1.11.0.3            |
+| 402|com.google.android.material:material                                  |1.12.0              |Xamarin.Google.Android.Material                                       |1.12.0              |
 | 403|com.google.android.odml:image                                         |1.0.0-beta1         |Xamarin.Google.Android.ODML.Image                                     |1.0.0.12-beta1      |
 | 404|com.google.android.play:app-update                                    |2.1.0               |Xamarin.Google.Android.Play.App.Update                                |2.1.0.11            |
 | 405|com.google.android.play:app-update-ktx                                |2.1.0               |Xamarin.Google.Android.Play.App.Update.Ktx                            |2.1.0.11            |
@@ -430,7 +430,7 @@
 | 423|com.google.code.gson:gson                                             |2.11.0              |GoogleGson                                                            |2.11.0.3            |
 | 424|com.google.crypto.tink:tink-android                                   |1.15.0              |Xamarin.Google.Crypto.Tink.Android                                    |1.15.0.1            |
 | 425|com.google.dagger:dagger                                              |2.52                |Xamarin.Google.Dagger                                                 |2.52.0.1            |
-| 426|com.google.errorprone:error_prone_annotations                         |2.31.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.31.0              |
+| 426|com.google.errorprone:error_prone_annotations                         |2.32.0              |Xamarin.Google.ErrorProne.Annotations                                 |2.32.0              |
 | 427|com.google.firebase:firebase-abt                                      |22.0.0              |Xamarin.Firebase.Abt                                                  |122.0.0.2           |
 | 428|com.google.firebase:firebase-ads                                      |23.3.0              |Xamarin.Firebase.Ads                                                  |123.3.0             |
 | 429|com.google.firebase:firebase-ads-lite                                 |23.3.0              |Xamarin.Firebase.Ads.Lite                                             |123.3.0             |
@@ -513,7 +513,7 @@
 | 506|com.google.flogger:flogger                                            |0.8                 |Xamarin.Flogger                                                       |0.8.0.8             |
 | 507|com.google.flogger:flogger-system-backend                             |0.8                 |Xamarin.Flogger.SystemBackend                                         |0.8.0.8             |
 | 508|com.google.guava:failureaccess                                        |1.0.2               |Xamarin.Google.Guava.FailureAccess                                    |1.0.2.8             |
-| 509|com.google.guava:guava                                                |33.3.0-android      |Xamarin.Google.Guava                                                  |33.3.0.1            |
+| 509|com.google.guava:guava                                                |33.3.1-android      |Xamarin.Google.Guava                                                  |33.3.1              |
 | 510|com.google.guava:listenablefuture                                     |1.0                 |Xamarin.Google.Guava.ListenableFuture                                 |1.0.0.24            |
 | 511|com.google.inject:guice                                               |7.0.0               |Xamarin.Google.Inject.Guice                                           |7.0.0.2             |
 | 512|com.google.j2objc:j2objc-annotations                                  |3.0.0               |Xamarin.Google.J2Objc.Annotations                                     |3.0.0.6             |
@@ -598,7 +598,7 @@
 | 591|org.chromium.net:cronet-embedded                                      |119.6045.31         |Xamarin.Chromium.CroNet.Embedded                                      |119.6045.31.4       |
 | 592|org.chromium.net:cronet-fallback                                      |119.6045.31         |Xamarin.Chromium.CroNet.Fallback                                      |119.6045.31.4       |
 | 593|org.codehaus.mojo:animal-sniffer-annotations                          |1.24                |Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations                        |1.24.0.2            |
-| 594|org.jetbrains:annotations                                             |24.1.0              |Xamarin.Jetbrains.Annotations                                         |24.1.0.8            |
+| 594|org.jetbrains:annotations                                             |25.0.0              |Xamarin.Jetbrains.Annotations                                         |25.0.0              |
 | 595|org.jetbrains.kotlin:kotlin-android-extensions-runtime                |2.0.20              |Xamarin.Kotlin.Android.Extensions.Runtime.Library                     |2.0.20              |
 | 596|org.jetbrains.kotlin:kotlin-parcelize-runtime                         |2.0.20              |Xamarin.Kotlin.Parcelize.Runtime                                      |2.0.20              |
 | 597|org.jetbrains.kotlin:kotlin-reflect                                   |2.0.20              |Xamarin.Kotlin.Reflect                                                |2.0.20              |
