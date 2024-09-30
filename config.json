@@ -5257,7 +5257,8 @@
         "nugetVersion": "25.0.0",
         "nugetId": "Xamarin.Jetbrains.Annotations",
         "dependencyOnly": false,
-        "templateSet": "kotlin"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlin",
@@ -5266,7 +5267,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.Android.Extensions.Runtime.Library",
         "dependencyOnly": false,
-        "templateSet": "kotlin"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlin",
@@ -5275,7 +5277,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.Parcelize.Runtime",
         "dependencyOnly": false,
-        "templateSet": "kotlin"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlin",
@@ -5284,7 +5287,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.Reflect",
         "dependencyOnly": false,
-        "templateSet": "kotlin",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "metadata": {
           "friendlyName": "Reflect"
         }
@@ -5296,7 +5300,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.StdLib",
         "dependencyOnly": false,
-        "templateSet": "kotlin"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlin",
@@ -5305,7 +5310,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Common",
         "dependencyOnly": false,
-        "templateSet": "kotlin",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "metadata": {
           "friendlyName": "Common"
         }
@@ -5317,7 +5323,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk7",
         "dependencyOnly": false,
-        "templateSet": "kotlin",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "metadata": {
           "friendlyName": "JDK 7 extension"
         }
@@ -5329,7 +5336,8 @@
         "nugetVersion": "2.0.20",
         "nugetId": "Xamarin.Kotlin.StdLib.Jdk8",
         "dependencyOnly": false,
-        "templateSet": "kotlin",
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
         "metadata": {
           "friendlyName": "JDK 8 extension"
         }
@@ -5846,32 +5854,6 @@
           {
             "templateFile": "templates/no-bindings/Targets.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "kotlin",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/kotlin/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/kotlin/Targets.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
-          },
-          {
-            "templateFile": "templates/kotlin/Pom.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/dependencies.pom"
           },
           {
             "templateFile": "source/AndroidXNuGetReadMe.cshtml",
