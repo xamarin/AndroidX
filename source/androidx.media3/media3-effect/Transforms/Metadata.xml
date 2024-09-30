@@ -79,13 +79,13 @@
     <remove-node
         path="/api/package[@name='androidx.media3.effect']/class[@name='Presentation']/implements"
         />
-    -->
     <remove-node
         path="/api/package[@name='androidx.media3.effect']/class[@name='ScaleAndRotateTransformation']/implements"
         />
     <remove-node
         path="/api/package[@name='androidx.media3.effect']/class[@name='Contrast']/implements"
         />
+    -->
 
     <attr
         path="/api/package[@name='androidx.media3.effect']/class[@name='SingleColorLut']/method[@name='toGlShaderProgram' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='boolean']]"
