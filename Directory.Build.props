@@ -25,6 +25,9 @@
     <!-- Mark .NET6+ packages as supporting trimming -->
     <IsTrimmable>true</IsTrimmable>
 
+    <!-- Assemblies should be deterministic -->
+    <Deterministic>true</Deterministic>
+    
     <!-- Generate NRT annotations -->
     <Nullable Condition=" '$(Nullable)' == '' ">enable</Nullable>
 
