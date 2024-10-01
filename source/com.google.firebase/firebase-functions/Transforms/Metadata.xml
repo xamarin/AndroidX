@@ -1,0 +1,40 @@
+﻿<metadata>
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.functions']" name="managedName">Firebase.Functions</attr>
+
+    <remove-node path="/api/package[@name='com.google.firebase.functions.a']" ></remove-node>
+        
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions']/class[@name='FunctionsComponent_MainModule_BindProjectIdFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions.dagger']" 
+		name="managedName"
+		>
+		Firebase.Functions.Dagger
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions.dagger.internal']" 
+		name="managedName"
+		>
+		Firebase.Functions.Dagger.Interal
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions.dagger.assisted']" 
+		name="managedName"
+		>
+		Firebase.Functions.Dagger.Assisted
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.functions.ktx']" 
+		name="managedName"
+		>
+		Firebase.Functions.Ktx
+	</attr>
+
+</metadata>

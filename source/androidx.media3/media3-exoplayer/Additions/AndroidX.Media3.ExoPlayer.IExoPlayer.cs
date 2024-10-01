@@ -5,6 +5,8 @@ using Java.Interop;
 
 namespace AndroidX.Media3.ExoPlayer;
 
+delegate void _JniMarshal_PPIIL_V (IntPtr jnienv, IntPtr klass, int p0, int p1, IntPtr p2);
+
 internal partial class IExoPlayerInvoker
 {
 	// These invokers are generated with IList<global::AndroidX.Media3.Common.MediaItem> instead of IList<MediaItem>
@@ -171,5 +173,37 @@ internal partial class IExoPlayerInvoker
 			return global::Java.Lang.Object.GetObject<global::AndroidX.Media3.ExoPlayer.ExoPlaybackException> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPlayerError), JniHandleOwnership.TransferLocalRef);
 		}
 	}
+
+
+
+		static Delegate? cb_replaceMediaItems_IILSystem_Collections_Generic_IList_1_;
+#pragma warning disable 0169
+		static Delegate GetReplaceMediaItems_IILSystem_Collections_Generic_IList_1_Handler ()
+		{
+			if (cb_replaceMediaItems_IILSystem_Collections_Generic_IList_1_ == null)
+				cb_replaceMediaItems_IILSystem_Collections_Generic_IList_1_ = JNINativeWrapper.CreateDelegate (new _JniMarshal_PPIIL_V (n_ReplaceMediaItems_IILSystem_Collections_Generic_IList_1_));
+			return cb_replaceMediaItems_IILSystem_Collections_Generic_IList_1_;
+		}
+
+		static void n_ReplaceMediaItems_IILSystem_Collections_Generic_IList_1_ (IntPtr jnienv, IntPtr native__this, int p0, int p1, IntPtr native_p2)
+		{
+			var __this = global::Java.Lang.Object.GetObject<global::AndroidX.Media3.ExoPlayer.IExoPlayer> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+			var p2 = (global::System.Collections.Generic.IList<global::AndroidX.Media3.Common.MediaItem>?)global::Java.Lang.Object.GetObject<Java.Lang.Object> (native_p2, JniHandleOwnership.DoNotTransfer);
+			__this.ReplaceMediaItems (p0, p1, p2);
+		}
+#pragma warning restore 0169
+
+		IntPtr id_replaceMediaItems_IILSystem_Collections_Generic_IList_1_;
+		public unsafe void ReplaceMediaItems (int p0, int p1, global::System.Collections.Generic.IList<global::AndroidX.Media3.Common.MediaItem>? p2)
+		{
+			if (id_replaceMediaItems_IILSystem_Collections_Generic_IList_1_ == IntPtr.Zero)
+				id_replaceMediaItems_IILSystem_Collections_Generic_IList_1_ = JNIEnv.GetMethodID (class_ref, "replaceMediaItems", "(IILSystem/Collections/Generic/IList`1;)V");
+			JValue* __args = stackalloc JValue [3];
+			__args [0] = new JValue (p0);
+			__args [1] = new JValue (p1);
+			__args [2] = new JValue ((p2 == null) ? IntPtr.Zero : ((global::Java.Lang.Object) p2).Handle);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_replaceMediaItems_IILSystem_Collections_Generic_IList_1_, __args);
+		}
+
 
 }

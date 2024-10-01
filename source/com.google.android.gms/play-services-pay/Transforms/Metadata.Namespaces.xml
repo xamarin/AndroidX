@@ -1,0 +1,16 @@
+﻿<metadata>
+
+    <attr 
+        path="/api/package[@name='com.google.android.gms.pay']" 
+        name="managedName"
+        >
+        Android.Gms.Pay
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.pay']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Pay
+    </attr>
+    
+</metadata>

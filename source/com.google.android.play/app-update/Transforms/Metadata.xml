@@ -1,0 +1,25 @@
+<metadata>
+  <!-- 
+        https://github.com/PatGet/XamarinPlayCoreUpdater/pull/20/
+        
+        Removing StateUpdatedListener implementation from InstallStateUpdatedListener interface 
+        and making proper onStateUpdate method mapping where StateT is InstallState 
+    -->
+  <remove-node
+      path="/api/package[@name='com.google.android.play.core.install']/interface[@name='InstallStateUpdatedListener']/implements[contains(@name,'StateUpdatedListener')]"
+        />
+  <add-node
+      path="/api/package[@name='com.google.android.play.core.install']/interface[@name='InstallStateUpdatedListener']"
+        >
+    <method
+        visibility="public" static="false" abstract="true" return="void" name="onStateUpdate"
+        deprecated="not deprecated" final="false" bridge="false" native="false"
+        synchronized="false" synthetic="false"
+            >
+      <parameter
+          type="com.google.android.play.core.install.InstallState"
+          name="state"
+                />
+    </method>
+  </add-node>
+</metadata>

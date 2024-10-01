@@ -1,0 +1,34 @@
+﻿<metadata>
+    <!-- Fix Namespaces -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.vision']" 
+        name="managedName"
+        >
+        Android.Gms.Vision
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.vision.face']" 
+        name="managedName"
+        >
+        Android.Gms.Vision.Face
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.vision.face']" 
+        name="managedName"
+        >
+        Android.Gms.Vision.Face
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.vision.dynamite.face']" 
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Descriptors.Vision.Face
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.vision']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.Vision
+    </attr>
+
+</metadata>

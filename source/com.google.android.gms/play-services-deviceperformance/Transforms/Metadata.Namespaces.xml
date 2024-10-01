@@ -1,0 +1,24 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.deviceperformance.internal']"
+        name="managedName"
+        >
+        Android.Gms.DevicePerformance.Internal
+    </attr>
+
+    <attr 
+        path="/api/package[@name='com.google.android.gms.deviceperformance']" 
+        name="managedName"
+        >
+        Android.Gms.DevicePerformance
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.device_performance']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.DevicePerformance
+    </attr>
+    
+    
+
+</metadata>

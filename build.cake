@@ -14,6 +14,10 @@
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
 
+#load "build/cake/update-config.cake"
+#load "build/cake/tests.cake"
+#load "build/cake/gps-parameters.cake"
+
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
@@ -30,6 +34,8 @@ var VERBOSITY = Argument ("v", Argument ("verbosity", Verbosity.Normal));
 // https://dl.google.com/dl/android/maven2/com/android/support/group-index.xml
 // Master list of all the packages in the repo:
 // https://dl.google.com/dl/android/maven2/master-index.xml
+
+var binderator_project = "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool/Xamarin.AndroidBinderator.Tool.csproj";
 
 var REF_DOCS_URL = "https://bosstoragemirror.blob.core.windows.net/android-docs-scraper/a7/a712886a8b4ee709f32d51823223039883d38734/androidx.zip";
 
@@ -265,15 +271,22 @@ Task("javadocs")
 });
 
 Task ("binderate")
+    .IsDependentOn("javadocs-gps")
     .IsDependentOn("binderate-config-verify")
     .Does (() =>
 {
     var configFile = MakeAbsolute(new FilePath("./config.json")).FullPath;
     var basePath = MakeAbsolute(new DirectoryPath ("./")).FullPath;
 
-    // Run the dotnet tool for binderator
-    RunProcess("xamarin-android-binderator",
-        $"--config=\"{configFile}\" --basepath=\"{basePath}\"");
+    // Run the binderator project
+    var args = new ProcessArgumentBuilder ()
+        .Append ("binderate")
+        .Append ("--config-file")
+        .Append (configFile)
+        .Append ("--base-path")
+        .Append (basePath);
+    
+    DotNetRun (binderator_project, args);
 
     // format the targets file so they are pretty in the package
     var targetsFiles = GetFiles("generated/**/*.targets");
@@ -350,15 +363,15 @@ Task("binderate-config-verify")
                     artifact_version_suffix  = artifact_version_parts[1];
                 }
 
-                Information($"groupId                   = {jo["groupId"]}");
-                Information($"artifactId                = {jo["artifactId"]}");
-                Information($"artifact_version          = {artifact_version}");
-                Information($"artifact_version_prefix   = {artifact_version_prefix}");
-                Information($"artifact_version_suffix   = {artifact_version_suffix}");
-                Information($"nuget_version             = {nuget_version}");
-                Information($"nuget_version_prefix      = {nuget_version_prefix}");
-                Information($"nuget_version_suffix      = {nuget_version_suffix}");
-                Information($"nugetId                   = {jo["nugetId"]}");
+                //Information($"groupId                   = {jo["groupId"]}");
+                //Information($"artifactId                = {jo["artifactId"]}");
+                //Information($"artifact_version          = {artifact_version}");
+                //Information($"artifact_version_prefix   = {artifact_version_prefix}");
+                //Information($"artifact_version_suffix   = {artifact_version_suffix}");
+                //Information($"nuget_version             = {nuget_version}");
+                //Information($"nuget_version_prefix      = {nuget_version_prefix}");
+                //Information($"nuget_version_suffix      = {nuget_version_suffix}");
+                //Information($"nugetId                   = {jo["nugetId"]}");
 
 
                 string[] artifact_version_prefix_parts = artifact_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
@@ -384,7 +397,7 @@ Task("binderate-config-verify")
                     nuget_version_new    += $"-{nuget_version_suffix}";
                 }
 
-                Information($"nuget_version_new         = {nuget_version_new}");
+                //Information($"nuget_version_new         = {nuget_version_new}");
 
                 if
                     (
@@ -454,9 +467,9 @@ Task("binderate-fix")
                 string groupId      = (string) jo["groupId"];
                 string artifactId   = (string) jo["artifactId"];
 
-                Information($"  Verifying files for     :");
-                Information($"              group       : {groupId}");
-                Information($"              artifact    : {artifactId}");
+                //Information($"  Verifying files for     :");
+                //Information($"              group       : {groupId}");
+                //Information($"              artifact    : {artifactId}");
 
                 bool? dependency_only = (bool?) jo["dependencyOnly"];
                 if ( dependency_only == true)
@@ -625,7 +638,6 @@ private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, S
 }
 
 Task("libs")
-    .IsDependentOn("metadata-verify")
     .IsDependentOn("libs-native")
     .Does(() =>
 {
@@ -669,6 +681,42 @@ Task("libs-native")
 
     CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
     Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+
+    root = "./source/com.google.android.play/core.extensions/";
+
+    RunGradle(root, "build");
+
+    outputDir = "./externals/com.xamarin.google.android.play.core.extensions/";
+    EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+    root = "./source/com.google.android.play/asset.delivery.extensions/";
+
+    RunGradle(root, "build");
+
+    outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
+    EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+    root = "./source/com.google.android.play/feature.delivery.extensions/";
+
+    RunGradle(root, "build");
+
+    outputDir = "./externals/com.xamarin.google.android.play.feature.delivery.extensions/";
+    EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
 });
 
 Task("nuget")
@@ -696,105 +744,6 @@ Task("nuget")
                 MSBuildSettings = settings
             }
         );
-});
-
-Task("samples-generate-all-targets")
-    .Does(() =>
-{
-    // make a big .targets file that pulls in everything
-    var xmlns = (XNamespace)"http://schemas.microsoft.com/developer/msbuild/2003";
-    var itemGroup = new XElement(xmlns + "ItemGroup");
-    foreach (var nupkg in GetFiles("./output/*.nupkg").OrderBy(fp => fp.FullPath)) {
-        Information($"NuGet package = {nupkg}");
-
-        // Skip Wear as it has special implications requiring more packages to be used properly in an app
-        if (nupkg.FullPath.Contains(".Wear."))
-            continue;
-        // Skip the migration packages as that is not meant forto be used here
-        if (nupkg.FullPath.Contains("Xamarin.AndroidX.Migration"))
-            continue;
-        // Skip Guava.ListenableFuture as it cannot be used in the same project as Guava itself
-        if (nupkg.FullPath.Contains("Xamarin.Google.Guava.ListenableFuture"))
-            continue;
-        // Skip XBD because packages do not automatically reference the in-tree version
-        if (nupkg.FullPath.Contains("Xamarin.Build.Download"))
-            continue;
-        // Skip Binderator because it is not a binding package
-        if (nupkg.FullPath.Contains("Xamarin.AndroidBinderator"))
-            continue;
-        // skip because of multiple classes
-        if 
-            (
-                nupkg.FullPath.Contains("Xamarin.AndroidX.DataStore.")
-                &&
-                ( nupkg.FullPath.Contains(".Jvm") || nupkg.FullPath.Contains(".Android") )
-            )
-            continue;
-
-        var filename = nupkg.GetFilenameWithoutExtension();
-        var match = Regex.Match(filename.ToString(), @"(.+?)\.(\d+[\.0-9\-a-zA-Z]+)");
-
-        if ( match.Groups[1].Value == "Xamarin.AndroidX.Security.SecurityCrypto" )
-        {
-            // MAUI uses pinned/locked/exact preview version 1.1.0-alpha03 - skipit
-            continue;
-        }
-
-        itemGroup.Add(new XElement(xmlns + "PackageVersion",
-            new XAttribute("Include", match.Groups[1]),
-            new XAttribute("Version", match.Groups[2])));
-
-    }
-
-    var xdoc = new XDocument(new XElement(xmlns + "Project", itemGroup));
-    xdoc.Save("./output/AllPackages.targets");
-
-    // ... and Directory.packages.props for central package management
-    // 
-    string content_original = System.IO.File.ReadAllText("./output/AllPackages.targets");
-    string content_new      = content_original.Replace("PackageReference", "PackageVersion");
-    System.IO.File.WriteAllText("./output/Directory.packages.props", content_new);
-});
-
-Task("samples-dotnet")
-    .IsDependentOn("nuget")
-    .IsDependentOn("samples-only-dotnet");
-
-Task("samples-only-dotnet")
-    .IsDependentOn("samples-generate-all-targets")
-    .Does(() =>
-{
-    // clear the packages folder so we always use the latest
-    var packagesPath = MakeAbsolute((DirectoryPath)"./samples/packages-dotnet").FullPath;
-    EnsureDirectoryExists(packagesPath);
-    CleanDirectories(packagesPath);
-
-    var settings = new DotNetMSBuildSettings()
-        .SetConfiguration("Debug") // We don't need to run linking
-        .WithProperty("Verbosity", VERBOSITY.ToString())
-        .WithProperty("RestorePackagesPath", packagesPath)
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    string[] solutions = new string[]
-    {
-        "./samples/dotnet/BuildAllDotNet.sln",
-        "./samples/dotnet/BuildAllMauiApp.sln",
-    };
-
-    foreach(string solution in solutions)
-    {
-        FilePath fp_solution = new FilePath(solution);
-        string filename = fp_solution.GetFilenameWithoutExtension().ToString();
-        Information($"=====================================================================================================");
-        Information($"DotNetBuild           {solution} / {filename}");    
-        DotNetBuild(solution, new DotNetBuildSettings
-        {
-            MSBuildSettings = settings.EnableBinaryLogger($"./output/samples-dotnet-dotnet-msbuild-{filename}.binlog")
-        });
-    }
 });
 
 Task("tools-executive-order")
@@ -984,11 +933,6 @@ Task ("ci-build")
     .IsDependentOn ("binderate")
     .IsDependentOn ("nuget")
     .IsDependentOn ("tools-executive-order")
-    ;
-
-// Runs samples without building packages
-Task ("ci-samples")
-    .IsDependentOn ("samples-only-dotnet")
     ;
 
 // for local builds, conditionally do the first binderate

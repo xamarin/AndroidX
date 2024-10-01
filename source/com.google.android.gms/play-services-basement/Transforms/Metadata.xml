@@ -1,0 +1,158 @@
+﻿    <metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.actions']" name="managedName">Android.Gms.Actions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']" name="managedName">Android.Gms.Common</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.common.annotation']" name="managedName">Android.Gms.Common.Annotations</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']" name="managedName">Android.Gms.Common.Apis</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api.internal']" name="managedName">Android.Gms.Common.Apis.Internal</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.internal']" name="managedName">Android.Gms.Common.Internal</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.common.internal.safeparcel']" name="managedName">Android.Gms.Common.Internal.SafeParcel</attr>  
+	<attr path="/api/package[@name='com.google.android.gms.common.stats']" name="managedName">Android.Gms.Common.Stats</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.util']" name="managedName">Android.Gms.Common.Util</attr>
+	<attr path="/api/package[@name='com.google.android.gms.dynamic']" name="managedName">Android.Gms.Dynamic</attr>
+	<attr path="/api/package[@name='com.google.android.gms.dynamite']" name="managedName">Android.Gms.Dynamite</attr>
+	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags']" name="managedName">Android.Gms.Dynamite.Descriptors.Flags</attr>
+	<attr path="/api/package[@name='com.google.android.gms.iid']" name="managedName">Android.Gms.Iid</attr>
+	<attr path="/api/package[@name='com.google.android.gms.security']" name="managedName">Android.Gms.Security</attr>
+	<attr path="/api/package[@name='com.google.android.gms.ads.identifier']" name="managedName">Android.Gms.Ads.Identifier</attr>
+	<attr path="/api/package[@name='com.google.android.gms.location.places']" name="managedName">Android.Gms.Location.Places</attr>
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.iid']" name="managedName">Firebase.Iid</attr>
+
+    <!-- 15.0.1+ mc++ 20180530 -->
+    <attr path="/api/package[@name='com.google.android.gms.common.net']" name="managedName">Android.Gms.Common.Net</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.collect']" name="managedName">Android.Gms.Common.Collect</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.config']" name="managedName">Android.Gms.Common.Config</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.internal.constants']" name="managedName">Android.Gms.Internal.Constants</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.logging']" name="managedName">Android.Gms.Common.Logging</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.providers']" name="managedName">Android.Gms.Common.Providers</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.sqlite']" name="managedName">Android.Gms.Common.SqlLite</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.util.concurrent']" name="managedName">Android.Gms.Common.Util.Concurrent</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common.wrappers']" name="managedName">Android.Gms.Common.Util.Wrappers</attr>
+
+
+    
+	<!-- TODO: Consider removing these when Cycle 9 is released -->
+	<attr path="/api/package[@name='com.google.android.gms.flags.impl']" name="managedName">Android.Gms.Flags.Impl</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+	<!-- End TODO -->
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+    <!-- Android.Gms.Common.ConnectionResult : zzbgl -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'Api.zza' and @name != 'zzf' and @name != 'zzc' and @name != 'zzd' and @name != 'zza' and @name != 'zzg' and @name != 'zzb' and @name != 'zzp' and @name != 'zzbgl' and @name != 'zzs']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzbgp']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+    <!-- Android.Gms.Common.ConnectionResult -->
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/*[@name != 'zzbgl' and @name != 'zzbgp']" />   
+	<attr path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzbgl']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']/class[@name='zzbgl']" name="managedName">InternalObfuscatedBase1</attr>
+
+    <!-- Android.Gms.Drive.Events.DriveEvent -->
+	<attr path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzbgp']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.internal']/interface[@name='zzbgp']" name="managedName">InternalObfuscatedBase2</attr>
+
+	
+	
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+
+	<!-- Fix plural name - legacy compatibility -->
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']" name="managedName">Statuses</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']" name="extends">Java.Lang.Object</attr>
+
+
+	<!-- This type needs to exist as some critical types go missing if this one is skipped -->
+	<attr path="/api/package[@name='com.google.android.gms.common.internal.safeparcel']/class[@name='zza']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzc']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzf']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzg']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzp']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzs']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']/implements[@name='com.google.android.gms.internal.zzbfq']" />
+
+	<!-- Allowing zzc classes allows a bit too much, so remove these specifically -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package[@name='com.google.android.gms.common']/class[@name='zzd']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='zzd']" />
+	
+	<!-- Remove some undesirable bits -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.internal']/class[@name!='DowngradeableSafeParcel']" />
+	<remove-node path="/api/package[@name='com.google.android.gms.common.api']/class[@name='ResolvingResultCallbacks']/method[@name='onSuccess' and count(parameter)=1 and parameter[1][@type='R']]" />
+
+	<!-- TODO: Consider removing when Cycle 9 is released -->
+	<remove-node path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='zzf']/implements[@name='android.os.Parcelable.Creator']" />
+	<!-- End TODO -->
+
+	<!-- Keep some base class names the same -->
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzc']" name="managedName">Zzcold</attr>
+	<!-- Base - GooglePlayApiAvailability -->
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzf']" name="managedName">Zzc</attr>
+	<!-- Base - GooglePlayServicesUtil -->
+	<attr path="/api/package[@name='com.google.android.gms.common']/class[@name='zzs']" name="managedName">Zze</attr>
+    
+	<remove-node 
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='Status']/implements"
+        >
+	</remove-node>
+
+	<add-node path="/api/package[@name='com.google.android.gms.common']/class[@name='zzf']">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable"></implements>
+		<method abstract="false" deprecated="not deprecated" final="true" name="describeContents" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" native="false" return="void" static="false" synchronized="false" visibility="public">
+			<parameter name="dest" type="android.os.Parcel"></parameter>
+			<parameter name="flags" type="int"></parameter>
+		</method>
+	</add-node>
+
+    
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.api']/class[@name='UnsupportedApiCallException']/method[@name='getMessage' and count(parameter)=0]"
+        />
+    <!--
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.common.net']/class[@name='SocketFactoryCreator']/method[@name='getRemoteCreator' and count(parameter)=1]"
+        />
+    -->
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.net']/class[@name='SocketFactoryCreator']/method[@name='getRemoteCreator' and count(parameter)=1 and parameter[1][@type='android.os.IBinder']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='ConnectionEvent']/method[@name='setDurationMillis' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='ConnectionEvent']/method[@name='setEventType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='ConnectionEvent']/method[@name='markTimeOut' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.common.stats']/class[@name='WakeLockEvent']/method[@name='markTimeOut' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        Android.Gms.Common.Stats.StatsEvent
+    </attr>
+
+</metadata>

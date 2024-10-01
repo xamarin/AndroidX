@@ -85,6 +85,15 @@ set CMD_LINE_ARGS=%*
 set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 
 @rem Execute Gradle
+echo About to run gradle:
+echo JAVA_EXE - "%JAVA_EXE%"
+echo DEFAULT_JVM_OPTS - %DEFAULT_JVM_OPTS%
+echo JAVA_OPTS - %JAVA_OPTS%
+echo GRADLE_OPTS - %GRADLE_OPTS%
+echo APP_BASE_NAME - %APP_BASE_NAME%
+echo CLASSPATH - %CLASSPATH%
+echo CMD_LINE_ARGS - %CMD_LINE_ARGS%
+
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
 
 :end

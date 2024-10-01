@@ -1,29 +1,25 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
-using System.Text.RegularExpressions;
+using System.Text;
 using System.Threading.Tasks;
-using MavenNet;
 using MavenNet.Models;
-using Microsoft.AspNetCore.Razor.Language;
-using Microsoft.AspNetCore.Razor.Language.Extensions;
 using RazorLight;
 using MavenGroup = MavenNet.Models.Group;
-using System.Security.Cryptography;
-using System.Text;
-using System.Diagnostics;
 
 namespace AndroidBinderator
 {
 	public class Engine
 	{
-		public static Task BinderateAsync(string configFile, string basePath = null)
+		public static Task BinderateAsync(string configFile, string? basePath = null)
 		{
-			var config = Newtonsoft.Json.JsonConvert.DeserializeObject<BindingConfig>(File.ReadAllText(configFile));
+			var config = Newtonsoft.Json.JsonConvert.DeserializeObject<BindingConfig>(File.ReadAllText(configFile))
+				?? throw new ArgumentException ("Could not deserialize config file");
 
 			if (!string.IsNullOrEmpty(basePath))
 				config.BasePath = basePath;
@@ -38,7 +34,7 @@ namespace AndroidBinderator
 
 			if (config.DownloadExternals)
 			{
-				var artifactDir = Path.Combine(config.BasePath, config.ExternalsDir);
+				var artifactDir = Path.Combine(config.BasePath!, config.ExternalsDir);
 				if (!Directory.Exists(artifactDir))
 					Directory.CreateDirectory(artifactDir);
 			}
@@ -60,7 +56,7 @@ namespace AndroidBinderator
 
 				var mavenGroup = maven.Groups.FirstOrDefault(g => g.Id == artifact.GroupId);
 
-				Project project = null;
+				Project? project = null;
 
 				project = await maven.GetProjectAsync(artifact.GroupId, artifact.ArtifactId, artifact.Version);
 
@@ -71,13 +67,17 @@ namespace AndroidBinderator
 			if (config.DownloadExternals)
 				await DownloadArtifacts(config, mavenProjects);
 
+			// This isn't really correct, as it could be .aar, but it'll do until we hit that case and need to fix it
+			foreach (var artifact in mavenProjects.Values.Where (a => a.Packaging == "bundle"))
+				artifact.Packaging = "jar";
+
 			var slnProjModels = new Dictionary<string, BindingProjectModel>();
 			var models = BuildProjectModels(config, mavenProjects);
 
 			var json = Newtonsoft.Json.JsonConvert.SerializeObject(models);
 
 			if (config.Debug.DumpModels)
-				File.WriteAllText(Path.Combine(config.BasePath, "models.json"), json);
+				File.WriteAllText(Path.Combine(config.BasePath!, "models.json"), json);
 
 			var engine = new RazorLightEngineBuilder()
 				.UseMemoryCachingProvider()
@@ -87,13 +87,13 @@ namespace AndroidBinderator
 				var template_set = config.GetTemplateSet(model.MavenArtifacts.FirstOrDefault()?.MavenArtifactConfig?.TemplateSet);
 
 				foreach (var template in template_set.Templates) {
-					var inputTemplateFile = Path.Combine(config.BasePath, template.TemplateFile);
+					var inputTemplateFile = Path.Combine(config.BasePath!, template.TemplateFile);
 					var templateSrc = File.ReadAllText(inputTemplateFile);
 
 					AssignMetadata(model, template);
 
-					var outputFile = new FileInfo (template.GetOutputFile (config, model));
-					if (!outputFile.Directory.Exists)
+					var outputFile = new FileInfo (template.GetOutputFile (config, model))!;
+					if (!outputFile.Directory!.Exists)
 						outputFile.Directory.Create();
 
 					string result = await engine.CompileRenderAsync(inputTemplateFile, templateSrc, model);
@@ -131,16 +131,19 @@ namespace AndroidBinderator
 					continue;
 
 				var artifactDir = Path.Combine(
-					config.BasePath,
+					config.BasePath!,
 					config.ExternalsDir,
-					mavenArtifact.GroupId);
+					mavenArtifact.GroupId!);
 
-				var artifactExtractDir = Path.Combine(artifactDir, mavenArtifact.ArtifactId);
+				var artifactExtractDir = Path.Combine(artifactDir, mavenArtifact.ArtifactId!);
 
 				Directory.CreateDirectory(artifactDir);
 				Directory.CreateDirectory(artifactExtractDir);
 
 				var mvnArt = maven.Groups.FirstOrDefault(g => g.Id == mavenArtifact.GroupId)?.Artifacts?.FirstOrDefault(a => a.Id == mavenArtifact.ArtifactId);
+
+				if (mvnArt is null)
+					throw new InvalidOperationException ($"Could not find artifact {mavenArtifact.GroupId}.{mavenArtifact.ArtifactId}");
 
 				// Download artifact
 				var artifactFile = await DownloadPayload(mvnArt, mavenArtifact, mavenProject, artifactDir, config);
@@ -291,18 +294,62 @@ namespace AndroidBinderator
 					NuGetVersionSuffix = config.NugetVersionSuffix,
 					MavenGroupId = mavenArtifact.GroupId,
 					AssemblyName = mavenArtifact.AssemblyName,
-					Config = config
+					Config = config,
+					MavenDescription = mavenProject.Description,
+					MavenUrl = mavenProject.Url,
+					JavaSourceRepository = mavenProject.Scm?.Url,
+					Type = mavenArtifact.BindingsType ?? config.DefaultBindingsType,
+					AllowPrereleaseDependencies = mavenArtifact.AllowPrereleaseDependencies,
 				};
-				projectModels.Add(projectModel);
 
+				var licenses = mavenProject.Licenses;
 
-				var artifactDir = Path.Combine(config.BasePath, config.ExternalsDir, mavenArtifact.GroupId);
+				// Override licenses ignore any licenses in the POM
+				if (mavenArtifact.OverrideLicenses.Count > 0) {
+					licenses = new List<License> ();
+
+					foreach (var l in mavenArtifact.OverrideLicenses) {
+						var parts = l.Split ('|');
+						licenses.Add (new License {
+							Name = parts [0],
+							Url = parts.Length > 1 ? parts [1] : string.Empty
+						});
+					}
+				}
+
+				// Verify that we have known licenses
+				foreach (var license in licenses) {
+					var license_config = config.Licenses.FirstOrDefault (l => string.Compare (l.Name, license.Name, true) == 0);
+
+					if (license_config is null) {
+						exceptions.Add (new Exception ($"Unknown license '{license.Name}' for artifact '{mavenArtifact.GroupAndArtifactId}'. This license must be added to 'config.json'."));
+						continue;
+					}
+
+					projectModel.Licenses.Add (new MavenArtifactLicense (license.Name, license.Url, license_config));
+				}
+
+				if (projectModel.Licenses.Count == 0)
+					exceptions.Add (new Exception ($"No license(s) could be found for artifact '{mavenArtifact.GroupAndArtifactId}'. Use 'overrideLicenses' in 'config.json' to specify with format 'name|url' ('url' is optional)."));
+
+				// Load license text
+				foreach (var license in projectModel.Licenses) {
+					var license_file = Path.Combine (config.BasePath!, license.LicenseConfig.File);
+					license.Text = File.ReadAllText (license_file);
+				}
+
+				foreach (var developer in mavenProject.Developers)
+					projectModel.Developers.Add (new MavenArtifactDeveloper (developer.Name));
+
+				projectModels.Add (projectModel);
+
+				var artifactDir = Path.Combine(config.BasePath!, config.ExternalsDir, mavenArtifact.GroupId!);
 				var artifactFile = Path.Combine(artifactDir, $"{mavenArtifact.ArtifactId}.{mavenProject.Packaging}");
 				var md5File = artifactFile + ".md5";
 				var sha256File = artifactFile + ".sha256";
 				var md5 = File.Exists(md5File) ? File.ReadAllText(md5File) : string.Empty;
 				var sha256 = File.Exists(sha256File) ? File.ReadAllText(sha256File) : string.Empty;
-				var artifactExtractDir = Path.Combine(artifactDir, mavenArtifact.ArtifactId);
+				var artifactExtractDir = Path.Combine(artifactDir, mavenArtifact.ArtifactId!);
 
 				var proguardFile = Path.Combine(artifactExtractDir, "proguard.txt");
 
@@ -314,8 +361,9 @@ namespace AndroidBinderator
 					MavenArtifactVersion = mavenArtifact.Version,
 					MavenArtifactMd5 = md5,
 					MavenArtifactSha256 = sha256,
-					ProguardFile = File.Exists(proguardFile) ? GetRelativePath(proguardFile, config.BasePath).Replace("/", "\\") : null,
-					MavenArtifactConfig = mavenArtifact
+					ProguardFile = File.Exists(proguardFile) ? GetRelativePath(proguardFile, config.BasePath ?? "").Replace("/", "\\") : null,
+					MavenArtifactConfig = mavenArtifact,
+					DocumentationType = mavenArtifact.DocumentationType,
 				});
 
 				List<Dependency> dependencies = new List<Dependency>();
@@ -419,7 +467,7 @@ namespace AndroidBinderator
 			// Calculate metadata from the config file and template file
 			var baseMetadata = new Dictionary<string, string>();
 
-			MergeValues(baseMetadata, project.Config.Metadata);
+			MergeValues(baseMetadata, project.Config?.Metadata);
 			MergeValues(baseMetadata, template.Metadata);
 
 			// Add metadata for artifact
@@ -427,7 +475,7 @@ namespace AndroidBinderator
 			MergeValues(artifactMetadata, baseMetadata);
 
 			if (project.MavenArtifacts.FirstOrDefault() is MavenArtifactModel artifact)
-				MergeValues(artifactMetadata, artifact.MavenArtifactConfig.Metadata);
+				MergeValues(artifactMetadata, artifact.MavenArtifactConfig?.Metadata);
 
 			project.Metadata = artifactMetadata;
 
@@ -439,11 +487,11 @@ namespace AndroidBinderator
 			MergeValues(dependencyMetadata, baseMetadata);
 
 			if (project.NuGetDependencies.FirstOrDefault() is NuGetDependencyModel depMapping)
-				MergeValues(dependencyMetadata, depMapping.MavenArtifactConfig.Metadata);
+				MergeValues(dependencyMetadata, depMapping.MavenArtifactConfig?.Metadata);
 
 			foreach (var dep in project.NuGetDependencies) {
 				dep.Metadata = dependencyMetadata;
-				dep.MavenArtifact.Metadata = dependencyMetadata;
+				dep.MavenArtifact!.Metadata = dependencyMetadata;
 			}
 		}
 
@@ -482,7 +530,7 @@ namespace AndroidBinderator
 			return Uri.UnescapeDataString(folderUri.MakeRelativeUri(pathUri).ToString().Replace('/', Path.DirectorySeparatorChar));
 		}
 
-		static Dictionary<string, string> MergeValues(Dictionary<string, string> dest, Dictionary<string, string> src)
+		static Dictionary<string, string> MergeValues(Dictionary<string, string>? dest, Dictionary<string, string>? src)
 		{
 			dest = dest ?? new Dictionary<string, string>();
 			if (src != null)
@@ -527,7 +575,8 @@ namespace AndroidBinderator
 			dependency.Version = version;
 		}
 
-		static string ReplaceVersionProperties(Project project, string version)
+		[return:NotNullIfNotNull (nameof (version))]
+		static string? ReplaceVersionProperties(Project project, string? version)
 		{
 			// Handle versions with Properties, like:
 			// <properties>
@@ -545,7 +594,7 @@ namespace AndroidBinderator
 				return version;
 
 			foreach (var prop in project.Properties.Any)
-				version = version.Replace ($"${{{prop.Name.LocalName}}}", prop.Value);
+				version = version!.Replace ($"${{{prop.Name.LocalName}}}", prop.Value);
 
 			return version;
 		}
@@ -568,7 +617,7 @@ namespace AndroidBinderator
 			return pom;
 		}
 
-		static IEnumerable<Dependency> ParseExtraDependencies(string dependencies)
+		static IEnumerable<Dependency> ParseExtraDependencies(string? dependencies)
 		{
 			if (string.IsNullOrWhiteSpace(dependencies))
 				yield break;

@@ -1,0 +1,15 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.threadnetwork']"
+        name="managedName"
+        >
+        Android.Gms.Internal.ThreadNetwork
+    </attr>
+
+    <attr 
+        path="/api/package[@name='com.google.android.gms.threadnetwork']" 
+        name="managedName"
+        >
+        Android.Gms.ThreadNetwork
+    </attr>
+</metadata>

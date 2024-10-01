@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+    <remove-node
+        path="/api/package[@name='com.google.android.play.core.tasks']/class[@name='NativeOnCompleteListener']"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.android.play.core.tasks']/class[@name='Tasks']"
+        name="managedName"
+        >
+        Tasks
+    </attr>
+
+    <attr
+        path="/api/package[@name='com.google.android.play.core.assetpacks']/class[@name='NativeAssetPackStateUpdateListener']/method[@name='onStateUpdate' and count(parameter)=1 and parameter[1][@type='com.google.android.play.core.assetpacks.AssetPackState']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <attr
+        path="/api/package[@name='xamarin.google.android.play.core.splitInstall']/interface[@name='SplitInstallStateUpdatedListenerWrapper.StateUpdateListener']/method[@name='OnStateUpdate']/parameter[@name='p0']" 
+        name="name"
+        >
+        state
+    </attr>
+    <attr
+        path="/api/package[@name='xamarin.google.android.play.core.assetpacks']/interface[@name='AssetPackStateUpdateListenerWrapper.AssetPackStateListener']/method[@name='OnStateUpdate']/parameter[@name='p0']" 
+        name="name"
+        >
+        state
+    </attr>
+
+    <!-- 
+        https://github.com/PatGet/XamarinPlayCoreUpdater/pull/20/
+        
+        Removing StateUpdatedListener implementation from InstallStateUpdatedListener interface 
+        and making proper onStateUpdate method mapping where StateT is InstallState 
+    -->
+    <remove-node 
+        path="/api/package[@name='com.google.android.play.core.install']/interface[@name='InstallStateUpdatedListener']/implements[contains(@name,'StateUpdatedListener')]"
+        />
+    <add-node 
+        path="/api/package[@name='com.google.android.play.core.install']/interface[@name='InstallStateUpdatedListener']"
+        >
+        <method 
+            visibility="public" static="false" abstract="true" return="void" name="onStateUpdate" 
+            deprecated="not deprecated" final="false" bridge="false" native="false" 
+            synchronized="false" synthetic="false"
+            >
+            <parameter 
+                type="com.google.android.play.core.install.InstallState" 
+                name="state" 
+                />
+    </method>
+    </add-node>    
+
+</metadata>

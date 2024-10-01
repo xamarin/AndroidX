@@ -1,0 +1,23 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr 
+        path="/api/package[@name='com.google.firebase']" 
+        name="managedName"
+        >
+        Firebase
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations']" 
+        name="managedName"
+        >
+        Firebase.Installations
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.interop']" 
+        name="managedName"
+        >
+        Firebase.Installations.InterOp
+    </attr>
+        
+</metadata>

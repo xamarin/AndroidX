@@ -77,4 +77,23 @@
     path="/api/package[@name='androidx.media3.extractor.text']/class[@name='SimpleSubtitleDecoder']/method[@name='decode' and count(parameter)=3 and parameter[1][@type='androidx.media3.extractor.text.SubtitleInputBuffer'] and parameter[2][@type='androidx.media3.extractor.text.SubtitleOutputBuffer'] and parameter[3][@type='boolean']]"
     />
 
+  <!-- 
+  <attr
+    path="/api/package[@name='androidx.media3.extractor.text']/interface[@name='Subtitle']/method[@name='getCues' and count(parameter)=1 and parameter[1][@type='long']]"
+    name="managedReturn"
+    >
+    Java.Lang.Object
+  </attr>
+  -->
+  <add-node
+    path="/api/package[@name='androidx.media3.extractor.text']/class[@name='CuesWithTimingSubtitle']"
+    >
+    <method
+      visibility="public" abstract="false" static="false" return="java.util.List&lt;androidx.media3.common.text.Cue&gt;" name="getCues"
+      deprecated="not deprecated" final="false" native="false" synchronized="false" bridge="true" synthetic="true"
+      >
+      <parameter type="long" name="count" />
+    </method>
+  </add-node>
+
 </metadata>

@@ -1,0 +1,12 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.encoders']/interface[@name='ObjectEncoder']/typeParameters"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.encoders']/interface[@name='ValueEncoder']/typeParameters"
+        >        
+    </remove-node>
+
+    
+</metadata>

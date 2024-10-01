@@ -1,0 +1,19 @@
+﻿<metadata>
+
+    <remove-node
+       path="/api/package[@name='com.google.mlkit.nl.languageid.internal']/class[@name='LanguageIdRegistrar']/implements"
+        />
+
+    <!--
+    <attr
+        path="/api/package[@name='com.google.mlkit.nl.languageid.thin.internal']/class[@name='ThinLanguageIdRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        name="managedReturn"
+        >
+        System.Collections.Generic.IList &lt; Firebase.Components.Component &gt;
+    </attr>
+    -->
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.nl.languageid.thin.internal']/class[@name='ThinLanguageIdRegistrar']/implements"
+        />
+
+</metadata>

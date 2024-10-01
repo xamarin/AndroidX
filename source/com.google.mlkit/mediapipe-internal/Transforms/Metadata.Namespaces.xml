@@ -1,0 +1,47 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_vision_mediapipe']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitVisionMediaPipe
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.mediapipe']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.MediaPipe
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.mediapipe.pose']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.MediaPipe.Pose
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.mediapipe.segmentation']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.MediaPipe.Segmentation
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.vision.mediapipe.utils']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.Vision.MediaPipe.Utils
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.research.xeno.effect']" 
+        name="managedName"
+        >
+        Xamarin.Google.Research.Xeno.Effect
+    </attr>
+
+</metadata>

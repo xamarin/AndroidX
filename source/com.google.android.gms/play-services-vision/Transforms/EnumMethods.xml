@@ -1,0 +1,50 @@
+﻿<enum-method-mappings>
+	<!--
+  This example changes the Java method:
+    android.support.v4.app.Fragment.SavedState.writeToParcel (int flags)
+  to be:
+    android.support.v4.app.Fragment.SavedState.writeToParcel (Android.OS.ParcelableWriteFlags flags)
+  when bound in C#.
+
+  <mapping jni-class="android/support/v4/app/Fragment.SavedState">
+    <method jni-name="writeToParcel" parameter="flags" clr-enum-type="Android.OS.ParcelableWriteFlags" />
+  </mapping>
+
+  Notes:
+  - For Java interfaces, use "jni-interface" attribute instead of "jni-class" attribute.
+  - To change the type of the return value, use "return" as the parameter name.
+  - The parameter names will be p0, p1, ... unless you provide JavaDoc file in the project.
+  -->
+
+  <mapping jni-class="com/google/android/gms/vision/barcode/Barcode">
+    <field jni-name="valueFormat" parameter="return" clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeValueFormat" />
+  </mapping>
+
+  <mapping jni-class="com/google/android/gms/vision/barcode/BarcodeDetector$Builder">
+    <method jni-name="setBarcodeFormats" parameter="format" clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" />
+    <method jni-name="setBarcodeFormats" parameter="p0" clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" />
+  </mapping>
+
+  <mapping jni-class="com/google/android/gms/vision/barcode/Barcode">
+    <field jni-name="format" parameter="return" clr-enum-type="Android.Gms.Vision.Barcodes.BarcodeFormat" />
+  </mapping>
+
+  <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
+    <method jni-name="setClassificationType" parameter="classificationType" clr-enum-type="Android.Gms.Vision.Faces.ClassificationType" />
+    <method jni-name="setClassificationType" parameter="p0" clr-enum-type="Android.Gms.Vision.Faces.ClassificationType" />
+  </mapping>
+
+  <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
+    <method jni-name="setMode" parameter="mode" clr-enum-type="Android.Gms.Vision.Faces.FaceDetectionMode" />
+    <method jni-name="setMode" parameter="p0" clr-enum-type="Android.Gms.Vision.Faces.FaceDetectionMode" />
+  </mapping>
+
+  <mapping jni-class="com/google/android/gms/vision/face/FaceDetector$Builder">
+    <method jni-name="setLandmarkType" parameter="landmarkType" clr-enum-type="Android.Gms.Vision.Faces.LandmarkDetectionType" />
+    <method jni-name="setLandmarkType" parameter="p0" clr-enum-type="Android.Gms.Vision.Faces.LandmarkDetectionType" />
+  </mapping>
+
+  <mapping jni-class="com/google/android/gms/vision/face/Landmark">
+    <method jni-name="getType" parameter="return" clr-enum-type="Android.Gms.Vision.Faces.LandmarkType" />
+  </mapping>
+</enum-method-mappings>

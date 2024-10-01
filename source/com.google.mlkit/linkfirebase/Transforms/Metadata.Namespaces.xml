@@ -1,0 +1,22 @@
+﻿<metadata>
+
+  <attr
+      path="/api/package[@name='com.google.android.gms.internal.mlkit_linkfirebase']"
+      name="managedName"
+      >
+      Android.Gms.Internal.MLKitLinkFirebase
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.mlkit.linkfirebase']"
+      name="managedName"
+      >
+      Xamarin.Google.MLKit.LinkFirebase
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.mlkit.linkfirebase.internal']"
+      name="managedName"
+      >
+      Xamarin.Google.MLKit.LinkFirebase.Internal
+  </attr>
+  
+</metadata>

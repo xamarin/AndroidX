@@ -1,44 +1,154 @@
-﻿<metadata>
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setSessionActivity' and count(parameter)=1 and parameter[1][@type='android.app.PendingIntent']]"        
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setId' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setBitmapLoader' and count(parameter)=1 and parameter[1][@type='androidx.media3.session.BitmapLoader']]"
-        />
+<metadata>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setSessionActivity' and count(parameter)=1 and parameter[1][@name='p0']]"        
+        name="managedName"
+		    >
+		    SetSessionActivityAsBuilder
+	  </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setId' and count(parameter)=1 and parameter[1][@name='p0']]"
+        name="managedName"
+		    >
+		    SetIdWithIntAsBuilder
+	  </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@name='p0']]"
+        name="managedName"
+		    >
+        SetExtrasWithBundleAsBuilder
+    </attr>
     <remove-node
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='build' and count(parameter)=0]"
         />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setSessionActivity' and count(parameter)=1 and parameter[1][@type='android.app.PendingIntent']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setId' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
-        />
-    <remove-node
-        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setBitmapLoader' and count(parameter)=1 and parameter[1][@type='androidx.media3.session.BitmapLoader']]"
-        />
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setSessionActivity' and count(parameter)=1 and parameter[1][@name='p0']]"
+        name="managedName"
+		    >
+		    SetSessionActivityWithPendingIntent
+	  </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setId' and count(parameter)=1 and parameter[1][@name='p0']]"
+        name="managedName"
+        >
+        SetIdAsBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setExtras' and count(parameter)=1 and parameter[1][@name='p0']]"
+        name="managedName"
+		    >
+		    SetExtrasWithBundle
+	  </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setBitmapLoader' and count(parameter)=1 and parameter[1][@type='p0']]"
+        name="managedName"
+		    >
+		    SetBitmapLoader
+	  </attr>
     <attr
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media3.session.MediaSession.ControllerInfo']]"
         name="managedReturn"
         >
         AndroidX.Media3.Session.MediaSession
     </attr>
-  <attr
-      path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media3.session.MediaSession.ControllerInfo']]"
-      name="managedOverride"
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media3.session.MediaSession.ControllerInfo']]"
+        name="managedOverride"
         >
-    override
-  </attr>
+        override
+    </attr>
     <remove-node
         path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService']/method[@name='onGetSession' and count(parameter)=1 and parameter[1][@type='androidx.media3.session.MediaSession.ControllerInfo']]"
         />
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setBitmapLoader' and @jni-return='Landroidx/media3/session/MediaSession$BuilderBase;' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.util.BitmapLoader']]"  
+        name="managedName"
+        >
+        SetBitmapLoaderAsMediaSessionBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setBitmapLoader' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='androidx.media3.common.util.BitmapLoader']]"
+        name="managedName"
+        >
+        SetBitmapLoaderAsMediaSessionBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetPeriodicPositionUpdateEnabledBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setSessionExtras' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedName"
+        >
+        SetSessionExtrasBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaSession.Builder']/method[@name='setShowPlayButtonIfPlaybackIsSuppressed' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetShowPlayButtonIfPlaybackIsSuppressedBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetPeriodicPositionUpdateEnabledBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.Builder']/method[@name='setSessionExtras' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedName"
+        >
+        SetSessionExtrasBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.Builder']/method[@name='setShowPlayButtonIfPlaybackIsSuppressed' and @return='androidx.media3.session.MediaSession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetShowPlayButtonIfPlaybackIsSuppressedBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setPeriodicPositionUpdateEnabled' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetPeriodicPositionUpdateEnabledBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setSessionExtras' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='android.os.Bundle']]"
+        name="managedName"
+        >
+        SetSessionExtrasBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session']/class[@name='MediaLibraryService.MediaLibrarySession.Builder']/method[@name='setShowPlayButtonIfPlaybackIsSuppressed' and @return='androidx.media3.session.MediaLibraryService.MediaLibrarySession.Builder' and count(parameter)=1 and parameter[1][@type='boolean']]"
+        name="managedName"
+        >
+        SetShowPlayButtonIfPlaybackIsSuppressedBuilder
+    </attr>
+
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setContentType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setFlags' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setLegacyStreamType' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.media3.session.legacy']/class[@name='AudioAttributesCompat.AudioAttributesImplBase.Builder']/method[@name='setUsage' and count(parameter)=1 and parameter[1][@type='int']]"
+        name="managedReturn"
+        >
+        AndroidX.Media3.Session.Legacy.AudioAttributesCompat.IAudioAttributesImplBuilder
+    </attr>
+
 </metadata>

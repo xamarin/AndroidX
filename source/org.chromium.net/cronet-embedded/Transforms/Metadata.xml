@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+    <attr
+        path="/api/package[@name='org.chromium.base.task']/class[@name='AsyncTask']/method[@name='getStatus' and count(parameter)=0]"
+        name="managedName"
+        >
+        StatusData
+    </attr>
+    
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetUrlRequest']/method[@name='addHeader' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"    
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetUrlRequest']/method[@name='setUploadDataProvider' and count(parameter)=2 and parameter[1][@type='org.chromium.net.UploadDataProvider'] and parameter[2][@type='java.util.concurrent.Executor']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+    <attr
+        path="/api/package[@name='org.chromium.net.impl']/class[@name='CronetUrlRequest']/method[@name='setHttpMethod' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="visibility"
+        >
+        protected
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='org.chromium.net.httpflags']/class[@name='Flags.Builder']/method[@name='getFlags' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.httpflags']/interface[@name='FlagsOrBuilder']/method[@name='getFlags' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='org.chromium.net.httpflags']/interface[@name='FlagValue.ConstrainedValueOrBuilder']/method[@name='getValueCase' and count(parameter)=0]"        
+        />
+        
+</metadata>
