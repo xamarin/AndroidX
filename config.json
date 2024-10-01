@@ -5349,7 +5349,8 @@
         "nugetVersion": "0.25.0.3",
         "nugetId": "Xamarin.KotlinX.AtomicFU",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5358,7 +5359,8 @@
         "nugetVersion": "0.25.0.3",
         "nugetId": "Xamarin.KotlinX.AtomicFU.Jvm",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5367,7 +5369,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Android",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5376,7 +5379,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5385,7 +5389,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Core.Jvm",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5394,7 +5399,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Guava",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5403,7 +5409,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Jdk8",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5412,7 +5419,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Play.Services",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5421,7 +5429,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Reactive",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5430,7 +5439,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx2",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5439,7 +5449,8 @@
         "nugetVersion": "1.9.0",
         "nugetId": "Xamarin.KotlinX.Coroutines.Rx3",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5448,7 +5459,8 @@
         "nugetVersion": "1.7.3",
         "nugetId": "Xamarin.KotlinX.Serialization.Core",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5457,7 +5469,8 @@
         "nugetVersion": "1.7.3",
         "nugetId": "Xamarin.KotlinX.Serialization.Core.Jvm",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5466,7 +5479,8 @@
         "nugetVersion": "1.7.3",
         "nugetId": "Xamarin.KotlinX.Serialization.Protobuf",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains.kotlinx",
@@ -5475,7 +5489,8 @@
         "nugetVersion": "1.7.3",
         "nugetId": "Xamarin.KotlinX.Serialization.Protobuf.Jvm",
         "dependencyOnly": false,
-        "templateSet": "kotlinx"
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.ow2.asm",
@@ -5853,28 +5868,6 @@
           },
           {
             "templateFile": "templates/no-bindings/Targets.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
-      },
-      {
-        "name": "kotlinx",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/kotlinx/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/kotlinx/Targets.cshtml",
             "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
           },
           {
