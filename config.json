@@ -1018,6 +1018,7 @@
         "version": "1.5.0",
         "nugetVersion": "1.5.0.1",
         "nugetId": "Xamarin.AndroidX.Emoji2.EmojiPicker",
+        "excludedRuntimeDependencies": "androidx.emoji2.emoji2",
         "dependencyOnly": false
       },
       {
@@ -5693,14 +5694,6 @@
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral",
         "comments": "Depends on Xamarin.Google.Android.ODML.Image which only has a prerelease version."
-      },
-      {
-        "groupId": "androidx.emoji2",
-        "artifactId": "emoji2",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0.2",
-        "nugetId": "Xamarin.AndroidX.Emoji2",
-        "dependencyOnly": true
       },
       {
         "groupId": "androidx.wear.tiles",
