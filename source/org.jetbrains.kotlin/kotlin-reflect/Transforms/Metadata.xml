@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+  <!-- remove the internal, internal classes -->
+  <remove-node path="/api/package[starts-with(@name,'kotlin.reflect.jvm.internal')]" />
+
+  <!-- remove *Impl classes -->
+  <remove-node path="/api/package/class[substring(@name,string-length(@name)-3)='Impl']" />
+
+</metadata>
