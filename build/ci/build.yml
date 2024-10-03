@@ -8,7 +8,7 @@ parameters:
   runAPIScan: false                                                 # Run APIScan analysis
   
   # Tool Parameters
-  dotnetVersion: '9.0.100-rc.1.24452.12'                            # the version of .NET to use
+  dotnetVersion: '9.0.0-rc.1'                                       # the version of .NET to use
   dotnetWorkloadRollbackFile: 'workloads.json'
   dotnetWorkloadSource: 'https://api.nuget.org/v3/index.json'
   dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
