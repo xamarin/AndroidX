@@ -1,0 +1,21 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_code_scanner']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKit.MLKitCodeScanner
+    </attr>
+  <attr
+      path="/api/package[@name='com.google.mlkit.vision.codescanner']"
+      name="managedName"
+      >
+      Xamarin.Google.MLKit.Vision.CodeScanner
+  </attr>
+  <attr
+      path="/api/package[@name='com.google.mlkit.vision.codescanner.internal']"
+      name="managedName"
+      >
+      Xamarin.Google.MLKit.Vision.CodeScanner.Internal
+  </attr>
+
+</metadata>

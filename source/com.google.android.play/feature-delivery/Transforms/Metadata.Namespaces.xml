@@ -1,0 +1,39 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.play.core.splitcompat']" 
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.SplitCompat
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.play.core.splitinstall']" 
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.SplitInstall
+    </attr>
+    <attr 
+        path="/api/package[@name='xamarin.google.android.play.core.splitinstall']" 
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.SplitInstall
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.play.core.splitinstall.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.SplitInstall.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.play.core.splitinstall.model']" 
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.SplitInstall.Model
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.play.core.splitinstall.testing']" 
+        name="managedName"
+        >
+        Xamarin.Google.Android.Play.Core.SplitInstall.Testing
+    </attr>
+
+</metadata>

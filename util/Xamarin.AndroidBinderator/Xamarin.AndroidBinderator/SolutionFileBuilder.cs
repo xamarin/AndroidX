@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace AndroidBinderator
 			var csprojNamespaces = new XmlNamespaceManager(new NameTable());
 			csprojNamespaces.AddNamespace("ns", "http://schemas.microsoft.com/developer/msbuild/2003");
 
-			var slnFileInfo = new FileInfo(config.SolutionFile);
+			var slnFileInfo = new FileInfo(config.SolutionFile!);
 
 			// Collect all the projects to be added to the .sln
 			var allProjects = new List<(string guid, string name, string key)>();
@@ -24,7 +24,7 @@ namespace AndroidBinderator
 			// First go through additional projects specified in the config
 			foreach (var ap in config.AdditionalProjects)
 			{
-				var prjPath = Path.Combine(config.BasePath, ap);
+				var prjPath = Path.Combine(config.BasePath!, ap);
 				var prjPathFileInfo = new FileInfo(prjPath);
 
 				if (!File.Exists(prjPath))

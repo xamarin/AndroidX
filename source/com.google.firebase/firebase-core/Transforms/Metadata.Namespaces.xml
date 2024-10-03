@@ -1,0 +1,21 @@
+﻿<metadata>
+	<attr 
+		path="/api/package[@name='com.google.firebase.encoders']"
+		name="managedName"
+		>
+		Firebase.Encoders
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.encoders.config']"
+		name="managedName"
+		>
+		Firebase.Encoders.Config
+	</attr>
+	<attr 
+		path="/api/package[@name='com.google.firebase.encoders.json']"
+		name="managedName"
+		>
+		Firebase.Encoders.Json
+	</attr>
+
+</metadata>

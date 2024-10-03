@@ -1,0 +1,6 @@
+﻿<metadata>
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.iid.internal']" name="managedName">Firebase.Iid.Internal</attr>
+    
+</metadata>

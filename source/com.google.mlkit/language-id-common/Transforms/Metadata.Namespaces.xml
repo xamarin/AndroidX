@@ -1,0 +1,21 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_language_id_common']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitLanguageIdCommon
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.languageid']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.LanguageId
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.languageid.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.LanguageId.Internal
+    </attr>
+
+</metadata>

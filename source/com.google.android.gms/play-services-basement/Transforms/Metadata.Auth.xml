@@ -1,0 +1,28 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+<!--	<attr path="/api/package[@name='com.google.android.gms.auth']" name="managedName">Android.Gms.Auth</attr>-->
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api']" name="managedName">Android.Gms.Auth.Api</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api.consent']" name="managedName">Android.Gms.Auth.Api.Consent</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api.credentials']" name="managedName">Android.Gms.Auth.Api.Credentials</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api.credentials.internal']" name="managedName">Android.Gms.Auth.Api.Credentials.Internal</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api.proxy']" name="managedName">Android.Gms.Auth.Api.Proxy</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin']" name="managedName">Android.Gms.Auth.Api.SignIn</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.auth.api.signin.internal']" name="managedName">Android.Gms.Auth.Api.SignIn.Internal</attr>
+<!--  	<attr path="/api/package[@name='com.google.android.gms.auth.firstparty.shared']" name="managedName">Android.Gms.Auth.FirstParty.Shared</attr>-->
+  	
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='CREDENTIALS_API']" name="managedName">CREDENTIALS_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='PROXY_API']" name="managedName">PROXY_API</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api']/class[@name='Auth']/field[@name='GOOGLE_SIGN_IN_API']" name="managedName">GOOGLE_SIGN_IN_API</attr>
+	
+</metadata>
+

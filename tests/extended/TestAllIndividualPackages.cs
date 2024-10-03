@@ -9,7 +9,7 @@ namespace ExtendedTests;
 public class TestAllIndividualPackages
 {
 	static string base_dir = "";
-	static string test_dir = @"output\tests";
+	static string test_dir = Path.Combine ("output", "tests");
 	static string configuration = "Release";
 	static string platform_version = "29";
 	static string net_version = "net8.0";
@@ -41,7 +41,7 @@ public class TestAllIndividualPackages
 		// Set up a NuGet.config file that allows us to use the locally built NuGet packages.
 		// Note we also need to allow things to come from NuGet.org (*) in order to test when
 		// NuGet resolves a mix of the new local packages and existing ones published on NuGet.org.
-		var nuget_config_src = Path.Combine (base_dir, "samples", "NuGet.config");
+		var nuget_config_src = Path.Combine (base_dir, "tests", "common", "NuGet.config");
 		var nuget_config_dst = Path.Combine (base_dir, test_dir, "NuGet.config");
 
 		if (!File.Exists (nuget_config_dst)) {
@@ -97,6 +97,12 @@ public class TestAllIndividualPackages
 			ReplaceInFile (proj_file, $";{net_version}-maccatalyst", "");
 			ReplaceInFile (proj_file, $";{net_version}-windows10.0.19041.0", "");
 		}
+
+		// Fully qualify the Activity class name, as it conflicts with 'Xamarin.AndroidX.Activity.Ktx'.
+		var activity_file = Path.Combine (case_dir, "MainActivity.cs");
+
+		if (File.Exists (activity_file))
+			ReplaceInFile (activity_file, "public class MainActivity : Activity", "public class MainActivity : global::Android.App.Activity");
 
 		// Add the package
 		await RunAndAssertSuccess ($"add package {id} --version {version}", case_dir);

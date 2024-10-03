@@ -1,0 +1,22 @@
+# Runs standard unit test(s)
+
+parameters:
+  buildPool:                                                        # VM pool information
+  stageCondition: and(succeeded(), ne('$(skipUnitTests)', 'true'))  # When to run this stage
+  
+stages:
+- stage: standard_tests
+  displayName: Standard Tests
+  dependsOn: build_windows
+  condition: ${{ parameters.stageCondition }}
+  
+  jobs:
+  
+  - template: job-extended-tests.yml
+    parameters:
+      jobName: Standard
+      agentCount: 1
+      testFilter: cat != dummy
+      testProject: $(standardTestProject)
+      testAssembly: $(standardTestAssembly)
+      buildPool: ${{ parameters.buildPool }}

@@ -15,13 +15,18 @@ stages:
   - template: job-extended-tests.yml
     parameters:
       jobName: Android
-      agentCount: 6
+      agentCount: 20
       testFilter: cat = Android
+      testProject: $(extendedTestProject)
+      testAssembly: $(extendedTestAssembly)
       buildPool: ${{ parameters.buildPool }}
   
-  - template: job-extended-tests.yml
-    parameters:
-      jobName: MAUI
-      agentCount: 10
-      testFilter: cat = MAUI
-      buildPool: ${{ parameters.buildPool }}
+# Disabled because of too many failures until MAUI updates its AndroidX packages
+#  - template: job-extended-tests.yml
+#    parameters:
+#      jobName: MAUI
+#      agentCount: 10
+#      testFilter: cat = MAUI
+#      testProject: $(extendedTestProject)
+#      testAssembly: $(extendedTestAssembly)
+#      buildPool: ${{ parameters.buildPool }}

@@ -1,0 +1,144 @@
+﻿<metadata>
+    <!-- Preserve namespace that has "Core" added to it -->
+    <attr 
+        path="/api/package[@name='io.grpc.internal']" 
+        name="managedName"
+        >
+        Xamarin.Grpc.Core.Internal
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractManagedChannelImplBuilder']/typeParameters"
+        />
+        
+    <attr
+        path="/api/package[@name='io.grpc.inprocess']/class"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='io.grpc.inprocess']/class[@name='InProcessServer']"
+        name="visibility"
+        >
+        public
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerStream']"    
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractClientStream']"    
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='ServerImpl']"    
+        />
+    <!--
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerImplBuilder']"    
+        />
+    -->
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='CompositeReadableBuffer']"    
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='MessageFramer']"    
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='DnsNameResolverProvider']"    
+        />
+
+    <add-node
+        path="/api/package[@name='io.grpc.inprocess']/class[@name='InProcessChannelBuilder']"
+        >
+        <method 
+          visibility="public" static="false"  abstract="false" return="java.lang.Object" name="compressorRegistry" 
+          deprecated="not deprecated" final="false" bridge="false" native="false"  synchronized="false" synthetic="false" 
+          >
+          <parameter name="registry" type="io.grpc.CompressorRegistry" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="decompressorRegistry" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="registry" type="io.grpc.DecompressorRegistry" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="directExecutor" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+        </method>
+        <method abstract="false" deprecated="not deprecated" final="false" name="executor" bridge="false" native="false" return="java.lang.Object" static="false" synchronized="false" synthetic="false" visibility="public">
+          <parameter name="executor" type="java.util.concurrent.Executor" >
+          </parameter>
+        </method>
+
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="idleTimeout" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="value" type="long" >
+          </parameter>
+          <parameter name="unit" type="java.util.concurrent.TimeUnit" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" override="true" abstract="false" return="java.lang.Object" name="intercept"
+          deprecated="not deprecated" final="false" bridge="false" native="false" ssynchronized="false" synthetic="false" 
+          >
+          <parameter name="interceptors" type="io.grpc.ClientInterceptor..." >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="nameResolverFactory" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="resolverFactory" type="io.grpc.NameResolver.Factory" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="overrideAuthority" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="authority" type="java.lang.String" >
+          </parameter>
+        </method>
+        <method 
+          visibility="public" static="false" abstract="false" return="java.lang.Object" name="userAgent" 
+          deprecated="not deprecated" final="false" bridge="false" native="false" synchronized="false" synthetic="false" 
+          >
+          <parameter name="userAgent" type="java.lang.String" >
+          </parameter>
+        </method>
+
+    </add-node>
+    <attr
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerImplBuilder']/method"
+        name="final"
+        >
+        false
+    </attr>
+
+    <remove-node
+        path="/api/package[@name='io.grpc.internal']/class[@name='AbstractServerImplBuilder']/method[@name='buildTransportServers' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;? extends io.grpc.ServerStreamTracer.Factory&gt;']]"
+        />
+    <attr
+        path="/api/package[@name='io.grpc.inprocess']/class[@name='InProcessServerBuilder']/method[@name='useTransportSecurity' and count(parameter)=2 and parameter[1][@type='java.io.File'] and parameter[2][@type='java.io.File']]"    
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ServerImplBuilder']"
+      />
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ScParser']"
+      />
+    <remove-node 
+      path="/api/package[@name='io.grpc.internal']/class[@name='ManagedChannelImplBuilder']"      
+      />
+   
+</metadata>

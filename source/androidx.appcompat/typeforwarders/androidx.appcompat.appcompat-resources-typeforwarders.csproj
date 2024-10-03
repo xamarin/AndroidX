@@ -48,8 +48,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
-    <None Include="..\..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
+    <None Include="..\..\..\source\PackageLicense.md" Pack="True" PackagePath="LICENSE.md" />
+    <None Include="..\..\..\build\icon.png" Pack="True" PackagePath="icon.png" />
   </ItemGroup>
 
   <ItemGroup>

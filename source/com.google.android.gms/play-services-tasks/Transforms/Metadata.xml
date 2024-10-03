@@ -1,0 +1,22 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.tasks']" name="managedName">Android.Gms.Tasks</attr>
+	<attr path="/api/package[@name='com.google.android.gms.tasks']/class[@name='Tasks']" name="managedName">TasksClass</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.iid']" name="managedName">Firebase.Iid</attr>
+	<attr path="/api/package[@name='com.google.android.gms.iid']" name="managedName">Android.Gms.Iid</attr>
+	
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzb']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+
+	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+
+	<remove-node path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']/method[contains(@name, 'zz')]" />
+	
+	<remove-node
+		path="/api/package[@name='com.google.android.gms.tasks']/class[@name='NativeOnCompleteListener']/implements"
+		/>
+		
+</metadata>

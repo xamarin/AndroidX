@@ -1,0 +1,41 @@
+﻿<metadata>
+    <!--
+    <attr 
+        path="/api/package[@name='package']" 
+        name="managedName"
+        >
+        Package
+    </attr>
+    -->
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations']" 
+        name="managedName"
+        >
+        Firebase.Installations
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.local']" 
+        name="managedName"
+        >
+        Firebase.Installations.Local
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.remote']" 
+        name="managedName"
+        >
+        Firebase.Installations.Remote
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.installations.time']" 
+        name="managedName"
+        >
+        Firebase.Installations.Time
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.installations.ktx']"
+        name="managedName"
+        >
+        Firebase.Installations.Ktx
+</attr>
+
+</metadata>

@@ -1,0 +1,12 @@
+﻿<metadata>
+  <!-- Remove internal API that has covariant return issues -->
+  <remove-node path="/api/package[@name='com.google.firebase.inappmessaging.display.dagger.internal']" />
+
+  <attr
+    path="/api/package[@name='com.google.firebase.inappmessaging.display.internal']/class[@name='GlideErrorListener']/method[@name='onResourceReady' and count(parameter)=5 and parameter[1][@type='android.graphics.drawable.Drawable'] and parameter[2][@type='java.lang.Object'] and parameter[3][@type='com.bumptech.glide.request.target.Target&lt;android.graphics.drawable.Drawable&gt;'] and parameter[4][@type='com.bumptech.glide.load.DataSource'] and parameter[5][@type='boolean']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr>
+
+</metadata>

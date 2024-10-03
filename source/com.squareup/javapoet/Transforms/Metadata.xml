@@ -1,0 +1,9 @@
+﻿<metadata>
+    <attr
+        path="/api/package[@name='com.squareup.javapoet']/class[@name='ClassName']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.squareup.javapoet.ClassName']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+</metadata>

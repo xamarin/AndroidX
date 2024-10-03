@@ -1,0 +1,160 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.perf']" name="managedName">Firebase.Perf</attr>
+	<attr path="/api/package[@name='com.google.firebase.perf.metrics']" name="managedName">Firebase.Perf.Metrics</attr>
+	<attr path="/api/package[@name='com.google.firebase.perf.network']" name="managedName">Firebase.Perf.Network</attr>
+	<attr path="/api/package[@name='com.google.firebase.perf.provider']" name="managedName">Firebase.Perf.Provider</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.component']" name="managedName">Firebase.Perf.Component</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.internal']" name="managedName">Firebase.Perf.Internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.config']" name="managedName">Firebase.Perf.Config</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.gauges']" name="managedName">Firebase.Perf.Gauges</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.impl']" name="managedName">Firebase.Perf.Impl</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.logging']" name="managedName">Firebase.Perf.Logging</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.transport']" name="managedName">Firebase.Perf.Transport</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.util']" name="managedName">Firebase.Perf.Util</attr>
+    <attr path="/api/package[@name='com.google.firebase.perf.v1']" name="managedName">Firebase.Perf.V1</attr>
+
+    <attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.perf']" name="managedName">Firebase.Perf.Provider</attr>
+
+    
+    <remove-node path="/api/package[@name='com.google.android.gms.internal.firebase-perf']" ></remove-node>>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzanb']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+    
+    <attr path="/api/package/*[@extends='com.google.android.gms.internal.zzekz']" name="extends">java.lang.Object</attr>
+    <attr path="/api/package/*[@extends='com.google.firebase.perf.internal.zzb']" name="extends">java.lang.Object</attr>
+
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']"
+		name="managedName"
+		>
+		Firebase.Perf.Injection.Modules
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf']/class[@name='FirebasePerformance_Factory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesConfigResolverFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesFirebaseAppFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesGaugeManagerFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesRemoteConfigManagerFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesFirebaseInstallationsFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesRemoteConfigComponentFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesTransportFactoryProviderFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+
+
+
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.components']"
+		name="managedName"
+		>
+		Firebase.Perf.Injection.Components
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.session']"
+		name="managedName"
+		>
+		Firebase.Perf.Session
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.session.gauges']"
+		name="managedName"
+		>
+		Firebase.Perf.Session.Gauges
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.application']"
+		name="managedName"
+		>
+		Firebase.Perf.Application
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.metrics']"
+		name="managedName"
+		>
+		Firebase.Perf.Metrics
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.metrics.resource']"
+		name="managedName"
+		>
+		Firebase.Perf.Metrics.Resource
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.validator']"
+		name="managedName"
+		>
+		Firebase.Perf.Validator
+	</attr>
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.metrics.validator']"
+		name="managedName"
+		>
+		Firebase.Perf.Metrics.Validator
+	</attr>
+
+	<attr
+		path="/api/package[@name='com.google.firebase.perf.injection.modules']/class[@name='FirebasePerformanceModule_ProvidesSessionManagerFactory']/method[@name='get' and count(parameter)=0]"
+		name="managedReturn"
+		>
+		Java.Lang.Object
+	</attr>
+
+	<attr 
+		path="/api/package[@name='com.google.firebase.perf.ktx']" 
+		name="managedName"
+		>
+		Firebase.Perf.Ktx
+	</attr>
+
+
+</metadata>

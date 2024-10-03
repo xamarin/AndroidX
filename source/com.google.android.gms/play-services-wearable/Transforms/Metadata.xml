@@ -1,0 +1,73 @@
+﻿<metadata>
+	<attr path="/api/package[@name='com.google.android.gms.wearable']" name="managedName">Android.Gms.Wearable</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.wearable']/class[@name='Wearable']" name="managedName">WearableClass</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wearable']/class[@name='Wearable.WearableOptions']" name="managedName">WearableClass.WearableOptions</attr>
+	<attr path="/api/package[@name='com.google.android.gms.wearable']/class[@name='Wearable.WearableOptions.Builder']" name="managedName">WearableClass.WearableOptions.Builder</attr>
+
+	<!-- Fix API name to be uppercase to be consistent in avoiding naming conflicts with fields in C# bindings -->
+	<attr path="/api/package[@name='com.google.android.gms.wearable']/class[@name='Wearable']/field[@name='API']" name="managedName">API</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.wearable.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzf']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'NodeApi.zza']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<!-- There was a duplicate field error (since they expose this as a getUri property as well), so removing the field -->
+	<remove-node path="/api/package[@name='com.google.android.gms.wearable']/class[@name='Asset']/field[@name='uri']" />
+
+    <!--
+    protected abstract Object GetEntry (int p0, int p1);
+    -->
+   <add-node
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='DataEventBuffer']"
+        >
+        <method 
+            static="false" visibility="protected" return="Java.Lang.Object" name="getEntry" 
+            abstract="false" deprecated="not deprecated" final="false" native="false" synchronized="false" 
+            >
+            <parameter type="int" name="p0">
+            </parameter>
+            <parameter type="int" name="p1">
+            </parameter>
+        </method>
+    </add-node>
+   <add-node
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='DataItemBuffer']"
+        >
+        <method 
+            static="false" visibility="protected" return="Java.Lang.Object" name="getEntry" 
+            abstract="false" deprecated="not deprecated" final="false" native="false" synchronized="false" 
+            >
+            <parameter type="int" name="p0">
+            </parameter>
+            <parameter type="int" name="p1">
+            </parameter>
+        </method>
+    </add-node>
+
+    <attr
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='WearableListenerService']/method[@name='onPeerConnected']"
+        name="argsType"
+        >
+        PeerConnectedEventArgs
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.gms.wearable']/class[@name='WearableListenerService']/method[@name='onPeerDisconnected']"
+        name="argsType"
+        >
+        PeerDisconnectedEventArgs
+    </attr>
+
+</metadata>

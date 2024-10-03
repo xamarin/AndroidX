@@ -1,0 +1,15 @@
+# Signs artifacts on tags built for release
+  
+stages:
+- stage: sign_artifacts
+  displayName: Sign Artifacts
+  dependsOn: build_windows
+  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+  
+  jobs:
+  
+  - template: sign-artifacts/jobs/v2.yml@internal-templates
+    parameters:
+      artifactName: output-windows
+      usePipelineArtifactTasks: true
+      use1ESTemplate: true

@@ -1,0 +1,117 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='PartialForwardingClientCallListener']/method[@name='delegate' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='PartialForwardingServerCall']/method[@name='delegate' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='PartialForwardingServerCallListener']/method[@name='delegate' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='PartialForwardingClientCall']/method[@name='delegate' and count(parameter)=0]"
+        />
+
+    <!--
+    <attr
+        path="/api/package[@name='io.grpc']/interface[@name='Compressor']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        name="managedName"
+        >
+        MessageEncodingCompressor
+    </attr>
+    <attr
+        path="/api/package[@name='io.grpc']/interface[@name='Decompressor']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        name="managedName"
+        >
+        MessageEncodingDecompressor
+    </attr>
+    -->
+
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface[@name='Compressor']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface[@name='Decompressor']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='Codec.Identity']/method[@name='getMessageEncoding' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelProvider']/method[@name='priority' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelProvider']/method[@name='isAvailable' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+
+
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelProvider']/method[@name='builderForAddress' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='int']]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelProvider']/method[@name='builderForTarget' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        />
+
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelBuilder']/method[@name='intercept' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;io.grpc.ClientInterceptor&gt;']]"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class[@name='ManagedChannelBuilder']/method[@name='intercept' and count(parameter)=1 and parameter[1][@type='io.grpc.ClientInterceptor...']]"
+        />
+
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface[@name='ServiceProviders.PriorityAccessor']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface[@name='InternalServiceProviders.PriorityAccessor']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface[@name='Metadata.TrustedAsciiMarshaller']/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface[@name='InternalMetadata.TrustedAsciiMarshaller']/typeParameters"
+        />
+
+    <!--
+    <remove-node
+        path="/api/package[@name='io.grpc']/class/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/class/method/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface/typeParameters"
+        />
+    <remove-node
+        path="/api/package[@name='io.grpc']/interface/method/typeParameters"
+        />
+
+    <add-node
+        path="/api/package[@name='io.grpc']/interface[@name='InternalMetadata.TrustedAsciiMarshaller']"
+        >
+      <method abstract="true" deprecated="not deprecated" final="false" name="parseAsciiString" jni-signature="([B)Ljava/lang/Object;" bridge="false" native="false" return="T" jni-return="TT;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="byte[]" jni-type="[B"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="toAsciiString" jni-signature="(Ljava/lang/Object;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="T" jni-type="TT;"></parameter>
+      </method>
+    </add-node>
+    -->
+
+    <attr
+        path="/api/package[@name='io.grpc']/class[@name='Deadline']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='io.grpc.Deadline']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <remove-node 
+        path="/api/package[@name='io.grpc']/class[@name='ForwardingChannelBuilder']/method[@name='delegate' and count(parameter)=0]"
+        />
+        
+</metadata>

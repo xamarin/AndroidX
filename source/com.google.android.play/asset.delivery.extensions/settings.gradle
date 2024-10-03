@@ -1,0 +1,3 @@
+include ':extensions-aar'
+include ':app'
+rootProject.name = "PlayCore"

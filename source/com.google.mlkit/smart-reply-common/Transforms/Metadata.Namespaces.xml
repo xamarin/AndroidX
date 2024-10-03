@@ -1,0 +1,21 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_smart_reply_common']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.MLKitSmartReplyCommon
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.smartreply']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.SmartReply
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.mlkit.nl.smartreply.internal']" 
+        name="managedName"
+        >
+        Xamarin.Google.MLKit.NL.SmartReply.Internal
+    </attr>
+
+</metadata>

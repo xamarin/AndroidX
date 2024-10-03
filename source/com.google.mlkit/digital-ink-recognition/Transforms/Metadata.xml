@@ -1,0 +1,5 @@
+﻿<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.digitalink.internal']/class[@name='DigitalInkRecognitionRegistrar']/implements"
+        />
+</metadata>

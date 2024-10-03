@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.android.gms.internal.mlkit_language_id_bundled']/class[@name='zba']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.nl.languageid.bundled.internal']/class[@name='ThickLanguageIdentifier']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.nl.languageid.bundled.internal']/class[@name='ThickLanguageIdRegistrar']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.nl.languageid.bundled.internal']/class[@name='zba']"
+        />
+
+</metadata>

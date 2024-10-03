@@ -1,0 +1,131 @@
+@using System
+@using System.IO
+@using System.Linq
+@using System.Xml.Linq
+
+  @{
+      string[] artifact_version_parts = Model.NuGetVersion
+                                              .Split(new string[] { "-" }, StringSplitOptions.None);
+      string artifact_version = null;
+
+      string artifact_version_release = artifact_version_parts[0];
+      string[] artifact_version_release_parts = artifact_version_release.Split(new string[] { "." }, StringSplitOptions.None);
+      artifact_version = string.Join(".", artifact_version_release_parts, 0, 3);
+
+      if (artifact_version_parts.Length == 1)
+      {
+          // release
+      }
+      if (artifact_version_parts.Length == 2)
+      {
+          artifact_version += "-" + artifact_version_parts[1];
+      }
+  }
+
+## About
+
+<!-- 
+    A description of the package and where one can find more documentation 
+-->
+
+Google.Play.Services, Firebase and ML Kit (GPS-FB-MLKit) Bindings NuGet Package @(Model.NuGetPackageId) 
+
+.NET Android (formerly Xamarin.Android) GPS-FB-MLKit bindings NuGet Package @(Model.NuGetPackageId) 
+for Maven artifact:
+
+artifact=@(Model.MavenGroupId):@(Model.Name) 
+
+artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)
+
+nuget=@(Model.Name).@(Model.NuGetVersion)
+
+For more info please visit: 
+
+https://github.com/xamarin/GooglePlayServicesComponents/
+
+
+
+### What is Google.Play.Services, Firebase and ML Kit (GPS-FB-MLKit) 
+
+
+Google Play services powers a broad set of APIs and services on Android to help you build your app, 
+enhance privacy and security, engage users, and grow your business.
+
+SDKs powered by Google Play services are backward-compatible to Android 5.0, so you can reach over 
+3 billion active Android devices worldwide.
+
+Google Play services receive automatic updates—independent of OS, OEM, or app updates—so your users 
+receive new features and bug fixes more quickly.
+
+https://developers.google.com/android
+
+
+Google Play services powers a broad set of APIs and services on Android to help you build your app, 
+enhance privacy and security, engage users, and grow your business.
+
+          
+https://developers.google.com/android/reference/packages
+
+Firebase is an app development platform that helps you build and grow apps and games users love. 
+Backed by Google and trusted by millions of businesses around the world.
+
+
+Accelerate app development with fully managed backend infrastructure
+           
+https://firebase.google.com/products-build
+
+
+Release with confidence and monitor performance and stability
+
+https://firebase.google.com/products-release
+
+
+Boost user engagement with rich analytics, A/B testing, and messaging campaigns
+           
+https://firebase.google.com/products-engage
+
+
+ML Kit brings Google’s machine learning expertise to mobile developers in a powerful and easy-to-use 
+package. Make your iOS and Android apps more engaging, personalized, and helpful with solutions that 
+are optimized to run on device.
+
+ML Kit’s processing happens on-device. This makes it fast and unlocks real-time use cases like processing 
+of camera input. It also works while offline and can be used for processing images and text that need to 
+remain on the device.
+
+https://developers.google.com/ml-kit
+
+
+## Related Packages
+
+<!-- 
+    The related packages associated with this package 
+-->
+
+https://github.com/xamarin/GooglePlayServicesComponents/blob/main/docs/artifact-list.md
+
+https://github.com/xamarin/GooglePlayServicesComponents/blob/main/docs/artifact-list-with-versions.md
+
+https://www.nuget.org/packages?q=Xamarin.GooglePlayServices
+
+https://www.nuget.org/packages?q=Xamarin.Firebase
+
+https://www.nuget.org/packages?q=Xamarin.MLKit
+
+## Feedback & Contributing
+
+<!-- 
+    Links to a GitHub repository where could open issues, Twitter, a Discord channel, bug tracker, or other platforms where a package consumer can connect with the package author 
+-->
+https://github.com/xamarin/GooglePlayServicesComponents/issues
+
+https://discord.com/channels/732297728826277939/732297837953679412
+
+
+## Issues
+
+Please report any issues:
+
+https://github.com/xamarin/GooglePlayServicesComponents/issues
+
+MIT license

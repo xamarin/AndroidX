@@ -1,13 +1,16 @@
-﻿@using System
+@model AndroidBinderator.BindingProjectModel
+@using System
 @using System.Linq
-
 <Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Build properties -->
   <PropertyGroup>
     <TargetFrameworks>$(_DefaultTargetFrameworks)</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
-    <AssemblyName>@(Model.NuGetPackageId)</AssemblyName>
+    <AssemblyName>@Model.GetAssemblyName()</AssemblyName>
     <AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
-    <RootNamespace>@(Model.NuGetPackageId.Replace("Xamarin.", ""))</RootNamespace>
+    <AndroidUseDesignerAssembly>false</AndroidUseDesignerAssembly>   
+    <RootNamespace>@Model.GetRootNamespace()</RootNamespace>
     
     <!--
       No warnings for:
@@ -17,9 +20,10 @@
        - CS0628: 'member' : new protected member declared in sealed class
        - CS0108: 'member1' hides inherited member 'member2'. Use the new keyword if hiding was intended.
        - CS0809: Obsolete member 'member' overrides non-obsolete member 'member'
-       - CS1572: XML comment has a param tag for '', but there is no parameter by that name 
+       - CS1572: XML comment has a param tag for '', but there is no parameter by that name
+       - XAOBS001: While this member is 'public', Google considers it internal API and reserves the right to modify or delete it in the future. Use at your own risk. 
     -->
-    <NoWarn>0618;0109;0114;0628;0108;0809;1572</NoWarn>
+    <NoWarn>0618;0109;0114;0628;0108;0809;1572;XAOBS001</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -32,49 +36,47 @@
                                               .Split(new string[] { "-" }, StringSplitOptions.None);
       string artifact_version = null;
 
-      string artifact_version_release = artifact_version_parts[0];
-      string[] artifact_version_release_parts = artifact_version_release.Split(new string[] { "." }, StringSplitOptions.None);
-      artifact_version = string.Join(".", artifact_version_release_parts, 0, 3);
+@if (Model.AllowPrereleaseDependencies) {
+    <!-- Allow this package to have prerelease dependencies -->
+    <NoWarn>$(NoWarn);NU5104</NoWarn>
+}
+  </PropertyGroup>
 
-      if (artifact_version_parts.Length == 1)
-      {
-          // release
-      }
-      if (artifact_version_parts.Length == 2)
-      {
-          artifact_version += "-" + artifact_version_parts[1];
-      }
-      
-      // Whether to bind the Java .jar/.aar
-      var bind_native_lib = Model.NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
-      
-      // Whether to include the Java .jar/.aar
-      var include_native_lib = Model.NuGetPackageId != "Xamarin.AndroidX.DataStore.Core.Jvm";
-  }
-  
+  <!-- NuGet package properties -->
   <PropertyGroup>
     <PackageId>@(Model.NuGetPackageId)</PackageId>
-    <Title>.NET for Android (formerly Xamarin.Android) AndroidX - @(Model.Name)</Title>
-    <Summary>.NET for Android (formerly Xamarin.Android) bindings for AndroidX - @(Model.Name)</Summary>
-    <Description>.NET for Android (formerly Xamarin.Android) bindings for AndroidX library '@(Model.MavenGroupId):@(Model.Name)'.</Description>
-    <PackageTags>.NET for Android Xamarin AndroidX Xamarin.AndroidX Support Google @(Model.Name) artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</PackageTags>
-    <PackageLicenseExpression>MIT AND Apache-2.0</PackageLicenseExpression>
+    <Title>.NET for Android bindings for the Android Java library '@(Model.MavenGroupId):@(Model.Name)'.</Title>
+    <Description>
+      $(Title)@(Model.NuGetPackageId.StartsWith("Xamarin.AndroidX.Compose") ? " Note this package only adds the Java library to the application. C# bindings are not provided." : string.Empty)
+
+@(!string.IsNullOrWhiteSpace(Model.MavenDescription) ? $"Library description: {Model.MavenDescription}" : string.Empty)
+    </Description>
+    <PackageTags>xamarin artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(Model.GetArtifactVersion())</PackageTags>
+@if (Model.CanUseSpdx)
+{
+    <PackageLicenseExpression>@Model.GetSpdxExpression()</PackageLicenseExpression>
+} else
+{
+  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+}
     <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
+  <!-- Packaging files -->
   <ItemGroup>
-    @if (include_native_lib) {
+    @if (Model.ShouldIncludeArtifact && Model.Type == AndroidBinderator.BindingType.Targets) {
     <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
     }
-    <None Include="..\..\LICENSE.md" Pack="True" PackagePath="LICENSE.md" />
-    <None Include="..\..\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
-    <None Include="..\..\icons\Xamarin.AndroidX_nuget.png" Pack="True" PackagePath="icon.png" />
+    <None Include="..\..\source\PackageLicense.md" Pack="True" PackagePath="LICENSE.md" />
+    <None Include=".\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
+    <None Include="..\..\build\icon.png" Pack="True" PackagePath="icon.png" />
     <None Include=".\readme.md" Pack="True" PackagePath="readme.md" />
   </ItemGroup>
 
+  <!-- Proguard files -->
   @if (@Model.MavenArtifacts.Count > 0) {
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts) {
@@ -85,6 +87,7 @@
   </ItemGroup>
   }
 
+  <!-- Binding compilation files -->
   <ItemGroup>
     <!-- Include AssemblyInfo.cs -->
     <Compile Include="..\..\source\AssemblyInfo.cs" />
@@ -110,26 +113,13 @@
     </TransformFile>
   </ItemGroup>
 
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-      if (!bind_native_lib) {
-        continue;
-      }
-      
-      if (art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar" />
-      } else {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" />
-      }
-    }
-  </ItemGroup>
-
-
+@if (Model.Type == AndroidBinderator.BindingType.Targets) {
   @if (@Model.MavenArtifacts.Count > 0) {
+  <!-- Java artifacts to bind -->
   <ItemGroup>
     @foreach (var art in @Model.MavenArtifacts)
     {
-      if (!include_native_lib) {
+      if (!Model.ShouldBindArtifact) {
         continue;
       }
       
@@ -152,16 +142,50 @@
   </ItemGroup>
   }
 
+  <!-- Java artifacts to include in the NuGet package -->
   <ItemGroup>
-    <!-- ProjectReference -->
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (!Model.ShouldIncludeArtifact) {
+        continue;
+      }
+      
+      if (art.MavenArtifactPackaging == "aar") {
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar" />
+      } else {
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" />
+      }
+    }
+  </ItemGroup>
+}
+@if (Model.Type == AndroidBinderator.BindingType.AndroidLibrary) {
+  <ItemGroup>
+      @foreach (var art in @Model.MavenArtifacts)
+      {
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" Bind="@(Model.ShouldBindArtifact.ToString())" />
+        @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaDoc)
+        {
+    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" />
+        }
+        @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaSource)
+        {
+    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" />
+        }
+      }
+  </ItemGroup>
+}
+
+  <!-- ProjectReferences -->
+  <ItemGroup>
     @foreach (var dep in @Model.NuGetDependencies) {
       if (dep.IsProjectReference) {
-        <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" PackageVersion="@GetProjectVersionString(dep.MavenArtifact.MavenArtifactVersion, dep.NuGetVersion)" />
+    <ProjectReference Include="..\..\generated\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId)\@(dep.MavenArtifact.MavenGroupId).@(dep.MavenArtifact.MavenArtifactId).csproj" PrivateAssets="none" PackageVersion="@dep.GetProjectVersionString()" />
       }
     }
   </ItemGroup>
 
-  <ItemGroup>
+  <!-- PackageReferences -->
+
+<ItemGroup>
     <PackageReference Include="SecurityCodeScan.VS2019" Version="5.6.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -169,70 +193,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- PackageReference -->
     @foreach (var dep in @Model.NuGetDependencies) {
       if (!dep.IsProjectReference) {
-      <PackageReference Include="@(dep.NuGetPackageId)" Version="@GetVersionString(dep.MavenArtifact.MavenArtifactVersion, dep.NuGetVersion)" PrivateAssets="none" />
+    <PackageReference Include="@(dep.NuGetPackageId)" Version="@dep.GetPackageVersionString()" PrivateAssets="none" />
       }
     }
   </ItemGroup>
 
-  <!-- Compose nuget package details until Compose support is implemented -->
-  @if (@Model.NuGetPackageId.StartsWith("Xamarin.AndroidX.Compose"))
-  {
-    <PropertyGroup>
-      <Summary>.NET for Android (formerly Xamarin.Android) bindings for AndroidX - @(Model.Name) (bindings without managed callable wrappers (C#) and are only used for including Java files)</Summary>
-      <Description>.NET for Android (formerly Xamarin.Android) bindings for AndroidX - @(Model.Name) (bindings without managed callable wrappers (C#) and are only used for including Java files) artifact=@(Model.MavenGroupId):@(Model.Name) artifact_versioned=@(Model.MavenGroupId):@(Model.Name):@(artifact_version)</Description>
-    </PropertyGroup>
+  @if(Model.NuGetPackageId == "Xamarin.Google.Guava") {
+  <ItemGroup>
+    <!-- Reference a version of ListenableFuture that does not contain 'listenablefuture.jar' -->
+    <PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="9999.0.0" />
+  </ItemGroup>
   }
 
-@{
-  string GetProjectVersionString (string mavenVersion, string nugetVersion)
-  {
-    var adjusted_string = GetVersionString (mavenVersion, nugetVersion);
-    
-    // If nothing changed, return empty string
-    if (adjusted_string == nugetVersion)
-      return null;
-      
-    return adjusted_string;
-  }
-  
-  string GetVersionString (string mavenVersion, string nugetVersion)
-  {
-    // If this isn't an exact version we don't use this code
-    if (!mavenVersion.StartsWith ('[') || !mavenVersion.EndsWith (']') || mavenVersion.Contains (','))
-      return nugetVersion;
-
-    // An exact version is requested like "1.2.0", however we want to let the revision (4th NuGet number) float,
-    // so that our updates that don't change the Java artifact can still be used.
-    // That is, if the POM specifies "1.2.0" and the dependency NuGet is already "1.2.0.4", we want to allow:
-    // 1.2.0.4 >= x < 1.2.1
-    // NuGet expresses that as "[1.2.0.4, 1.2.1)", so that's what we need to create.
-    var lower_bound = nugetVersion;
-
-    var nuget_first = 0;
-    var nuget_second = 0;
-    var nuget_third = 0;
-
-    var nuget_parts = nugetVersion.Split ('.');
-
-    if (nuget_parts.Length > 0 && int.TryParse (nuget_parts [0], out var p1))
-      nuget_first = p1;
-
-    if (nuget_parts.Length > 1 && int.TryParse (nuget_parts [1], out var p2))
-      nuget_second = p2;
-
-    if (nuget_parts.Length > 2 && int.TryParse (nuget_parts [2], out var p3))
-      nuget_third = p3;
-
-    // Bump the third number
-    nuget_third++;
-
-    var upper_bound = $"{nuget_first}.{nuget_second}.{nuget_third}";
-
-    // Put it all together
-    return $"[{lower_bound}, {upper_bound})";
-  }
-}
 </Project>
