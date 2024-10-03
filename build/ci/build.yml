@@ -7,14 +7,7 @@ parameters:
   timeoutInMinutes: 300                                             # Max job runtime in minutes
   runAPIScan: false                                                 # Run APIScan analysis
   
-  # Tool Parameters
-  dotnetVersion: '9.0.0-rc.1'                                       # the version of .NET to use
-  dotnetWorkloadRollbackFile: 'workloads.json'
-  dotnetWorkloadSource: 'https://api.nuget.org/v3/index.json'
-  dotnetNuGetOrgSource: 'https://api.nuget.org/v3/index.json'
-  skipUnitTests: false                                              # do not run unit test step
-  
-tools:                                                              # Additional .NET global tools to install
+  tools:                                                            # Additional .NET global tools to install
   - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
   - 'private-api-tools': '1.0.3'
