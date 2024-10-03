@@ -1,0 +1,13 @@
+﻿<enum-method-mappings>
+  <mapping jni-class="com/android/billingclient/api/BillingResult">
+    <method jni-name="getResponseCode" parameter="return" clr-enum-type="Android.BillingClient.Api.BillingResponseCode" />
+  </mapping>
+
+  <mapping jni-class="com/android/billingclient/api/BillingClient">
+    <method jni-name="getConnectionState" parameter="return" clr-enum-type="Android.BillingClient.Api.ConnectionState" />
+  </mapping>
+
+  <mapping jni-class="com/android/billingclient/api/Purchase">
+    <method jni-name="getPurchaseState" parameter="return" clr-enum-type="Android.BillingClient.Api.PurchaseState" />
+  </mapping>
+</enum-method-mappings>

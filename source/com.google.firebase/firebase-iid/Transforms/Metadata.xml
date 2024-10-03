@@ -1,0 +1,25 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.iid']" name="managedName">Firebase.Iid</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzb']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.iid']/class[@name='zzb']" name="obfuscated">false</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+
+  <!-- Conflicts with a nested class named "ErrorCode", so keep it "GetErrorCode" -->
+  <attr path="/api/package[@name='com.google.firebase.iid']/class[@name='MessengerIpcClient.RequestFailedException']/method[@name='getErrorCode' and count(parameter)=0]" name="propertyName"></attr>
+</metadata>

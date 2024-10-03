@@ -1,0 +1,21 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.internal.tflite_gpu']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Internal.TfLiteGpu
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.gpu']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Gpu
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.gpu.support']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Gpu.Support
+    </attr>
+    
+</metadata>

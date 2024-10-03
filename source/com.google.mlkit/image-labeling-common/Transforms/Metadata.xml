@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.label']/class[@name='ImageLabelerOptionsBase.Builder']"
+        name="visibility"
+        >
+        public
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.label']/class[@name='ImageLabelerOptionsBase.Builder']/method[@name='build' and count(parameter)=0]"
+        name="visibility"
+        >
+        public
+    </attr>
+
+</metadata>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.linkfirebase.internal']/class[@name='LinkFirebaseComponentRegistrar']/implements"
+        />
+
+    </metadata>

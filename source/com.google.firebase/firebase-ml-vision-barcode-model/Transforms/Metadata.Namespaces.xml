@@ -1,0 +1,26 @@
+<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr
+        path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.firebase.ml.vision.dynamite.barcode']" 
+        name="managedName"
+        >
+        Android.Gms.Dynamite.Descriptors.Firebase.ML.Vision.Barcode
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.android.libraries.barhopper']" 
+        name="managedName"
+        >
+        Google.AndroidLibraries.BarHopper
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.barhopper.deeplearning']" 
+        name="managedName"
+        >
+        Google.BarHopper.DeepLearning
+    </attr>
+    
+    
+    
+    
+</metadata>

@@ -1,0 +1,37 @@
+﻿<metadata>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.internal.tflite_java']" 
+        name="managedName"
+        >
+        Android.Gms.Internal.TfLiteJava
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.internal']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.java']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.Java
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.android.gms.tflite.nnapi']" 
+        name="managedName"
+        >
+        Android.Gms.TfLite.NnApi
+    </attr>
+    
+    
+    
+    
+    
+</metadata>

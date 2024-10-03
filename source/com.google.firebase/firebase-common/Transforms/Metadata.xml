@@ -1,0 +1,111 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth']" name="managedName">Firebase.Auth</attr>
+    <attr path="/api/package[@name='com.google.firebase.events']" name="managedName">Firebase.Events</attr>
+	<attr path="/api/package[@name='com.google.firebase.provider']" name="managedName">Firebase.Provider</attr>
+    <attr path="/api/package[@name='com.google.firebase.components']" name="managedName">Firebase.Components</attr>
+    <attr path="/api/package[@name='com.google.firebase.inject']" name="managedName">Firebase.Inject</attr>
+    <attr path="/api/package[@name='com.google.firebase.internal']" name="managedName">Firebase.Internal</attr>
+    <attr path="/api/package[@name='com.google.firebase.internal.api']" name="managedName">Firebase.Internal.Api</attr>
+    <attr path="/api/package[@name='com.google.firebase.emulators']" name="managedName">Firebase.Emulators</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz') and @name != 'zzanb']" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<remove-node path="/api/package[@name='com.google.android.gms.internal']" />
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.annotations']"
+        name="managedName"
+        >
+        Firebase.Annotations
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.platforminfo']"
+        name="managedName"
+        >
+        Firebase.PlatformInfo
+    </attr>
+
+    <!--
+    TODO: not ideal solution
+    -->    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.components']/class[@name='ComponentRuntime']/method[@name='get' and count(parameter)=1 and parameter[1][@type='java.lang.Class']]"
+        >        
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.components']/class[@name='AbstractComponentContainer']/method[@name='setOf' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;T&gt;']]"
+        >        
+    </remove-node>
+    <attr
+        path="/api/package[@name='com.google.firebase.heartbeatinfo']"
+        name="managedName"
+        >
+        Firebase.HeartBeatInfo
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.heartbeatinfo']"
+        name="managedName"
+        >
+        Firebase.HeartBeatInfo
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.tracing']"
+        name="managedName"
+        >
+        Firebase.Tracing
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.concurrent']"
+        name="managedName"
+        >
+        Firebase.Concurrent
+    </attr>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.concurrent']/interface[@name='PausableExecutorService']/implements"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.firebase.concurrent']/interface[@name='PausableScheduledExecutorService']/implements"
+        />
+
+    <attr 
+		path="/api/package[@name='com.google.firebase.ktx']" 
+		name="managedName"
+		>
+		Firebase.Ktx
+	</attr>
+
+    <attr 
+        path="/api/package[@name='com.google.firebase']/class[@name='Timestamp']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.google.firebase.Timestamp']]/parameter[1]"
+		name="managedType"
+		>
+        Java.Lang.Object
+	</attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.util']"
+        name="managedName"
+        >
+        Firebase.Util
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.logger']"
+        name="managedName"
+        >
+        Firebase.Logger
+    </attr>
+
+
+</metadata>

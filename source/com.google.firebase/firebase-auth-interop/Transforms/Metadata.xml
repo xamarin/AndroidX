@@ -1,0 +1,37 @@
+﻿<metadata>
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.auth.internal']" name="managedName">Firebase.Auth.Internal</attr>
+    
+    <attr 
+        path="/api/package[@name='com.google.firebase.internal']" 
+        name="managedName"
+        >
+        Firebase.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.auth']" 
+        name="managedName"
+        >
+        Firebase.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.auth']" 
+        name="managedName"
+        >
+        Firebase.Auth
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.auth.internal']" 
+        name="managedName"
+        >
+        Firebase.Auth.Internal
+    </attr>
+    <attr 
+        path="/api/package[@name='com.google.firebase.internal.api']" 
+        name="managedName"
+        >
+        Firebase.Internal.Api
+    </attr>
+    
+</metadata>

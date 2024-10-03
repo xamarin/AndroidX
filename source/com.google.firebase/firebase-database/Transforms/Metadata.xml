@@ -1,0 +1,306 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase.database']" name="managedName">Firebase.Database</attr>
+
+	<!-- Remove *zz* obfuscated classes, interfaces, methods, etc. -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onCancelled']" name="argsType">ValueEventArgs</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onCancelled']" name="argsType">ChildEventArgs</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildAdded']/parameter[1]" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildAdded']/parameter[2]" name="managedName">previousChildName</attr>
+	
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildChanged']/parameter[1]" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildChanged']/parameter[2]" name="managedName">previousChildName</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onCancelled']/parameter[1]" name="managedName">error</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildMoved']/parameter[1]" name="managedName">snapshot</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildMoved']/parameter[2]" name="managedName">previousChildName</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ChildEventListener']/method[@name='onChildRemoved']/parameter[1]" name="managedName">snapshot</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onCancelled']/parameter[1]" name="managedName">error</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='ValueEventListener']/method[@name='onDataChange']/parameter[1]" name="managedName">snapshot</attr>
+
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">error</attr>
+	<attr path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete']/parameter[1]" name="managedName">@ref</attr>
+    
+    
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.android']"
+        name="managedName"
+        >
+        Firebase.Database.Android
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.annotations']"
+        name="managedName"
+        >
+        Firebase.Database.Annotations
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.connection']"
+        name="managedName"
+        >
+        Firebase.Database.Connection
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.connection.util']"
+        name="managedName"
+        >
+        Firebase.Database.Connection.Util
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.logging']"
+        name="managedName"
+        >
+        Firebase.Database.Logging
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.snapshot']"
+        name="managedName"
+        >
+        Firebase.Database.Snapshot
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core']"
+        name="managedName"
+        >
+        Firebase.Database.Core
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.operation']"
+        name="managedName"
+        >
+        Firebase.Database.Core.Operation
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.persistence']"
+        name="managedName"
+        >
+        Firebase.Database.Core.Persistence
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.utilities']"
+        name="managedName"
+        >
+        Firebase.Database.Core.Utilities
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.utilities.encoding']"
+        name="managedName"
+        >
+        Firebase.Database.Core.Utilities.Encoding
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.utilities.tuple']"
+        name="managedName"
+        >
+        Firebase.Database.Core.Utilities.Tuple
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.view']"
+        name="managedName"
+        >
+        Firebase.Database.Core.View
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.core.view.filter']"
+        name="managedName"
+        >
+        Firebase.Database.Core.View.Filter
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.tubesock']"
+        name="managedName"
+        >
+        Firebase.Database.Tubesock
+    </attr>
+    <attr   
+        path="/api/package[@name='com.google.firebase.database.util']"
+        name="managedName"
+        >
+        Firebase.Database.Util
+    </attr>
+    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='LeafNode']/implements[@name='com.google.firebase.database.snapshot.Node']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.firebase.database.core.view.filter']/class[@name='IndexedFilter']/implements[@name='com.google.firebase.database.core.view.filter.NodeFilter']"
+        />
+
+    
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='DoubleNode']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='ChildrenNode']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='BooleanNode']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+
+    <add-node path="/api/package/class[implements[@name='java.util.Comparator']]">
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compare" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter type="java.lang.Object" name="lhs"  />
+            <parameter type="java.lang.Object" name="rhs"  />
+        </method>
+    </add-node>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='DoubleNode']/method[@name='compareLeafValues' and count(parameter)=1 and parameter[1][@type='com.google.firebase.database.snapshot.DoubleNode']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='BooleanNode']/method[@name='compareLeafValues' and count(parameter)=1 and parameter[1][@type='com.google.firebase.database.snapshot.BooleanNode']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='StringNode']/method[@name='compareLeafValues' and count(parameter)=1 and parameter[1][@type='com.google.firebase.database.snapshot.StringNode']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='DeferredValueNode']/method[@name='compareLeafValues' and count(parameter)=1 and parameter[1][@type='com.google.firebase.database.snapshot.DeferredValueNode']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='LongNode']/method[@name='compareLeafValues' and count(parameter)=1 and parameter[1][@type='com.google.firebase.database.snapshot.LongNode']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='ChildKey']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='StringNode']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.snapshot']/class[@name='LongNode']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>    
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.core.utilities.tuple']/class[@name='NameAndPriority']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    <add-node 
+        path="/api/package[@name='com.google.firebase.database.core']/class[@name='Path']"
+        >
+        <method 
+            visibility="public" static="false" abstract="false" return="int" name="compareTo" 
+            native="false" synchronized="false" final="false" deprecated="not deprecated" 
+            >
+            <parameter name="rhs" type="java.lang.Object" />
+        </method>
+    </add-node>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.database.core']/interface[@name='AuthTokenProvider.TokenChangeListener']/method[@name='onTokenChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedName"
+        >
+        OnNamedTokenChange
+    </attr>
+    
+    <attr
+        path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete' and count(parameter)=2 and parameter[1][@type='com.google.firebase.database.DatabaseError'] and parameter[2][@type='com.google.firebase.database.DatabaseReference']]/parameter[1]"
+        name="managedName"
+        >        
+        error
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.database']/interface[@name='DatabaseReference.CompletionListener']/method[@name='onComplete' and count(parameter)=2 and parameter[1][@type='com.google.firebase.database.DatabaseError'] and parameter[2][@type='com.google.firebase.database.DatabaseReference']]/parameter[2]"
+        name="managedName"
+        >        
+        reference
+    </attr>
+
+
+    <attr
+        path="/api/package[@name='com.google.firebase.database.core']/interface[@name='TokenProvider.TokenChangeListener']/method[@name='onTokenChange' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+        name="managedName"
+        >
+        OnTokenChangeString
+    </attr>
+
+	<attr 
+		path="/api/package[@name='com.google.firebase.database.ktx']" 
+		name="managedName"
+		>
+		Firebase.Database.Ktx
+	</attr>
+
+</metadata>

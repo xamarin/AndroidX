@@ -55,13 +55,6 @@ extends:
             os: windows
           runAPIScan: true
 
-      - template: sign-artifacts/jobs/v2.yml@internal-templates
-        parameters:
-          artifactName: output-windows
-          usePipelineArtifactTasks: true
-          use1ESTemplate: true
-          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
-          
     - stage: build_mac
       displayName: Build - Mac
       dependsOn:
@@ -89,3 +82,5 @@ extends:
           name: $(windowsAgentPoolName)
           image: $(windowsImage)
           os: windows
+
+    - template: build/ci/stage-sign-artifacts.yml@self

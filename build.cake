@@ -18,6 +18,7 @@
 
 #load "build/cake/update-config.cake"
 #load "build/cake/tests.cake"
+#load "build/cake/gps-parameters.cake"
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -401,6 +402,7 @@ Task("javadocs")
 });
 
 Task ("binderate")
+    .IsDependentOn("javadocs-gps")
     .IsDependentOn("binderate-config-verify")
     .Does (() =>
 {
@@ -492,15 +494,15 @@ Task("binderate-config-verify")
                     artifact_version_suffix  = artifact_version_parts[1];
                 }
 
-                Information($"groupId                   = {jo["groupId"]}");
-                Information($"artifactId                = {jo["artifactId"]}");
-                Information($"artifact_version          = {artifact_version}");
-                Information($"artifact_version_prefix   = {artifact_version_prefix}");
-                Information($"artifact_version_suffix   = {artifact_version_suffix}");
-                Information($"nuget_version             = {nuget_version}");
-                Information($"nuget_version_prefix      = {nuget_version_prefix}");
-                Information($"nuget_version_suffix      = {nuget_version_suffix}");
-                Information($"nugetId                   = {jo["nugetId"]}");
+                //Information($"groupId                   = {jo["groupId"]}");
+                //Information($"artifactId                = {jo["artifactId"]}");
+                //Information($"artifact_version          = {artifact_version}");
+                //Information($"artifact_version_prefix   = {artifact_version_prefix}");
+                //Information($"artifact_version_suffix   = {artifact_version_suffix}");
+                //Information($"nuget_version             = {nuget_version}");
+                //Information($"nuget_version_prefix      = {nuget_version_prefix}");
+                //Information($"nuget_version_suffix      = {nuget_version_suffix}");
+                //Information($"nugetId                   = {jo["nugetId"]}");
 
 
                 string[] artifact_version_prefix_parts = artifact_version_prefix.Split(new string[]{ "." }, StringSplitOptions.RemoveEmptyEntries);
@@ -526,7 +528,7 @@ Task("binderate-config-verify")
                     nuget_version_new    += $"-{nuget_version_suffix}";
                 }
 
-                Information($"nuget_version_new         = {nuget_version_new}");
+                //Information($"nuget_version_new         = {nuget_version_new}");
 
                 if
                     (
@@ -596,9 +598,9 @@ Task("binderate-fix")
                 string groupId      = (string) jo["groupId"];
                 string artifactId   = (string) jo["artifactId"];
 
-                Information($"  Verifying files for     :");
-                Information($"              group       : {groupId}");
-                Information($"              artifact    : {artifactId}");
+                //Information($"  Verifying files for     :");
+                //Information($"              group       : {groupId}");
+                //Information($"              artifact    : {artifactId}");
 
                 bool? dependency_only = (bool?) jo["dependencyOnly"];
                 if ( dependency_only == true)
@@ -810,6 +812,42 @@ Task("libs-native")
 
     CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
     Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+
+    root = "./source/com.google.android.play/core.extensions/";
+
+    RunGradle(root, "build");
+
+    outputDir = "./externals/com.xamarin.google.android.play.core.extensions/";
+    EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+    root = "./source/com.google.android.play/asset.delivery.extensions/";
+
+    RunGradle(root, "build");
+
+    outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
+    EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
+
+    root = "./source/com.google.android.play/feature.delivery.extensions/";
+
+    RunGradle(root, "build");
+
+    outputDir = "./externals/com.xamarin.google.android.play.feature.delivery.extensions/";
+    EnsureDirectoryExists(outputDir);
+    CleanDirectories(outputDir);
+
+    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
+    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
+    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
 });
 
 Task("nuget")

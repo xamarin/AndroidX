@@ -1,0 +1,22 @@
+﻿<metadata>
+	<!-- Rename Namespaces -->
+	<attr path="/api/package[@name='com.google.firebase']" name="managedName">Firebase</attr>
+	<attr path="/api/package[@name='com.google.firebase.database.collection']" name="managedName">Firebase.Database.Collection</attr>
+
+    <remove-node
+        path="/api/package[@name='com.google.firebase.database.collection']/class[@name='LLRBValueNode']/implements[@name='com.google.firebase.database.collection.LLRBNode']"
+        />
+    <remove-node
+        path="/api/package[@name='com.google.firebase.database.collection']/class[@name='ArraySortedMap']/interface[@name='']"
+        />
+    
+    <remove-node
+        path="/api/package[@name='com.google.firebase.database.collection']/class[@name='ImmutableSortedMap']/method[@name='getMaxKey' and count(parameter)=0]"
+        >
+    </remove-node>
+    <remove-node
+        path="/api/package[@name='com.google.firebase.database.collection']/class[@name='ImmutableSortedMap']/method[@name='getMinKey' and count(parameter)=0]"
+        >
+    </remove-node>
+    
+</metadata>

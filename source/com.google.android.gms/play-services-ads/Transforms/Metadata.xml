@@ -1,0 +1,114 @@
+﻿<metadata>
+	
+	<!-- Rename Namespaces -->
+  	<attr path="/api/package[@name='com.google.ads']" name="managedName">Google.Ads</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']" name="managedName">Google.Ads.Mediation</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation.admob']" name="managedName">Google.Ads.Mediation.Admob</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation.customevent']" name="managedName">Google.Ads.Mediation.CustomEvent</attr>
+  	<attr path="/api/package[@name='com.google.ads.afma.nano']" name="managedName">Google.Ads.Afma.Nano</attr>
+
+  	<attr path="/api/package[@name='com.google.android.gms.ads']" name="managedName">Android.Gms.Ads</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.formats']" name="managedName">Android.Gms.Ads.Formats</attr>
+<!--  	<attr path="/api/package[@name='com.google.android.gms.ads.identifier']" name="managedName">Android.Gms.Ads.Identifier</attr>-->
+  	<attr path="/api/package[@name='com.google.android.gms.ads.reward']" name="managedName">Android.Gms.Ads.Reward</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.reward.mediation']" name="managedName">Android.Gms.Ads.Reward.Mediation</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']" name="managedName">Android.Gms.Ads.DoubleClick</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']" name="managedName">Android.Gms.Ads.Mediation</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation.admob']" name="managedName">Android.Gms.Ads.Mediation.Admob</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation.customevent']" name="managedName">Android.Gms.Ads.Mediation.CustomEvent</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.nonagon.transaction.omid']" name="managedName">Android.Gms.Ads.Nonagon.Transaction.Omid</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']" name="managedName">Android.Gms.Ads.Purchase</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.search']" name="managedName">Android.Gms.Ads.Search</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.internal']" name="managedName">Android.Gms.Internal</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite']" name="managedName">Android.Gms.Dynamite.Descriptors.Ads.Dynamite</attr>
+
+  	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']/interface[@name='AppEventListener']/method[@name='onAppEvent']/parameter[1]" name="managedName">name</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.doubleclick']/interface[@name='AppEventListener']/method[@name='onAppEvent']/parameter[2]" name="managedName">data</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation.customevent']/interface[@name='CustomEventListener']/method[@name='onAdFailedToLoad']/parameter[1]" name="managedName">errorCode</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']/interface[@name='InAppPurchaseListener']/method[@name='onInAppPurchaseRequested']/parameter[1]" name="managedName">inAppPurchase</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']/interface[@name='PlayStorePurchaseListener']/method[@name='isValidPurchase']/parameter[1]" name="managedName">productId</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.purchase']/interface[@name='PlayStorePurchaseListener']/method[@name='onInAppPurchaseFinished']/parameter[1]" name="managedName">inAppPurchaseResult</attr>
+
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'android.gms.internal')]" />
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.ads.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+<!--	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />-->
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+<!--	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />-->
+
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<!-- Some classes are private that need to be public to subclass -->
+	<attr path="/api/package[@name='com.google.android.gms.ads']/class[@name='BaseAdView']" name="visibility">public</attr>
+
+	<!-- Fix up Duplicate event arg types -->
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onDismissScreen']" name="argsType">BannerDismissScreenEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onFailedToReceiveAd']" name="argsType">BannerFailedToReceiveAdEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onLeaveApplication']" name="argsType">BannerLeaveApplicationEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onPresentScreen']" name="argsType">BannerPresentScreenEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onReceivedAd']" name="argsType">BannerReceiveAdEventArgs</attr>
+
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onDismissScreen']" name="argsType">IntersitionalDismissScreenEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onFailedToReceiveAd']" name="argsType">IntersitionalFailedToReceiveAdEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onLeaveApplication']" name="argsType">InterstitialLeaveApplicationEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onPresentScreen']" name="argsType">InterstitialPresentScreenEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onReceivedAd']" name="argsType">InterstitialReceiveAdEventArgs</attr>
+
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdClicked']" name="argsType">MediationInterstitialAdClickedEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdClosed']" name="argsType">MediationInterstitialAdClosedEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdFailedToLoad']" name="argsType">MediationInterstitialAdFailedToLoadEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdLeftApplication']" name="argsType">MediationInterstitialAdLeftApplicationEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdLoaded']" name="argsType">MediationInterstitialAdLoadedEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdOpened']" name="argsType">MediationInterstitialAdOpenedEventArgs</attr>
+
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdClicked']" name="argsType">MediationBannerAdClickedEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdClosed']" name="argsType">MediationBannerAdClosedEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdFailedToLoad']" name="argsType">MediationBannerAdFailedToLoadEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdLeftApplication']" name="argsType">MediationBannerAdLeftApplicationEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdLoaded']" name="argsType">MediationBannerAdLoadedEventArgs</attr>
+  	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdOpened']" name="argsType">MediationBannerAdOpenedEventArgs</attr>
+
+  	<!-- Fix parameter names to be consistent with previous releases -->
+  	<attr path="/api/package[@name='com.google.android.gms.ads.formats']/class[@name='NativeAdView']/method[@name='setNativeAd' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.ads.formats.NativeAd']]/parameter[1]" name="managedName">ad</attr>
+	<attr path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='NativeAppInstallAd.OnAppInstallAdLoadedListener']/method[@name='onAppInstallAdLoaded' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.ads.formats.NativeAppInstallAd']]/parameter[1]" name="managedName">ad</attr>
+	<attr path="/api/package[@name='com.google.android.gms.ads.formats']/interface[@name='NativeContentAd.OnContentAdLoadedListener']/method[@name='onContentAdLoaded' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.ads.formats.NativeContentAd']]/parameter[1]" name="managedName">ad</attr>
+	<attr path="/api/package[@name='com.google.android.gms.ads.mediation.customevent']/interface[@name='CustomEventNativeListener']/method[@name='onAdLoaded' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.ads.mediation.NativeAdMapper']]/parameter[1]" name="managedName">ad</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationNativeListener']/method[@name='onAdFailedToLoad' and count(parameter)=2 and parameter[1][@type='com.google.android.gms.ads.mediation.MediationNativeAdapter'] and parameter[2][@type='int']]/parameter[2]" name="managedName">errorCode</attr>
+
+	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onAdFailedToLoad']/parameter[2]" name="managedName">errorCode</attr>
+	<attr path="/api/package[@name='com.google.android.gms.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onAdFailedToLoad']/parameter[2]" name="managedName">errorCode</attr>
+
+
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onReceivedAd']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onFailedToReceiveAd']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onFailedToReceiveAd']/parameter[2]" name="managedName">errorCode</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onPresentScreen']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onDismissScreen']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onLeaveApplication']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationBannerListener']/method[@name='onClick']/parameter[1]" name="managedName">adapter</attr>
+
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onReceivedAd']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onFailedToReceiveAd']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onFailedToReceiveAd']/parameter[2]" name="managedName">errorCode</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onPresentScreen']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onDismissScreen']/parameter[1]" name="managedName">adapter</attr>
+	<attr path="/api/package[@name='com.google.ads.mediation']/interface[@name='MediationInterstitialListener']/method[@name='onLeaveApplication']/parameter[1]" name="managedName">adapter</attr>
+
+	<attr 
+		path="/api/package[@name='com.google.android.gms.ads.nonagon.util.logging.csi']" 
+		name="managedName"
+		>
+		Google.Ads.Nonagon.Util.Logging.Csi
+	</attr>
+
+</metadata>

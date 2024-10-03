@@ -1,0 +1,30 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.cast.framework']" name="managedName">Android.Gms.Cast.Framework</attr>
+	<attr path="/api/package[@name='com.google.android.gms.cast.framework.internal.featurehighlight']" name="managedName">Android.Gms.Cast.Framework.Internal.FeatureHighlight</attr>
+	<attr path="/api/package[@name='com.google.android.gms.cast.framework.media']" name="managedName">Android.Gms.Cast.Framework.Media</attr>
+	<attr path="/api/package[@name='com.google.android.gms.cast.framework.media.uicontroller']" name="managedName">Android.Gms.Cast.Framework.Media.UIController</attr>
+	<attr path="/api/package[@name='com.google.android.gms.cast.framework.media.widget']" name="managedName">Android.Gms.Cast.Framework.Media.Widget</attr>
+
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz')]" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+
+	<attr
+		path="/api/package[@name='com.google.android.gms.cast.framework.media.internal']"
+		name="managedName"
+		>
+		Android.Gms.Cast.Framework.Media.Internal
+	</attr>
+</metadata>

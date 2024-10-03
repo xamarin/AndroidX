@@ -1,0 +1,42 @@
+﻿<metadata>
+	<!-- Fix Namespaces -->
+	<attr path="/api/package[@name='com.google.android.gms.auth']" name="managedName">Android.Gms.Auth</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.account']" name="managedName">Android.Gms.Auth.Account</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api']" name="managedName">Android.Gms.Auth.Api</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.proxy']" name="managedName">Android.Gms.Auth.Api.Proxy</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth.api.accounttransfer']" name="managedName">Android.Gms.Auth.Api.AccountTransfer</attr>
+    
+	<!-- Remove some internal namespaces -->
+	<remove-node path="/api/package[contains(@name, 'com.google.android.gms.internal')]" />
+    
+
+	<!-- Remove *zz* obfuscated items -->
+	<remove-node path="/api/package/class[contains(@name, 'zz') and @name != 'zzd' and @name != 'zze' and @name != 'zzg' and @name != 'zzl']" />
+	<remove-node path="/api/package/interface[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/method[contains(@name, 'zz')]" />
+	<remove-node path="/api/*/*/field[contains(@name, 'zz')]" />
+    
+	<!-- Fix params for some inherited parcelable types -->
+	<attr path="/api/*/*/method[@name='createFromParcel']/parameter[@name='p0']" name="managedName">source</attr>
+	<attr path="/api/*/*/method[@name='newArray']/parameter[@name='p0']" name="managedName">size</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p0']" name="managedName">dest</attr>
+	<attr path="/api/*/*/method[@name='writeToParcel']/parameter[@name='p1']" name="managedName">flags</attr>
+<!--	<attr path="/api/package[@name='com.google.android.gms.auth']/class[@name='zze']" name="obfuscated">falsed</attr>-->
+
+	<attr path="/api/package[@name='com.google.android.gms.auth']/class[@name='zzd']" name="obfuscated">false</attr>
+    <attr path="/api/package[@name='com.google.android.gms.auth']/class[@name='zzg']" name="obfuscated">false</attr>
+	<attr path="/api/package[@name='com.google.android.gms.auth']/class[@name='zzl']" name="obfuscated">false</attr>
+
+    <!--	<attr path="/api/package[@name='com.google.android.gms.auth']/class[@name='GoogleAuthUtil']" name="extends">Java.Lang.Object</attr>-->
+
+	<!-- TODO: Consider removing when Cycle 9 is released -->
+    <!--
+	<remove-node path="/api/package[@name='com.google.android.gms.auth.api.proxy']/class[@name='zzd']/implements[@name='android.os.Parcelable.Creator']" />
+    -->
+	<!-- End TODO -->
+
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends">java.lang.Object</attr>
+	<attr path="/api/package/*[@extends='com.google.android.gms.common.internal.safeparcel.zza']" name="extends-generic-aware">java.lang.Object</attr>
+	<remove-node path="/api/package/*/implements[@name='com.google.android.gms.common.internal.ReflectedParcelable']" />
+        
+</metadata>

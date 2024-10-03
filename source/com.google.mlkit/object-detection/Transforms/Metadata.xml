@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>    
+    <remove-node
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults.internal']/class[@name='DefaultObjectsRegistrar']/method[@name='getComponents' and count(parameter)=0]"
+        />
+
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='build' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.ObjectDetectorOptionsBase']"
+        name="managedName"
+        >
+        BuildAlternative
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='enableClassification' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions.Builder']"
+        name="managedName"
+        >
+        EnableClassificationAlternative
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setDetectorMode' and count(parameter)=1 and parameter[1][@type='int'] and @return='com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions.Builder']"
+        name="managedName"
+        >
+        SetDetectorModeAlternative
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='enableMultipleObjects' and count(parameter)=0 and @return='com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions.Builder']"
+        name="managedName"
+        >
+        EnableMultipleObjectsAlternative
+    </attr>
+    <attr
+        path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']/method[@name='setExecutor' and count(parameter)=1 and parameter[1][@type='java.util.concurrent.Executor'] and @return='com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions.Builder']"
+        name="managedName"
+        >
+        SetExecutorAlternative
+    </attr>
+    
+    <!-- Fix public class inheriting from protected class causing duplicate methods -->
+    <attr
+      path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']"
+      name="extends"
+      >
+      java.lang.Object
+    </attr>
+    <attr
+      path="/api/package[@name='com.google.mlkit.vision.objects.defaults']/class[@name='ObjectDetectorOptions.Builder']"
+      name="extends-generic-aware"
+      >
+      java.lang.Object
+    </attr>
+
+</metadata>
