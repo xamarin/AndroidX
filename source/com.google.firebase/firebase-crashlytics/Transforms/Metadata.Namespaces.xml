@@ -153,5 +153,11 @@
         >
         Firebase.Crashlytics.Ktx
     </attr>
+    <attr
+        path="/api/package[@name='com.google.firebase.crashlytics.internal.concurrency']" 
+        name="managedName"
+        >
+        Firebase.Crashlytics.Internal.Concurrency
+    </attr>
 
 </metadata>
