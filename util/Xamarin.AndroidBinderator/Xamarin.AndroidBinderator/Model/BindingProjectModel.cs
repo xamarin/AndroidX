@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Java.Interop.Tools.Maven.Models;
 
 namespace AndroidBinderator;
 
@@ -15,6 +16,7 @@ public class BindingProjectModel
 	public BindingType Type { get; set; }
 
 	public List<MavenArtifactModel> MavenArtifacts { get; set; } = new List<MavenArtifactModel> ();
+	public List<Dependency> MavenDependencies { get; set; } = new List<Dependency> ();
 
 	public string? NuGetPackageId { get; set; }
 	public string? NuGetVersionBase { get; set; }
