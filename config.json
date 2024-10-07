@@ -1022,7 +1022,9 @@
         "version": "1.5.0",
         "nugetVersion": "1.5.0.1",
         "nugetId": "Xamarin.AndroidX.Emoji2.EmojiPicker",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to explicit dependency version request causes conflicts"
       },
       {
         "groupId": "androidx.emoji2",
@@ -3995,7 +3997,9 @@
         "nugetId": "Xamarin.Firebase.Firestore",
         "dependencyOnly": false,
         "extraDependencies": "com.google.guava.guava",
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4004,7 +4008,9 @@
         "nugetVersion": "125.1.0",
         "nugetId": "Xamarin.Firebase.Firestore.Ktx",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4049,7 +4055,9 @@
         "nugetVersion": "121.0.0.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4058,7 +4066,9 @@
         "nugetVersion": "121.0.0.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging.Display",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4067,7 +4077,9 @@
         "nugetVersion": "121.0.0.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging.Display.Ktx",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4076,7 +4088,9 @@
         "nugetVersion": "121.0.0.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging.Ktx",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4292,7 +4306,9 @@
         "nugetVersion": "121.0.1.2",
         "nugetId": "Xamarin.Firebase.Perf",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4301,7 +4317,9 @@
         "nugetVersion": "121.0.1.2",
         "nugetId": "Xamarin.Firebase.Perf.Ktx",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.firebase",
@@ -4346,7 +4364,9 @@
         "nugetVersion": "118.0.0.18",
         "nugetId": "Xamarin.Firebase.ProtoliteWellKnownTypes",
         "dependencyOnly": false,
-        "type": "xbd"
+        "type": "xbd",
+        "skipExtendedTests": true,
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
       },
       {
         "groupId": "com.google.flatbuffers",
