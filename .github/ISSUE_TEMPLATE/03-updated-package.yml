@@ -1,13 +1,13 @@
-name: 📦 Update AndroidX package binding request
-description: Request for a newer version of a package in this repository to be bound.
+name: 📦 Update package binding request
+description: Request a newer version of a package in this repository to be bound.
 title: 'Update "example.package" to "1.1.0"'
 labels: 'update-package-request'
 body:
   - type: markdown
     attributes:
       value: |
-        Note that this template rarely needs to be used. We have an automated process that runs periodically
-        that files a PR to update the packages to the latest *stable* releases from Google.
+        Note that this template rarely needs to be used. We have an script we regularly run
+        that updates the packages to the latest *stable* releases from Google.
 
         It may take a few weeks to get new versions committed and released.
 
