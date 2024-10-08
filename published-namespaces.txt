@@ -18,6 +18,7 @@ Android.Gms.Ads.Mediation
 Android.Gms.Ads.Mediation.CustomEvent
 Android.Gms.Ads.Mediation.Rtb
 Android.Gms.Ads.NativeAd
+Android.Gms.Ads.Preload
 Android.Gms.Ads.Query
 Android.Gms.Ads.Rewarded
 Android.Gms.Ads.RewardedInterstitial
@@ -786,6 +787,7 @@ Firebase.Crashlytics.Internal
 Firebase.Crashlytics.Internal.Analytics
 Firebase.Crashlytics.Internal.Breadcrumbs
 Firebase.Crashlytics.Internal.Common
+Firebase.Crashlytics.Internal.Concurrency
 Firebase.Crashlytics.Internal.Metadata
 Firebase.Crashlytics.Internal.Model
 Firebase.Crashlytics.Internal.Model.Serialization
