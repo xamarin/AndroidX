@@ -1,0 +1,46 @@
+@model AndroidBinderator.BindingProjectModel
+@using System
+@using System.Linq
+
+@{
+  // Workaround because the AndroidXNuGetTargetFolders item group should be evaluated by MSBuild, not Razor
+  var targets_path = "@" + @"(AndroidXNuGetTargetFolders->'%(Identity)\" + Model.NuGetPackageId + ".targets')";
+}
+
+  @* Long-term, GPS != XBD, but for now this is ok. (Long-term we also migrate to namespace replacements.) *@
+  <ItemGroup>
+    <!-- GPS doesn't currently use <AndroidNamespaceReplacement> -->
+    <AndroidNamespaceReplacement Remove="@@(AndroidNamespaceReplacement)" />
+    
+    <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\externals\paramnames.txt')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="xdb.targets" Pack="True" PackagePath="@Raw(targets_path)" />
+  </ItemGroup>
+
+@if (@Model.MavenArtifacts.Count > 0) {
+  <ItemGroup>
+    @foreach (var art in @Model.MavenArtifacts) {
+      if (art.MavenArtifactPackaging == "aar") {
+        if ((System.Environment.GetEnvironmentVariable("LOCAL_TEST_PKG") ?? "") == "true") {
+    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" />
+
+        } else {
+    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
+    <!-- For those artifacts with lib/ folder -->
+    <InputJar
+      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
+      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar"
+      />
+        }
+      } else {
+    <EmbeddedJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
+      }
+    }
+  </ItemGroup>
+}
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Build.Download" Version="0.11.4" />
+  </ItemGroup>
