@@ -9,13 +9,13 @@ body:
   - type: dropdown
     id: android-type
     attributes:
-      label: Android application type
-      description: In what type(s) of Android application(s) do you see this issue?
+      label: Android framework version
+      description: In what target framework(s) of Android application(s) do you see this issue?
       multiple: true
       options:
-      - Classic Xamarin.Android (MonoAndroid12.0, etc.)
-      - Android for .NET (net6.0-android, etc.)
-      - Not applicable
+      - net8.0-android
+      - net9.0-android
+      - Other
     validations:
       required: true
   - type: input
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Affected platform version
       description: Please provide the version number of the platform you see this issue on.
-      placeholder: E.g. VS 2022 17.0.1, VSMac 8.10, .NET 6.0.100, etc.
+      placeholder: E.g. VS 2022 17.9.0, .NET 8.0.100, etc.
     validations:
       required: true
   - type: textarea
@@ -40,7 +40,7 @@ body:
       label: Steps to Reproduce
       description: Describe all the steps we need to take to show the behavior that you have observed. If you have a repro project, you can drag and drop the .zip/etc. onto the issue editor to attach it, or post a link to a sample project.
       placeholder: | 
-        1. Create a File > New Android App (Xamarin)
+        1. File > New Project > New Android Application
         2. Add the following code: ...
         3. Run the app and observe the bug 🐞
     validations:
