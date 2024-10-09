@@ -9,8 +9,6 @@
 #addin nuget:?package=Cake.MonoApiTools&version=3.0.5
 #addin nuget:?package=CsvHelper&version=31.0.3
 #addin nuget:?package=SharpZipLib&version=1.4.2
-#addin nuget:?package=SharpZipLib&version=1.4.2
-#addin nuget:?package=ZString&version=2.6.0
 
 // #addin nuget:?package=NuGet.Protocol&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
@@ -19,6 +17,7 @@
 #load "build/cake/update-config.cake"
 #load "build/cake/tests.cake"
 #load "build/cake/gps-parameters.cake"
+#load "build/cake/performance-timings.cake"
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -26,135 +25,7 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CsvHelper;
-using Cysharp.Text;
 
-System.Diagnostics.Stopwatch stopwatch;
-List<(DateTime timestamp, string task, TimeSpan duration)> TimingDataStopwatch;
-List<(DateTime timestamp, string task, TimeSpan duration)> TimingDataCake;
-
-Setup
-    (
-        context =>
-        {
-            // Executed BEFORE the first task.
-            stopwatch = new System.Diagnostics.Stopwatch();
-            TimingDataStopwatch = new List<(DateTime timestamp, string task, TimeSpan duration)>();
-            TimingDataCake      = new List<(DateTime timestamp, string task, TimeSpan duration)>();
-
-            return;
-        }
-    );
-
-Teardown
-    (
-        context =>
-        {
-            // Executed AFTER the last task.
-
-            using(var sb1 = ZString.CreateStringBuilder())
-            using(var sb2 = ZString.CreateStringBuilder())
-            {
-                string line_1_1 = ZString.Format
-                                            (
-                                                "{0,25},{1,20},{2,40},{3,25}",
-                                                "#TimingDataStopwatch",
-                                                "data.timestamp",
-                                                "data.task",
-                                                "data.duration"
-                                            );
-                sb1.AppendLine(line_1_1);
-                foreach(var data in TimingDataStopwatch)
-                {                
-                    string line = ZString.Format
-                                            (
-                                                "{0,25},{1,20},{2,40},{3,25}",
-                                                "#TimingDataStopwatch",
-                                                data.timestamp.ToString("yyyyMMdd-HHmmss.ff"),
-                                                data.task,
-                                                data.duration
-                                            );
-                    
-                    Information(line);
-                    sb1.AppendLine(line);
-                }
-
-                string line_2_1 = ZString.Format
-                                            (
-                                                "{0,25},{1,20},{2,40},{3,25}",
-                                                "#TimingDataCake",
-                                                "data.timestamp",
-                                                "data.task",
-                                                "data.duration"
-                                            );
-                sb2.AppendLine(line_2_1);
-                foreach(var data in TimingDataCake)
-                {
-                   string line = ZString.Format
-                                            (
-                                                "{0,25},{1,20},{2,40},{3,25}",
-                                                "#TimingDataCake",
-                                                data.timestamp.ToString("yyyyMMdd-HHmmss.ff"),
-                                                data.task,
-                                                data.duration
-                                            );
- 
-                    Information(line);
-                    sb2.AppendLine(line);
-                }
-
-
-                EnsureDirectoryExists("./output/timing-data/");
-                string timestamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-                string filename = context.GetCallerInfo().SourceFilePath.GetFilename().ToString();
-
-                System.IO.File.WriteAllText
-                                    (
-                                        $"./output/timing-data/{filename}.stopwatch.{timestamp}.csv", 
-                                        sb1.ToString()
-                                    );
-                System.IO.File.WriteAllText
-                                    (
-                                        $"./output/timing-data/{filename}.cake-timer.{timestamp}.csv", 
-                                        sb2.ToString()
-                                    );
-                            
-                EnsureDirectoryExists($"./data/timings/{timestamp}");
-                System.IO.File.WriteAllText
-                                    (
-                                        $"./data/timings/{timestamp}/{filename}.stopwatch.csv", 
-                                        sb1.ToString()
-                                    );
-                System.IO.File.WriteAllText
-                                    (
-                                        $"./data/timings/{timestamp}/{filename}.cake-timer.csv", 
-                                        sb2.ToString()
-                                    );
-            }
-
-            return;
-        }
-    );
-
-TaskSetup
-    (
-        context =>
-        {
-            // Executed BEFORE the each task.
-            stopwatch.Start();
-
-            return;
-        }
-    );
-
-TaskTeardown
-    (
-        context =>
-        {
-            stopwatch.Stop();
-            TimingDataStopwatch.Add( (DateTime.Now, context.Task.Name, stopwatch.Elapsed) );
-            TimingDataCake.Add( (DateTime.Now, context.Task.Name, context.Duration) );
-        }
-    );
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
