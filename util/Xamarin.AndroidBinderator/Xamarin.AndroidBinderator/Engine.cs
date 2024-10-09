@@ -80,6 +80,7 @@ namespace AndroidBinderator
 				File.WriteAllText(Path.Combine(config.BasePath!, "models.json"), json);
 
 			var engine = new RazorLightEngineBuilder()
+				.UseFileSystemProject (config.BasePath)
 				.UseMemoryCachingProvider()
 				.Build();
 
@@ -87,16 +88,13 @@ namespace AndroidBinderator
 				var template_set = config.GetTemplateSet(model.MavenArtifacts.FirstOrDefault()?.MavenArtifactConfig?.TemplateSet);
 
 				foreach (var template in template_set.Templates) {
-					var inputTemplateFile = Path.Combine(config.BasePath!, template.TemplateFile);
-					var templateSrc = File.ReadAllText(inputTemplateFile);
-
 					AssignMetadata(model, template);
 
 					var outputFile = new FileInfo (template.GetOutputFile (config, model))!;
 					if (!outputFile.Directory!.Exists)
 						outputFile.Directory.Create();
 
-					string result = await engine.CompileRenderAsync(inputTemplateFile, templateSrc, model);
+					string result = await engine.CompileRenderAsync(template.TemplateFile, model);
 
 					File.WriteAllText(outputFile.FullName, result);
 
