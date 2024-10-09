@@ -99,6 +99,9 @@ public class BinderatorConfigFileParser
 		[JsonProperty ("templateSet")]
 		public string TemplateSet { get; set; }
 
+		[JsonProperty ("skipExtendedTests")]
+		public bool SkipExtendedTests { get; set; }
+
 		[JsonProperty ("metadata")]
 		public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string> ();
 

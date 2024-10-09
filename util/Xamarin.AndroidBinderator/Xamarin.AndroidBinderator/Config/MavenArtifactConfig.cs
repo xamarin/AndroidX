@@ -74,6 +74,9 @@ namespace AndroidBinderator
 		[JsonProperty("templateSet")]
 		public string? TemplateSet { get; set; }
 
+		[JsonProperty ("skipExtendedTests")]
+		public bool SkipExtendedTests { get; set; }
+
 		public bool ShouldSerializeOverrideLicenses () => OverrideLicenses.Count > 0;
 
 		[JsonProperty ("overrideLicenses")]

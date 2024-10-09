@@ -3,7 +3,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using MavenNet.Models;
-using Microsoft.Extensions.Options;
 using NuGet.Versioning;
 
 namespace AndroidBinderator;
@@ -27,11 +26,18 @@ public class ConfigUpdater
 				continue;
 
 			if (HasUpdate (art, a)) {
-				var new_version = GetLatestVersion (a)?.ToString ();
-				var prefix = GetThreePartVersion (art.NugetVersion!) == "1" + GetThreePartVersion (art.Version) ? "1" : string.Empty;
+				var new_version = GetLatestVersion (a)?.ToString () ?? string.Empty;
+				var needs_prefix = NeedsPrefix (art.NugetVersion!, art.Version);
 
-				art.LatestVersion = new_version ?? string.Empty;
-				art.LatestNuGetVersion = prefix + new_version;
+				art.LatestVersion = new_version;
+				art.LatestNuGetVersion = new_version;
+
+				if (needs_prefix) {
+					if (new_version.IndexOf ('.') == 1)
+						art.LatestNuGetVersion = $"10{new_version}";
+					else
+						art.LatestNuGetVersion = $"1{new_version}";
+				}
 			}
 		}
 
@@ -137,6 +143,17 @@ public class ConfigUpdater
 			return version;
 
 		return $"{parts [0]}.{parts [1]}.{parts [2]}";
+	}
+
+	static bool NeedsPrefix (string nugetVersion, string artifactVersion)
+	{
+		var nuget = GetThreePartVersion (nugetVersion);
+		var artifact = GetThreePartVersion (artifactVersion);
+
+		var nuget_major = int.Parse (nuget.Split ('.') [0]);
+		var artifact_major = int.Parse (artifact.Split ('.') [0]);
+
+		return nuget_major == artifact_major + 100;
 	}
 
 	static async Task<List<MavenArtifactConfig>> GetExternalDependencies (List<string> externalFiles)
