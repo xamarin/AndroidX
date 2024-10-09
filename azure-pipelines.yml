@@ -5,6 +5,13 @@ trigger:
 pr:
   - main
   
+schedules:
+- cron: '0 0 * * *'
+  displayName: Nightly Extended Tests
+  branches:
+    include:
+    - main
+    
 parameters:
 - name: RunExtendedTests
   displayName: Run Extended Tests?
@@ -77,7 +84,7 @@ extends:
 
     - template: build/ci/stage-extended-tests.yml@self
       parameters:
-        stageCondition: and(succeeded(), ne('$(skipUnitTests)', 'true'), eq('${{ parameters.RunExtendedTests }}', 'true'))
+        stageCondition: and(succeeded(), ne('$(skipUnitTests)', 'true'), or(eq('${{ parameters.RunExtendedTests }}', 'true'), eq(variables['Build.CronSchedule.DisplayName'], 'Nightly Extended Tests')))
         buildPool:
           name: $(windowsAgentPoolName)
           image: $(windowsImage)
