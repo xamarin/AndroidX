@@ -599,6 +599,11 @@
         >
         Android.Gms.Ads.Internal.Util.Client
     </attr>
-
+    <attr
+        path="/api/package[@name='com.google.android.gms.ads.preload']"
+        name="managedName"
+        >
+        Android.Gms.Ads.Preload
+    </attr>
 
 </metadata>
