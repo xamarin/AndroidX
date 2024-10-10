@@ -17,7 +17,7 @@ public class LicenseConfig
 	public string Spdx { get; set; } = string.Empty;
 
 	[JsonProperty ("proprietary")]
-	public bool Proprietary { get; set; } 
+	public bool Proprietary { get; set; }
 
 	[DefaultValue ("")]
 	[JsonProperty ("comments")]
