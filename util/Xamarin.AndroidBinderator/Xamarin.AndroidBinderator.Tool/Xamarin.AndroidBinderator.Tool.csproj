@@ -6,7 +6,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <ToolCommandName>xamarin-android-binderator</ToolCommandName>
     <AssemblyName>Xamarin.AndroidBinderator.Tool</AssemblyName>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <Nullable>enable</Nullable>
     <RollForward>Major</RollForward>

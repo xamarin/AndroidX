@@ -6,9 +6,7 @@
     "additionalProjects": [
       "source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj",
       "source/com.google.android.gms/play-services-basement/buildtasks/Basement-BuildTasks.csproj",
-      "util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.csproj",
-      "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.csproj",
-      "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool/Xamarin.AndroidBinderator.Tool.csproj"
+      "util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.csproj"
     ],
     "templates": [
       {
