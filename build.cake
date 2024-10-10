@@ -1,7 +1,8 @@
 // Tools needed by cake addins
 #tool nuget:?package=vswhere&version=3.1.7
 
-#tool nuget:?package=Cake.CoreCLR
+// Used by binderator, "Windows" is fine because we only use managed code from it
+#tool nuget:?package=Microsoft.Android.Sdk.Windows&version=35.0.0-rc.1.80
 
 // Cake Addins
 #addin nuget:?package=Cake.FileHelpers&version=7.0.0
