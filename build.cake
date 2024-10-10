@@ -18,6 +18,7 @@
 #load "build/cake/update-config.cake"
 #load "build/cake/tests.cake"
 #load "build/cake/gps-parameters.cake"
+#load "build/cake/performance-timings.cake"
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -25,6 +26,7 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CsvHelper;
+
 
 // The main configuration points
 var TARGET = Argument ("t", Argument ("target", "Default"));
