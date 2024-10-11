@@ -2396,6 +2396,16 @@
       },
       {
         "groupId": "com.github.bumptech.glide",
+        "artifactId": "avif-integration",
+        "version": "4.16.0",
+        "nugetVersion": "4.16.0",
+        "nugetId": "Xamarin.Android.Glide.AVIF.Integration",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral"
+      },
+      {
+        "groupId": "com.github.bumptech.glide",
         "artifactId": "disklrucache",
         "version": "4.16.0",
         "nugetVersion": "4.16.0.7",
@@ -5193,6 +5203,19 @@
         "mavenRepositoryType": "MavenCentral"
       },
       {
+        "groupId": "org.aomedia.avif.android",
+        "artifactId": "avif",
+        "version": "0.11.1.3c786d2",
+        "nugetVersion": "0.11.1",
+        "nugetId": "Xamarin.AOMedia.AVIF.Android",
+        "dependencyOnly": false,
+        "type": "androidlibrary",
+        "mavenRepositoryType": "MavenCentral",
+        "overrideLicenses": [
+          "BSD 2-Clause License|https://opensource.org/license/bsd-2-clause",
+        ]
+      },
+      {
         "groupId": "org.brotli",
         "artifactId": "dec",
         "version": "0.1.2",
@@ -5810,6 +5833,11 @@
         "name": "BSD-3-Clause",
         "file": "templates/licenses/bsd.txt",
         "spdx": "BSD-3-Clause"
+      },
+      {
+        "name": "BSD 2-Clause License",
+        "file": "templates/licenses/bsd.txt",
+        "spdx": "BSD-2-Clause"
       },
       {
         "name": "Chromium and built-in dependencies",
