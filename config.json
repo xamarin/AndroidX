@@ -2360,9 +2360,7 @@
         "nugetVersion": "1.1.2.6",
         "nugetId": "Xamarin.Google.Android.InstallReferrer",
         "dependencyOnly": false,
-        "frozen": true,
-        "type": "androidlibrary",
-        "comments": "Changed from Apache to Android SDK License"
+        "type": "xbd"
       },
       {
         "groupId": "com.android.volley",
@@ -3559,7 +3557,7 @@
         "nugetVersion": "3.0.0.1",
         "nugetId": "Xamarin.Google.UserMessagingPlatform",
         "dependencyOnly": false,
-        "type": "androidlibrary"
+        "type": "xbd"
       },
       {
         "groupId": "com.google.assistant.appactions",
@@ -3575,7 +3573,8 @@
         "version": "0.0.1",
         "nugetVersion": "0.0.1.16",
         "nugetId": "Xamarin.Google.Assistant.AppActions.Widgets",
-        "dependencyOnly": false
+        "dependencyOnly": false,
+        "type": "xbd"
       },
       {
         "groupId": "com.google.auto.value",
