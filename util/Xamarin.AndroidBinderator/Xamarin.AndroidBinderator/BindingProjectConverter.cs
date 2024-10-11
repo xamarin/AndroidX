@@ -57,9 +57,38 @@ static class BindingProjectConverter
 
 	private static void ConvertLicenses (BindingConfig config, MavenArtifactConfig mavenArtifact, List<Exception> exceptions, Project mavenProject, BindingProjectModel projectModel)
 	{
-		var licenses = mavenProject.Licenses;
+		var licenses = FindLicenses (config, mavenArtifact, mavenProject);
+		var had_unknown_license = false;
 
-		// Override licenses ignore any licenses in the POM
+		// Verify that we have known licenses
+		foreach (var license in licenses) {
+			var license_config = config.Licenses.FirstOrDefault (l => string.Compare (l.Name, license.Name, true) == 0);
+
+			if (license_config is null) {
+				exceptions.Add (new Exception ($"Unknown license '{license.Name}' for artifact '{mavenArtifact.GroupAndArtifactId}'. This license must be added to 'config.json'."));
+				had_unknown_license = true;
+				continue;
+			}
+
+			projectModel.Licenses.Add (new MavenArtifactLicense (license.Name ?? "", license.Url ?? "", license_config));
+		}
+
+		if (projectModel.Licenses.Count == 0 && !had_unknown_license)
+			exceptions.Add (new Exception ($"No license(s) could be found for artifact '{mavenArtifact.GroupAndArtifactId}'. Use 'overrideLicenses' in 'config.json' to specify with format 'name|url' ('url' is optional)."));
+
+		// Load license text
+		foreach (var license in projectModel.Licenses) {
+			var license_file = Path.Combine (config.BasePath!, license.LicenseConfig.File);
+			license.Text = File.ReadAllText (license_file);
+		}
+
+	}
+
+	static Collection<License> FindLicenses (BindingConfig config, MavenArtifactConfig mavenArtifact, Project mavenProject)
+	{
+		Collection<License>? licenses;
+
+		// OverrideLicenses ignores any licenses in the POM
 		if (mavenArtifact.OverrideLicenses.Count > 0) {
 			licenses = new Collection<License> ();
 
@@ -70,28 +99,20 @@ static class BindingProjectConverter
 					Url = parts.Length > 1 ? parts [1] : string.Empty
 				});
 			}
+
+			return licenses;
 		}
 
-		// Verify that we have known licenses
-		foreach (var license in licenses) {
-			var license_config = config.Licenses.FirstOrDefault (l => string.Compare (l.Name, license.Name, true) == 0);
+		licenses = mavenProject.Licenses;
+		var project = mavenProject;
 
-			if (license_config is null) {
-				exceptions.Add (new Exception ($"Unknown license '{license.Name}' for artifact '{mavenArtifact.GroupAndArtifactId}'. This license must be added to 'config.json'."));
-				continue;
-			}
-
-			projectModel.Licenses.Add (new MavenArtifactLicense (license.Name ?? "", license.Url ?? "", license_config));
+		// If we didn't find any licenses, try the parent POM
+		while (licenses.Count == 0 && project.Parent is not null) {
+			project = MavenFactory2.GetPomForArtifactParent (config, project.Parent.ToArtifact (), mavenArtifact);
+			licenses = project.Licenses;
 		}
 
-		if (projectModel.Licenses.Count == 0)
-			exceptions.Add (new Exception ($"No license(s) could be found for artifact '{mavenArtifact.GroupAndArtifactId}'. Use 'overrideLicenses' in 'config.json' to specify with format 'name|url' ('url' is optional)."));
-
-		// Load license text
-		foreach (var license in projectModel.Licenses) {
-			var license_file = Path.Combine (config.BasePath!, license.LicenseConfig.File);
-			license.Text = File.ReadAllText (license_file);
-		}
+		return licenses ?? [];
 	}
 
 	// Creates a model for a .jar/.aar artifact payload
