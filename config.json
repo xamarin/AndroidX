@@ -3585,11 +3585,7 @@
         "nugetId": "Xamarin.Google.AutoValue.Annotations",
         "dependencyOnly": false,
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.code.findbugs",
@@ -4404,11 +4400,7 @@
         "nugetId": "Xamarin.Google.Guava.FailureAccess",
         "dependencyOnly": false,
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.guava",
@@ -4419,11 +4411,7 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.guava",
@@ -4433,11 +4421,7 @@
         "nugetId": "Xamarin.Google.Guava.ListenableFuture",
         "dependencyOnly": false,
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "Apache License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.inject",
@@ -4447,11 +4431,7 @@
         "nugetId": "Xamarin.Google.Inject.Guice",
         "dependencyOnly": false,
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "The Apache Software License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.j2objc",
@@ -4772,11 +4752,7 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "BSD-3-Clause|https://opensource.org/licenses/BSD-3-Clause"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.protobuf",
@@ -4787,11 +4763,7 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "junit.junit,org.easymock.easymock,org.easymock.easymockclassextension,com.google.truth.truth",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "BSD-3-Clause|https://opensource.org/licenses/BSD-3-Clause"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.zxing",
@@ -4802,11 +4774,7 @@
         "dependencyOnly": false,
         "assemblyName": "Google.ZXing.Core",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "The Apache Software License, Version 2.0|https://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.squareup",
@@ -4827,11 +4795,7 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.squareup.okio.okio,com.google.android.android",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.squareup.okhttp3",
@@ -4922,11 +4886,7 @@
         "dependencyOnly": false,
         "excludedRuntimeDependencies": "com.squareup.okhttp.okhttp,com.google.code.gson.gson,com.google.android.android,io.reactivex.rxjava,com.google.appengine.appengine-api-1.0-sdk",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "Apache 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.squareup.retrofit2",
@@ -5198,11 +5158,7 @@
         "nugetId": "Xamarin.Brotli.Dec",
         "dependencyOnly": false,
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "MIT License|http://www.opensource.org/licenses/mit-license.php"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.checkerframework",
@@ -5266,11 +5222,7 @@
         "nugetId": "Xamarin.CodeHaus.Mojo.AnimalSnifferAnnotations",
         "dependencyOnly": false,
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "MIT license|https://spdx.org/licenses/MIT.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.jetbrains",
@@ -5543,11 +5495,7 @@
         "dependencyOnly": false,
         "assemblyName": "org.tensorflow.tensorflow-android",
         "type": "androidlibrary",
-        "mavenRepositoryType": "MavenCentral",
-        "overrideLicenses": [
-          "The Apache Software License, Version 2.0|http://www.apache.org/licenses/LICENSE-2.0.txt"
-        ],
-        "comments": "License is specified in parent POM"
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.tensorflow",
@@ -5832,6 +5780,11 @@
         "name": "ML Kit Terms of Service",
         "file": "templates/licenses/mlkit.txt",
         "proprietary": true
+      },
+      {
+        "name": "New BSD license",
+        "file": "templates/licenses/bsd.txt",
+        "spdx": "BSD-3-Clause"
       },
       {
         "name": "Play Core Software Development Kit Terms of Service",
