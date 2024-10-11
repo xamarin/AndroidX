@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <attr
+    path="/api/package[@name='com.bumptech.glide.annotation.compiler']"
+    name="managedName"
+    >
+    Bumptech.Glide.Annotation.Compiler
+  </attr>
+  <attr
+    path="/api/package[@name='com.bumptech.glide.integration.avif']"
+    name="managedName"
+    >
+    Bumptech.Glide.Integration.AVIF
+  </attr> 
+
+  <attr
+    path="/api/package[@name='com.bumptech.glide.integration.avif']/class[@name='AvifByteBufferBitmapDecoder']/method[@name='decode' and count(parameter)=4 and parameter[1][@type='java.nio.ByteBuffer'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='com.bumptech.glide.load.Options']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr> 
+  <attr
+    path="/api/package[@name='com.bumptech.glide.integration.avif']/class[@name='AvifByteBufferBitmapDecoder']/method[@name='handles' and count(parameter)=2 and parameter[1][@type='java.nio.ByteBuffer'] and parameter[2][@type='com.bumptech.glide.load.Options']]/parameter[1]"
+    name="managedType"
+    >
+    Java.Lang.Object
+  </attr>
+
+  <remove-node
+    path="/api/package[@name='com.bumptech.glide.integration.avif']/class[@name='AvifStreamBitmapDecoder']/method[@name='decode' and count(parameter)=4 and parameter[1][@type='java.io.InputStream'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='com.bumptech.glide.load.Options']]"
+    />
+
+
+
+</metadata>
