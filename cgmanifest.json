@@ -3784,6 +3784,19 @@
       "component": {
         "type": "maven",
         "maven": {
+          "artifactId": "avif-integration",
+          "groupId": "com.github.bumptech.glide",
+          "version": "4.16.0",
+          "nuGetId": "Xamarin.Android.Glide.AVIF.Integration",
+          "nuGetVersion": "4.16.0"
+        }
+      },
+      "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
           "artifactId": "disklrucache",
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
@@ -7590,6 +7603,18 @@
         }
       },
       "license": "The Apache Software License, Version 2.0"
+    },
+    {
+      "component": {
+        "type": "maven",
+        "maven": {
+          "artifactId": "avif",
+          "groupId": "org.aomedia.avif.android",
+          "version": "0.11.1.3c786d2",
+          "nuGetId": "Xamarin.AOMedia.AVIF.Android",
+          "nuGetVersion": "0.11.1"
+        }
+      }
     },
     {
       "component": {
