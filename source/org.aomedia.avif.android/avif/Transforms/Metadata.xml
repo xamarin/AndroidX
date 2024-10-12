@@ -3,7 +3,7 @@
 
     <attr 
         path="/api/package[@name='org.aomedia.avif.android']"
-        name="managedName">
+        name="managedName"
         >
         Xamarin.AOMEdia.AVIF
     </attr> 
