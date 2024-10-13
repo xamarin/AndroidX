@@ -5164,11 +5164,12 @@
         "groupId": "org.aomedia.avif.android",
         "artifactId": "avif",
         "version": "0.11.1.3c786d2",
-        "nugetVersion": "0.11.1",
+        "nugetVersion": "0.11.1.63407826",
         "nugetId": "Xamarin.AOMedia.AVIF.Android",
         "dependencyOnly": false,
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral",
+        "comments": "Hash in release part was manually converted to integer.",
         "overrideLicenses": [
           "BSD 2-Clause License|https://opensource.org/license/bsd-2-clause",
         ]
