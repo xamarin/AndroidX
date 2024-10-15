@@ -591,7 +591,7 @@
 | 584|io.reactivex.rxjava3:rxkotlin                                         |3.0.1               |Xamarin.Android.ReactiveX.RxJava3.RxKotlin                            |3.0.1.15            |
 | 585|jakarta.inject:jakarta.inject-api                                     |2.0.1               |Xamarin.Jakarta.Inject.InjectApi                                      |2.0.1.2             |
 | 586|javax.inject:javax.inject                                             |1                   |Xamarin.JavaX.Inject                                                  |1.0.0.16            |
-| 587|org.aomedia.avif.android:avif                                         |0.11.1.3c786d2      |Xamarin.AOMedia.AVIF.Android                                          |0.11.1              |
+| 587|org.aomedia.avif.android:avif                                         |0.11.1.3c786d2      |Xamarin.AOMedia.AVIF.Android                                          |0.11.1.63407826     |
 | 588|org.brotli:dec                                                        |0.1.2               |Xamarin.Brotli.Dec                                                    |0.1.2.4             |
 | 589|org.checkerframework:checker-compat-qual                              |2.5.6               |Xamarin.CheckerFramework.CheckerCompatQual                            |2.5.6.8             |
 | 590|org.checkerframework:checker-qual                                     |3.48.0              |Xamarin.CheckerFramework.CheckerQual                                  |3.48.0              |
