@@ -5170,9 +5170,6 @@
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral",
         "comments": "Hash in release part was manually converted to integer.",
-        "overrideLicenses": [
-          "BSD 2-Clause License|https://opensource.org/license/bsd-2-clause",
-        ]
       },
       {
         "groupId": "org.brotli",
@@ -5783,7 +5780,7 @@
       },
       {
         "name": "BSD 2-Clause License",
-        "file": "templates/licenses/bsd.txt",
+        "file": "templates/licenses/bsd-2-clause.txt",
         "spdx": "BSD-2-Clause"
       },
       {
