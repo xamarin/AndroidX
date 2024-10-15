@@ -1,7 +1,0 @@
-<Project>
-  <ItemGroup>
-    <AndroidAarLibrary Include="$(MSBuildThisFileDirectory)..\..\aar\avif-integration.aar">
-      <AndroidXSkipAndroidXMigration>true</AndroidXSkipAndroidXMigration>
-    </AndroidAarLibrary>
-  </ItemGroup>
-</Project>
