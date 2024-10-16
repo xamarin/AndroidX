@@ -18,6 +18,7 @@
 #load "build/cake/update-config.cake"
 #load "build/cake/tests.cake"
 #load "build/cake/gps-parameters.cake"
+#load "build/cake/dotnet-next.cake"
 
 using System.Text.RegularExpressions;
 using System.Xml;
