@@ -55,3 +55,14 @@
     <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.feature.delivery.extensions\extensions.jar" />
   </ItemGroup>
 }
+
+@if (Model.Type == AndroidBinderator.BindingType.XamarinBuildDownload
+     && Model.NuGetPackageId != "Xamarin.Google.Android.InstallReferrer"
+     && Model.NuGetPackageId != "Xamarin.Google.UserMessagingPlatform"
+     && Model.NuGetPackageId != "Xamarin.Google.Assistant.AppActions.Widgets"
+     ) {
+  <ItemGroup>
+    <!-- GPS doesn't currently use <AndroidNamespaceReplacement> -->
+    <AndroidNamespaceReplacement Remove="@@(AndroidNamespaceReplacement)" />
+  </ItemGroup>
+}
