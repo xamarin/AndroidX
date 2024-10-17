@@ -15,11 +15,16 @@
 // #addin nuget:?package=NuGet.Versioning&loaddependencies=true&version=5.6.0
 // #addin nuget:?package=Microsoft.Extensions.Logging&loaddependencies=true&version=3.0.0
 
+#load "build/cake/setup-environment.cake"
 #load "build/cake/update-config.cake"
 #load "build/cake/tests.cake"
 #load "build/cake/gps-parameters.cake"
 #load "build/cake/dotnet-next.cake"
 #load "build/cake/binderate.cake"
+#load "build/cake/build-and-package.cake"
+#load "build/cake/validations.cake"
+#load "build/cake/executive-order.cake"
+#load "build/cake/clean.cake"
 
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -123,22 +128,6 @@ string[] RunProcessWithOutput(FilePath fileName, string processArguments)
     return procOut.ToArray();;
 }
 
-void RunGradle(DirectoryPath root, string target)
-{
-    root = MakeAbsolute(root);
-    var proc = IsRunningOnWindows()
-        ? root.CombineWithFilePath("gradlew.bat").FullPath
-        : "bash";
-    var args = IsRunningOnWindows()
-        ? ""
-        : root.CombineWithFilePath("gradlew").FullPath;
-    args += $" {target} -p {root}";
-
-    var exitCode = StartProcess(proc, args);
-    if (exitCode != 0)
-        throw new Exception($"Gradle exited with code {exitCode}.");
-}
-
 string GetNuGetVersion(string nugetId, string configJson = "./config.json")
 {
     var json = JToken.Parse(FileReadText(configJson));
@@ -204,19 +193,6 @@ IEnumerable<string> GetArtifacts(string configJson = "./config.json")
     }
 }
 
-// Preparation
-
-Task("inject-variables")
-    .WithCriteria(!BuildSystem.IsLocalBuild)
-    .Does(() =>
-{
-    var glob = "./source/AssemblyInfo.cs";
-
-    ReplaceTextInFiles(glob, "{BUILD_COMMIT}", BUILD_COMMIT);
-    ReplaceTextInFiles(glob, "{BUILD_NUMBER}", BUILD_NUMBER);
-    ReplaceTextInFiles(glob, "{BUILD_TIMESTAMP}", BUILD_TIMESTAMP);
-});
-
 // Android X
 
 Task("javadocs")
@@ -243,211 +219,6 @@ Task("javadocs")
     }
 });
 
-System.Xml.XmlDocument xmldoc = null;
-System.Xml.XmlNamespaceManager ns = null;
-
-Task("metadata-verify")
-    .Does
-    (
-        () =>
-        {
-            FilePathCollection metadata_files = null;
-
-            //  namespace is required, otherwise NRE
-            string xml_namespace_name = "ax"; // could be "apixml" but it is irrelevant, keeping it short
-
-            string xpath_expression_nodes_to_find =
-                        //$@"//attr[contains(@path,'interface') and contains(@name ,'visibility')]"
-                        $@"//attr[contains(@path,'interface')]"
-                        ;
-
-            metadata_files = GetFiles($"./generated/**/Metadata*.xml");
-            foreach(FilePath fp in metadata_files)
-            {
-                Information($"Metadata = {fp}");
-                throw new Exception("Move this file to source");
-            }
-            metadata_files = GetFiles($"./source/**/Metadata*.xml");
-            foreach(FilePath fp in metadata_files)
-            {
-                Information($"Metadata = {fp}");
-                xmldoc = new System.Xml.XmlDocument();
-                xmldoc.Load(fp.ToString());
-                ns = new System.Xml.XmlNamespaceManager(xmldoc.NameTable);
-
-                List<(string Path, bool IsPublic)> result = GetXmlMetadata(xpath_expression_nodes_to_find, ns).ToList();
-                foreach((string Path, bool IsPublic) r in result)
-                {
-                    Information($"		Found:");
-                    Information($"			Path: {r.Path}");
-                    Information($"			IsPublic: {r.IsPublic}");
-                    if (r.IsPublic)
-                    {
-                        throw new Exception("Preventing exposing/surfacing interfaces with default package accessibility as public");
-                    }
-                }
-            }
-        }
-    );
-
-private IEnumerable<(string Path, bool IsPublic)> GetXmlMetadata(string xpath, System.Xml.XmlNamespaceManager xml_namespace)
-{
-    System.Xml.XmlNodeList node_list = xmldoc.SelectNodes(xpath, xml_namespace);
-
-    foreach (System.Xml.XmlNode node in node_list)
-    {
-        string name = node.Attributes["name"].Value;
-        string inner_text = node.InnerText;	//.Value;
-        string path = node.Attributes["path"].Value;
-
-        Information($"	path        = {path}");
-
-        if (path.Contains("MediaRouteProvider.DynamicGroupRouteController"))
-        {
-            Information($"		Found:");
-            Information($"			Name: {name}");
-            Information($"			Visibility: {inner_text}");
-            throw new Exception("MediaRouteProvider.DynamicGroupRouteController");
-        }
-
-        if (string.Equals(name, "visibility") && inner_text.Contains("public"))
-        {
-            Information($"		Visibility  = {inner_text}");
-
-            bool is_public = inner_text.Contains("public") ? true : false;
-
-            yield return (Path: path, IsPublic: is_public);
-        }
-    }
-}
-
-Task("libs")
-    .IsDependentOn("libs-native")
-    .Does(() =>
-{
-    DotNetMSBuildSettings settings = new DotNetMSBuildSettings()
-        .SetConfiguration(CONFIGURATION)
-        .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/libs.{CONFIGURATION}.binlog")
-        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-        .WithProperty("Verbosity", VERBOSITY.ToString())
-        .WithProperty("DesignTimeBuild", "false")
-        .WithProperty("AndroidSdkBuildToolsVersion", $"{AndroidSdkBuildTools}");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    DotNetRestore("./generated/AndroidX.sln", new DotNetRestoreSettings
-    {
-        MSBuildSettings = settings.EnableBinaryLogger("./output/restore.binlog")
-    });
-
-    DotNetBuild
-        (
-            "./generated/AndroidX.sln", 
-            new DotNetBuildSettings
-            {
-                MSBuildSettings = settings
-            }
-        );
-});
-
-Task("libs-native")
-    .Does(() =>
-{
-    string root = "./source/com.google.android.material/material.extensions/";
-
-    RunGradle(root, "build");
-
-    string outputDir = "./externals/com.xamarin.google.android.material.extensions/";
-    EnsureDirectoryExists(outputDir);
-    CleanDirectories(outputDir);
-
-    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
-    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
-
-    root = "./source/com.google.android.play/core.extensions/";
-
-    RunGradle(root, "build");
-
-    outputDir = "./externals/com.xamarin.google.android.play.core.extensions/";
-    EnsureDirectoryExists(outputDir);
-    CleanDirectories(outputDir);
-
-    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
-    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
-    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
-
-    root = "./source/com.google.android.play/asset.delivery.extensions/";
-
-    RunGradle(root, "build");
-
-    outputDir = "./externals/com.xamarin.google.android.play.asset.delivery.extensions/";
-    EnsureDirectoryExists(outputDir);
-    CleanDirectories(outputDir);
-
-    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
-    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
-    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
-
-    root = "./source/com.google.android.play/feature.delivery.extensions/";
-
-    RunGradle(root, "build");
-
-    outputDir = "./externals/com.xamarin.google.android.play.feature.delivery.extensions/";
-    EnsureDirectoryExists(outputDir);
-    CleanDirectories(outputDir);
-
-    CopyFileToDirectory($"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar", outputDir);
-    Unzip($"{outputDir}/extensions-aar-release.aar", outputDir);
-    MoveFile($"{outputDir}/classes.jar", $"{outputDir}/extensions.jar");
-});
-
-Task("nuget")
-    .IsDependentOn("libs")
-    .Does(() =>
-{
-    var settings = new DotNetMSBuildSettings()
-        .SetConfiguration(CONFIGURATION)
-        .SetMaxCpuCount(0)
-        .EnableBinaryLogger($"./output/nuget.{CONFIGURATION}.binlog")
-        .WithProperty("MigrationPackageVersion", MIGRATION_PACKAGE_VERSION)
-        .WithProperty("NoBuild", "true")
-        .WithProperty("PackageRequireLicenseAcceptance", "true")
-        .WithProperty("PackageOutputPath", MakeAbsolute ((DirectoryPath)"./output/").FullPath)
-        .WithTarget("Pack");
-
-    if (!string.IsNullOrEmpty(ANDROID_HOME))
-        settings.WithProperty("AndroidSdkDirectory", $"{ANDROID_HOME}");
-
-    DotNetBuild
-        (
-            "./generated/AndroidX.sln", 
-            new DotNetBuildSettings
-            {
-                MSBuildSettings = settings
-            }
-        );
-});
-
-Task("tools-executive-order")
-    .Does
-    (
-        () =>
-        {
-            CakeExecuteScript
-                        (
-                            "./utilities.cake",
-                            new CakeSettings
-                            { 
-                                Arguments = new Dictionary<string, string>() 
-                                { 
-                                    { "target", "tools-executive-order" } 
-                                } 
-                            }
-                        );        
-        }
-    );
 
 Task("api-diff")
     .Does
@@ -580,18 +351,6 @@ Task ("diff")
     // Now let's make pretty files
     MonoApiHtml ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.html");
     MonoApiMarkdown ("./output/api-info.previous.xml", "./output/api-info.xml", "./output/api-diff.md");
-});
-
-Task ("clean")
-    .Does (() =>
-{
-    if (DirectoryExists ("./externals"))
-        DeleteDirectory ("./externals", new DeleteDirectorySettings { Recursive = true, Force = true });
-
-    if (DirectoryExists ("./generated"))
-        DeleteDirectory ("./generated", new DeleteDirectorySettings { Recursive = true, Force = true });
-
-    CleanDirectories ("./**/packages");
 });
 
 Task ("packages")
