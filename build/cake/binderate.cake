@@ -1,5 +1,7 @@
 // Contains tasks for running binderator
 
+var binderator_project = "util/Xamarin.AndroidBinderator/Xamarin.AndroidBinderator.Tool/Xamarin.AndroidBinderator.Tool.csproj";
+
 // Runs `binderator`
 Task ("binderate")
     .IsDependentOn ("javadocs-gps")
