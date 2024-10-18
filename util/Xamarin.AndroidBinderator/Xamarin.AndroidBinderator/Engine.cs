@@ -38,6 +38,7 @@ public class Engine
 		var models = BindingProjectConverter.Convert (config);
 
 		BindingProjectDependencyVerifier.Verify (config, models);
+		BindingProjectConsistencyVerifier.Verify (models);
 
 		if (config.DownloadExternals)
 			MavenArtifactDownloader.Download (config, models);

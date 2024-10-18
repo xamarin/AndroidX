@@ -63,6 +63,43 @@ public static class Extensions
 
 		return range.Any (r => r.ContainsVersion (version));
 	}
+
+	public static string GetThreePartVersion (string version)
+	{
+		// Change 121.0.0.0-beta1 to 121.0.0
+		var hyphen = version.IndexOf ('-');
+		version = hyphen >= 0 ? version.Substring (0, hyphen) : version;
+
+		var parts = version.Split ('.');
+
+		if (parts.Count () < 3)
+			return version;
+
+		return $"{parts [0]}.{parts [1]}.{parts [2]}";
+	}
+
+	public static (int x, int y, int z) GetThreePartVersionAsIntegers (string version)
+	{
+		// Return 121.0.0 as (121, 0, 0), handles shorter versions like 121.0
+		var hyphen = version.IndexOf ('-');
+		version = hyphen >= 0 ? version.Substring (0, hyphen) : version;
+
+		var parts = version.Split ('.');
+		var x = 0;
+		var y = 0;
+		var z = 0;
+
+		if (parts.Length > 2)
+			z = int.Parse (parts[2]);
+
+		if (parts.Length > 1)
+			y = int.Parse (parts [1]);
+
+		if (parts.Length > 0)
+			x = int.Parse (parts [0]);
+
+		return (x, y, z);
+	}
 }
 
 public class ProjectResolver : IProjectResolver

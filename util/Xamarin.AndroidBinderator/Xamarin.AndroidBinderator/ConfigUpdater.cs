@@ -131,24 +131,10 @@ public class ConfigUpdater
 		return SemanticVersion.Parse (version + tag);
 	}
 
-	static string GetThreePartVersion (string version)
-	{
-		// Change 121.0.0.0-beta1 to 121.0.0
-		var hyphen = version.IndexOf ('-');
-		version = hyphen >= 0 ? version.Substring (0, hyphen) : version;
-
-		var parts = version.Split ('.');
-
-		if (parts.Count () < 3)
-			return version;
-
-		return $"{parts [0]}.{parts [1]}.{parts [2]}";
-	}
-
 	static bool NeedsPrefix (string nugetVersion, string artifactVersion)
 	{
-		var nuget = GetThreePartVersion (nugetVersion);
-		var artifact = GetThreePartVersion (artifactVersion);
+		var nuget = Extensions.GetThreePartVersion (nugetVersion);
+		var artifact = Extensions.GetThreePartVersion (artifactVersion);
 
 		var nuget_major = int.Parse (nuget.Split ('.') [0]);
 		var artifact_major = int.Parse (artifact.Split ('.') [0]);

@@ -26,15 +26,15 @@ Task ("javadocs-gps")
 
   return;
   
-	var astJar = new FilePath ("./util/JavaASTParameterNames-1.0.jar");
-	var sourcesJars = GetFiles ("./externals/**/*-sources.jar");
+	//var astJar = new FilePath ("./util/JavaASTParameterNames-1.0.jar");
+	//var sourcesJars = GetFiles ("./externals/**/*-sources.jar");
 
-	foreach (var srcJar in sourcesJars) {
-		var srcJarPath = MakeAbsolute (srcJar).FullPath;
-		var outTxtPath = srcJarPath.Replace ("-sources.jar", "-paramnames.txt");
-		var outXmlPath = srcJarPath.Replace ("-sources.jar", "-paramnames.xml");
+	//foreach (var srcJar in sourcesJars) {
+	//	var srcJarPath = MakeAbsolute (srcJar).FullPath;
+	//	var outTxtPath = srcJarPath.Replace ("-sources.jar", "-paramnames.txt");
+	//	var outXmlPath = srcJarPath.Replace ("-sources.jar", "-paramnames.xml");
 
-		StartProcess ("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
-		StartProcess ("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
-	}
+	//	StartProcess ("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --text \"" + srcJarPath + "\" \"" + outTxtPath + "\"");
+	//	StartProcess ("java", "-jar \"" + MakeAbsolute(astJar).FullPath + "\" --xml \"" + srcJarPath + "\" \"" + outXmlPath + "\"");
+	//}
 });
