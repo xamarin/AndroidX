@@ -7,11 +7,7 @@
   var targets_path = "@" + @"(AndroidXNuGetTargetFolders->'%(Identity)\" + Model.NuGetPackageId + ".targets')";
 }
 
-  @* Long-term, GPS != XBD, but for now this is ok. (Long-term we also migrate to namespace replacements.) *@
   <ItemGroup>
-    <!-- GPS doesn't currently use <AndroidNamespaceReplacement> -->
-    <AndroidNamespaceReplacement Remove="@@(AndroidNamespaceReplacement)" />
-    
     <_AndroidDocumentationPath Include="..\..\externals\paramnames.txt" Condition="Exists('..\..\externals\paramnames.txt')" />
   </ItemGroup>
 

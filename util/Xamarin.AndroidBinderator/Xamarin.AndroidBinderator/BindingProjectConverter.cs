@@ -82,6 +82,11 @@ static class BindingProjectConverter
 			license.Text = File.ReadAllText (license_file);
 		}
 
+		// Ensure we use Xamarin.Build.Download for any proprietary licenses
+		if (projectModel.Type != BindingType.XamarinBuildDownload)
+			foreach (var l in projectModel.Licenses)
+				if (l.LicenseConfig.Proprietary)
+					exceptions.Add (new Exception ($"Artifact '{mavenArtifact.GroupAndArtifactId}' has proprietary license '{l.Name}' and must use the `xbd` artifact type."));
 	}
 
 	static Collection<License> FindLicenses (BindingConfig config, MavenArtifactConfig mavenArtifact, Project mavenProject)

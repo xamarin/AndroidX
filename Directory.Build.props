@@ -291,6 +291,8 @@
     <AndroidNamespaceReplacement Include='rxkotlin' Replacement='RxKotlin' />    
     <AndroidNamespaceReplacement Include='native_test' Replacement='Native_Test' />    
     <AndroidNamespaceReplacement Include='httpflags' Replacement='HttpFlags' />    
+
+    <AndroidNamespaceReplacement Include='org.aomedia.avif' Replacement='Xamarin.AOMedia.AVIF' />    
   </ItemGroup>
   
 </Project>

@@ -1,5 +1,6 @@
 parameters:
   dotnetTools: []
+  runDotnetNextTest: false
   
 steps:
   # before the build starts, make sure the tooling is as expected
@@ -27,8 +28,3 @@ steps:
       versionSpec: '11'
       jdkArchitectureOption: 'x64'
       jdkSourceOption: 'PreInstalled'
-      
-  - ${{ each tool in parameters.dotnetTools }}:
-    - ${{ each pair in tool }}:
-      - pwsh: dotnet tool update -g ${{ pair.key }} --version ${{ pair.value }}
-        displayName: 'Install tool: ${{ pair.key }}'

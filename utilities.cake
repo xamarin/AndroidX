@@ -805,6 +805,8 @@ Task ("spell-check")
                 "InteractiveMedia",
                 "V3",
                 "InjectApi",
+                "AVIF",
+                "AOMedia",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
