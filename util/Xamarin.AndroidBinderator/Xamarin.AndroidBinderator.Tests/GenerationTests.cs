@@ -121,7 +121,7 @@ namespace Xamarin.AndroidBinderator.Tests
 						ArtifactId = "annotation",
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
-						NugetVersion = "1.2.3",
+						NugetVersion = "1.0.2.1",
 						Metadata = new Dictionary<string, string>
 						{
 							{ "More", "Yay!" }
@@ -132,7 +132,7 @@ namespace Xamarin.AndroidBinderator.Tests
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
-		<PackageVersion>1.2.3</PackageVersion>
+		<PackageVersion>1.0.2.1</PackageVersion>
 		<RandomProperty>Yay!</RandomProperty>
 	</PropertyGroup>
 </Project>");
@@ -166,7 +166,7 @@ namespace Xamarin.AndroidBinderator.Tests
 						ArtifactId = "annotation",
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
-						NugetVersion = "1.2.3",
+						NugetVersion = "1.0.2.1",
 						Metadata = new Dictionary<string, string>
 						{
 							{ "More", "Yay!" },
@@ -178,7 +178,7 @@ namespace Xamarin.AndroidBinderator.Tests
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
-		<PackageVersion>1.2.3</PackageVersion>
+		<PackageVersion>1.0.2.1</PackageVersion>
 		<RandomProperty>Yay!</RandomProperty>
 		<RandomProperty>Change</RandomProperty>
 		<RandomProperty>Good Value</RandomProperty>
@@ -219,7 +219,7 @@ namespace Xamarin.AndroidBinderator.Tests
 						ArtifactId = "annotation",
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
-						NugetVersion = "1.2.3",
+						NugetVersion = "1.0.2.1",
 						Metadata = new Dictionary<string, string>
 						{
 							{ "More", "Yay!" },
@@ -231,7 +231,7 @@ namespace Xamarin.AndroidBinderator.Tests
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
-		<PackageVersion>1.2.3</PackageVersion>
+		<PackageVersion>1.0.2.1</PackageVersion>
 		<RandomProperty>Yay!</RandomProperty>
 		<RandomProperty>Keys</RandomProperty>
 		<RandomProperty>Good Value</RandomProperty>
@@ -259,14 +259,14 @@ namespace Xamarin.AndroidBinderator.Tests
 						ArtifactId = "annotation",
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
-						NugetVersion = "1.2.3",
+						NugetVersion = "1.0.2.1",
 					}
 				},
 				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
-		<PackageVersion>1.2.3</PackageVersion>
+		<PackageVersion>1.0.2.1</PackageVersion>
 	</PropertyGroup>
 </Project>");
 		}
@@ -356,14 +356,14 @@ namespace Xamarin.AndroidBinderator.Tests
 						ArtifactId = "annotation",
 						Version = "1.0.2",
 						NugetPackageId = "Xamarin.AndroidX.Annotation",
-						NugetVersion = "1.2.3",
+						NugetVersion = "1.0.2.1",
 					}
 				},
 				Licenses = { CreateLicense () }
 			}, @"
 <Project Sdk=""Microsoft.NET.Sdk"">
 	<PropertyGroup>
-		<PackageVersion>1.2.3-preview</PackageVersion>
+		<PackageVersion>1.0.2.1-preview</PackageVersion>
 	</PropertyGroup>
 </Project>");
 		}

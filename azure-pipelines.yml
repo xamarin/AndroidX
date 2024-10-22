@@ -17,6 +17,10 @@ parameters:
   displayName: Run Extended Tests?
   type: boolean
   default: false
+- name: RunDotnetNextTest
+  displayName: Run on .NET next preview?
+  type: boolean
+  default: false
   
 variables:
   # Variables used by both AndroidX/GPS go in the template
@@ -61,6 +65,7 @@ extends:
             image: $(windowsImage)
             os: windows
           runAPIScan: true
+          runDotnetNextTest: ${{ parameters.RunDotnetNextTest }}
 
     - stage: build_mac
       displayName: Build - Mac
@@ -74,6 +79,7 @@ extends:
             name: $(macosAgentPoolName)
             vmImage: $(macosImage)
             os: macOS
+          runDotnetNextTest: ${{ parameters.RunDotnetNextTest }}
 
     - template: build/ci/stage-standard-tests.yml@self
       parameters:
