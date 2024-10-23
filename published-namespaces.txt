@@ -717,8 +717,10 @@ AndroidX.Work.Impl.Utils.TaskExecutor
 AndroidX.Work.Impl.Workers
 AndroidX.Work.MultiProcess
 Bumptech.Glide
+Bumptech.Glide.Annotation.Compiler
 Bumptech.Glide.DiskLruCache
 Bumptech.Glide.GifDecoder
+Bumptech.Glide.Integration.AVIF
 Bumptech.Glide.Load
 Bumptech.Glide.Load.Data
 Bumptech.Glide.Load.Data.Mediastore
@@ -1245,6 +1247,7 @@ Xamarin.Android.InstallReferrer.Commons
 Xamarin.Android.Libraries.Intelligence.Acceleration
 Xamarin.Android.Libraries.Intelligence.Acceleration.Process
 Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
+Xamarin.AOMedia.AVIF.Android
 Xamarin.AopAlliance.Aop
 Xamarin.AopAlliance.Intercept
 Xamarin.Brotli.Dec
