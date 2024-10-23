@@ -3220,7 +3220,7 @@
           "groupId": "androidx.wear",
           "version": "1.1.0",
           "nuGetId": "Xamarin.AndroidX.Wear.Input",
-          "nuGetVersion": "1.0.0.19"
+          "nuGetVersion": "1.1.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -3775,7 +3775,7 @@
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
           "nuGetId": "Xamarin.Android.Glide.Annotations",
-          "nuGetVersion": "4.16.0.7"
+          "nuGetVersion": "4.16.0.8"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -3788,7 +3788,7 @@
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
           "nuGetId": "Xamarin.Android.Glide.AVIF.Integration",
-          "nuGetVersion": "4.16.0"
+          "nuGetVersion": "4.16.0.1"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -3801,7 +3801,7 @@
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
           "nuGetId": "Xamarin.Android.Glide.DiskLruCache",
-          "nuGetVersion": "4.16.0.7"
+          "nuGetVersion": "4.16.0.8"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -3814,7 +3814,7 @@
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
           "nuGetId": "Xamarin.Android.Glide.GifDecoder",
-          "nuGetVersion": "4.16.0.7"
+          "nuGetVersion": "4.16.0.8"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -3827,7 +3827,7 @@
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
           "nuGetId": "Xamarin.Android.Glide",
-          "nuGetVersion": "4.16.0.7"
+          "nuGetVersion": "4.16.0.8"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -3840,7 +3840,7 @@
           "groupId": "com.github.bumptech.glide",
           "version": "4.16.0",
           "nuGetId": "Xamarin.Android.Glide.RecyclerViewIntegration",
-          "nuGetVersion": "4.16.0.7"
+          "nuGetVersion": "4.16.0.8"
         }
       },
       "license": "The Apache Software License, Version 2.0 AND Simplified BSD License"
@@ -7366,7 +7366,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Android",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7379,7 +7379,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Api",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7392,7 +7392,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Context",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7405,7 +7405,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Core",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7418,7 +7418,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.OkHttp",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7431,7 +7431,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Protobuf.Lite",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7444,7 +7444,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Stub",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7457,7 +7457,7 @@
           "groupId": "io.grpc",
           "version": "1.63.2",
           "nuGetId": "Xamarin.Grpc.Util",
-          "nuGetVersion": "1.64.2.1"
+          "nuGetVersion": "1.63.2.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7610,9 +7610,9 @@
         "maven": {
           "artifactId": "avif",
           "groupId": "org.aomedia.avif.android",
-          "version": "0.11.1.3c786d2",
+          "version": "0.11.1.647c3c2",
           "nuGetId": "Xamarin.AOMedia.AVIF.Android",
-          "nuGetVersion": "0.11.1.63407826"
+          "nuGetVersion": "0.11.1.105366466"
         }
       }
     },
