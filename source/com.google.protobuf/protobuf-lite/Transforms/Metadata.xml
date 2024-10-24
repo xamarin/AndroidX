@@ -343,4 +343,12 @@
         path="/api/package[@name='com.google.protobuf']/class[@name='LazyStringArrayList']/method[@name='addAll' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='java.util.Collection&lt;? extends java.lang.String&gt;']]"
         />
 
+    <!-- Workaround generator can't detect this was implemented as an explicitly implemented interface member on a base class -->
+    <attr
+        path="/api/package[@name='com.google.protobuf']/class[@name='AbstractProtobufList']"
+        name="skipInvokerMethods"
+        >
+        java/util/SequencedCollection.reversed()Ljava/util/SequencedCollection;
+    </attr>
+
 </metadata>

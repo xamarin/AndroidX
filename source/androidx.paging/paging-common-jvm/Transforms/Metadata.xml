@@ -109,4 +109,12 @@
         public
     </attr>
 
+    <!-- Workaround generator can't detect this was implemented as an explicitly implemented interface member on a base class -->
+    <attr
+      path="/api/package[@name='androidx.paging']/class[@name='PagedList']"
+      name="skipInvokerMethods"
+      >
+      java/util/SequencedCollection.reversed()Ljava/util/SequencedCollection;
+    </attr>
+
 </metadata>
