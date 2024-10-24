@@ -15,4 +15,10 @@
       <_ProjectReferencesWithVersions Include="@(_ProjectReferenceWithReassignedVersion)" />
     </ItemGroup>
   </Target>
+  
+  <PropertyGroup>
+    <!-- Mark .NET6+ packages as supporting trimming -->
+    <IsTrimmable Condition=" $([MSBuild]::VersionGreaterThanOrEquals('$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)'))', '6.0')) ">true</IsTrimmable>
+  </PropertyGroup>
+
 </Project>
