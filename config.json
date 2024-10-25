@@ -5697,7 +5697,8 @@
         "version": "1.2.0",
         "nugetVersion": "1.2.0.2",
         "nugetId": "Xamarin.AndroidX.Emoji2",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'androidx.emoji2.emoji2-emojipicker:1.5.0'"
       },
       {
         "groupId": "androidx.wear.tiles",
@@ -5705,7 +5706,8 @@
         "version": "1.1.0",
         "nugetVersion": "1.1.0.4",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'androidx.wear.tiles.tiles-renderer:1.1.0'"
       },
       {
         "groupId": "androidx.wear.tiles",
@@ -5713,7 +5715,8 @@
         "version": "1.1.0",
         "nugetVersion": "1.1.0.4",
         "nugetId": "Xamarin.AndroidX.Wear.Tiles.Proto",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'androidx.wear.tiles.tiles-renderer:1.1.0'"
       },
       {
         "groupId": "com.google.android.gms",
@@ -5721,7 +5724,8 @@
         "version": "20.0.0",
         "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Base",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'com.google.android.gms.play-services-gass:20.0.0'"
       },
       {
         "groupId": "com.google.android.gms",
@@ -5729,7 +5733,8 @@
         "version": "20.0.0",
         "nugetVersion": "120.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Ads.Lite",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'com.google.android.gms.play-services-gass:20.0.0'"
       },
       {
         "groupId": "com.google.android.gms",
@@ -5737,7 +5742,8 @@
         "version": "16.3.0",
         "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'com.google.firebase.firebase-analytics-impl:16.3.0'"
       },
       {
         "groupId": "com.xamarin.androidx",
@@ -5745,7 +5751,8 @@
         "version": "1.0",
         "nugetVersion": "1.0.10.1",
         "nugetId": "Xamarin.AndroidX.Migration",
-        "dependencyOnly": true
+        "dependencyOnly": true,
+        "comments": "Required by 'build.cake' script"
       }
     ],
     "licenses": [
