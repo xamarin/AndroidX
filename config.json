@@ -18,6 +18,10 @@
         "outputFileRule": "generated/{groupid}.{artifactid}/xdb.targets"
       },
       {
+        "templateFile": "source/NoBindingsTargets.cshtml",
+        "outputFileRule": "generated/{groupid}.{artifactid}/no-bindings.targets"
+      },
+      {
         "templateFile": "source/AndroidXProject.cshtml",
         "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
       },
@@ -4449,7 +4453,8 @@
         "nugetVersion": "3.0.0.6",
         "nugetId": "Xamarin.Google.J2Objc.Annotations",
         "dependencyOnly": false,
-        "templateSet": "no-bindings"
+        "type": "no-bindings",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "com.google.mlkit",
@@ -5187,7 +5192,8 @@
         "nugetVersion": "2.5.6.8",
         "nugetId": "Xamarin.CheckerFramework.CheckerCompatQual",
         "dependencyOnly": false,
-        "templateSet": "no-bindings"
+        "type": "no-bindings",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.checkerframework",
@@ -5196,7 +5202,8 @@
         "nugetVersion": "3.48.1",
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "dependencyOnly": false,
-        "templateSet": "no-bindings"
+        "type": "no-bindings",
+        "mavenRepositoryType": "MavenCentral"
       },
       {
         "groupId": "org.chromium.net",
@@ -5855,30 +5862,6 @@
         "name": "Unicode, Inc. License",
         "file": "templates/licenses/unicode.txt",
         "comments": "spdx is 'Unicode-3.0', but .NET 8 NuGet 'pack' doesn't support it yet"
-      }
-    ],
-    "templateSets": [
-      {
-        "name": "no-bindings",
-        "mavenRepositoryType": "MavenCentral",
-        "templates": [
-          {
-            "templateFile": "templates/no-bindings/Project.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.csproj"
-          },
-          {
-            "templateFile": "templates/no-bindings/Targets.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{nugetid}.targets"
-          },
-          {
-            "templateFile": "source/AndroidXNuGetReadMe.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/readme.md"
-          },
-          {
-            "templateFile": "source/AndroidXSolutionFilter.cshtml",
-            "outputFileRule": "generated/{groupid}.{artifactid}/{groupid}.{artifactid}.slnf"
-          }
-        ]
       }
     ]
   }

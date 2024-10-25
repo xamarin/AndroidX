@@ -126,6 +126,9 @@
 @if (Model.Type == AndroidBinderator.BindingType.XamarinBuildDownload) {
   await IncludeAsync("source/_XBDProjectType.cshtml", Model);
 }
+@if (Model.Type == AndroidBinderator.BindingType.NoBindings) {
+  await IncludeAsync("source/_NoBindingsProjectType.cshtml", Model);
+}
 
   <!-- ProjectReferences -->
   <ItemGroup>
