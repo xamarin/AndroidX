@@ -39,7 +39,6 @@ public class MavenArtifactConfig
 	[JsonProperty ("nugetId")]
 	public string? NugetPackageId { get; set; }
 
-	[DefaultValue ("")]
 	[JsonProperty ("dependencyOnly")]
 	public bool DependencyOnly { get; set; } = false;
 

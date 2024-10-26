@@ -17,6 +17,7 @@ public class BindingConfig
 	[JsonProperty ("basePath")]
 	public string? BasePath { get; set; }
 
+	[DefaultValue (MavenRepoType.Google)]
 	[JsonProperty ("mavenRepositoryType")]
 	public MavenRepoType MavenRepositoryType { get; set; } = MavenRepoType.Google;
 
@@ -80,6 +81,8 @@ public class BindingConfig
 
 	[JsonProperty ("templates")]
 	public List<TemplateConfig> Templates { get; set; } = new List<TemplateConfig> ();
+
+	public bool ShouldSerializeTemplates () => Templates.Count > 0;
 
 	[JsonProperty ("artifacts")]
 	public List<MavenArtifactConfig> MavenArtifacts { get; set; } = new List<MavenArtifactConfig> ();
