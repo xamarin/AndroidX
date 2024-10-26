@@ -1,0 +1,27 @@
+@model AndroidBinderator.BindingProjectModel
+@using System
+@using System.Linq
+
+@{
+  // Workaround because the AndroidXNuGetTargetFolders item group should be evaluated by MSBuild, not Razor
+  var targets_path = "@" + @"(AndroidXNuGetTargetFolders->'%(Identity)\" + Model.NuGetPackageId + ".targets')";
+}
+
+  <PropertyGroup>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="no-bindings.targets" Pack="True" PackagePath="@Raw(targets_path)" />
+
+    <!-- This is needed because the `lib/{TFM}` folders tell NuGet what frameworks this package supports,
+         and we aren't writing anything to those folders because we have no managed assemblies (NU5127) -->
+    <None Include="..\..\source\_._" Pack="True" PackagePath="@@(AndroidXNuGetLibFolders)" />
+  </ItemGroup>
+
+  <ItemGroup>
+  @foreach (var art in @Model.MavenArtifacts)
+  {
+    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" Pack="True" PackagePath="@(art.MavenArtifactPackaging)" Visible="false" />
+  }
+  </ItemGroup>

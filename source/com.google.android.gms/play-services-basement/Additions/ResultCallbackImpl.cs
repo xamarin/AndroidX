@@ -4,10 +4,11 @@ using Java.Util.Concurrent;
 using Android.OS;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Android.Gms.Common.Apis
 {
-    public class ResultCallback<TResult> : Java.Lang.Object, IResultCallback where TResult : class, IResult
+    public class ResultCallback<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> : Java.Lang.Object, IResultCallback where TResult : class, IResult
     {
         public ResultCallback (Action<TResult> handler)
         {
@@ -24,7 +25,7 @@ namespace Android.Gms.Common.Apis
         }
     }
 
-    public class AwaitableResultCallback<TResult> : Java.Lang.Object, IResultCallback where TResult : class, IResult
+    public class AwaitableResultCallback<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> : Java.Lang.Object, IResultCallback where TResult : class, IResult
     {
         public AwaitableResultCallback ()
         {

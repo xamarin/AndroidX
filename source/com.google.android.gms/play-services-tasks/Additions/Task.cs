@@ -3,13 +3,14 @@ using Android.Runtime;
 using Android.Gms.Tasks;
 using System.Runtime.CompilerServices;
 using Android.Gms.Extensions;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Android.Gms.Extensions
 {
     public static class TasksExtensions
     {
         
-        public static System.Threading.Tasks.Task<TResult> AsAsync<TResult> (this Task task) where TResult : class, IJavaObject
+        public static System.Threading.Tasks.Task<TResult> AsAsync<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> (this Task task) where TResult : class, IJavaObject
         {
             var c = new AwaitableTaskCompleteListener<TResult> ();
 
@@ -29,7 +30,7 @@ namespace Android.Gms.Extensions
             return c.AwaitAsync ();
         }
 
-        public static TaskAwaiter<TResult> GetAwaiter<TResult> (this Task task) where TResult : class, IJavaObject
+        public static TaskAwaiter<TResult> GetAwaiter<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> (this Task task) where TResult : class, IJavaObject
         {
             var c = new AwaitableTaskCompleteListener<TResult> ();
 
@@ -49,7 +50,7 @@ namespace Android.Gms.Extensions
     }
 
     [Android.Runtime.Preserve]
-    class AwaitableTaskCompleteListener<TResult> : Java.Lang.Object, IOnCompleteListener where TResult : class, IJavaObject
+    class AwaitableTaskCompleteListener<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> : Java.Lang.Object, IOnCompleteListener where TResult : class, IJavaObject
     {
         System.Threading.Tasks.TaskCompletionSource<TResult> taskCompletionSource;
 
