@@ -75,7 +75,7 @@ void BuildGradleProject (string root, string outputDir, bool moveFile)
     EnsureDirectoryExists (outputDir);
     CleanDirectories (outputDir);
 
-    var full_file_path = $"{root}/extensions-aar/build/outputs/aar/extensions-aar-release.aar";
+    var full_file_path = $"{root}extensions-aar/build/outputs/aar/extensions-aar-release.aar";
     var file_name = System.IO.Path.GetFileName (full_file_path);
     
     CopyFileToDirectory (full_file_path, outputDir);

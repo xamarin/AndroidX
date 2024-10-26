@@ -4,17 +4,18 @@ using Java.Util.Concurrent;
 using Android.OS;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Android.Gms.Common.Apis
 {
     public static class IPendingResultExtensions
     {
-        public static void SetResultCallback<TResult> (this PendingResult pr, Action<TResult> callback) where TResult : class, IResult
+        public static void SetResultCallback<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> (this PendingResult pr, Action<TResult> callback) where TResult : class, IResult
         {
             pr.SetResultCallback (new ResultCallback<TResult> (callback));
         }
 
-        public static Task<TResult> AsAsync<TResult> (this PendingResult pr) where TResult : class, IResult
+        public static Task<TResult> AsAsync<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> (this PendingResult pr) where TResult : class, IResult
         {
             var rc = new AwaitableResultCallback<TResult> ();
 
@@ -32,7 +33,7 @@ namespace Android.Gms.Common.Apis
         //   await rc.AwaitAsync ();
         //}
 
-        public static TaskAwaiter<TResult> GetAwaiter<TResult> (this PendingResult pr) where TResult : class, IResult
+        public static TaskAwaiter<TResult> GetAwaiter<[DynamicallyAccessedMembers (DynamicallyAccessedMemberTypes.PublicConstructors | DynamicallyAccessedMemberTypes.NonPublicConstructors)] TResult> (this PendingResult pr) where TResult : class, IResult
         {
             var rc = new AwaitableResultCallback<TResult> ();
 
