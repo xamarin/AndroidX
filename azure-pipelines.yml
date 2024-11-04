@@ -77,8 +77,10 @@ extends:
           name: macos
           buildPool:
             name: $(macosAgentPoolName)
-            vmImage: $(macosImage)
             os: macOS
+            demands:
+              - macOS.Name -equals Sonoma
+              - macOS.Architecture -equals x64
           runDotnetNextTest: ${{ parameters.RunDotnetNextTest }}
 
     - template: build/ci/stage-standard-tests.yml@self
