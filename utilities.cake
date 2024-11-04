@@ -1231,18 +1231,25 @@ Task ("api-diff-analysis")
                 Information( $"Directory    = {d}");
                 Information( $"     nugetId    = {d.GetDirectoryName()}");
 
-                bool    dependencyOnly  = true;
+                bool?    dependencyOnly  = true;
                 string  groupId         = null;
                 string  artifactId      = null;
                 string  nugetId         = null;
                 string  nugetVersion    = null;
-                // no guarantees thta config.json is sorted, so linear "search"
+                // no guarantees that config.json is sorted, so linear "search"
                 // TODO: sort + (LINQ or binary serch)
                 foreach(JObject jo in binderator_json_array[0]["artifacts"])
                 {
-                    dependencyOnly  = (bool)    jo["dependencyOnly"];
+                    try
+                    {
+                        dependencyOnly  = (bool)    jo["dependencyOnly"];
+                    }
+                    catch
+                    {
+                        dependencyOnly  = null;
+                    }
 
-                    if ( dependencyOnly == true)
+                    if ( dependencyOnly == null || dependencyOnly == true)
                     {
                         continue;
                     }
