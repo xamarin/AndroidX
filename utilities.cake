@@ -1093,24 +1093,23 @@ Task ("api-diff-markdown-info-pr")
                     idx_start = i;
                 }
 
-                if(line.Contains("dependencyOnly"))
+                if (line.StartsWith("-"))
                 {
-                    if (line.StartsWith("-"))
+                    string next_line = lines[i + 1];
+                    if (next_line.StartsWith("-"))
                     {
-                        continue;
+                        idx_stop = i;
                     }
-                    idx_stop = i;
                 }
 
                 if (idx_start != -1 && idx_stop != -1)
                 {
-                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start);
+                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start + 4);
                     changelog_blocks.Add(changelog_block);
                     idx_start = -1;
                     idx_stop = -1;
                 }
             }
-
 
             foreach (List<string> changelog_block_lines in changelog_blocks)
             {
@@ -1142,8 +1141,11 @@ Task ("api-diff-markdown-info-pr")
                             continue;
                         }
 
-                        v_artifact_old = ParseDiffLine(line, "version");
-                        continue;
+                        if (line.StartsWith("-"))
+                        {
+                            v_artifact_old = ParseDiffLine(line, "version");
+                            continue;
+                        }
                     }
 
                     if (line.Contains("nugetVersion"))
@@ -1169,7 +1171,7 @@ Task ("api-diff-markdown-info-pr")
                 }
 
                 string changelog_line = $"- `{g}:{a}` - {v_artifact_old} -> {v_artifact_new}";
-
+                Information(changelog_line);
                 changelog.Add(changelog_line);
             }
 
