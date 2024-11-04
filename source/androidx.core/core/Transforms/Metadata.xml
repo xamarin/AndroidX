@@ -104,6 +104,10 @@
         name="no-alternatives"
         >
         true
-    </attr>    
+    </attr>
+    
+    <remove-node 
+        path="/api/package[@name='androidx.core.os']/class[@name='ProfilingRequestBuilder']/method[@name='getThis' and count(parameter)=0]"
+        />
 
 </metadata>
