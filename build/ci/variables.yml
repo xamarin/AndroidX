@@ -17,7 +17,7 @@ variables:
   
   # macOS specific variables
   macosAgentPoolName: Azure Pipelines                                                   # macOS VM pool name
-  macosImage: internal-macos13                                                          # macOS VM image name
+  macosImage: macos-15                                                                  # macOS VM image name
   
   # Tool variables
   dotnetVersion: '8.0.403'                                                              # .NET version to install on agent
