@@ -182,6 +182,14 @@ static class BindingProjectConverter
 
 		var version = dependency.Version;
 
+		// If <version> was empty, look for a matching <dependencyManagement> entry
+		if (string.IsNullOrWhiteSpace (version)) {
+			var dep_man_dep = project.DependencyManagement?.Dependencies?.FirstOrDefault (d => d.GroupAndArtifactId () == dependency.GroupAndArtifactId ());
+
+			if (dep_man_dep is not null)
+				version = dep_man_dep.Version;
+		}
+
 		if (string.IsNullOrWhiteSpace (version))
 			return;
 

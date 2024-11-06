@@ -273,8 +273,9 @@ AndroidX.Camera.Core.Concurrent
 AndroidX.Camera.Core.ImageCaptures
 AndroidX.Camera.Core.Impl
 AndroidX.Camera.Core.Impl.Annotation
+AndroidX.Camera.Core.Impl.Capability
 AndroidX.Camera.Core.Impl.Compat
-AndroidX.Camera.Core.Impl.Quirk
+AndroidX.Camera.Core.Impl.Stabilization
 AndroidX.Camera.Core.Impl.Utils
 AndroidX.Camera.Core.Impl.Utils.Executors
 AndroidX.Camera.Core.Impl.Utils.Futures
@@ -283,6 +284,8 @@ AndroidX.Camera.Core.Internal.Compat.Quirk
 AndroidX.Camera.Core.Internal.Compat.Workaround
 AndroidX.Camera.Core.Internal.Utils
 AndroidX.Camera.Core.Processing
+AndroidX.Camera.Core.Processing.Concurrent
+AndroidX.Camera.Core.Processing.Util
 AndroidX.Camera.Core.ResolutionSelector
 AndroidX.Camera.Core.StreamSharing
 AndroidX.Camera.Extensions
@@ -301,6 +304,8 @@ AndroidX.Camera.Video.Internal.Encoder
 AndroidX.Camera.Video.Internal.Utils
 AndroidX.Camera.Video.Internal.Workaround
 AndroidX.Camera.View
+AndroidX.Camera.View.Impl
+AndroidX.Camera.View.Internal
 AndroidX.Camera.View.Internal.Compat.Quirk
 AndroidX.Camera.View.Transform
 AndroidX.Camera.View.Video
@@ -352,6 +357,7 @@ AndroidX.Compose.Material3.Tokens
 AndroidX.Compose.Material3.WindowSizeClass
 AndroidX.Concurrent.Futures
 AndroidX.ConstraintLayout.Core
+AndroidX.ConstraintLayout.Core.Dsl
 AndroidX.ConstraintLayout.Core.Motion
 AndroidX.ConstraintLayout.Core.Motion.Key
 AndroidX.ConstraintLayout.Core.Motion.Parse
@@ -359,6 +365,7 @@ AndroidX.ConstraintLayout.Core.Motion.Utils
 AndroidX.ConstraintLayout.Core.Parser
 AndroidX.ConstraintLayout.Core.State
 AndroidX.ConstraintLayout.Core.State.Helpers
+AndroidX.ConstraintLayout.Core.Utils
 AndroidX.ConstraintLayout.Core.Widgets
 AndroidX.ConstraintLayout.Core.Widgets.Analyzer
 AndroidX.ConstraintLayout.Helper.Widget
