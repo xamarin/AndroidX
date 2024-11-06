@@ -1629,6 +1629,7 @@ Task("tools-executive-oreder-csv-and-markdown")
     (
         () =>
         {
+        try {
             StringBuilder sb = new StringBuilder();
             StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
@@ -1896,6 +1897,10 @@ Task("tools-executive-oreder-csv-and-markdown")
 			System.IO.File.WriteAllText("./docs/buildtoolsinventory.md", sb_md.ToString());
 
             return;
+        } catch (Exception ex) { 
+          // Don't fail the build if this fails.
+          Console.WriteLine (ex); 
+        }
         }
     );
 
