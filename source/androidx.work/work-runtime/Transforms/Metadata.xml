@@ -200,4 +200,11 @@
         Java.Lang.Object
     </attr>
 
+    <attr 
+        path="/api/package[@name='androidx.work']/class[@name='DefaultWorkerFactory']/method[@name='createWorker' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='androidx.work.WorkerParameters']]"
+        name="managedReturn"
+        >
+        AndroidX.Work.ListenableWorker
+    </attr>
+
 </metadata>
