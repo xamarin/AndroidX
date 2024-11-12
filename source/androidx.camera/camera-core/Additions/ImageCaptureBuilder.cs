@@ -29,11 +29,6 @@ namespace AndroidX.Camera.Core
 			{
 				return SetTargetName (name);
 			}
-
-			Java.Lang.Object IUseCaseEventConfigBuilder.SetUseCaseEventCallback (IEventCallback p0)
-			{
-				return SetUseCaseEventCallback (p0);
-			}
 		}
 	}
 }
