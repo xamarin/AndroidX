@@ -13,6 +13,8 @@
 #addin nuget:?package=HolisticWare.Core.Net.HTTP&version=0.0.4
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.4
 
+#load "build/cake/performance-timings.cake"
+
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 
@@ -21,6 +23,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 using HolisticWare.Xamarin.Tools.ComponentGovernance;
+
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
@@ -1093,24 +1096,23 @@ Task ("api-diff-markdown-info-pr")
                     idx_start = i;
                 }
 
-                if(line.Contains("dependencyOnly"))
+                if (line.StartsWith("-"))
                 {
-                    if (line.StartsWith("-"))
+                    string next_line = lines[i + 1];
+                    if (next_line.StartsWith("-"))
                     {
-                        continue;
+                        idx_stop = i;
                     }
-                    idx_stop = i;
                 }
 
                 if (idx_start != -1 && idx_stop != -1)
                 {
-                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start);
+                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start + 4);
                     changelog_blocks.Add(changelog_block);
                     idx_start = -1;
                     idx_stop = -1;
                 }
             }
-
 
             foreach (List<string> changelog_block_lines in changelog_blocks)
             {
@@ -1142,8 +1144,11 @@ Task ("api-diff-markdown-info-pr")
                             continue;
                         }
 
-                        v_artifact_old = ParseDiffLine(line, "version");
-                        continue;
+                        if (line.StartsWith("-"))
+                        {
+                            v_artifact_old = ParseDiffLine(line, "version");
+                            continue;
+                        }
                     }
 
                     if (line.Contains("nugetVersion"))
@@ -1169,7 +1174,7 @@ Task ("api-diff-markdown-info-pr")
                 }
 
                 string changelog_line = $"- `{g}:{a}` - {v_artifact_old} -> {v_artifact_new}";
-
+                Information(changelog_line);
                 changelog.Add(changelog_line);
             }
 
@@ -1231,18 +1236,25 @@ Task ("api-diff-analysis")
                 Information( $"Directory    = {d}");
                 Information( $"     nugetId    = {d.GetDirectoryName()}");
 
-                bool    dependencyOnly  = true;
+                bool?    dependencyOnly  = true;
                 string  groupId         = null;
                 string  artifactId      = null;
                 string  nugetId         = null;
                 string  nugetVersion    = null;
-                // no guarantees thta config.json is sorted, so linear "search"
+                // no guarantees that config.json is sorted, so linear "search"
                 // TODO: sort + (LINQ or binary serch)
                 foreach(JObject jo in binderator_json_array[0]["artifacts"])
                 {
-                    dependencyOnly  = (bool)    jo["dependencyOnly"];
+                    try
+                    {
+                        dependencyOnly  = (bool)    jo["dependencyOnly"];
+                    }
+                    catch
+                    {
+                        dependencyOnly  = null;
+                    }
 
-                    if ( dependencyOnly == true)
+                    if ( dependencyOnly == null || dependencyOnly == true)
                     {
                         continue;
                     }
@@ -1620,6 +1632,7 @@ Task("tools-executive-oreder-csv-and-markdown")
     (
         () =>
         {
+        try {
             StringBuilder sb = new StringBuilder();
             StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
@@ -1887,6 +1900,10 @@ Task("tools-executive-oreder-csv-and-markdown")
 			System.IO.File.WriteAllText("./docs/buildtoolsinventory.md", sb_md.ToString());
 
             return;
+        } catch (Exception ex) { 
+          // Don't fail the build if this fails.
+          Console.WriteLine (ex); 
+        }
         }
     );
 

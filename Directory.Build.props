@@ -69,7 +69,7 @@
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
+    <PackageProjectUrl>https://aka.ms/android-libraries</PackageProjectUrl>
     <PackageReadmeFile Condition="Exists('$(MSBuildProjectDirectory)/readme.md')">readme.md</PackageReadmeFile>
 
     <!-- Exclude TF-specific transform files by default -->

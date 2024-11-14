@@ -122,4 +122,17 @@
         Java.Lang.Object
     </attr>
 
+    <attr
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='QuirkSettingsLoader']/method[@name='apply' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[1]"
+        name="managedType"
+        >
+        Java.Lang.Object
+    </attr>
+    <attr
+        path="/api/package[@name='androidx.camera.core.impl']/class[@name='QuirkSettingsLoader']/method[@name='apply' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+        name="managedReturn"
+        >
+        Java.Lang.Object
+    </attr>
+
 </metadata>
