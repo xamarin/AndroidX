@@ -132,42 +132,56 @@
         "groupId": "androidx.camera",
         "artifactId": "camera-camera2",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Camera.Camera2"
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-core",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Camera.Core"
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-effects",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0.2",
+        "nugetId": "Xamarin.AndroidX.Camera.Effects"
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-extensions",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Camera.Extensions"
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-lifecycle",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Camera.Lifecycle"
+      },
+      {
+        "groupId": "androidx.camera",
+        "artifactId": "camera-mlkit-vision",
+        "version": "1.4.0",
+        "nugetVersion": "1.4.0.2",
+        "nugetId": "Xamarin.AndroidX.Camera.MLKit.Vision"
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-video",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Camera.Video"
       },
       {
         "groupId": "androidx.camera",
         "artifactId": "camera-view",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.1",
+        "nugetVersion": "1.4.0.2",
         "nugetId": "Xamarin.AndroidX.Camera.View"
       },
       {
@@ -188,7 +202,7 @@
         "groupId": "androidx.car.app",
         "artifactId": "app",
         "version": "1.4.0",
-        "nugetVersion": "1.4.0.4",
+        "nugetVersion": "1.4.0.5",
         "nugetId": "Xamarin.AndroidX.Car.App.App"
       },
       {
