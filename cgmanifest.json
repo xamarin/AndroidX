@@ -4305,9 +4305,9 @@
         "maven": {
           "artifactId": "play-services-basement",
           "groupId": "com.google.android.gms",
-          "version": "18.4.0",
+          "version": "18.5.0",
           "nuGetId": "Xamarin.GooglePlayServices.Basement",
-          "nuGetVersion": "118.4.0.3"
+          "nuGetVersion": "118.5.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -5046,9 +5046,9 @@
         "maven": {
           "artifactId": "play-services-tflite-gpu",
           "groupId": "com.google.android.gms",
-          "version": "16.2.0",
+          "version": "16.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.TfLite.Gpu",
-          "nuGetVersion": "116.2.0.11"
+          "nuGetVersion": "116.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -5059,9 +5059,9 @@
         "maven": {
           "artifactId": "play-services-tflite-impl",
           "groupId": "com.google.android.gms",
-          "version": "16.1.0",
+          "version": "16.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.TfLite.Impl",
-          "nuGetVersion": "116.1.0.11"
+          "nuGetVersion": "116.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -5072,9 +5072,9 @@
         "maven": {
           "artifactId": "play-services-tflite-java",
           "groupId": "com.google.android.gms",
-          "version": "16.1.0",
+          "version": "16.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.TfLite.Java",
-          "nuGetVersion": "116.1.0.11"
+          "nuGetVersion": "116.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -5085,9 +5085,9 @@
         "maven": {
           "artifactId": "play-services-tflite-support",
           "groupId": "com.google.android.gms",
-          "version": "16.1.0",
+          "version": "16.3.0",
           "nuGetId": "Xamarin.GooglePlayServices.TfLite.Support",
-          "nuGetVersion": "116.1.0.11"
+          "nuGetVersion": "116.3.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -5189,9 +5189,9 @@
         "maven": {
           "artifactId": "play-services-wearable",
           "groupId": "com.google.android.gms",
-          "version": "18.2.0",
+          "version": "19.0.0",
           "nuGetId": "Xamarin.GooglePlayServices.Wearable",
-          "nuGetVersion": "118.2.0.3"
+          "nuGetVersion": "119.0.0"
         }
       },
       "license": "Android Software Development Kit License"
@@ -5574,9 +5574,9 @@
         "maven": {
           "artifactId": "error_prone_annotations",
           "groupId": "com.google.errorprone",
-          "version": "2.35.1",
+          "version": "2.36.0",
           "nuGetId": "Xamarin.Google.ErrorProne.Annotations",
-          "nuGetVersion": "2.35.1.1"
+          "nuGetVersion": "2.36.0"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7403,9 +7403,9 @@
         "maven": {
           "artifactId": "grpc-android",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Android",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7416,9 +7416,9 @@
         "maven": {
           "artifactId": "grpc-api",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Api",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7429,9 +7429,9 @@
         "maven": {
           "artifactId": "grpc-context",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Context",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7442,9 +7442,9 @@
         "maven": {
           "artifactId": "grpc-core",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Core",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7455,9 +7455,9 @@
         "maven": {
           "artifactId": "grpc-okhttp",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.OkHttp",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7468,9 +7468,9 @@
         "maven": {
           "artifactId": "grpc-protobuf-lite",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Protobuf.Lite",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7481,9 +7481,9 @@
         "maven": {
           "artifactId": "grpc-stub",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Stub",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
@@ -7494,9 +7494,9 @@
         "maven": {
           "artifactId": "grpc-util",
           "groupId": "io.grpc",
-          "version": "1.63.2",
+          "version": "1.65.1",
           "nuGetId": "Xamarin.Grpc.Util",
-          "nuGetVersion": "1.63.2.2"
+          "nuGetVersion": "1.65.1"
         }
       },
       "license": "The Apache Software License, Version 2.0"
