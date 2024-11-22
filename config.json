@@ -2403,8 +2403,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-basement",
-        "version": "18.4.0",
-        "nugetVersion": "118.4.0.3",
+        "version": "18.5.0",
+        "nugetVersion": "118.5.0",
         "nugetId": "Xamarin.GooglePlayServices.Basement",
         "type": "xbd"
       },
@@ -2863,32 +2863,32 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-gpu",
-        "version": "16.2.0",
-        "nugetVersion": "116.2.0.11",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Gpu",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-impl",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.11",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Impl",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-java",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.11",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Java",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-tflite-support",
-        "version": "16.1.0",
-        "nugetVersion": "116.1.0.11",
+        "version": "16.3.0",
+        "nugetVersion": "116.3.0",
         "nugetId": "Xamarin.GooglePlayServices.TfLite.Support",
         "type": "xbd"
       },
@@ -2951,8 +2951,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-wearable",
-        "version": "18.2.0",
-        "nugetVersion": "118.2.0.3",
+        "version": "19.0.0",
+        "nugetVersion": "119.0.0",
         "nugetId": "Xamarin.GooglePlayServices.Wearable",
         "type": "xbd"
       },
@@ -3200,8 +3200,8 @@
       {
         "groupId": "com.google.errorprone",
         "artifactId": "error_prone_annotations",
-        "version": "2.35.1",
-        "nugetVersion": "2.35.1.1",
+        "version": "2.36.0",
+        "nugetVersion": "2.36.0",
         "nugetId": "Xamarin.Google.ErrorProne.Annotations",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4390,8 +4390,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Android",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4399,8 +4399,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Api",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4408,8 +4408,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Context",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4417,8 +4417,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Core",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4426,8 +4426,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4435,8 +4435,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4444,8 +4444,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Stub",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4453,8 +4453,8 @@
       {
         "groupId": "io.grpc",
         "artifactId": "grpc-util",
-        "version": "1.63.2",
-        "nugetVersion": "1.63.2.2",
+        "version": "1.64.2",
+        "nugetVersion": "1.64.2",
         "nugetId": "Xamarin.Grpc.Util",
         "excludedRuntimeDependencies": "io.grpc.grpc-core,junit.junit,io.grpc.grpc-testing,org.mockito.mockito-core",
         "type": "androidlibrary",
