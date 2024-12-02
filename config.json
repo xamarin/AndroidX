@@ -4391,7 +4391,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-android",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Android",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4400,7 +4400,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-api",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Api",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4409,7 +4409,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-context",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Context",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4418,7 +4418,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-core",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Core",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4427,7 +4427,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-okhttp",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.OkHttp",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4436,7 +4436,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-protobuf-lite",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Protobuf.Lite",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4445,7 +4445,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-stub",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Stub",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
@@ -4454,7 +4454,7 @@
         "groupId": "io.grpc",
         "artifactId": "grpc-util",
         "version": "1.63.2",
-        "nugetVersion": "1.63.2",
+        "nugetVersion": "1.63.2.2",
         "nugetId": "Xamarin.Grpc.Util",
         "excludedRuntimeDependencies": "io.grpc.grpc-core,junit.junit,io.grpc.grpc-testing,org.mockito.mockito-core",
         "type": "androidlibrary",
