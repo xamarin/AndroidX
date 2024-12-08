@@ -810,6 +810,7 @@ Task ("spell-check")
                 "InjectApi",
                 "AVIF",
                 "AOMedia",
+                "JSpecify",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
