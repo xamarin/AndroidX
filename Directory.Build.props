@@ -325,6 +325,7 @@
     <AndroidNamespaceReplacement Include='mlkit' Replacement='MLKit' />
     <AndroidNamespaceReplacement Include='opengl' Replacement='OpenGL' />
     <AndroidNamespaceReplacement Include='org.jspecify.annotations' Replacement='Xamarin.JSpecify.Annotations' />
+    <AndroidNamespaceReplacement Include='signalgeneration' Replacement='SignalGeneration' />
     
   </ItemGroup>
 
