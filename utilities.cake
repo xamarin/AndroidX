@@ -810,6 +810,7 @@ Task ("spell-check")
                 "InjectApi",
                 "AVIF",
                 "AOMedia",
+                "JSpecify",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -1508,6 +1509,9 @@ Task("generate-markdown-publish-log")
                 row++;
             }
 
+            packages_published.Sort();
+            packages_rejected.Sort();
+            
             string dump_packages_published  = string.Join($"{Environment.NewLine}", packages_published);
             string dump_packages_rejected   = string.Join($"{Environment.NewLine}", packages_rejected);
 
