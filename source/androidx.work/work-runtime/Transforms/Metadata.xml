@@ -11,6 +11,7 @@
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setInputData']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setPeriodStartTime']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setScheduleRequestedAt']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
+    <attr path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/method[@name='setId']" name="managedReturn">AndroidX.Work.WorkRequest.Builder</attr>
     
     <remove-node
         path="/api/package[@name='androidx.work']/class[@name='WorkRequest.Builder']/typeParameters" 

@@ -9,7 +9,6 @@ parameters:
   runDotnetNextTest: false
   
   tools:                                                            # Additional .NET global tools to install
-  - 'xamarin.androidbinderator.tool': '0.5.7'
   - 'Cake.Tool': '4.0.0'
   - 'private-api-tools': '1.0.3'
   
@@ -22,7 +21,9 @@ jobs:
   displayName: ${{ parameters.name }}
   timeoutInMinutes: ${{ parameters.timeoutInMinutes }}
   pool: ${{ parameters.buildPool }}
-  
+  workspace:
+    clean: all
+    
   templateContext:
     sdl:
       spotBugs:
