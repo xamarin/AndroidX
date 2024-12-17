@@ -5,9 +5,20 @@ trigger:
 pr:
   - main
   
+schedules:
+- cron: '0 0 * * *'
+  displayName: Nightly Extended Tests
+  branches:
+    include:
+    - main
+    
 parameters:
 - name: RunExtendedTests
   displayName: Run Extended Tests?
+  type: boolean
+  default: false
+- name: RunDotnetNextTest
+  displayName: Run on .NET next preview?
   type: boolean
   default: false
   
@@ -54,14 +65,8 @@ extends:
             image: $(windowsImage)
             os: windows
           runAPIScan: true
+          runDotnetNextTest: ${{ parameters.RunDotnetNextTest }}
 
-      - template: sign-artifacts/jobs/v2.yml@internal-templates
-        parameters:
-          artifactName: output-windows
-          usePipelineArtifactTasks: true
-          use1ESTemplate: true
-          condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/')
-          
     - stage: build_mac
       displayName: Build - Mac
       dependsOn:
@@ -72,8 +77,11 @@ extends:
           name: macos
           buildPool:
             name: $(macosAgentPoolName)
-            vmImage: $(macosImage)
             os: macOS
+            demands:
+              - macOS.Name -equals Sonoma
+              - macOS.Architecture -equals x64
+          runDotnetNextTest: ${{ parameters.RunDotnetNextTest }}
 
     - template: build/ci/stage-standard-tests.yml@self
       parameters:
@@ -84,8 +92,10 @@ extends:
 
     - template: build/ci/stage-extended-tests.yml@self
       parameters:
-        stageCondition: and(succeeded(), ne('$(skipUnitTests)', 'true'), eq('${{ parameters.RunExtendedTests }}', 'true'))
+        stageCondition: and(succeeded(), ne('$(skipUnitTests)', 'true'), or(eq('${{ parameters.RunExtendedTests }}', 'true'), eq(variables['Build.CronSchedule.DisplayName'], 'Nightly Extended Tests')))
         buildPool:
           name: $(windowsAgentPoolName)
           image: $(windowsImage)
           os: windows
+
+    - template: build/ci/stage-sign-artifacts.yml@self

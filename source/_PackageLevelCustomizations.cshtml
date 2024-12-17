@@ -1,0 +1,57 @@
+@model AndroidBinderator.BindingProjectModel
+@using System
+@using System.Linq
+
+@* 
+   Ideally we don't want to maintain any package-specific customizations,
+   but we don't always have a better option. 
+*@
+  
+@if(Model.NuGetPackageId == "Xamarin.Google.Guava") {
+  <ItemGroup>
+    <!-- Reference a version of ListenableFuture that does not contain 'listenablefuture.jar' -->
+    <PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="9999.0.0" />
+  </ItemGroup>
+}
+
+@switch (@Model.NuGetPackageId)
+{
+  case "Xamarin.Google.MLKit.ObjectDetection":
+  case "Xamarin.Google.MLKit.ObjectDetection.Custom":
+  case "Xamarin.Google.MLKit.PoseDetection":
+  case "Xamarin.Google.MLKit.PoseDetection.Accurate":
+  <!-- Filed as https://github.com/xamarin/java.interop/issues/1116 -->
+  <PropertyGroup>
+    <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>false</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
+  </PropertyGroup>
+  break;
+}
+
+@if (@Model.NuGetPackageId == "Xamarin.GooglePlayServices.Basement")
+{
+  <ItemGroup>
+    <None Include="..\..\source\com.google.android.gms\play-services-basement\buildtasks\bin\$(Configuration)\Xamarin.GooglePlayServices.Tasks.dll" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
+  </ItemGroup>
+}
+
+@* Pull in the play core extensions helpers *@
+@if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Core")
+{
+  <ItemGroup>
+    <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.core.extensions\extensions.jar" />
+  </ItemGroup>
+}
+
+@if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Asset.Delivery")
+{
+  <ItemGroup>
+    <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.asset.delivery.extensions\extensions.jar" />
+  </ItemGroup>
+}
+
+@if (@Model.NuGetPackageId == "Xamarin.Google.Android.Play.Feature.Delivery")
+{
+  <ItemGroup>
+    <EmbeddedJar Include="..\..\externals\com.xamarin.google.android.play.feature.delivery.extensions\extensions.jar" />
+  </ItemGroup>
+}

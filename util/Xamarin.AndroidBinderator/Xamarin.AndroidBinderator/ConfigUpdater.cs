@@ -3,7 +3,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using MavenNet.Models;
-using Microsoft.Extensions.Options;
 using NuGet.Versioning;
 
 namespace AndroidBinderator;
@@ -27,11 +26,18 @@ public class ConfigUpdater
 				continue;
 
 			if (HasUpdate (art, a)) {
-				var new_version = GetLatestVersion (a)?.ToString ();
-				var prefix = GetThreePartVersion (art.NugetVersion!) == "1" + GetThreePartVersion (art.Version) ? "1" : string.Empty;
+				var new_version = GetLatestVersion (a)?.ToString () ?? string.Empty;
+				var needs_prefix = NeedsPrefix (art.NugetVersion!, art.Version);
 
-				art.LatestVersion = new_version ?? string.Empty;
-				art.LatestNuGetVersion = prefix + new_version;
+				art.LatestVersion = new_version;
+				art.LatestNuGetVersion = new_version;
+
+				if (needs_prefix) {
+					if (new_version.IndexOf ('.') == 1)
+						art.LatestNuGetVersion = $"10{new_version}";
+					else
+						art.LatestNuGetVersion = $"1{new_version}";
+				}
 			}
 		}
 
@@ -125,18 +131,15 @@ public class ConfigUpdater
 		return SemanticVersion.Parse (version + tag);
 	}
 
-	static string GetThreePartVersion (string version)
+	static bool NeedsPrefix (string nugetVersion, string artifactVersion)
 	{
-		// Change 121.0.0.0-beta1 to 121.0.0
-		var hyphen = version.IndexOf ('-');
-		version = hyphen >= 0 ? version.Substring (0, hyphen) : version;
+		var nuget = Extensions.GetThreePartVersion (nugetVersion);
+		var artifact = Extensions.GetThreePartVersion (artifactVersion);
 
-		var parts = version.Split ('.');
+		var nuget_major = int.Parse (nuget.Split ('.') [0]);
+		var artifact_major = int.Parse (artifact.Split ('.') [0]);
 
-		if (parts.Count () < 3)
-			return version;
-
-		return $"{parts [0]}.{parts [1]}.{parts [2]}";
+		return nuget_major == artifact_major + 100;
 	}
 
 	static async Task<List<MavenArtifactConfig>> GetExternalDependencies (List<string> externalFiles)

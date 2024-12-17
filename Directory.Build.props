@@ -8,7 +8,7 @@
     <!-- Default TFM's we build for -->
     <_DefaultTargetFrameworks>net8.0-android</_DefaultTargetFrameworks>
     <_DefaultNetTargetFrameworks>net8.0</_DefaultNetTargetFrameworks>
-    
+
     <!-- Enable DIM/SIM for Classic (defaults to true on .NET) -->
     <AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>true</AndroidBoundInterfacesContainStaticAndDefaultInterfaceMethods>
 
@@ -18,12 +18,12 @@
 
     <!-- .NET 6+ generates Resource.designer.cs files for bindings projects which we do not want -->
     <AndroidGenerateResourceDesigner>false</AndroidGenerateResourceDesigner>
-    
+
     <!-- .NET 6+ packages support back to API-21 -->
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
 
-    <!-- Mark .NET6+ packages as supporting trimming -->
-    <IsTrimmable>true</IsTrimmable>
+    <!-- Assemblies should be deterministic -->
+    <Deterministic>true</Deterministic>
 
     <!-- Generate NRT annotations -->
     <Nullable Condition=" '$(Nullable)' == '' ">enable</Nullable>
@@ -31,13 +31,45 @@
     <!-- Warnings we want to error on: -->
     <!-- NU5104: A stable release of a package should not have a prerelease dependency. -->
     <WarningsAsErrors>$(WarningsAsErrors);NU5104</WarningsAsErrors>
-    
+
+    <!-- Ignore binding generator warnings by default -->
+    <_AndroidIgnoreGeneratorWarnings>true</_AndroidIgnoreGeneratorWarnings>
+
+    <!--
+      BG8102: Class 'foo' has unknown base type 'foo'.
+      BG8103: Class 'foo' has invalid base type 'foo'.
+      BG8300: For constructor 'foo', could not find enclosing type 'foo'.
+      BG8400: Unexpected field type `foo` (foo).
+      BG8401: Skipping 'foo' due to a duplicate nested type name. (Java type: 'foo')
+      BG8402: Skipping 'foo' due to a duplicate field. (Java type: 'foo')
+      BG8403: Type 'foo' has a type name which matches the enclosing namespace name. See https://aka.ms/BG8403 for more information.
+      BG8501: No event name provided in 'foo'.
+      BG8502: Invalidating 'IFoo' and all its nested types because some of its interfaces were invalid.
+      BG8503: Invalidating 'IFoo' and all its nested types because some of its methods were invalid.
+      BG8504: Event name for 'foo' is invalid. A valid 'eventName' or 'argsType' can be assigned by adding a rule to the Metadata.xml transforms file.
+      BG8601: No '<package>' elements found.
+      BG8604: Could not find top ancestor type 'foo' for nested type 'foo'.
+      BG8605: The Java type 'foo' could not be found (are you missing a Java reference jar/aar or a Java binding library NuGet?)
+      BG8606: Some types or members could not be bound because referenced Java types could not be found. See the 'java-resolution-report.log' file for details.
+      BG8700: Unknown return type 'foo' for member 'foo'.
+      BG8701: Invalid return type 'foo' for member 'foo'.
+      BG8800: Unknown parameter type 'foo' for member 'foo (foo)'.
+      BG8801: Invalid parameter type 'foo' for member 'foo'.
+      BG8A00: Metadata.xml element '<foo>' matched no nodes.
+      BG8A01: Metadata.xml element '<add-node path="foo" />' matched no nodes.
+      BG8A04: Metadata.xml element '<attr path="foo" />' matched no nodes.
+      BG8B00: Unknown generic argument constraint type 'S' for member 'foo'.
+      BG8C00: Could not find base interface 'foo' for type 'foo'.
+      BG8C01: For type 'IFoo', base interface 'foo' is invalid.
+    -->
+    <NoWarn Condition=" '$(_AndroidIgnoreGeneratorWarnings)' == 'true' ">$(NoWarn);BG8102;BG8103;BG8300;BG8400;BG8401;BG8402;BG8403;BG8501;BG8502;BG8503;BG8504;BG8601;BG8604;BG8605;BG8606;BG8700;BG8701;BG8800;BG8801;BG8A00;BG8A01;BG8A04;BG8B00;BG8C00;BG8C01;nullable</NoWarn>
+
     <!-- Common package metadata -->
     <Authors>Microsoft</Authors>
     <Owners>Microsoft</Owners>
     <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://aka.ms/androidx</PackageProjectUrl>
+    <PackageProjectUrl>https://aka.ms/android-libraries</PackageProjectUrl>
     <PackageReadmeFile Condition="Exists('$(MSBuildProjectDirectory)/readme.md')">readme.md</PackageReadmeFile>
 
     <!-- Exclude TF-specific transform files by default -->
@@ -63,10 +95,10 @@
     <AndroidNamespaceReplacement Include='com.google.inject' Replacement='Xamarin.Google.Inject' />
     <AndroidNamespaceReplacement Include='com.google.errorprone' Replacement='Xamarin.Google.ErrorProne' />
     <AndroidNamespaceReplacement Include='com.google.protobuf' Replacement='Xamarin.Protobuf.Lite' />
-    <AndroidNamespaceReplacement Include='com.google.android.datatransport' Replacement='Xamarin.Google.Android.DataTransport' />    
-    <AndroidNamespaceReplacement Include='com.google.android.finsky' Replacement='Xamarin.Google.Android.Finsky' />    
+    <AndroidNamespaceReplacement Include='com.google.android.datatransport' Replacement='Xamarin.Google.Android.DataTransport' />
+    <AndroidNamespaceReplacement Include='com.google.android.finsky' Replacement='Xamarin.Google.Android.Finsky' />
     <AndroidNamespaceReplacement Include='com.google.flatbuffers' Replacement='Xamarin.Google.FlatBuffers' />
-    
+
     <!-- Yes, this is spelled incorrectly  :( -->
     <AndroidNamespaceReplacement Include='com.google.android.ump' Replacement='Xamarin.Google.UserMesssagingPlatform' />
 
@@ -254,40 +286,46 @@
     <AndroidNamespaceReplacement Include='RTMP' Replacement='Rtmp' />
     <AndroidNamespaceReplacement Include='OkIO' Replacement='OkIO' />
     <AndroidNamespaceReplacement Include='Atomicfu' Replacement='AtomicFU' />
-    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />   
-    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />    
-    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />    
-    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />    
-    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />    
-    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />    
-    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />    
-    <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />    
-    <AndroidNamespaceReplacement Include='jobscheduling' Replacement='JobScheduling' />    
-    <AndroidNamespaceReplacement Include='consent_sdk' Replacement='ConsentSDK' />    
-    <AndroidNamespaceReplacement Include='ump' Replacement='UserMessagingPlatform' />    
-    <AndroidNamespaceReplacement Include='flatbuffers' Replacement='FlatBuffers' />    
-    <AndroidNamespaceReplacement Include='tls' Replacement='TLS' />    
-    <AndroidNamespaceReplacement Include='appengine' Replacement='AppEngine' />    
-    <AndroidNamespaceReplacement Include='inprocess' Replacement='InProcess' />    
-    <AndroidNamespaceReplacement Include='apihelpers' Replacement='ApiHelpers' />    
-    <AndroidNamespaceReplacement Include='urlconnection' Replacement='UrlConnection' />    
-    <AndroidNamespaceReplacement Include='animal_sniffer' Replacement='AnimalSnifferAnnotations' />    
-    <AndroidNamespaceReplacement Include='gpu' Replacement='GPU' />    
-    <AndroidNamespaceReplacement Include='tensorbuffer' Replacement='TensorBuffer' />    
-    <AndroidNamespaceReplacement Include='bertclu' Replacement='BertClu' />    
-    <AndroidNamespaceReplacement Include='nlclassifier' Replacement='NLClassifier' />    
-    <AndroidNamespaceReplacement Include='zxing' Replacement='ZXing' />    
-    <AndroidNamespaceReplacement Include='reedsolomon' Replacement='ReedSolomon' />    
-    <AndroidNamespaceReplacement Include='datamatrix' Replacement='DataMatrix' />    
-    <AndroidNamespaceReplacement Include='maxicode' Replacement='MaxiCode' />    
-    <AndroidNamespaceReplacement Include='qrcode' Replacement='QRCode' />    
-    <AndroidNamespaceReplacement Include='oned' Replacement='OneD' />    
-    <AndroidNamespaceReplacement Include='rss' Replacement='RSS' />    
-    <AndroidNamespaceReplacement Include='pdf417' Replacement='PDF417' />    
-    <AndroidNamespaceReplacement Include='rtmp_client' Replacement='Rtmp.Client' />    
-    <AndroidNamespaceReplacement Include='rxkotlin' Replacement='RxKotlin' />    
-    <AndroidNamespaceReplacement Include='native_test' Replacement='Native_Test' />    
-    <AndroidNamespaceReplacement Include='httpflags' Replacement='HttpFlags' />    
+    <AndroidNamespaceReplacement Include='Emojipicker' Replacement='EmojiPicker' />
+    <AndroidNamespaceReplacement Include='privacysandbox' Replacement='PrivacySandbox' />
+    <AndroidNamespaceReplacement Include='adservices' Replacement='AdServices' />
+    <AndroidNamespaceReplacement Include='adid' Replacement='AdId' />
+    <AndroidNamespaceReplacement Include='adselection' Replacement='AdSelection' />
+    <AndroidNamespaceReplacement Include='appsetid' Replacement='AppSetId' />
+    <AndroidNamespaceReplacement Include='customaudience' Replacement='CustomAudience' />
+    <AndroidNamespaceReplacement Include='mediaextensions' Replacement='MediaExtensions' />
+    <AndroidNamespaceReplacement Include='jobscheduling' Replacement='JobScheduling' />
+    <AndroidNamespaceReplacement Include='consent_sdk' Replacement='ConsentSDK' />
+    <AndroidNamespaceReplacement Include='ump' Replacement='UserMessagingPlatform' />
+    <AndroidNamespaceReplacement Include='flatbuffers' Replacement='FlatBuffers' />
+    <AndroidNamespaceReplacement Include='tls' Replacement='TLS' />
+    <AndroidNamespaceReplacement Include='appengine' Replacement='AppEngine' />
+    <AndroidNamespaceReplacement Include='inprocess' Replacement='InProcess' />
+    <AndroidNamespaceReplacement Include='apihelpers' Replacement='ApiHelpers' />
+    <AndroidNamespaceReplacement Include='urlconnection' Replacement='UrlConnection' />
+    <AndroidNamespaceReplacement Include='animal_sniffer' Replacement='AnimalSnifferAnnotations' />
+    <AndroidNamespaceReplacement Include='gpu' Replacement='GPU' />
+    <AndroidNamespaceReplacement Include='tensorbuffer' Replacement='TensorBuffer' />
+    <AndroidNamespaceReplacement Include='bertclu' Replacement='BertClu' />
+    <AndroidNamespaceReplacement Include='nlclassifier' Replacement='NLClassifier' />
+    <AndroidNamespaceReplacement Include='zxing' Replacement='ZXing' />
+    <AndroidNamespaceReplacement Include='reedsolomon' Replacement='ReedSolomon' />
+    <AndroidNamespaceReplacement Include='datamatrix' Replacement='DataMatrix' />
+    <AndroidNamespaceReplacement Include='maxicode' Replacement='MaxiCode' />
+    <AndroidNamespaceReplacement Include='qrcode' Replacement='QRCode' />
+    <AndroidNamespaceReplacement Include='oned' Replacement='OneD' />
+    <AndroidNamespaceReplacement Include='rss' Replacement='RSS' />
+    <AndroidNamespaceReplacement Include='pdf417' Replacement='PDF417' />
+    <AndroidNamespaceReplacement Include='rtmp_client' Replacement='Rtmp.Client' />
+    <AndroidNamespaceReplacement Include='rxkotlin' Replacement='RxKotlin' />
+    <AndroidNamespaceReplacement Include='native_test' Replacement='Native_Test' />
+    <AndroidNamespaceReplacement Include='httpflags' Replacement='HttpFlags' />
+
+    <AndroidNamespaceReplacement Include='org.aomedia.avif' Replacement='Xamarin.AOMedia.AVIF' />
+    <AndroidNamespaceReplacement Include='mlkit' Replacement='MLKit' />
+    <AndroidNamespaceReplacement Include='opengl' Replacement='OpenGL' />
+    <AndroidNamespaceReplacement Include='org.jspecify.annotations' Replacement='Xamarin.JSpecify.Annotations' />
+    <AndroidNamespaceReplacement Include='signalgeneration' Replacement='SignalGeneration' />    
   </ItemGroup>
-  
+
 </Project>

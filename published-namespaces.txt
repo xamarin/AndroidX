@@ -18,6 +18,7 @@ Android.Gms.Ads.Mediation
 Android.Gms.Ads.Mediation.CustomEvent
 Android.Gms.Ads.Mediation.Rtb
 Android.Gms.Ads.NativeAd
+Android.Gms.Ads.Preload
 Android.Gms.Ads.Query
 Android.Gms.Ads.Rewarded
 Android.Gms.Ads.RewardedInterstitial
@@ -98,6 +99,7 @@ Android.Gms.Dynamite.Descriptors.Firebase.ML.Vision.Barcode
 Android.Gms.Dynamite.Descriptors.Flags
 Android.Gms.Dynamite.Descriptors.Gms.CastTVDynamite
 Android.Gms.Dynamite.Descriptors.MLKit.Barcode
+Android.Gms.Dynamite.Descriptors.MLKit.Dynamite.Text.Common
 Android.Gms.Dynamite.Descriptors.TagManager
 Android.Gms.Dynamite.Descriptors.Vision.Face
 Android.Gms.Dynamite.Descriptors.Vision.Ica
@@ -271,8 +273,9 @@ AndroidX.Camera.Core.Concurrent
 AndroidX.Camera.Core.ImageCaptures
 AndroidX.Camera.Core.Impl
 AndroidX.Camera.Core.Impl.Annotation
+AndroidX.Camera.Core.Impl.Capability
 AndroidX.Camera.Core.Impl.Compat
-AndroidX.Camera.Core.Impl.Quirk
+AndroidX.Camera.Core.Impl.Stabilization
 AndroidX.Camera.Core.Impl.Utils
 AndroidX.Camera.Core.Impl.Utils.Executors
 AndroidX.Camera.Core.Impl.Utils.Futures
@@ -281,13 +284,19 @@ AndroidX.Camera.Core.Internal.Compat.Quirk
 AndroidX.Camera.Core.Internal.Compat.Workaround
 AndroidX.Camera.Core.Internal.Utils
 AndroidX.Camera.Core.Processing
+AndroidX.Camera.Core.Processing.Concurrent
+AndroidX.Camera.Core.Processing.Util
 AndroidX.Camera.Core.ResolutionSelector
 AndroidX.Camera.Core.StreamSharing
+AndroidX.Camera.Effects
+AndroidX.Camera.Effects.Internal
+AndroidX.Camera.Effects.OpenGL
 AndroidX.Camera.Extensions
 AndroidX.Camera.Extensions.Internal
 AndroidX.Camera.Extensions.Internal.Compat.Quirk
 AndroidX.Camera.Extensions.Internal.Compat.Workaround
 AndroidX.Camera.Lifecycle
+AndroidX.Camera.MLKit.Vision
 AndroidX.Camera.Video
 AndroidX.Camera.Video.Impl
 AndroidX.Camera.Video.Internal
@@ -299,6 +308,8 @@ AndroidX.Camera.Video.Internal.Encoder
 AndroidX.Camera.Video.Internal.Utils
 AndroidX.Camera.Video.Internal.Workaround
 AndroidX.Camera.View
+AndroidX.Camera.View.Impl
+AndroidX.Camera.View.Internal
 AndroidX.Camera.View.Internal.Compat.Quirk
 AndroidX.Camera.View.Transform
 AndroidX.Camera.View.Video
@@ -350,6 +361,7 @@ AndroidX.Compose.Material3.Tokens
 AndroidX.Compose.Material3.WindowSizeClass
 AndroidX.Concurrent.Futures
 AndroidX.ConstraintLayout.Core
+AndroidX.ConstraintLayout.Core.Dsl
 AndroidX.ConstraintLayout.Core.Motion
 AndroidX.ConstraintLayout.Core.Motion.Key
 AndroidX.ConstraintLayout.Core.Motion.Parse
@@ -357,6 +369,7 @@ AndroidX.ConstraintLayout.Core.Motion.Utils
 AndroidX.ConstraintLayout.Core.Parser
 AndroidX.ConstraintLayout.Core.State
 AndroidX.ConstraintLayout.Core.State.Helpers
+AndroidX.ConstraintLayout.Core.Utils
 AndroidX.ConstraintLayout.Core.Widgets
 AndroidX.ConstraintLayout.Core.Widgets.Analyzer
 AndroidX.ConstraintLayout.Helper.Widget
@@ -524,6 +537,7 @@ AndroidX.Media3.ExoPlayer.Source
 AndroidX.Media3.ExoPlayer.Source.Ads
 AndroidX.Media3.ExoPlayer.Source.Chunk
 AndroidX.Media3.ExoPlayer.Source.MediaParser
+AndroidX.Media3.ExoPlayer.Source.Preload
 AndroidX.Media3.ExoPlayer.Text
 AndroidX.Media3.ExoPlayer.TrackSelection
 AndroidX.Media3.ExoPlayer.Upstream
@@ -535,6 +549,7 @@ AndroidX.Media3.ExoPlayer.WorkManager
 AndroidX.Media3.Extractor
 AndroidX.Media3.Extractor.Amr
 AndroidX.Media3.Extractor.Avi
+AndroidX.Media3.Extractor.Avif
 AndroidX.Media3.Extractor.Bmp
 AndroidX.Media3.Extractor.Flac
 AndroidX.Media3.Extractor.Flv
@@ -568,6 +583,7 @@ AndroidX.Media3.Extractor.Wav
 AndroidX.Media3.Extractor.Webp
 AndroidX.Media3.Muxer
 AndroidX.Media3.Session
+AndroidX.Media3.Session.Legacy
 AndroidX.Media3.Transformer
 AndroidX.Media3.UI
 AndroidX.Media3.UI.Leanback
@@ -712,8 +728,10 @@ AndroidX.Work.Impl.Utils.TaskExecutor
 AndroidX.Work.Impl.Workers
 AndroidX.Work.MultiProcess
 Bumptech.Glide
+Bumptech.Glide.Annotation.Compiler
 Bumptech.Glide.DiskLruCache
 Bumptech.Glide.GifDecoder
+Bumptech.Glide.Integration.AVIF
 Bumptech.Glide.Load
 Bumptech.Glide.Load.Data
 Bumptech.Glide.Load.Data.Mediastore
@@ -782,6 +800,7 @@ Firebase.Crashlytics.Internal
 Firebase.Crashlytics.Internal.Analytics
 Firebase.Crashlytics.Internal.Breadcrumbs
 Firebase.Crashlytics.Internal.Common
+Firebase.Crashlytics.Internal.Concurrency
 Firebase.Crashlytics.Internal.Metadata
 Firebase.Crashlytics.Internal.Model
 Firebase.Crashlytics.Internal.Model.Serialization
@@ -949,7 +968,6 @@ Firestore.Bundle
 Google.Ads.Identifier
 Google.Ads.InteractiveMedia.Omid.Library.AdSession
 Google.Ads.InteractiveMedia.PAL
-Google.Ads.InteractiveMedia.PAL.Utils
 Google.Ads.InteractiveMedia.V3.Api
 Google.Ads.InteractiveMedia.V3.Api.Player
 Google.Ads.InteractiveMedia.V3.Api.Signals
@@ -958,7 +976,9 @@ Google.Ads.InteractiveMedia.V3.Impl.Data
 Google.Ads.Mediation
 Google.Ads.Mediation.Admob
 Google.Ads.Nonagon.Util.Logging.Csi
+Google.Android.Gms.Ads.Nonagon.SignalGeneration
 Google.Android.Libraries.AppActions.Service
+Google.Android.Libraries.Places.Api.Auth
 Google.Android.Material.Animation
 Google.Android.Material.AppBar
 Google.Android.Material.Badge
@@ -1124,6 +1144,7 @@ Kotlin.Text
 Kotlin.Text.Jdk8
 Kotlin.Time
 Kotlin.Time.Jdk8
+Kotlin.Uuid
 KotlinX.Android.Extensions
 KotlinX.Android.Parcel
 KotlinX.AtomicFU
@@ -1238,6 +1259,7 @@ Xamarin.Android.InstallReferrer.Commons
 Xamarin.Android.Libraries.Intelligence.Acceleration
 Xamarin.Android.Libraries.Intelligence.Acceleration.Process
 Xamarin.Android.Libraries.Vision.VisionKit.Pipeline
+Xamarin.AOMedia.AVIF.Android
 Xamarin.AopAlliance.Aop
 Xamarin.AopAlliance.Intercept
 Xamarin.Brotli.Dec
@@ -1432,11 +1454,14 @@ Xamarin.Google.UserMesssagingPlatform
 Xamarin.GoogleAndroid.Libraries.Identity.GoogleId
 Xamarin.GoogleAndroid.Libraries.Places.Api
 Xamarin.GoogleAndroid.Libraries.Places.Api.Model
+Xamarin.GoogleAndroid.Libraries.Places.Api.Model.Kotlin
 Xamarin.GoogleAndroid.Libraries.Places.Api.Net
+Xamarin.GoogleAndroid.Libraries.Places.Api.Net.Kotlin
 Xamarin.GoogleAndroid.Libraries.Places.Compat
 Xamarin.GoogleAndroid.Libraries.Places.Compat.UI
 Xamarin.GoogleAndroid.Libraries.Places.Widget
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Internal.UI
+Xamarin.GoogleAndroid.Libraries.Places.Widget.Kotlin
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Listener
 Xamarin.GoogleAndroid.Libraries.Places.Widget.Model
 Xamarin.GoogleAndroid.Libraries.Vision.VisionKit.Pipeline
@@ -1475,6 +1500,7 @@ Xamarin.Io.OpenCensus.Trace.Propagation
 Xamarin.Io.OpenCensus.Trace.Samplers
 Xamarin.Io.OpenCensus.Trace.Unsafe
 Xamarin.Io.Perfmark
+Xamarin.JSpecify.Annotations
 Xamarin.KotlinX.Coroutines
 Xamarin.KotlinX.Coroutines.Channels
 Xamarin.KotlinX.Coroutines.CoroutinesAndroid

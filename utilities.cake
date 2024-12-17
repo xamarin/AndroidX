@@ -13,6 +13,8 @@
 #addin nuget:?package=HolisticWare.Core.Net.HTTP&version=0.0.4
 #addin nuget:?package=HolisticWare.Core.IO&version=0.0.4
 
+#load "build/cake/performance-timings.cake"
+
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 
@@ -21,6 +23,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 using HolisticWare.Xamarin.Tools.ComponentGovernance;
+
 
 var TARGET = Argument ("t", Argument ("target", "Default"));
 
@@ -675,6 +678,139 @@ Task ("spell-check")
                 "Metadata",
                 "TF",
                 "PlayServices",
+                "Xamarin",
+                "AndroidX",
+                "GooglePlayServices",
+                "AFS",
+                "Analytics",
+                "Impl",
+                "AppInvite",
+                "Auth",
+                "Api",
+                "Clearcut",
+                "CloudMessaging",
+                "CroNet",
+                "Gass",
+                "Gcm",
+                "Iid",
+                "InstantApps",
+                "Sdk",
+                "MLKit",
+                "ImageLabeling",
+                "Oss",
+                "PlaceReport",
+                "SafetyNet",
+                "TagManager",
+                "ImageLabel",
+                "ImageLabelingInternal",
+                "Firebase",
+                "AppIndexing",
+                "Interop",
+                "Config",
+                "Crashlytics",
+                "NDK",
+                "Datatransport",
+                "JSON",
+                "InAppMessaging",
+                "InterOp",
+                "AutoML",
+                "BarCode",
+                "Vkp",
+                "Perf",
+                "ProtoliteWellKnownTypes",
+                "BarcodeScanning",
+                "DigitalInk",
+                "LinkFirebase",
+                "MediaPipe",
+                "FaceDetection",
+                "ObjectDetection",
+                "PoseDetection",
+                "SmartReply",
+                "V4",
+                "Abt",
+                "Firestore",
+                "AppCheck",
+                "Odml",
+                "TensorFlow",
+                "Gpu",
+                "FindBugs",
+                "JSR305",
+                "Grpc",
+                "Protobuf",
+                "OkHttp",
+                "OpenCensus",
+                "OpenCensusApi",
+                "OpenCensusContribGrpcMetrics",
+                "GoogleGson",
+                "ErrorProne",
+                "GoogleAndroid",
+                "CodeHaus",
+                "Mojo",
+                "AnimalSnifferAnnotations",
+                "GifDecoder",
+                "DiskLruCache",
+                "RecyclerViewIntegration",
+                "JavaX",
+                "Protobuf",
+                "JavaLite",
+                "DataTransport",
+                "TransportRuntime",
+                "TransportBackendCct",
+                "TransportApi",
+                "UserMessagingPlatform",
+                "OkHttp",
+                "OkIO",
+                "OkHttp3",
+                "OkHttp3",
+                "UrlConnection",
+                "PerfMark",
+                "PerfMarkApi",
+                "ZXing",
+		        "JavaPoet",
+                "LanguageId",
+                "AppSet",
+                "Ktx",
+                "Proto",
+                "ZXing",
+                "JavaPoet",
+                "Blockstore",
+                "PasswordComplexity",
+                "StreamProtect",
+                "Recaptcha",
+                "Compat",
+                "PlayIntegrity",
+                "TfLite",
+                "V2",
+                "DirectBoot",
+                "FlatBuffers",
+                "TF",
+                "Metadata",
+                "AppIndex",
+                "BillingClient",
+                "LoggingInterceptor",
+                "Retrofit2",
+                "AdapterRxJava2",
+                "ConverterGson",
+                "ConverterScalars",
+                "JVM",
+                "DevicePerformance",
+                "ThreadNetwork",
+                "TextRecognition",
+                "PlayServices",
+                "Util",
+                "GoogleId",
+                "Guice",
+                "AopAlliance",
+                "OW2",
+                "ASM",
+                "Brotli",
+                "TLS",
+                "InteractiveMedia",
+                "V3",
+                "InjectApi",
+                "AVIF",
+                "AOMedia",
+                "JSpecify",
            };
 
             var dictionary_custom = WeCantSpell.Hunspell.WordList.CreateFromWords(words);
@@ -961,24 +1097,23 @@ Task ("api-diff-markdown-info-pr")
                     idx_start = i;
                 }
 
-                if(line.Contains("dependencyOnly"))
+                if (line.StartsWith("-"))
                 {
-                    if (line.StartsWith("-"))
+                    string next_line = lines[i + 1];
+                    if (next_line.StartsWith("-"))
                     {
-                        continue;
+                        idx_stop = i;
                     }
-                    idx_stop = i;
                 }
 
                 if (idx_start != -1 && idx_stop != -1)
                 {
-                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start);
+                    changelog_block = lines.GetRange(idx_start, idx_stop - idx_start + 4);
                     changelog_blocks.Add(changelog_block);
                     idx_start = -1;
                     idx_stop = -1;
                 }
             }
-
 
             foreach (List<string> changelog_block_lines in changelog_blocks)
             {
@@ -1010,8 +1145,11 @@ Task ("api-diff-markdown-info-pr")
                             continue;
                         }
 
-                        v_artifact_old = ParseDiffLine(line, "version");
-                        continue;
+                        if (line.StartsWith("-"))
+                        {
+                            v_artifact_old = ParseDiffLine(line, "version");
+                            continue;
+                        }
                     }
 
                     if (line.Contains("nugetVersion"))
@@ -1037,7 +1175,7 @@ Task ("api-diff-markdown-info-pr")
                 }
 
                 string changelog_line = $"- `{g}:{a}` - {v_artifact_old} -> {v_artifact_new}";
-
+                Information(changelog_line);
                 changelog.Add(changelog_line);
             }
 
@@ -1099,18 +1237,25 @@ Task ("api-diff-analysis")
                 Information( $"Directory    = {d}");
                 Information( $"     nugetId    = {d.GetDirectoryName()}");
 
-                bool    dependencyOnly  = true;
+                bool?    dependencyOnly  = true;
                 string  groupId         = null;
                 string  artifactId      = null;
                 string  nugetId         = null;
                 string  nugetVersion    = null;
-                // no guarantees thta config.json is sorted, so linear "search"
+                // no guarantees that config.json is sorted, so linear "search"
                 // TODO: sort + (LINQ or binary serch)
                 foreach(JObject jo in binderator_json_array[0]["artifacts"])
                 {
-                    dependencyOnly  = (bool)    jo["dependencyOnly"];
+                    try
+                    {
+                        dependencyOnly  = (bool)    jo["dependencyOnly"];
+                    }
+                    catch
+                    {
+                        dependencyOnly  = null;
+                    }
 
-                    if ( dependencyOnly == true)
+                    if ( dependencyOnly == null || dependencyOnly == true)
                     {
                         continue;
                     }
@@ -1364,6 +1509,9 @@ Task("generate-markdown-publish-log")
                 row++;
             }
 
+            packages_published.Sort();
+            packages_rejected.Sort();
+            
             string dump_packages_published  = string.Join($"{Environment.NewLine}", packages_published);
             string dump_packages_rejected   = string.Join($"{Environment.NewLine}", packages_rejected);
 
@@ -1488,6 +1636,7 @@ Task("tools-executive-oreder-csv-and-markdown")
     (
         () =>
         {
+        try {
             StringBuilder sb = new StringBuilder();
             StringBuilder sb_md = new StringBuilder();
             sb.AppendLine("BuildToolName,BuildToolVersion");
@@ -1755,6 +1904,10 @@ Task("tools-executive-oreder-csv-and-markdown")
 			System.IO.File.WriteAllText("./docs/buildtoolsinventory.md", sb_md.ToString());
 
             return;
+        } catch (Exception ex) { 
+          // Don't fail the build if this fails.
+          Console.WriteLine (ex); 
+        }
         }
     );
 

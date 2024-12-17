@@ -96,4 +96,11 @@
         androidx/media3/common/Player.replaceMediaItems(IILjava/util/List;)V
     </attr>
     -->
+    <attr
+        path="/api/package[@name='androidx.media3.common.audio']/class[@name='SpeedChangingAudioProcessor']/method[@name='getDurationAfterProcessorApplied' and count(parameter)=1 and parameter[1][@type='long']]"
+        name="final"
+        >
+        true
+    </attr>
+
 </metadata>

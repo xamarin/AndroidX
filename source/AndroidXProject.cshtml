@@ -9,6 +9,7 @@
     <IsBindingProject>true</IsBindingProject>
     <AssemblyName>@Model.GetAssemblyName()</AssemblyName>
     <AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
+    <AndroidUseDesignerAssembly>false</AndroidUseDesignerAssembly>   
     <RootNamespace>@Model.GetRootNamespace()</RootNamespace>
     
     <!--
@@ -22,7 +23,7 @@
        - CS1572: XML comment has a param tag for '', but there is no parameter by that name
        - XAOBS001: While this member is 'public', Google considers it internal API and reserves the right to modify or delete it in the future. Use at your own risk. 
     -->
-    <NoWarn>0618;0109;0114;0628;0108;0809;1572;XAOBS001</NoWarn>
+    <NoWarn>$(NoWarn);0618;0109;0114;0628;0108;0809;1572;XAOBS001</NoWarn>
 
 @if (Model.AllowPrereleaseDependencies) {
     <!-- Allow this package to have prerelease dependencies -->
@@ -45,7 +46,7 @@
     <PackageLicenseExpression>@Model.GetSpdxExpression()</PackageLicenseExpression>
 } else
 {
-  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 }
     <PackageIcon>icon.png</PackageIcon>
     <PackageVersion>@(Model.NuGetVersion)$(PackageVersionSuffix)</PackageVersion>
@@ -55,9 +56,6 @@
 
   <!-- Packaging files -->
   <ItemGroup>
-    @if (Model.ShouldIncludeArtifact && Model.Type == AndroidBinderator.BindingType.Targets) {
-    <None Include="@(Model.NuGetPackageId).targets" Pack="True" PackagePath="@@(AndroidXNuGetTargetFolders)" />
-    }
     <None Include="..\..\source\PackageLicense.md" Pack="True" PackagePath="LICENSE.md" />
     <None Include=".\External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="..\..\build\icon.png" Pack="True" PackagePath="icon.png" />
@@ -89,6 +87,11 @@
     <TransformFile Include="..\..\source\Metadata.common.xml" >
       <Link>Transforms/Metadata.common.xml</Link>
     </TransformFile>
+
+@if (Model.Type == AndroidBinderator.BindingType.XamarinBuildDownload) {
+    <!-- This needs to be before package-level metadata to prevent api-diff changes in GPS -->
+    <TransformFile Include="..\..\source\GPS.Metadata.Common.xml" Link="Transforms/GPS.Metadata.Common.xml" />
+}
     
     <!-- Include any transform file(s) that are not TargetFramework specific -->
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.xml" Exclude="$(DefaultTransformExcludes)">
@@ -99,67 +102,32 @@
     <TransformFile Include="..\..\source\@(Model.MavenGroupId)\@(Model.Name)\Transforms\*.$(TargetFramework).xml">
       <Link>Transforms/%(RecursiveDir)/%(Filename)%(Extension)</Link>
     </TransformFile>
+
+    @foreach (var art in @Model.MavenArtifacts)
+    {
+      @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaDoc)
+      {
+    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" />
+      }
+      @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaSource)
+      {
+    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" />
+      }
+    }
+
   </ItemGroup>
 
 @if (Model.Type == AndroidBinderator.BindingType.Targets) {
-  @if (@Model.MavenArtifacts.Count > 0) {
-  <!-- Java artifacts to bind -->
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts)
-    {
-      if (!Model.ShouldBindArtifact) {
-        continue;
-      }
-      
-      if (art.MavenArtifactPackaging == "aar")
-      {
-    <InputJar 
-      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar')"
-      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\classes.jar" />
-    <!-- For those artifacts with lib/ folder -->
-    <InputJar
-      Condition="Exists('..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\')"
-      Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)\libs\*.jar"
-      />
-      }
-      else
-      {
-    <InputJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" />
-      }
-    }
-  </ItemGroup>
-  }
-
-  <!-- Java artifacts to include in the NuGet package -->
-  <ItemGroup>
-    @foreach (var art in @Model.MavenArtifacts) {
-      if (!Model.ShouldIncludeArtifact) {
-        continue;
-      }
-      
-      if (art.MavenArtifactPackaging == "aar") {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).aar" Pack="True" PackagePath="aar\@(art.MavenGroupId).@(art.MavenArtifactId).aar" />
-      } else {
-    <None Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).jar" Pack="True" PackagePath="jar\@(art.MavenGroupId).@(art.MavenArtifactId).jar" />
-      }
-    }
-  </ItemGroup>
+  await IncludeAsync("source/_TargetsProjectType.cshtml", Model);
 }
 @if (Model.Type == AndroidBinderator.BindingType.AndroidLibrary) {
-  <ItemGroup>
-      @foreach (var art in @Model.MavenArtifacts)
-      {
-    <AndroidLibrary Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId).@(art.MavenArtifactPackaging)" />
-        @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaDoc)
-        {
-    <JavaDocJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-javadoc.jar" />
-        }
-        @if (art.DocumentationType == AndroidBinderator.DocumentationType.JavaSource)
-        {
-    <JavaSourceJar Include="..\..\externals\@(art.MavenGroupId)\@(art.MavenArtifactId)-sources.jar" />
-        }
-      }
-  </ItemGroup>
+  await IncludeAsync("source/_AndroidLibraryProjectType.cshtml", Model);
+}
+@if (Model.Type == AndroidBinderator.BindingType.XamarinBuildDownload) {
+  await IncludeAsync("source/_XBDProjectType.cshtml", Model);
+}
+@if (Model.Type == AndroidBinderator.BindingType.NoBindings) {
+  await IncludeAsync("source/_NoBindingsProjectType.cshtml", Model);
 }
 
   <!-- ProjectReferences -->
@@ -179,5 +147,20 @@
       }
     }
   </ItemGroup>
+
+  <PropertyGroup>
+    <GenerateSBOM>true</GenerateSBOM>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Sbom.Targets" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+
+  @{ await IncludeAsync("source/_PackageLevelCustomizations.cshtml", Model); }
 
 </Project>

@@ -70,12 +70,14 @@ public class TestAllIndividualPackages
 		var config_file = Path.Combine (base_dir, "config.json");
 		var config = BinderatorConfigFileParser.ParseConfigurationFile (config_file).Result;
 
-		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly).Select (a => new object [] { a.NugetId, a.NugetVersion }).ToArray () ?? Array.Empty<object> ();
+		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly && !a.SkipExtendedTests).Select (a => new object [] { a.NugetId, a.NugetVersion }).ToArray () ?? Array.Empty<object> ();
 	}
 
 	async Task TestPackage (string id, string version, string template)
 	{
-		var case_dir = Path.Combine (base_dir, test_dir, template, $"{id}Test");
+		// Need to rename "Default" because it becomes a Java keyword
+		var sanitized_id = id.Replace (".Default.", ".Default2.");
+		var case_dir = Path.Combine (base_dir, test_dir, template, $"{sanitized_id}Test");
 
 		// Test the package
 		if (Directory.Exists (case_dir))
@@ -105,7 +107,7 @@ public class TestAllIndividualPackages
 			ReplaceInFile (activity_file, "public class MainActivity : Activity", "public class MainActivity : global::Android.App.Activity");
 
 		// Add the package
-		await RunAndAssertSuccess ($"add package {id} --version {version}", case_dir);
+		await RunAndAssertSuccess ($"add package {id} --version {version} --no-restore", case_dir);
 
 		// Build the project
 		await RunAndAssertSuccess ($"build -c {configuration} -bl", case_dir, true);
