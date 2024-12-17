@@ -6,20 +6,10 @@ Before building the libraries and samples in this repository, you will need to i
 
   * [.NET](https://dotnet.microsoft.com/download) ([.NET SDK 8.0.404](https://github.com/dotnet/core/blob/main/release-notes/8.0/8.0.11/8.0.11.md?WT.mc_id=dotnet-35129-website) is currently required)
 
-  * [Cake .NET Core Tool](http://cakebuild.net):
+  * [Cake .NET Tool](http://cakebuild.net):
 
     ```dotnetcli
     dotnet tool install -g cake.tool
-    dotnet tool install -g xamarin.androidbinderator.tool
-    dotnet tool install -g xamarin.androidx.migration.tool
-    ```
-
-    > NOTE: If you previously installed any of these tools, be sure to update them to the latest versions.
-
-  * For API diffs install `api-tools`
-
-    ```dotnetcli
-    dotnet tool install -g api-tools
     ```
 
   * [Microsoft OpenJDK *11*](https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-11)
@@ -43,6 +33,12 @@ Before building the libraries and samples in this repository, you will need to i
     ```cmd
     rem Windows
     set ANDROID_SDK_ROOT=%HOMEDRIVE%%HOMEPATH%/android-toolchain/sdk
+    ```
+
+  * For API diffs install `api-tools`
+
+    ```dotnetcli
+    dotnet tool install -g api-tools
     ```
 
 ## Compiling
