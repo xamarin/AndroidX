@@ -22,8 +22,9 @@
        - CS0809: Obsolete member 'member' overrides non-obsolete member 'member'
        - CS1572: XML comment has a param tag for '', but there is no parameter by that name
        - XAOBS001: While this member is 'public', Google considers it internal API and reserves the right to modify or delete it in the future. Use at your own risk. 
+       - NU1605: Detected package downgrade
     -->
-    <NoWarn>$(NoWarn);0618;0109;0114;0628;0108;0809;1572;XAOBS001</NoWarn>
+    <NoWarn>$(NoWarn);0618;0109;0114;0628;0108;0809;1572;XAOBS001;NU1605</NoWarn>
 
 @if (Model.AllowPrereleaseDependencies) {
     <!-- Allow this package to have prerelease dependencies -->
