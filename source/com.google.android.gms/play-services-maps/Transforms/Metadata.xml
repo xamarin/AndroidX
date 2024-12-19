@@ -32,6 +32,7 @@
 <!--	<attr path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polygon']/method[@name='setHoles']/parameter[1]" name="managedType">global::System.Collections.Generic.IList&lt;global::Java.Lang.Object&gt;</attr>-->
 <!--	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polygon']/method[@name='setHoles' and count(parameter)=1 and parameter[1][@type='java.util.List']]" />-->
 
+	<!--
 	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='LatLng']/field[@name='CREATOR']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='CameraPosition']/field[@name='CREATOR']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='LatLngBounds']/field[@name='CREATOR']" />
@@ -61,6 +62,7 @@
 	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polygon']/constructor[@name='Polygon']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='Polyline']/constructor[@name='Polyline']" />
 	<remove-node path="/api/package[@name='com.google.android.gms.maps.model']/class[@name='TileOverlay']/constructor[@name='TileOverlay']" />
+	-->
 
 	<attr 
 		path="/api/package[@name='com.google.android.gms.maps']/interface[@name='StreetViewPanorama.OnStreetViewPanoramaChangeListener']/method[@name='onStreetViewPanoramaChange' and count(parameter)=1 and parameter[1][@type='com.google.android.gms.maps.model.StreetViewPanoramaLocation']]/parameter[1]"
