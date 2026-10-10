@@ -156,7 +156,7 @@ public class TestAllIndividualPackages
 		xml.Load (proj_file);
 		var root = xml.DocumentElement!;
 		var properties = root ["PropertyGroup"]!;
-		properties ["TargetFramework"]!.InnerText = "net10.0-android";
+		properties ["TargetFramework"]!.InnerText = "net10.0-android36.0";
 		foreach (var (name, value) in new [] {
 			("Nullable", "enable"),
 			("WarningsAsErrors", "CS8600;CS8602;CS8604;CS8625"),
@@ -177,8 +177,8 @@ public class TestAllIndividualPackages
 
 		await File.WriteAllTextAsync (Path.Combine (case_dir, "Class1.cs"), """
 		using Android.Content;
-		using AndroidX.AppCompat.App;
-		using AndroidX.Fragment.App;
+		using AlertDialog = AndroidX.AppCompat.App.AlertDialog;
+		using Fragment = AndroidX.Fragment.App.Fragment;
 
 		public class Class1
 		{

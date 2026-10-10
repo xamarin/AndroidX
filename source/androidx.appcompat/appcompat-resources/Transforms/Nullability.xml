@@ -1,0 +1,27 @@
+<metadata>
+  <!-- Preserve top-level JSpecify NonNull contracts until class-parse supports type-use annotations. -->
+  <attr path="/api/package[@name='androidx.appcompat.content.res']/class[@name='AppCompatResources']/method[(@name='getColorStateList') or (@name='getDrawable')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[(@name='addState') or (@name='create') or (@name='createFromXmlInner') or (@name='inflate') or (@name='onStateChange')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[(@name='addState') or (@name='createFromXmlInner') or (@name='inflate')]/parameter[2]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[(@name='addTransition') or (@name='createFromXmlInner') or (@name='inflate')]/parameter[3]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[(@name='createFromXmlInner') or (@name='inflate')]/parameter[4]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='AnimatedStateListDrawableCompat']/method[(@name='createFromXmlInner') or (@name='mutate')]" name="return-not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainerCompat']/method[(@name='applyTheme') or (@name='draw') or (@name='getHotspotBounds') or (@name='getOutline') or (@name='getPadding') or (@name='invalidateDrawable') or (@name='onStateChange') or (@name='scheduleDrawable') or (@name='setTintMode') or (@name='unscheduleDrawable')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainerCompat']/method[(@name='scheduleDrawable') or (@name='unscheduleDrawable')]/parameter[2]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableContainerCompat']/method[@name='getCurrent']" name="return-not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='DrawableWrapperCompat']/method[@name='draw']/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='StateListDrawableCompat']/method[(@name='applyTheme') or (@name='inflate') or (@name='onStateChange')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='StateListDrawableCompat']/method[@name='inflate']/parameter[2]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='StateListDrawableCompat']/method[@name='inflate']/parameter[3]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='StateListDrawableCompat']/method[@name='inflate']/parameter[4]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.graphics.drawable']/class[@name='StateListDrawableCompat']/method[@name='mutate']" name="return-not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='DrawableUtils']/method[(@name='canSafelyMutateDrawable') or (@name='getOpticalBounds')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='DrawableUtils']/method[@name='getOpticalBounds']" name="return-not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='ResourceManagerInternal']/method[(@name='getDrawable') or (@name='onConfigurationChanged')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='TintContextWrapper']/method[@name='wrap']/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='VectorEnabledTintResources']/constructor[@name='VectorEnabledTintResources']/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/class[@name='VectorEnabledTintResources']/constructor[@name='VectorEnabledTintResources']/parameter[2]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ResourceManagerInternal.ResourceManagerHooks']/method[(@name='createDrawableFor') or (@name='getTintListForDrawableRes') or (@name='tintDrawable') or (@name='tintDrawableUsingColorFilter')]/parameter[1]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ResourceManagerInternal.ResourceManagerHooks']/method[@name='createDrawableFor']/parameter[2]" name="not-null">true</attr>
+  <attr path="/api/package[@name='androidx.appcompat.widget']/interface[@name='ResourceManagerInternal.ResourceManagerHooks']/method[(@name='tintDrawable') or (@name='tintDrawableUsingColorFilter')]/parameter[3]" name="not-null">true</attr>
+</metadata>
