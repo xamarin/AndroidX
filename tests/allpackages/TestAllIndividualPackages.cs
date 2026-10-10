@@ -144,6 +144,60 @@ public class TestAllIndividualPackages
 		=> TestAllPackages ("android", true);
 
 	[Test]
+	[Category ("Android")]
+	public async Task TestAndroidXNullability ()
+	{
+		var case_dir = Path.GetFullPath (Path.Combine (base_dir, test_dir, "AndroidXNullability"));
+		Directory.CreateDirectory (case_dir);
+		await RunAndAssertSuccess ("new androidlib --force", case_dir);
+
+		var proj_file = Directory.GetFiles (case_dir, "*.csproj").Single ();
+		var xml = new XmlDocument ();
+		xml.Load (proj_file);
+		var root = xml.DocumentElement!;
+		var properties = root ["PropertyGroup"]!;
+		properties ["TargetFramework"]!.InnerText = "net10.0-android";
+		foreach (var (name, value) in new [] {
+			("Nullable", "enable"),
+			("WarningsAsErrors", "CS8600;CS8602;CS8604;CS8625"),
+		}) {
+			var property = xml.CreateElement (name);
+			property.InnerText = value;
+			properties.AppendChild (property);
+		}
+
+		var references = xml.CreateElement ("ItemGroup");
+		root.AppendChild (references);
+		foreach (var artifact in new [] { "androidx.appcompat.appcompat", "androidx.fragment.fragment" }) {
+			var reference = xml.CreateElement ("ProjectReference");
+			reference.SetAttribute ("Include", Path.GetFullPath (Path.Combine (base_dir, "generated", artifact, $"{artifact}.csproj")));
+			references.AppendChild (reference);
+		}
+		xml.Save (proj_file);
+
+		await File.WriteAllTextAsync (Path.Combine (case_dir, "Class1.cs"), """
+		using Android.Content;
+		using AndroidX.AppCompat.App;
+		using AndroidX.Fragment.App;
+
+		public class Class1
+		{
+		    public void Check(Context context, Fragment fragment)
+		    {
+		        AlertDialog dialog = new AlertDialog.Builder(context).Create();
+		        string text = fragment.GetString(1);
+		        string formatted = fragment.GetString(1, (Java.Lang.Object[]?) null);
+		        new AlertDialog.Builder(context).SetTitle((Java.Lang.ICharSequence?) null);
+		        Android.Graphics.Drawables.Drawable? drawable =
+		            AndroidX.AppCompat.Content.Res.AppCompatResources.GetDrawable(context, 1);
+		    }
+		}
+		""");
+
+		await RunAndAssertSuccess ("build -p:TargetFrameworks=net10.0-android36.0", case_dir, true);
+	}
+
+	[Test]
 	[Category ("MAUI")]
 	public Task TestMauiAllPackages ()
 		=> TestAllPackages ("maui", false);

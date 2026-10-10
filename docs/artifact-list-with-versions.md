@@ -14,8 +14,8 @@
 |   7|androidx.annotation:annotation                                        |1.11.0              |Xamarin.AndroidX.Annotation                                           |1.11.0              |
 |   8|androidx.annotation:annotation-experimental                           |1.6.0               |Xamarin.AndroidX.Annotation.Experimental                              |1.6.0.1             |
 |   9|androidx.annotation:annotation-jvm                                    |1.11.0              |Xamarin.AndroidX.Annotation.Jvm                                       |1.11.0              |
-|  10|androidx.appcompat:appcompat                                          |1.8.0               |Xamarin.AndroidX.AppCompat                                            |1.8.0               |
-|  11|androidx.appcompat:appcompat-resources                                |1.8.0               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.8.0               |
+|  10|androidx.appcompat:appcompat                                          |1.8.0               |Xamarin.AndroidX.AppCompat                                            |1.8.0.1             |
+|  11|androidx.appcompat:appcompat-resources                                |1.8.0               |Xamarin.AndroidX.AppCompat.AppCompatResources                         |1.8.0.1             |
 |  12|androidx.arch.core:core-common                                        |2.2.0               |Xamarin.AndroidX.Arch.Core.Common                                     |2.2.0.21            |
 |  13|androidx.arch.core:core-runtime                                       |2.2.0               |Xamarin.AndroidX.Arch.Core.Runtime                                    |2.2.0.21            |
 |  14|androidx.asynclayoutinflater:asynclayoutinflater                      |1.1.0               |Xamarin.AndroidX.AsyncLayoutInflater                                  |1.1.0.6             |
@@ -156,7 +156,7 @@
 | 149|androidx.emoji2:emoji2-views-helper                                   |1.7.0               |Xamarin.AndroidX.Emoji2.ViewsHelper                                   |1.7.0               |
 | 150|androidx.enterprise:enterprise-feedback                               |1.1.0               |Xamarin.AndroidX.Enterprise.Feedback                                  |1.1.0.23            |
 | 151|androidx.exifinterface:exifinterface                                  |1.4.2               |Xamarin.AndroidX.ExifInterface                                        |1.4.2.3             |
-| 152|androidx.fragment:fragment                                            |1.9.1               |Xamarin.AndroidX.Fragment                                             |1.9.1               |
+| 152|androidx.fragment:fragment                                            |1.9.1               |Xamarin.AndroidX.Fragment                                             |1.9.1.1             |
 | 153|androidx.fragment:fragment-ktx                                        |1.9.1               |Xamarin.AndroidX.Fragment.Ktx                                         |1.9.1               |
 | 154|androidx.graphics:graphics-path                                       |1.1.0               |Xamarin.AndroidX.Graphics.Path                                        |1.1.0.1             |
 | 155|androidx.graphics:graphics-shapes                                     |1.1.0               |Xamarin.AndroidX.Graphics.Shapes                                      |1.1.0.3             |
