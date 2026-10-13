@@ -13,7 +13,6 @@ public class TestAllIndividualPackages
 	static string test_dir = Path.Combine ("output", "tests");
 	static string configuration = "Release";
 	static string platform_version = "29";
-	static string net_version = "net9.0";
 
 	static TestAllIndividualPackages ()
 	{
@@ -66,9 +65,10 @@ public class TestAllIndividualPackages
 	public Task TestMauiPackage (string id, string version)
 		=> TestPackage (id, version, "maui");
 
-	[Test]
+	[TestCase ("net9.0")]
+	[TestCase ("net10.0")]
 	[Category ("Android")]
-	public async Task TestFirestoreWithProtobufJavaLite ()
+	public async Task TestFirestoreWithProtobufJavaLite (string net_version)
 	{
 		var config = await BinderatorConfigFileParser.ParseConfigurationFile (Path.Combine (base_dir, "config.json"));
 		var artifacts = config.First ().Artifacts;
@@ -78,7 +78,7 @@ public class TestAllIndividualPackages
 		Assert.That (firestore.Frozen, Is.False);
 		Assert.That (protobuf.Frozen, Is.False);
 
-		await TestPackage (firestore.NugetId, firestore.NugetVersion, "android", (protobuf.NugetId, protobuf.NugetVersion));
+		await TestPackage (firestore.NugetId, firestore.NugetVersion, "android", net_version, (protobuf.NugetId, protobuf.NugetVersion));
 	}
 
 	public static object [] GetPackagesToTest ()
@@ -89,7 +89,7 @@ public class TestAllIndividualPackages
 		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly && !a.SkipExtendedTests).Select (a => new object [] { a.NugetId, a.NugetVersion }).ToArray () ?? Array.Empty<object> ();
 	}
 
-	async Task TestPackage (string id, string version, string template, params (string Id, string Version) [] additionalPackages)
+	async Task TestPackage (string id, string version, string template, string net_version = "net9.0", params (string Id, string Version) [] additionalPackages)
 	{
 		// Need to rename "Default" because it becomes a Java keyword
 		var sanitized_id = id.Replace (".Default.", ".Default2.");
