@@ -66,6 +66,21 @@ public class TestAllIndividualPackages
 	public Task TestMauiPackage (string id, string version)
 		=> TestPackage (id, version, "maui");
 
+	[Test]
+	[Category ("Android")]
+	public async Task TestFirestoreWithProtobufJavaLite ()
+	{
+		var config = await BinderatorConfigFileParser.ParseConfigurationFile (Path.Combine (base_dir, "config.json"));
+		var artifacts = config.First ().Artifacts;
+		var firestore = artifacts.Single (a => a.NugetId == "Xamarin.Firebase.Firestore" && !a.DependencyOnly);
+		var protobuf = artifacts.Single (a => a.NugetId == "Xamarin.Protobuf.JavaLite" && !a.DependencyOnly);
+
+		Assert.That (firestore.Frozen, Is.False);
+		Assert.That (protobuf.Frozen, Is.False);
+
+		await TestPackage (firestore.NugetId, firestore.NugetVersion, "android", (protobuf.NugetId, protobuf.NugetVersion));
+	}
+
 	public static object [] GetPackagesToTest ()
 	{
 		var config_file = Path.Combine (base_dir, "config.json");
@@ -74,7 +89,7 @@ public class TestAllIndividualPackages
 		return config.FirstOrDefault ()?.Artifacts?.Where (a => !a.DependencyOnly && !a.SkipExtendedTests).Select (a => new object [] { a.NugetId, a.NugetVersion }).ToArray () ?? Array.Empty<object> ();
 	}
 
-	async Task TestPackage (string id, string version, string template)
+	async Task TestPackage (string id, string version, string template, params (string Id, string Version) [] additionalPackages)
 	{
 		// Need to rename "Default" because it becomes a Java keyword
 		var sanitized_id = id.Replace (".Default.", ".Default2.");
@@ -122,6 +137,8 @@ public class TestAllIndividualPackages
 
 		// Add the package
 		await RunAndAssertSuccess ($"add package {id} --version {version} --no-restore", case_dir);
+		foreach (var package in additionalPackages)
+			await RunAndAssertSuccess ($"add package {package.Id} --version {package.Version} --no-restore", case_dir);
 
 		// Build the project
 		await RunAndAssertSuccess ($"build -c {configuration} -bl", case_dir, true);
