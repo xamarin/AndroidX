@@ -69,12 +69,10 @@ abstract Firebase.Database.Collection.ImmutableSortedMap.Size() -> int
 abstract Firebase.Database.Collection.LLRBNodeNodeVisitor.VisitEntry(Java.Lang.Object? p0, Java.Lang.Object? p1) -> void
 abstract Firebase.Database.Collection.LLRBValueNode.Color.get -> Firebase.Database.Collection.LLRBNodeColor?
 abstract Firebase.Database.Collection.LLRBValueNode.Copy(Java.Lang.Object? p0, Java.Lang.Object? p1, Firebase.Database.Collection.ILLRBNode? p2, Firebase.Database.Collection.ILLRBNode? p3) -> Firebase.Database.Collection.LLRBValueNode?
-const Firebase.Database.Collection.BuildConfig.ApplicationId = "com.google.firebase.database.collection" -> string!
 const Firebase.Database.Collection.BuildConfig.BuildType = "release" -> string!
 const Firebase.Database.Collection.BuildConfig.Debug = false -> bool
-const Firebase.Database.Collection.BuildConfig.Flavor = "" -> string!
-const Firebase.Database.Collection.BuildConfig.VersionCode = -1 -> int
-const Firebase.Database.Collection.BuildConfig.VersionName = "" -> string!
+const Firebase.Database.Collection.BuildConfig.LibraryPackageName = "com.google.firebase.database.collection" -> string!
+const Firebase.Database.Collection.BuildConfig.VersionName = "19.0.0" -> string!
 override Firebase.Database.Collection.ArraySortedMap.Comparator.get -> Java.Util.IComparator?
 override Firebase.Database.Collection.ArraySortedMap.ContainsKey(Java.Lang.Object? key) -> bool
 override Firebase.Database.Collection.ArraySortedMap.Get(Java.Lang.Object? key) -> Java.Lang.Object?
