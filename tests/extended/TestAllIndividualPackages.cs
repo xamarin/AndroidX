@@ -141,7 +141,7 @@ public class TestAllIndividualPackages
 			await RunAndAssertSuccess ($"add package {package.Id} --version {package.Version} --no-restore", case_dir);
 
 		// Build the project
-		await RunAndAssertSuccess ($"build -c {configuration} -bl", case_dir, true);
+		await RunAndAssertSuccess ($"build -c {configuration} -bl -nr:false", case_dir, true);
 
 		// If we're here, everything succeeded, so try to clean up the project directory
 		try {
