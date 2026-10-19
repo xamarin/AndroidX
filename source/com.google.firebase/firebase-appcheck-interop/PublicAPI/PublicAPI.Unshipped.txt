@@ -19,7 +19,7 @@ abstract Firebase.AppCheck.AppCheckTokenResult.Token.get -> string!
 const Firebase.AppCheck.Interop.BuildConfig.BuildType = "release" -> string!
 const Firebase.AppCheck.Interop.BuildConfig.Debug = false -> bool
 const Firebase.AppCheck.Interop.BuildConfig.LibraryPackageName = "com.google.firebase.appcheck.interop" -> string!
-const Firebase.AppCheck.Interop.BuildConfig.VersionName = "17.1.0" -> string!
+const Firebase.AppCheck.Interop.BuildConfig.VersionName = "18.0.0" -> string!
 override Firebase.AppCheck.AppCheckTokenResult.JniPeerMembers.get -> Java.Interop.JniPeerMembers!
 override Firebase.AppCheck.AppCheckTokenResult.ThresholdClass.get -> nint
 override Firebase.AppCheck.AppCheckTokenResult.ThresholdType.get -> System.Type!

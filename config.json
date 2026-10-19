@@ -250,22 +250,23 @@
       {
         "groupId": "androidx.collection",
         "artifactId": "collection",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
-        "nugetId": "Xamarin.AndroidX.Collection"
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0.1",
+        "nugetId": "Xamarin.AndroidX.Collection",
+        "comments": "The Collection family is temporarily held at 1.6.0 because Azure Artifacts cannot restore version 1.7.0 from Google Maven (401 Unauthorized)."
       },
       {
         "groupId": "androidx.collection",
         "artifactId": "collection-jvm",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0.1",
         "nugetId": "Xamarin.AndroidX.Collection.Jvm"
       },
       {
         "groupId": "androidx.collection",
         "artifactId": "collection-ktx",
-        "version": "1.7.0",
-        "nugetVersion": "1.7.0",
+        "version": "1.6.0",
+        "nugetVersion": "1.6.0.1",
         "nugetId": "Xamarin.AndroidX.Collection.Ktx"
       },
       {
@@ -1697,37 +1698,39 @@
       {
         "groupId": "androidx.navigationevent",
         "artifactId": "navigationevent",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
-        "nugetId": "Xamarin.AndroidX.NavigationEvent"
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2.1",
+        "nugetId": "Xamarin.AndroidX.NavigationEvent",
+        "comments": "The NavigationEvent family is temporarily held at 1.1.2 because Azure Artifacts cannot restore version 1.2.0 from Google Maven (401 Unauthorized)."
       },
       {
         "groupId": "androidx.navigationevent",
         "artifactId": "navigationevent-android",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2.1",
         "nugetId": "Xamarin.AndroidX.NavigationEvent.Android"
       },
       {
         "groupId": "androidx.navigationevent",
         "artifactId": "navigationevent-compose",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2.1",
         "nugetId": "Xamarin.AndroidX.NavigationEvent.Compose"
       },
       {
         "groupId": "androidx.navigationevent",
         "artifactId": "navigationevent-compose-android",
-        "version": "1.2.0",
-        "nugetVersion": "1.2.0",
+        "version": "1.1.2",
+        "nugetVersion": "1.1.2.1",
         "nugetId": "Xamarin.AndroidX.NavigationEvent.Compose.Android"
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common",
-        "version": "3.5.3",
-        "nugetVersion": "3.5.3",
+        "version": "3.5.1",
+        "nugetVersion": "3.5.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common",
+        "comments": "The Paging family is temporarily held at 3.5.1 because Azure Artifacts cannot restore version 3.5.3 from Google Maven (401 Unauthorized).",
         "excludedRuntimeDependencies": "androidx.paging.paging-common-android"
       },
       {
@@ -1740,30 +1743,30 @@
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-common-ktx",
-        "version": "3.5.3",
-        "nugetVersion": "3.5.3",
+        "version": "3.5.1",
+        "nugetVersion": "3.5.1",
         "nugetId": "Xamarin.AndroidX.Paging.Common.Ktx",
         "excludedRuntimeDependencies": "androidx.paging.paging-common-desktop"
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime",
-        "version": "3.5.3",
-        "nugetVersion": "3.5.3",
+        "version": "3.5.1",
+        "nugetVersion": "3.5.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime"
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-runtime-ktx",
-        "version": "3.5.3",
-        "nugetVersion": "3.5.3",
+        "version": "3.5.1",
+        "nugetVersion": "3.5.1",
         "nugetId": "Xamarin.AndroidX.Paging.Runtime.Ktx"
       },
       {
         "groupId": "androidx.paging",
         "artifactId": "paging-rxjava2",
-        "version": "3.5.3",
-        "nugetVersion": "3.5.3",
+        "version": "3.5.1",
+        "nugetVersion": "3.5.1",
         "nugetId": "Xamarin.AndroidX.Paging.RxJava2"
       },
       {
@@ -2036,22 +2039,23 @@
       {
         "groupId": "androidx.tracing",
         "artifactId": "tracing",
-        "version": "2.0.4",
-        "nugetVersion": "2.0.4",
-        "nugetId": "Xamarin.AndroidX.Tracing.Tracing"
+        "version": "2.0.3",
+        "nugetVersion": "2.0.3",
+        "nugetId": "Xamarin.AndroidX.Tracing.Tracing",
+        "comments": "The Tracing family is temporarily held at 2.0.3 because Azure Artifacts cannot restore version 2.0.4 from Google Maven (401 Unauthorized)."
       },
       {
         "groupId": "androidx.tracing",
         "artifactId": "tracing-android",
-        "version": "2.0.4",
-        "nugetVersion": "2.0.4",
+        "version": "2.0.3",
+        "nugetVersion": "2.0.3",
         "nugetId": "Xamarin.AndroidX.Tracing.Tracing.Android"
       },
       {
         "groupId": "androidx.tracing",
         "artifactId": "tracing-ktx",
-        "version": "2.0.4",
-        "nugetVersion": "2.0.4",
+        "version": "2.0.3",
+        "nugetVersion": "2.0.3",
         "nugetId": "Xamarin.AndroidX.Tracing.Tracing.Ktx"
       },
       {
@@ -2149,29 +2153,30 @@
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-foundation",
-        "version": "1.7.1",
-        "nugetVersion": "1.7.1",
-        "nugetId": "Xamarin.AndroidX.Wear.Compose.Foundation"
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0",
+        "nugetId": "Xamarin.AndroidX.Wear.Compose.Foundation",
+        "comments": "The Wear Compose family is temporarily held at 1.7.0 because Azure Artifacts cannot restore version 1.7.1 from Google Maven (401 Unauthorized)."
       },
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-material",
-        "version": "1.7.1",
-        "nugetVersion": "1.7.1",
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0",
         "nugetId": "Xamarin.AndroidX.Wear.Compose.Material"
       },
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-material-core",
-        "version": "1.7.1",
-        "nugetVersion": "1.7.1",
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0",
         "nugetId": "Xamarin.AndroidX.Wear.Compose.Material.Core"
       },
       {
         "groupId": "androidx.wear.compose",
         "artifactId": "compose-navigation",
-        "version": "1.7.1",
-        "nugetVersion": "1.7.1",
+        "version": "1.7.0",
+        "nugetVersion": "1.7.0",
         "nugetId": "Xamarin.AndroidX.Wear.Compose.Navigation"
       },
       {
@@ -2643,25 +2648,29 @@
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "version": "2.1.5",
+        "nugetVersion": "2.1.5.2",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT",
+        "frozen": true,
         "allowPrereleaseDependencies": true,
-        "type": "androidlibrary"
+        "type": "androidlibrary",
+        "comments": "Later versions require LiteRT API 2.2.0, which conflicts with the LiteRT GPU packages."
       },
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert-api",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2.1",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT.API",
-        "type": "androidlibrary"
+        "frozen": true,
+        "type": "androidlibrary",
+        "comments": "Later versions conflict with the LiteRT GPU packages, which require 1.4.2."
       },
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert-gpu",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2.1",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT.GPU",
         "type": "androidlibrary"
       },
@@ -2676,24 +2685,24 @@
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert-metadata",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2.1",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT.Metadata",
         "type": "androidlibrary"
       },
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert-support",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2.2",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT.Support",
         "type": "androidlibrary"
       },
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert-support-api",
-        "version": "2.3.0",
-        "nugetVersion": "2.3.0",
+        "version": "1.4.2",
+        "nugetVersion": "1.4.2.2",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT.Support.API",
         "allowPrereleaseDependencies": true,
         "type": "androidlibrary",
@@ -2729,24 +2738,25 @@
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-api",
-        "version": "5.0.0",
-        "nugetVersion": "5.0.0",
+        "version": "4.1.1",
+        "nugetVersion": "4.1.1.1",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportApi",
+        "comments": "The DataTransport family is temporarily held at 4.1.1 because Azure Artifacts cannot restore version 5.0.0 from Google Maven (401 Unauthorized).",
         "type": "androidlibrary"
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-backend-cct",
-        "version": "5.0.0",
-        "nugetVersion": "5.0.0",
+        "version": "4.1.1",
+        "nugetVersion": "4.1.1.2",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportBackendCct",
         "type": "androidlibrary"
       },
       {
         "groupId": "com.google.android.datatransport",
         "artifactId": "transport-runtime",
-        "version": "5.0.0",
-        "nugetVersion": "5.0.0",
+        "version": "4.1.1",
+        "nugetVersion": "4.1.1.1",
         "nugetId": "Xamarin.Google.Android.DataTransport.TransportRuntime",
         "type": "androidlibrary"
       },
@@ -2893,9 +2903,10 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-base",
-        "version": "18.11.1",
-        "nugetVersion": "118.11.1",
+        "version": "18.11.0",
+        "nugetVersion": "118.11.0",
         "nugetId": "Xamarin.GooglePlayServices.Base",
+        "comments": "Temporarily held at 18.11.0 because Azure Artifacts cannot restore version 18.11.1 from Google Maven (401 Unauthorized).",
         "type": "xbd"
       },
       {
@@ -3087,40 +3098,42 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-maps",
-        "version": "20.1.0",
-        "nugetVersion": "120.1.0",
+        "version": "20.0.0",
+        "nugetVersion": "120.0.0.3",
         "nugetId": "Xamarin.GooglePlayServices.Maps",
+        "comments": "Temporarily held at 20.0.0 because Azure Artifacts cannot restore version 20.1.0 from Google Maven (401 Unauthorized).",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement",
+        "comments": "The Measurement family is temporarily held at 23.2.0 because Azure Artifacts cannot restore version 24.0.0 from Google Maven (401 Unauthorized).",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-api",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Api",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-base",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Base",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-impl",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Impl",
         "allowPrereleaseDependencies": true,
         "type": "xbd"
@@ -3128,16 +3141,16 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk",
         "type": "xbd"
       },
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-measurement-sdk-api",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.GooglePlayServices.Measurement.Sdk.Api",
         "type": "xbd"
       },
@@ -3744,9 +3757,10 @@
       {
         "groupId": "com.google.crypto.tink",
         "artifactId": "tink-android",
-        "version": "1.24.0",
-        "nugetVersion": "1.24.0",
+        "version": "1.23.0",
+        "nugetVersion": "1.23.0",
         "nugetId": "Xamarin.Google.Crypto.Tink.Android",
+        "comments": "Temporarily held at 1.23.0 because Azure Artifacts cannot restore version 1.24.0 from Maven Central (401 Unauthorized).",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
       },
@@ -3780,9 +3794,10 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-abt",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.0.1",
+        "nugetVersion": "123.0.1.4",
         "nugetId": "Xamarin.Firebase.Abt",
+        "comments": "The October 2026 Firebase major updates are deferred where Azure Artifacts returns 401 Unauthorized. AppCheck Interop 18.0.0 and Database Collection 19.0.0 are available and updated independently.",
         "type": "xbd"
       },
       {
@@ -3797,8 +3812,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-analytics",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.2.0",
+        "nugetVersion": "123.2.0.2",
         "nugetId": "Xamarin.Firebase.Analytics",
         "type": "xbd"
       },
@@ -3821,8 +3836,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "19.4.1",
+        "nugetVersion": "119.4.1",
         "nugetId": "Xamarin.Firebase.AppCheck",
         "type": "xbd"
       },
@@ -3837,8 +3852,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-appcheck-playintegrity",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "19.4.1",
+        "nugetVersion": "119.4.1",
         "nugetId": "Xamarin.Firebase.AppCheck.PlayIntegrity",
         "type": "xbd"
       },
@@ -3853,8 +3868,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-auth",
-        "version": "25.0.0",
-        "nugetVersion": "125.0.0",
+        "version": "24.2.0",
+        "nugetVersion": "124.2.0.1",
         "nugetId": "Xamarin.Firebase.Auth",
         "type": "xbd"
       },
@@ -3893,16 +3908,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-config",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "23.1.0",
+        "nugetVersion": "123.1.0.2",
         "nugetId": "Xamarin.Firebase.Config",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-config-interop",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "16.0.1",
+        "nugetVersion": "116.0.1.13",
         "nugetId": "Xamarin.Firebase.Config.Interop",
         "type": "xbd"
       },
@@ -3925,8 +3940,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0",
+        "version": "20.1.1",
+        "nugetVersion": "120.1.1",
         "nugetId": "Xamarin.Firebase.Crashlytics",
         "extraDependencies": "com.google.dagger.dagger",
         "type": "xbd"
@@ -3934,16 +3949,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-crashlytics-ndk",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0",
+        "version": "20.1.1",
+        "nugetVersion": "120.1.1",
         "nugetId": "Xamarin.Firebase.Crashlytics.NDK",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-database",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
         "nugetId": "Xamarin.Firebase.Database",
         "type": "xbd"
       },
@@ -3966,8 +3981,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-datatransport",
-        "version": "21.0.0",
-        "nugetVersion": "121.0.0",
+        "version": "20.0.1",
+        "nugetVersion": "120.0.1.4",
         "nugetId": "Xamarin.Firebase.Datatransport",
         "type": "xbd"
       },
@@ -3982,24 +3997,24 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-encoders",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "17.0.0",
+        "nugetVersion": "117.0.0.26",
         "nugetId": "Xamarin.Firebase.Encoders",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-encoders-json",
-        "version": "19.0.0",
-        "nugetVersion": "119.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.19",
         "nugetId": "Xamarin.Firebase.Encoders.JSON",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-encoders-proto",
-        "version": "17.0.0",
-        "nugetVersion": "117.0.0",
+        "version": "16.0.0",
+        "nugetVersion": "116.0.0.21",
         "nugetId": "Xamarin.Firebase.Encoders.Proto",
         "type": "xbd"
       },
@@ -4018,8 +4033,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-functions",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.1.1",
+        "nugetVersion": "122.1.1.2",
         "nugetId": "Xamarin.Firebase.Functions",
         "type": "xbd"
       },
@@ -4062,16 +4077,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations",
-        "version": "20.0.0",
-        "nugetVersion": "120.0.0",
+        "version": "19.1.2",
+        "nugetVersion": "119.1.2.1",
         "nugetId": "Xamarin.Firebase.Installations",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-installations-interop",
-        "version": "18.0.0",
-        "nugetVersion": "118.0.0",
+        "version": "17.3.0",
+        "nugetVersion": "117.3.0.3",
         "nugetId": "Xamarin.Firebase.Installations.InterOp",
         "type": "xbd"
       },
@@ -4086,16 +4101,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-measurement-connector",
-        "version": "24.0.0",
-        "nugetVersion": "124.0.0",
+        "version": "20.0.1",
+        "nugetVersion": "120.0.1.15",
         "nugetId": "Xamarin.Firebase.Measurement.Connector",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-messaging",
-        "version": "26.0.0",
-        "nugetVersion": "126.0.0",
+        "version": "25.1.3",
+        "nugetVersion": "125.1.3",
         "nugetId": "Xamarin.Firebase.Messaging",
         "type": "xbd"
       },
@@ -4232,16 +4247,16 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-sessions",
-        "version": "4.0.0",
-        "nugetVersion": "104.0.0",
+        "version": "3.0.8",
+        "nugetVersion": "103.0.8",
         "nugetId": "Xamarin.Firebase.Sessions",
         "type": "xbd"
       },
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-storage",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.0.2",
+        "nugetVersion": "122.0.2",
         "nugetId": "Xamarin.Firebase.Storage",
         "type": "xbd"
       },
@@ -4261,7 +4276,7 @@
         "nugetId": "Xamarin.Firebase.ProtoliteWellKnownTypes",
         "type": "xbd",
         "skipExtendedTests": true,
-        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997"
+        "comments": "Skip tests due to https://github.com/firebase/firebase-android-sdk/issues/5997. Version 19.0.0 requires protobuf-javalite 4.36.1, which Azure Artifacts cannot restore (401 Unauthorized) and is outside the configured Protobuf mappings."
       },
       {
         "groupId": "com.google.flatbuffers",
@@ -4860,7 +4875,7 @@
         "nugetId": "Xamarin.Grpc.Android",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral",
-        "comments": "The gRPC family is temporarily held at 1.82.0 because Azure Artifacts cannot restore version 1.84.0 from Maven Central (401 Unauthorized)."
+        "comments": "The gRPC family is temporarily held at 1.82.0 because Azure Artifacts cannot restore version 1.85.0 from Maven Central (401 Unauthorized)."
       },
       {
         "groupId": "io.grpc",
@@ -5062,7 +5077,7 @@
         "nugetId": "Xamarin.CheckerFramework.CheckerQual",
         "type": "no-bindings",
         "mavenRepositoryType": "MavenCentral",
-        "comments": "Temporarily held at 4.2.0 because Azure Artifacts cannot restore version 4.2.3 from Maven Central (401 Unauthorized)."
+        "comments": "Temporarily held at 4.2.0 because Azure Artifacts cannot restore version 4.3.1 from Maven Central (401 Unauthorized)."
       },
       {
         "groupId": "org.chromium.net",
@@ -5160,7 +5175,7 @@
         "nugetId": "Xamarin.Kotlin.Parcelize.Runtime",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral",
-        "comments": "The Kotlin 2.4 family is temporarily held at 2.4.0 because Azure Artifacts cannot restore all version 2.4.20 artifacts from Maven Central (401 Unauthorized)."
+        "comments": "The Kotlin 2.4 family is temporarily held at 2.4.0 because Azure Artifacts cannot restore version 2.4.21 from Maven Central (401 Unauthorized)."
       },
       {
         "groupId": "org.jetbrains.kotlin",
@@ -5388,6 +5403,7 @@
         "version": "9.10.1",
         "nugetVersion": "9.10.1.1",
         "nugetId": "Xamarin.OW2.ASM",
+        "comments": "Temporarily held at 9.10.1 because Azure Artifacts cannot restore version 9.11.1 from Maven Central (401 Unauthorized).",
         "type": "androidlibrary",
         "mavenRepositoryType": "MavenCentral"
       },
