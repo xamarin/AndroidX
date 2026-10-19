@@ -371,8 +371,8 @@
 | 364|com.google.accompanist:accompanist-systemuicontroller                 |0.36.0              |Xamarin.Google.Accompanist.SystemUIController                         |0.36.0.9            |
 | 365|com.google.ads.interactivemedia.v3:interactivemedia                   |3.40.0              |Xamarin.Google.Ads.InteractiveMedia.V3.InteractiveMedia               |3.40.0              |
 | 366|com.google.ai.edge.aicore:aicore                                      |0.0.1-exp02         |Xamarin.Google.AI.Edge.AICore                                         |0.0.1.4-exp02       |
-| 367|com.google.ai.edge.litert:litert                                      |2.1.5               |Xamarin.Google.AI.Edge.LiteRT                                         |2.1.5.2             |
-| 368|com.google.ai.edge.litert:litert-api                                  |1.4.2               |Xamarin.Google.AI.Edge.LiteRT.API                                     |1.4.2.1             |
+| 367|com.google.ai.edge.litert:litert                                      |2.3.0               |Xamarin.Google.AI.Edge.LiteRT                                         |2.3.0               |
+| 368|com.google.ai.edge.litert:litert-api                                  |2.3.0               |Xamarin.Google.AI.Edge.LiteRT.API                                     |2.3.0               |
 | 369|com.google.ai.edge.litert:litert-gpu                                  |2.3.0               |Xamarin.Google.AI.Edge.LiteRT.GPU                                     |2.3.0               |
 | 370|com.google.ai.edge.litert:litert-gpu-api                              |1.4.2               |Xamarin.Google.AI.Edge.LiteRT.GPU.API                                 |1.4.2.1             |
 | 371|com.google.ai.edge.litert:litert-metadata                             |2.3.0               |Xamarin.Google.AI.Edge.LiteRT.Metadata                                |2.3.0               |
@@ -443,7 +443,7 @@
 | 436|com.google.android.gms:play-services-mlkit-text-recognition-devanagari|16.0.1              |Xamarin.GooglePlayServices.MLKit.Text.Recognition.Devanagari          |116.0.1.9           |
 | 437|com.google.android.gms:play-services-mlkit-text-recognition-japanese  |16.0.1              |Xamarin.GooglePlayServices.MLKit.Text.Recognition.Japanese            |116.0.1.9           |
 | 438|com.google.android.gms:play-services-mlkit-text-recognition-korean    |16.0.1              |Xamarin.GooglePlayServices.MLKit.Text.Recognition.Korean              |116.0.1.9           |
-| 439|com.google.android.gms:play-services-nearby                           |19.5.1              |Xamarin.GooglePlayServices.Nearby                                     |119.5.1             |
+| 439|com.google.android.gms:play-services-nearby                           |19.5.0              |Xamarin.GooglePlayServices.Nearby                                     |119.5.0             |
 | 440|com.google.android.gms:play-services-oss-licenses                     |17.5.2              |Xamarin.GooglePlayServices.Oss.Licenses                               |117.5.2             |
 | 441|com.google.android.gms:play-services-pal                              |23.1.0              |Xamarin.GooglePlayServices.PAL                                        |123.1.0.3           |
 | 442|com.google.android.gms:play-services-panorama                         |17.1.0              |Xamarin.GooglePlayServices.Panorama                                   |117.1.0.17          |
@@ -476,7 +476,7 @@
 | 469|com.google.android.gms:play-services-wearable                         |20.0.1              |Xamarin.GooglePlayServices.Wearable                                   |120.0.1.2           |
 | 470|com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk            |1.5.0               |Xamarin.Google.Android.Libraries.Ads.Mobile.Sdk                       |1.5.0               |
 | 471|com.google.android.libraries.identity.googleid:googleid               |1.1.0               |Xamarin.Google.Android.Libraries.Identity.GoogleId                    |1.1.0.16            |
-| 472|com.google.android.libraries.places:places                            |6.0.2               |Xamarin.Google.Android.Libraries.Places                               |6.0.2               |
+| 472|com.google.android.libraries.places:places                            |5.3.0               |Xamarin.Google.Android.Libraries.Places                               |5.3.0.1             |
 | 473|com.google.android.libraries.places:places-compat                     |2.6.0               |Xamarin.Google.Android.Libraries.Places.Compat                        |2.6.0.20            |
 | 474|com.google.android.material:compose-theme-adapter                     |1.1.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter                 |1.1.18.23           |
 | 475|com.google.android.material:compose-theme-adapter-3                   |1.0.18              |Xamarin.Google.Android.Material.Compose.Theme.Adapter3                |1.0.18.22           |
@@ -491,7 +491,7 @@
 | 484|com.google.android.play:core-common                                   |2.0.4               |Xamarin.Google.Android.Play.Core.Common                               |2.0.4.11            |
 | 485|com.google.android.play:core-ktx                                      |1.8.1               |Xamarin.Google.Android.Play.Core.Ktx                                  |1.8.1.20            |
 | 486|com.google.android.play:feature-delivery                              |2.1.0               |Xamarin.Google.Android.Play.Feature.Delivery                          |2.1.0.19            |
-| 487|com.google.android.play:hsdp                                          |2.2.0               |Xamarin.Google.Android.Play.Hsdp                                      |2.2.0               |
+| 487|com.google.android.play:hsdp                                          |2.1.0               |Xamarin.Google.Android.Play.Hsdp                                      |2.1.0               |
 | 488|com.google.android.play:integrity                                     |1.6.0               |Xamarin.Google.Android.Play.Integrity                                 |1.6.0.4             |
 | 489|com.google.android.play:review                                        |2.0.2               |Xamarin.Google.Android.Play.Review                                    |2.0.2.10            |
 | 490|com.google.android.play:review-ktx                                    |2.0.2               |Xamarin.Google.Android.Play.Review.Ktx                                |2.0.2.10            |
@@ -540,8 +540,8 @@
 | 533|com.google.firebase:firebase-functions                                |23.0.0              |Xamarin.Firebase.Functions                                            |123.0.0             |
 | 534|com.google.firebase:firebase-iid                                      |21.1.0              |Xamarin.Firebase.Iid                                                  |121.1.0.27          |
 | 535|com.google.firebase:firebase-iid-interop                              |17.1.0              |Xamarin.Firebase.Iid.Interop                                          |117.1.0.27          |
-| 536|com.google.firebase:firebase-inappmessaging                           |23.0.0              |Xamarin.Firebase.InAppMessaging                                       |123.0.0             |
-| 537|com.google.firebase:firebase-inappmessaging-display                   |23.0.0              |Xamarin.Firebase.InAppMessaging.Display                               |123.0.0             |
+| 536|com.google.firebase:firebase-inappmessaging                           |22.0.3              |Xamarin.Firebase.InAppMessaging                                       |122.0.3.2           |
+| 537|com.google.firebase:firebase-inappmessaging-display                   |22.0.3              |Xamarin.Firebase.InAppMessaging.Display                               |122.0.3.2           |
 | 538|com.google.firebase:firebase-installations                            |20.0.0              |Xamarin.Firebase.Installations                                        |120.0.0             |
 | 539|com.google.firebase:firebase-installations-interop                    |18.0.0              |Xamarin.Firebase.Installations.InterOp                                |118.0.0             |
 | 540|com.google.firebase:firebase-invites                                  |17.0.0              |Xamarin.Firebase.Invites                                              |117.0.0.27          |
@@ -562,16 +562,16 @@
 | 555|com.google.firebase:firebase-ml-vision-image-label-model              |20.0.2              |Xamarin.Firebase.ML.Vision.Image.Label.Model                          |120.0.2.27          |
 | 556|com.google.firebase:firebase-ml-vision-internal-vkp                   |17.0.2              |Xamarin.Firebase.ML.Vision.Internal.Vkp                               |117.0.2.27          |
 | 557|com.google.firebase:firebase-ml-vision-object-detection-model         |19.0.6              |Xamarin.Firebase.ML.Vision.Object.Detection.Model                     |119.0.6.27          |
-| 558|com.google.firebase:firebase-perf                                     |23.0.1              |Xamarin.Firebase.Perf                                                 |123.0.1             |
+| 558|com.google.firebase:firebase-perf                                     |22.0.6              |Xamarin.Firebase.Perf                                                 |122.0.6.1           |
 | 559|com.google.firebase:firebase-sessions                                 |4.0.0               |Xamarin.Firebase.Sessions                                             |104.0.0             |
 | 560|com.google.firebase:firebase-storage                                  |23.0.0              |Xamarin.Firebase.Storage                                              |123.0.0             |
 | 561|com.google.firebase:firebase-storage-common                           |17.0.0              |Xamarin.Firebase.Storage.Common                                       |117.0.0.27          |
-| 562|com.google.firebase:protolite-well-known-types                        |19.0.0              |Xamarin.Firebase.ProtoliteWellKnownTypes                              |119.0.0             |
+| 562|com.google.firebase:protolite-well-known-types                        |18.0.1              |Xamarin.Firebase.ProtoliteWellKnownTypes                              |118.0.1.7           |
 | 563|com.google.flatbuffers:flatbuffers-java                               |25.2.10             |Xamarin.Google.FlatBuffers.Java                                       |25.2.10.6           |
 | 564|com.google.flogger:flogger                                            |0.9                 |Xamarin.Flogger                                                       |0.9.0.4             |
 | 565|com.google.flogger:flogger-system-backend                             |0.9                 |Xamarin.Flogger.SystemBackend                                         |0.9.0.4             |
 | 566|com.google.guava:failureaccess                                        |1.0.3               |Xamarin.Google.Guava.FailureAccess                                    |1.0.3.6             |
-| 567|com.google.guava:guava                                                |33.7.2-android      |Xamarin.Google.Guava                                                  |33.7.2-android      |
+| 567|com.google.guava:guava                                                |33.7.1-android      |Xamarin.Google.Guava                                                  |33.7.1              |
 | 568|com.google.guava:listenablefuture                                     |1.0                 |Xamarin.Google.Guava.ListenableFuture                                 |1.0.0.32            |
 | 569|com.google.inject:guice                                               |7.0.0               |Xamarin.Google.Inject.Guice                                           |7.0.0.10            |
 | 570|com.google.j2objc:j2objc-annotations                                  |3.1                 |Xamarin.Google.J2Objc.Annotations                                     |3.1.0.3             |

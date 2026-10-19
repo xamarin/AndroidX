@@ -2643,23 +2643,19 @@
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert",
-        "version": "2.1.5",
-        "nugetVersion": "2.1.5.2",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT",
-        "frozen": true,
         "allowPrereleaseDependencies": true,
-        "type": "androidlibrary",
-        "comments": "Later versions require LiteRT API 2.2.0, which conflicts with the LiteRT GPU packages."
+        "type": "androidlibrary"
       },
       {
         "groupId": "com.google.ai.edge.litert",
         "artifactId": "litert-api",
-        "version": "1.4.2",
-        "nugetVersion": "1.4.2.1",
+        "version": "2.3.0",
+        "nugetVersion": "2.3.0",
         "nugetId": "Xamarin.Google.AI.Edge.LiteRT.API",
-        "frozen": true,
-        "type": "androidlibrary",
-        "comments": "Later versions conflict with the LiteRT GPU packages, which require 1.4.2."
+        "type": "androidlibrary"
       },
       {
         "groupId": "com.google.ai.edge.litert",
@@ -3240,8 +3236,8 @@
       {
         "groupId": "com.google.android.gms",
         "artifactId": "play-services-nearby",
-        "version": "19.5.1",
-        "nugetVersion": "119.5.1",
+        "version": "19.5.0",
+        "nugetVersion": "119.5.0",
         "nugetId": "Xamarin.GooglePlayServices.Nearby",
         "type": "xbd",
         "comments": "Temporarily held at 19.5.0 because Azure Artifacts cannot restore version 19.5.1 from Google Maven (401 Unauthorized)."
@@ -3511,8 +3507,8 @@
       {
         "groupId": "com.google.android.libraries.places",
         "artifactId": "places",
-        "version": "6.0.2",
-        "nugetVersion": "6.0.2",
+        "version": "5.3.0",
+        "nugetVersion": "5.3.0.1",
         "nugetId": "Xamarin.Google.Android.Libraries.Places",
         "excludedRuntimeDependencies": "com.squareup.okhttp.okhttp",
         "type": "xbd",
@@ -3636,8 +3632,8 @@
       {
         "groupId": "com.google.android.play",
         "artifactId": "hsdp",
-        "version": "2.2.0",
-        "nugetVersion": "2.2.0",
+        "version": "2.1.0",
+        "nugetVersion": "2.1.0",
         "nugetId": "Xamarin.Google.Android.Play.Hsdp",
         "type": "xbd",
         "comments": "Dependency of com.google.android.gms:play-services-ads-api:25.4.0. Temporarily held at 2.1.0 because Azure Artifacts cannot restore version 2.2.0 from Google Maven (401 Unauthorized)."
@@ -4046,8 +4042,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-inappmessaging",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.0.3",
+        "nugetVersion": "122.0.3.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging",
         "type": "xbd",
         "skipExtendedTests": true,
@@ -4056,8 +4052,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-inappmessaging-display",
-        "version": "23.0.0",
-        "nugetVersion": "123.0.0",
+        "version": "22.0.3",
+        "nugetVersion": "122.0.3.2",
         "nugetId": "Xamarin.Firebase.InAppMessaging.Display",
         "type": "xbd",
         "skipExtendedTests": true,
@@ -4226,8 +4222,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "firebase-perf",
-        "version": "23.0.1",
-        "nugetVersion": "123.0.1",
+        "version": "22.0.6",
+        "nugetVersion": "122.0.6.1",
         "nugetId": "Xamarin.Firebase.Perf",
         "type": "xbd",
         "skipExtendedTests": true,
@@ -4260,8 +4256,8 @@
       {
         "groupId": "com.google.firebase",
         "artifactId": "protolite-well-known-types",
-        "version": "19.0.0",
-        "nugetVersion": "119.0.0",
+        "version": "18.0.1",
+        "nugetVersion": "118.0.1.7",
         "nugetId": "Xamarin.Firebase.ProtoliteWellKnownTypes",
         "type": "xbd",
         "skipExtendedTests": true,
@@ -4306,8 +4302,8 @@
       {
         "groupId": "com.google.guava",
         "artifactId": "guava",
-        "version": "33.7.2-android",
-        "nugetVersion": "33.7.2-android",
+        "version": "33.7.1-android",
+        "nugetVersion": "33.7.1",
         "nugetId": "Xamarin.Google.Guava",
         "excludedRuntimeDependencies": "com.google.guava.listenablefuture",
         "type": "androidlibrary",
