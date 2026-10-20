@@ -514,7 +514,7 @@
 | 507|com.google.firebase:firebase-analytics-impl                           |16.3.0              |Xamarin.Firebase.Analytics.Impl                                       |116.3.0.27          |
 | 508|com.google.firebase:firebase-annotations                              |18.0.0              |Xamarin.Firebase.Annotations                                          |118.0.0             |
 | 509|com.google.firebase:firebase-appcheck                                 |19.4.1              |Xamarin.Firebase.AppCheck                                             |119.4.1             |
-| 510|com.google.firebase:firebase-appcheck-interop                         |17.1.0              |Xamarin.Firebase.AppCheck.Interop                                     |117.1.0.15          |
+| 510|com.google.firebase:firebase-appcheck-interop                         |18.0.0              |Xamarin.Firebase.AppCheck.Interop                                     |118.0.0             |
 | 511|com.google.firebase:firebase-appcheck-playintegrity                   |19.4.1              |Xamarin.Firebase.AppCheck.PlayIntegrity                               |119.4.1             |
 | 512|com.google.firebase:firebase-appindexing                              |20.0.0              |Xamarin.Firebase.AppIndexing                                          |120.0.0.30          |
 | 513|com.google.firebase:firebase-auth                                     |24.2.0              |Xamarin.Firebase.Auth                                                 |124.2.0.1           |
@@ -529,7 +529,7 @@
 | 522|com.google.firebase:firebase-crashlytics                              |20.1.1              |Xamarin.Firebase.Crashlytics                                          |120.1.1             |
 | 523|com.google.firebase:firebase-crashlytics-ndk                          |20.1.1              |Xamarin.Firebase.Crashlytics.NDK                                      |120.1.1             |
 | 524|com.google.firebase:firebase-database                                 |22.0.2              |Xamarin.Firebase.Database                                             |122.0.2             |
-| 525|com.google.firebase:firebase-database-collection                      |18.0.1              |Xamarin.Firebase.Database.Collection                                  |118.0.1.20          |
+| 525|com.google.firebase:firebase-database-collection                      |19.0.0              |Xamarin.Firebase.Database.Collection                                  |119.0.0             |
 | 526|com.google.firebase:firebase-database-connection                      |16.0.2              |Xamarin.Firebase.Database.Connection                                  |116.0.2.27          |
 | 527|com.google.firebase:firebase-datatransport                            |20.0.1              |Xamarin.Firebase.Datatransport                                        |120.0.1.4           |
 | 528|com.google.firebase:firebase-dynamic-links                            |22.1.0              |Xamarin.Firebase.Dynamic.Links                                        |122.1.0.11          |
